@@ -1,2 +1,0 @@
-Msg1: "Hello my name is character 1"
-Msg2: "It's dangerous to go alone. Take this"
