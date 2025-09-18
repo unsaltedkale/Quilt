@@ -19,5 +19,36 @@ offset_bottom = 430.0
 text = "Test"
 
 [node name="Health" type="Sprite2D" parent="."]
-position = Vector2(109, 106)
+position = Vector2(165, 535)
 texture = ExtResource("1_wtcfe")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 44
+columns = 3
+
+[node name="Panel" type="Panel" parent="GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GridContainer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel3" type="Panel" parent="GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GridContainer/Panel3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel2" type="Panel" parent="GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GridContainer/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
