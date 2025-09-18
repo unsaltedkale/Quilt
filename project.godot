@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="Quilt"
-run/main_scene="uid://1iv87qysc1dl"
+run/main_scene="uid://1225g3ggvek2"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
