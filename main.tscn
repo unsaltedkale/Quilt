@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=9 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://UI.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://b55ntb0xce4gd" path="res://Salem WIPs/showDialog.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_h2yge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -545,7 +547,7 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_0xm2m")
 
-[node name="Main" type="Node2D"]
+[node name="TestScene" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -563,5 +565,20 @@ tile_set = SubResource("TileSet_h2yge")
 collision_enabled = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(5037, 2126)
+position = Vector2(5000, 2000)
 zoom = Vector2(0.3, 0.3)
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="TestNPC" type="Node2D" parent="NPCs"]
+position = Vector2(5000, 2400)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="NPCs/TestNPC"]
+texture = ExtResource("3_h2yge")
+
+[node name="Label" type="Label" parent="NPCs/TestNPC"]
+offset_top = -100.0
+offset_right = 1.0
+offset_bottom = -77.0
+script = ExtResource("3_1bvp3")
