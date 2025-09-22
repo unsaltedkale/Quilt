@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://1iv87qysc1dl"]
+[gd_scene load_steps=3 format=3 uid="uid://1iv87qysc1dl"]
 
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://sa0seeso6oef" path="res://ChangeColor.gd" id="2_3b2b5"]
 
 [node name="UI" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,19 +11,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 452.0
-offset_top = 166.0
-offset_right = 716.0
-offset_bottom = 430.0
-text = "Test"
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 333.0
+offset_right = 265.83002
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 56
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 493.0
+offset_right = 329.66003
+offset_bottom = 606.00006
+theme_override_font_sizes/font_size = 56
+text = "SETTINGS"
 
 [node name="Health" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(165, 535)
 texture = ExtResource("1_wtcfe")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -33,10 +50,11 @@ columns = 3
 [node name="Panel" type="Panel" parent="GridContainer"]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="GridContainer/Panel"]
+[node name="ColorRect2" type="ColorRect" parent="GridContainer/Panel"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("2_3b2b5")
 
 [node name="Panel3" type="Panel" parent="GridContainer"]
 layout_mode = 2
@@ -53,3 +71,12 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_right = 487.0
+offset_bottom = 217.0
+theme_override_colors/font_color = Color(0.39688927, 0.39688927, 0.39688924, 1)
+theme_override_font_sizes/font_size = 159
+text = "QUILT"
