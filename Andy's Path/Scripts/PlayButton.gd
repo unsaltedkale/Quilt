@@ -6,3 +6,7 @@ func _ready() -> void:
 
 func _on_play_pressed() -> void:
 	hide()
+
+
+func _on_settings_pressed() -> void:
+	print("Settings Pressed")
