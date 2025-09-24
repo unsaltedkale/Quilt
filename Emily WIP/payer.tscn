@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bifokdbk5ab4o"]
+
+[ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/player.gd" id="1_1u6du"]
+[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_loxgc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbmmm"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_1u6du")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qbmmm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_loxgc")
