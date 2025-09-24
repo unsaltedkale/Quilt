@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://ccpulbl6dlady"]
+[gd_scene load_steps=2 format=3 uid="uid://ccpulbl6dlady"]
 
-[node name="MouseComponent" type="CharacterBody2D"]
+[ext_resource type="Script" uid="uid://cenygebnjowtp" path="res://Emily WIP/mouse_component.gd" id="1_2vb3k"]
+
+[node name="MouseComponent" type="Node"]
+script = ExtResource("1_2vb3k")

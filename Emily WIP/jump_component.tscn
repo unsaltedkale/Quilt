@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://deu4pl1h45ba"]
+[gd_scene load_steps=2 format=3 uid="uid://deu4pl1h45ba"]
 
-[node name="JumpComponent" type="CharacterBody2D"]
+[ext_resource type="Script" uid="uid://dlmavvkbyysbo" path="res://Emily WIP/jump_component.gd" id="1_gfsdf"]
+
+[node name="JumpComponent" type="Node"]
+script = ExtResource("1_gfsdf")
