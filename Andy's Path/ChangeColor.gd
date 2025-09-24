@@ -8,3 +8,7 @@ func _input(event: InputEvent) -> void:
 		$".".modulate = Color.WHITE
 	else:
 		$".".modulate = Color.RED
+
+
+func _on_play_pressed() -> void:
+	pass # Replace with function body.

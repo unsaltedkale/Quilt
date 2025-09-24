@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://1iv87qysc1dl"]
+[gd_scene load_steps=4 format=3 uid="uid://1iv87qysc1dl"]
 
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_wtcfe"]
-[ext_resource type="Script" uid="uid://sa0seeso6oef" path="res://ChangeColor.gd" id="2_3b2b5"]
+[ext_resource type="Script" uid="uid://sa0seeso6oef" path="res://Andy's Path/ChangeColor.gd" id="2_3b2b5"]
+[ext_resource type="Script" uid="uid://d41acgjxcgvk" path="res://Andy's Path/PlayGame.gd" id="3_hlvk0"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -10,29 +11,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-
-[node name="Play" type="Button" parent="."]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 333.0
-offset_right = 265.83002
-offset_bottom = 446.0
-theme_override_font_sizes/font_size = 56
-text = "PLAY"
-
-[node name="Settings" type="Button" parent="."]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 493.0
-offset_right = 329.66003
-offset_bottom = 606.00006
-theme_override_font_sizes/font_size = 56
-text = "SETTINGS"
 
 [node name="Health" type="Sprite2D" parent="."]
 visible = false
@@ -72,7 +50,36 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Title" type="Label" parent="."]
+[node name="Title Screen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_hlvk0")
+
+[node name="Background" type="ColorRect" parent="Title Screen"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Play" type="Button" parent="Title Screen"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 333.0
+offset_right = 265.83002
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 56
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="Title Screen"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 493.0
+offset_right = 329.66003
+offset_bottom = 606.00006
+theme_override_font_sizes/font_size = 56
+text = "SETTINGS"
+
+[node name="Title" type="Label" parent="Title Screen"]
 layout_mode = 0
 offset_left = 19.0
 offset_right = 487.0
@@ -80,3 +87,5 @@ offset_bottom = 217.0
 theme_override_colors/font_color = Color(0.39688927, 0.39688927, 0.39688924, 1)
 theme_override_font_sizes/font_size = 159
 text = "QUILT"
+
+[connection signal="pressed" from="Title Screen/Play" to="Title Screen" method="_on_play_pressed"]
