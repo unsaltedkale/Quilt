@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=10 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/UI.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://b55ntb0xce4gd" path="res://Salem WIPs/showDialog.gd" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -582,3 +583,8 @@ offset_top = -100.0
 offset_right = 1.0
 offset_bottom = -77.0
 script = ExtResource("3_1bvp3")
+
+[node name="Player" parent="." instance=ExtResource("5_lquwl")]
+position = Vector2(4497, 2404)
+scale = Vector2(2, 2)
+collision_layer = 3

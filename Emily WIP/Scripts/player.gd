@@ -12,3 +12,5 @@ func _physics_process(delta: float) -> void:
 	jump_component.handle_jump(self, input_component.get_jump_input())
 
 	move_and_slide()
+
+#player ability function

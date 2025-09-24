@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ca35o3us2j4lw"]
 
-[ext_resource type="Script" uid="uid://diepou1fua8da" path="res://Emily WIP/gravity_component.gd" id="1_lspbd"]
+[ext_resource type="Script" uid="uid://diepou1fua8da" path="res://Emily WIP/Scripts/gravity_component.gd" id="1_lspbd"]
 
 [node name="GravityComponent" type="Node"]
 script = ExtResource("1_lspbd")

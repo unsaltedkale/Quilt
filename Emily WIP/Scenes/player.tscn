@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://bifokdbk5ab4o"]
+
+[ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
+[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_d72cn"]
+[ext_resource type="PackedScene" uid="uid://deu4pl1h45ba" path="res://Emily WIP/Scenes/jump_component.tscn" id="3_0yr7s"]
+[ext_resource type="PackedScene" uid="uid://bbw0e7fd8gd3g" path="res://Emily WIP/Scenes/input_component.tscn" id="4_d3lbi"]
+[ext_resource type="PackedScene" uid="uid://bejpt8qc80wan" path="res://Emily WIP/Scenes/movement_component.tscn" id="5_17h1f"]
+[ext_resource type="PackedScene" uid="uid://ca35o3us2j4lw" path="res://Emily WIP/Scenes/gravity_component.tscn" id="6_ltfw8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbmmm"]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component")]
+script = ExtResource("1_jfghr")
+gravity_component = NodePath("GravityComponent")
+input_component = NodePath("InputComponent")
+movement_component = NodePath("MovementComponent")
+jump_component = NodePath("JumpComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_qbmmm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_d72cn")
+
+[node name="JumpComponent" parent="." instance=ExtResource("3_0yr7s")]
+
+[node name="InputComponent" parent="." instance=ExtResource("4_d3lbi")]
+
+[node name="MovementComponent" parent="." instance=ExtResource("5_17h1f")]
+
+[node name="GravityComponent" parent="." instance=ExtResource("6_ltfw8")]

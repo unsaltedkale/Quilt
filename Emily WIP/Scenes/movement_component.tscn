@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bejpt8qc80wan"]
 
-[ext_resource type="Script" uid="uid://b25xpp3rx3kt0" path="res://Emily WIP/movement_component.gd" id="1_r4v0y"]
+[ext_resource type="Script" uid="uid://b25xpp3rx3kt0" path="res://Emily WIP/Scripts/movement_component.gd" id="1_r4v0y"]
 
 [node name="MovementComponent" type="Node"]
 script = ExtResource("1_r4v0y")
