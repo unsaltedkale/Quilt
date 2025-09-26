@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bejpt8qc80wan" path="res://Emily WIP/Scenes/movement_component.tscn" id="5_17h1f"]
 [ext_resource type="PackedScene" uid="uid://ca35o3us2j4lw" path="res://Emily WIP/Scenes/gravity_component.tscn" id="6_ltfw8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbmmm"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_jfghr"]
+radius = 12.69
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component")]
 script = ExtResource("1_jfghr")
@@ -18,7 +19,7 @@ jump_component = NodePath("JumpComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(6, 6)
-shape = SubResource("RectangleShape2D_qbmmm")
+shape = SubResource("CircleShape2D_jfghr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -31,3 +32,6 @@ texture = ExtResource("2_d72cn")
 [node name="MovementComponent" parent="." instance=ExtResource("5_17h1f")]
 
 [node name="GravityComponent" parent="." instance=ExtResource("6_ltfw8")]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -26)
