@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://1iv87qysc1dl"]
+[gd_scene load_steps=3 format=3 uid="uid://1iv87qysc1dl"]
 
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_wtcfe"]
-[ext_resource type="Script" uid="uid://sa0seeso6oef" path="res://Andy's Path/Scripts/ChangeColor.gd" id="2_3b2b5"]
 [ext_resource type="Script" uid="uid://d41acgjxcgvk" path="res://Andy's Path/Scripts/PlayButton.gd" id="3_hlvk0"]
 
 [node name="UI" type="Control"]
@@ -16,39 +15,6 @@ grow_vertical = 2
 visible = false
 position = Vector2(165, 535)
 texture = ExtResource("1_wtcfe")
-
-[node name="GridContainer" type="GridContainer" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/h_separation = 44
-columns = 3
-
-[node name="Panel" type="Panel" parent="GridContainer"]
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="GridContainer/Panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_3b2b5")
-
-[node name="Panel3" type="Panel" parent="GridContainer"]
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="GridContainer/Panel3"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Panel2" type="Panel" parent="GridContainer"]
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="GridContainer/Panel2"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Title Screen" type="Control" parent="."]
 anchors_preset = 0
