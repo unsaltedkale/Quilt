@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var input_component: InputComponent
 @export var movement_component: MovementComponent
 @export var jump_component: JumpComponent
+@export var projectile_component: ProjectileComponent
 
 func _physics_process(delta: float) -> void:
 	gravity_component.handle_gravity(self, delta)
