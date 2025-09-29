@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=11 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://b55ntb0xce4gd" path="res://Salem WIPs/showDialog.gd" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://b7d7v3oy8f5u3" path="res://Elena/Scenes/spike.tscn" id="6_7mycd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -612,3 +613,6 @@ script = ExtResource("3_1bvp3")
 [node name="Player" parent="." instance=ExtResource("5_lquwl")]
 position = Vector2(4465, 1330)
 scale = Vector2(2, 2)
+
+[node name="Area2D" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(4011, 2544)

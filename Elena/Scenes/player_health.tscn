@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cys2fk40vy80u"]
+
+[ext_resource type="Script" uid="uid://skxj47n2t6q2" path="res://Elena/Scripts/Player_Health.gd" id="1_m02pk"]
+
+[node name="PlayerHealth" type="Node"]
+script = ExtResource("1_m02pk")
