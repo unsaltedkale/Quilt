@@ -1,12 +1,15 @@
 class_name ProjectileComponent
 extends Area2D
 
+@export_subgroup("Settings")
+@export var mouse_component: MouseComponent
+
 var speed = 900
+'''
+#func _physics_process(delta):
+	#mouse_component.handle_movement(self, input_component.get_mouse_direction())
 
-func _physics_process(delta):
-	position += transform.x * speed * delta
-
-'''func _on_ProjectileComponent_body_entered(body):
-    if body.is_in_group(""):
-        body.queue_free()
-    queue_free()'''
+func shoot():
+	var b = ProjectileComponent.instantiate()
+	owner.add_child(b)
+	b.transform = $Marker2D.global_transform'''
