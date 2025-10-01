@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=12 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://b7d7v3oy8f5u3" path="res://Elena/Scenes/spike.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cgif4w8e4xn8r" path="res://Elena/Scenes/movingplatform.tscn" id="7_272bh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -616,3 +617,6 @@ scale = Vector2(2, 2)
 
 [node name="Area2D" parent="." instance=ExtResource("6_7mycd")]
 position = Vector2(4011, 2544)
+
+[node name="MovingPlatform" parent="." instance=ExtResource("7_272bh")]
+position = Vector2(5566, 2524)
