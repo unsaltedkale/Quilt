@@ -8,3 +8,7 @@ func _process(delta: float) -> void:
 	
 func get_jump_input() -> bool:
 	return Input.is_action_just_pressed("jump")
+'''
+func get_shoot_input() -> void:
+	return Input.is_action_just_pressed("fire_projectile")
+'''
