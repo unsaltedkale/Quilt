@@ -1,23 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgif4w8e4xn8r"]
+[gd_scene load_steps=4 format=3 uid="uid://dacoqwe3msj05"]
 
-[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_1dysu"]
-[ext_resource type="Script" uid="uid://b02j3s2tgaane" path="res://Elena/Scripts/movingplatform.gd" id="1_a603x"]
+[ext_resource type="Script" uid="uid://chkiutvlrmjjr" path="res://Elena/Scripts/movingplatform.gd" id="1_7qba8"]
+[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_rwlvc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_08he2"]
-size = Vector2(352, 96)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
+size = Vector2(326, 58)
 
 [node name="MovingPlatform" type="CharacterBody2D"]
-position = Vector2(14, 15)
-script = ExtResource("1_a603x")
-metadata/_edit_group_ = true
+script = ExtResource("1_7qba8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(79, 14)
-shape = SubResource("RectangleShape2D_08he2")
+position = Vector2(2, -29)
+shape = SubResource("RectangleShape2D_lpq4i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(79, 16)
-scale = Vector2(1.8229166, 1.5)
-texture = ExtResource("1_1dysu")
+position = Vector2(2.0000076, 0.9999962)
+scale = Vector2(2.5000002, 1.7578125)
+texture = ExtResource("2_rwlvc")
 region_enabled = true
-region_rect = Rect2(64, 0, 192, 64)
+region_rect = Rect2(448, 64, 128, 64)
