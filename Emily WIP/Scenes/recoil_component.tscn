@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b22c0g5pf8l3j"]
+
+[ext_resource type="Script" uid="uid://bw4v3yvq88e37" path="res://Emily WIP/Scripts/recoil_component.gd" id="1_5fqe2"]
+
+[node name="RecoilComponent" type="Node"]
+script = ExtResource("1_5fqe2")

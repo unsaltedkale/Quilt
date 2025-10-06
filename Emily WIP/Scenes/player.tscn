@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=11 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_d72cn"]
@@ -6,19 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://bbw0e7fd8gd3g" path="res://Emily WIP/Scenes/input_component.tscn" id="4_d3lbi"]
 [ext_resource type="PackedScene" uid="uid://bejpt8qc80wan" path="res://Emily WIP/Scenes/movement_component.tscn" id="5_17h1f"]
 [ext_resource type="PackedScene" uid="uid://ca35o3us2j4lw" path="res://Emily WIP/Scenes/gravity_component.tscn" id="6_ltfw8"]
+[ext_resource type="PackedScene" uid="uid://b22c0g5pf8l3j" path="res://Emily WIP/Scenes/recoil_component.tscn" id="7_d3lbi"]
 [ext_resource type="PackedScene" uid="uid://cys2fk40vy80u" path="res://Elena/Scenes/player_health.tscn" id="7_d72cn"]
 [ext_resource type="PackedScene" uid="uid://d3tqa847kjwb5" path="res://Emily WIP/Scenes/projectile_component.tscn" id="8_d3lbi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfghr"]
 radius = 12.69
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "recoil_component") groups=["Player"]]
 collision_mask = 6145
 script = ExtResource("1_jfghr")
 gravity_component = NodePath("GravityComponent")
 input_component = NodePath("InputComponent")
 movement_component = NodePath("MovementComponent")
 jump_component = NodePath("JumpComponent")
+recoil_component = NodePath("RecoilComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(6, 6)
@@ -38,6 +40,8 @@ texture = ExtResource("2_d72cn")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, -26)
+
+[node name="RecoilComponent" parent="." instance=ExtResource("7_d3lbi")]
 
 [node name="PlayerHealth" parent="." instance=ExtResource("7_d72cn")]
 
