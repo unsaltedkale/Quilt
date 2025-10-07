@@ -9,7 +9,7 @@ size = Vector2(128, 65)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flctw"]
 size = Vector2(126, 20)
 
-[node name="DissapearingPlatform" type="StaticBody2D"]
+[node name="DissapearingPlatform" type="StaticBody2D" groups=["Ground"]]
 scale = Vector2(1.5, 1.5)
 collision_layer = 2049
 script = ExtResource("1_3hy82")

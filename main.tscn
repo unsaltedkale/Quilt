@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=15 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
@@ -8,6 +8,24 @@
 [ext_resource type="PackedScene" uid="uid://b7d7v3oy8f5u3" path="res://Elena/Scenes/spike.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://d8pa8gykvlst" path="res://Elena/Scenes/fallingobject.tscn" id="9_kek77"]
+
+[sub_resource type="GDScript" id="GDScript_4c57u"]
+script/source = "extends Node2D  # Or whatever node you're using to spawn the objects
+
+# Exported variable to set spawn position in the Inspector
+@export var spawn_position: Vector2 = Vector2.ZERO
+
+var FallingObjectScene = preload(\"res://Elena/Scenes/fallingobject.tscn\")
+
+func spawn_falling_object():
+	var falling_object_instance = FallingObjectScene.instantiate()
+	
+	# Use the exported position from the Inspector
+	falling_object_instance.position = spawn_position
+	
+	add_child(falling_object_instance)
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -577,6 +595,7 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_0xm2m")
 
 [node name="TestScene" type="Node2D"]
+script = SubResource("GDScript_4c57u")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -614,7 +633,7 @@ offset_bottom = -77.0
 script = ExtResource("3_1bvp3")
 
 [node name="Player" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(4704, 1697)
+position = Vector2(4692, 1685)
 scale = Vector2(2, 2)
 
 [node name="MovingPlatform" parent="." instance=ExtResource("7_272bh")]
@@ -636,3 +655,6 @@ position = Vector2(4513, 2608)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("6_7mycd")]
 position = Vector2(3994, 2469)
+
+[node name="fallingobject" parent="." instance=ExtResource("9_kek77")]
+position = Vector2(6524, 1098)

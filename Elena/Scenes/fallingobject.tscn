@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d8pa8gykvlst"]
+
+[ext_resource type="Script" uid="uid://bnrx6sp27287e" path="res://Elena/Scripts/fallingobject.gd" id="1_xob57"]
+[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_a5jbd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fd3yo"]
+size = Vector2(53, 52)
+
+[node name="fallingobject" type="RigidBody2D"]
+script = ExtResource("1_xob57")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -1)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_fd3yo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_a5jbd")
+region_enabled = true
+region_rect = Rect2(8, 72, 48, 48)
