@@ -1,14 +1,12 @@
 class_name ProjectileComponent
-extends Area2D
+extends Node
 
-var speed = 900
-var mouse = get_global_mouse_position()
+@export var input_component: InputComponent
 
-func _physics_process(_float):
-	position += transform.x * speed
-	
+var mouse = 0
+
 func shoot():
-	var proj = $".".instantiate()
+	var proj = $".".new()
 	proj.global_posision = $Marker2D
 	owner.add_child(proj)
 	proj.transform = mouse
