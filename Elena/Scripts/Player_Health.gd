@@ -8,7 +8,7 @@ func _ready():
 
 func reduce_health(amount: int) -> void:
 	health -= amount
-	print("Health: ", health)
+	print("Health: ", health)  
 	if health <= 0:
 		die()
 

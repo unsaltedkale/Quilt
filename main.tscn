@@ -633,7 +633,7 @@ offset_bottom = -77.0
 script = ExtResource("3_1bvp3")
 
 [node name="Player" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(4692, 1685)
+position = Vector2(6516, 2758)
 scale = Vector2(2, 2)
 
 [node name="MovingPlatform" parent="." instance=ExtResource("7_272bh")]

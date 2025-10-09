@@ -10,8 +10,8 @@ extends CharacterBody2D
 var health_script: Node
 
 func _ready():
-	health_script = $PlayerHealth  # Assumes you have a PlayerHealth node as a child
-	health_script.health = health_script.max_health  # Corrected variable name
+	health_script = $PlayerHealth  
+	health_script.health = health_script.max_health  
 
 func _physics_process(delta: float) -> void:
 	gravity_component.handle_gravity(self, delta)
