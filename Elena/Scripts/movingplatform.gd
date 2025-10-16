@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends AnimatableBody2D
 
 @export var point_a: Vector2
 @export var point_b: Vector2
@@ -20,16 +20,13 @@ func _physics_process(delta):
 	var distance = global_position.distance_to(_target_point)
 
 	if distance < 2.0:
-		# Arrived at target
 		_moving_to_b = !_moving_to_b
 		_target_point = point_b if _moving_to_b else point_a
 		_wait()
 	else:
-		velocity = direction * speed
-		move_and_slide()
-		
+		global_position += direction * speed * delta
+
 func _wait():
 	_waiting = true
-	velocity = Vector2.ZERO
 	await get_tree().create_timer(wait_time).timeout
 	_waiting = false

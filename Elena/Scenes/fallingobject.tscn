@@ -1,31 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://d8pa8gykvlst"]
+[gd_scene load_steps=5 format=3 uid="uid://buupn0jojkqy0"]
 
-[ext_resource type="Script" uid="uid://bnrx6sp27287e" path="res://Elena/Scripts/fallingobject.gd" id="1_xob57"]
+[ext_resource type="Script" uid="uid://d2frnke7ct6s2" path="res://Elena/Scripts/fallingobjectarea_2d.gd" id="1_mi2kw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_a5jbd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fd3yo"]
-size = Vector2(46.5, 46)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo7n0"]
+size = Vector2(62, 60)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi2kw"]
-size = Vector2(113, 116)
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ns6d"]
+radius = 38.118237
 
 [node name="fallingobject" type="RigidBody2D"]
-script = ExtResource("1_xob57")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
-scale = Vector2(2, 2)
-shape = SubResource("RectangleShape2D_fd3yo")
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_eo7n0")
+
+[node name="fallingobjectarea2d" type="Area2D" parent="."]
+script = ExtResource("1_mi2kw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fallingobjectarea2d"]
+shape = SubResource("CircleShape2D_5ns6d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 2)
+position = Vector2(0.5000026, 1.0000011)
+scale = Vector2(1.2708335, 1.1666666)
 texture = ExtResource("2_a5jbd")
 region_enabled = true
 region_rect = Rect2(8, 72, 48, 48)
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.5, 1)
-shape = SubResource("RectangleShape2D_mi2kw")

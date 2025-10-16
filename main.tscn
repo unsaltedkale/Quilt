@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=14 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
@@ -8,23 +8,45 @@
 [ext_resource type="PackedScene" uid="uid://b7d7v3oy8f5u3" path="res://Elena/Scenes/spike.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="8_5vw27"]
-[ext_resource type="PackedScene" uid="uid://d8pa8gykvlst" path="res://Elena/Scenes/fallingobject.tscn" id="9_kek77"]
 
 [sub_resource type="GDScript" id="GDScript_4c57u"]
 script/source = "extends Node2D  # Or whatever node you're using to spawn the objects
 
-# Exported variable to set spawn position in the Inspector
-@export var spawn_position: Vector2 = Vector2.ZERO
+var fallingobject = preload(\"res://Elena/Scenes/fallingobject.tscn\")
+var spawn_times = [2.0, 1.0, 2.0, 3.0] #I think time starts counting after previous - So the second time is actualy that time + previous.  
+var current_index = 0
+var timer_started = false
+var spawn_positions = [
+	Vector2(6597, 1200), 
+	Vector2(4000,1200),
+	Vector2(3750,1200),
+	Vector2(4500, 1200)
+]
 
-var FallingObjectScene = preload(\"res://Elena/Scenes/fallingobject.tscn\")
+func _ready():
+	if spawn_times.size() > 0:
+		$Timer.start(spawn_times[current_index])
 
-func spawn_falling_object():
-	var falling_object_instance = FallingObjectScene.instantiate()
+func _process(delta):
+	var player = get_node(\"Player\")
+	if not timer_started and player.velocity.length()> 0:
+		$Timer.start(spawn_times[current_index])
+		timer_started = true
+
+func inst(pos: Vector2):
+	var instance = fallingobject.instantiate()
+	instance.position = pos
+	add_child(instance)
 	
-	# Use the exported position from the Inspector
-	falling_object_instance.position = spawn_position
+func _on_timer_timeout() -> void:
+	var pos = spawn_positions[current_index]
+	inst(pos)
 	
-	add_child(falling_object_instance)
+	current_index += 1
+	if current_index < spawn_times.size():
+		$Timer.start(spawn_times[current_index])
+	else:
+		$Timer.stop() 
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
@@ -633,22 +655,18 @@ offset_bottom = -77.0
 script = ExtResource("3_1bvp3")
 
 [node name="Player" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(6516, 2758)
+position = Vector2(5442, 1460)
 scale = Vector2(2, 2)
 
 [node name="MovingPlatform" parent="." instance=ExtResource("7_272bh")]
-position = Vector2(5460, 2545)
-point_a = Vector2(5460, 2532)
-point_b = Vector2(6713, 2532)
-speed = 200.0
-wait_time = 0.25
+position = Vector2(5451, 2545)
+point_a = Vector2(5451, 2545)
+point_b = Vector2(6534, 2545)
 
 [node name="MovingPlatform2" parent="." instance=ExtResource("7_272bh")]
-position = Vector2(3401, 2120)
-point_a = Vector2(6638, 2120)
-point_b = Vector2(3401, 2120)
-speed = 200.0
-wait_time = 0.25
+position = Vector2(3410, 2156)
+point_a = Vector2(3410, 2156)
+point_b = Vector2(6607, 2156)
 
 [node name="DissapearingPlatform" parent="." instance=ExtResource("8_5vw27")]
 position = Vector2(4513, 2608)
@@ -656,5 +674,6 @@ position = Vector2(4513, 2608)
 [node name="StaticBody2D" parent="." instance=ExtResource("6_7mycd")]
 position = Vector2(3994, 2469)
 
-[node name="fallingobject" parent="." instance=ExtResource("9_kek77")]
-position = Vector2(6524, 1098)
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
