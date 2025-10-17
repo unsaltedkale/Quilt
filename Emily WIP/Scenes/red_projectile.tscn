@@ -6,10 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkcvn"]
 
 [node name="RedProjectile" type="Area2D"]
+gravity_space_override = 3
+gravity = 0.0
+angular_damp = 0.0
 script = ExtResource("1_td6lh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_nkcvn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_t6jt8")

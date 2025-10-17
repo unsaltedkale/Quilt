@@ -1,6 +1,19 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3tqa847kjwb5"]
 
-[ext_resource type="Script" uid="uid://cbsw1pfbe3q86" path="res://Emily WIP/Scripts/projectile_component.gd" id="1_plvoc"]
+[sub_resource type="GDScript" id="GDScript_30w6t"]
+script/source = "class_name RedProjectile
+extends Node
+
+@export var input_component: InputComponent
+
+var mouse = 0
+
+func shoot():
+	var proj = $\".\".new()
+	proj.global_posision = $Marker2D
+	owner.add_child(proj)
+	proj.transform = mouse
+"
 
 [node name="ProjectileComponent" type="Node"]
-script = ExtResource("1_plvoc")
+script = SubResource("GDScript_30w6t")

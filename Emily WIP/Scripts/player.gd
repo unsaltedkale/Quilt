@@ -22,6 +22,17 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 #player ability function
+var can_shoot: bool = true
 
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
+	
+func _process(delta):
+	if Input.is_action_just_pressed("fire_projectile") and can_shoot:
+		shoot()
+		
+func shoot():
+	var proj = preload("res://Emily WIP/Scenes/red_projectile.tscn").instantiate()
+	owner.add_child(proj)
+	proj.transform = $Marker2D.global_transform
+	can_shoot = true
