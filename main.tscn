@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="8_5vw27"]
 
 [sub_resource type="GDScript" id="GDScript_4c57u"]
-script/source = "extends Node2D  # Or whatever node you're using to spawn the objects
+script/source = "extends Node2D 
 
 var fallingobject = preload(\"res://Elena/Scenes/fallingobject.tscn\")
 var spawn_times = [5.0, 10.0, 15.0, 30.0] #Time starts counting after previous - So the each time is actualy that time + previous times since the scene loaded   
