@@ -17,6 +17,7 @@ shape = SubResource("RectangleShape2D_eo7n0")
 
 [node name="fallingobjectarea2d" type="Area2D" parent="."]
 script = ExtResource("1_mi2kw")
+damage_amount = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fallingobjectarea2d"]
 shape = SubResource("CircleShape2D_5ns6d")
@@ -27,3 +28,5 @@ scale = Vector2(1.2708335, 1.1666666)
 texture = ExtResource("2_a5jbd")
 region_enabled = true
 region_rect = Rect2(8, 72, 48, 48)
+
+[node name="Timer" type="Timer" parent="."]

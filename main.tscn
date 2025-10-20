@@ -13,7 +13,7 @@
 script/source = "extends Node2D  # Or whatever node you're using to spawn the objects
 
 var fallingobject = preload(\"res://Elena/Scenes/fallingobject.tscn\")
-var spawn_times = [2.0, 1.0, 2.0, 3.0] #I think time starts counting after previous - So the second time is actualy that time + previous.  
+var spawn_times = [5.0, 10.0, 15.0, 30.0] #Time starts counting after previous - So the each time is actualy that time + previous times since the scene loaded   
 var current_index = 0
 var timer_started = false
 var spawn_positions = [
