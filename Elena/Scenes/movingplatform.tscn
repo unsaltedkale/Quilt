@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
 size = Vector2(326, 58)
 
-[node name="MovingPlatform" type="AnimatableBody2D" groups=["Ground"]]
+[node name="MovingPlatform" type="AnimatableBody2D" groups=["Environmental Feature"]]
 script = ExtResource("1_7qba8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -9,9 +9,9 @@
 size = Vector2(13.8571415, 20.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cov4"]
-size = Vector2(77, 133)
+size = Vector2(77, 137)
 
-[node name="Spike" type="StaticBody2D"]
+[node name="Spike" type="StaticBody2D" groups=["Environmental Feature"]]
 script = SubResource("GDScript_kh7vf")
 metadata/_edit_group_ = true
 
@@ -29,5 +29,5 @@ scale = Vector2(6.688, 7)
 texture = ExtResource("2_kh7vf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, 22.5)
+position = Vector2(2.5, 20.5)
 shape = SubResource("RectangleShape2D_6cov4")
