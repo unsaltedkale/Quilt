@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c1qxdbym2bpna"]
+[gd_scene load_steps=14 format=4 uid="uid://c1qxdbym2bpna"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_u0n1e"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_54g6f"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="6_6yeqv"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="6_v7cp0"]
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="7_whrfe"]
-[ext_resource type="PackedScene" uid="uid://b7d7v3oy8f5u3" path="res://Elena/Scenes/spike.tscn" id="8_e800t"]
 
 [sub_resource type="GDScript" id="GDScript_4c57u"]
 script/source = "extends Node2D 
@@ -655,16 +654,6 @@ script = ExtResource("4_nvxu6")
 position = Vector2(4232, 2293)
 scale = Vector2(2, 2)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-135.5, -37)
-scale = Vector2(0.5, 0.5)
-zoom = Vector2(0.3, 0.3)
-limit_left = 841
-limit_top = 1590
-limit_right = 7780
-limit_bottom = 4340
-script = ExtResource("6_v7cp0")
-
 [node name="MovingPlatform" parent="." instance=ExtResource("6_6yeqv")]
 position = Vector2(5451, 2545)
 point_a = Vector2(5451, 2545)
@@ -678,9 +667,15 @@ point_b = Vector2(6607, 2156)
 [node name="DissapearingPlatform" parent="." instance=ExtResource("7_whrfe")]
 position = Vector2(4513, 2608)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("8_e800t")]
-position = Vector2(3994, 2469)
-
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(4231, 2275)
+zoom = Vector2(0.3, 0.3)
+limit_left = 2308
+limit_top = 1203
+limit_right = 6156
+limit_bottom = 3363
+script = ExtResource("6_v7cp0")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
