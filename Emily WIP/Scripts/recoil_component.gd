@@ -8,23 +8,20 @@ extends Node
 var speed = .3
 
 var speed_negative : bool = false
+
 	
 #mouse.x > the player.x to the right
 func handle_movement(body: CharacterBody2D, want_to_shoot: bool) -> void: 
+	var mouse_pos : Vector2 = get_viewport().get_mouse_position() 
+	var player_pos : Vector2 = body.position * get_viewport().get_canvas_transform()
 	if want_to_shoot:
 		# use camera position for player later when camera follows player
-		if get_viewport().get_mouse_position().x > (body.position.x-3050)/3.3 and speed_negative:
+		if mouse_pos > player_pos and speed_negative:
 			speed = speed * 1
 			speed_negative = true
-		elif get_viewport().get_mouse_position().x > (body.position.x-3050)/3.3:
+		elif mouse_pos > player_pos:
 			speed = speed * -1
 			speed_negative = true
-		if get_viewport().get_mouse_position().x < (body.position.x-3050)/3.3 and speed_negative:
-			speed = speed * -1
-			speed_negative = false
-		elif get_viewport().get_mouse_position().x < (body.position.x-3050)/3.3:
-			speed = speed * 1
-			speed_negative = false
-			
+		
 		body.velocity.x = body.position.x * speed
-		print("player position : ", body.global_position ," mouse position: ", get_viewport().get_mouse_position())
+		print("player position : ", player_pos.x, " , ", player_pos.y ," mouse position: ", mouse_pos.x, " , ", mouse_pos.y)
