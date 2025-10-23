@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=46 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="PackedScene" uid="uid://deu4pl1h45ba" path="res://Emily WIP/Scenes/jump_component.tscn" id="3_0yr7s"]
@@ -8,12 +8,27 @@
 [ext_resource type="PackedScene" uid="uid://b22c0g5pf8l3j" path="res://Emily WIP/Scenes/recoil_component.tscn" id="7_d3lbi"]
 [ext_resource type="PackedScene" uid="uid://cys2fk40vy80u" path="res://Elena/Scenes/player_health.tscn" id="7_d72cn"]
 [ext_resource type="PackedScene" uid="uid://d3tqa847kjwb5" path="res://Emily WIP/Scenes/projectile_component.tscn" id="8_d3lbi"]
+[ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt Animation Spritesheet Stop (1).png" id="9_17h1f"]
 [ext_resource type="Texture2D" uid="uid://cx87scu4cs4kc" path="res://Art/Quilt Animation Spritesheet Idle (1).png" id="9_ltfw8"]
 [ext_resource type="Texture2D" uid="uid://d4enw7wsgmurv" path="res://Art/Quilt Animation Spritesheet Walk (1).png" id="10_ltfw8"]
+[ext_resource type="Texture2D" uid="uid://0qwf60hlqiwk" path="res://Art/Quilt Animation Spritesheet Jump.png" id="11_lkxuv"]
+[ext_resource type="Texture2D" uid="uid://c3nsbjc4e2qdy" path="res://Art/Quilt Animation Spritesheet Land.png" id="12_g4sr2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8qdn"]
 radius = 4.75
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k042"]
+atlas = ExtResource("9_7a16b")
+region = Rect2(0, 0, 32, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfdg1"]
+atlas = ExtResource("9_7a16b")
+region = Rect2(0, 46, 32, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7wni"]
+atlas = ExtResource("9_7a16b")
+region = Rect2(0, 92, 32, 46)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x8qdn"]
 atlas = ExtResource("9_ltfw8")
@@ -22,6 +37,22 @@ region = Rect2(0, 0, 19, 45)
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0x3c"]
 atlas = ExtResource("9_ltfw8")
 region = Rect2(0, 45, 19, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0p7j"]
+atlas = ExtResource("11_lkxuv")
+region = Rect2(0, 0, 32, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icvrh"]
+atlas = ExtResource("11_lkxuv")
+region = Rect2(0, 46, 32, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgwx7"]
+atlas = ExtResource("11_lkxuv")
+region = Rect2(0, 92, 32, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a45e1"]
+atlas = ExtResource("12_g4sr2")
+region = Rect2(0, 0, 26, 43)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tcrre"]
 atlas = ExtResource("9_17h1f")
@@ -107,6 +138,20 @@ region = Rect2(0, 736, 29, 46)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_2k042")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfdg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7wni")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_x8qdn")
 }, {
 "duration": 1.0,
@@ -115,6 +160,28 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0p7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icvrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgwx7")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a45e1")
+}],
+"loop": false,
+"name": &"land",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -222,6 +289,4 @@ texture_filter = 1
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"idle"
-frame = 1
-frame_progress = 0.5539129
+animation = &"land"
