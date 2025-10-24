@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://duk0dr4rdam4g"]
+
+[ext_resource type="Script" uid="uid://big6rcegqu0nl" path="res://Elena/Scripts/leverplatform.gd" id="1_dcb7x"]
+[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_71v7q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
+size = Vector2(326, 58)
+
+[node name="leverplatform" type="AnimatableBody2D" groups=["Environmental Feature"]]
+script = ExtResource("1_dcb7x")
+position_a = null
+position_b = null
+speed = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -29)
+shape = SubResource("RectangleShape2D_lpq4i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.0000076, 0.9999962)
+scale = Vector2(2.5000002, 1.7578125)
+texture = ExtResource("2_71v7q")
+region_enabled = true
+region_rect = Rect2(448, 128, 128, 64)

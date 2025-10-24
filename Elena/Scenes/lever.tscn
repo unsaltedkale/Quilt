@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cruolbbn4dkbf"]
+
+[ext_resource type="Script" uid="uid://bdo7ipnega6ff" path="res://Elena/Scripts/lever.gd" id="1_3t248"]
+[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_r2igf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu6v1"]
+size = Vector2(73, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw72p"]
+atlas = ExtResource("2_r2igf")
+region = Rect2(576, 704, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqrpp"]
+atlas = ExtResource("2_r2igf")
+region = Rect2(704, 704, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pcow5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw72p")
+}],
+"loop": true,
+"name": &"lever_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqrpp")
+}],
+"loop": true,
+"name": &"lever_1",
+"speed": 5.0
+}]
+
+[node name="Lever" type="Node2D"]
+script = ExtResource("1_3t248")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_iu6v1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pcow5")
+animation = &"lever_0"

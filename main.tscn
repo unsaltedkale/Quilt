@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=15 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b7d7v3oy8f5u3" path="res://Elena/Scenes/spike.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="9_kek77"]
 
 [sub_resource type="GDScript" id="GDScript_4c57u"]
 script/source = "extends Node2D 
@@ -676,5 +677,8 @@ position = Vector2(4513, 2608)
 position = Vector2(3994, 2469)
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Lever" parent="." instance=ExtResource("9_kek77")]
+position = Vector2(5304, 1557)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
