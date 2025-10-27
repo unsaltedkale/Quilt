@@ -1,47 +1,33 @@
 extends Camera2D
 
 var initialPosition
-var offset1 = 2
+var offset1 = 500
 
 var playerReference
-var screen_size
-var cameraTop
-var cameraBottom
+var screenIsMoving
 
-var initialTopLimit
-var initialBottomLimit
+var target
 
 func _ready() -> void:
 	initialPosition = self.global_position
-	screen_size = get_viewport().get_visible_rect().size
-	cameraTop = global_position.y + screen_size.y / 2
-	cameraBottom = global_position.y - screen_size.y / 2
+	screenIsMoving = false
 	
 	playerReference = $"../Player"
 	
-	initialTopLimit = self.limit_top
-	initialBottomLimit = self.limit_bottom
-	
 func _process(delta: float) -> void:
-	print(playerReference.position.x)
+	print(screenIsMoving)
 	
-	self.position.x = playerReference.position.x
-	self.limit_top = cameraTop
-	
-	if playerReference.position.y >= initialTopLimit:
-		cameraTop = offset1 * initialTopLimit
-		initialTopLimit = self.limit_top
-		
-	
-	
-	
-	
-	
-	
-	#if self.global_position.y >= offset1 * initialTopLimit:
-		#self.limit_top = initialTopLimit * offset1
-		#self.limit_bottom = initialBottomLimit * -offset1
-		#print("Limits expanded")
-	#elif self.global_position.y <= initialBottomLimit:
-		#self.limit_top = -offset1 * initialTopLimit
-		#self.limit_bottom = offset1 * initialBottomLimit 
+	self.global_position.x = lerp(self.global_position.x, playerReference.global_position.x, delta * 2)
+	if screenIsMoving == false:
+		if playerReference.global_position.y <= initialPosition.y - offset1:
+			target = playerReference.global_position.y
+			screenIsMoving = true
+		elif playerReference.global_position.y >= initialPosition.y + offset1:
+			target = playerReference.global_position.y
+			screenIsMoving = true
+	else:
+		initialPosition = self.global_position
+		self.global_position.y = lerp(self.global_position.y, target, delta)
+		if (self.global_position.y - target) < 5:
+			self.position.y = target
+			screenIsMoving = false
