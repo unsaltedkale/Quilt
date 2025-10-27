@@ -8,8 +8,13 @@ extends CharacterBody2D
 @onready var projectile_scene = preload("res://Emily WIP/Scenes/red_projectile.tscn")
 
 var health_script: Node
-var speed = 150
+var speed = 300
 var player_direction
+var was_on_floor: bool = false
+var is_jumping: bool = false
+var is_falling: bool = false
+var is_landing: bool = false
+var previous_velocity = 0
 
 func _ready():
 	health_script = $PlayerHealth  
@@ -21,6 +26,7 @@ func _physics_process(delta: float) -> void:
 	jump_component.handle_jump(self, input_component.get_jump_input())
 
 	move_and_slide()
+	handle_animation()
 	
 	if Input.is_action_just_pressed("fire_projectile") and can_shoot:
 		shoot()
@@ -42,3 +48,37 @@ func shoot():
 func recoil():
 	player_direction = (position - get_global_mouse_position()).normalized()
 	position += player_direction * speed 
+
+func handle_animation():
+	# movement animations
+	var current_velocity = velocity.x
+	if previous_velocity > current_velocity:
+		$AnimatedSprite2D.play("stop")
+	if current_velocity > 0:
+		$AnimatedSprite2D.flip_h = false
+	elif current_velocity < 0:
+		$AnimatedSprite2D.flip_h = true
+	else:
+		$AnimatedSprite2D.play("idle")
+	previous_velocity = current_velocity
+	# jump animations
+	is_jumping = velocity.y > 0 and not is_on_floor()
+	is_falling = velocity.y < 0 and not is_on_floor()
+	var current_on_floor: bool = is_on_floor()
+	
+	if not was_on_floor and current_on_floor:
+		is_landing = true
+	else:
+		is_landing = false
+		
+	if is_jumping:
+		$AnimatedSprite2D.play("jump")
+	elif is_falling:
+		$AnimatedSprite2D.play("fall")
+	elif is_landing:
+		$AnimatedSprite2D.play("land")
+	else:
+		$AnimatedSprite2D.play("idle")
+		
+	was_on_floor = current_on_floor
+	
