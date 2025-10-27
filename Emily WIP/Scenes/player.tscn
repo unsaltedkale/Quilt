@@ -283,4 +283,6 @@ texture_filter = 1
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"stop"
+animation = &"walk"
+frame = 4
+frame_progress = 0.7240334
