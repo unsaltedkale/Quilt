@@ -1,47 +1,75 @@
-[gd_scene load_steps=7 format=3 uid="uid://cruolbbn4dkbf"]
+[gd_scene load_steps=11 format=3 uid="uid://cruolbbn4dkbf"]
 
-[ext_resource type="Script" uid="uid://bdo7ipnega6ff" path="res://Elena/Scripts/lever.gd" id="1_3t248"]
+[ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_3t248"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_r2igf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu6v1"]
-size = Vector2(73, 77)
+size = Vector2(97, 92)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bw72p"]
 atlas = ExtResource("2_r2igf")
-region = Rect2(576, 704, 64, 64)
+region = Rect2(704, 704, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqrpp"]
 atlas = ExtResource("2_r2igf")
+region = Rect2(640, 704, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcow5"]
+atlas = ExtResource("2_r2igf")
+region = Rect2(576, 704, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0jhb"]
+atlas = ExtResource("2_r2igf")
+region = Rect2(576, 704, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04boh"]
+atlas = ExtResource("2_r2igf")
+region = Rect2(640, 704, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m75n8"]
+atlas = ExtResource("2_r2igf")
 region = Rect2(704, 704, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pcow5"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxbqi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bw72p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqrpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcow5")
 }],
 "loop": true,
-"name": &"lever_0",
+"name": &"lever_switch_to_left",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lqrpp")
+"texture": SubResource("AtlasTexture_b0jhb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04boh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m75n8")
 }],
 "loop": true,
-"name": &"lever_1",
+"name": &"lever_switch_to_right",
 "speed": 5.0
 }]
 
 [node name="Lever" type="Node2D"]
-script = ExtResource("1_3t248")
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_3t248")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 0.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_iu6v1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_pcow5")
-animation = &"lever_0"
+sprite_frames = SubResource("SpriteFrames_xxbqi")
+animation = &"lever_switch_to_left"

@@ -1,21 +1,16 @@
-extends Node2D
+extends Area2D
 
-@export var state = "0"
+@export var state = "left"
 
-func _ready():
-	if state == "0":	
-		$AnimatedSprite2D.play("lever_0") 
-	else:
-		$AnimatedSprite2D.play("lever_1")
+func _ready() -> void:
+	state = "left"
+
+func _on_body_entered(body: Node) -> void:
+	if body.is_in_group("Player") and state == "right":
+		state = "left"
+		$AnimatedSprite.play("lever_switch_to_left")
 		
-func _procces():
-	if $Area2D.overlaps_body("Player") and Input.is_action_just_pressed("use"):
-		if state == "0":
-			print("state 1")
-			state == "1"
-			$AnimatedSprite2D.play("lever_1")
-		else: 
-			print("state 0")
-			state == "0"
-			$AnimatedSprite2D.play("lever_0")
-				
+	elif body.is_in_group("Player") and state == "left":
+		state = "right" 
+		$AnimatedSprite.play("lever_switch_to_right")
+		
