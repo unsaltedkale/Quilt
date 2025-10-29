@@ -9,4 +9,3 @@ var previous_velocity = 0
 
 func handle_horizontal_movement(body: CharacterBody2D, direction: float) -> void:
 	body.velocity.x = direction * speed
-	$"../AnimatedSprite2D".play("walk")
