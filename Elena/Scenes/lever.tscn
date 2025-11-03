@@ -42,7 +42,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pcow5")
 }],
-"loop": true,
+"loop": false,
 "name": &"lever_switch_to_left",
 "speed": 5.0
 }, {
@@ -56,7 +56,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m75n8")
 }],
-"loop": true,
+"loop": false,
 "name": &"lever_switch_to_right",
 "speed": 5.0
 }]
@@ -68,8 +68,12 @@ script = ExtResource("1_3t248")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 1)
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_iu6v1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_xxbqi")
-animation = &"lever_switch_to_left"
+animation = &"lever_switch_to_right"
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
