@@ -11,6 +11,6 @@ func handle_recoil(body: CharacterBody2D, direction: float):
 		var mouse_pos = get_viewport().get_mouse_position() * get_viewport().get_canvas_transform()
 		player_direction = (body.position - mouse_pos).normalized()
 		body.velocity += player_direction * force
-		print("player changed pos ", player_direction, "player act pos ", body.position)
+		print("player changed pos ", player_direction, "player act pos ", body.position, " mouse position ", body.position - mouse_pos)
 		# x position is too large
 	

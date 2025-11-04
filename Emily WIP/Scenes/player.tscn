@@ -146,7 +146,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n7wni")
 }],
-"loop": false,
+"loop": true,
 "name": &"fall",
 "speed": 5.0
 }, {
@@ -198,7 +198,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"stop",
-"speed": 4.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -287,6 +287,4 @@ texture_filter = 1
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"stop"
-frame = 3
-frame_progress = 1.0
+animation = &"fall"

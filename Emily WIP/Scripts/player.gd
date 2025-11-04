@@ -65,20 +65,23 @@ func handle_animation():
 	previous_velocity = current_velocity
 	# jump animations
 	is_jumping = velocity.y > 0 and not is_on_floor()
-	is_falling = velocity.y < 0 and not is_on_floor()
+	is_falling = velocity.y <= 0 and not is_on_floor()
 	var current_on_floor: bool = is_on_floor()
 	
 	if not was_on_floor and current_on_floor:
 		is_landing = true
 	else:
 		is_landing = false
-		
-	if is_jumping:
+	
+	if is_jumping and $AnimatedSprite2D.animation != "jump":
 		$AnimatedSprite2D.play("jump")
-	elif is_falling:
+	elif is_falling and $AnimatedSprite2D.animation != "fall":
 		$AnimatedSprite2D.play("fall")
-	elif is_landing:
+		print("wasn't playing fall")
+	elif is_landing and $AnimatedSprite2D.animation != "land":
 		$AnimatedSprite2D.play("land")
+	else:
+		pass
 		
 	was_on_floor = current_on_floor
 	
