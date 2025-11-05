@@ -1,51 +1,47 @@
 extends AnimatableBody2D
 
-@export var lever_path: NodePath
 @export var point_a: Vector2
 @export var point_b: Vector2
-@export var move_speed: float = 2.0
+@export var speed: float = 100.0
+@export var wait_time: float = 0.5
+@export var lever_path: NodePath
 
-var lever: Node = null
-var target_position: Vector2
+var _target_point: Vector2
+var _moving_to_b = true
+var _waiting = false
+var _active = false
 
-func _ready() -> void:
-	if lever_path:
-		var node = get_node(lever_path)
+func _ready():
+	_target_point = point_b
+	
+	if lever_path != NodePath():
+		var lever = get_node(lever_path)
+		lever.changed.connect(_on_lever_changed)
+		
+		_on_lever_changed(lever.state)
 
-		if "state" in node:
-			lever = node
-		else:
-			for child in node.get_children():
-				if "state" in child:
-					lever = child
-					break
+func _on_lever_changed(new_state: String):
+	if new_state == "right":
+		_active = true
 	else:
-		push_error("Lever path not set for moving platform!")
-		return
+		_active = false
 	
-	if lever == null:
-		push_error("No valid lever found with 'state' property at lever_path.")
+
+func _physics_process(delta):
+	if not _active or _waiting:
 		return
 
-	update_target_from_lever()
+	var direction = (_target_point - global_position).normalized()
+	var distance = global_position.distance_to(_target_point)
 
-	# Connect to lever's signal if it exists
-	if lever.has_signal("state_changed"):
-		lever.connect("state_changed", Callable(self, "_on_lever_state_changed"))
+	if distance < 2.0:
+		_moving_to_b = !_moving_to_b
+		_target_point = point_b if _moving_to_b else point_a
+		_wait()
+	else:
+		global_position += direction * speed * delta
 
-func _physics_process(delta: float) -> void:
-	# Smoothly move toward the target
-	global_position = global_position.lerp(target_position, move_speed * delta)
-
-func _on_lever_state_changed(new_state: String) -> void:
-	update_target_from_lever()
-
-func update_target_from_lever() -> void:
-	if lever == null:
-		return
-	
-	var current_state = lever.get("state") if "state" in lever else null
-	if current_state == "left":
-		target_position = point_a
-	elif current_state == "right":
-		target_position = point_b
+func _wait():
+	_waiting = true
+	await get_tree().create_timer(wait_time).timeout
+	_waiting = false
