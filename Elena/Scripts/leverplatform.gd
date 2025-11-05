@@ -9,7 +9,7 @@ extends AnimatableBody2D
 var _target_point: Vector2
 var _moving_to_b = true
 var _waiting = false
-var _active = false
+var _reached_target = false
 
 func _ready():
 	_target_point = point_b
@@ -22,22 +22,24 @@ func _ready():
 
 func _on_lever_changed(new_state: String):
 	if new_state == "right":
-		_active = true
-	else:
-		_active = false
+		_target_point = point_b
+		
+	if new_state == "left":
+		_target_point = point_a
+		
 	
 
 func _physics_process(delta):
-	if not _active or _waiting:
+	if _waiting:
 		return
 
 	var direction = (_target_point - global_position).normalized()
 	var distance = global_position.distance_to(_target_point)
 
 	if distance < 2.0:
-		_moving_to_b = !_moving_to_b
-		_target_point = point_b if _moving_to_b else point_a
-		_wait()
+		_reached_target = true
+		global_position = _target_point
+	
 	else:
 		global_position += direction * speed * delta
 

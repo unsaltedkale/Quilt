@@ -770,6 +770,9 @@ position = Vector2(3994, 2469)
 position = Vector2(5303, 1536)
 
 [node name="leverplatform" parent="." instance=ExtResource("10_4c57u")]
-position = Vector2(3760, 1589)
+position = Vector2(3751, 1591)
+point_a = Vector2(3751, 1591)
+point_b = Vector2(5068, 1654)
+lever_path = NodePath("../Lever")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
