@@ -8,10 +8,7 @@ extends Node
 var previous_velocity = 0
 
 func handle_horizontal_movement(body: CharacterBody2D, direction: float) -> void:
-	#if body.is_on_floor():
-		#body.velocity.x = direction * speed
-	#else:
-		#pass
+	#if recoil, launch in air a lil
 	var delta: float = get_process_delta_time()
 	var traction = 2500
 	body.velocity.x = move_toward(body.velocity.x, direction * speed, delta * traction)

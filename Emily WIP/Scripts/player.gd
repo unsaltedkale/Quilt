@@ -13,6 +13,7 @@ var was_on_floor: bool = false
 var is_jumping: bool = false
 var is_falling: bool = false
 var is_landing: bool = false
+var is_phlo: bool = true
 var previous_velocity = 0
 
 
@@ -47,21 +48,42 @@ func shoot():
 
 func handle_animation():
 	# movement animations
+	var string: String = ""
 	var current_velocity = velocity.x
 	if previous_velocity > current_velocity and is_on_floor():
-		$AnimatedSprite2D.play("stop")
+		if is_phlo:
+			string = "phlo_idle"
+		else:
+			string = "stop"
+		$AnimatedSprite2D.play(string)
 		$AnimatedSprite2D.flip_h = false
 	elif previous_velocity < current_velocity and is_on_floor():
-		$AnimatedSprite2D.play("stop")
+		if is_phlo:
+			string = "phlo_idle"
+		else:
+			string = "stop"
+		$AnimatedSprite2D.play(string)
 		$AnimatedSprite2D.flip_h = true
 	elif current_velocity > 0:
-		$AnimatedSprite2D.play("walk")
+		if is_phlo:
+			string = "phlo_idle"
+		else:
+			string = "walk"
+		$AnimatedSprite2D.play(string)
 		$AnimatedSprite2D.flip_h = false
 	elif current_velocity < 0:
-		$AnimatedSprite2D.play("walk")
+		if is_phlo:
+			string = "phlo_idle"
+		else:
+			string = "walk"
+		$AnimatedSprite2D.play(string)
 		$AnimatedSprite2D.flip_h = true
 	elif not $AnimatedSprite2D.is_playing():
-		$AnimatedSprite2D.play("idle")
+		if is_phlo:
+			string = "phlo_idle"
+		elif not is_phlo:
+			string = "idle"
+		$AnimatedSprite2D.play(string)
 	previous_velocity = current_velocity
 	# jump animations
 	is_jumping = velocity.y < 0 and not is_on_floor()

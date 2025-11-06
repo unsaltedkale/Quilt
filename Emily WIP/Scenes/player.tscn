@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=77 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="PackedScene" uid="uid://deu4pl1h45ba" path="res://Emily WIP/Scenes/jump_component.tscn" id="3_0yr7s"]
@@ -460,6 +460,10 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4hfjo"]
+radius = 18.0
+height = 70.0
+
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "recoil_component") groups=["Player"]]
 collision_mask = 6145
 script = ExtResource("1_jfghr")
@@ -493,4 +497,8 @@ texture_filter = 1
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"phlo_land"
+animation = &"phlo_fall"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4hfjo")
+disabled = true
