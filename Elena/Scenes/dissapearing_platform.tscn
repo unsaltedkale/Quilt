@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bynaee88w7bws"]
 
-[ext_resource type="Script" uid="uid://1xyuqc2q8vuw" path="res://Elena/Scripts/dissapearing_platform.gd" id="1_3hy82"]
+[ext_resource type="Script" uid="uid://1xyuqc2q8vuw" path="res://Elena/Scripts/disappearing_platform.gd" id="1_3hy82"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_euxbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qere"]

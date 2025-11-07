@@ -736,7 +736,4 @@ point_a = Vector2(3751, 1591)
 point_b = Vector2(5068, 1654)
 lever_path = NodePath("../Lever")
 
-[node name="Lever2" parent="." instance=ExtResource("9_kek77")]
-position = Vector2(3377, 1470)
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
