@@ -1,5 +1,6 @@
 [gd_scene load_steps=17 format=4 uid="uid://1225g3ggvek2"]
 
+[ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_efxa6"]
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://b55ntb0xce4gd" path="res://Salem WIPs/showDialog.gd" id="3_1bvp3"]
@@ -10,46 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="10_4c57u"]
-
-[sub_resource type="GDScript" id="GDScript_4c57u"]
-script/source = "extends Node2D 
-
-var fallingobject = preload(\"res://Elena/Scenes/fallingobject.tscn\")
-var spawn_times = [5.0, 10.0, 15.0, 30.0] #Time starts counting after previous - So the each time is actualy that time + previous times since the scene loaded   
-var current_index = 0
-var timer_started = false
-var spawn_positions = [
-	Vector2(6597, 1200), 
-	Vector2(4000,1200),
-	Vector2(3750,1200),
-	Vector2(4500, 1200)
-]
-
-func _ready():
-	if spawn_times.size() > 0:
-		$Timer.start(spawn_times[current_index])
-
-func _process(delta):
-	var player = get_node(\"Player\")
-	if not timer_started and player.velocity.length()> 0:
-		$Timer.start(spawn_times[current_index])
-		timer_started = true
-
-func inst(pos: Vector2):
-	var instance = fallingobject.instantiate()
-	instance.position = pos
-	add_child(instance)
-	
-func _on_timer_timeout() -> void:
-	var pos = spawn_positions[current_index]
-	inst(pos)
-	
-	current_index += 1
-	if current_index < spawn_times.size():
-		$Timer.start(spawn_times[current_index])
-	else:
-		$Timer.stop() 
-"
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4c57u"]
 
@@ -706,7 +667,7 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_0xm2m")
 
 [node name="TestScene" type="Node2D"]
-script = SubResource("GDScript_4c57u")
+script = ExtResource("1_efxa6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -774,5 +735,8 @@ position = Vector2(3751, 1591)
 point_a = Vector2(3751, 1591)
 point_b = Vector2(5068, 1654)
 lever_path = NodePath("../Lever")
+
+[node name="Lever2" parent="." instance=ExtResource("9_kek77")]
+position = Vector2(3377, 1470)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

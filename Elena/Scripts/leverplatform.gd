@@ -11,6 +11,7 @@ var _moving_to_b = true
 var _waiting = false
 var _reached_target = false
 
+
 func _ready():
 	_target_point = point_b
 	
@@ -22,9 +23,11 @@ func _ready():
 
 func _on_lever_changed(new_state: String):
 	if new_state == "right":
+		await get_tree().create_timer(1.0).timeout
 		_target_point = point_b
 		
 	if new_state == "left":
+		await get_tree().create_timer(1.0).timeout
 		_target_point = point_a
 		
 	
