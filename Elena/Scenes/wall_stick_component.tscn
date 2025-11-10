@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnnt61bxtj5x8"]
+
+[ext_resource type="Script" uid="uid://bqyjk8u4qx82d" path="res://Elena/Scripts/wall_stick_component.gd" id="1_roylv"]
+
+[node name="WallStickComponent" type="Node"]
+script = ExtResource("1_roylv")
