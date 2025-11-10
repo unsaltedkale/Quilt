@@ -131,5 +131,3 @@ func handle_phlo_animation():
 		pass
 		
 	was_on_floor = current_on_floor
-	
-	

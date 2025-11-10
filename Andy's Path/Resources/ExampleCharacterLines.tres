@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://c8f3pbbwcejh0"]
 
-[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_qg7x4"]
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_bxk65"]
 
 [resource]
-script = ExtResource("1_qg7x4")
+script = ExtResource("1_bxk65")
 text = Dictionary[String, String]({
-"intro": "Hello, traveler!"
+"0": "Hellodwadwadaw"
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
