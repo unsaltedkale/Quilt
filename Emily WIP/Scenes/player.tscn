@@ -345,7 +345,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pff4o")
 }],
-"loop": true,
+"loop": false,
 "name": &"phlo_idle",
 "speed": 6.0
 }, {
@@ -385,7 +385,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_682rl")
 }],
-"loop": true,
+"loop": false,
 "name": &"phlo_land",
 "speed": 5.0
 }, {
@@ -497,7 +497,7 @@ texture_filter = 1
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"phlo_fall"
+animation = &"phlo_jump"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4hfjo")
