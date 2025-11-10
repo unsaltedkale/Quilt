@@ -15,7 +15,6 @@ func _ready() -> void:
 	playerReference = $"../Player"
 	
 func _process(delta: float) -> void:
-	print(screenIsMoving)
 	
 	self.global_position.x = lerp(self.global_position.x, playerReference.global_position.x, delta * 2)
 	if screenIsMoving == false:
@@ -27,7 +26,8 @@ func _process(delta: float) -> void:
 			screenIsMoving = true
 	else:
 		initialPosition = self.global_position
-		self.global_position.y = lerp(self.global_position.y, target, delta)
-		if (self.global_position.y - target) < 5:
+		self.global_position.y = lerp(self.global_position.y, target, delta * 5)
+		print(abs(self.global_position.y - target))
+		if abs((self.global_position.y - target)) < 10:
 			self.position.y = target
 			screenIsMoving = false
