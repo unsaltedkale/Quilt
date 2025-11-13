@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var movement_component: MovementComponent
 @export var jump_component: JumpComponent
 @export var recoil_component: RecoilComponent
+@export var wall_stick_component: WallStickComponent
 @onready var projectile_scene = preload("res://Emily WIP/Scenes/red_projectile.tscn")
 
 var health_script: Node
@@ -36,6 +37,7 @@ func _physics_process(delta: float) -> void:
 	movement_component.handle_horizontal_movement(self, input_component.input_horizontal)
 	jump_component.handle_jump(self, input_component.get_jump_input())
 	recoil_component.handle_recoil(self, input_component.get_shoot_input())
+	wall_stick_component.handle_wall(self, delta)
 	
 	move_and_slide()
 	
