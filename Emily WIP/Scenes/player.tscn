@@ -466,7 +466,7 @@ radius = 18.0
 height = 70.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
-size = Vector2(36, 44)
+size = Vector2(38, 44)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "recoil_component", "wall_stick_component") groups=["Player"]]
 collision_mask = 6145
