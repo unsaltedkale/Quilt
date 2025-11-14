@@ -7,13 +7,12 @@ extends AnimatableBody2D
 @export var lever_path: NodePath
 
 var _target_point: Vector2
-var _moving_to_b = true
 var _waiting = false
 var _reached_target = false
 
 
 func _ready():
-	_target_point = point_b
+	_target_point = point_a
 	
 	if lever_path != NodePath():
 		var lever = get_node(lever_path)

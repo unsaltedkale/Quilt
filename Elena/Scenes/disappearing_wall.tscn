@@ -9,7 +9,7 @@ size = Vector2(62, 191)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr4i5"]
 size = Vector2(75, 199)
 
-[node name="disappearing_wall" type="StaticBody2D"]
+[node name="disappearing_wall" type="StaticBody2D" groups=["Environmental Feature"]]
 script = ExtResource("1_tob3b")
 metadata/_edit_group_ = true
 
