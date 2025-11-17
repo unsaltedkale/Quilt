@@ -1,7 +1,12 @@
 extends Node2D
 
-var isInRange
+var triggerReference
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if isInRange:
-		print("Hello") # Replace with function body.
+func _ready() -> void:
+	triggerReference = $Area2D
+
+func _process(delta: float) -> void:
+	if triggerReference.isInTrigger == true:
+		print("In Trigger")
+	else:
+		print("Out of Trigger")
