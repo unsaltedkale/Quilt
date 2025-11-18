@@ -8,4 +8,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _timer() -> void:
 	await get_tree().create_timer(.5).timeout
 	print("Destroying Wall")
-	get_parent().queue_free()
+	queue_free()

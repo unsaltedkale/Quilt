@@ -17,6 +17,7 @@ var is_landing: bool = false
 var is_phlo: bool = false
 var previous_velocity = 0
 var string: String = ""
+var collected_objects: int = 0 
 
 
 func _ready():

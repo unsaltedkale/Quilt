@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=20 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_efxa6"]
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_ig7tw"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://b8yhonlgtui7b" path="res://Elena/Scenes/breakable_wall.tscn" id="13_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://bhdhha5dl6wgu" path="res://Elena/Scenes/collectable_object.tscn" id="14_w48qg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4c57u"]
 
@@ -737,5 +739,11 @@ position = Vector2(3753, 1587)
 point_a = Vector2(3753, 1587)
 point_b = Vector2(5068, 1654)
 lever_path = NodePath("../Lever")
+
+[node name="breakable_wall" parent="." instance=ExtResource("13_ycdy4")]
+position = Vector2(3368, 1433)
+
+[node name="collectable_object" parent="." instance=ExtResource("14_w48qg")]
+position = Vector2(4563, 1791)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
