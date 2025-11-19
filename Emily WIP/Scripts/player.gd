@@ -18,6 +18,7 @@ var is_phlo: bool = false
 var previous_velocity = 0
 var string: String = ""
 var collected_objects: int = 0 
+var can_shoot: bool = true
 
 
 func _ready():
@@ -46,7 +47,7 @@ func _physics_process(delta: float) -> void:
 		shoot()
 
 #player ability function
-var can_shoot: bool = true
+
 
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
