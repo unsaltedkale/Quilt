@@ -1,5 +1,7 @@
 extends Node
 
+class_name Projectile
+
 var speed = 20
 var mousePosition
 var pressedPosition
