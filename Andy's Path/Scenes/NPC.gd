@@ -1,12 +1,29 @@
 extends Node2D
 
-var triggerReference
+var labelReference
+var areaReferecnce
 
 func _ready() -> void:
-	triggerReference = $Area2D
+	labelReference = $Label
+	areaReferecnce = $Area2D
 
 func _process(delta: float) -> void:
-	if triggerReference.isInTrigger == true:
+	Display_Text_With_Input()
+	
+func Display_Text_No_Input():
+	if areaReferecnce.isInTrigger == true:
 		print("In Trigger")
+		labelReference.visible = true
+		
 	else:
 		print("Out of Trigger")
+		labelReference.visible = false
+		
+func Display_Text_With_Input():
+	if areaReferecnce.isInTrigger == true && Input.is_action_pressed("interact"):
+		print("In Trigger")
+		labelReference.visible = true
+		
+	else:
+		print("Out of Trigger")
+		labelReference.visible = false

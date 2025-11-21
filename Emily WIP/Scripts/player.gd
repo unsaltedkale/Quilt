@@ -46,9 +46,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("fire_projectile") and can_shoot:
 		shoot()
 
-#player ability function
-
-
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
 
@@ -58,6 +55,12 @@ func shoot():
 	get_parent().add_child(proj)
 	proj.projectile_direction = (position - get_global_mouse_position()).normalized()
 	can_shoot = true
+
+func _on_STAR_body_entered(body): #on area entered from STAR script
+	if collected_objects >= 1:
+		pass
+	else:
+		collected_objects += 1
 
 func handle_animation():
 	# movement animations
