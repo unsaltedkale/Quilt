@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dai10e5duvamf"
-path="res://.godot/imported/Prolouge-to-Ebb.wav-b550638c9090de417c387072f5143d6c.sample"
+path="res://.godot/imported/Prolouge-to-Ebb.wav-ace548a266c81c553c89672525fce651.sample"
 
 [deps]
 
-source_file="res://Alex's Folder/Prolouge-to-Ebb.wav"
-dest_files=["res://.godot/imported/Prolouge-to-Ebb.wav-b550638c9090de417c387072f5143d6c.sample"]
+source_file="res://Alex's Folder/music_resources/music_tracks/Prolouge-to-Ebb.wav"
+dest_files=["res://.godot/imported/Prolouge-to-Ebb.wav-ace548a266c81c553c89672525fce651.sample"]
 
 [params]
 

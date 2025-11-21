@@ -1,11 +1,12 @@
 extends Node2D
 
 @onready var audioplayer = $"../AudioStreamPlayer"
-@onready var bpm: float = 80
+@export var current_music_resource: music_resource
+@onready var bpm: float = current_music_resource.bpm
 @onready var quarternote: float
 @onready var eighthnote: float
 @onready var sixteenthnote: float
-@onready var offset = 0
+@onready var offset
 @onready var beatnumber = 1
 @onready var barnumber = 1
 @onready var timesig = 4
@@ -16,10 +17,15 @@ func _ready():
 	quarternote = 60/bpm
 	eighthnote = 30/bpm
 	sixteenthnote = 15/bpm
+	audioplayer.stream = current_music_resource.track
+	bpm = current_music_resource.bpm
+	timesig = current_music_resource.timesig
+	offset = current_music_resource.offset
 	audioplayer.play()
+	print(barnumber, ", ", beatnumber)
 	pass
 	
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	songposition = audioplayer.get_playback_position() + offset
 	if (songposition > lastbeat + sixteenthnote):
 		lastbeat += sixteenthnote
@@ -28,4 +34,16 @@ func _physics_process(delta: float) -> void:
 				barnumber += 1
 				beatnumber = 1
 		print(barnumber, ", ", beatnumber)
-	pass
+
+enum music_transition_enum {immediate, next_beat, next_bar, end}
+
+func _change_music_track(m_resource: music_resource):
+	audioplayer.stop()
+	audioplayer.stream = m_resource.track
+	bpm = m_resource.bpm
+	timesig = m_resource.timesig
+	offset = m_resource.offset
+	beatnumber = 1
+	barnumber = 1
+	audioplayer.play()
+	print("changed")

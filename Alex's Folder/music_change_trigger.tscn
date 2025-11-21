@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlhy4f15dvbqg"]
+
+[ext_resource type="Script" uid="uid://b7enai4q4tspb" path="res://Alex's Folder/music_change_trigger.gd" id="1_f74go"]
+[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_kumea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f74go"]
+size = Vector2(128, 128)
+
+[node name="MusicChangeTrigger" type="Area2D"]
+script = ExtResource("1_f74go")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kumea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f74go")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

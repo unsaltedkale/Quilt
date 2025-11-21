@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yb5xyqxcammo"
+path="res://.godot/imported/Crypt II_ Ebb Concept 1.wav-7d1b5d4a4a3c5c6b1996950c9742e08f.sample"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/music_tracks/Crypt II_ Ebb Concept 1.wav"
+dest_files=["res://.godot/imported/Crypt II_ Ebb Concept 1.wav-7d1b5d4a4a3c5c6b1996950c9742e08f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
