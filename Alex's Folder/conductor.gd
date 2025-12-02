@@ -46,5 +46,10 @@ func _change_music_track(m_resource: music_resource):
 	beatnumber = 1
 	barnumber = 1
 	lastbeat = 0
+	quarternote = 60/bpm
+	eighthnote = 30/bpm
+	sixteenthnote = 15/bpm
+	print(barnumber, ", ", beatnumber)
 	audioplayer.play()
+	print(bpm)
 	print("changed")
