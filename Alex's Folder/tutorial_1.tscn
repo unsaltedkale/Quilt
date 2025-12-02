@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=15 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="1_vuu6h"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/conductor.tscn" id="5_0hcnm"]
 [ext_resource type="Resource" uid="uid://bmif5lh5wrfbj" path="res://Alex's Folder/music_resources/crypt_1_sub.tres" id="5_3xd41"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/music_change_trigger.tscn" id="6_3xd41"]
+[ext_resource type="Resource" uid="uid://co7glxsi63blf" path="res://Alex's Folder/music_resources/cyrpt_2_1_prolouge.tres" id="7_0f8nt"]
 [ext_resource type="Resource" uid="uid://cqaykjyng7n2c" path="res://Alex's Folder/music_resources/crypt_2_ebb.tres" id="7_afkue"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80spu"]
@@ -588,7 +589,7 @@ sources/0 = SubResource("TileSetAtlasSource_vuu6h")
 [node name="Tutorial1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
-position = Vector2(40324, -4182)
+position = Vector2(39830, -4165)
 scale = Vector2(2, 2)
 
 [node name="Tiles" type="Node2D" parent="."]
@@ -620,5 +621,9 @@ stream = SubResource("AudioStreamWAV_80spu")
 current_music_resource = ExtResource("5_3xd41")
 
 [node name="MusicChangeTrigger" parent="." instance=ExtResource("6_3xd41")]
-position = Vector2(40602, -4178)
+position = Vector2(40266, -4167)
+track = ExtResource("7_0f8nt")
+
+[node name="MusicChangeTrigger2" parent="." instance=ExtResource("6_3xd41")]
+position = Vector2(40612, -4157)
 track = ExtResource("7_afkue")

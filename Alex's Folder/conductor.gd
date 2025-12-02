@@ -45,5 +45,6 @@ func _change_music_track(m_resource: music_resource):
 	offset = m_resource.offset
 	beatnumber = 1
 	barnumber = 1
+	lastbeat = 0
 	audioplayer.play()
 	print("changed")

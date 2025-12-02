@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=78 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="PackedScene" uid="uid://deu4pl1h45ba" path="res://Emily WIP/Scenes/jump_component.tscn" id="3_0yr7s"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://ca35o3us2j4lw" path="res://Emily WIP/Scenes/gravity_component.tscn" id="6_ltfw8"]
 [ext_resource type="PackedScene" uid="uid://cys2fk40vy80u" path="res://Elena/Scenes/player_health.tscn" id="7_d72cn"]
 [ext_resource type="PackedScene" uid="uid://b22c0g5pf8l3j" path="res://Emily WIP/Scenes/recoil_component.tscn" id="8_7a16b"]
-[ext_resource type="PackedScene" uid="uid://d3tqa847kjwb5" path="res://Emily WIP/Scenes/projectile_component.tscn" id="8_d3lbi"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt Animation Spritesheet Stop (1).png" id="9_17h1f"]
 [ext_resource type="Texture2D" uid="uid://cx87scu4cs4kc" path="res://Art/Quilt Animation Spritesheet Idle (1).png" id="9_ltfw8"]
@@ -491,9 +490,6 @@ shape = SubResource("CapsuleShape2D_x8qdn")
 [node name="GravityComponent" parent="." instance=ExtResource("6_ltfw8")]
 
 [node name="PlayerHealth" parent="." instance=ExtResource("7_d72cn")]
-
-[node name="ProjectileComponent" parent="." node_paths=PackedStringArray("input_component") instance=ExtResource("8_d3lbi")]
-input_component = NodePath("../InputComponent")
 
 [node name="RecoilComponent" parent="." instance=ExtResource("8_7a16b")]
 
