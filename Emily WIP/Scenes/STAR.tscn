@@ -1,29 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyr5uj078f18r"]
+[gd_scene load_steps=4 format=3 uid="uid://cyr5uj078f18r"]
 
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_akwti"]
-[ext_resource type="Script" uid="uid://cvfbgn6h7ad5y" path="res://Emily WIP/Scripts/STAR_area.gd" id="3_akwti"]
 
 [sub_resource type="GDScript" id="GDScript_nikii"]
+script/source = "extends Area2D
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjb6q"]
-size = Vector2(74, 74)
+func _on_STAR_body_entered(body: Node):
+	if body.is_in_group(\"Player\"):
+		queue_free()
+	else:
+		pass
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nikii"]
-size = Vector2(74, 74)
+	
+		
+"
 
-[node name="STAR" type="RigidBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7gr"]
+
+[node name="STAR" type="Area2D"]
 script = SubResource("GDScript_nikii")
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("3_akwti")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_mjb6q")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(9.536743e-07, -1.9073486e-06)
-scale = Vector2(0.57812494, 0.57812494)
+scale = Vector2(-0.16113363, -0.15999997)
 texture = ExtResource("2_akwti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_nikii")
+shape = SubResource("RectangleShape2D_cd7gr")

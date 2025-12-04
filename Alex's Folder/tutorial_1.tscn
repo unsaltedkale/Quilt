@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=16 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="1_vuu6h"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/music_change_trigger.tscn" id="6_3xd41"]
 [ext_resource type="Resource" uid="uid://co7glxsi63blf" path="res://Alex's Folder/music_resources/cyrpt_2_1_prolouge.tres" id="7_0f8nt"]
 [ext_resource type="Resource" uid="uid://cqaykjyng7n2c" path="res://Alex's Folder/music_resources/crypt_2_ebb.tres" id="7_afkue"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="9_v7eyh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80spu"]
 texture = ExtResource("1_leou4")
@@ -627,3 +628,6 @@ track = ExtResource("7_0f8nt")
 [node name="MusicChangeTrigger2" parent="." instance=ExtResource("6_3xd41")]
 position = Vector2(40612, -4157)
 track = ExtResource("7_afkue")
+
+[node name="STAR" parent="." instance=ExtResource("9_v7eyh")]
+position = Vector2(39424, -4282)

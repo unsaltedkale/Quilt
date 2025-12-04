@@ -54,7 +54,11 @@ func shoot():
 	proj.position = position
 	get_parent().add_child(proj)
 	proj.projectile_direction = (position - get_global_mouse_position()).normalized()
-	can_shoot = true
+	collected_objects -= 1
+	if collected_objects <= 0:
+		can_shoot = true
+	else:
+		can_shoot = true
 
 func _on_STAR_body_entered(body): #on area entered from STAR script
 	if collected_objects >= 1:
