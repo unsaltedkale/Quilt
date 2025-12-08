@@ -58,13 +58,7 @@ func shoot():
 	if collected_objects <= 0:
 		can_shoot = true
 	else:
-		can_shoot = true
-
-func _on_STAR_body_entered(body): #on area entered from STAR script
-	if collected_objects >= 1:
-		pass
-	else:
-		collected_objects += 1
+		can_shoot = false
 
 func handle_animation():
 	# movement animations

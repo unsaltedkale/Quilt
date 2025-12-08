@@ -1,7 +1,13 @@
 extends Area2D
 
-func _on_projectile_body_entered(body): # has to be some kinematic body to queue or disable
-	if body is CharacterBody2D:
+var speed = 500
+var projectile_direction
+
+func _process(delta):
+	position += projectile_direction * speed * delta
+
+func _on_area_entered(area: Area2D) -> void:
+	if !area.is_in_group("Player"):
 		get_parent().queue_free()
 	else:
 		pass
