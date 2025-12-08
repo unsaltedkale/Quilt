@@ -8,6 +8,10 @@ size = Vector2(326, 58)
 
 [node name="Conductor_Platform" type="AnimatableBody2D" groups=["Environmental Feature"]]
 script = ExtResource("1_jpiao")
+bar_appear = null
+beat_appear = null
+bar_delete = null
+beat_delete = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -29)

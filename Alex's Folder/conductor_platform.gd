@@ -14,6 +14,10 @@ func _ready():
 func _physics_process(delta):
 	if Conductor != null:
 		if Conductor.barnumber != null or Conductor.beatnumber != null:
+			if Conductor.barnumber == 1 && Conductor.beatnumber == 1:
+				if bar_appear != 1 || beat_appear != 1:
+					get_node("CollisionShape2D").disabled = true
+					visible = false
 			if bar_appear == Conductor.barnumber and beat_appear == Conductor.beatnumber and get_node("CollisionShape2D").disabled == true:
 				get_node("CollisionShape2D").disabled = false
 				visible = true
