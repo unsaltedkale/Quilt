@@ -37,19 +37,22 @@ func _process(delta: float) -> void:
 
 enum music_transition_enum {immediate, next_beat, next_bar, end}
 
-func _change_music_track(m_resource: music_resource):
-	audioplayer.stop()
-	audioplayer.stream = m_resource.track
-	bpm = m_resource.bpm
-	timesig = m_resource.timesig
-	offset = m_resource.offset
-	beatnumber = 1
-	barnumber = 1
-	lastbeat = 0
-	quarternote = 60/bpm
-	eighthnote = 30/bpm
-	sixteenthnote = 15/bpm
-	print(barnumber, ", ", beatnumber)
-	audioplayer.play()
-	print(bpm)
-	print("changed")
+func _change_music_track(m_resource: music_resource, change_if_same_music_track: bool):
+	if change_if_same_music_track == false && m_resource.track == audioplayer.stream:
+		pass
+	else:
+		audioplayer.stop()
+		audioplayer.stream = m_resource.track
+		bpm = m_resource.bpm
+		timesig = m_resource.timesig
+		offset = m_resource.offset
+		beatnumber = 1
+		barnumber = 1
+		lastbeat = 0
+		quarternote = 60/bpm
+		eighthnote = 30/bpm
+		sixteenthnote = 15/bpm
+		print(barnumber, ", ", beatnumber)
+		audioplayer.play()
+		print(bpm)
+		print("changed")
