@@ -1,28 +1,53 @@
-[gd_scene load_steps=6 format=3 uid="uid://c84vwure2ykyn"]
+[gd_scene load_steps=8 format=3 uid="uid://c84vwure2ykyn"]
 
 [ext_resource type="Script" uid="uid://gfx0nxrde3oa" path="res://Emily WIP/Scripts/red_projectile.gd" id="1_td6lh"]
-[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_t6jt8"]
-[ext_resource type="Script" uid="uid://bhrfym6rxy083" path="res://Emily WIP/Scripts/projectile_area2d.gd" id="3_t6jt8"]
+[ext_resource type="Texture2D" uid="uid://rxj00c2u02jg" path="res://Art/Fireball Animation Quilt.png" id="2_t6jt8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td6lh"]
-size = Vector2(26, 26)
+size = Vector2(26, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkcvn"]
-size = Vector2(26, 26)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkcvn"]
+atlas = ExtResource("2_t6jt8")
+region = Rect2(0, 0, 16, 10)
 
-[node name="RedProjectile" type="RigidBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hccun"]
+atlas = ExtResource("2_t6jt8")
+region = Rect2(0, 10, 16, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54o3b"]
+atlas = ExtResource("2_t6jt8")
+region = Rect2(0, 20, 16, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hsl4c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkcvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hccun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54o3b")
+}],
+"loop": true,
+"name": &"FIRE",
+"speed": 5.0
+}]
+
+[node name="RedProjectile" type="Area2D"]
 collision_layer = 31
 script = ExtResource("1_td6lh")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_t6jt8")
-
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("3_t6jt8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(4.8250036, 4.8250036)
 shape = SubResource("RectangleShape2D_td6lh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_nkcvn")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1.19209275e-07, 0)
+scale = Vector2(7.7199984, 7.7199984)
+sprite_frames = SubResource("SpriteFrames_hsl4c")
+animation = &"FIRE"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
