@@ -24,6 +24,7 @@ window/stretch/mode="viewport"
 Player=""
 "Environmental Feature"=""
 Projectile=""
+tilemap=""
 
 [input]
 

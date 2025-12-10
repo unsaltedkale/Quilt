@@ -8,11 +8,13 @@
 [node name="STAR" type="Area2D"]
 script = ExtResource("1_nikii")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(-0.16113363, -0.15999997)
-texture = ExtResource("2_akwti")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(4.999999, 4.999999)
 shape = SubResource("RectangleShape2D_cd7gr")
 
-[connection signal="area_entered" from="." to="." method="_on_STAR_body_entered"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.1415925
+scale = Vector2(0.805668, 0.79999965)
+texture = ExtResource("2_akwti")
+
+[connection signal="body_entered" from="." to="." method="_on_STAR_entered"]
