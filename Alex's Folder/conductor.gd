@@ -42,6 +42,7 @@ func _change_music_track(m_resource: music_resource, change_if_same_music_track:
 		pass
 	else:
 		audioplayer.stop()
+		current_music_resource = m_resource
 		audioplayer.stream = m_resource.track
 		bpm = m_resource.bpm
 		timesig = m_resource.timesig

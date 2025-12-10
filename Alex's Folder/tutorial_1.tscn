@@ -637,8 +637,11 @@ position = Vector2(39424, -4282)
 position = Vector2(48985, -11360)
 bar_appear = 1
 beat_appear = 1
-bar_delete = 3
-beat_delete = 1
+bar_delete = 1
+beat_delete = 3
+music_trigger = ExtResource("7_afkue")
+repeat_pattern = true
+mod_bar = 1
 
 [node name="Conductor_Platform2" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(49536, -11355)
@@ -646,6 +649,8 @@ bar_appear = 1
 beat_appear = 3
 bar_delete = 3
 beat_delete = 3
+only_on_music_trigger_track = true
+music_trigger = ExtResource("7_afkue")
 
 [node name="Conductor_Platform3" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(50041, -11371)
@@ -653,16 +658,26 @@ bar_appear = 1
 beat_appear = 4
 bar_delete = 3
 beat_delete = 4
+only_on_music_trigger_track = true
+music_trigger = ExtResource("7_afkue")
 
 [node name="Conductor_Platform4" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(50441, -11356)
 bar_appear = 2
 beat_appear = 1
+bar_delete = 0
+beat_delete = 0
+only_on_music_trigger_track = true
+music_trigger = ExtResource("7_afkue")
 
 [node name="Conductor_Platform5" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(50857, -11356)
 bar_appear = 2
 beat_appear = 3
+bar_delete = 0
+beat_delete = 0
+only_on_music_trigger_track = true
+music_trigger = ExtResource("7_afkue")
 
 [node name="MusicChangeTrigger3" parent="." instance=ExtResource("6_3xd41")]
 position = Vector2(48992, -12045)
