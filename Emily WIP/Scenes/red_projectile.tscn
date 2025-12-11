@@ -35,7 +35,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="RedProjectile" type="Area2D"]
+[node name="RedProjectile" type="Area2D" groups=["Projectile"]]
 collision_layer = 31
 script = ExtResource("1_td6lh")
 

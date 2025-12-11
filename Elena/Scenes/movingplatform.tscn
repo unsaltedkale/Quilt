@@ -8,6 +8,7 @@ size = Vector2(326, 58)
 
 [node name="MovingPlatform" type="AnimatableBody2D" groups=["Environmental Feature"]]
 script = ExtResource("1_7qba8")
+speed = 200.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -29)
