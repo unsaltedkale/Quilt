@@ -1,12 +1,11 @@
 extends StaticBody2D
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Projectile"): 
-		print("projectile hit breakable wall")
-		_timer()
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Projectile"):
+		print("Breakable Wall Hit")
+		_destroywall()
 		
-		
-func _timer() -> void:
-	await get_tree().create_timer(.5).timeout
-	print("Destroying Wall")
+
+
+func _destroywall() -> void:
 	queue_free()
