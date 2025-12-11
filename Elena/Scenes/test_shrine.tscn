@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsc3vehi0f7n0"]
+
+[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_8babu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymnn3"]
+size = Vector2(64, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ln1q"]
+size = Vector2(79, 79)
+
+[node name="test_shrine" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(29, 36.5)
+shape = SubResource("RectangleShape2D_ymnn3")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(30, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, -4.5)
+shape = SubResource("RectangleShape2D_8ln1q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(29, 36.5)
+scale = Vector2(1, 1.015625)
+texture = ExtResource("1_8babu")
+region_enabled = true
+region_rect = Rect2(1344, 512, 64, 64)

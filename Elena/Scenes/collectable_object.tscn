@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhdhha5dl6wgu"]
 
 [ext_resource type="Script" uid="uid://xxlmakrw4enq" path="res://Elena/Scripts/collectable_object.gd" id="1_kmw5s"]
-[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_0sebo"]
+[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_kmw5s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ok2gl"]
 radius = 90.088844
@@ -13,6 +13,8 @@ script = ExtResource("1_kmw5s")
 shape = SubResource("CircleShape2D_ok2gl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_0sebo")
+texture = ExtResource("2_kmw5s")
+region_enabled = true
+region_rect = Rect2(848, 208, 32, 32)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
