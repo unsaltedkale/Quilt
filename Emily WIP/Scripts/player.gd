@@ -17,8 +17,8 @@ var is_landing: bool = false
 var is_phlo: bool = false
 var previous_velocity = 0
 var string: String = ""
-var collected_objects: int = 0 
-var can_shoot: bool = true
+var collected_objects: int = 1 
+@export var can_shoot: bool = true
 
 
 func _ready():
@@ -42,7 +42,10 @@ func _physics_process(delta: float) -> void:
 	wall_stick_component.handle_wall(self, delta)
 	
 	move_and_slide()
-	
+	if collected_objects >= 0:
+		can_shoot = true
+	else:
+		can_shoot = false
 	if Input.is_action_just_pressed("fire_projectile") and can_shoot:
 		shoot()
 
@@ -55,10 +58,6 @@ func shoot():
 	get_parent().add_child(proj)
 	proj.projectile_direction = (position - get_global_mouse_position()).normalized()
 	collected_objects -= 1
-	if collected_objects <= 0:
-		can_shoot = true
-	else:
-		can_shoot = false
 
 func handle_animation():
 	# movement animations

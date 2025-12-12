@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7gr"]
 
 [node name="STAR" type="Area2D"]
+rotation = -0.97287434
 script = ExtResource("1_nikii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
