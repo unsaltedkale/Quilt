@@ -3,6 +3,7 @@ extends Area2D
 
 func _on_STAR_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		body.collected_objects += 1
+		if body.collected_objects < body.max_stars:
+			body.collected_objects += 1
 		queue_free()
 		
