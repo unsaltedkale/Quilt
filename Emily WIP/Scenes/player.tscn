@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=77 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="PackedScene" uid="uid://deu4pl1h45ba" path="res://Emily WIP/Scenes/jump_component.tscn" id="3_0yr7s"]
@@ -41,10 +41,6 @@ region = Rect2(0, 0, 19, 45)
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0x3c"]
 atlas = ExtResource("9_ltfw8")
 region = Rect2(0, 45, 19, 45)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d0p7j"]
-atlas = ExtResource("11_lkxuv")
-region = Rect2(0, 0, 32, 46)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_icvrh"]
 atlas = ExtResource("11_lkxuv")
@@ -251,7 +247,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vfdg1")
 }, {
-"duration": 1.0,
+"duration": 1000.0,
 "texture": SubResource("AtlasTexture_n7wni")
 }],
 "loop": false,
@@ -271,17 +267,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d0p7j")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_icvrh")
 }, {
-"duration": 1.0,
+"duration": 1000.0,
 "texture": SubResource("AtlasTexture_jgwx7")
 }],
 "loop": false,
 "name": &"jump",
-"speed": 4.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -498,7 +491,7 @@ texture_filter = 1
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"land"
+animation = &"fall"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4hfjo")

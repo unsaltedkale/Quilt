@@ -1,9 +1,9 @@
 extends AnimatableBody2D
 
-@export var bar_appear = 0
-@export var beat_appear = 0
-@export var bar_delete = 0
-@export var beat_delete = 0
+@export var bar_appear: float = 0
+@export var beat_appear: float = 0
+@export var bar_delete: float = 0
+@export var beat_delete: float = 0
 @onready var Conductor = $"../Conductor"
 @export var only_on_music_trigger_track: bool
 @export var music_trigger: music_resource
