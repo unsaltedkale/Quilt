@@ -20,6 +20,7 @@ var string: String = ""
 var collected_objects: int = 0 
 var max_stars: int = 2
 var can_shoot: bool = true
+var shrine_key: bool = false
 
 
 func _ready():
