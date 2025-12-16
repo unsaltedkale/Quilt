@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyr5uj078f18r"]
+[gd_scene load_steps=5 format=3 uid="uid://cyr5uj078f18r"]
 
 [ext_resource type="Script" uid="uid://djfiw8u13hstu" path="res://Emily WIP/Scripts/star.gd" id="1_nikii"]
 [ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="2_nikii"]
+[ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/make_it_musical.tscn" id="3_akwti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7gr"]
 
@@ -20,5 +21,7 @@ position = Vector2(-0.010556102, -0.010489404)
 rotation = 0.9738937
 scale = Vector2(3.1188288, 3.096886)
 texture = ExtResource("2_nikii")
+
+[node name="MakeItMusical" parent="." instance=ExtResource("3_akwti")]
 
 [connection signal="body_entered" from="." to="." method="_on_STAR_entered"]

@@ -631,52 +631,57 @@ position = Vector2(40612, -4157)
 track = ExtResource("7_afkue")
 
 [node name="STAR" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(39424, -4282)
+position = Vector2(48246, -11694.998)
+
+[node name="MakeItMusical" parent="STAR" index="2"]
+bar_appear = 2.0
+beat_appear = 1.0
+bar_delete = 3.0
+beat_delete = 1.0
 
 [node name="Conductor_Platform" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(48985, -11360)
+
+[node name="MakeItMusical" parent="Conductor_Platform" index="2"]
 bar_appear = 1.0
 beat_appear = 1.0
-bar_delete = 1.0
-beat_delete = 1.5
-music_trigger = ExtResource("7_afkue")
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
-mod_bar = 1
-mod_beat = 2
+mod_bar = 2
 
 [node name="Conductor_Platform2" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(49536, -11355)
+
+[node name="MakeItMusical" parent="Conductor_Platform2" index="2"]
 bar_appear = 1.0
-beat_appear = 3.0
-bar_delete = 3.0
-beat_delete = 3.0
-only_on_music_trigger_track = true
-music_trigger = ExtResource("7_afkue")
+beat_appear = 1.0
+bar_delete = 5.0
+beat_delete = 1.0
 
 [node name="Conductor_Platform3" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(50041, -11371)
-bar_appear = 1.0
-beat_appear = 4.0
-bar_delete = 3.0
-beat_delete = 4.0
-only_on_music_trigger_track = true
-music_trigger = ExtResource("7_afkue")
+
+[node name="MakeItMusical" parent="Conductor_Platform3" index="2"]
+bar_appear = 3.0
+beat_appear = 1.0
+bar_delete = 7.0
+beat_delete = 1.0
 
 [node name="Conductor_Platform4" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(50441, -11356)
-bar_appear = 2.0
-beat_appear = 1.0
-only_on_music_trigger_track = true
-music_trigger = ExtResource("7_afkue")
 
 [node name="Conductor_Platform5" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(50857, -11356)
-bar_appear = 2.0
-beat_appear = 3.0
-only_on_music_trigger_track = true
-music_trigger = ExtResource("7_afkue")
 
 [node name="MusicChangeTrigger3" parent="." instance=ExtResource("6_3xd41")]
 position = Vector2(48992, -12045)
 track = ExtResource("5_3xd41")
 change_if_same_music_track = true
+
+[editable path="STAR"]
+[editable path="Conductor_Platform"]
+[editable path="Conductor_Platform2"]
+[editable path="Conductor_Platform3"]
+[editable path="Conductor_Platform4"]
+[editable path="Conductor_Platform5"]
