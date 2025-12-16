@@ -21,6 +21,7 @@ var collected_objects: int = 0
 var max_stars: int = 2
 var can_shoot: bool = true
 var shrine_key: bool = false
+var is_suspended: bool = false
 
 
 func _ready():
@@ -37,8 +38,9 @@ func _physics_process(delta: float) -> void:
 		get_node("CollisionShape2D").disabled = false
 		get_node("CollisionShape2D2").disabled = true
 		
-	gravity_component.handle_gravity(self, delta)
-	movement_component.handle_horizontal_movement(self, input_component.input_horizontal)
+	if not is_suspended:
+		gravity_component.handle_gravity(self, delta)
+		movement_component.handle_horizontal_movement(self, input_component.input_horizontal)
 	jump_component.handle_jump(self, input_component.get_jump_input())
 	recoil_component.handle_recoil(self, input_component.get_shoot_input())
 	wall_stick_component.handle_wall(self, delta)
@@ -52,6 +54,7 @@ func _physics_process(delta: float) -> void:
 		can_shoot = false
 	if Input.is_action_just_pressed("fire_projectile") and can_shoot:
 		shoot()
+	print(is_suspended)
 
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
@@ -61,6 +64,7 @@ func shoot():
 	proj.position = position
 	get_parent().add_child(proj)
 	proj.projectile_direction = (position - get_global_mouse_position()).normalized()
+	
 	collected_objects -= 1
 
 func handle_animation():

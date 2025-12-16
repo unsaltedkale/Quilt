@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3qni"]
 height = 28.91566
 
-[node name="Stasis" type="Area2D"]
+[node name="Stasis" type="Area2D" groups=["Stasis"]]
 script = ExtResource("1_r3qni")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -17,3 +17,7 @@ shape = SubResource("CapsuleShape2D_r3qni")
 position = Vector2(-0.5, 1.4999962)
 scale = Vector2(0.9921875, 1.5078125)
 texture = ExtResource("1_nndfy")
+
+[connection signal="area_entered" from="." to="." method="on_body_entered"]
+[connection signal="body_entered" from="." to="." method="on_body_entered"]
+[connection signal="body_exited" from="." to="." method="on_body_exited"]

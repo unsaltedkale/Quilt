@@ -11,7 +11,7 @@ func _process(delta):
 func _on_projectile_entered(body):
 	if body is TileMap:
 		queue_free()
-	#if area.is_in_group("tilemap"):
-		#queue_free()
+	elif body.is_in_group("Stasis"):
+		queue_free()
 	else:
 		pass

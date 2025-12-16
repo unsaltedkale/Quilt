@@ -25,6 +25,8 @@ Player=""
 "Environmental Feature"=""
 Projectile=""
 tilemap=""
+Stasis=""
+Star=""
 
 [input]
 
