@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c1qxdbym2bpna"]
+[gd_scene load_steps=18 format=4 uid="uid://c1qxdbym2bpna"]
 
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://TitleScreen.tscn" id="1_u0n1e"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_54g6f"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="3_v7cp0"]
 [ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="4_w24ue"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="5_52mfe"]
+[ext_resource type="PackedScene" uid="uid://bx41byt1i0cvb" path="res://Andy's Path/Scenes/SceneSwitch.tscn" id="6_1cjuc"]
 [ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="6_5ahwk"]
 [ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="6_6yeqv"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="6_v7cp0"]
@@ -627,6 +628,7 @@ script = SubResource("GDScript_4c57u")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("1_u0n1e")]
+visible = false
 
 [node name="Tiles" type="Node2D" parent="."]
 
@@ -692,5 +694,8 @@ limit_left = 1000000
 limit_top = 10000000
 limit_bottom = 3363
 script = ExtResource("6_v7cp0")
+
+[node name="SceneSwitch" parent="." instance=ExtResource("6_1cjuc")]
+position = Vector2(3877, 2317)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
