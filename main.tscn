@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_efxa6"]
-[ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://Andy's Path/Scenes/UI.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://TitleScreen.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://b55ntb0xce4gd" path="res://Salem WIPs/showDialog.gd" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_h2yge"]
