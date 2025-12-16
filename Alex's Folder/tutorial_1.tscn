@@ -666,8 +666,6 @@ music_trigger = ExtResource("7_afkue")
 position = Vector2(50441, -11356)
 bar_appear = 2.0
 beat_appear = 1.0
-bar_delete = 0.0
-beat_delete = 0.0
 only_on_music_trigger_track = true
 music_trigger = ExtResource("7_afkue")
 
@@ -675,8 +673,6 @@ music_trigger = ExtResource("7_afkue")
 position = Vector2(50857, -11356)
 bar_appear = 2.0
 beat_appear = 3.0
-bar_delete = 0.0
-beat_delete = 0.0
 only_on_music_trigger_track = true
 music_trigger = ExtResource("7_afkue")
 
