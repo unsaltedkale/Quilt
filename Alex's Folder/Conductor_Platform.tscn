@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbfp2mbvujih6"]
 
-[ext_resource type="Script" uid="uid://b6fi0gjxa5mua" path="res://Alex's Folder/conductor_platform.gd" id="1_jpiao"]
+[ext_resource type="Script" uid="uid://b6fi0gjxa5mua" path="res://Alex's Folder/make_it_musical.gd" id="1_jpiao"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_j30mx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
@@ -8,10 +8,6 @@ size = Vector2(326, 58)
 
 [node name="Conductor_Platform" type="AnimatableBody2D" groups=["Environmental Feature"]]
 script = ExtResource("1_jpiao")
-bar_appear = null
-beat_appear = null
-bar_delete = null
-beat_delete = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -29)
