@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyr5uj078f18r"]
 
 [ext_resource type="Script" uid="uid://djfiw8u13hstu" path="res://Emily WIP/Scripts/star.gd" id="1_nikii"]
-[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_akwti"]
+[ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="2_nikii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7gr"]
 
@@ -10,12 +10,15 @@ rotation = -0.97287434
 script = ExtResource("1_nikii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.9738937
 scale = Vector2(4.999999, 4.999999)
 shape = SubResource("RectangleShape2D_cd7gr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 3.1415925
-scale = Vector2(0.805668, 0.79999965)
-texture = ExtResource("2_akwti")
+texture_filter = 1
+position = Vector2(-0.010556102, -0.010489404)
+rotation = 0.9738937
+scale = Vector2(3.1188288, 3.096886)
+texture = ExtResource("2_nikii")
 
 [connection signal="body_entered" from="." to="." method="_on_STAR_entered"]
