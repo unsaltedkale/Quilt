@@ -26,6 +26,7 @@ radius = 4.75
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
 shader = ExtResource("8_3uy0y")
+shader_parameter/onoff = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2k042"]
 atlas = ExtResource("9_7a16b")
