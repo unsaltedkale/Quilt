@@ -54,7 +54,6 @@ func _physics_process(delta: float) -> void:
 		can_shoot = false
 	if Input.is_action_just_pressed("fire_projectile") and can_shoot:
 		shoot()
-	print(is_suspended)
 
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
