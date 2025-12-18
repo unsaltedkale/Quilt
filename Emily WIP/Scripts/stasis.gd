@@ -7,7 +7,7 @@ func on_body_entered(area: Area2D):
 		print("collided")
 		player.is_suspended = true
 		player.position = position 
-		player.collected_objects = 2
+		player.collected_objects = player.max_stars
 func on_body_exited(body: CharacterBody2D):
 	if body.is_in_group("Player"):
 		player.is_suspended = false

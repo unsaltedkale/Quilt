@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dllltsro0jqkr"]
+
+[ext_resource type="Script" uid="uid://cpqiw3bb4qy3a" path="res://Emily WIP/Scripts/zipline.gd" id="1_121v5"]
+[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_sp7dc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_121v5"]
+
+[node name="Zipline" type="Area2D"]
+script = ExtResource("1_121v5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6.0000005, 6.0000005)
+shape = SubResource("RectangleShape2D_121v5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.1415927
+texture = ExtResource("1_sp7dc")
+
+[connection signal="area_entered" from="." to="." method="on_body_entered"]
+[connection signal="body_exited" from="." to="." method="on_body_exited"]
