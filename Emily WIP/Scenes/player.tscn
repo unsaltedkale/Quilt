@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=80 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="PackedScene" uid="uid://deu4pl1h45ba" path="res://Emily WIP/Scenes/jump_component.tscn" id="3_0yr7s"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bejpt8qc80wan" path="res://Emily WIP/Scenes/movement_component.tscn" id="5_17h1f"]
 [ext_resource type="PackedScene" uid="uid://ca35o3us2j4lw" path="res://Emily WIP/Scenes/gravity_component.tscn" id="6_ltfw8"]
 [ext_resource type="PackedScene" uid="uid://cys2fk40vy80u" path="res://Elena/Scenes/player_health.tscn" id="7_d72cn"]
+[ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="8_3uy0y"]
 [ext_resource type="PackedScene" uid="uid://b22c0g5pf8l3j" path="res://Emily WIP/Scenes/recoil_component.tscn" id="8_7a16b"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt Animation Spritesheet Stop (1).png" id="9_17h1f"]
@@ -17,10 +18,14 @@
 [ext_resource type="Texture2D" uid="uid://v6lnp4ltt52v" path="res://Art/Phlo Spritesheet Idle.png" id="14_33mbb"]
 [ext_resource type="Texture2D" uid="uid://b11e7u6tdq2t" path="res://Art/Phlo Spritesheet Jump.png" id="15_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="16_1nwdr"]
+[ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/recolor_sprite_thingy.gd" id="18_33mbb"]
 [ext_resource type="PackedScene" uid="uid://bnnt61bxtj5x8" path="res://Elena/Scenes/wall_stick_component.tscn" id="19_33mbb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8qdn"]
 radius = 4.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
+shader = ExtResource("8_3uy0y")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2k042"]
 atlas = ExtResource("9_7a16b")
@@ -488,10 +493,12 @@ shape = SubResource("CapsuleShape2D_x8qdn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
 animation = &"fall"
+script = ExtResource("18_33mbb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4hfjo")
