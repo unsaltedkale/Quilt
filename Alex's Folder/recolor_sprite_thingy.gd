@@ -4,6 +4,6 @@ extends AnimatedSprite2D
 
 func _physics_process(delta):
 	if player.collected_objects == 0:
-		modulate = Color(0, 1, 1)
+		get_material().set_shader_parameter("onoff",1)
 	else:
-		modulate = Color(1, 1, 1)
+		get_material().set_shader_parameter("onoff",0)
