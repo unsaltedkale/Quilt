@@ -727,7 +727,7 @@ point_a = Vector2(3410, 2156)
 point_b = Vector2(6607, 2156)
 
 [node name="DissapearingPlatform" parent="." instance=ExtResource("8_5vw27")]
-position = Vector2(4462, 2606)
+position = Vector2(4378, 2761)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("6_7mycd")]
 position = Vector2(3994, 2469)
@@ -759,5 +759,5 @@ position = Vector2(6254, 1658)
 position = Vector2(4190, 2481)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="body_entered" from="collectable_object" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="collectable_object" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="collectable_object" to="." method="_on_area_2d_body_entered"]
