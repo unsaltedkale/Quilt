@@ -5,6 +5,7 @@ extends Area2D
 func on_body_entered(area: Area2D):
 	if area.is_in_group("Projectile"):
 		print("collided")
+		#player.velocity = Vector2(0,0)
 		player.is_suspended = true
 		player.position = position 
 		player.collected_objects = player.max_stars

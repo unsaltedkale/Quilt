@@ -1,15 +1,16 @@
 extends Area2D
 @onready var player = $"../Player"
 
-var platform_speed: Vector2 = Vector2(.2,0)
+var platform_speed: Vector2 = Vector2(.05,0)
 var player_collided: bool = false
-var end_position: Vector2 = Vector2(6037,1234)
+var end_position: Vector2 = Vector2(6470,1234)
 
 func _process(delta: float) -> void:
 	if player_collided:
+		#player velocity = 0
+		player.position = position
 		position += platform_speed*delta*position
-		player.position += platform_speed*delta*position
-	if player.position >= end_position:
+	if player.position >= end_position and player.is_suspended:
 		player.is_suspended = false
 		queue_free()
 		print("at end")
