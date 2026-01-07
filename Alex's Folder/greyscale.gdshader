@@ -41,7 +41,28 @@ void fragment() {
 	// Called for every pixel the material is visible on.
 	vec4 original_color = texture(TEXTURE, UV);
 	
-	if (onoff == 1)
+		float greyscale = (original_color.r + original_color.g + original_color.b) / 3.0f;
+		
+		vec3 greyscale_color = vec3(greyscale, greyscale, greyscale);
+	
+	if (onoff == 2)
+	{
+		
+		if (COLOR.xyz == vec3(255.0/255.0, 111.0/255.0, 76.0/255.0))
+			COLOR.xyz = vec3(73.0/255.0, 104.0/255.0, 172.0/255.0);
+
+		//vec3(37.00/255.00, 150.00/255.00, 190.00/255.00)
+		if (approximately_zero(COLOR.xyz, vec3(170.00/255.00, 90.00/255.00, 73.00/255.00)) == 3)
+			COLOR.xyz = vec3(37.0/255.0, 81.0/255.0, 112.0/255.0);	
+		
+		if (approximately_zero(COLOR.xyz, vec3(135.0/255.0)) == 3)
+			COLOR.xyz = vec3(170.00/255.00, 90.00/255.00, 73.00/255.00);
+		
+		if (approximately_zero(COLOR.xyz, vec3(159.0/255.0)) == 3)
+			COLOR.xyz = vec3(255.0/255.0, 111.0/255.0, 76.0/255.0);	
+	}
+	
+	if (onoff == 0)
 	{
 		float greyscale = (original_color.r + original_color.g + original_color.b) / 3.0f;
 		
@@ -55,7 +76,7 @@ void fragment() {
 			COLOR.xyz = vec3(140.0/255.0);	
 	}
 	
-	else if (onoff == 0)
+	else if (onoff == 1)
 	{
 		COLOR.xyz = COLOR.xyz;
 	}
