@@ -6809,5 +6809,3 @@ tile_map_data = PackedByteArray("AAAmABIAAAAAAAAAAAAmABMAAAAAAAEAAAAmABQAAAAAAAI
 tile_set = SubResource("TileSet_l4flb")
 
 [node name="fade_area" parent="HiddenArea" instance=ExtResource("3_l4flb")]
-position = Vector2(772, 435)
-scale = Vector2(14, 14)
