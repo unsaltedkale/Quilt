@@ -1,6 +1,5 @@
-[gd_scene load_steps=18 format=4 uid="uid://c1qxdbym2bpna"]
+[gd_scene load_steps=17 format=4 uid="uid://c1qxdbym2bpna"]
 
-[ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://TitleScreen.tscn" id="1_u0n1e"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_54g6f"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_kmm4v"]
 [ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="3_v7cp0"]
@@ -627,8 +626,32 @@ script = SubResource("GDScript_4c57u")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="UI" parent="CanvasLayer" instance=ExtResource("1_u0n1e")]
+[node name="UI" type="Control" parent="CanvasLayer"]
 visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueScreen" type="Control" parent="CanvasLayer/UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationViewer" type="ColorRect" parent="CanvasLayer/UI/DialogueScreen"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 1149.0
+offset_bottom = 317.0
+color = Color(0.12662229, 0.46256143, 0.3947214, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen"]
+layout_mode = 0
+offset_top = 316.0
+offset_right = 1151.0
+offset_bottom = 650.0
+script = ExtResource("4_w24ue")
 
 [node name="Tiles" type="Node2D" parent="."]
 
@@ -651,12 +674,6 @@ script = ExtResource("3_v7cp0")
 
 [node name="Sprite2D" type="Sprite2D" parent="NPCs/TestNPC"]
 texture = ExtResource("3_kmm4v")
-
-[node name="Label" type="Label" parent="NPCs/TestNPC"]
-offset_top = -100.0
-offset_right = 1.0
-offset_bottom = -77.0
-script = ExtResource("4_w24ue")
 
 [node name="Area2D" type="Area2D" parent="NPCs/TestNPC"]
 position = Vector2(-2500, -1200)

@@ -1,4 +1,4 @@
-extends Label
+extends Button
 
 
 @export var dialogFolder = load("res://Andy's Path/Resources/ExampleCharacterLines.tres")
