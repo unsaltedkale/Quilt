@@ -7,7 +7,8 @@ var end_position: Vector2 = Vector2(6470,1234)
 
 func _process(delta: float) -> void:
 	if player_collided:
-		#player velocity = 0
+		player.is_suspended = true
+		player.velocity = Vector2(0,0)
 		player.position = position
 		position += platform_speed*delta*position
 	if player.position >= end_position and player.is_suspended:
