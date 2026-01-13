@@ -6,8 +6,7 @@ var player_collided: bool = false
 var end_position: Vector2 = Vector2(6470,1234)
 
 func _process(delta: float) -> void:
-	if player_collided:
-		player.is_suspended = true
+	if player.is_suspended:
 		player.velocity = Vector2(0,0)
 		player.position = position
 		position += platform_speed*delta*position
@@ -18,11 +17,15 @@ func _process(delta: float) -> void:
 		
 
 func on_body_entered(area : Area2D):
-	if area.is_in_group("Projectile"):
-		player.is_suspended = true
-		player.position = position
-		player.collected_objects = player.max_stars
-		player_collided = true
+	if player.is_suspended:
+		if area.is_in_group("Projectile"):
+			player.is_suspended = false
+	else:
+		if area.is_in_group("Projectile"):
+			player.is_suspended = true
+			player.position = position
+			player.collected_objects = player.max_stars
+			player_collided = true
 
 func on_body_exited(body: CharacterBody2D):
 	if body.is_in_group("Player"):
