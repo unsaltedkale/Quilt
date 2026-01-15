@@ -11,8 +11,6 @@ func _ready() -> void:
 	UiReference = $"../../CanvasLayer/UI"
 	areaReferecnce = $Area2D
 	cameraReference = $"../../Camera2D"
-	
-	UiReference.visible = false
 
 func _process(delta: float) -> void:
 	if areaReferecnce.isInTrigger == true:
