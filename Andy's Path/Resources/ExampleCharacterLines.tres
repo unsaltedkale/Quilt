@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource("1_bxk65")
 text = Dictionary[String, String]({
-"0": "Example Dialogue 0"
+"0": "Example Dialogue 0",
+"1": "Test 2",
+"2": "test 3",
+"3": "test 4"
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

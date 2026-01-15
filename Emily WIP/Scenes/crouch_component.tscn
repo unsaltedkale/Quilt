@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxli8ina6vjl"]
+
+[ext_resource type="Script" uid="uid://bbk4xcidfaa0f" path="res://Emily WIP/Scripts/crouch_component.gd" id="1_8dt8r"]
+
+[node name="CrouchComponent" type="Node" node_paths=PackedStringArray("crouch_component")]
+script = ExtResource("1_8dt8r")
+crouch_component = NodePath(".")

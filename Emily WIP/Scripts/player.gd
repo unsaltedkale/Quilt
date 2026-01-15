@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var jump_component: JumpComponent
 @export var recoil_component: RecoilComponent
 @export var wall_stick_component: WallStickComponent
+@export var crouch_component: CrouchComponent
 @onready var projectile_scene = preload("res://Emily WIP/Scenes/red_projectile.tscn")
 
 var health_script: Node
@@ -45,6 +46,7 @@ func _physics_process(delta: float) -> void:
 	if not is_phlo:
 		recoil_component.handle_recoil(self, input_component.get_shoot_input())
 	wall_stick_component.handle_wall(self, delta)
+	crouch_component.handle_crouch(self, input_component.get_crouch_input())
 	
 	move_and_slide()
 	if is_on_floor():

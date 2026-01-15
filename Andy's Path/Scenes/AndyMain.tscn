@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://c1qxdbym2bpna"]
+[gd_scene load_steps=19 format=4 uid="uid://c1qxdbym2bpna"]
 
+[ext_resource type="Script" uid="uid://2vhij51wuw1h" path="res://Andy's Path/Scripts/pause.gd" id="2_1cjuc"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_54g6f"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_kmm4v"]
 [ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="3_v7cp0"]
@@ -50,6 +51,8 @@ func _on_timer_timeout() -> void:
 	else:
 		$Timer.stop() 
 "
+
+[sub_resource type="Theme" id="Theme_1cjuc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_54g6f")
@@ -651,7 +654,11 @@ layout_mode = 0
 offset_top = 316.0
 offset_right = 1151.0
 offset_bottom = 650.0
+theme = SubResource("Theme_1cjuc")
 script = ExtResource("4_w24ue")
+
+[node name="PauseManager" type="Node2D" parent="."]
+script = ExtResource("2_1cjuc")
 
 [node name="Tiles" type="Node2D" parent="."]
 
@@ -715,4 +722,5 @@ script = ExtResource("6_v7cp0")
 [node name="SceneSwitch" parent="." instance=ExtResource("6_1cjuc")]
 position = Vector2(3877, 2317)
 
+[connection signal="pressed" from="CanvasLayer/UI/DialogueScreen/Button" to="CanvasLayer/UI/DialogueScreen/Button" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

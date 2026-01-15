@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=81 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="PackedScene" uid="uid://deu4pl1h45ba" path="res://Emily WIP/Scenes/jump_component.tscn" id="3_0yr7s"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="16_1nwdr"]
 [ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/gds/recolor_sprite_thingy.gd" id="18_33mbb"]
 [ext_resource type="PackedScene" uid="uid://bnnt61bxtj5x8" path="res://Elena/Scenes/wall_stick_component.tscn" id="19_33mbb"]
+[ext_resource type="PackedScene" uid="uid://cxli8ina6vjl" path="res://Emily WIP/Scenes/crouch_component.tscn" id="21_1nwdr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8qdn"]
 radius = 4.75
@@ -466,7 +467,7 @@ height = 70.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
 size = Vector2(38, 44)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "recoil_component", "wall_stick_component") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "recoil_component", "wall_stick_component", "crouch_component") groups=["Player"]]
 collision_mask = 6145
 script = ExtResource("1_jfghr")
 gravity_component = NodePath("GravityComponent")
@@ -475,6 +476,7 @@ movement_component = NodePath("MovementComponent")
 jump_component = NodePath("JumpComponent")
 recoil_component = NodePath("RecoilComponent")
 wall_stick_component = NodePath("WallStickComponent")
+crouch_component = NodePath("CrouchComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(3.8, 3.8)
@@ -506,6 +508,8 @@ shape = SubResource("CapsuleShape2D_4hfjo")
 disabled = true
 
 [node name="WallStickComponent" parent="." instance=ExtResource("19_33mbb")]
+
+[node name="CrouchComponent" parent="." instance=ExtResource("21_1nwdr")]
 
 [node name="Area2D" type="Area2D" parent="."]
 

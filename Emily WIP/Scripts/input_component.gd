@@ -11,3 +11,7 @@ func get_jump_input() -> bool:
 	
 func get_shoot_input() -> bool:
 	return Input.is_action_just_pressed("fire_projectile")
+	
+func get_crouch_input() -> bool:
+	return Input.is_action_just_pressed("crouch")
+	
