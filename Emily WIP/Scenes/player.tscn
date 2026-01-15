@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://v6lnp4ltt52v" path="res://Art/Phlo Spritesheet Idle.png" id="14_33mbb"]
 [ext_resource type="Texture2D" uid="uid://b11e7u6tdq2t" path="res://Art/Phlo Spritesheet Jump.png" id="15_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="16_1nwdr"]
-[ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/recolor_sprite_thingy.gd" id="18_33mbb"]
+[ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/gds/recolor_sprite_thingy.gd" id="18_33mbb"]
 [ext_resource type="PackedScene" uid="uid://bnnt61bxtj5x8" path="res://Elena/Scenes/wall_stick_component.tscn" id="19_33mbb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8qdn"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlhy4f15dvbqg"]
 
-[ext_resource type="Script" uid="uid://b7enai4q4tspb" path="res://Alex's Folder/music_change_trigger.gd" id="1_f74go"]
+[ext_resource type="Script" uid="uid://b7enai4q4tspb" path="res://Alex's Folder/gds/music_change_trigger.gd" id="1_f74go"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_kumea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f74go"]

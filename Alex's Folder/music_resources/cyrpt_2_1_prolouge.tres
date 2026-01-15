@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="music_resource" load_steps=3 format=3 uid="uid://co7glxsi63blf"]
 
-[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/music_resource.gd" id="1_rymfw"]
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_rymfw"]
 [ext_resource type="AudioStream" uid="uid://dai10e5duvamf" path="res://Alex's Folder/music_resources/music_tracks/Prolouge-to-Ebb.wav" id="2_evada"]
 
 [resource]

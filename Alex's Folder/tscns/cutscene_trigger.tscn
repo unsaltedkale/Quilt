@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6uqppwlr2hvr"]
+
+[ext_resource type="Script" uid="uid://cukvmym0loyp0" path="res://Alex's Folder/gds/cutscene_trigger.gd" id="1_lrfw0"]
+[ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="2_uvg1h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tv1sk"]
+size = Vector2(28, 26)
+
+[node name="CutsceneTrigger" type="Area2D"]
+script = ExtResource("1_lrfw0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uvg1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tv1sk")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

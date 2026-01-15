@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djfiw8u13hstu" path="res://Emily WIP/Scripts/star.gd" id="1_nikii"]
 [ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="2_nikii"]
-[ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/make_it_musical.tscn" id="3_akwti"]
+[ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/tscns/make_it_musical.tscn" id="3_akwti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7gr"]
 

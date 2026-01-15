@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbfp2mbvujih6"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_j30mx"]
-[ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/make_it_musical.tscn" id="2_jpiao"]
+[ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/tscns/make_it_musical.tscn" id="2_jpiao"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
 size = Vector2(326, 58)
