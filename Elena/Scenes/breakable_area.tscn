@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://jvlnv4fp7geb"]
+
+[ext_resource type="Script" uid="uid://n7hg4u77ovti" path="res://Elena/Scripts/breakable_area.gd" id="1_6piqp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8e54"]
+
+[node name="breakable_area" type="Area2D"]
+script = ExtResource("1_6piqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l8e54")
