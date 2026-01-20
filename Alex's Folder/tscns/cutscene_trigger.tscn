@@ -7,12 +7,15 @@
 size = Vector2(28, 26)
 
 [node name="CutsceneTrigger" type="Area2D"]
+scale = Vector2(1, 1.63)
 script = ExtResource("1_lrfw0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.14, 5.118)
 texture = ExtResource("2_uvg1h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3.14, 5.118)
 shape = SubResource("RectangleShape2D_tv1sk")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
