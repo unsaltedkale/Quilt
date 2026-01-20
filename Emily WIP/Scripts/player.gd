@@ -23,6 +23,7 @@ var max_stars: int = 2
 var can_shoot: bool = true
 var shrine_key: bool = false
 var is_suspended: bool = false
+@export var is_cutscene: bool = false
 
 
 func _ready():
@@ -30,6 +31,11 @@ func _ready():
 	health_script.health = health_script.max_health  
 
 func _physics_process(delta: float) -> void:
+	var ray = PhysicsRayQueryParameters2D.create(position, position + Vector2(0,-10), 1)
+	var hit = get_world_2d().direct_space_state.intersect_ray(ray)
+	if hit != {}:
+		print("hit")
+		
 	if is_phlo:
 		handle_phlo_animation()
 		get_node("CollisionShape2D").disabled = true
@@ -39,14 +45,15 @@ func _physics_process(delta: float) -> void:
 		get_node("CollisionShape2D").disabled = false
 		get_node("CollisionShape2D2").disabled = true
 		
-	if not is_suspended:
-		gravity_component.handle_gravity(self, delta)
-		movement_component.handle_horizontal_movement(self, input_component.input_horizontal)
-	jump_component.handle_jump(self, input_component.get_jump_input())
-	if not is_phlo:
-		recoil_component.handle_recoil(self, input_component.get_shoot_input())
-	wall_stick_component.handle_wall(self, delta)
-	crouch_component.handle_crouch(self, input_component.get_crouch_input())
+	if not is_cutscene:
+		if not is_suspended:
+			gravity_component.handle_gravity(self, delta)
+			movement_component.handle_horizontal_movement(self, input_component.input_horizontal)
+		jump_component.handle_jump(self, input_component.get_jump_input())
+		if not is_phlo:
+			recoil_component.handle_recoil(self, input_component.get_shoot_input())
+		wall_stick_component.handle_wall(self, delta)
+		crouch_component.handle_crouch(self, input_component.get_crouch_input())
 	
 	move_and_slide()
 	if is_on_floor():
@@ -55,7 +62,7 @@ func _physics_process(delta: float) -> void:
 		can_shoot = true
 	else:
 		can_shoot = false
-	if Input.is_action_just_pressed("fire_projectile") and can_shoot and not is_phlo:
+	if Input.is_action_just_pressed("fire_projectile") and can_shoot and not is_phlo and not is_cutscene:
 		shoot()
 
 func take_damage(amount: int) -> void:
