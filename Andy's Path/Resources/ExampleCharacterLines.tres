@@ -8,6 +8,7 @@ text = Dictionary[String, String]({
 "0": "Example Dialogue 0",
 "1": "Test 2",
 "2": "test 3",
-"3": "test 4"
+"3": "test 4",
+"4": "test 5"
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
