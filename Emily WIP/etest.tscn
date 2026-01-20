@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dbukhq1gcoojw"]
+[gd_scene load_steps=21 format=4 uid="uid://dbukhq1gcoojw"]
 
 [ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_ja5qt"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="3_vx0aj"]
@@ -8,10 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="7_45su8"]
 [ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="8_e8e7r"]
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="9_mqc1b"]
-[ext_resource type="PackedScene" uid="uid://b7d7v3oy8f5u3" path="res://Elena/Scenes/spike.tscn" id="10_da07j"]
 [ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="11_8v0qp"]
 [ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="12_rq0o0"]
-[ext_resource type="PackedScene" uid="uid://b8yhonlgtui7b" path="res://Elena/Scenes/breakable_wall.tscn" id="13_tpjsa"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="15_1puq0"]
 [ext_resource type="PackedScene" uid="uid://b2dqnmui6mt5" path="res://Elena/Scenes/shrine_key.tscn" id="16_2y7jp"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="16_d83c3"]
@@ -725,9 +723,6 @@ point_b = Vector2(6607, 2156)
 [node name="DissapearingPlatform" parent="." instance=ExtResource("9_mqc1b")]
 position = Vector2(4462, 2606)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("10_da07j")]
-position = Vector2(3994, 2469)
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Lever" parent="." instance=ExtResource("11_8v0qp")]
@@ -738,9 +733,6 @@ position = Vector2(3753, 1587)
 point_a = Vector2(3753, 1587)
 point_b = Vector2(5068, 1654)
 lever_path = NodePath("../Lever")
-
-[node name="breakable_wall" parent="." instance=ExtResource("13_tpjsa")]
-position = Vector2(3368, 1433)
 
 [node name="STAR" parent="." groups=["Star"] instance=ExtResource("15_1puq0")]
 position = Vector2(4841, 1766)
