@@ -30,6 +30,9 @@ var is_suspended_zipline: bool = false
 func _ready():
 	health_script = $PlayerHealth  
 	health_script.health = health_script.max_health  
+	if is_cutscene == null:
+		is_cutscene = false
+		
 
 func _physics_process(delta: float) -> void:
 	var ray = PhysicsRayQueryParameters2D.create(position, position + Vector2(0,-10), 1)
