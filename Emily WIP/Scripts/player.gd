@@ -24,6 +24,7 @@ var can_shoot: bool = true
 var shrine_key: bool = false
 var is_suspended_stasis: bool = false
 var is_suspended_zipline: bool = false
+var player_just_shoot: bool = false
 @export var is_cutscene: bool = false
 
 
@@ -68,6 +69,7 @@ func _physics_process(delta: float) -> void:
 		can_shoot = false
 	if Input.is_action_just_pressed("fire_projectile") and can_shoot and not is_phlo and not is_cutscene:
 		shoot()
+		player_just_shoot = true
 
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
