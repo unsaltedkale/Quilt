@@ -4,6 +4,8 @@ extends Area2D
 @export var container: cutscene_container
 @export var current_event_index: int
 @export var played: bool
+@onready var Player = $"../Player"
+@onready var movement_compontent = $"../Player/MovementComponent"
 
 func _on_area_entered(area: Area2D) -> void:
 	# lock player movement
@@ -13,17 +15,16 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _read_events():
 	print("beep boop")
-	#lock movement, Player.is_cutscene = true
+	Player.is_cutscene = true
 	for event in container.events:
 		if event.delay_before > 0:
 			await get_tree().create_timer(event.delay_before).timeout
 			print("start time done")
-		
 		print("start events")
 		await event.execute(self)
 		
 		if event.delay_after > 0:
-			await get_tree().create_timer(event.after).timeout
+			await get_tree().create_timer(event.delay_after).timeout
 		print("done!!!")
 	played = true
-	#unlock movement, Player.is_cutscene = false
+	Player.is_cutscene = false

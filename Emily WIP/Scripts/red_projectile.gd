@@ -13,8 +13,6 @@ func _on_projectile_entered(body:Node2D):
 		queue_free()
 		
 func _on_area_entered(body: Area2D):
-	if player.is_suspended:
-		pass
-	else:
+	if not player.is_suspended_stasis and not player.is_suspended_zipline:
 		if body.is_in_group("Stasis"):
 			queue_free()
