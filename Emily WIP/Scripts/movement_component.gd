@@ -15,9 +15,7 @@ func _ready():
 
 func _process(delta) -> void:
 	if prev_player_is_cutscene != null && Player.is_cutscene != null:
-		print("beep")
 		if Player.is_cutscene != prev_player_is_cutscene:
-				print("boop")
 				Player.velocity.x = 0
 				prev_player_is_cutscene = Player.is_cutscene
 				cutscene_frozen = true
