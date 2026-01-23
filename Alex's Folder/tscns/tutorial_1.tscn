@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=19 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="1_vuu6h"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="9_v7eyh"]
 [ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="10_8oaso"]
 [ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="10_a5mjf"]
+[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="11_628yu"]
+[ext_resource type="Resource" uid="uid://2x73w31w760w" path="res://Alex's Folder/cutscene_event_resources/cutscenes/test_cutscene_container_after_fall.tres" id="12_scbil"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80spu"]
 texture = ExtResource("1_leou4")
@@ -621,6 +623,7 @@ script = ExtResource("3_tembr")
 stream = SubResource("AudioStreamWAV_80spu")
 
 [node name="Conductor" parent="." instance=ExtResource("5_0hcnm")]
+position = Vector2(-1128, 443)
 current_music_resource = ExtResource("5_3xd41")
 
 [node name="MusicChangeTrigger" parent="." instance=ExtResource("6_3xd41")]
@@ -677,7 +680,7 @@ position = Vector2(50441, -11356)
 position = Vector2(50857, -11356)
 
 [node name="MusicChangeTrigger3" parent="." instance=ExtResource("6_3xd41")]
-position = Vector2(48992, -12045)
+position = Vector2(48399.62, -12045)
 track = ExtResource("5_3xd41")
 change_if_same_music_track = true
 
@@ -692,6 +695,11 @@ emission_shape = 3
 emission_rect_extents = Vector2(1200, 600)
 gravity = Vector2(500, 350)
 
+[node name="CutsceneTrigger" parent="." instance=ExtResource("11_628yu")]
+position = Vector2(-1130, -171)
+container = ExtResource("12_scbil")
+
+[editable path="Player"]
 [editable path="STAR"]
 [editable path="Conductor_Platform"]
 [editable path="Conductor_Platform2"]
