@@ -2,18 +2,17 @@ extends Area2D
 
 @onready var player = $"../Player"
 
-
 func on_body_entered(area: Area2D):
-	if player.is_suspended:
+	if player.is_suspended_stasis:
 		if area.is_in_group("Projectile"):
-			player.is_suspended = false
+			player.is_suspended_stasis = false
 	else:
 		if area.is_in_group("Projectile"):
 			print("collided")
-			player.is_suspended = true
+			player.is_suspended_stasis = true
 			player.velocity = Vector2(0,0)
 			player.position = position 
 			player.collected_objects = player.max_stars
 func on_body_exited(body: CharacterBody2D):
 	if body.is_in_group("Player"):
-		player.is_suspended = false
+		player.is_suspended_stasis = false

@@ -22,7 +22,8 @@ var collected_objects: int = 0
 var max_stars: int = 2
 var can_shoot: bool = true
 var shrine_key: bool = false
-var is_suspended: bool = false
+var is_suspended_stasis: bool = false
+var is_suspended_zipline: bool = false
 @export var is_cutscene: bool = false
 
 
@@ -46,7 +47,7 @@ func _physics_process(delta: float) -> void:
 		get_node("CollisionShape2D2").disabled = true
 		
 	if not is_cutscene:
-		if not is_suspended:
+		if not is_suspended_stasis or not is_suspended_zipline:
 			gravity_component.handle_gravity(self, delta)
 			movement_component.handle_horizontal_movement(self, input_component.input_horizontal)
 		jump_component.handle_jump(self, input_component.get_jump_input())
