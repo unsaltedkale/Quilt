@@ -3,6 +3,8 @@ extends Node
 @export var max_health: int = 1
 var health: int
 
+@onready var player := get_parent() as Node2D
+
 func _ready():
 	health = max_health
 
@@ -14,4 +16,4 @@ func reduce_health(amount: int) -> void:
 
 func die():
 	print("Player died")
-	get_tree().reload_current_scene()
+	GameManager.respawn_player(player)

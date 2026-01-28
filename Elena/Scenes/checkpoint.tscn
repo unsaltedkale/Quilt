@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dd622dnehfwdw"]
+
+[ext_resource type="Script" uid="uid://bnd2x4a11k37i" path="res://Elena/Scripts/checkpoint.gd" id="1_5xt0g"]
+[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_auarx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xt0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2hgl"]
+atlas = ExtResource("1_auarx")
+region = Rect2(768, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj0cy"]
+atlas = ExtResource("1_auarx")
+region = Rect2(832, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c11b6"]
+atlas = ExtResource("1_auarx")
+region = Rect2(896, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_200bl"]
+atlas = ExtResource("1_auarx")
+region = Rect2(960, 512, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_53yl3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2hgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj0cy")
+}],
+"loop": true,
+"name": &"active_checkpoint",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c11b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_200bl")
+}],
+"loop": true,
+"name": &"unactive_checkpoint",
+"speed": 5.0
+}]
+
+[node name="checkpoint" type="Area2D"]
+script = ExtResource("1_5xt0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5xt0g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_53yl3")
+animation = &"active_checkpoint"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
