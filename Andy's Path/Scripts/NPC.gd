@@ -21,11 +21,10 @@ func _process(delta: float) -> void:
 				isPressed = false
 			else:
 				isPressed = true
-				
 	if isPressed == true:
 		UiReference.visible = true
-	else:
-		UiReference.visible = false
+		get_tree().paused = true
+
 	
 #func Display_Text_No_Input():
 	#if areaReferecnce.isInTrigger == true:
