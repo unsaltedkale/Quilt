@@ -15,6 +15,10 @@ run/main_scene="uid://1iv87qysc1dl"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://dmcdml67v5cp1"
 
+[autoload]
+
+GameManager="*res://Elena/Scripts/gamemanager.gd"
+
 [display]
 
 window/stretch/mode="viewport"
