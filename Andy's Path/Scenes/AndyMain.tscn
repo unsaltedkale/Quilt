@@ -1,6 +1,8 @@
-[gd_scene load_steps=18 format=4 uid="uid://c1qxdbym2bpna"]
+[gd_scene load_steps=20 format=4 uid="uid://c1qxdbym2bpna"]
 
+[ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="2_1cjuc"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_54g6f"]
+[ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="2_jfg26"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_kmm4v"]
 [ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="3_v7cp0"]
 [ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="4_w24ue"]
@@ -605,7 +607,6 @@ size = Vector2(256, 256)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -618,18 +619,27 @@ offset_bottom = 40.0
 
 [node name="AnimationViewer" type="ColorRect" parent="CanvasLayer/UI/DialogueScreen"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = -4.0
-offset_right = 1149.0
-offset_bottom = 317.0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1150.0
+offset_bottom = 648.0
 color = Color(0.12662229, 0.46256143, 0.3947214, 1)
+
+[node name="TextOutine" type="Sprite2D" parent="CanvasLayer/UI/DialogueScreen"]
+texture_filter = 1
+position = Vector2(673, 140)
+scale = Vector2(6.0681806, 6.068181)
+texture = ExtResource("2_1cjuc")
 
 [node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen"]
 layout_mode = 0
-offset_top = 316.0
-offset_right = 1151.0
-offset_bottom = 650.0
+offset_left = 235.0
+offset_top = 88.0
+offset_right = 476.0
+offset_bottom = 136.0
 theme = SubResource("Theme_1cjuc")
+theme_override_fonts/font = ExtResource("2_jfg26")
+theme_override_font_sizes/font_size = 42
 script = ExtResource("4_w24ue")
 
 [node name="PauseManager" type="Node2D" parent="."]
