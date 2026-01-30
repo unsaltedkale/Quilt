@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://1225g3ggvek2"]
+[gd_scene load_steps=21 format=4 uid="uid://1225g3ggvek2"]
 
 [ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_efxa6"]
 [ext_resource type="PackedScene" uid="uid://1iv87qysc1dl" path="res://TitleScreen.tscn" id="1_ig7tw"]
@@ -7,12 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="4_dg77c"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://b7d7v3oy8f5u3" path="res://Elena/Scenes/spike.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://b8yhonlgtui7b" path="res://Elena/Scenes/breakable_wall.tscn" id="13_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://bhdhha5dl6wgu" path="res://Elena/Scenes/collectable_object.tscn" id="14_w48qg"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="15_vivmo"]
 [ext_resource type="PackedScene" uid="uid://b2dqnmui6mt5" path="res://Elena/Scenes/shrine_key.tscn" id="16_yaehf"]
@@ -729,9 +727,6 @@ point_b = Vector2(6607, 2156)
 [node name="DissapearingPlatform" parent="." instance=ExtResource("8_5vw27")]
 position = Vector2(4378, 2761)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("6_7mycd")]
-position = Vector2(3994, 2469)
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Lever" parent="." instance=ExtResource("9_kek77")]
@@ -742,9 +737,6 @@ position = Vector2(3753, 1587)
 point_a = Vector2(3753, 1587)
 point_b = Vector2(5068, 1654)
 lever_path = NodePath("../Lever")
-
-[node name="breakable_wall" parent="." instance=ExtResource("13_ycdy4")]
-position = Vector2(3368, 1433)
 
 [node name="collectable_object" parent="." instance=ExtResource("14_w48qg")]
 position = Vector2(4563, 1791)

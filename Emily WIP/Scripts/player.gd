@@ -27,6 +27,7 @@ var is_suspended_zipline: bool = false
 var player_just_shoot: bool = false
 @export var is_cutscene: bool = false
 
+var spawn_point = Vector2.ZERO
 
 func _ready():
 	health_script = $PlayerHealth  
@@ -73,6 +74,22 @@ func _physics_process(delta: float) -> void:
 
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
+	
+func die():
+	print("Player died")
+	spawn_player(spawn_point)
+	
+func set_checkpoint(pos):
+	
+	spawn_point = pos
+	
+func spawn_player(spawn_point):
+	if spawn_point == Vector2.ZERO:
+		get_tree().reload_current_scene()
+		return
+		
+	#global_position = spawn_point
+	
 
 func shoot():
 	var proj = projectile_scene.instantiate()
