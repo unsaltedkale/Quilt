@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://dbukhq1gcoojw"]
+[gd_scene load_steps=12 format=4 uid="uid://dbukhq1gcoojw"]
 
 [ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_ja5qt"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="3_vx0aj"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="4_nmcr6"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="7_45su8"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="15_1puq0"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="16_d83c3"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="17_ga07m"]
 
@@ -690,13 +689,22 @@ scale = Vector2(2, 2)
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="STAR" parent="." groups=["Star"] instance=ExtResource("15_1puq0")]
-position = Vector2(4841, 1766)
-
 [node name="Stasis" parent="." instance=ExtResource("16_d83c3")]
 position = Vector2(4388, 1106)
 
 [node name="Zipline" parent="." instance=ExtResource("17_ga07m")]
 position = Vector2(5837, 1234)
+
+[node name="Stasis2" parent="." instance=ExtResource("16_d83c3")]
+position = Vector2(5777, 2353)
+
+[node name="Stasis3" parent="." instance=ExtResource("16_d83c3")]
+position = Vector2(4905, 1608)
+
+[node name="Stasis4" parent="." instance=ExtResource("16_d83c3")]
+position = Vector2(3323, 1934)
+
+[node name="Stasis5" parent="." instance=ExtResource("16_d83c3")]
+position = Vector2(6591, 2125)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
