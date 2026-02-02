@@ -593,7 +593,7 @@ sources/0 = SubResource("TileSetAtlasSource_vuu6h")
 [node name="Tutorial1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
-position = Vector2(-1399, -244)
+position = Vector2(49471, -12190)
 scale = Vector2(2, 2)
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
@@ -610,7 +610,7 @@ tile_map_data = PackedByteArray("AAAWAO3/AAAAAAAAAAAXAO3/AAAAAAAAAAAXAOz/AAAAAAA
 tile_set = SubResource("TileSet_tembr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1817, -216)
+position = Vector2(49482, -12173)
 zoom = Vector2(0.3, 0.3)
 limit_enabled = false
 limit_left = 1000000
@@ -698,10 +698,33 @@ gravity = Vector2(500, 350)
 position = Vector2(-1130, -171)
 container = ExtResource("12_scbil")
 
-[editable path="Player"]
+[node name="Conductor_Platform6" parent="." instance=ExtResource("10_a5mjf")]
+position = Vector2(50553, -11901)
+
+[node name="MakeItMusical" parent="Conductor_Platform6" index="2"]
+bar_appear = 1.0
+beat_appear = 1.0
+
+[node name="Conductor_Platform7" parent="." instance=ExtResource("10_a5mjf")]
+position = Vector2(51315, -12062)
+
+[node name="MakeItMusical" parent="Conductor_Platform7" index="2"]
+bar_appear = 1.0
+beat_appear = 1.0
+
+[node name="Conductor_Platform8" parent="." instance=ExtResource("10_a5mjf")]
+position = Vector2(51989, -12210)
+
+[node name="MakeItMusical" parent="Conductor_Platform8" index="2"]
+bar_appear = 1.0
+beat_appear = 1.0
+
 [editable path="STAR"]
 [editable path="Conductor_Platform"]
 [editable path="Conductor_Platform2"]
 [editable path="Conductor_Platform3"]
 [editable path="Conductor_Platform4"]
 [editable path="Conductor_Platform5"]
+[editable path="Conductor_Platform6"]
+[editable path="Conductor_Platform7"]
+[editable path="Conductor_Platform8"]
