@@ -5,10 +5,11 @@
 [resource]
 script = ExtResource("1_bxk65")
 text = Dictionary[String, String]({
-"0": "Example Dialogue 0",
-"1": "Test 2",
-"2": "test 3",
-"3": "test 4",
-"4": "test 5"
+"0": "Welcome to Quilt",
+"1": "This is a test of the dialogue system",
+"2": "Move left and right using W and D",
+"3": "Jump using Spacebar",
+"4": "Fire projectile using left click",
+"5": "Crouch using S"
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
