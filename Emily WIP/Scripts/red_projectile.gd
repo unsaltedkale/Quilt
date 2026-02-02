@@ -1,6 +1,6 @@
 extends Area2D
 @onready var player = $"../Player"
-var speed : Vector2 = Vector2(-500,-500)
+var speed : Vector2 = Vector2(-2000,-2000)
 var projectile_direction
 
 func _process(delta):
@@ -13,6 +13,6 @@ func _on_projectile_entered(body:Node2D):
 		queue_free()
 		
 func _on_area_entered(body: Area2D):
-	if not player.is_suspended_stasis and not player.is_suspended_zipline:
+	if not player.is_exiting_stasis and not player.is_suspended_zipline:
 		if body.is_in_group("Stasis"):
 			queue_free()

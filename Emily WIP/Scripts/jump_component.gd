@@ -1,6 +1,6 @@
 class_name JumpComponent
 extends Node
-@onready var player = $"../Player"
+@onready var player = get_parent()
 @export_subgroup("Settings")
 @export var jump_velocity: float = -950.0 #change
 @export var wall_jump_vel: float = -2000

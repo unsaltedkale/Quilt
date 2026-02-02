@@ -18,9 +18,11 @@ func _process(delta: float) -> void:
 func on_body_entered(area : Area2D):
 	if player.is_suspended_zipline:
 		if area.is_in_group("Projectile"):
+			player.velocity = player.recoil_component.recoil_velocity_equation()
 			player.is_suspended_zipline = false
+			player.is_exiting_stasis = true
 	else:
-		if area.is_in_group("Projectile"):
+		if area.is_in_group("Projectile") or area.is_in_group("Player"):
 			player.is_suspended_zipline = true
 			player.position = position
 			print("zipline pos: ",position)
@@ -28,5 +30,4 @@ func on_body_entered(area : Area2D):
 
 func on_body_exited(body: CharacterBody2D):
 	if body.is_in_group("Player"):
-		print("player exited")
 		player.is_suspended_zipline = false
