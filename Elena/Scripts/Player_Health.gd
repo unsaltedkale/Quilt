@@ -1,7 +1,7 @@
 extends Node
 
 @export var max_health: int = 1
-@onready var player_script: Player = $Player
+@onready var player_script: Player = get_parent() as Player
 
 var health: int
 

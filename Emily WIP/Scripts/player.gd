@@ -81,15 +81,13 @@ func die():
 	spawn_player(spawn_point)
 	
 func set_checkpoint(pos):
-	
 	spawn_point = pos
 	
-func spawn_player(spawn_point):
-	if spawn_point == Vector2.ZERO:
-		get_tree().reload_current_scene()
-		return
-		
-	#global_position = spawn_point
+func spawn_player(spawn_point: Vector2):
+	global_position = spawn_point
+	velocity = Vector2.ZERO
+	health_script.health = health_script.max_health  
+	
 	
 
 func shoot():
