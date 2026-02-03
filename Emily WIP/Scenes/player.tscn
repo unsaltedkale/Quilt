@@ -491,6 +491,7 @@ shape = SubResource("CapsuleShape2D_x8qdn")
 [node name="GravityComponent" parent="." instance=ExtResource("6_ltfw8")]
 
 [node name="PlayerHealth" parent="." instance=ExtResource("7_d72cn")]
+max_health = null
 
 [node name="RecoilComponent" parent="." instance=ExtResource("8_7a16b")]
 

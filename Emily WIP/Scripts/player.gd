@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 @export_subgroup("Nodes")
 @export var gravity_component: GravityComponent
 @export var input_component: InputComponent
