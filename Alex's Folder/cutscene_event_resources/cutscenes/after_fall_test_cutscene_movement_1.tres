@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_yqiuj")
 mover = NodePath("Player")
-target = Vector2(-30, 0)
+target = Vector2(300, 0)
 time = 5.0
 is_relative = true
 delay_before = 3.0

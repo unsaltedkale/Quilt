@@ -593,7 +593,7 @@ sources/0 = SubResource("TileSetAtlasSource_vuu6h")
 [node name="Tutorial1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
-position = Vector2(49471, -12190)
+position = Vector2(-1667, -222)
 scale = Vector2(2, 2)
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
@@ -610,7 +610,7 @@ tile_map_data = PackedByteArray("AAAWAO3/AAAAAAAAAAAXAO3/AAAAAAAAAAAXAOz/AAAAAAA
 tile_set = SubResource("TileSet_tembr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(49482, -12173)
+position = Vector2(-1802, -313)
 zoom = Vector2(0.3, 0.3)
 limit_enabled = false
 limit_left = 1000000

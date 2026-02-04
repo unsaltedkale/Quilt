@@ -2,7 +2,7 @@ class_name MovementComponent
 extends Node
 
 @export_subgroup("Settings")
-@export var speed: float = 300 #change 
+@export var speed: float = 600 #change 
 @export var jump_component: JumpComponent
 @onready var Player = get_parent()
 @export var prev_player_is_cutscene: bool
