@@ -707,4 +707,8 @@ position = Vector2(3323, 1934)
 [node name="Stasis5" parent="." instance=ExtResource("16_d83c3")]
 position = Vector2(6591, 2125)
 
+[node name="Zipline2" parent="." instance=ExtResource("17_ga07m")]
+position = Vector2(3929, 2182)
+end_position = Vector2(4200, 2182)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
