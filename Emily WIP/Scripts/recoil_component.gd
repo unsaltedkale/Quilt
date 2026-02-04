@@ -12,12 +12,17 @@ func handle_recoil(body: CharacterBody2D, direction: float):
 	can_shoot = body.can_shoot
 	if Input.is_action_just_pressed("fire_projectile") and can_shoot:
 		body.velocity = recoil_velocity_equation()
-		
 		#print("player direction ", player_direction, "player act pos ", body.global_position)
 	
 func recoil_velocity_equation():
+	# if joystick: n = joystick_direction
+	#else: n = player_direction
+	#var value = n * force * -1
+	#recoil up, right, left, and down
+	#var joystick_direction = Input.get_vector()
 	var player_direction = Player.get_local_mouse_position().normalized()
-	var value = player_direction * force * -1
+	var value = player_direction * force * -1 
+	
 	#print((rad_to_deg(value.angle())))
 	return value
 	

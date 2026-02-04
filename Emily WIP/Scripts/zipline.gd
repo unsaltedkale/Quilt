@@ -2,7 +2,7 @@ extends Area2D
 @onready var player = $"../Player"
 
 var platform_speed: Vector2 = Vector2(.05,0)
-var end_position: Vector2 = Vector2(6470,1234)
+@export var end_position: Vector2 = Vector2(6470,1234)
 
 func _process(delta: float) -> void:
 	if player.is_suspended_zipline:
