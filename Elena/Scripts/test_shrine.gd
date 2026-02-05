@@ -8,3 +8,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.shrine_key = false
 		anim.play("open_shrine")
 		
+	if body.is_in_group("Player") and body.shrine_key == false:
+		print("You need a key in order to open this shrine")
+		
