@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="animation_cutscene_event" load_steps=2 format=3 uid="uid://ddqc28mjc46b8"]
+
+[ext_resource type="Script" uid="uid://84oaxla2j74g" path="res://Alex's Folder/cutscene_event_resources/animation_cs_event.gd" id="1_tcdpu"]
+
+[resource]
+script = ExtResource("1_tcdpu")
+animator = NodePath("Player")
+animation_name = "stop"
+metadata/_custom_type_script = "uid://84oaxla2j74g"
