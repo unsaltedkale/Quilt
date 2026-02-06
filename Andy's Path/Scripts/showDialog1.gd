@@ -27,6 +27,7 @@ func _on_pressed() -> void:
 			$"../..".visible = false
 			get_tree().paused = false
 			$"../../../../NPCs/TestNPC".isPressed = false	
+			dialogue_counter = 0
 		isTyping = false
 func _process(delta: float) -> void:
 	print(dialogue_counter)

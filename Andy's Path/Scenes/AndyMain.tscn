@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://c1qxdbym2bpna"]
+[gd_scene load_steps=20 format=4 uid="uid://c1qxdbym2bpna"]
 
 [ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="2_1cjuc"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_54g6f"]
@@ -12,7 +12,6 @@
 [ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="6_5ahwk"]
 [ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="6_6yeqv"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="6_v7cp0"]
-[ext_resource type="PackedScene" uid="uid://bynaee88w7bws" path="res://Elena/Scenes/dissapearing_platform.tscn" id="7_whrfe"]
 
 [sub_resource type="Theme" id="Theme_1cjuc"]
 
@@ -608,6 +607,7 @@ size = Vector2(256, 256)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -703,9 +703,6 @@ position = Vector2(3410, 2156)
 point_a = Vector2(3410, 2156)
 point_b = Vector2(6607, 2156)
 
-[node name="DissapearingPlatform" parent="." instance=ExtResource("7_whrfe")]
-position = Vector2(4513, 2608)
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -719,6 +716,42 @@ script = ExtResource("6_v7cp0")
 
 [node name="SceneSwitch" parent="." instance=ExtResource("6_1cjuc")]
 position = Vector2(3877, 2317)
+
+[node name="Sand?" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(4637, 335)
+scale = Vector2(-8119.643, -371.41827)
+emitting = false
+amount = 43108
+lifetime = 26.3
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+linear_accel_min = 9786.2
+linear_accel_max = 9786.2
+radial_accel_min = 58.33
+radial_accel_max = 58.33
+tangential_accel_min = 735.2
+tangential_accel_max = 736.0
+scale_amount_min = 0.0
+scale_amount_max = 15.37
+color = Color(0.6362818, 0.62111443, 0.5867314, 1)
+
+[node name="Rain" type="Node2D" parent="."]
+visible = false
+position = Vector2(4637, 335)
+rotation = 3.1415925
+scale = Vector2(8119.643, 371.41827)
+
+[node name="Rain" type="CPUParticles2D" parent="Rain"]
+amount = 150478
+lifetime = 26.3
+emission_shape = 1
+emission_sphere_radius = 1.0
+scale_amount_min = 0.0
+scale_amount_max = 15.37
+color = Color(0.45490196, 0.73333335, 0.85882354, 0.18039216)
+
+[node name="RainEnvironment" type="WorldEnvironment" parent="Rain"]
 
 [connection signal="pressed" from="CanvasLayer/UI/DialogueScreen/Button" to="CanvasLayer/UI/DialogueScreen/Button" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
