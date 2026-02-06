@@ -42,12 +42,7 @@ func _ready():
 		is_cutscene = false
 		
 
-func _physics_process(delta: float) -> void:
-	var ray = PhysicsRayQueryParameters2D.create(position, position + Vector2(0,-10), 1)
-	var hit = get_world_2d().direct_space_state.intersect_ray(ray)
-	if hit != {}:
-		print("hit")
-		
+func _process(delta: float) -> void:
 	if is_phlo:
 		handle_phlo_animation()
 		get_node("CollisionShape2D").disabled = true
@@ -56,6 +51,14 @@ func _physics_process(delta: float) -> void:
 		handle_animation(delta)
 		get_node("CollisionShape2D").disabled = false
 		get_node("CollisionShape2D2").disabled = true
+
+func _physics_process(delta: float) -> void:
+	var ray = PhysicsRayQueryParameters2D.create(position, position + Vector2(0,-10), 1)
+	var hit = get_world_2d().direct_space_state.intersect_ray(ray)
+	if hit != {}:
+		print("hit")
+		
+
 		
 	if not is_cutscene:
 		if not is_suspended_stasis or not is_suspended_zipline:
