@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwsxt0ahqa4eo"]
+
+[ext_resource type="Script" uid="uid://dvw3mf53nhpnl" path="res://Alex's Folder/gds/fps_counter.gd" id="1_e3qb3"]
+
+[node name="FpsCounter" type="Node"]
+script = ExtResource("1_e3qb3")

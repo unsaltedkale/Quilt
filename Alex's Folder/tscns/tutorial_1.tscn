@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=20 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
+[ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_scbil"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="1_vuu6h"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="3_tembr"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_0hcnm"]
@@ -591,6 +592,8 @@ sources/0 = SubResource("TileSetAtlasSource_vuu6h")
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_80spu"]
 
 [node name="Tutorial1" type="Node2D"]
+
+[node name="FpsCounter" parent="." instance=ExtResource("1_scbil")]
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
 position = Vector2(-1667, -222)
