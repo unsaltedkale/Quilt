@@ -19,6 +19,9 @@ var is_falling: bool = false
 var is_landing: bool = false
 @export var is_phlo: bool = false
 var previous_velocity = 0
+var previous_position_x = 0
+var turn_towards_left_count = 0
+var turn_towards_right_count = 0
 var string: String = ""
 var collected_objects: int = 0 
 var max_stars: int = 2
@@ -49,7 +52,7 @@ func _physics_process(delta: float) -> void:
 		get_node("CollisionShape2D").disabled = true
 		get_node("CollisionShape2D2").disabled = false
 	else:
-		handle_animation()
+		handle_animation(delta)
 		get_node("CollisionShape2D").disabled = false
 		get_node("CollisionShape2D2").disabled = true
 		
@@ -98,24 +101,40 @@ func shoot():
 	
 	collected_objects -= 1
 
-func handle_animation():
+func handle_animation(delta):
 	# movement animations
 	var current_velocity = velocity.x
-	if previous_velocity > current_velocity and is_on_floor():
-		$AnimatedSprite2D.play("stop")
-		$AnimatedSprite2D.flip_h = false
-	elif previous_velocity < current_velocity and is_on_floor():
-		$AnimatedSprite2D.play("stop")
-		$AnimatedSprite2D.flip_h = true
+	
+	if is_cutscene:
+		current_velocity = (position.x - previous_position_x) / delta
+		print(current_velocity)
+		
+	if previous_velocity > current_velocity and is_on_floor() and abs(previous_velocity - current_velocity) > 10:
+		turn_towards_right_count += 1
+		if turn_towards_right_count == 3:
+			$AnimatedSprite2D.play("stop")
+			$AnimatedSprite2D.flip_h = false
+	elif previous_velocity < current_velocity and is_on_floor() and abs(previous_velocity - current_velocity) > 10:
+		turn_towards_left_count += 1
+		if turn_towards_left_count == 3:
+			$AnimatedSprite2D.play("stop")
+			$AnimatedSprite2D.flip_h = true
 	elif current_velocity > 0:
+		turn_towards_left_count = 0
+		turn_towards_right_count = 0
 		$AnimatedSprite2D.play("walk")
 		$AnimatedSprite2D.flip_h = false
 	elif current_velocity < 0:
+		turn_towards_left_count = 0
+		turn_towards_right_count = 0
 		$AnimatedSprite2D.play("walk")
 		$AnimatedSprite2D.flip_h = true
 	elif not $AnimatedSprite2D.is_playing():
+		turn_towards_left_count = 0
+		turn_towards_right_count = 0
 		$AnimatedSprite2D.play("idle")
 	previous_velocity = current_velocity
+	previous_position_x = position.x
 	# jump animations
 	is_jumping = velocity.y < 0 and not is_on_floor()
 	is_falling = velocity.y >= 0 and not is_on_floor()

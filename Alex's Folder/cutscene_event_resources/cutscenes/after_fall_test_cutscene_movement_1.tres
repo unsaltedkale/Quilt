@@ -5,8 +5,9 @@
 [resource]
 script = ExtResource("1_yqiuj")
 mover = NodePath("Player")
-target = Vector2(300, 0)
-time = 5.0
+target = Vector2(0, -100)
+time = 2.0
 is_relative = true
 delay_before = 3.0
+delay_after = 3.0
 metadata/_custom_type_script = "uid://cvo6goabck1ac"

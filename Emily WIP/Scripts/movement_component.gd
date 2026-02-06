@@ -26,7 +26,7 @@ func _process(delta) -> void:
 func handle_horizontal_movement(body: CharacterBody2D, direction: float) -> void:
 	#if recoil, launch in air a lil
 	var delta: float = get_process_delta_time()
-	var traction = 2500
+	var traction = 15000
 	if cutscene_frozen == false:
 		body.velocity.x = move_toward(body.velocity.x, direction * speed, delta * traction)
 	
