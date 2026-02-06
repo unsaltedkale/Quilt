@@ -1,0 +1,12 @@
+[gd_resource type="Environment" format=3 uid="uid://bfhgjrxab8gxu"]
+
+[resource]
+background_mode = 3
+glow_intensity = 2.6
+glow_strength = 1.2
+glow_bloom = 0.18
+fog_light_color = Color(0.99999994, 0.47679973, 0.20268536, 1)
+adjustment_enabled = true
+adjustment_brightness = 0.87
+adjustment_contrast = 0.89
+adjustment_saturation = 0.57
