@@ -7,10 +7,9 @@ var temp_acc = 1.2
 var wall_stick: bool = false
 
 func handle_wall(body: CharacterBody2D, _delta: float):
-	if body.is_on_wall() and not body.is_on_floor():
+	if body.is_on_wall() and not body.is_on_floor() and not body.is_magical_wall:
 		if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
 			wall_stick = true
-			print("wall stick true")
 		else:
 			wall_stick = false
 	else:

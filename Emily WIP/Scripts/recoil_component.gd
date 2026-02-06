@@ -19,7 +19,7 @@ func recoil_velocity_equation():
 	#else: n = player_direction
 	#var value = n * force * -1
 	#recoil up, right, left, and down
-	#var joystick_direction = Input.get_vector()
+	#var joystick_direction = Input.get_vector(input_recoil_horz, input_recoil_vert)
 	var player_direction = Player.get_local_mouse_position().normalized()
 	var value = player_direction * force * -1 
 	

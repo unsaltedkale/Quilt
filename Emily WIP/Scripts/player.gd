@@ -31,6 +31,7 @@ var is_suspended_stasis: bool = false
 var is_suspended_zipline: bool = false
 var is_exiting_stasis: bool = false
 @export var is_cutscene: bool = false
+var is_magical_wall: bool = false
 
 var spawn_point = Vector2.ZERO
 

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjfpe4wcw5xls"]
+
+[ext_resource type="Script" uid="uid://i51sn4bsbvcc" path="res://Emily WIP/Scripts/magical_barrier.gd" id="1_yw0b8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kr6n3"]
+size = Vector2(35, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw0b8"]
+size = Vector2(35, 224)
+
+[node name="MagicalBarrier" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.5, 102)
+shape = SubResource("RectangleShape2D_kr6n3")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_yw0b8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7.5, 102)
+shape = SubResource("RectangleShape2D_yw0b8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
