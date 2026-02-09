@@ -7,4 +7,4 @@ func _on_body_entered(body: Node2D):
 func _on_timer_timeout() -> void:
 	var parent = self.get_parent()
 	if parent:
-		parent.modulate.a = 0
+		parent.queue_free()

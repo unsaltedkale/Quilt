@@ -24,10 +24,10 @@ region = Rect2(960, 512, 64, 64)
 [sub_resource type="SpriteFrames" id="SpriteFrames_53yl3"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_p2hgl")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_kj0cy")
 }],
 "loop": true,
@@ -35,10 +35,10 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_c11b6")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_200bl")
 }],
 "loop": true,
@@ -54,6 +54,6 @@ shape = SubResource("RectangleShape2D_5xt0g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_53yl3")
-animation = &"active_checkpoint"
+animation = &"unactive_checkpoint"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
