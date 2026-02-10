@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="cutscene_container" load_steps=3 format=3 uid="uid://2x73w31w760w"]
+[gd_resource type="Resource" script_class="cutscene_container" load_steps=4 format=3 uid="uid://2x73w31w760w"]
 
+[ext_resource type="Resource" uid="uid://u0c2s6rtiisa" path="res://Alex's Folder/cutscene_event_resources/cutscenes/cyrpt_cs_position.tres" id="1_0pvg7"]
 [ext_resource type="Resource" uid="uid://ege8ss1a4v8y" path="res://Alex's Folder/cutscene_event_resources/cutscenes/cyrpt_cs_test.tres" id="1_hofml"]
 [ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_lejka"]
 
 [resource]
 script = ExtResource("1_lejka")
-events = [ExtResource("1_hofml")]
+events = [ExtResource("1_0pvg7"), ExtResource("1_hofml")]
 metadata/_custom_type_script = "uid://bqmpakucoot4i"
