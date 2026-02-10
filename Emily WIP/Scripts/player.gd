@@ -44,7 +44,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if is_phlo:
-		handle_phlo_animation()
+		handle_phlo_animation(delta)
 		get_node("CollisionShape2D").disabled = true
 		get_node("CollisionShape2D2").disabled = false
 	else:
@@ -160,8 +160,13 @@ func handle_animation(delta):
 		
 	was_on_floor = current_on_floor
 	
-func handle_phlo_animation():
+func handle_phlo_animation(delta):
 	var current_velocity = velocity.x
+	
+	if is_cutscene:
+		current_velocity = (position.x - previous_position_x) / delta
+		print(current_velocity)
+	
 	if previous_velocity > current_velocity and is_on_floor():
 		$AnimatedSprite2D.play("phlo_idle")
 		$AnimatedSprite2D.flip_h = false
@@ -177,6 +182,7 @@ func handle_phlo_animation():
 	elif not $AnimatedSprite2D.is_playing():
 		$AnimatedSprite2D.play("phlo_idle")
 	previous_velocity = current_velocity
+	previous_position_x = position.x
 	# jump animations
 	is_jumping = velocity.y < 0 and not is_on_floor()
 	is_falling = velocity.y >= 0 and not is_on_floor()
