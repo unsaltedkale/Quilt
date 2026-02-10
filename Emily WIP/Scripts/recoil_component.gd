@@ -7,7 +7,7 @@ var can_shoot
 var force : Vector2 = Vector2(2500,1500)
 var player_direction
 var joystick_direction
-var input: Vector2
+var n : Vector2
 
 func handle_recoil(body: CharacterBody2D, direction: float):
 	can_shoot = body.can_shoot
@@ -20,7 +20,11 @@ func handle_recoil(body: CharacterBody2D, direction: float):
 func recoil_velocity_equation():
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
 	player_direction = player.get_local_mouse_position().normalized()
-	var value = (player_direction) * force * -1
+	if joystick_direction > Vector2(0,0) or joystick_direction < Vector2(0,0):
+		n = joystick_direction
+	else:
+		n = player_direction
+	var value = n * force * -1
 	print("joystick: ", joystick_direction, "player: ", player_direction)
 	#var value = player_direction * force * -1 
 	#print((rad_to_deg(value.angle())))
