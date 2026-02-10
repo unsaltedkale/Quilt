@@ -32,6 +32,7 @@ var is_suspended_zipline: bool = false
 var is_exiting_stasis: bool = false
 @export var is_cutscene: bool = false
 var is_magical_wall: bool = false
+var joystick_direction
 
 var spawn_point = Vector2.ZERO
 
@@ -53,12 +54,7 @@ func _process(delta: float) -> void:
 		get_node("CollisionShape2D2").disabled = true
 
 func _physics_process(delta: float) -> void:
-	var ray = PhysicsRayQueryParameters2D.create(position, position + Vector2(0,-10), 1)
-	var hit = get_world_2d().direct_space_state.intersect_ray(ray)
-	if hit != {}:
-		print("hit")
-		
-
+	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
 		
 	if not is_cutscene:
 		if not is_suspended_stasis or not is_suspended_zipline:
@@ -77,8 +73,9 @@ func _physics_process(delta: float) -> void:
 		can_shoot = true
 	else:
 		can_shoot = false
-	if Input.is_action_just_pressed("fire_projectile") and can_shoot and not is_phlo and not is_cutscene:
-		shoot()
+	if Input.is_action_just_pressed("fire_projectile") or joystick_direction > Vector2(0,0) or joystick_direction < Vector2(0,0):
+		if can_shoot and not is_phlo and not is_cutscene:
+			shoot()
 
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
