@@ -3,6 +3,7 @@ extends Node2D
 var UiReference
 var areaReferecnce
 var cameraReference
+var playerReference
 var targetZoom
 
 var isPressed = false
@@ -11,8 +12,11 @@ func _ready() -> void:
 	UiReference = $"../../CanvasLayer/UI"
 	areaReferecnce = $Area2D
 	cameraReference = $"../../Camera2D"
-	
+	playerReference = $"../../Player"
 	UiReference.visible = false
+	if playerReference == null:
+		playerReference = false
+	
 
 func _process(delta: float) -> void:
 	if areaReferecnce.isInTrigger == true:
@@ -23,7 +27,7 @@ func _process(delta: float) -> void:
 				isPressed = true
 	if isPressed == true:
 		UiReference.visible = true
-		get_tree().paused = true
+		playerReference.is_cutscene = true
 
 	
 #func Display_Text_No_Input():

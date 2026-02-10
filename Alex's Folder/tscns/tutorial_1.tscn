@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=29 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_scbil"]
@@ -13,6 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="10_a5mjf"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="11_628yu"]
 [ext_resource type="Resource" uid="uid://2x73w31w760w" path="res://Alex's Folder/cutscene_event_resources/cutscenes/test_cutscene_container_after_fall.tres" id="12_scbil"]
+[ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="14_k3paq"]
+[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="15_er5f2"]
+[ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="16_8v1o4"]
+[ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="17_aprfj"]
+[ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="18_kgnlc"]
+[ext_resource type="Script" uid="uid://ckiaiuvbfmd34" path="res://Andy's Path/Scripts/DialogueText.gd" id="19_eufkq"]
+[ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="20_34ht4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80spu"]
 texture = ExtResource("1_leou4")
@@ -591,6 +598,11 @@ sources/0 = SubResource("TileSetAtlasSource_vuu6h")
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_80spu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpnre"]
+size = Vector2(256, 256)
+
+[sub_resource type="Theme" id="Theme_8eit8"]
+
 [node name="Tutorial1" type="Node2D"]
 
 [node name="FpsCounter" parent="." instance=ExtResource("1_scbil")]
@@ -722,6 +734,79 @@ position = Vector2(51989, -12210)
 [node name="MakeItMusical" parent="Conductor_Platform8" index="2"]
 bar_appear = 1.0
 beat_appear = 1.0
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="TestNPC" type="Node2D" parent="NPCs"]
+position = Vector2(-2988, -2549)
+scale = Vector2(2, 2)
+script = ExtResource("14_k3paq")
+
+[node name="Sprite2D" type="Sprite2D" parent="NPCs/TestNPC"]
+texture = ExtResource("15_er5f2")
+
+[node name="Area2D" type="Area2D" parent="NPCs/TestNPC"]
+position = Vector2(-2500, -1200)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("16_8v1o4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/TestNPC/Area2D"]
+position = Vector2(5000, 2400)
+shape = SubResource("RectangleShape2D_bpnre")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueScreen" type="Control" parent="CanvasLayer/UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationViewer" type="ColorRect" parent="CanvasLayer/UI/DialogueScreen"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1150.0
+offset_bottom = 648.0
+color = Color(0.12662229, 0.46256143, 0.3947214, 1)
+
+[node name="TextOutine" type="Sprite2D" parent="CanvasLayer/UI/DialogueScreen"]
+texture_filter = 1
+position = Vector2(673, 140)
+scale = Vector2(6.0681806, 6.068181)
+texture = ExtResource("17_aprfj")
+
+[node name="Dialogue" type="Label" parent="CanvasLayer/UI/DialogueScreen"]
+process_mode = 3
+layout_mode = 0
+offset_left = 236.0
+offset_top = 94.0
+offset_right = 832.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("18_kgnlc")
+theme_override_font_sizes/font_size = 42
+script = ExtResource("19_eufkq")
+
+[node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 202.0
+offset_top = 67.0
+offset_right = 878.0
+offset_bottom = 273.0
+theme = SubResource("Theme_8eit8")
+theme_override_fonts/font = ExtResource("18_kgnlc")
+theme_override_font_sizes/font_size = 42
+script = ExtResource("20_34ht4")
+
+[connection signal="pressed" from="CanvasLayer/UI/DialogueScreen/Button" to="CanvasLayer/UI/DialogueScreen/Button" method="_on_pressed"]
 
 [editable path="STAR"]
 [editable path="Conductor_Platform"]

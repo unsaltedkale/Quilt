@@ -9,8 +9,6 @@ var dialogue_counter = 0
 var isTyping = false
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
-	pressed.connect(_on_pressed)
 	line = dialogFolder.text[str(dialogue_counter)]
 	dialogue_counter = 0
 func _on_pressed() -> void:
@@ -25,7 +23,7 @@ func _on_pressed() -> void:
 			line = dialogFolder.text[str(dialogue_counter)]
 		else:
 			$"../..".visible = false
-			get_tree().paused = false
+			$"../../../../Player".is_cutscene = false
 			$"../../../../NPCs/TestNPC".isPressed = false	
 			dialogue_counter = 0
 		isTyping = false
