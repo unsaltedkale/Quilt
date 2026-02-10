@@ -168,17 +168,23 @@ func handle_phlo_animation(delta):
 		print(current_velocity)
 	
 	if previous_velocity > current_velocity and is_on_floor():
-		$AnimatedSprite2D.play("phlo_idle")
-		$AnimatedSprite2D.flip_h = false
+		turn_towards_left_count = 0
+		turn_towards_right_count += 1
+		if turn_towards_right_count == 3:
+			$AnimatedSprite2D.play("phlo_idle")
+			$AnimatedSprite2D.flip_h = false
 	elif previous_velocity < current_velocity and is_on_floor():
-		$AnimatedSprite2D.play("phlo_idle")
-		$AnimatedSprite2D.flip_h = true
+		turn_towards_right_count = 0
+		turn_towards_left_count += 1
+		if turn_towards_left_count == 3:
+			$AnimatedSprite2D.play("phlo_idle")
+			$AnimatedSprite2D.flip_h = true
 	elif current_velocity > 0:
-		$AnimatedSprite2D.play("phlo_idle")
-		$AnimatedSprite2D.flip_h = false
+			$AnimatedSprite2D.play("phlo_idle")
+			$AnimatedSprite2D.flip_h = false
 	elif current_velocity < 0:
-		$AnimatedSprite2D.play("phlo_idle")
-		$AnimatedSprite2D.flip_h = true
+			$AnimatedSprite2D.play("phlo_idle")
+			$AnimatedSprite2D.flip_h = true
 	elif not $AnimatedSprite2D.is_playing():
 		$AnimatedSprite2D.play("phlo_idle")
 	previous_velocity = current_velocity
