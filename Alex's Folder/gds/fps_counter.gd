@@ -8,3 +8,4 @@ func _process(delta):
 	if timer > TIMER_LIMIT: # Prints every 2 seconds
 		timer = 0.0
 		print("fps: " + str(Engine.get_frames_per_second()))
+		print(Input.get_connected_joypads())
