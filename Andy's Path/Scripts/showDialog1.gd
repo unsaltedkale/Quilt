@@ -28,6 +28,7 @@ func _on_pressed() -> void:
 			dialogue_counter = 0
 		isTyping = false
 func _process(delta: float) -> void:
-	print(dialogue_counter)
+	#print(dialogue_counter)
+	pass
 func wait(duration):
 	await get_tree().create_timer(duration).timeout

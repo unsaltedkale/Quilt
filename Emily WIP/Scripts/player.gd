@@ -76,7 +76,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		can_shoot = false
 	if Input.is_action_just_pressed("fire_projectile") or abs(joystick_direction) > Vector2(0,0):
-		print(joystick_pos)
+		#print(joystick_pos)
 		if can_shoot and not is_phlo and not is_cutscene and abs(joystick_pos) == Vector2(0,0):
 			print("FIREBALL")
 			#just shot bool --> cooldown for controler
@@ -170,7 +170,6 @@ func handle_phlo_animation(delta):
 	
 	if is_cutscene:
 		current_velocity = (position.x - previous_position_x) / delta
-		print(current_velocity)
 	
 	if previous_velocity > current_velocity and is_on_floor():
 		turn_towards_left_count = 0
