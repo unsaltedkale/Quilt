@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="set_variable_cutscene_event" load_steps=2 format=3 uid="uid://ci4s7u6lbo67k"]
+
+[ext_resource type="Script" uid="uid://ddqk0rwkpcnf2" path="res://Alex's Folder/cutscene_event_resources/set_variable_cs_event.gd" id="1_ghgj8"]
+
+[resource]
+script = ExtResource("1_ghgj8")
+actor = NodePath("Player")
+variable_name = "is_phlo"
+value_string = null
+metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="cutscene_container" load_steps=4 format=3 uid="uid://dytjfs6d2xqxv"]
+
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_1oguf"]
+[ext_resource type="Resource" uid="uid://dgefnngfujhk2" path="res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_meeting_quilt_cutscene/cyrpt_rise_quilt_switch.tres" id="1_k1tb7"]
+[ext_resource type="Resource" uid="uid://ci4s7u6lbo67k" path="res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_meeting_quilt_cutscene/set_to_phlo.tres" id="2_noxt6"]
+
+[resource]
+script = ExtResource("1_1oguf")
+events = [ExtResource("1_k1tb7"), ExtResource("2_noxt6")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"

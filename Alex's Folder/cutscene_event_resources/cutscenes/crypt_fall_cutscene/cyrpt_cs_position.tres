@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_6ooqb")
 mover = NodePath("Player")
-target = Vector2(-2207.64, -2593.16)
+target = Vector2(3275, -2448)
 time = 0.1
 horizontal_flip = true
 delay_after = 2.0

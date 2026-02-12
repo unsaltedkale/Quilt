@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 		if respawn_timer <= 0:
 			find_child("Sprite2D").visible = true
-			find_child("CollisionShape2D").disabled = false
+			find_child("CollisionShape2D").set_deferred("disabled", false)
 			respawn_timer = respawn_timer_max
 
 func _on_STAR_entered(body: Node2D) -> void:
@@ -22,5 +22,5 @@ func _on_STAR_entered(body: Node2D) -> void:
 		if body.collected_objects < body.max_stars:
 			body.collected_objects += 1
 		find_child("Sprite2D").visible = false
-		find_child("CollisionShape2D").disabled = true
+		find_child("CollisionShape2D").set_deferred("disabled", true)
 		

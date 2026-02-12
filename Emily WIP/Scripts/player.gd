@@ -24,7 +24,7 @@ var turn_towards_left_count = 0
 var turn_towards_right_count = 0
 var string: String = ""
 var collected_objects: int = 0 
-var max_stars: int = 2
+var max_stars: int = 1
 var can_shoot: bool = true
 var shrine_key: bool = false
 var is_suspended_stasis: bool = false
@@ -63,13 +63,12 @@ func _physics_process(delta: float) -> void:
 			gravity_component.handle_gravity(self, delta)
 			movement_component.handle_horizontal_movement(self, input_component.input_horizontal)
 		jump_component.handle_jump(self, input_component.get_jump_input())
-		if not is_phlo:
-			recoil_component.handle_recoil(self, input_component.get_shoot_input())
+		recoil_component.handle_recoil(self, input_component.get_shoot_input())
 		wall_stick_component.handle_wall(self, delta)
 		crouch_component.handle_crouch(self, input_component.get_crouch_input())
 	
 	move_and_slide()
-	if is_on_floor():
+	if is_on_floor() && not is_phlo:
 		collected_objects = max_stars
 	if collected_objects > 0:
 		can_shoot = true
@@ -77,7 +76,7 @@ func _physics_process(delta: float) -> void:
 		can_shoot = false
 	if Input.is_action_just_pressed("fire_projectile") or abs(joystick_direction) > Vector2(0,0):
 		#print(joystick_pos)
-		if can_shoot and not is_phlo and not is_cutscene and abs(joystick_pos) == Vector2(0,0):
+		if can_shoot and not is_cutscene and abs(joystick_pos) == Vector2(0,0):
 			print("FIREBALL")
 			#just shot bool --> cooldown for controler
 			shoot()

@@ -2,6 +2,8 @@ shader_type canvas_item;
 
 uniform int onoff;
 
+uniform bool is_phlo;
+
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
@@ -73,12 +75,28 @@ void fragment() {
 
 		//vec3(37.00/255.00, 150.00/255.00, 190.00/255.00)
 		if (approximately_zero(COLOR.xyz, vec3(170.00/255.00, 90.00/255.00, 73.00/255.00)) == 3)
-			COLOR.xyz = vec3(140.0/255.0);	
+			COLOR.xyz = vec3(140.0/255.0);
+			
 	}
 	
 	else if (onoff == 1)
 	{
 		COLOR.xyz = COLOR.xyz;
+		
+		if (is_phlo)
+		{
+			//brightest part of Phlo's gem
+			if (approximately_zero(COLOR.xyz, vec3(152.00/255.00, 94.00/255.00, 104.00/255.00)) == 3)
+			COLOR.xyz = vec3(255.0/255.0, 156.0/255.0, 136.0/255.0);
+			
+			//medium part of Phlo's gem
+			if (approximately_zero(COLOR.xyz, vec3(104.00/255.00, 54.00/255.00, 63.00/255.00)) == 3)
+			COLOR.xyz = vec3(255.0/255.0, 130.0/255.0, 100.0/255.0);
+			
+			//darkest part of Phlo's gem
+			if (approximately_zero(COLOR.xyz, vec3(55.00/255.00, 30.00/255.00, 34.00/255.00)) == 3)
+			COLOR.xyz = vec3(255.0/255.0, 99.0/255.0, 61.0/255.0);
+		}
 	}
 	
 	

@@ -28,6 +28,7 @@ radius = 4.75
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
 shader = ExtResource("8_3uy0y")
 shader_parameter/onoff = 0
+shader_parameter/is_phlo = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2k042"]
 atlas = ExtResource("9_7a16b")
@@ -500,7 +501,7 @@ material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"phlo_fall"
+animation = &"phlo_jump"
 script = ExtResource("18_33mbb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
