@@ -17,6 +17,7 @@ func _process(delta) -> void:
 	if prev_player_is_cutscene != null && Player.is_cutscene != null:
 		if Player.is_cutscene != prev_player_is_cutscene:
 				Player.velocity.x = 0
+				Player.velocity.y = 0
 				prev_player_is_cutscene = Player.is_cutscene
 				cutscene_frozen = true
 		elif Player.is_cutscene == false:

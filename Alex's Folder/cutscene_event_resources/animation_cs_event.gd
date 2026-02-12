@@ -10,8 +10,7 @@ class_name animation_cutscene_event
 func execute(cutscene_trigger: Node) -> void:
 	var animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
 	
-	animatorp.flip_h = horizontal_flip
-	animatorp.set_flip_h(horizontal_flip)
+	# doesn't work -> animatorp.flip_h = horizontal_flip
 	
 	await animatorp.animation_finished
 	

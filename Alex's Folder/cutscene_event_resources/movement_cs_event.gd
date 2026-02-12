@@ -13,7 +13,7 @@ func execute(cutscene_trigger: Node) -> void:
 	var tween = cutscene_trigger.get_tree().create_tween()
 	var moverp = cutscene_trigger.get_node("../" + str(mover))
 	var animatorp = cutscene_trigger.get_node("../" + str(mover) + "/AnimatedSprite2D")
-	animatorp.set_flip_h(horizontal_flip)
+	# doesn't work -> animatorp.flip_h = horizontal_flip
 	if is_relative:
 		tween.tween_property(moverp, "position", target, time).as_relative()
 	elif not is_relative:

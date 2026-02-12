@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var bar_appear: float = 0
-@export var beat_appear: float = 0
+@export var bar_appear: float = 1
+@export var beat_appear: float = 1
 @export var bar_delete: float = 0
 @export var beat_delete: float = 0
 @onready var Conductor = $"../../Conductor"
