@@ -33,6 +33,7 @@ var is_exiting_stasis: bool = false
 @export var is_cutscene: bool = false
 var is_magical_wall: bool = false
 var joystick_direction
+var joystick_pos : Vector2
 
 var spawn_point = Vector2.ZERO
 
@@ -55,7 +56,8 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
-		
+	joystick_pos = joystick_direction
+	
 	if not is_cutscene:
 		if not is_suspended_stasis or not is_suspended_zipline:
 			gravity_component.handle_gravity(self, delta)
@@ -73,8 +75,11 @@ func _physics_process(delta: float) -> void:
 		can_shoot = true
 	else:
 		can_shoot = false
-	if Input.is_action_just_pressed("fire_projectile") or joystick_direction > Vector2(0,0) or joystick_direction < Vector2(0,0):
-		if can_shoot and not is_phlo and not is_cutscene:
+	if Input.is_action_just_pressed("fire_projectile") or abs(joystick_direction) > Vector2(0,0):
+		print(joystick_pos)
+		if can_shoot and not is_phlo and not is_cutscene and abs(joystick_pos) == Vector2(0,0):
+			print("FIREBALL")
+			#just shot bool --> cooldown for controler
 			shoot()
 
 func take_damage(amount: int) -> void:
@@ -98,7 +103,11 @@ func shoot():
 	var proj = projectile_scene.instantiate()
 	proj.position = position
 	get_parent().add_child(proj)
-	proj.projectile_direction = (position - get_global_mouse_position()).normalized()
+	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
+	if abs(joystick_direction) > Vector2(0,0):
+		proj.projectile_direction = (position - joystick_direction)
+	else:
+		proj.projectile_direction = (position - get_global_mouse_position()).normalized()
 	
 	collected_objects -= 1
 
@@ -108,7 +117,6 @@ func handle_animation(delta):
 	
 	if is_cutscene:
 		current_velocity = (position.x - previous_position_x) / delta
-		print(current_velocity)
 		
 	if previous_velocity > current_velocity and is_on_floor() and abs(previous_velocity - current_velocity) > 10:
 		turn_towards_right_count += 1
