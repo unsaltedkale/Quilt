@@ -501,7 +501,7 @@ material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"phlo_jump"
+animation = &"phlo_land"
 script = ExtResource("18_33mbb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
