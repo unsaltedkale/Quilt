@@ -37,6 +37,7 @@ var joystick_pos : Vector2
 
 var spawn_point = Vector2.ZERO
 
+
 func _ready():
 	health_script = $PlayerHealth  
 	health_script.health = health_script.max_health  
@@ -96,8 +97,6 @@ func spawn_player(spawn_point: Vector2):
 	velocity = Vector2.ZERO
 	health_script.health = health_script.max_health  
 	
-	
-
 func shoot():
 	var proj = projectile_scene.instantiate()
 	proj.position = position
