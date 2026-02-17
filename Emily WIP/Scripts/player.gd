@@ -43,7 +43,6 @@ func _ready():
 	health_script.health = health_script.max_health  
 	if is_cutscene == null:
 		is_cutscene = false
-		
 
 func _process(delta: float) -> void:
 	if is_phlo:
@@ -81,6 +80,11 @@ func _physics_process(delta: float) -> void:
 			print("FIREBALL")
 			#just shot bool --> cooldown for controler
 			shoot()
+
+func on_body_entered(body):
+	if body.is_in_group("Magical_Barrier"):
+		is_magical_wall = true
+		velocity.y == 0
 
 func take_damage(amount: int) -> void:
 	health_script.reduce_health(amount)
