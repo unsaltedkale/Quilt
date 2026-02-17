@@ -10,6 +10,7 @@ size = Vector2(128, 128)
 script = ExtResource("1_f74go")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_kumea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
