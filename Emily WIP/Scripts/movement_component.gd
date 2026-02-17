@@ -7,7 +7,6 @@ extends Node
 @onready var Player = get_parent()
 @export var prev_player_is_cutscene: bool
 @export var cutscene_frozen: bool
-
 var previous_velocity = 0
 
 func _ready():
@@ -29,6 +28,8 @@ func handle_horizontal_movement(body: CharacterBody2D, direction: float) -> void
 	var delta: float = get_process_delta_time()
 	var traction = 15000
 	if cutscene_frozen == false:
-		body.velocity.x = move_toward(body.velocity.x, direction * speed, delta * traction)
+		if not Input.is_action_just_pressed("fire_projectile"):
+			#body.velocity.x = move_toward(body.velocity.x, direction * speed, delta * traction)
+			print("walking vel: ",body.velocity)
 	
 	

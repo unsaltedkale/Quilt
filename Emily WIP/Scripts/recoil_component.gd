@@ -15,6 +15,7 @@ func handle_recoil(body: CharacterBody2D, direction: float):
 	if can_shoot:
 		if Input.is_action_just_pressed("fire_projectile") or joystick_direction > Vector2(0,0) or joystick_direction < Vector2(0,0):
 			body.velocity = recoil_velocity_equation()
+			print("recoil vel: ", body.velocity)
 		
 func recoil_velocity_equation():
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
