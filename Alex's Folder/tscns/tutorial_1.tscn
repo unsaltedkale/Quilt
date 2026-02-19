@@ -610,9 +610,8 @@ size = Vector2(256, 256)
 [node name="FpsCounter" parent="." instance=ExtResource("1_scbil")]
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
-position = Vector2(35363, 4713)
+position = Vector2(41597, -4167)
 scale = Vector2(2, 2)
-is_phlo = true
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 
@@ -917,8 +916,12 @@ respawns = true
 position = Vector2(42753.996, 1293.0005)
 respawns = true
 
+[node name="STAR50" parent="." instance=ExtResource("9_v7eyh")]
+position = Vector2(43323, 1298.0005)
+respawns = true
+
 [node name="STAR26" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(43634, 1308.0013)
+position = Vector2(43860.996, 1275.0005)
 respawns = true
 
 [node name="STAR27" parent="." instance=ExtResource("9_v7eyh")]
@@ -926,63 +929,87 @@ position = Vector2(44074.996, 994.0005)
 respawns = true
 
 [node name="STAR28" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44075, 492.00128)
+position = Vector2(44073, 586.0006)
 respawns = true
 
 [node name="STAR29" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44070, 17.00055)
+position = Vector2(44068, 172.00142)
 respawns = true
 
 [node name="STAR30" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44077, -430.99866)
+position = Vector2(44066, -191.9993)
 respawns = true
 
 [node name="STAR31" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44067, -871.9994)
+position = Vector2(44059, -489.9975)
+respawns = true
+
+[node name="STAR51" parent="." instance=ExtResource("9_v7eyh")]
+position = Vector2(44061, -776.999)
+respawns = true
+
+[node name="STAR52" parent="." instance=ExtResource("9_v7eyh")]
+position = Vector2(44061, -1187)
 respawns = true
 
 [node name="STAR32" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44062, -1444.9985)
+position = Vector2(44068, -1493.0009)
 respawns = true
 
 [node name="STAR33" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44074, -2017.9995)
+position = Vector2(44062.004, -1746.0002)
 respawns = true
 
 [node name="STAR34" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44073.996, -2441.9983)
+position = Vector2(44065.004, -2023.0002)
 respawns = true
 
 [node name="STAR35" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44074, -2785.9995)
+position = Vector2(44059, -2326.999)
 respawns = true
 
 [node name="STAR36" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44066.996, -3209.9983)
+position = Vector2(44070.004, -2617)
 respawns = true
 
 [node name="STAR37" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44084, -3665.9993)
+position = Vector2(44065.996, -2871.9998)
 respawns = true
 
 [node name="STAR38" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44084, -4149.0005)
+position = Vector2(44060.996, -3169.0005)
 respawns = true
 
 [node name="STAR39" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44084, -4602.001)
+position = Vector2(44059, -3439)
 respawns = true
 
 [node name="STAR40" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44062.004, -4987.0005)
+position = Vector2(44059, -3755.9985)
 respawns = true
 
 [node name="STAR41" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44057, -5378.997)
+position = Vector2(44050.004, -4060)
+respawns = true
+
+[node name="STAR53" parent="." instance=ExtResource("9_v7eyh")]
+position = Vector2(44038, -4325.0024)
+respawns = true
+
+[node name="STAR54" parent="." instance=ExtResource("9_v7eyh")]
+position = Vector2(44038.004, -4634)
+respawns = true
+
+[node name="STAR55" parent="." instance=ExtResource("9_v7eyh")]
+position = Vector2(44030, -4877.0024)
+respawns = true
+
+[node name="STAR56" parent="." instance=ExtResource("9_v7eyh")]
+position = Vector2(44034, -5085)
 respawns = true
 
 [node name="STAR42" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44055.004, -5678.9985)
+position = Vector2(44044.004, -5250)
 respawns = true
 
 [node name="STAR15" parent="." instance=ExtResource("9_v7eyh")]
@@ -1040,12 +1067,15 @@ track = ExtResource("5_3xd41")
 [editable path="STAR23"]
 [editable path="STAR24"]
 [editable path="STAR25"]
+[editable path="STAR50"]
 [editable path="STAR26"]
 [editable path="STAR27"]
 [editable path="STAR28"]
 [editable path="STAR29"]
 [editable path="STAR30"]
 [editable path="STAR31"]
+[editable path="STAR51"]
+[editable path="STAR52"]
 [editable path="STAR32"]
 [editable path="STAR33"]
 [editable path="STAR34"]
@@ -1056,5 +1086,9 @@ track = ExtResource("5_3xd41")
 [editable path="STAR39"]
 [editable path="STAR40"]
 [editable path="STAR41"]
+[editable path="STAR53"]
+[editable path="STAR54"]
+[editable path="STAR55"]
+[editable path="STAR56"]
 [editable path="STAR42"]
 [editable path="STAR15"]
