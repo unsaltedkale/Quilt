@@ -28,8 +28,6 @@ func _process(delta: float) -> void:
 	if isPressed == true:
 		UiReference.visible = true
 		playerReference.is_cutscene = true
-
-	
 #func Display_Text_No_Input():
 	#if areaReferecnce.isInTrigger == true:
 	#	print("In Trigger")
