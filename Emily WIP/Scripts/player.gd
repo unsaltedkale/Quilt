@@ -1,7 +1,36 @@
 extends CharacterBody2D
 
-class_name Player
+class_name Player # persistent state
 
+@onready var state_machine = $State_Machine
+var state
+@onready var state_factory = "res://Emily WIP/Scripts/statefactory.gd"
+
+var vel = Vector2()
+
+func _ready() -> void:
+	state_factory = Sate_Factory.new()
+	change_state("idle")
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("move_left"):
+		move_left()
+	elif Input.is_action_just_pressed("move_right"):
+		move_right()
+
+func move_left():
+	state.move_left()
+func move_right():
+	state.move_right()
+
+func change_state(new_state_name):
+	if state != null:
+		state.queue_free()
+	state = state_factory.get_state(new_state_name).new()
+	#state.setup("change_state", $AnimatedSprite2D, self)
+	state.name = "current_state"
+	add_child(state)
+'''
 @export_subgroup("Nodes")
 @export var gravity_component: GravityComponent
 @export var input_component: InputComponent
@@ -215,3 +244,5 @@ func handle_phlo_animation(delta):
 		pass
 		
 	was_on_floor = current_on_floor
+
+'''

@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=85 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="PackedScene" uid="uid://deu4pl1h45ba" path="res://Emily WIP/Scenes/jump_component.tscn" id="3_0yr7s"]
@@ -21,9 +21,10 @@
 [ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/gds/recolor_sprite_thingy.gd" id="18_33mbb"]
 [ext_resource type="PackedScene" uid="uid://bnnt61bxtj5x8" path="res://Elena/Scenes/wall_stick_component.tscn" id="19_33mbb"]
 [ext_resource type="PackedScene" uid="uid://cxli8ina6vjl" path="res://Emily WIP/Scenes/crouch_component.tscn" id="21_1nwdr"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8qdn"]
-radius = 4.75
+[ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
+[ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
+[ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
+[ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
 shader = ExtResource("8_3uy0y")
@@ -464,24 +465,40 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
 size = Vector2(38, 44)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8qdn"]
+radius = 4.75
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4hfjo"]
 radius = 18.0
 height = 70.0
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "recoil_component", "wall_stick_component", "crouch_component") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+scale = Vector2(1.1199994, 1.1199994)
 collision_mask = 6145
 script = ExtResource("1_jfghr")
-gravity_component = NodePath("GravityComponent")
-input_component = NodePath("InputComponent")
-movement_component = NodePath("MovementComponent")
-jump_component = NodePath("JumpComponent")
-recoil_component = NodePath("RecoilComponent")
-wall_stick_component = NodePath("WallStickComponent")
-crouch_component = NodePath("CrouchComponent")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_1nwdr")
+position = Vector2(1.1920929e-07, 0)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_4hfjo")
+animation = &"phlo_land"
+script = ExtResource("18_33mbb")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_33mbb")
+
+[node name="QuiltCollider" type="CollisionShape2D" parent="."]
 scale = Vector2(3.8, 3.8)
 shape = SubResource("CapsuleShape2D_x8qdn")
+
+[node name="PhloCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4hfjo")
+disabled = true
 
 [node name="JumpComponent" parent="." instance=ExtResource("3_0yr7s")]
 
@@ -495,25 +512,18 @@ shape = SubResource("CapsuleShape2D_x8qdn")
 
 [node name="RecoilComponent" parent="." instance=ExtResource("8_7a16b")]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-material = SubResource("ShaderMaterial_1nwdr")
-position = Vector2(1.1920929e-07, 0)
-scale = Vector2(2.5, 2.5)
-sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"phlo_land"
-script = ExtResource("18_33mbb")
-
 [node name="WallStickComponent" parent="." instance=ExtResource("19_33mbb")]
 
 [node name="CrouchComponent" parent="." instance=ExtResource("21_1nwdr")]
 
-[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+[node name="State_Machine" type="Node" parent="."]
+script = ExtResource("22_0lugl")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -6)
-shape = SubResource("RectangleShape2D_33mbb")
+[node name="Idle" type="Node" parent="State_Machine"]
+script = ExtResource("23_3jtwp")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_4hfjo")
-disabled = true
+[node name="Walk" type="Node" parent="State_Machine"]
+script = ExtResource("24_p2d1a")
+
+[node name="Jump" type="Node" parent="State_Machine"]
+script = ExtResource("25_hiv3f")
