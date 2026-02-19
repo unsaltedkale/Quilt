@@ -29,7 +29,7 @@ func handle_horizontal_movement(body: CharacterBody2D, direction: float) -> void
 	var traction = 15000
 	if cutscene_frozen == false:
 		if not Input.is_action_just_pressed("fire_projectile"):
-			#body.velocity.x = move_toward(body.velocity.x, direction * speed, delta * traction)
+			body.velocity.x = move_toward(body.velocity.x, direction * speed, delta * traction)
 			print("walking vel: ",body.velocity)
 	
 	
