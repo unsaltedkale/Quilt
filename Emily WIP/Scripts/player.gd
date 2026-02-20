@@ -12,7 +12,9 @@ class_name Player
 @export var crouch_component: CrouchComponent
 @onready var projectile_scene = preload("res://Emily WIP/Scenes/red_projectile.tscn")
 
-var health_script: Node
+var max_health: int = 1
+var health: int
+
 var was_on_floor: bool = false
 var is_jumping: bool = false
 var is_falling: bool = false
@@ -39,8 +41,7 @@ var spawn_point = Vector2.ZERO
 
 
 func _ready():
-	health_script = $PlayerHealth  
-	health_script.health = health_script.max_health  
+	health = max_health
 	if is_cutscene == null:
 		is_cutscene = false
 
@@ -84,10 +85,17 @@ func _physics_process(delta: float) -> void:
 func on_body_entered(body):
 	if body.is_in_group("Magical_Barrier"):
 		is_magical_wall = true
-		velocity.y == 0
-
+		velocity.y = 0
+		
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Damage_Layer"):
+		print("You hit a Spike")
+		take_damage(1)
+		
 func take_damage(amount: int) -> void:
-	health_script.reduce_health(amount)
+	health -= amount
+	if health <= 0:
+		die()
 	
 func die():
 	print("Player died")
@@ -99,7 +107,7 @@ func set_checkpoint(pos):
 func spawn_player(spawn_point: Vector2):
 	global_position = spawn_point
 	velocity = Vector2.ZERO
-	health_script.health = health_script.max_health  
+	health = max_health  
 	
 func shoot():
 	var proj = projectile_scene.instantiate()

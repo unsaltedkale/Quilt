@@ -23,12 +23,13 @@ window/stretch/mode="viewport"
 [global_group]
 
 Player=""
-"Environmental Feature"=""
 Projectile=""
 tilemap=""
 Stasis=""
 Star=""
 Magical_Barrier=""
+Damage_Layer=""
+Environmental_Feature=""
 
 [input]
 

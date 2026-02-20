@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bbw0e7fd8gd3g" path="res://Emily WIP/Scenes/input_component.tscn" id="4_d3lbi"]
 [ext_resource type="PackedScene" uid="uid://bejpt8qc80wan" path="res://Emily WIP/Scenes/movement_component.tscn" id="5_17h1f"]
 [ext_resource type="PackedScene" uid="uid://ca35o3us2j4lw" path="res://Emily WIP/Scenes/gravity_component.tscn" id="6_ltfw8"]
-[ext_resource type="PackedScene" uid="uid://cys2fk40vy80u" path="res://Elena/Scenes/player_health.tscn" id="7_d72cn"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="8_3uy0y"]
 [ext_resource type="PackedScene" uid="uid://b22c0g5pf8l3j" path="res://Emily WIP/Scenes/recoil_component.tscn" id="8_7a16b"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
@@ -461,6 +460,10 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1nwdr"]
+radius = 18.0
+height = 70.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
 size = Vector2(38, 44)
 
@@ -491,8 +494,6 @@ shape = SubResource("CapsuleShape2D_x8qdn")
 
 [node name="GravityComponent" parent="." instance=ExtResource("6_ltfw8")]
 
-[node name="PlayerHealth" parent="." instance=ExtResource("7_d72cn")]
-
 [node name="RecoilComponent" parent="." instance=ExtResource("8_7a16b")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -508,6 +509,12 @@ script = ExtResource("18_33mbb")
 
 [node name="CrouchComponent" parent="." instance=ExtResource("21_1nwdr")]
 
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="HitBoxCollisionShape" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CapsuleShape2D_1nwdr")
+debug_color = Color(0.9490196, 0, 0.07058824, 0.41960785)
+
 [node name="Area2D" type="Area2D" parent="." groups=["Player"]]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
@@ -517,3 +524,5 @@ shape = SubResource("RectangleShape2D_33mbb")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4hfjo")
 disabled = true
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
