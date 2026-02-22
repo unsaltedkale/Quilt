@@ -1,22 +1,24 @@
 extends Area2D
-@onready var player = $"../Player"
-@onready var mirror = $"../Mirror"
-var speed : Vector2 = Vector2(-2000,-2000)
+@onready var player = $"."
+#@onready var mirror = $Mirror
+@export var speed : Vector2
 var projectile_direction
+var joystick_direction
+
 
 func _process(delta):
 	$Sprite2D.play("FIRE")
+	rotation = projectile_direction.angle()
 	position += projectile_direction * speed * delta
-	rotation = projectile_direction.angle() + 135
+	
 
 func _on_projectile_entered(body:Node2D):
 	if body.is_in_group("tilemap"):
 		queue_free()
 	
 func _on_area_entered(body: Area2D):
-	if not player.is_exiting_stasis and not player.is_suspended_zipline:
-		if body.is_in_group("Stasis"):
-			queue_free()
+	if body.is_in_group("Stasis"):
+		queue_free()
 			
 		
 

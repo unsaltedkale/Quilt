@@ -12,7 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://v6lnp4ltt52v" path="res://Art/Phlo Spritesheet Idle.png" id="14_33mbb"]
 [ext_resource type="Texture2D" uid="uid://b11e7u6tdq2t" path="res://Art/Phlo Spritesheet Jump.png" id="15_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="16_1nwdr"]
+[ext_resource type="Script" uid="uid://cmug6yd5oib3y" path="res://Emily WIP/Scripts/fall.gd" id="18_4hfjo"]
 [ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/gds/recolor_sprite_thingy.gd" id="18_33mbb"]
+[ext_resource type="Script" uid="uid://jro08s262tht" path="res://Emily WIP/Scripts/recoil.gd" id="19_33mbb"]
+[ext_resource type="Script" uid="uid://pskmvmf7x2b0" path="res://Emily WIP/Scripts/stasis_state.gd" id="20_3uy0y"]
 [ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
 [ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
 [ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
@@ -468,6 +471,7 @@ height = 70.0
 scale = Vector2(1.1199994, 1.1199994)
 collision_mask = 6145
 script = ExtResource("1_jfghr")
+collected_objects = 10
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=804308046]
 texture_filter = 1
@@ -475,9 +479,7 @@ material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"idle"
-frame = 1
-frame_progress = 1.0
+animation = &"land"
 script = ExtResource("18_33mbb")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1950239536 groups=["Player"]]
@@ -509,3 +511,15 @@ player = NodePath("../..")
 [node name="Jump" type="Node" parent="State_Machine" unique_id=1550312083 node_paths=PackedStringArray("player")]
 script = ExtResource("25_hiv3f")
 player = NodePath("../..")
+
+[node name="Fall" type="Node" parent="State_Machine" unique_id=1843803924 node_paths=PackedStringArray("player")]
+script = ExtResource("18_4hfjo")
+player = NodePath("../..")
+
+[node name="Recoil" type="Node" parent="State_Machine" unique_id=1720177392 node_paths=PackedStringArray("player")]
+script = ExtResource("19_33mbb")
+player = NodePath("../..")
+timer = 7.0
+
+[node name="Stasis" type="Node" parent="State_Machine" unique_id=1590188379]
+script = ExtResource("20_3uy0y")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c84vwure2ykyn"]
+[gd_scene format=3 uid="uid://c84vwure2ykyn"]
 
 [ext_resource type="Script" uid="uid://gfx0nxrde3oa" path="res://Emily WIP/Scripts/red_projectile.gd" id="1_td6lh"]
 [ext_resource type="Texture2D" uid="uid://rxj00c2u02jg" path="res://Art/Fireball Animation Quilt.png" id="2_t6jt8"]
@@ -35,15 +35,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="RedProjectile" type="Area2D" groups=["Projectile"]]
+[node name="RedProjectile" type="Area2D" unique_id=1411072434 groups=["Projectile"]]
 collision_layer = 31
 script = ExtResource("1_td6lh")
+speed = Vector2(2000, 2000)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=687544824]
 scale = Vector2(4.8250036, 4.8250036)
 shape = SubResource("RectangleShape2D_td6lh")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=120376032]
 texture_filter = 1
 position = Vector2(1.19209275e-07, 0)
 scale = Vector2(7.7199984, 7.7199984)
