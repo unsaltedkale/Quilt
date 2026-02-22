@@ -2,34 +2,21 @@ extends CharacterBody2D
 
 class_name Player # persistent state
 
-@onready var state_machine = $State_Machine
-var state
-@onready var state_factory = "res://Emily WIP/Scripts/statefactory.gd"
+@export var is_phlo: bool = false
+var collected_objects: int = 0 
 
-var vel = Vector2()
+func _physics_process(delta: float) -> void:
+	move_and_slide()
+	
+	if velocity.length() > 0:
+		$AnimatedSprite2D.play("walk")
+		
+	if velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	else:
+		$AnimatedSprite2D.flip_h = true
 
-func _ready() -> void:
-	state_factory = Sate_Factory.new()
-	change_state("idle")
 
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("move_left"):
-		move_left()
-	elif Input.is_action_just_pressed("move_right"):
-		move_right()
-
-func move_left():
-	state.move_left()
-func move_right():
-	state.move_right()
-
-func change_state(new_state_name):
-	if state != null:
-		state.queue_free()
-	state = state_factory.get_state(new_state_name).new()
-	#state.setup("change_state", $AnimatedSprite2D, self)
-	state.name = "current_state"
-	add_child(state)
 '''
 @export_subgroup("Nodes")
 @export var gravity_component: GravityComponent

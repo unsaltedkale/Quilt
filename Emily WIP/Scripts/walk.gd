@@ -1,11 +1,18 @@
-extends PlayerState
+extends State
 class_name Walk
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var player: CharacterBody2D
+@export var speed: float = 600 #change 
 
+var move_dir : float = Input.get_axis("move_left","move_right")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func quilt_walk():
+	player.velocity.x = move_dir * speed
+
+func Enter():
+	quilt_walk()
+
+func Physics_Update(_delta):
+	quilt_walk()
+	if abs(move_dir) == 0:
+		Transition.emit(self, "idle")

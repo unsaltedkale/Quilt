@@ -1,22 +1,19 @@
-extends PlayerState
+extends State
 class_name Idle
 
-@onready var anim = $"../../AnimatedSprite2D"
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	anim.play("idle")
+@export var player: CharacterBody2D
 
-func _flip():
-	anim.flip_h = not anim.flip_h
+var move_dir : Vector2
 
-func move_left():
-	if anim.flip_h:
-		change_state.call_func("walk")
-	else:
-		_flip()
+func idle_quilt():
+	$"../../AnimatedSprite2D".play("idle")
 
-func move_right():
-	if not anim.flip_h:
-		change_state.call_func("walk")
-	else:
-		_flip()
+func Enter():
+	idle_quilt()
+	player.velocity.x = 0
+	player.velocity.y = 0
+	print("idle")
+
+func Physics_Update(_delta):
+	idle_quilt()
+	if absmove_dir

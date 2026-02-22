@@ -1,21 +1,34 @@
 extends Node
 
-class_name PlayerState
+@export var initial_state : State
 
-var change_state
-var animated_sprite
-var persistent_state
-var velocity = 0
+var current_state : State
+var states: Dictionary = {}
+
+func _ready():
+	for child in get_children():
+		if child is State:
+			states[child.name.to_lower()] = child
+			child.Transition.connect(on_child_transition)
+	
+	if initial_state:
+		initial_state.Enter()
+		current_state = initial_state
+
+func _process(delta: float) -> void:
+	current_state.Update(delta)
 
 func _physics_process(delta: float) -> void:
-	persistent_state.move_and_slide()# persistent_sate.vel, vec2.up
+	current_state.Physics_Update(delta)
 
-func setup(change_state, animated_sprite, persistent_state):
-	self.change_state = change_state
-	self.animated_sprite = animated_sprite
-	self.persistent_state = persistent_state
-
-func move_left():
-	pass
-func move_right():
-	pass
+func on_child_transition(state, new_state_name):
+	if state != current_state:
+		return
+	var new_state = states.get(new_state_name.to_lower())
+	if !new_state:
+		return
+	if current_state:
+		current_state.Exit()
+	new_state.Enter()
+	current_state = new_state
+	

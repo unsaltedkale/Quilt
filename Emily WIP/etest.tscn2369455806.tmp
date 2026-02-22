@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="3_vx0aj"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="4_nmcr6"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="7_45su8"]
+[ext_resource type="PackedScene" uid="uid://bjfpe4wcw5xls" path="res://Emily WIP/Scenes/magical_barrier.tscn" id="7_rjjdk"]
+[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="16_d83c3"]
+[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="17_ga07m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4c57u"]
 
@@ -687,4 +690,30 @@ scale = Vector2(2, 2)
 
 [node name="Timer" type="Timer" parent="." unique_id=1134548306]
 
+[node name="Stasis" parent="." unique_id=823145711 instance=ExtResource("16_d83c3")]
+position = Vector2(4496, 1339)
+
+[node name="Zipline" parent="." unique_id=679843505 instance=ExtResource("17_ga07m")]
+position = Vector2(5837, 1234)
+
+[node name="Stasis2" parent="." unique_id=1909902275 instance=ExtResource("16_d83c3")]
+position = Vector2(5620, 2310)
+
+[node name="Stasis3" parent="." unique_id=1957615268 instance=ExtResource("16_d83c3")]
+position = Vector2(7988, 2740)
+
+[node name="Stasis4" parent="." unique_id=964625219 instance=ExtResource("16_d83c3")]
+position = Vector2(3323, 1934)
+
+[node name="Stasis5" parent="." unique_id=995242322 instance=ExtResource("16_d83c3")]
+position = Vector2(6812, 1852)
+
+[node name="Zipline2" parent="." unique_id=1234354651 instance=ExtResource("17_ga07m")]
+position = Vector2(3929, 2182)
+end_position = Vector2(4200, 2182)
+
+[node name="MagicalBarrier" parent="." unique_id=43050156 groups=["Magical_Barrier"] instance=ExtResource("7_rjjdk")]
+position = Vector2(7313, 2655)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_exited" from="MagicalBarrier" to="MagicalBarrier" method="_on_body_exited"]
