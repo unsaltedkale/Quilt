@@ -40,4 +40,8 @@ func Physics_Update(_delta):
 		Transition.emit(self,"fall")
 	if player.is_on_floor():
 		Transition.emit(self, "land")
-		
+	if player.is_stasis:
+		Transition.emit(self, "stasis")
+
+func Exit():
+	pass

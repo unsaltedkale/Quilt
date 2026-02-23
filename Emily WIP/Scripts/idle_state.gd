@@ -20,3 +20,8 @@ func Physics_Update(_delta):
 		Transition.emit(self, "fall")
 	if Input.is_action_just_pressed("fire_projectile") and player.collected_objects != 0:
 		Transition.emit(self, "recoil")
+	if player.is_stasis:
+		Transition.emit(self, "stasis")
+
+func Exit():
+	pass

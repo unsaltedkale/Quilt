@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=81 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="8_3uy0y"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/gds/recolor_sprite_thingy.gd" id="18_33mbb"]
 [ext_resource type="Script" uid="uid://jro08s262tht" path="res://Emily WIP/Scripts/recoil.gd" id="19_33mbb"]
 [ext_resource type="Script" uid="uid://pskmvmf7x2b0" path="res://Emily WIP/Scripts/stasis_state.gd" id="20_3uy0y"]
+[ext_resource type="Script" uid="uid://muc8alk7w4hs" path="res://Emily WIP/Scripts/cutscene.gd" id="21_1nwdr"]
 [ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
 [ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
 [ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
@@ -467,13 +468,13 @@ radius = 4.75
 radius = 18.0
 height = 70.0
 
-[node name="Player" type="CharacterBody2D" unique_id=151168002 groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(1.1199994, 1.1199994)
 collision_mask = 6145
 script = ExtResource("1_jfghr")
-collected_objects = 10
+max_objects = 2
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=804308046]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(1.1920929e-07, 0)
@@ -482,44 +483,49 @@ sprite_frames = SubResource("SpriteFrames_4hfjo")
 animation = &"land"
 script = ExtResource("18_33mbb")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1950239536 groups=["Player"]]
+[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=994198697]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_33mbb")
 
-[node name="QuiltCollider" type="CollisionShape2D" parent="." unique_id=1846326637]
+[node name="QuiltCollider" type="CollisionShape2D" parent="."]
 scale = Vector2(3.8, 3.8)
 shape = SubResource("CapsuleShape2D_x8qdn")
 
-[node name="PhloCollider" type="CollisionShape2D" parent="." unique_id=688445833]
+[node name="PhloCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4hfjo")
 disabled = true
 
-[node name="State_Machine" type="Node" parent="." unique_id=344801813 node_paths=PackedStringArray("initial_state")]
+[node name="State_Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("22_0lugl")
 initial_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="State_Machine" unique_id=956351531 node_paths=PackedStringArray("player")]
+[node name="Idle" type="Node" parent="State_Machine" node_paths=PackedStringArray("player")]
 script = ExtResource("23_3jtwp")
 player = NodePath("../..")
 
-[node name="Walk" type="Node" parent="State_Machine" unique_id=1845947656 node_paths=PackedStringArray("player")]
+[node name="Walk" type="Node" parent="State_Machine" node_paths=PackedStringArray("player")]
 script = ExtResource("24_p2d1a")
 player = NodePath("../..")
 
-[node name="Jump" type="Node" parent="State_Machine" unique_id=1550312083 node_paths=PackedStringArray("player")]
+[node name="Jump" type="Node" parent="State_Machine" node_paths=PackedStringArray("player")]
 script = ExtResource("25_hiv3f")
 player = NodePath("../..")
 
-[node name="Fall" type="Node" parent="State_Machine" unique_id=1843803924 node_paths=PackedStringArray("player")]
+[node name="Fall" type="Node" parent="State_Machine" node_paths=PackedStringArray("player")]
 script = ExtResource("18_4hfjo")
 player = NodePath("../..")
 
-[node name="Recoil" type="Node" parent="State_Machine" unique_id=1720177392 node_paths=PackedStringArray("player")]
+[node name="Recoil" type="Node" parent="State_Machine" node_paths=PackedStringArray("player")]
 script = ExtResource("19_33mbb")
 player = NodePath("../..")
 timer = 7.0
 
-[node name="Stasis" type="Node" parent="State_Machine" unique_id=1590188379]
+[node name="Stasis" type="Node" parent="State_Machine" node_paths=PackedStringArray("player")]
 script = ExtResource("20_3uy0y")
+player = NodePath("../..")
+
+[node name="Cutscene" type="Node" parent="State_Machine" node_paths=PackedStringArray("player")]
+script = ExtResource("21_1nwdr")
+player = NodePath("../..")

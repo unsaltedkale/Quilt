@@ -3,11 +3,11 @@ extends CharacterBody2D
 class_name Player # persistent state
 
 @export var is_phlo: bool = false
-@export var collected_objects: int
+var collected_objects: int
+@export var max_objects: int
+var is_stasis: bool = false
 
-func _physics_process(_delta: float) -> void:
-	move_and_slide()
-	
+func _process(_delta: float) -> void:
 	if velocity.length() > 0:
 		$AnimatedSprite2D.play("walk")
 	
@@ -15,6 +15,11 @@ func _physics_process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = false
 	else:
 		$AnimatedSprite2D.flip_h = true
+
+func _physics_process(_delta: float) -> void:
+	move_and_slide()
+	
+	
 '''
 @export var wall_stick_component: WallStickComponent
 @export var crouch_component: CrouchComponent

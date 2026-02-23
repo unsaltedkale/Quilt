@@ -19,9 +19,3 @@ func _on_projectile_entered(body:Node2D):
 func _on_area_entered(body: Area2D):
 	if body.is_in_group("Stasis"):
 		queue_free()
-			
-		
-
-		
-		
-	

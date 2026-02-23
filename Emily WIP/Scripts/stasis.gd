@@ -1,27 +1,25 @@
 extends Area2D
 
 @onready var player = $"../Player"
+@export var timer: float = 0
 
-func _process(_delta):
-	if player.is_suspended_stasis:
-		player.position += Vector2(0,-.1665)
-		player.velocity = Vector2(0,0)
+func _physics_process(_delta: float) -> void:
+	if timer > 0:
+		timer -= 1 * _delta
+		print(timer)
+	else:
+		timer = 0
+	if player.is_stasis:
+		player.position = position
 
 func on_body_entered(area: Area2D):
-	if not player.is_suspended_stasis:
+	if timer <= 0:
+		print("timer at 0")
 		if area.is_in_group("Projectile") or area.is_in_group("Player"):
-			player.is_suspended_stasis = true
-			player.velocity = Vector2(0,0)
+			player.is_stasis = true
 			player.position = position
-			print("stasis pos: ", position)
-			player.collected_objects = player.max_stars
-	else:
-		if area.is_in_group("Projectile"):
-			player.velocity = player.recoil_component.recoil_velocity_equation()
-			player.is_suspended_stasis = false
-			player.is_exiting_stasis = true
+			player.collected_objects = player.max_objects
 
-func on_body_exited(body: CharacterBody2D):
-	if body.is_in_group("Player"):
-		player.is_suspended_stasis = false
-		player.is_exiting_stasis = false
+func on_body_exited(area: Area2D):
+	if area.is_in_group("Player"):
+		player.is_stasis = false

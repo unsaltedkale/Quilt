@@ -15,11 +15,16 @@ func Enter():
 	quilt_jump()
 
 func Physics_Update(_delta):
-	if Input.is_action_just_pressed("fire_projectile") and player.collected_objects != 0:
-		Transition.emit(self, "recoil")
 	if timer <= 0:
 		Transition.emit(self,"fall")
 	else:
 		quilt_jump()
 		timer -= 1
 		print(timer)
+	if Input.is_action_just_pressed("fire_projectile") and player.collected_objects != 0:
+		Transition.emit(self, "recoil")
+	if player.is_stasis:
+		Transition.emit(self, "stasis")
+
+func Exit():
+	pass
