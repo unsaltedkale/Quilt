@@ -656,14 +656,6 @@ change_if_same_music_track = true
 position = Vector2(40612, -4157)
 track = ExtResource("7_afkue")
 
-[node name="STAR" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(48245.996, -11695.003)
-
-[node name="MakeItMusical" parent="STAR" index="2"]
-bar_appear = 2.0
-bar_delete = 3.0
-beat_delete = 1.0
-
 [node name="Conductor_Platform" parent="." instance=ExtResource("10_a5mjf")]
 position = Vector2(48985, -11360)
 
@@ -835,226 +827,6 @@ theme_override_fonts/font = ExtResource("18_kgnlc")
 theme_override_font_sizes/font_size = 42
 script = ExtResource("20_34ht4")
 
-[node name="STAR2" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(19903, -132.00012)
-respawns = true
-
-[node name="STAR3" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(20394, -407.9999)
-respawns = true
-
-[node name="STAR4" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(21382, -817)
-respawns = true
-
-[node name="STAR5" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(25722.998, 1510.0006)
-respawns = true
-
-[node name="STAR6" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(26587.998, 1249.0002)
-respawns = true
-
-[node name="STAR7" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(27287.998, 1068.0006)
-respawns = true
-
-[node name="STAR8" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(27926.998, 1027.0002)
-respawns = true
-
-[node name="STAR9" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(28516.998, 1009.0006)
-respawns = true
-
-[node name="STAR10" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(30151.998, 1030.0006)
-respawns = true
-
-[node name="STAR11" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(30645, 1025.0002)
-respawns = true
-
-[node name="STAR12" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(36062, 1928.9998)
-respawns = true
-
-[node name="STAR13" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(37903, 3301.001)
-respawns = true
-
-[node name="STAR43" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(40699, 2913.9976)
-respawns = true
-
-[node name="STAR44" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(40141.004, 2903.0002)
-respawns = true
-
-[node name="STAR14" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(31995.998, 1019.0012)
-respawns = true
-
-[node name="STAR16" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(32094, 377.00055)
-respawns = true
-
-[node name="STAR45" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(32300.998, 734.99945)
-respawns = true
-
-[node name="STAR46" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(34478, -486.00067)
-respawns = true
-
-[node name="STAR47" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(34782, -656.9983)
-respawns = true
-
-[node name="STAR48" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(35019, -826.0007)
-respawns = true
-
-[node name="STAR49" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(36251, -914.99725)
-respawns = true
-
-[node name="STAR17" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(38560, -931.9992)
-respawns = true
-
-[node name="STAR18" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(39878, -1125.0007)
-respawns = true
-
-[node name="STAR19" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(39466, -1569.0012)
-respawns = true
-
-[node name="STAR20" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(39898.996, -1969.0005)
-respawns = true
-
-[node name="STAR21" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(39450.996, -2243.9993)
-respawns = true
-
-[node name="STAR22" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(35857, -2919.9985)
-respawns = true
-
-[node name="STAR23" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(35846.996, -3379.9993)
-respawns = true
-
-[node name="STAR24" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(42602.996, -1347.0009)
-respawns = true
-
-[node name="STAR25" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(42753.996, 1293.0005)
-respawns = true
-
-[node name="STAR50" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(43323, 1298.0005)
-respawns = true
-
-[node name="STAR26" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(43860.996, 1275.0005)
-respawns = true
-
-[node name="STAR27" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44074.996, 994.0005)
-respawns = true
-
-[node name="STAR28" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44073, 586.0006)
-respawns = true
-
-[node name="STAR29" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44068, 172.00142)
-respawns = true
-
-[node name="STAR30" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44066, -191.9993)
-respawns = true
-
-[node name="STAR31" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44059, -489.9975)
-respawns = true
-
-[node name="STAR51" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44061, -776.999)
-respawns = true
-
-[node name="STAR52" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44061, -1187)
-respawns = true
-
-[node name="STAR32" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44068, -1493.0009)
-respawns = true
-
-[node name="STAR33" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44062.004, -1746.0002)
-respawns = true
-
-[node name="STAR34" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44065.004, -2023.0002)
-respawns = true
-
-[node name="STAR35" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44059, -2326.999)
-respawns = true
-
-[node name="STAR36" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44070.004, -2617)
-respawns = true
-
-[node name="STAR37" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44065.996, -2871.9998)
-respawns = true
-
-[node name="STAR38" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44060.996, -3169.0005)
-respawns = true
-
-[node name="STAR39" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44059, -3439)
-respawns = true
-
-[node name="STAR40" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44059, -3755.9985)
-respawns = true
-
-[node name="STAR41" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44050.004, -4060)
-respawns = true
-
-[node name="STAR53" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44038, -4325.0024)
-respawns = true
-
-[node name="STAR54" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44038.004, -4634)
-respawns = true
-
-[node name="STAR55" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44030, -4877.0024)
-respawns = true
-
-[node name="STAR56" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44034, -5085)
-respawns = true
-
-[node name="STAR42" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44044.004, -5250)
-respawns = true
-
-[node name="STAR15" parent="." instance=ExtResource("9_v7eyh")]
-position = Vector2(44162.996, 5122.999)
-respawns = true
-
 [node name="CutsceneTrigger2" parent="." instance=ExtResource("11_628yu")]
 position = Vector2(35358, 4884)
 scale = Vector2(8.631, 2.495)
@@ -1065,9 +837,294 @@ position = Vector2(3708, -77)
 scale = Vector2(20.6, 1)
 track = ExtResource("5_3xd41")
 
+[node name="Stars" type="Node" parent="."]
+
+[node name="STAR" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(48245.996, -11695.003)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="MakeItMusical" parent="Stars/STAR" index="2"]
+bar_appear = 2.0
+bar_delete = 3.0
+beat_delete = 1.0
+
+[node name="STAR2" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(19903, -132.00012)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR3" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(20394, -407.9999)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR4" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(21382, -817)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR5" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(25722.998, 1510.0006)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR6" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(26587.998, 1249.0002)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR7" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(27287.998, 1068.0006)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR8" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(27926.998, 1027.0002)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR9" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(28516.998, 1009.0006)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR10" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(30151.998, 1030.0006)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR11" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(30645, 1025.0002)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR12" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(36062, 1928.9998)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR13" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(37903, 3301.001)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR43" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(40699, 2913.9976)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR44" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(40141.004, 2903.0002)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR14" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(31995.998, 1019.0012)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR16" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(32094, 377.00055)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR45" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(32300.998, 734.99945)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR46" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(34478, -486.00067)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR47" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(34782, -656.9983)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR48" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(35019, -826.0007)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR49" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(36251, -914.99725)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR17" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(38560, -931.9992)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR18" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(39878, -1125.0007)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR19" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(39466, -1569.0012)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR20" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(39898.996, -1969.0005)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR21" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(39450.996, -2243.9993)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR22" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(35857, -2919.9985)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR23" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(35846.996, -3379.9993)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR24" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(42602.996, -1347.0009)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR25" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(42753.996, 1293.0005)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR50" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(43323, 1298.0005)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR26" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(43860.996, 1275.0005)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR27" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44074.996, 994.0005)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR28" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44073, 586.0006)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR29" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44068, 172.00142)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR30" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44066, -191.9993)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR31" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44059, -489.9975)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR51" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44061, -776.999)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR52" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44061, -1187)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR32" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44068, -1493.0009)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR33" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44062.004, -1746.0002)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR34" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44065.004, -2023.0002)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR35" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44059, -2326.999)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR36" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44070.004, -2617)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR37" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44065.996, -2871.9998)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR38" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44060.996, -3169.0005)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR39" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44059, -3439)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR40" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44059, -3755.9985)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR41" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44050.004, -4060)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR53" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44038, -4325.0024)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR54" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44038.004, -4634)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR55" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44030, -4877.0024)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR56" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44034, -5085)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR42" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44044.004, -5250)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
+[node name="STAR15" parent="Stars" instance=ExtResource("9_v7eyh")]
+position = Vector2(44162.996, 5122.999)
+scale = Vector2(0.99999994, 0.99999994)
+respawns = true
+
 [connection signal="pressed" from="CanvasLayer/UI/DialogueScreen/Button" to="CanvasLayer/UI/DialogueScreen/Button" method="_on_pressed"]
 
-[editable path="STAR"]
 [editable path="Conductor_Platform"]
 [editable path="Conductor_Platform2"]
 [editable path="Conductor_Platform3"]
@@ -1076,58 +1133,59 @@ track = ExtResource("5_3xd41")
 [editable path="Conductor_Platform6"]
 [editable path="Conductor_Platform7"]
 [editable path="Conductor_Platform8"]
-[editable path="STAR2"]
-[editable path="STAR3"]
-[editable path="STAR4"]
-[editable path="STAR5"]
-[editable path="STAR6"]
-[editable path="STAR7"]
-[editable path="STAR8"]
-[editable path="STAR9"]
-[editable path="STAR10"]
-[editable path="STAR11"]
-[editable path="STAR12"]
-[editable path="STAR13"]
-[editable path="STAR43"]
-[editable path="STAR44"]
-[editable path="STAR14"]
-[editable path="STAR16"]
-[editable path="STAR45"]
-[editable path="STAR46"]
-[editable path="STAR47"]
-[editable path="STAR48"]
-[editable path="STAR49"]
-[editable path="STAR17"]
-[editable path="STAR18"]
-[editable path="STAR19"]
-[editable path="STAR20"]
-[editable path="STAR21"]
-[editable path="STAR22"]
-[editable path="STAR23"]
-[editable path="STAR24"]
-[editable path="STAR25"]
-[editable path="STAR50"]
-[editable path="STAR26"]
-[editable path="STAR27"]
-[editable path="STAR28"]
-[editable path="STAR29"]
-[editable path="STAR30"]
-[editable path="STAR31"]
-[editable path="STAR51"]
-[editable path="STAR52"]
-[editable path="STAR32"]
-[editable path="STAR33"]
-[editable path="STAR34"]
-[editable path="STAR35"]
-[editable path="STAR36"]
-[editable path="STAR37"]
-[editable path="STAR38"]
-[editable path="STAR39"]
-[editable path="STAR40"]
-[editable path="STAR41"]
-[editable path="STAR53"]
-[editable path="STAR54"]
-[editable path="STAR55"]
-[editable path="STAR56"]
-[editable path="STAR42"]
-[editable path="STAR15"]
+[editable path="Stars/STAR"]
+[editable path="Stars/STAR2"]
+[editable path="Stars/STAR3"]
+[editable path="Stars/STAR4"]
+[editable path="Stars/STAR5"]
+[editable path="Stars/STAR6"]
+[editable path="Stars/STAR7"]
+[editable path="Stars/STAR8"]
+[editable path="Stars/STAR9"]
+[editable path="Stars/STAR10"]
+[editable path="Stars/STAR11"]
+[editable path="Stars/STAR12"]
+[editable path="Stars/STAR13"]
+[editable path="Stars/STAR43"]
+[editable path="Stars/STAR44"]
+[editable path="Stars/STAR14"]
+[editable path="Stars/STAR16"]
+[editable path="Stars/STAR45"]
+[editable path="Stars/STAR46"]
+[editable path="Stars/STAR47"]
+[editable path="Stars/STAR48"]
+[editable path="Stars/STAR49"]
+[editable path="Stars/STAR17"]
+[editable path="Stars/STAR18"]
+[editable path="Stars/STAR19"]
+[editable path="Stars/STAR20"]
+[editable path="Stars/STAR21"]
+[editable path="Stars/STAR22"]
+[editable path="Stars/STAR23"]
+[editable path="Stars/STAR24"]
+[editable path="Stars/STAR25"]
+[editable path="Stars/STAR50"]
+[editable path="Stars/STAR26"]
+[editable path="Stars/STAR27"]
+[editable path="Stars/STAR28"]
+[editable path="Stars/STAR29"]
+[editable path="Stars/STAR30"]
+[editable path="Stars/STAR31"]
+[editable path="Stars/STAR51"]
+[editable path="Stars/STAR52"]
+[editable path="Stars/STAR32"]
+[editable path="Stars/STAR33"]
+[editable path="Stars/STAR34"]
+[editable path="Stars/STAR35"]
+[editable path="Stars/STAR36"]
+[editable path="Stars/STAR37"]
+[editable path="Stars/STAR38"]
+[editable path="Stars/STAR39"]
+[editable path="Stars/STAR40"]
+[editable path="Stars/STAR41"]
+[editable path="Stars/STAR53"]
+[editable path="Stars/STAR54"]
+[editable path="Stars/STAR55"]
+[editable path="Stars/STAR56"]
+[editable path="Stars/STAR42"]
+[editable path="Stars/STAR15"]
