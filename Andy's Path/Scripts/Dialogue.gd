@@ -17,4 +17,4 @@ func _process(delta: float) -> void:
 func Dialogue(dialogueResource):
 	UiReference.visible = true
 	playerReference.is_cutscene = true
-	dialogueReference.dialogueFolder = load(dialogueResource)
+	dialogueReference.dialogFolder = dialogueResource

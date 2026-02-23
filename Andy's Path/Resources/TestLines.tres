@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://c1ycyxxa0kyoy"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_saga6"]
+
+[resource]
+script = ExtResource("1_saga6")
+text = Dictionary[String, String]({
+"0": "This is an alternate dialogue path",
+"1": "Here is some more text",
+"2": "Another round of text",
+"3": "Done"
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

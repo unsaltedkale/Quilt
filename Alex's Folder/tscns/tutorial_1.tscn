@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=32 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_scbil"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="11_aprfj"]
 [ext_resource type="Resource" uid="uid://2x73w31w760w" path="res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_fall_cutscene/test_cutscene_container_after_fall.tres" id="12_scbil"]
 [ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="14_k3paq"]
-[ext_resource type="Script" uid="uid://cnv15y5fj0ghw" path="res://Andy's Path/Scripts/Dialogue.gd" id="15_34ht4"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="15_er5f2"]
 [ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="16_8v1o4"]
 [ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="17_aprfj"]
@@ -756,7 +755,6 @@ position = Vector2(51989, -12210)
 position = Vector2(334.99997, 451)
 
 [node name="NPCs" type="Node" parent="."]
-script = ExtResource("15_34ht4")
 
 [node name="TestNPC" type="Node2D" parent="NPCs"]
 position = Vector2(2457, -2556)
