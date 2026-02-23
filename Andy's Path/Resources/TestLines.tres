@@ -8,6 +8,7 @@ text = Dictionary[String, String]({
 "0": "This is an alternate dialogue path",
 "1": "Here is some more text",
 "2": "Another round of text",
-"3": "Done"
+"3": "Done",
+"4": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
