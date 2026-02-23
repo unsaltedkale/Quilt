@@ -4,7 +4,7 @@ extends Node2D
 @export var beat_appear: float = 1
 @export var bar_delete: float = 0
 @export var beat_delete: float = 0
-@onready var Conductor = $"../../Conductor"
+@onready var Conductor = get_tree().get_nodes_in_group("Conductor")[0]  
 @export var only_on_music_trigger_track: bool
 @export var music_trigger: music_resource = preload("res://Alex's Folder/music_resources/crypt_1_sub.tres")
 @export var repeat_pattern: bool

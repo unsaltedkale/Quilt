@@ -30,6 +30,8 @@ Star=""
 Magical_Barrier=""
 Damage_Layer=""
 Environmental_Feature=""
+Conductor=""
+Dialouge_Button=""
 
 [input]
 
@@ -90,3 +92,7 @@ recoil_down={
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
 ]
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

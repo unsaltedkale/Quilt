@@ -8,6 +8,8 @@ var line = []
 var dialogue_counter = 0
 var isTyping = false
 
+signal dialouge_finished
+
 func _ready() -> void:
 	dialogue_counter = 0
 func _on_pressed() -> void:
@@ -24,9 +26,10 @@ func _on_pressed() -> void:
 			line = dialogFolder.text[str(dialogue_counter)]
 		else:
 			$"../..".visible = false
-			$"../../../../Player".is_cutscene = false
+			#$"../../../../Player".is_cutscene = false --> all dialouges can be cutscenes.
 			$"../../../../NPCs/TestNPC".isPressed = false	
 			dialogue_counter = 0
+			dialouge_finished.emit()
 		isTyping = false
 		print("print statement: " + str(len(dialogFolder.text)))
 func _process(delta: float) -> void:

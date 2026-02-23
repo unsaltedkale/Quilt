@@ -813,7 +813,7 @@ theme_override_fonts/font = ExtResource("18_kgnlc")
 theme_override_font_sizes/font_size = 42
 script = ExtResource("19_eufkq")
 
-[node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen"]
+[node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen" groups=["Dialouge_Button"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 202.0
