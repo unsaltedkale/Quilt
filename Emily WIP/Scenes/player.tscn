@@ -462,7 +462,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1nwdr"]
 radius = 18.0
-height = 70.0
+height = 130.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
 size = Vector2(38, 44)
@@ -502,7 +502,7 @@ material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(1.1920929e-07, 0)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_4hfjo")
-animation = &"phlo_land"
+animation = &"idle"
 script = ExtResource("18_33mbb")
 
 [node name="WallStickComponent" parent="." instance=ExtResource("19_33mbb")]

@@ -54,6 +54,8 @@ func _process(delta: float) -> void:
 		handle_animation(delta)
 		get_node("CollisionShape2D").disabled = false
 		get_node("CollisionShape2D2").disabled = true
+		
+	
 
 func _physics_process(delta: float) -> void:
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
