@@ -26,7 +26,6 @@ func _on_pressed() -> void:
 			line = dialogFolder.text[str(dialogue_counter)]
 		else:
 			$"../..".visible = false
-			#$"../../../../Player".is_cutscene = false --> all dialouges can be cutscenes.
 			$"../../../../NPCs/TestNPC".isPressed = false	
 			dialogue_counter = 0
 			dialouge_finished.emit()
@@ -39,5 +38,5 @@ func wait(duration):
 	await get_tree().create_timer(duration).timeout
 func Dialogue(dialogueResource):
 	$"../..".visible = true
-	$"../../../../Player".is_cutscene = true
+	$"../../../../Player".find_child("StateMachine").find_child("Cutscene").Transition.emit(Player, "cutscene")
 	dialogFolder = load(dialogueResource)

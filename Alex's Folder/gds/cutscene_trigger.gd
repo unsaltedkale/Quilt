@@ -5,17 +5,17 @@ extends Area2D
 @export var current_event_index: int
 @export var played: bool
 @onready var Player = $"../Player"
-@onready var movement_compontent = $"../Player/MovementComponent"
 
 func _on_area_entered(area: Area2D) -> void:
 	# lock player movement
+	print("boop beep")
 	if not played:
 		_read_events()
 	pass # Replace with function body.
 
 func _read_events():
 	print("beep boop")
-	Player.is_cutscene = true
+	Player.find_child("StateMachine").find_child("Cutscene").Transition.emit(Player.find_child("StateMachine").find_child("Cutscene"), "cutscene")
 	for event in container.events:
 		if event.delay_before > 0:
 			await get_tree().create_timer(event.delay_before).timeout
@@ -27,4 +27,4 @@ func _read_events():
 			await get_tree().create_timer(event.delay_after).timeout
 		print("done!!!")
 	played = true
-	Player.is_cutscene = false
+	Player.find_child("StateMachine").find_child("Idle").Transition.emit(Player, "idle")

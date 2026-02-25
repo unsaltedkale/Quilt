@@ -8,6 +8,7 @@ var collected_objects: int
 var is_stasis: bool = false
 
 func _process(_delta: float) -> void:
+	#print(find_child("StateMachine").current_state)
 	if velocity.length() > 0:
 		$AnimatedSprite2D.play("walk")
 	
