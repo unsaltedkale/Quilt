@@ -1,14 +1,14 @@
 extends Area2D
-@onready var player = $"."
-#@onready var mirror = $Mirror
-@export var speed : Vector2
+@onready var player = $"../Player"
+@onready var mirror = $"../Mirror"
+var speed : Vector2 = Vector2(-2000,-2000)
 var projectile_direction
 var joystick_direction
 
 
 func _process(delta):
 	$Sprite2D.play("FIRE")
-	rotation = projectile_direction.angle()
+	rotation = projectile_direction.angle() + 135
 	position += projectile_direction * speed * delta
 	
 

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-class_name Player # persistent state
+class_name Player
 
 @export var is_phlo: bool = false
 var collected_objects: int

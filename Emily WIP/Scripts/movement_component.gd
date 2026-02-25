@@ -11,7 +11,7 @@ var previous_velocity = 0
 
 func _ready():
 	prev_player_is_cutscene = false
-'''
+
 func _process(delta) -> void:
 	if prev_player_is_cutscene != null && Player.is_cutscene != null:
 		if Player.is_cutscene != prev_player_is_cutscene:
@@ -32,5 +32,3 @@ func handle_horizontal_movement(body: CharacterBody2D, direction: float) -> void
 			body.velocity.x = move_toward(body.velocity.x, direction * speed, delta * traction)
 			print("walking vel: ",body.velocity)
 	
-	
-'''
