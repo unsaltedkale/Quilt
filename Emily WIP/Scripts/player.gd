@@ -24,7 +24,13 @@ func _physics_process(_delta: float) -> void:
 @export var wall_stick_component: WallStickComponent
 @export var crouch_component: CrouchComponent
 
-var health_script: Node
+var max_health: int = 1
+var health: int
+
+var was_on_floor: bool = false
+var is_jumping: bool = false
+var is_falling: bool = false
+var is_landing: bool = false
 @export var is_phlo: bool = false
 var shrine_key: bool = false
 var is_suspended_stasis: bool = false
@@ -35,8 +41,7 @@ var is_magical_wall: bool = false
 var spawn_point = Vector2.ZERO
 
 func _ready():
-	health_script = $PlayerHealth  
-	health_script.health = health_script.max_health  
+	health = max_health
 	if is_cutscene == null:
 		is_cutscene = false
 
@@ -49,9 +54,50 @@ func _process(delta: float) -> void:
 		handle_animation(delta)
 		get_node("CollisionShape2D").disabled = false
 		get_node("CollisionShape2D2").disabled = true
+		
+	
 
+func _physics_process(delta: float) -> void:
+	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
+	joystick_pos = joystick_direction
+	
+	if not is_cutscene:
+		if not is_suspended_stasis or not is_suspended_zipline:
+			gravity_component.handle_gravity(self, delta)
+			movement_component.handle_horizontal_movement(self, input_component.input_horizontal)
+		jump_component.handle_jump(self, input_component.get_jump_input())
+		recoil_component.handle_recoil(self, input_component.get_shoot_input())
+		wall_stick_component.handle_wall(self, delta)
+		crouch_component.handle_crouch(self, input_component.get_crouch_input())
+	
+	move_and_slide()
+	if is_on_floor() && not is_phlo:
+		collected_objects = max_stars
+	if collected_objects > 0:
+		can_shoot = true
+	else:
+		can_shoot = false
+	if Input.is_action_just_pressed("fire_projectile") or abs(joystick_direction) > Vector2(0,0):
+		#print(joystick_pos)
+		if can_shoot and not is_cutscene and abs(joystick_pos) == Vector2(0,0):
+			print("FIREBALL")
+			#just shot bool --> cooldown for controler
+			shoot()
+
+func on_body_entered(body):
+	if body.is_in_group("Magical_Barrier"):
+		is_magical_wall = true
+		velocity.y = 0
+		
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Damage_Layer"):
+		print("You hit a Spike")
+		take_damage(1)
+		
 func take_damage(amount: int) -> void:
-	health_script.reduce_health(amount)
+	health -= amount
+	if health <= 0:
+		die()
 	
 func die():
 	print("Player died")
@@ -63,7 +109,19 @@ func set_checkpoint(pos):
 func spawn_player(spawn_point: Vector2):
 	global_position = spawn_point
 	velocity = Vector2.ZERO
-	health_script.health = health_script.max_health  
+	health = max_health  
+	
+func shoot():
+	var proj = projectile_scene.instantiate()
+	proj.position = position
+	get_parent().add_child(proj)
+	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
+	if abs(joystick_direction) > Vector2(0,0):
+		proj.projectile_direction = (position - joystick_direction)
+	else:
+		proj.projectile_direction = (position - get_global_mouse_position()).normalized()
+	
+	collected_objects -= 1
 
 func handle_animation(delta):
 	# movement animations

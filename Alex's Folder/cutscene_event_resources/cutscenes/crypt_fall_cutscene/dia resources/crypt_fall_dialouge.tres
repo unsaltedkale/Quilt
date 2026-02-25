@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://ucytndiq5ssb"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_epyi5"]
+
+[resource]
+script = ExtResource("1_epyi5")
+text = Dictionary[String, String]({
+"0": "???: Oh. The little Sprite can't run anymore from [][][] mistakes.",
+"1": "PHLO: Please... Lady Pyra--",
+"10": "PYRA: QUEEN. Pyra. You squib.",
+"11": "",
+"2": "PYRA: That is QUEEN to you, insigificant thing.",
+"3": "PHLO: Q-queen Pyra, please... pl... please... mercy...",
+"4": "PYRA: I have shown you ENOUGH mercy. I should be your God with how much mercy I have shown you.",
+"5": "PYRA: But you spit on it.",
+"6": "PYRA: Like a cowering bug.",
+"7": "PYRA: You want the REAL world so bad? You want to see how it treats your ******* attitude?",
+"8": "PYRA: Go. See how much worse it treats you than I here.",
+"9": "PHLO: No, no Pyra, please--"
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

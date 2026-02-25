@@ -1,6 +1,6 @@
 extends Camera2D
 
-var offset1 = 1000 #screen bounds
+var offset1 = 400 #screen bounds
 
 var playerReference
 var screenIsMoving
@@ -24,3 +24,4 @@ func _process(delta: float) -> void:
 		#Move to target position if magnitude of distance < 10
 		if abs((self.global_position.y - playerReference.global_position.y)) < 5:
 			screenIsMoving = false
+ 

@@ -1,20 +1,145 @@
-[gd_scene load_steps=4 format=3 uid="uid://dllltsro0jqkr"]
+[gd_scene load_steps=18 format=3 uid="uid://dllltsro0jqkr"]
 
 [ext_resource type="Script" uid="uid://cpqiw3bb4qy3a" path="res://Emily WIP/Scripts/zipline.gd" id="1_121v5"]
-[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_sp7dc"]
+[ext_resource type="Texture2D" uid="uid://b2by01d06tuus" path="res://Art/Zipline.png" id="2_121v5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_121v5"]
+size = Vector2(13.333332, 20.166664)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1lgv"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 204, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8epog"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 238, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0122v"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 238, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxdmn"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 68, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj4gm"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 102, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3tk3"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 136, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1ahh"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 170, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf2j6"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 34, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahsif"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 68, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cteyl"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 102, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0erbn"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 136, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wmkp"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 170, 35, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twtdy"]
+atlas = ExtResource("2_121v5")
+region = Rect2(0, 0, 35, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e4dn2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1lgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8epog")
+}],
+"loop": false,
+"name": &"break",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0122v")
+}],
+"loop": false,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxdmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uj4gm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3tk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1ahh")
+}],
+"loop": true,
+"name": &"carry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf2j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahsif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cteyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0erbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wmkp")
+}],
+"loop": true,
+"name": &"catch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twtdy")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Zipline" type="Area2D" groups=["Stasis"]]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_121v5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.000001, 0.49999526)
 scale = Vector2(6.0000005, 6.0000005)
 shape = SubResource("RectangleShape2D_121v5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 3.1415927
-texture = ExtResource("1_sp7dc")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 8)
+scale = Vector2(3.8857143, 4)
+sprite_frames = SubResource("SpriteFrames_e4dn2")
+animation = &"idle"
 
 [connection signal="area_entered" from="." to="." method="on_body_entered"]
 [connection signal="body_exited" from="." to="." method="on_body_exited"]

@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0a44"]
 size = Vector2(107, 150)
 
-[node name="Mirror" type="Area2D"]
+[node name="Mirror" type="Area2D" groups=["Mirror"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 7)
