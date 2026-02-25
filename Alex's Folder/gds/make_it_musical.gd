@@ -4,7 +4,7 @@ extends Node2D
 @export var beat_appear: float = 1
 @export var bar_delete: float = 0
 @export var beat_delete: float = 0
-@onready var Conductor = get_tree().get_first_node_in_group("Conductor")  
+@onready var Conductor = get_tree().get_first_node_in_group("Conductor")
 @export var only_on_music_trigger_track: bool
 @export var music_trigger: music_resource = preload("res://Alex's Folder/music_resources/crypt_1_sub.tres")
 @export var repeat_pattern: bool
@@ -49,3 +49,5 @@ func _physics_process(delta):
 					if bar_delete == Conductor.barnumber and beat_delete == Conductor.beatnumber and get_node("../CollisionShape2D").disabled == false:
 						get_node("../CollisionShape2D").disabled = true
 						get_parent().visible = false
+	else:
+		print("condcutor is null")
