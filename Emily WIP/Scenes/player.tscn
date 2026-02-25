@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bejpt8qc80wan" path="res://Emily WIP/Scenes/movement_component.tscn" id="5_17h1f"]
 [ext_resource type="PackedScene" uid="uid://ca35o3us2j4lw" path="res://Emily WIP/Scenes/gravity_component.tscn" id="6_ltfw8"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="8_3uy0y"]
-[ext_resource type="PackedScene" uid="uid://b22c0g5pf8l3j" path="res://Emily WIP/Scenes/recoil_component.tscn" id="8_7a16b"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt Animation Spritesheet Stop (1).png" id="9_17h1f"]
 [ext_resource type="Texture2D" uid="uid://cx87scu4cs4kc" path="res://Art/Quilt Animation Spritesheet Idle (1).png" id="9_ltfw8"]
@@ -17,12 +16,15 @@
 [ext_resource type="Texture2D" uid="uid://v6lnp4ltt52v" path="res://Art/Phlo Spritesheet Idle.png" id="14_33mbb"]
 [ext_resource type="Texture2D" uid="uid://b11e7u6tdq2t" path="res://Art/Phlo Spritesheet Jump.png" id="15_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="16_1nwdr"]
+[ext_resource type="Script" uid="uid://cmug6yd5oib3y" path="res://Emily WIP/Scripts/fall.gd" id="18_4hfjo"]
 [ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/gds/recolor_sprite_thingy.gd" id="18_33mbb"]
-[ext_resource type="PackedScene" uid="uid://bnnt61bxtj5x8" path="res://Elena/Scenes/wall_stick_component.tscn" id="19_33mbb"]
-[ext_resource type="PackedScene" uid="uid://cxli8ina6vjl" path="res://Emily WIP/Scenes/crouch_component.tscn" id="21_1nwdr"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8qdn"]
-radius = 4.75
+[ext_resource type="Script" uid="uid://jro08s262tht" path="res://Emily WIP/Scripts/recoil.gd" id="19_33mbb"]
+[ext_resource type="Script" uid="uid://pskmvmf7x2b0" path="res://Emily WIP/Scripts/stasis_state.gd" id="20_3uy0y"]
+[ext_resource type="Script" uid="uid://muc8alk7w4hs" path="res://Emily WIP/Scripts/cutscene.gd" id="21_1nwdr"]
+[ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
+[ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
+[ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
+[ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
 shader = ExtResource("8_3uy0y")
@@ -467,11 +469,15 @@ height = 130.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
 size = Vector2(38, 44)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8qdn"]
+radius = 4.75
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4hfjo"]
 radius = 18.0
 height = 70.0
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "recoil_component", "wall_stick_component", "crouch_component") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+scale = Vector2(1.1199994, 1.1199994)
 collision_mask = 6145
 script = ExtResource("1_jfghr")
 gravity_component = NodePath("GravityComponent")
@@ -521,7 +527,11 @@ debug_color = Color(0.9490196, 0, 0.07058824, 0.41960785)
 position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_33mbb")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="QuiltCollider" type="CollisionShape2D" parent="."]
+scale = Vector2(3.8, 3.8)
+shape = SubResource("CapsuleShape2D_x8qdn")
+
+[node name="PhloCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4hfjo")
 disabled = true
 

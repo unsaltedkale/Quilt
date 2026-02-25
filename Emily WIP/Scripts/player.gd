@@ -2,15 +2,27 @@ extends CharacterBody2D
 
 class_name Player
 
-@export_subgroup("Nodes")
-@export var gravity_component: GravityComponent
-@export var input_component: InputComponent
-@export var movement_component: MovementComponent
-@export var jump_component: JumpComponent
-@export var recoil_component: RecoilComponent
+@export var is_phlo: bool = false
+var collected_objects: int
+@export var max_objects: int
+var is_stasis: bool = false
+
+func _process(_delta: float) -> void:
+	if velocity.length() > 0:
+		$AnimatedSprite2D.play("walk")
+	
+	if velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	else:
+		$AnimatedSprite2D.flip_h = true
+
+func _physics_process(_delta: float) -> void:
+	move_and_slide()
+	
+	
+'''
 @export var wall_stick_component: WallStickComponent
 @export var crouch_component: CrouchComponent
-@onready var projectile_scene = preload("res://Emily WIP/Scenes/red_projectile.tscn")
 
 var max_health: int = 1
 var health: int
@@ -20,25 +32,13 @@ var is_jumping: bool = false
 var is_falling: bool = false
 var is_landing: bool = false
 @export var is_phlo: bool = false
-var previous_velocity = 0
-var previous_position_x = 0
-var turn_towards_left_count = 0
-var turn_towards_right_count = 0
-var string: String = ""
-var collected_objects: int = 0 
-var max_stars: int = 1
-var can_shoot: bool = true
 var shrine_key: bool = false
 var is_suspended_stasis: bool = false
 var is_suspended_zipline: bool = false
 var is_exiting_stasis: bool = false
 @export var is_cutscene: bool = false
 var is_magical_wall: bool = false
-var joystick_direction
-var joystick_pos : Vector2
-
 var spawn_point = Vector2.ZERO
-
 
 func _ready():
 	health = max_health
@@ -225,3 +225,5 @@ func handle_phlo_animation(delta):
 		pass
 		
 	was_on_floor = current_on_floor
+
+'''

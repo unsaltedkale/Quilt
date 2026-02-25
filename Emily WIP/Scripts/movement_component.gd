@@ -32,4 +32,3 @@ func handle_horizontal_movement(body: CharacterBody2D, direction: float) -> void
 			body.velocity.x = move_toward(body.velocity.x, direction * speed, delta * traction)
 			print("walking vel: ",body.velocity)
 	
-	
