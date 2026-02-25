@@ -4,6 +4,9 @@ class_name Fall
 @export var player: CharacterBody2D
 @export var gravity: float = 3000.0 #2000
 
+func Enter():
+	pass
+
 func Update(_delta):
 	$"../../AnimatedSprite2D".play("fall")
 	if player.is_on_floor():

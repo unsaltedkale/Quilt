@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://rviumk7i1bpq"]
+
+[ext_resource type="Texture2D" uid="uid://dlkj2a8ydiaqe" path="res://Art/Tool Tips.png" id="1_cljc2"]
+[ext_resource type="Script" uid="uid://xia7bnb0pmi7" path="res://Alex's Folder/tscns/level_tool_tip.gd" id="2_otvnc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dyvm"]
+atlas = ExtResource("1_cljc2")
+region = Rect2(0, 136, 32, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nls3"]
+atlas = ExtResource("1_cljc2")
+region = Rect2(32, 136, 32, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtc6y"]
+atlas = ExtResource("1_cljc2")
+region = Rect2(0, 68, 32, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aekfe"]
+atlas = ExtResource("1_cljc2")
+region = Rect2(32, 68, 32, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otvnc"]
+atlas = ExtResource("1_cljc2")
+region = Rect2(0, 0, 32, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u83xi"]
+atlas = ExtResource("1_cljc2")
+region = Rect2(32, 0, 32, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8a8pm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dyvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nls3")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtc6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aekfe")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otvnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u83xi")
+}],
+"loop": true,
+"name": &"movement",
+"speed": 2.0
+}]
+
+[node name="LevelToolTip" type="AnimatedSprite2D"]
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_8a8pm")
+animation = &"jump"
+script = ExtResource("2_otvnc")

@@ -15,7 +15,8 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _read_events():
 	print("beep boop")
-	Player.find_child("StateMachine").find_child("Cutscene").Transition.emit(Player.find_child("StateMachine").find_child("Cutscene"), "cutscene")
+	var tempvar = Player.find_child("StateMachine").current_state
+	tempvar.Transition.emit(tempvar, "cutscene")
 	for event in container.events:
 		if event.delay_before > 0:
 			await get_tree().create_timer(event.delay_before).timeout
@@ -26,5 +27,7 @@ func _read_events():
 		if event.delay_after > 0:
 			await get_tree().create_timer(event.delay_after).timeout
 		print("done!!!")
+	print("cutscene finished")
 	played = true
-	Player.find_child("StateMachine").find_child("Idle").Transition.emit(Player, "idle")
+	tempvar = Player.find_child("StateMachine").current_state
+	tempvar.Transition.emit(tempvar, "fall")

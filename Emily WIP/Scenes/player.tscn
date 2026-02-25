@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://bdo4q66jr6nbt"]
+[gd_scene load_steps=79 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
@@ -12,13 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://b11e7u6tdq2t" path="res://Art/Phlo Spritesheet Jump.png" id="15_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="16_1nwdr"]
 [ext_resource type="Script" uid="uid://cmug6yd5oib3y" path="res://Emily WIP/Scripts/fall.gd" id="18_4hfjo"]
-[ext_resource type="Script" uid="uid://jro08s262tht" path="res://Emily WIP/Scripts/recoil.gd" id="19_33mbb"]
-[ext_resource type="Script" uid="uid://pskmvmf7x2b0" path="res://Emily WIP/Scripts/stasis_state.gd" id="20_3uy0y"]
+[ext_resource type="Script" path="res://Emily WIP/Scripts/recoil.gd" id="19_33mbb"]
+[ext_resource type="Script" path="res://Emily WIP/Scripts/stasis_state.gd" id="20_3uy0y"]
 [ext_resource type="Script" uid="uid://muc8alk7w4hs" path="res://Emily WIP/Scripts/cutscene.gd" id="21_1nwdr"]
-[ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
-[ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
-[ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
-[ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
+[ext_resource type="Script" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
+[ext_resource type="Script" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
+[ext_resource type="Script" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
+[ext_resource type="Script" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
 height = 44.0
@@ -256,10 +256,10 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ltfw8")
 }, {
-"duration": 1.0,
+"duration": 1000.0,
 "texture": SubResource("AtlasTexture_x8qdn")
 }],
-"loop": true,
+"loop": false,
 "name": &"fall",
 "speed": 5.0
 }, {
@@ -481,7 +481,7 @@ shape = SubResource("CapsuleShape2D_iemgc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"idle"
+animation = &"fall"
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("22_0lugl")

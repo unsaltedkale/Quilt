@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 func _on_STAR_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") && find_child("CollisionShape2D").disabled == false:
 		print("collected a star")
-		if body.collected_objects < body.max_stars:
+		if body.collected_objects < body.max_objects:
 			body.collected_objects += 1
 		find_child("Sprite2D").visible = false
 		find_child("CollisionShape2D").set_deferred("disabled", true)
