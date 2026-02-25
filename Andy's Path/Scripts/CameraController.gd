@@ -24,4 +24,3 @@ func _process(delta: float) -> void:
 		#Move to target position if magnitude of distance < 10
 		if abs((self.global_position.y - playerReference.global_position.y)) < 5:
 			screenIsMoving = false
- 

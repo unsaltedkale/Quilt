@@ -777,7 +777,6 @@ shape = SubResource("RectangleShape2D_bpnre")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -812,6 +811,7 @@ offset_right = 832.0
 offset_bottom = 150.0
 theme_override_fonts/font = ExtResource("18_kgnlc")
 theme_override_font_sizes/font_size = 42
+autowrap_mode = 3
 script = ExtResource("19_eufkq")
 
 [node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen" groups=["Dialouge_Button"]]
