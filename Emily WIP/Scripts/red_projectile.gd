@@ -1,14 +1,14 @@
 extends Area2D
 @onready var player = $"../Player"
 
-var speed : Vector2 = Vector2(-2000,-2000)
+@export var speed : Vector2
 var projectile_direction
 var joystick_direction
 
 
 func _process(delta):
 	$Sprite2D.play("FIRE")
-	rotation = projectile_direction.angle() + 135
+	rotation = projectile_direction.angle()
 	
 
 func _on_projectile_entered(body:Node2D):

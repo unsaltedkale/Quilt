@@ -19,6 +19,7 @@ func Physics_Update(_delta):
 	if not player.is_on_floor():
 		Transition.emit(self, "fall")
 	if Input.is_action_just_pressed("fire_projectile") and player.collected_objects != 0:
+		print("recoil state")
 		Transition.emit(self, "recoil")
 	if player.is_stasis:
 		Transition.emit(self, "stasis")

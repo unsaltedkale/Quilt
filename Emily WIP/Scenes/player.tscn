@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://bdo4q66jr6nbt"]
+[gd_scene load_steps=79 format=3 uid="uid://bdo4q66jr6nbt"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
@@ -468,9 +468,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
+size = Vector2(20, 17.5)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
+max_objects = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_iemgc")
@@ -514,3 +518,9 @@ player = NodePath("../..")
 [node name="Stasis" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("20_3uy0y")
 player = NodePath("../..")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1.25)
+shape = SubResource("RectangleShape2D_33mbb")
