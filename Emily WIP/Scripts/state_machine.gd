@@ -2,7 +2,7 @@ extends Node
 
 @export var initial_state : State
 
-var current_state : State
+@onready var current_state : State
 var states: Dictionary = {}
 
 func _ready():
@@ -19,7 +19,8 @@ func _process(delta: float) -> void:
 	current_state.Update(delta)
 
 func _physics_process(delta: float) -> void:
-	current_state.Physics_Update(delta)
+	if current_state != null:
+		current_state.Physics_Update(delta)
 
 func on_child_transition(state, new_state_name):
 	if state != current_state:

@@ -2,7 +2,7 @@ extends State
 class_name Stasis
 
 @export var player: CharacterBody2D
-@onready var stasis: Area2D = $"../../../Stasis"
+@onready var stasis: Area2D = $"../../Stasis"
 
 func Enter():
 	player.velocity = Vector2(0,0)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=33 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
-[ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_scbil"]
-[ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="1_vuu6h"]
+[ext_resource type="PackedScene" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_scbil"]
+[ext_resource type="PackedScene" uid="uid://bdo4q66jr6nbt" path="res://Emily WIP/Scenes/player.tscn" id="1_vuu6h"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="3_tembr"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_0hcnm"]
 [ext_resource type="Resource" uid="uid://bmif5lh5wrfbj" path="res://Alex's Folder/music_resources/crypt_1_sub.tres" id="5_3xd41"]
@@ -616,7 +616,6 @@ size = Vector2(256, 256)
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
 position = Vector2(3329, -2537)
-scale = Vector2(2, 2)
 is_phlo = true
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
