@@ -1,10 +1,15 @@
-extends Area2D
+extends RigidBody2D
 
-func _on_body_entered(body: Node2D):
+@onready var timer_length: float = 1.0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	self.gravity_scale = 0
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		$Timer.start()
-		
+
+
 func _on_timer_timeout() -> void:
-	var parent = self.get_parent()
-	if parent:
-		parent.queue_free()
+	self.gravity_scale = 1
