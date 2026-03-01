@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="music_resource" load_steps=3 format=3 uid="uid://njrcluu75tnn"]
 
 [ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_h00mr"]
-[ext_resource type="AudioStream" uid="uid://2pfu7vaea0rv" path="res://Alex's Folder/music_resources/music_tracks/Pyra_Prologue 70.mp3" id="2_kotdc"]
+[ext_resource type="AudioStream" uid="uid://ctpx7khgi88d2" path="res://Alex's Folder/music_resources/music_tracks/Pyra_Prologue_VAMP 70.mp3" id="2_jw5fa"]
 
 [resource]
 script = ExtResource("1_h00mr")
-track = ExtResource("2_kotdc")
+track = ExtResource("2_jw5fa")
 bpm = 70.0
 metadata/_custom_type_script = "uid://4ekgwvgt60r0"
