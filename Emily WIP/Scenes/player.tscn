@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=80 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
@@ -468,6 +468,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_33mbb"]
+height = 48.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
 size = Vector2(20, 17.5)
 
@@ -481,7 +484,7 @@ shape = SubResource("CapsuleShape2D_iemgc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"fall"
+animation = &"idle"
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("22_0lugl")
@@ -519,8 +522,17 @@ player = NodePath("../..")
 script = ExtResource("20_3uy0y")
 player = NodePath("../..")
 
+[node name="hit_box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box"]
+position = Vector2(0, -0.5)
+shape = SubResource("CapsuleShape2D_33mbb")
+debug_color = Color(0.9925013, 0, 0.2575452, 0.41960785)
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -1.25)
 shape = SubResource("RectangleShape2D_33mbb")
+
+[connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]
