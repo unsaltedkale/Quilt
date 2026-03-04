@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="camera_cutscene_event" load_steps=2 format=3 uid="uid://n71r60t0liqh"]
+
+[ext_resource type="Script" uid="uid://csualf0138bpc" path="res://Alex's Folder/cutscene_event_resources/event types/camera_cs_event.gd" id="1_4vkoj"]
+
+[resource]
+script = ExtResource("1_4vkoj")
+camera = NodePath("Camera2D")
+change_zoom = true
+zoom = Vector2(0.3, 0.3)
+unlock_camera_at_end = true
+metadata/_custom_type_script = "uid://csualf0138bpc"

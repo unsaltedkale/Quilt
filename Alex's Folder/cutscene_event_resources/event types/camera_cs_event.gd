@@ -14,6 +14,8 @@ class_name camera_cutscene_event
 
 @export var time: float
 
+@export var unlock_camera_at_end: bool
+
 
 func execute(cutscene_trigger: Node) -> void:
 	var tween = cutscene_trigger.get_tree().create_tween()
@@ -30,4 +32,10 @@ func execute(cutscene_trigger: Node) -> void:
 		tween.tween_property(camerap, "position", position, time)
 	if change_zoom && not zoom_is_relative:	
 		tween.tween_property(camerap, "zoom", zoom, time)
-	await tween.finished
+	
+	if change_zoom || change_position:
+		print("awaiting")
+		await tween.finished
+	
+	if unlock_camera_at_end:
+		camerap.has_control = true
