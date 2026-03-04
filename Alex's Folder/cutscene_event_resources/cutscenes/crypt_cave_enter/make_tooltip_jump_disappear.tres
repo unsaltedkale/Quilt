@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="set_variable_cutscene_event" load_steps=2 format=3 uid="uid://cy6rqc2kr0w05"]
+
+[ext_resource type="Script" uid="uid://ddqk0rwkpcnf2" path="res://Alex's Folder/cutscene_event_resources/event types/set_variable_cs_event.gd" id="1_7lh04"]
+
+[resource]
+script = ExtResource("1_7lh04")
+actor = NodePath("LevelToolTip2")
+variable_name = "visible"
+metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"
