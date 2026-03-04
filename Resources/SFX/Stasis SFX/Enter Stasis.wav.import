@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://da01yfulq5dh6"
+path="res://.godot/imported/Enter Stasis.wav-b0fea92ee4f5d6b1038dc71d33441675.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/Stasis SFX/Enter Stasis.wav"
+dest_files=["res://.godot/imported/Enter Stasis.wav-b0fea92ee4f5d6b1038dc71d33441675.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

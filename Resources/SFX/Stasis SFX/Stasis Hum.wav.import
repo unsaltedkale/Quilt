@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7amg26gynfed"
+path="res://.godot/imported/Stasis Hum.wav-914845b80ef3fa01cd0b8d416f72bdcb.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/Stasis SFX/Stasis Hum.wav"
+dest_files=["res://.godot/imported/Stasis Hum.wav-914845b80ef3fa01cd0b8d416f72bdcb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

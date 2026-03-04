@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hk6o6mh7ff8v"
+path="res://.godot/imported/Quilt Death.wav-b3af6baaa659bce734ab2abb3804cb06.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav"
+dest_files=["res://.godot/imported/Quilt Death.wav-b3af6baaa659bce734ab2abb3804cb06.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
