@@ -1,7 +1,6 @@
 extends State
 class_name Recoil
 
-#@export var player: CharacterBody2D
 @export var force : Vector2 = Vector2(1500,1500)
 @export var timer: float
 @onready var projectile_scene = preload("res://Emily WIP/Scenes/red_projectile.tscn")

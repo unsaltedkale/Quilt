@@ -1,8 +1,6 @@
 extends State
 class_name Cutscene
 
-#@export var player: CharacterBody2D
-#@onready var an = $"../../AnimatedSprite2D"
 # Called when the node enters the scene tree for the first time.
 
 func Enter():

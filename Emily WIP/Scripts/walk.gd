@@ -1,10 +1,6 @@
 extends State
 class_name Walk
 
-#@export var player: CharacterBody2D
-#@export var speed: float = 600 #change 
-#var move_dir
-
 func quilt_walk():
 	move_dir = Input.get_axis("move_left","move_right")
 	player.velocity.x = move_dir * speed

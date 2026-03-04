@@ -1,7 +1,6 @@
 extends State
 class_name Fall
 
-#@export var player: CharacterBody2D
 @export var gravity: float = 3000.0 #2000
 
 func Enter():
