@@ -2,10 +2,10 @@ extends Node
 class_name State
 
 @export var player: CharacterBody2D
-@export var speed: float = 600 #change 
+@export var speed: float = 600  
 @onready var an = $"../../AnimatedSprite2D"
 var move_dir
-
+var recoil:bool
 
 signal Transition
 
@@ -18,12 +18,8 @@ func Exit():
 func Update(_delta):
 	pass
 
-
-func _physics_process(delta: float) -> void:
-	move_dir = Input.get_axis("move_left","move_right")
-	player.velocity.x = move_dir * speed
-	
-func Physics_Update(_delta):
-	pass
-	
-	#move_and_slide()
+func _physics_process(_delta) -> void:
+	print(recoil)
+	if !recoil:
+		move_dir = Input.get_axis("move_left","move_right")
+		player.velocity.x = move_dir * speed

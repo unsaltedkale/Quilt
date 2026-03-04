@@ -3,11 +3,12 @@ extends Area2D
 
 @export var speed : Vector2
 var projectile_direction
-var joystick_direction
 
 
-func _process(delta):
+func _process(_delta):
 	$Sprite2D.play("FIRE")
+	
+func _physics_process(delta) -> void:
 	rotation = projectile_direction.angle()
 	position += projectile_direction * speed * delta
 	

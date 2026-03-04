@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xewlitg8yvow"
+path="res://.godot/imported/Phlo Death .wav-4f317b045320e34e8b9a332858725cae.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/Phlo SFX/Phlo Death .wav"
+dest_files=["res://.godot/imported/Phlo Death .wav-4f317b045320e34e8b9a332858725cae.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

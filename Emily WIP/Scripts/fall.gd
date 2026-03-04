@@ -8,11 +8,11 @@ func Enter():
 
 func Update(_delta):
 	if player.velocity.y <0:
-		$"../../AnimatedSprite2D".play("jump")
+		an.play("jump")
 	if player.velocity.y >=0:
-		$"../../AnimatedSprite2D".play("fall")
+		an.play("fall")
 	if player.is_on_floor():
-		$"../../AnimatedSprite2D".play("land")
+		an.play("land")
 
 func Physics_Update(_delta):
 	player.velocity.y += gravity * _delta
