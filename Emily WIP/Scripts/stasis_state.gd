@@ -1,7 +1,6 @@
 extends State
 class_name Stasis
 
-@export var player: CharacterBody2D
 @onready var stasis: Area2D = $"../../Stasis"
 
 func Enter():

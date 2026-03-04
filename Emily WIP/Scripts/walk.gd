@@ -1,10 +1,6 @@
 extends State
 class_name Walk
 
-@export var player: CharacterBody2D
-@export var speed: float = 600 #change 
-var move_dir
-
 func quilt_walk():
 	move_dir = Input.get_axis("move_left","move_right")
 	player.velocity.x = move_dir * speed
@@ -12,7 +8,11 @@ func quilt_walk():
 func Enter():
 	quilt_walk()
 
+func _physics_process(delta: float) -> void:
+	super(delta)
+
 func Physics_Update(_delta):
+	
 	quilt_walk()
 	if abs(move_dir) == 0:
 		Transition.emit(self, "idle")

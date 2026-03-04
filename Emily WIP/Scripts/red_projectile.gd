@@ -9,6 +9,7 @@ var joystick_direction
 func _process(delta):
 	$Sprite2D.play("FIRE")
 	rotation = projectile_direction.angle()
+	position += projectile_direction * speed * delta
 	
 
 func _on_projectile_entered(body:Node2D):

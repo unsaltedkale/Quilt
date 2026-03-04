@@ -1,12 +1,14 @@
 [gd_scene load_steps=80 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
+[ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt Animation Spritesheet Fall .png" id="9_7a16b"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt Animation Spritesheet Stop (1).png" id="9_17h1f"]
 [ext_resource type="Texture2D" uid="uid://cx87scu4cs4kc" path="res://Art/Quilt Animation Spritesheet Idle (1).png" id="9_ltfw8"]
 [ext_resource type="Texture2D" uid="uid://d4enw7wsgmurv" path="res://Art/Quilt Animation Spritesheet Walk (1).png" id="10_ltfw8"]
 [ext_resource type="Texture2D" uid="uid://0qwf60hlqiwk" path="res://Art/Quilt Animation Spritesheet Jump.png" id="11_lkxuv"]
 [ext_resource type="Texture2D" uid="uid://c3nsbjc4e2qdy" path="res://Art/Quilt Animation Spritesheet Land.png" id="12_g4sr2"]
+[ext_resource type="Script" uid="uid://b6ayyknk74g5a" path="res://Alex's Folder/gds/recolor_sprite_thingy.gd" id="13_1nwdr"]
 [ext_resource type="Texture2D" uid="uid://bnfs4jedu6cg2" path="res://Art/Phlo Spritesheet Fall.png" id="13_4hfjo"]
 [ext_resource type="Texture2D" uid="uid://v6lnp4ltt52v" path="res://Art/Phlo Spritesheet Idle.png" id="14_33mbb"]
 [ext_resource type="Texture2D" uid="uid://b11e7u6tdq2t" path="res://Art/Phlo Spritesheet Jump.png" id="15_3uy0y"]
@@ -22,6 +24,11 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
 height = 44.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
+shader = ExtResource("2_3uy0y")
+shader_parameter/onoff = 0
+shader_parameter/is_phlo = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17h1f"]
 atlas = ExtResource("9_7a16b")
@@ -483,8 +490,10 @@ max_objects = 1
 shape = SubResource("CapsuleShape2D_iemgc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_1nwdr")
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"idle"
+animation = &"fall"
+script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("22_0lugl")
@@ -497,6 +506,7 @@ player = NodePath("../..")
 [node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("24_p2d1a")
 player = NodePath("../..")
+speed = null
 
 [node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("25_hiv3f")

@@ -15,6 +15,8 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = false
 	else:
 		$AnimatedSprite2D.flip_h = true
+		
+	
 
 func _physics_process(_delta: float) -> void:
 	move_and_slide()

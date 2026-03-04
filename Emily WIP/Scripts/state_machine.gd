@@ -17,6 +17,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	current_state.Update(delta)
+	print(current_state)
 
 func _physics_process(delta: float) -> void:
 	current_state.Physics_Update(delta)
