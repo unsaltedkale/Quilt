@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://13t5gxrfv18w"
+path="res://.godot/imported/FIREBALL shoot.wav-1ac8392c2fde2cb223a7a21e24dc9898.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/Quilt Character SFX/FIREBALL shoot.wav"
+dest_files=["res://.godot/imported/FIREBALL shoot.wav-1ac8392c2fde2cb223a7a21e24dc9898.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

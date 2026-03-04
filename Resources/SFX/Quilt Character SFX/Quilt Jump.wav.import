@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cy2yj5j10fpl6"
+path="res://.godot/imported/Quilt Jump.wav-e216fcc13015adddb2afc8d33987c6ec.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/Quilt Character SFX/Quilt Jump.wav"
+dest_files=["res://.godot/imported/Quilt Jump.wav-e216fcc13015adddb2afc8d33987c6ec.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
