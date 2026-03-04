@@ -7,7 +7,7 @@ var timer : float = 7.0
 func quilt_jump():
 	if player.is_on_floor():
 		player.velocity.y = jump_velocity
-		$"../../AnimatedSprite2D".play("jump")
+		an.play("jump")
 
 func Enter():
 	timer = 7
@@ -19,7 +19,6 @@ func Physics_Update(_delta):
 	else:
 		quilt_jump()
 		timer -= 1
-		print(timer)
 	if Input.is_action_just_pressed("fire_projectile") and player.collected_objects != 0:
 		Transition.emit(self, "recoil")
 	if player.is_stasis:

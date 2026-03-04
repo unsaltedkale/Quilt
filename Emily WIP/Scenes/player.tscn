@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=83 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
@@ -506,7 +506,6 @@ player = NodePath("../..")
 [node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("24_p2d1a")
 player = NodePath("../..")
-speed = null
 
 [node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("25_hiv3f")

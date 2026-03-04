@@ -2,14 +2,14 @@ extends State
 class_name Idle
 
 func idle_quilt():
-	$"../../AnimatedSprite2D".play("idle")
+	an.play("idle")
 
 func Enter():
 	idle_quilt()
 
 func Physics_Update(_delta):
 	idle_quilt()
-	var move_dir = Input.get_axis("move_left","move_right")
+	move_dir = Input.get_axis("move_left","move_right")
 	if abs(move_dir) > 0:
 		Transition.emit(self, "walk")
 	if Input.is_action_just_pressed("jump"):

@@ -31,8 +31,10 @@ func shoot():
 func Enter():
 	shoot()
 	player.velocity = recoil_vel_equation()
+	print(player.velocity)
 	player.collected_objects -= 1
-
+	recoil = true
+	
 func Physics_Update(_delta):
 	timer -= 1
 	if timer <=0:
@@ -41,6 +43,9 @@ func Physics_Update(_delta):
 		Transition.emit(self, "land")
 	if player.is_stasis:
 		Transition.emit(self, "stasis")
+
+func _physics_process(_delta) -> void:
+	pass
 
 func Exit():
 	pass
