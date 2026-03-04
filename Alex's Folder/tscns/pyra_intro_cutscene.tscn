@@ -682,6 +682,59 @@ script = ExtResource("16_041gn")
 position = Vector2(5000, 2400)
 shape = SubResource("RectangleShape2D_bpnre")
 
+[node name="Credits" type="Label" parent="."]
+process_mode = 3
+offset_left = 4633.0
+offset_top = 752.0
+offset_right = 5229.0
+offset_bottom = 1517.0
+scale = Vector2(10, 10)
+theme_override_fonts/font = ExtResource("18_2jswo")
+theme_override_font_sizes/font_size = 42
+text = "MADE BY:
+
+
+
+
+[[ filler ]]
+
+
+
+
+>> FILLER
+
+
+
+
+>> FILLER
+
+
+
+
+>> FILLER
+
+
+
+
+>> FILLER
+
+
+
+
+>> FILLER
+
+
+
+
+>> FILLER
+
+
+
+
+
+"
+autowrap_mode = 3
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="CanvasLayer"]
@@ -689,36 +742,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Credits" type="Label" parent="CanvasLayer/UI"]
-process_mode = 3
-layout_mode = 0
-offset_left = 464.0
-offset_top = 264.0
-offset_right = 1060.0
-offset_bottom = 1029.0
-theme_override_fonts/font = ExtResource("18_2jswo")
-theme_override_font_sizes/font_size = 42
-text = "MADE BY:
-
-[[ filler ]]
-
->> FILLER
-
->> FILLER
-
->> FILLER
-
->> FILLER
-
->> FILLER
-
->> FILLER
-
-
-"
-autowrap_mode = 3
-script = ExtResource("19_tmdc2")
 
 [node name="DialogueScreen" type="Control" parent="CanvasLayer/UI"]
 anchors_preset = 0
