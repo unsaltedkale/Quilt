@@ -11,7 +11,7 @@ size = Vector2(128, 69)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4u5j"]
 size = Vector2(128, 8)
 
-[node name="Disappearing_Platform" type="RigidBody2D"]
+[node name="Disappearing_Platform" type="RigidBody2D" groups=["Damage_Layer"]]
 physics_material_override = SubResource("PhysicsMaterial_y4u5j")
 script = ExtResource("1_bhhk5")
 

@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://ean3rjv6i83s" path="res://Alex's Folder/gds/conductor.gd" id="1_24c3m"]
 
-[node name="Conductor" type="Node2D"]
+[node name="Conductor" type="Node2D" groups=["Conductor"]]
 script = ExtResource("1_24c3m")

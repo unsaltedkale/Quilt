@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2pfu7vaea0rv"
+path="res://.godot/imported/Pyra_Prologue_OUTRO 70.mp3-8d136147ae92b63f823fc6293f31a1eb.mp3str"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/music_tracks/Pyra_Prologue_OUTRO 70.mp3"
+dest_files=["res://.godot/imported/Pyra_Prologue_OUTRO 70.mp3-8d136147ae92b63f823fc6293f31a1eb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

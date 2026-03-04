@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_0hcnm"]
 [ext_resource type="Resource" uid="uid://bmif5lh5wrfbj" path="res://Alex's Folder/music_resources/crypt_1_sub.tres" id="5_3xd41"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="6_3xd41"]
-[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="6_eufkq"]
+[ext_resource type="Resource" uid="uid://njrcluu75tnn" path="res://Alex's Folder/music_resources/pyra_prolouge_VAMP.tres" id="6_8eit8"]
 [ext_resource type="Resource" uid="uid://cqaykjyng7n2c" path="res://Alex's Folder/music_resources/crypt_2_ebb.tres" id="7_afkue"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="9_v7eyh"]
 [ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="10_a5mjf"]
@@ -616,7 +616,7 @@ size = Vector2(256, 256)
 [node name="FpsCounter" parent="." instance=ExtResource("1_scbil")]
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
-position = Vector2(15281, -1157)
+position = Vector2(3346, -2515)
 is_phlo = true
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
@@ -644,9 +644,9 @@ script = ExtResource("3_tembr")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamWAV_80spu")
 
-[node name="Conductor" parent="." groups=["Conductor"] instance=ExtResource("5_0hcnm")]
+[node name="Conductor" parent="." instance=ExtResource("5_0hcnm")]
 position = Vector2(4317, 436)
-current_music_resource = ExtResource("6_eufkq")
+current_music_resource = ExtResource("6_8eit8")
 
 [node name="MusicChangeTrigger" parent="." instance=ExtResource("6_3xd41")]
 position = Vector2(48627, -11557)
@@ -740,7 +740,7 @@ scale_amount_max = 16.0
 color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 
 [node name="CutsceneTrigger" parent="." instance=ExtResource("11_628yu")]
-position = Vector2(2112, -2511.0002)
+position = Vector2(3350.0002, -2535)
 scale = Vector2(2.3, 1.91)
 container = ExtResource("12_scbil")
 
@@ -1144,7 +1144,7 @@ scale = Vector2(10, 10)
 texture = ExtResource("23_34ht4")
 
 [node name="LevelToolTip" parent="." instance=ExtResource("24_8eit8")]
-position = Vector2(3671.0002, -729.00006)
+position = Vector2(2523.0002, -559.00006)
 animation = &"movement"
 type = "movement"
 
