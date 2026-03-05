@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2x1phn2coruw"]
+[gd_scene load_steps=7 format=3 uid="uid://b2x1phn2coruw"]
 
 [ext_resource type="Script" uid="uid://c5rhlghlmoruo" path="res://Elena/Scripts/disappearing_platform.gd" id="1_bhhk5"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_y4u5j"]
@@ -6,32 +6,43 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y4u5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ko6lp"]
-size = Vector2(128, 69)
+size = Vector2(128, 14.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4u5j"]
 size = Vector2(128, 8)
 
-[node name="Disappearing_Platform" type="RigidBody2D" groups=["Damage_Layer"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q2t1"]
+size = Vector2(128, 64)
+
+[node name="Disappearing_Platform" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_y4u5j")
 script = ExtResource("1_bhhk5")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_y4u5j")
 region_enabled = true
 region_rect = Rect2(320, 128, 128, 64)
 
-[node name="PlatformCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+[node name="DeathArea" type="Area2D" parent="." groups=["Damage_Layer"]]
+
+[node name="DeathCollision" type="CollisionShape2D" parent="DeathArea"]
+position = Vector2(0, 32.125)
 shape = SubResource("RectangleShape2D_ko6lp")
+debug_color = Color(1, 0.009855879, 0.06288499, 0.41960785)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="TimerArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TimerArea"]
 position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_y4u5j")
-debug_color = Color(0.87531245, 0.00043375432, 0.8374024, 0.41960785)
+debug_color = Color(2.5027991e-06, 0.6254857, 0.52171355, 0.41960785)
 
 [node name="Timer" type="Timer" parent="."]
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8q2t1")
+
+[connection signal="body_entered" from="DeathArea" to="." method="_on_death_area_body_entered"]
+[connection signal="body_entered" from="TimerArea" to="." method="_on_timer_area_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -7581,7 +7581,7 @@ script = ExtResource("3_3o1fx")
 [node name="NPCs" type="Node" parent="."]
 
 [node name="TestNPC" type="Node2D" parent="NPCs"]
-position = Vector2(5085, 2370)
+position = Vector2(7263, 1655)
 scale = Vector2(2, 2)
 metadata/_edit_group_ = true
 
@@ -7638,7 +7638,7 @@ position = Vector2(5829, 1632)
 position = Vector2(5961, 1431)
 
 [node name="Disappearing_Platform" parent="." instance=ExtResource("8_5l0qf")]
-position = Vector2(5080, 1671)
+position = Vector2(5008, 1690)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="collectable_object" to="." method="_on_area_2d_body_exited"]

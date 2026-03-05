@@ -28,11 +28,11 @@ tilemap=""
 Stasis=""
 Star=""
 Magical_Barrier=""
-Damage_Layer=""
 Environmental_Feature=""
 Conductor=""
 Dialouge_Button=""
 Mirror=""
+Damage_Layer=""
 
 [input]
 
