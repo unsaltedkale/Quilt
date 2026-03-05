@@ -17,12 +17,12 @@ func _ready() -> void:
 	spawn_point = global_position
 
 func _process(_delta: float) -> void:
-	if velocity.length() > 0:
+	if velocity.length() > 0: #<-- why do we have this? --Alex March 5th 3:12PM
 		$AnimatedSprite2D.play("walk")
 	
 	if velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
-	else:
+	elif velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
 		
 func _physics_process(_delta: float) -> void:

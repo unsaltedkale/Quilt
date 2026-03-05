@@ -5,7 +5,8 @@ class_name State
 @export var speed: float = 600  
 @onready var an = $"../../AnimatedSprite2D"
 var move_dir
-var recoil:bool
+var recoil: bool
+var cutscene: bool
 
 signal Transition
 
@@ -19,7 +20,7 @@ func Update(_delta):
 	pass
 
 func _physics_process(_delta) -> void:
-	print(recoil)
-	if !recoil:
+	#print(recoil)
+	if !recoil || !cutscene:
 		move_dir = Input.get_axis("move_left","move_right")
 		player.velocity.x = move_dir * speed

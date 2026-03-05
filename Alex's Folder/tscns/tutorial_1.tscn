@@ -615,7 +615,7 @@ size = Vector2(256, 256)
 [node name="FpsCounter" parent="." instance=ExtResource("1_scbil")]
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
-position = Vector2(3711, -2914)
+position = Vector2(3714, -2687)
 is_phlo = true
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
@@ -739,7 +739,7 @@ scale_amount_max = 16.0
 color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 
 [node name="CutsceneTrigger" parent="." instance=ExtResource("11_628yu")]
-position = Vector2(3709, -2927.0002)
+position = Vector2(3737, -2677)
 scale = Vector2(2.3, 1.91)
 container = ExtResource("13_8eit8")
 

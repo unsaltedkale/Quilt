@@ -10,7 +10,17 @@ class_name animation_cutscene_event
 func execute(cutscene_trigger: Node) -> void:
 	var animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
 	
-	# doesn't work -> animatorp.flip_h = horizontal_flip
+	print(animatorp.to_string() + "-------------------------------------------------")
+	
+	if animatorp.find_parent("Player") != null:
+		if animatorp.find_parent("Player").is_in_group("Player"):
+			animatorp.find_parent("Player").find_child("StateMachine").find_child("Cutscene").automatic_animations_frozen = true
+	
+	animatorp.play(animation_name)
 	
 	await animatorp.animation_finished
+	
+	if animatorp.find_parent("Player") != null:
+		if animatorp.find_parent("Player").is_in_group("player"):
+			animatorp.find_parent("Player").automatic_animations_frozen = false
 	
