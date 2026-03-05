@@ -4,9 +4,15 @@ class_name change_scene_cutscene_event
 
 @export var scene_path: String
 
+#need an object in the scene to change the scene. most times make this the player.
+@export var rock: NodePath
+
 
 func execute(cutscene_trigger: Node) -> void:
 	#place holder
-	cutscene_trigger.get_tree().change_scene_to_file("res://Alex's Folder/tscns/pyra_intro_cutscene.tscn")
+	
+	var rockp = cutscene_trigger.get_node("../" + str(rock))
+	
+	rockp.get_tree().call_deferred("change_scene_to_file", scene_path)
 	pass
 	

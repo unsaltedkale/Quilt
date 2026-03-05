@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="change_scene_cutscene_event" load_steps=2 format=3 uid="uid://gcc208er1285"]
+
+[ext_resource type="Script" uid="uid://djq6cs57ye4ds" path="res://Alex's Folder/cutscene_event_resources/event types/change_scene_cs_event.gd" id="1_4h5bg"]
+
+[resource]
+script = ExtResource("1_4h5bg")
+scene_path = "res://Alex's Folder/tscns/tutorial_1.tscn"
+rock = NodePath("Player")
+metadata/_custom_type_script = "uid://djq6cs57ye4ds"
