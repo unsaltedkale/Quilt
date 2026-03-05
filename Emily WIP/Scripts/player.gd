@@ -7,6 +7,15 @@ var collected_objects: int
 @export var max_objects: int
 var is_stasis: bool = false
 
+@export var max_health: int = 1
+var health: int
+
+var spawn_point
+
+func _ready() -> void:
+	health = max_health
+	spawn_point = global_position
+
 func _process(_delta: float) -> void:
 	if velocity.length() > 0:
 		$AnimatedSprite2D.play("walk")
@@ -16,11 +25,34 @@ func _process(_delta: float) -> void:
 	else:
 		$AnimatedSprite2D.flip_h = true
 		
-
 func _physics_process(_delta: float) -> void:
 	print(velocity)
 	move_and_slide()
 	
+#HEALTH/DAMAGE STUFF	
+func take_damage(amount: int) -> void:
+	health -= amount
+	if health <= 0:
+		die()
+	#allows for different damage amounts if we ever want to do that
+		
+func die():
+	print("Player died")
+	spawn_player(spawn_point)
+	
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Damage_Layer"):
+		take_damage(1)
+		
+
+#Respawn
+func set_checkpoint(pos):
+	spawn_point = pos
+	
+func spawn_player(spawn_point: Vector2):
+	global_position = spawn_point
+	velocity = Vector2.ZERO
+	health = max_health  
 	
 '''
 @export var wall_stick_component: WallStickComponent
@@ -40,7 +72,7 @@ var is_suspended_zipline: bool = false
 var is_exiting_stasis: bool = false
 @export var is_cutscene: bool = false
 var is_magical_wall: bool = false
-var spawn_point = Vector2.ZERO
+
 
 func _ready():
 	health = max_health
