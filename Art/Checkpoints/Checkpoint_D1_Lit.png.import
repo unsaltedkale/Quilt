@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d03o1v27vixs6"
-path="res://.godot/imported/Quilt Crypt Animation only Torches.png-0877714dd89c64b680ac055cfb11d159.ctex"
+path="res://.godot/imported/Checkpoint_D1_Lit.png-57c19b0b973e891cf434c98928fd51b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Checkpoints/Quilt Crypt Animation only Torches.png"
-dest_files=["res://.godot/imported/Quilt Crypt Animation only Torches.png-0877714dd89c64b680ac055cfb11d159.ctex"]
+source_file="res://Art/Checkpoints/Checkpoint_D1_Lit.png"
+dest_files=["res://.godot/imported/Checkpoint_D1_Lit.png-57c19b0b973e891cf434c98928fd51b5.ctex"]
 
 [params]
 
