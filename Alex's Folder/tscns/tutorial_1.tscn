@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=34 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_scbil"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="15_er5f2"]
 [ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="16_8v1o4"]
 [ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="17_aprfj"]
+[ext_resource type="FontFile" uid="uid://r01mvlj6msuj" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437.ttf" id="18_8eit8"]
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="18_kgnlc"]
 [ext_resource type="Script" uid="uid://ckiaiuvbfmd34" path="res://Andy's Path/Scripts/DialogueText.gd" id="19_eufkq"]
 [ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="20_34ht4"]
@@ -809,18 +810,19 @@ offset_left = 236.0
 offset_top = 94.0
 offset_right = 832.0
 offset_bottom = 150.0
-theme_override_fonts/font = ExtResource("18_kgnlc")
-theme_override_font_sizes/font_size = 42
+theme_override_fonts/font = ExtResource("18_8eit8")
+theme_override_font_sizes/font_size = 30
 autowrap_mode = 3
+visible_characters_behavior = 1
 script = ExtResource("19_eufkq")
 
 [node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen" groups=["Dialouge_Button"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 202.0
-offset_top = 67.0
-offset_right = 878.0
-offset_bottom = 273.0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 647.0
 theme = SubResource("Theme_8eit8")
 theme_override_fonts/font = ExtResource("18_kgnlc")
 theme_override_font_sizes/font_size = 42
