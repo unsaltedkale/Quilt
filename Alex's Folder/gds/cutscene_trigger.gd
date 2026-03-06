@@ -23,7 +23,7 @@ func _read_events():
 		
 		print("HEY:" + str(event.delay_before))
 		
-		if event.delay_after > 0:
+		if event.delay_before > 0:
 			print("delay before timer started")
 			await get_tree().create_timer(event.delay_before).timeout
 			print("delay before timer finished")

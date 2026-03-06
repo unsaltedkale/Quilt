@@ -6,7 +6,7 @@
 script = ExtResource("1_p2crl")
 mover = NodePath("Player")
 target = Vector2(0, 3000)
-time = 1.0
+time = 0.5
 is_relative = true
-delay_before = 3.0
+delay_before = 4.0
 metadata/_custom_type_script = "uid://cvo6goabck1ac"
