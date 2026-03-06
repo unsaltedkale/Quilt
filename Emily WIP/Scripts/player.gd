@@ -26,7 +26,6 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 		
 func _physics_process(_delta: float) -> void:
-	print(velocity)
 	move_and_slide()
 	
 #HEALTH/DAMAGE STUFF	
