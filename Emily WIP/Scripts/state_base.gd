@@ -18,9 +18,13 @@ func Exit():
 	
 func Update(_delta):
 	pass
+	
+func Physics_Update(_delta):
+	pass
 
 func _physics_process(_delta) -> void:
-	#print(recoil)
 	if !recoil || !cutscene:
 		move_dir = Input.get_axis("move_left","move_right")
-		player.velocity.x = move_dir * speed
+		if move_dir !=0:
+			player.velocity.x = move_dir * speed
+	pass

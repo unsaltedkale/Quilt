@@ -48,4 +48,4 @@ func _physics_process(_delta) -> void:
 	pass
 
 func Exit():
-	pass
+	recoil = false
