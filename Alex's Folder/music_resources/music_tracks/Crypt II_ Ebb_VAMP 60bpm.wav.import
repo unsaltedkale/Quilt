@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwpxeny1pjavm"
+path="res://.godot/imported/Crypt II_ Ebb_VAMP 60bpm.wav-8a7150f03089423dc04cba25d7a2bd53.sample"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/music_tracks/Crypt II_ Ebb_VAMP 60bpm.wav"
+dest_files=["res://.godot/imported/Crypt II_ Ebb_VAMP 60bpm.wav-8a7150f03089423dc04cba25d7a2bd53.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

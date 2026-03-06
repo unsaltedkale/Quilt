@@ -13,6 +13,8 @@ extends Node2D
 @onready var songposition
 @onready var lastbeat = 0
 
+@onready var prev_playback_position
+
 func _ready():
 	quarternote = 60/bpm
 	eighthnote = 30/bpm
@@ -23,10 +25,14 @@ func _ready():
 	offset = current_music_resource.offset
 	audioplayer.play()
 	print(barnumber, ", ", beatnumber)
+	prev_playback_position = audioplayer.get_playback_position()
 	pass
 	
 func _process(delta: float) -> void:
 	songposition = audioplayer.get_playback_position() + offset
+	if prev_playback_position > audioplayer.get_playback_position():
+		reset_conductor_numbers()
+	prev_playback_position = audioplayer.get_playback_position()
 	if (songposition > lastbeat + sixteenthnote):
 		lastbeat += sixteenthnote
 		beatnumber += 0.25
@@ -47,13 +53,16 @@ func _change_music_track(m_resource: music_resource, change_if_same_music_track:
 		bpm = m_resource.bpm
 		timesig = m_resource.timesig
 		offset = m_resource.offset
-		beatnumber = 1
-		barnumber = 1
-		lastbeat = 0
-		quarternote = 60/bpm
-		eighthnote = 30/bpm
-		sixteenthnote = 15/bpm
-		print(barnumber, ", ", beatnumber)
+		reset_conductor_numbers()
 		audioplayer.play()
-		print(bpm)
-		print("changed")
+
+func reset_conductor_numbers():
+	beatnumber = 1
+	barnumber = 1
+	lastbeat = 0
+	quarternote = 60/bpm
+	eighthnote = 30/bpm
+	sixteenthnote = 15/bpm
+	#print(barnumber, ", ", beatnumber)
+	#print(bpm)
+	print_debug("changed")
