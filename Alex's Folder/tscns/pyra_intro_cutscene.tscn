@@ -649,7 +649,7 @@ position = Vector2(4317, 436)
 current_music_resource = ExtResource("6_kqnod")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(1400, -4544)
+position = Vector2(843, -5970)
 scale = Vector2(2, 2)
 amount = 40
 texture = ExtResource("11_pk5we")

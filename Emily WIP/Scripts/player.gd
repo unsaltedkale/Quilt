@@ -31,6 +31,7 @@ func _physics_process(_delta: float) -> void:
 #HEALTH/DAMAGE STUFF	
 func take_damage(amount: int) -> void:
 	health -= amount
+	$"SFX/Take Damage".play()
 	if health <= 0:
 		die()
 	#allows for different damage amounts if we ever want to do that
