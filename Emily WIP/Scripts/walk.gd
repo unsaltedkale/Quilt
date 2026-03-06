@@ -1,12 +1,17 @@
 extends State
 class_name Walk
 
+signal play_footsteps()
+signal stop_footsteps()
+
 func quilt_walk():
 	move_dir = Input.get_axis("move_left","move_right")
 	player.velocity.x = move_dir * speed
 
 func Enter():
 	quilt_walk()
+	play_footsteps.emit()
+	print("walking")
 
 func _physics_process(delta: float) -> void:
 	super(delta)
@@ -26,4 +31,5 @@ func Physics_Update(_delta):
 		Transition.emit(self, "stasis")
 
 func Exit():
-	pass
+	stop_footsteps.emit()
+	print("notwalk")

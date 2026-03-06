@@ -6,7 +6,6 @@ extends Area2D
 func _physics_process(_delta: float) -> void:
 	if timer > 0:
 		timer -= 1 * _delta
-		print(timer)
 	else:
 		timer = 0
 	if player.is_stasis:
@@ -14,12 +13,7 @@ func _physics_process(_delta: float) -> void:
 
 func on_body_entered(area: Area2D):
 	if timer <= 0:
-		print("timer at 0")
 		if area.is_in_group("Projectile") or area.is_in_group("Player"):
 			player.is_stasis = true
 			player.position = position
 			player.collected_objects = player.max_objects
-
-func on_body_exited(area: Area2D):
-	if area.is_in_group("Player"):
-		player.is_stasis = false

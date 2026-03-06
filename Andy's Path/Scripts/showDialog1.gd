@@ -13,14 +13,15 @@ signal dialouge_finished
 func _ready() -> void:
 	dialogue_counter = 0
 func _on_pressed() -> void:
+	$"../Dialogue".visible_characters = 1
 	if dialogFolder != null:
 		line = dialogFolder.text[str(dialogue_counter)]
 	if not isTyping:
-		text = ''
 		isTyping = true
-		for character in range(len(line)):
-			text = text + line[character]
-			await wait(0.015)
+		text = line
+		for i in len(line):
+			$"../Dialogue".visible_characters += 1
+			await wait(0.02)
 		dialogue_counter += 1
 		if dialogue_counter < len(dialogFolder.text):
 			line = dialogFolder.text[str(dialogue_counter)]
@@ -30,10 +31,11 @@ func _on_pressed() -> void:
 			dialogue_counter = 0
 			dialouge_finished.emit()
 		isTyping = false
-		print("print statement: " + str(len(dialogFolder.text)))
+		print("visible chars: " + str($"../Dialogue".visible_characters))
 func _process(delta: float) -> void:
+	pass
 	if Input.is_action_just_pressed("interact"):
-		Dialogue("res://Andy's Path/Resources/TestLines.tres")
+		Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
 func wait(duration):
 	await get_tree().create_timer(duration).timeout
 func Dialogue(dialogueResource):

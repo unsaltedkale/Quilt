@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=119 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
@@ -20,8 +20,11 @@
 [ext_resource type="Script" uid="uid://muc8alk7w4hs" path="res://Emily WIP/Scripts/cutscene.gd" id="21_1nwdr"]
 [ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
 [ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
+[ext_resource type="AudioStream" uid="uid://e3ra8usp7x8j" path="res://Resources/SFX/Quilt Character SFX/Quilt Damage 1.wav" id="23_p2d1a"]
+[ext_resource type="AudioStream" uid="uid://b07ycwiuh74sk" path="res://Resources/SFX/Quilt Character SFX/Quilt Land.wav" id="24_hiv3f"]
 [ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
 [ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
+[ext_resource type="AudioStream" uid="uid://dfnkjg7m1oeq0" path="res://Resources/SFX/Quilt Character SFX/Quilt Walkin'.wav" id="25_wjwd1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
 height = 44.0
@@ -704,6 +707,11 @@ height = 48.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
 size = Vector2(20, 17.5)
 
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_hiv3f"]
+fade_time = 0.0
+stream_count = 1
+stream_0 = ExtResource("25_wjwd1")
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
@@ -769,4 +777,20 @@ visible = false
 position = Vector2(0, -1.25)
 shape = SubResource("RectangleShape2D_33mbb")
 
+[node name="SFX" type="Node" parent="."]
+
+[node name="Land" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("24_hiv3f")
+max_polyphony = 5
+
+[node name="Take Damage" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("23_p2d1a")
+max_polyphony = 5
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="SFX"]
+stream = SubResource("AudioStreamPlaylist_hiv3f")
+
+[connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]
+[connection signal="stop_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="stop"]
+[connection signal="has_landed" from="StateMachine/Fall" to="SFX/Land" method="play"]
 [connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]

@@ -3,6 +3,8 @@ class_name Fall
 
 @export var gravity: float = 3000.0 #2000
 
+signal has_landed()
+
 func Enter():
 	pass
 
@@ -13,6 +15,8 @@ func Update(_delta):
 		an.play("fall")
 	if player.is_on_floor():
 		an.play("land")
+		has_landed.emit()
+		#this code doesn't run when it should
 
 func Physics_Update(_delta):
 	player.velocity.y += gravity * _delta

@@ -31,7 +31,6 @@ func shoot():
 func Enter():
 	shoot()
 	player.velocity = recoil_vel_equation()
-	print(player.velocity)
 	player.collected_objects -= 1
 	recoil = true
 	
@@ -40,7 +39,7 @@ func Physics_Update(_delta):
 	if timer <=0:
 		Transition.emit(self,"fall")
 	if player.is_on_floor():
-		Transition.emit(self, "land")
+		Transition.emit(self, "idle")
 	if player.is_stasis:
 		Transition.emit(self, "stasis")
 
