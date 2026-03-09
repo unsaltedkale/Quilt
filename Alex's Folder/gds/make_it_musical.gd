@@ -48,7 +48,7 @@ func _physics_process(delta):
 						working_beat = fmod(Conductor.beatnumber,mod_beat)
 						if working_beat == 0:
 							working_beat = mod_beat
-					print_debug(working_bar,working_beat)
+					#print_debug(working_bar,working_beat)
 					if Conductor.barnumber == 1 && Conductor.beatnumber == 1:
 						if bar_appear != 1 || beat_appear != 1:
 							get_node("../CollisionShape2D").disabled = true
