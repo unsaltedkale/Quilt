@@ -5,10 +5,7 @@ extends RigidBody2D
 
 func _ready() -> void:
 	self.gravity_scale = 0
-
-func _on_timer_area_body_entered(body: Node2D) -> void:
-		if body.is_in_group("Player"):
-			$Timer.start()
+	#$Timer.start()
 
 func _on_timer_timeout() -> void:
 	self.gravity_scale = 1

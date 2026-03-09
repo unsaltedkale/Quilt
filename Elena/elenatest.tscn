@@ -7569,7 +7569,7 @@ tile_set = SubResource("TileSet_16365")
 position = Vector2(2399, 962)
 scale = Vector2(4, 13)
 
-[node name="DamageLayer" type="TileMapLayer" parent="Tiles" groups=["Damage_Layer"]]
+[node name="DamageLayer" type="TileMapLayer" parent="Tiles" groups=["Damage_Layer", "tilemap"]]
 tile_map_data = PackedByteArray("AABGADEAAAANAAkAAABHADEAAAANAAkAAABIADEAAAANAAkAAABFADEAAAANAAkAAABEADEAAAANAAkAAAA=")
 tile_set = SubResource("TileSet_3o1fx")
 
@@ -7625,20 +7625,20 @@ position = Vector2(10376, 1992)
 position = Vector2(7304, 2758)
 
 [node name="test_shrine" parent="." instance=ExtResource("16_01ku8")]
-position = Vector2(2181, 1017)
+position = Vector2(2159, 1023)
 
 [node name="checkpoint" parent="." instance=ExtResource("17_jkah5")]
-position = Vector2(3510, 2273)
+position = Vector2(3508, 2268)
 can_get_twice = true
 
 [node name="checkpoint2" parent="." instance=ExtResource("17_jkah5")]
-position = Vector2(5829, 1632)
+position = Vector2(5834, 1628)
 
 [node name="Mirror" parent="." instance=ExtResource("17_3o1fx")]
 position = Vector2(5961, 1431)
 
 [node name="Disappearing_Platform" parent="." instance=ExtResource("8_5l0qf")]
-position = Vector2(5008, 1690)
+position = Vector2(4416, 2592)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="collectable_object" to="." method="_on_area_2d_body_exited"]

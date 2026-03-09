@@ -1,45 +1,75 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd622dnehfwdw"]
+[gd_scene load_steps=14 format=3 uid="uid://dd622dnehfwdw"]
 
 [ext_resource type="Script" uid="uid://bnd2x4a11k37i" path="res://Elena/Scripts/checkpoint.gd" id="1_5xt0g"]
-[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_auarx"]
+[ext_resource type="Texture2D" uid="uid://d03o1v27vixs6" path="res://Art/Checkpoints/Checkpoint_D1_Lit.png" id="2_5xt0g"]
+[ext_resource type="Texture2D" uid="uid://bti1w4rj2i8cs" path="res://Art/Checkpoints/Checkpoint_D1_Unlit.png" id="3_p2hgl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xt0g"]
+size = Vector2(26, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2hgl"]
-atlas = ExtResource("1_auarx")
-region = Rect2(768, 512, 64, 64)
+atlas = ExtResource("2_5xt0g")
+region = Rect2(0, 42, 26, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kj0cy"]
-atlas = ExtResource("1_auarx")
-region = Rect2(832, 512, 64, 64)
+atlas = ExtResource("2_5xt0g")
+region = Rect2(26, 42, 26, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c11b6"]
-atlas = ExtResource("1_auarx")
-region = Rect2(896, 512, 64, 64)
+atlas = ExtResource("2_5xt0g")
+region = Rect2(52, 42, 26, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_200bl"]
-atlas = ExtResource("1_auarx")
-region = Rect2(960, 512, 64, 64)
+atlas = ExtResource("2_5xt0g")
+region = Rect2(78, 42, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53yl3"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(104, 42, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vyfh"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(130, 42, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g0xe"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(156, 42, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0ckw"]
+atlas = ExtResource("3_p2hgl")
+region = Rect2(0, 0, 26, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_53yl3"]
 animations = [{
 "frames": [{
-"duration": 3.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_p2hgl")
 }, {
-"duration": 3.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_kj0cy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c11b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_200bl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53yl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vyfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g0xe")
 }],
 "loop": true,
 "name": &"active_checkpoint",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_c11b6")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_200bl")
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0ckw")
 }],
 "loop": true,
 "name": &"unactive_checkpoint",
@@ -50,9 +80,11 @@ animations = [{
 script = ExtResource("1_5xt0g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_5xt0g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_53yl3")
 animation = &"unactive_checkpoint"
 

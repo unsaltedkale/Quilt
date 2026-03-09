@@ -9,8 +9,8 @@ var is_stasis: bool = false
 
 @export var max_health: int = 1
 var health: int
-
 var spawn_point
+var shrine_key: bool = false
 
 func _ready() -> void:
 	health = max_health
@@ -44,7 +44,7 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
 		
-
+	
 #Respawn
 func set_checkpoint(pos):
 	spawn_point = pos
