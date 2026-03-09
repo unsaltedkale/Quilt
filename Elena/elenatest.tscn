@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bejnkkiku0kfe"]
+[gd_scene load_steps=29 format=4 uid="uid://bejnkkiku0kfe"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_jkah5"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="3_3o1fx"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="14_o3nms"]
 [ext_resource type="PackedScene" uid="uid://b2dqnmui6mt5" path="res://Elena/Scenes/shrine_key.tscn" id="15_hpyeg"]
 [ext_resource type="PackedScene" uid="uid://dsc3vehi0f7n0" path="res://Elena/Scenes/test_shrine.tscn" id="16_01ku8"]
-[ext_resource type="PackedScene" uid="uid://c1aeo6klnaqsq" path="res://Elena/Scenes/mirror.tscn" id="17_3o1fx"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="17_jkah5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4c57u"]
@@ -7628,14 +7627,11 @@ position = Vector2(7304, 2758)
 position = Vector2(2159, 1023)
 
 [node name="checkpoint" parent="." instance=ExtResource("17_jkah5")]
-position = Vector2(3508, 2268)
+position = Vector2(4003, 2536)
 can_get_twice = true
 
 [node name="checkpoint2" parent="." instance=ExtResource("17_jkah5")]
 position = Vector2(5834, 1628)
-
-[node name="Mirror" parent="." instance=ExtResource("17_3o1fx")]
-position = Vector2(5961, 1431)
 
 [node name="Disappearing_Platform" parent="." instance=ExtResource("8_5l0qf")]
 position = Vector2(4416, 2592)
