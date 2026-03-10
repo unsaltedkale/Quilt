@@ -12,16 +12,15 @@ extends Node2D
 @export var mod_beat = 0
 
 func _ready():
-	get_node("../CollisionShape2D").disabled = true
-	get_parent().visible = false
+	set_(false)
 	pass
 	
 func _physics_process(delta):
 	if Conductor != null:
 		if Conductor.barnumber != null or Conductor.beatnumber != null:
-			if music_trigger.track.resource_path.get_file().get_basename() != Conductor.current_music_resource.track.resource_path.get_file().get_basename() and only_on_music_trigger_track == true:
-				get_node("../CollisionShape2D").disabled = true
-				get_parent().visible = false
+			if only_on_music_trigger_track == true:
+				if music_trigger.track.resource_path.get_file().get_basename() != Conductor.current_music_resource.track.resource_path.get_file().get_basename():
+					set_(false)
 			else:
 				if repeat_pattern == true:
 					
@@ -51,30 +50,32 @@ func _physics_process(delta):
 					#print_debug(working_bar,working_beat)
 					if Conductor.barnumber == 1 && Conductor.beatnumber == 1:
 						if bar_appear != 1 || beat_appear != 1:
-							get_node("../CollisionShape2D").disabled = true
-							get_parent().visible = false
+							set_(false)
 					if Conductor.barnumber == 1 && Conductor.beatnumber == 1:
 							if bar_appear == 1 && beat_appear == 1:
-								get_node("../CollisionShape2D").disabled = false
-								get_parent().visible = true
+								set_(true)
 					if bar_appear == working_bar and beat_appear == working_beat and get_node("../CollisionShape2D").disabled == true:
-						get_node("../CollisionShape2D").disabled = false
-						get_parent().visible = true
+						set_(true)
 					if bar_delete == working_bar and beat_delete == working_beat and get_node("../CollisionShape2D").disabled == false:
-						get_node("../CollisionShape2D").disabled = true
-						get_parent().visible = false
+						set_(false)
 				
 				
 				if repeat_pattern == false:
 					if Conductor.barnumber == 1 && Conductor.beatnumber == 1:
 						if bar_appear != 1 || beat_appear != 1:
-							get_node("../CollisionShape2D").disabled = true
-							get_parent().visible = false
+							set_(false)
 					if bar_appear == Conductor.barnumber and beat_appear == Conductor.beatnumber and get_node("../CollisionShape2D").disabled == true:
-						get_node("../CollisionShape2D").disabled = false
-						get_parent().visible = true
+						set_(true)
 					if bar_delete == Conductor.barnumber and beat_delete == Conductor.beatnumber and get_node("../CollisionShape2D").disabled == false:
-						get_node("../CollisionShape2D").disabled = true
-						get_parent().visible = false
+						set_(false)
 	else:
 		print("condcutor is null")
+		
+func set_(b: bool):
+	# TRUE == platform exists, FALSE == platform does not exist
+	get_node("../CollisionShape2D").disabled = !b
+	if !b:
+		get_parent().modulate = Color(1, 0.5, 0.5, 0.3)
+	else:
+		get_parent().modulate = Color(1,1,1)
+	pass

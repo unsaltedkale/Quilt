@@ -2,7 +2,7 @@ extends Node
 class_name State
 
 @export var player: CharacterBody2D
-@export var speed: float = 600  
+@export var speed: float = 800
 @onready var an = $"../../AnimatedSprite2D"
 var move_dir
 var recoil: bool
