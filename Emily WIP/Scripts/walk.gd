@@ -16,8 +16,10 @@ func Enter():
 func _physics_process(delta: float) -> void:
 	super(delta)
 
+func Update(_delta):
+	an.play("walk")
+
 func Physics_Update(_delta):
-	
 	quilt_walk()
 	if abs(move_dir) == 0:
 		Transition.emit(self, "idle")
