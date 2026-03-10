@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://co2xfwuly32r1"]
+[gd_scene load_steps=28 format=4 uid="uid://co2xfwuly32r1"]
 
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_p4yn6"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="2_dt4o1"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="14_x7mhs"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="15_g3p2m"]
 [ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="16_041gn"]
+[ext_resource type="FontFile" uid="uid://cm4qo3xfwurj4" path="res://Andy's Path/Resources/Fonts/pixel_3/pixel.ttf" id="16_j3cf7"]
 [ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="17_vjrq0"]
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="18_2jswo"]
 [ext_resource type="Script" uid="uid://ckiaiuvbfmd34" path="res://Andy's Path/Scripts/DialogueText.gd" id="19_tmdc2"]
@@ -780,17 +781,18 @@ offset_bottom = 150.0
 theme_override_fonts/font = ExtResource("18_2jswo")
 theme_override_font_sizes/font_size = 42
 autowrap_mode = 3
+visible_characters_behavior = 1
 script = ExtResource("19_tmdc2")
 
 [node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen" groups=["Dialouge_Button"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 202.0
-offset_top = 67.0
-offset_right = 878.0
-offset_bottom = 273.0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 1155.0
+offset_bottom = 658.0
 theme = SubResource("Theme_8eit8")
-theme_override_fonts/font = ExtResource("18_2jswo")
+theme_override_fonts/font = ExtResource("16_j3cf7")
 theme_override_font_sizes/font_size = 42
 script = ExtResource("20_s5a6w")
 
