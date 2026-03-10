@@ -21,6 +21,3 @@ func Physics_Update(_delta):
 		Transition.emit(self, "recoil")
 	if player.is_stasis:
 		Transition.emit(self, "stasis")
-
-func Exit():
-	pass

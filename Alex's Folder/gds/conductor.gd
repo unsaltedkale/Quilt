@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 		if (beatnumber > timesig+(1-sixteenthnote)):
 				barnumber += 1
 				beatnumber = 1
-		print(barnumber, ", ", beatnumber)
+		#print(barnumber, ", ", beatnumber)
 
 enum music_transition_enum {immediate, next_beat, next_bar, end}
 
