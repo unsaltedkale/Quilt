@@ -5,9 +5,6 @@ class_name Fall
 
 signal has_landed()
 
-func Enter():
-	pass
-
 func Update(_delta):
 	if player.velocity.y <0:
 		an.play("jump")
