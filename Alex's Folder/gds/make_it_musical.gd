@@ -75,7 +75,7 @@ func set_(b: bool):
 	# TRUE == platform exists, FALSE == platform does not exist
 	get_node("../CollisionShape2D").disabled = !b
 	if !b:
-		get_parent().modulate = Color(1, 0.5, 0.5, 0.3)
+		get_parent().modulate = Color(0, 0, 0, 0.3)
 	else:
 		get_parent().modulate = Color(1,1,1)
 	pass

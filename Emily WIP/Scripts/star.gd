@@ -4,15 +4,19 @@ extends Area2D
 @export var respawn_timer_max = 3
 var respawn_timer
 
+@onready var active_sprite = load("res://Art/Quilt STAR-1.png")
+@onready var inactive_sprite = load("res://Art/Quilt STAR-2.png")
+
 func _ready():
 	respawn_timer = respawn_timer_max
+	inactive_sprite = load("res://Art/Quilt STAR-2.png")
 
 func _process(delta: float) -> void:
-	if find_child("Sprite2D").visible == false && respawns == true:
+	if find_child("Sprite2D").texture == inactive_sprite && respawns == true:
 		respawn_timer -= delta
 
 		if respawn_timer <= 0:
-			find_child("Sprite2D").visible = true
+			find_child("Sprite2D").texture = active_sprite
 			find_child("CollisionShape2D").set_deferred("disabled", false)
 			respawn_timer = respawn_timer_max
 
@@ -21,6 +25,6 @@ func _on_STAR_entered(body: Node2D) -> void:
 		print("collected a star")
 		if body.collected_objects < body.max_objects:
 			body.collected_objects += 1
-		find_child("Sprite2D").visible = false
+		find_child("Sprite2D").texture = inactive_sprite
 		find_child("CollisionShape2D").set_deferred("disabled", true)
 		

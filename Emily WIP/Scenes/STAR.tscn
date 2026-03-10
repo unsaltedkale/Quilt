@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyr5uj078f18r"]
 
 [ext_resource type="Script" uid="uid://djfiw8u13hstu" path="res://Emily WIP/Scripts/star.gd" id="1_nikii"]
-[ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="2_nikii"]
+[ext_resource type="Texture2D" uid="uid://dvteui4csx23w" path="res://Art/Quilt STAR-1.png" id="2_akwti"]
 [ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/tscns/make_it_musical.tscn" id="3_akwti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7gr"]
@@ -17,10 +17,10 @@ shape = SubResource("RectangleShape2D_cd7gr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-0.010556102, -0.010489404)
+position = Vector2(0, -2.3841858e-07)
 rotation = 0.9738937
-scale = Vector2(3.1188288, 3.096886)
-texture = ExtResource("2_nikii")
+scale = Vector2(5.2020907, 5.1654906)
+texture = ExtResource("2_akwti")
 
 [node name="MakeItMusical" parent="." instance=ExtResource("3_akwti")]
 
