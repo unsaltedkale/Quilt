@@ -615,6 +615,7 @@ size = Vector2(256, 256)
 [node name="Tutorial1" type="Node2D"]
 
 [node name="phlo_backpack" parent="." instance=ExtResource("2_r6ava")]
+visible = false
 position = Vector2(36746, 4850)
 scale = Vector2(4, 4)
 
