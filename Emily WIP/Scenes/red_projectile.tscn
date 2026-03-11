@@ -38,6 +38,7 @@ animations = [{
 [node name="RedProjectile" type="Area2D" groups=["Projectile"]]
 scale = Vector2(0.35, 0.35)
 collision_layer = 31
+collision_mask = 3
 script = ExtResource("1_td6lh")
 speed = Vector2(1200, 1200)
 
