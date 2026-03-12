@@ -1,4 +1,4 @@
-[gd_scene load_steps=196 format=3 uid="uid://bifokdbk5ab4o"]
+[gd_scene load_steps=195 format=3 uid="uid://bifokdbk5ab4o"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
@@ -28,7 +28,6 @@
 [ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
 [ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
 [ext_resource type="AudioStream" uid="uid://e3ra8usp7x8j" path="res://Resources/SFX/Quilt Character SFX/Quilt Damage 1.wav" id="23_p2d1a"]
-[ext_resource type="Script" uid="uid://brh1lf468432h" path="res://Emily WIP/Scripts/phlo.gd" id="23_wjwd1"]
 [ext_resource type="Script" uid="uid://8wevgt7nqed1" path="res://Emily WIP/Scripts/phlo_walk.gd" id="24_25sgx"]
 [ext_resource type="Script" uid="uid://c2hy0nm4g4tpv" path="res://Emily WIP/Scripts/phlo_jump.gd" id="24_6525m"]
 [ext_resource type="AudioStream" uid="uid://b07ycwiuh74sk" path="res://Resources/SFX/Quilt Character SFX/Quilt Land.wav" id="24_hiv3f"]
@@ -1289,10 +1288,6 @@ script = ExtResource("24_6525m")
 player = NodePath("../..")
 
 [node name="PhloCutscene" type="Node" parent="StateMachine"]
-
-[node name="Phlo" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
-script = ExtResource("23_wjwd1")
-player = NodePath("../..")
 
 [node name="PhloFall" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("26_q5r2t")

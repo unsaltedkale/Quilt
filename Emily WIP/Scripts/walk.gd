@@ -1,5 +1,4 @@
 extends State
-class_name Walk
 
 signal play_footsteps()
 signal stop_footsteps()

@@ -836,6 +836,7 @@ script = ExtResource("2_jbwj1")
 
 [node name="Player" parent="." instance=ExtResource("3_qrawa")]
 position = Vector2(5483, 1490)
+is_phlo = true
 
 [node name="Stasis" parent="." instance=ExtResource("4_jbwj1")]
 position = Vector2(2263, 505)

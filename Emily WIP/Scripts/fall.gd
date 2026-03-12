@@ -1,5 +1,4 @@
 extends State
-class_name Fall
 
 @export var gravity: float = 3000.0 #2000
 @export var max_grav: float = 2000.0
@@ -17,6 +16,7 @@ func Update(_delta):
 		#this code doesn't run when it should
 
 func Physics_Update(_delta):
+	print("quilt fall")
 	if player.velocity.y <= max_grav:
 		player.velocity.y += gravity * _delta
 	else:
