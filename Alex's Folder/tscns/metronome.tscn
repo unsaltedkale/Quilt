@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://2bpi2d7g1hn7"]
+
+[ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="1_rh2f0"]
+[ext_resource type="Texture2D" uid="uid://dvteui4csx23w" path="res://Art/Quilt STAR-1.png" id="2_l87l8"]
+[ext_resource type="Script" uid="uid://cluwsx8pk2f4y" path="res://Alex's Folder/tscns/metronome.gd" id="3_l87l8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ie5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rh2f0")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_l87l8")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[node name="Metronome" type="AnimatedSprite2D"]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_0ie5t")
+animation = &"off"
+script = ExtResource("3_l87l8")
