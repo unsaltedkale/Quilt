@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 			if conductor.beatnumber == floor(conductor.beatnumber):
 				if str(conductor.current_music_resource.resource_path) != "res://Alex's Folder/music_resources/empty_music.tres":
 					play("on")
-					print(conductor.barnumber)
+					#print(conductor.barnumber)
 				else:
 					play("off")
 			else:
