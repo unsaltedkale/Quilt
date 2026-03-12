@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=43 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_leou4"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="1_vuu6h"]
@@ -27,6 +27,7 @@
 [ext_resource type="Resource" uid="uid://dytjfs6d2xqxv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_meeting_quilt_cutscene/crypt_meeting_quilt_container.tres" id="21_kgnlc"]
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="22_mx01u"]
 [ext_resource type="PackedScene" uid="uid://rviumk7i1bpq" path="res://Alex's Folder/tscns/level_tool_tip.tscn" id="24_8eit8"]
+[ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="24_cxihl"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="26_t46pd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80spu"]
@@ -3832,6 +3833,31 @@ size = Vector2(256, 256)
 
 [sub_resource type="Theme" id="Theme_8eit8"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2t46"]
+bg_color = Color(0.42105085, 0.6593775, 0.5580529, 1)
+border_width_left = 70
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.78350765, 0.7930483, 0.78495806, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 70.0
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u273h"]
+bg_color = Color(0.7357423, 0.5476578, 0.51643217, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_top = 3.0
+expand_margin_right = 4.0
+expand_margin_bottom = 3.0
+
 [node name="Tutorial1" type="Node2D"]
 
 [node name="phlo_backpack" parent="." instance=ExtResource("2_r6ava")]
@@ -4131,6 +4157,7 @@ scale = Vector2(5.59, 5.59)
 texture = ExtResource("22_mx01u")
 
 [node name="UI" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -4180,6 +4207,39 @@ theme = SubResource("Theme_8eit8")
 theme_override_fonts/font = ExtResource("18_kgnlc")
 theme_override_font_sizes/font_size = 42
 script = ExtResource("20_34ht4")
+
+[node name="Settings" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="CanvasLayer/Settings"]
+layout_mode = 0
+offset_right = 1147.0
+offset_bottom = 645.0
+color = Color(0.36098644, 0.43022326, 0.4866202, 1)
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Settings"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 19.0
+offset_right = 402.0
+offset_bottom = 69.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_c2t46")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_u273h")
+value = 100.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings/HSlider"]
+layout_mode = 0
+offset_left = -68.0
+offset_top = 19.0
+offset_right = -1.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("24_cxihl")
+theme_override_font_sizes/font_size = 13
+text = "Text Size"
 
 [node name="CutsceneTrigger2" parent="." instance=ExtResource("11_628yu")]
 position = Vector2(35374.004, 5212)

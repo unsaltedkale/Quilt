@@ -13,7 +13,6 @@ func Enter():
 	quilt_jump()
 
 func Physics_Update(_delta):
-	print("this works")
 	if timer <= 0:
 		Transition.emit(self,"fall")
 	else:
