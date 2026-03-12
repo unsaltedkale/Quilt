@@ -1,5 +1,4 @@
 extends State
-class_name Jump
 
 @export var jump_velocity: float = -950.0 #change
 var timer : float = 7.0

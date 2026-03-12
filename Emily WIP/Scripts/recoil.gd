@@ -1,5 +1,4 @@
 extends State
-class_name Recoil
 
 @export var force : Vector2 = Vector2(1500,1500)
 @export var timer: float

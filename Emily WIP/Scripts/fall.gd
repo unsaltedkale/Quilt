@@ -1,5 +1,4 @@
 extends State
-class_name Fall
 
 @export var gravity: float = 3000.0 #2000
 @export var max_grav: float = 2000.0

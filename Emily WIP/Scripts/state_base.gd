@@ -32,5 +32,6 @@ func _physics_process(_delta) -> void:
 	if player.is_phlo:
 		player.get_node("QuiltCollider").disabled = true
 		player.get_node("PhloCollider").disabled = false
-		Transition.emit(self,"phlo")
+		if !player.get_node("PhloCollider").disabled:
+			Transition.emit(self,"phlowalk")
 	pass
