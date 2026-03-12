@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bye0p8jff0guv"
-path="res://.godot/imported/Quilt Animation Spritesheet Fall .png-2d3ef2aa22ad9ee36e0ee68310fba120.ctex"
+uid="uid://d4enw7wsgmurv"
+path="res://.godot/imported/Quilt Animation Spritesheet Walk (1).png-2c9a0d610bd6dfe0ed5e95c5a970b639.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Quilt Animation Spritesheet Fall .png"
-dest_files=["res://.godot/imported/Quilt Animation Spritesheet Fall .png-2d3ef2aa22ad9ee36e0ee68310fba120.ctex"]
+source_file="res://Art/Quilt/Quilt Animation Spritesheet Walk (1).png"
+dest_files=["res://.godot/imported/Quilt Animation Spritesheet Walk (1).png-2c9a0d610bd6dfe0ed5e95c5a970b639.ctex"]
 
 [params]
 

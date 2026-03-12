@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3nsbjc4e2qdy"
-path="res://.godot/imported/Quilt Animation Spritesheet Land.png-865a776d6ac966119a979d75dbca3bcb.ctex"
+uid="uid://c3e2w8i5mfrj7"
+path="res://.godot/imported/Quilt Introduction Cutscene(2).png-1b8bca2af11bee6b85f332caabf7548e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Quilt Animation Spritesheet Land.png"
-dest_files=["res://.godot/imported/Quilt Animation Spritesheet Land.png-865a776d6ac966119a979d75dbca3bcb.ctex"]
+source_file="res://Art/Quilt/Quilt Introduction Cutscene(2).png"
+dest_files=["res://.godot/imported/Quilt Introduction Cutscene(2).png-1b8bca2af11bee6b85f332caabf7548e.ctex"]
 
 [params]
 

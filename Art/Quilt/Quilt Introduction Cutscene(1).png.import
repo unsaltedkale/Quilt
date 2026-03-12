@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx87scu4cs4kc"
-path="res://.godot/imported/Quilt Animation Spritesheet Idle (1).png-4c483f79926116964e0e2c3284083231.ctex"
+uid="uid://dlmtm1evbtdwv"
+path="res://.godot/imported/Quilt Introduction Cutscene(1).png-c00f2b18ddf61b0c05cef0a56195c55f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Quilt Animation Spritesheet Idle (1).png"
-dest_files=["res://.godot/imported/Quilt Animation Spritesheet Idle (1).png-4c483f79926116964e0e2c3284083231.ctex"]
+source_file="res://Art/Quilt/Quilt Introduction Cutscene(1).png"
+dest_files=["res://.godot/imported/Quilt Introduction Cutscene(1).png-c00f2b18ddf61b0c05cef0a56195c55f.ctex"]
 
 [params]
 

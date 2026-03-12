@@ -620,7 +620,8 @@ position = Vector2(36746, 4850)
 scale = Vector2(4, 4)
 
 [node name="Player" parent="." instance=ExtResource("1_vuu6h")]
-position = Vector2(36778, 4892)
+position = Vector2(35347, 4960)
+is_phlo = true
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 
@@ -635,7 +636,7 @@ tile_map_data = PackedByteArray("AACNAfr/AAAAAAAAAACNAfv/AAAAAAAAAACNAfz/AAAAAAA
 tile_set = SubResource("TileSet_tembr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(74713, -19731)
+position = Vector2(35613, 4497)
 zoom = Vector2(0.3, 0.3)
 limit_enabled = false
 limit_left = 1000000
