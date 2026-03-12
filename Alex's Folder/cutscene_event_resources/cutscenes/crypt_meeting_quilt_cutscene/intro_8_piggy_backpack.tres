@@ -6,6 +6,4 @@
 script = ExtResource("1_8n8j2")
 animator = NodePath("Player")
 animation_name = "intro_8_piggy_back"
-delay_before = 1.0
-delay_after = 4.0
 metadata/_custom_type_script = "uid://84oaxla2j74g"
