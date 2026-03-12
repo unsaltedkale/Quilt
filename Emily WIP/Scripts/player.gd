@@ -34,10 +34,11 @@ func take_damage(amount: int) -> void:
 	#allows for different damage amounts if we ever want to do that
 		
 func die():
-	print("Player died")
+	print_debug("Player died")
 	spawn_player(spawn_point)
 	
 func _on_hit_box_body_entered(body: Node2D) -> void:
+	print_debug("NAME:" + str(body.name))
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
 		

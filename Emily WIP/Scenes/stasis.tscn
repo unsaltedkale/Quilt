@@ -1,10 +1,82 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm11upje0c6f2"]
+[gd_scene load_steps=12 format=3 uid="uid://bm11upje0c6f2"]
 
-[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_nndfy"]
 [ext_resource type="Script" uid="uid://2mt3fdvrlct7" path="res://Emily WIP/Scripts/stasis.gd" id="1_r3qni"]
+[ext_resource type="Texture2D" uid="uid://btnfovw1agbdu" path="res://Art/Stasis Chamber.png" id="2_r3qni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3qni"]
 height = 28.91566
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp70r"]
+atlas = ExtResource("2_r3qni")
+region = Rect2(0, 90, 40, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vchk"]
+atlas = ExtResource("2_r3qni")
+region = Rect2(0, 45, 40, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axs2h"]
+atlas = ExtResource("2_r3qni")
+region = Rect2(0, 90, 40, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djhpt"]
+atlas = ExtResource("2_r3qni")
+region = Rect2(0, 0, 40, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdbg0"]
+atlas = ExtResource("2_r3qni")
+region = Rect2(0, 135, 40, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r86ph"]
+atlas = ExtResource("2_r3qni")
+region = Rect2(0, 180, 40, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hiih"]
+atlas = ExtResource("2_r3qni")
+region = Rect2(0, 225, 40, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wiqrp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp70r")
+}],
+"loop": false,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vchk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axs2h")
+}],
+"loop": false,
+"name": &"capture",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djhpt")
+}],
+"loop": false,
+"name": &"inactive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdbg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r86ph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hiih")
+}],
+"loop": false,
+"name": &"release",
+"speed": 5.0
+}]
 
 [node name="Stasis" type="Area2D" groups=["Stasis"]]
 script = ExtResource("1_r3qni")
@@ -13,10 +85,11 @@ script = ExtResource("1_r3qni")
 scale = Vector2(6.64, 6.64)
 shape = SubResource("CapsuleShape2D_r3qni")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.5, 1.4999962)
-scale = Vector2(0.9921875, 1.5078125)
-texture = ExtResource("1_nndfy")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5.0000005, 3.0000005)
+scale = Vector2(6.07, 6.07)
+sprite_frames = SubResource("SpriteFrames_wiqrp")
+animation = &"inactive"
 
 [connection signal="area_entered" from="." to="." method="on_body_entered"]
 [connection signal="body_entered" from="." to="." method="on_body_entered"]

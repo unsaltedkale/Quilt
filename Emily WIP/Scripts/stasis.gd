@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var player = $"../Player"
-@export var timer: float = 0
+@export var timer: float = 0	
 
 func _physics_process(_delta: float) -> void:
 	if timer > 0:
