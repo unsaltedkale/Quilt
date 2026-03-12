@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://co2xfwuly32r1"]
+[gd_scene load_steps=29 format=4 uid="uid://co2xfwuly32r1"]
 
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_p4yn6"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="2_dt4o1"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://2x73w31w760w" path="res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_fall_cutscene/test_cutscene_container_after_fall.tres" id="13_kd6jj"]
 [ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="14_x7mhs"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="15_g3p2m"]
+[ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="15_mmu65"]
 [ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="16_041gn"]
 [ext_resource type="FontFile" uid="uid://cm4qo3xfwurj4" path="res://Andy's Path/Resources/Fonts/pixel_3/pixel.ttf" id="16_j3cf7"]
 [ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="17_vjrq0"]
@@ -778,8 +779,7 @@ offset_left = 236.0
 offset_top = 94.0
 offset_right = 832.0
 offset_bottom = 150.0
-theme_override_fonts/font = ExtResource("18_2jswo")
-theme_override_font_sizes/font_size = 42
+theme_override_fonts/font = ExtResource("15_mmu65")
 autowrap_mode = 3
 visible_characters_behavior = 1
 script = ExtResource("19_tmdc2")
