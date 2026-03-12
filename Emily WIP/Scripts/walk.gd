@@ -10,7 +10,7 @@ func quilt_walk():
 func Enter():
 	quilt_walk()
 	play_footsteps.emit()
-	print("walking")
+	#print("walking")
 
 func _physics_process(delta: float) -> void:
 	super(delta)
@@ -33,4 +33,4 @@ func Physics_Update(_delta):
 
 func Exit():
 	stop_footsteps.emit()
-	print("notwalk")
+	#print("notwalk")

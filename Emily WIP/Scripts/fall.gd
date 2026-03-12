@@ -16,7 +16,6 @@ func Update(_delta):
 		#this code doesn't run when it should
 
 func Physics_Update(_delta):
-	print("quilt fall")
 	if player.velocity.y <= max_grav:
 		player.velocity.y += gravity * _delta
 	else:
