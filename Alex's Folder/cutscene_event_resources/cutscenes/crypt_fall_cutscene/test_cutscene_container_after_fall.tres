@@ -16,5 +16,5 @@
 
 [resource]
 script = ExtResource("1_lejka")
-events = [ExtResource("1_0pvg7"), ExtResource("1_rgcry"), ExtResource("2_rgcry"), ExtResource("2_y4op6"), ExtResource("5_g0kxn"), ExtResource("6_vwo25"), ExtResource("7_87dsh"), ExtResource("1_cnf66"), ExtResource("7_vwo25"), ExtResource("9_ubvpl"), ExtResource("10_cnf66"), ExtResource("12_8v8x4")]
+events = [ExtResource("1_0pvg7"), ExtResource("1_rgcry"), ExtResource("2_rgcry"), ExtResource("5_g0kxn"), ExtResource("6_vwo25"), ExtResource("7_87dsh"), ExtResource("1_cnf66"), ExtResource("7_vwo25"), ExtResource("9_ubvpl"), ExtResource("10_cnf66"), ExtResource("12_8v8x4"), ExtResource("2_y4op6")]
 metadata/_custom_type_script = "uid://bqmpakucoot4i"

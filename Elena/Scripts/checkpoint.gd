@@ -18,16 +18,31 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") and active==false:
 		body.set_checkpoint(global_position)
 		active = true
-		anim.play("active_checkpoint")
+		
+		#this is alex. i changed it so that when you are phlo the
+		#checkpoints are red and when you are quilt the checkpoints are
+		#white. that is all :D
+		
 		position = original_position
+		if body.is_phlo == true:
+			anim.play("active_checkpoint_red")
+		else:
+			anim.play("active_checkpoint_white")
+			position += Vector2(0,5)
+		
 		print("checkpoint activated")
 		
 	if body.is_in_group("Player") and active==true:
 		
 		if can_get_twice == true:
 			body.set_checkpoint(global_position)
-			anim.play("active_checkpoint")
 			position = original_position
+			if body.is_phlo == true:
+				anim.play("active_checkpoint_red")
+			else:
+				anim.play("active_checkpoint_white")
+				position += Vector2(0,5)
+			
 			print("checkpoint activated")
 		
 		if can_get_twice == false: 

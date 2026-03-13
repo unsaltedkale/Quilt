@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://co2xfwuly32r1"]
+[gd_scene load_steps=31 format=4 uid="uid://co2xfwuly32r1"]
 
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_p4yn6"]
 [ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="2_dt4o1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="4_6hoer"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_taae4"]
 [ext_resource type="Resource" uid="uid://njrcluu75tnn" path="res://Alex's Folder/music_resources/pyra_prolouge_VAMP.tres" id="6_kqnod"]
+[ext_resource type="Texture2D" uid="uid://dxsij8hnn7uu3" path="res://Art/hiccup team name card.webp" id="10_yjgmc"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="11_pk5we"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="12_kerix"]
 [ext_resource type="Resource" uid="uid://2x73w31w760w" path="res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_fall_cutscene/test_cutscene_container_after_fall.tres" id="13_kd6jj"]
@@ -18,6 +19,7 @@
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="18_2jswo"]
 [ext_resource type="Script" uid="uid://ckiaiuvbfmd34" path="res://Andy's Path/Scripts/DialogueText.gd" id="19_tmdc2"]
 [ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="20_s5a6w"]
+[ext_resource type="Texture2D" uid="uid://c8hb4gaiwrno8" path="res://Art/Quilt Title Screen-1.png.png" id="21_uc7l3"]
 [ext_resource type="Texture2D" uid="uid://4fwkr023vvd3" path="res://Art/Pyra Opening Cutscene Big.png" id="23_egg1h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80spu"]
@@ -671,6 +673,11 @@ position = Vector2(3350.0002, -2535)
 scale = Vector2(2.3, 1.91)
 container = ExtResource("13_kd6jj")
 
+[node name="HiccupTeamNameCard" type="Sprite2D" parent="."]
+position = Vector2(5431, 2558.0005)
+scale = Vector2(3.16, 3.16)
+texture = ExtResource("10_yjgmc")
+
 [node name="NPCs" type="Node" parent="."]
 
 [node name="TestNPC" type="Node2D" parent="NPCs"]
@@ -705,7 +712,13 @@ text = "MADE BY:
 
 
 
-[[ filler ]]
+
+
+
+
+
+>> FILLER
+
 
 
 
@@ -720,22 +733,36 @@ text = "MADE BY:
 
 
 
->> FILLER
-
-
-
 
 >> FILLER
 
 
 
 
+
+>> FILLER
+
+
+
+
+
 >> FILLER
 
 
 
 
->> FILLER
+
+
+[ FILLER ]
+
+
+
+
+
+
+[ FILLER 1 ]
+
+
 
 
 
@@ -802,5 +829,9 @@ script = ExtResource("20_s5a6w")
 position = Vector2(2175, -3347)
 scale = Vector2(10, 10)
 texture = ExtResource("23_egg1h")
+
+[node name="QuiltTitleScreen1_png" type="Sprite2D" parent="."]
+position = Vector2(5345, 20760)
+texture = ExtResource("21_uc7l3")
 
 [connection signal="pressed" from="CanvasLayer/UI/DialogueScreen/Button" to="CanvasLayer/UI/DialogueScreen/Button" method="_on_pressed"]

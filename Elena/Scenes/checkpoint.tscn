@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dd622dnehfwdw"]
+[gd_scene load_steps=21 format=3 uid="uid://dd622dnehfwdw"]
 
 [ext_resource type="Script" uid="uid://bnd2x4a11k37i" path="res://Elena/Scripts/checkpoint.gd" id="1_5xt0g"]
 [ext_resource type="Texture2D" uid="uid://d03o1v27vixs6" path="res://Art/Checkpoints/Checkpoint_D1_Lit.png" id="2_5xt0g"]
@@ -35,6 +35,34 @@ region = Rect2(130, 42, 26, 42)
 atlas = ExtResource("2_5xt0g")
 region = Rect2(156, 42, 26, 42)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_npysg"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(0, 0, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp22b"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(26, 0, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8p3w"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(52, 0, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1rwh"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(78, 0, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isr5j"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(104, 0, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm53s"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(130, 0, 26, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfhqm"]
+atlas = ExtResource("2_5xt0g")
+region = Rect2(156, 0, 26, 42)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0ckw"]
 atlas = ExtResource("3_p2hgl")
 region = Rect2(0, 0, 26, 30)
@@ -64,7 +92,33 @@ animations = [{
 "texture": SubResource("AtlasTexture_7g0xe")
 }],
 "loop": true,
-"name": &"active_checkpoint",
+"name": &"active_checkpoint_red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npysg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp22b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8p3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1rwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isr5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm53s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfhqm")
+}],
+"loop": true,
+"name": &"active_checkpoint_white",
 "speed": 5.0
 }, {
 "frames": [{
