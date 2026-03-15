@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="animation_cutscene_event" load_steps=2 format=3 uid="uid://cletixikxkrts"]
+
+[ext_resource type="Script" uid="uid://84oaxla2j74g" path="res://Alex's Folder/cutscene_event_resources/event types/animation_cs_event.gd" id="1_ku5dj"]
+
+[resource]
+script = ExtResource("1_ku5dj")
+animator = NodePath("fake quilt")
+animation_name = "intro_2_explosion"
+delay_after = 1.0
+metadata/_custom_type_script = "uid://84oaxla2j74g"

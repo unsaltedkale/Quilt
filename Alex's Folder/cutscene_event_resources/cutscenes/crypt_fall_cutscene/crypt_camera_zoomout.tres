@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_fnf5g")
 camera = NodePath("Camera2D")
-change_position = null
 change_zoom = true
 zoom = Vector2(0.2, 0.2)
 time = 2.0

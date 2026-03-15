@@ -33,9 +33,10 @@ func execute(cutscene_trigger: Node) -> void:
 	if change_zoom && not zoom_is_relative:	
 		tween.tween_property(camerap, "zoom", zoom, time)
 	
-	if change_zoom || change_position:
-		print("awaiting")
-		await tween.finished
+	if wait_until_done:
+		if change_zoom || change_position:
+			print("awaiting")
+			await tween.finished
 	
 	if unlock_camera_at_end:
 		camerap.has_control = true

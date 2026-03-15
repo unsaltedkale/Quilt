@@ -8,7 +8,12 @@ class_name animation_cutscene_event
 
 
 func execute(cutscene_trigger: Node) -> void:
-	var animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
+	
+	var animatorp
+	if cutscene_trigger.get_node("../" + str(animator)) is not AnimatedSprite2D:
+		animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
+	else:
+		animatorp = cutscene_trigger.get_node("../" + str(animator))
 	
 	print(animatorp.to_string() + "-------------------------------------------------")
 	
@@ -18,7 +23,8 @@ func execute(cutscene_trigger: Node) -> void:
 	
 	animatorp.play(animation_name)
 	
-	await animatorp.animation_finished
+	if wait_until_done:
+		await animatorp.animation_finished
 	
 	if animatorp.find_parent("Player") != null:
 		if animatorp.find_parent("Player").is_in_group("player"):

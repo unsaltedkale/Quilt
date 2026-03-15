@@ -12,8 +12,8 @@ func execute(cutscene_trigger: Node) -> void:
 	
 	button.Dialogue(dia.resource_path)
 	
-	await button.dialouge_finished
+	if wait_until_done:
+		await button.dialouge_finished
 	
-	print("dialouge here")
 	pass
 	

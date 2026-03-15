@@ -12,12 +12,13 @@ class_name movement_cutscene_event
 func execute(cutscene_trigger: Node) -> void:
 	var tween = cutscene_trigger.get_tree().create_tween()
 	var moverp = cutscene_trigger.get_node("../" + str(mover))
-	var animatorp = cutscene_trigger.get_node("../" + str(mover) + "/AnimatedSprite2D")
+	#var animatorp = cutscene_trigger.get_node("../" + str(mover) + "/AnimatedSprite2D")
 	# doesn't work -> animatorp.flip_h = horizontal_flip
 	if is_relative:
 		tween.tween_property(moverp, "position", target, time).as_relative()
 	elif not is_relative:
 		tween.tween_property(moverp, "position", target, time)
-	await tween.finished
+	if wait_until_done:
+		await tween.finished
 	
 	

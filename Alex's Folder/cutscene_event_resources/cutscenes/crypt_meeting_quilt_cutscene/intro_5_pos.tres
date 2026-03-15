@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="movement_cutscene_event" load_steps=2 format=3 uid="uid://d3ew1q8g1mdyx"]
+
+[ext_resource type="Script" uid="uid://cvo6goabck1ac" path="res://Alex's Folder/cutscene_event_resources/event types/movement_cs_event.gd" id="1_blae7"]
+
+[resource]
+script = ExtResource("1_blae7")
+mover = NodePath("fake quilt")
+target = Vector2(-2, -8)
+is_relative = true
+wait_until_done = false
+metadata/_custom_type_script = "uid://cvo6goabck1ac"
