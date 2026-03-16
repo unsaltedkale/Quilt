@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="animation_cutscene_event" load_steps=2 format=3 uid="uid://b1mgfgd6njxr4"]
+
+[ext_resource type="Script" uid="uid://84oaxla2j74g" path="res://Alex's Folder/cutscene_event_resources/event types/animation_cs_event.gd" id="1_b66dg"]
+
+[resource]
+script = ExtResource("1_b66dg")
+animator = NodePath("fake quilt")
+animation_name = "intro_6_standing_up"
+delay_after = 3.0
+wait_until_done = false
+metadata/_custom_type_script = "uid://84oaxla2j74g"

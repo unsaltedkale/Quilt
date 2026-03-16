@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="cutscene_container" load_steps=6 format=3 uid="uid://d24g4wdbk4vrl"]
+
+[ext_resource type="Resource" uid="uid://dmcnqowuq1wy6" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/exit_crypt_level/lock_camera.tres" id="1_4y5wa"]
+[ext_resource type="Resource" uid="uid://0ln7e21esoj4" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/exit_crypt_level/keep_player_moving.tres" id="2_sym4c"]
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="3_oo4bx"]
+[ext_resource type="Resource" uid="uid://c07413hvgijly" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/exit_crypt_level/snap_to_ground.tres" id="3_sym4c"]
+[ext_resource type="Resource" uid="uid://c2hwjmxgkr8ve" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/exit_crypt_level/orange_wastes.tres" id="4_oo4bx"]
+
+[resource]
+script = ExtResource("3_oo4bx")
+events = [ExtResource("1_4y5wa"), ExtResource("3_sym4c"), ExtResource("2_sym4c"), ExtResource("4_oo4bx")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"

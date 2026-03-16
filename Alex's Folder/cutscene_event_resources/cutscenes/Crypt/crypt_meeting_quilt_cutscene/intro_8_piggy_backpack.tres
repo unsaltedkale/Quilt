@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_8n8j2")
-animator = NodePath("Player")
+animator = NodePath("fake quilt")
 animation_name = "intro_8_piggy_back"
 metadata/_custom_type_script = "uid://84oaxla2j74g"

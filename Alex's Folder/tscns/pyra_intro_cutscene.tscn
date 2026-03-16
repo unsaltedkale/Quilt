@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dxsij8hnn7uu3" path="res://Art/hiccup team name card.webp" id="10_yjgmc"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="11_pk5we"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="12_kerix"]
-[ext_resource type="Resource" uid="uid://2x73w31w760w" path="res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_fall_cutscene/test_cutscene_container_after_fall.tres" id="13_kd6jj"]
+[ext_resource type="Resource" uid="uid://2x73w31w760w" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_fall_cutscene/test_cutscene_container_after_fall.tres" id="13_kd6jj"]
 [ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="14_x7mhs"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="15_g3p2m"]
 [ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="15_mmu65"]
