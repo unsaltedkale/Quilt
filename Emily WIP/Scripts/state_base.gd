@@ -7,6 +7,7 @@ class_name State
 var move_dir
 var recoil: bool
 var cutscene: bool
+@export var state_name: String
 
 signal Transition
 
@@ -30,8 +31,8 @@ func _physics_process(_delta) -> void:
 		if move_dir !=0:
 			player.velocity.x = move_dir * speed
 	if player.is_phlo:
+		if find_parent("StateMachine").current_state.state_name != "phlo_walk" || find_parent("StateMachine").current_state.state_name != "phlo_fall" || find_parent("StateMachine").current_state.state_name != "phlo_jump" || find_parent("StateMachine").current_state.state_name != "phlo_cutscene":
+			Transition.emit(self,"phlowalk")
 		player.get_node("QuiltCollider").disabled = true
 		player.get_node("PhloCollider").disabled = false
-		if !player.get_node("PhloCollider").disabled:
-			Transition.emit(self,"phlowalk")
 	pass

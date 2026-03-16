@@ -12,10 +12,9 @@ func Enter():
 	timer = 7
 	phlo_jump()
 
+func _physics_process(_delta) -> void:
+	Physics_Update(_delta)
 func Physics_Update(_delta):
-	print("this works")
-	print("phlojump")
-	print("timer: ",timer)
 	if timer <= 0:
 		Transition.emit(self,"phlofall")
 	else:

@@ -1250,48 +1250,59 @@ initial_state = NodePath("Idle")
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("23_3jtwp")
 player = NodePath("../..")
+state_name = "idle"
 
 [node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("24_p2d1a")
 player = NodePath("../..")
+state_name = "walk"
 
 [node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("25_hiv3f")
 player = NodePath("../..")
+state_name = "jump"
 
 [node name="Stasis State" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("20_3uy0y")
 player = NodePath("../..")
+state_name = "stasis_state"
 
 [node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("18_4hfjo")
 player = NodePath("../..")
+state_name = "fall"
 
 [node name="Cutscene" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("21_1nwdr")
 player = NodePath("../..")
+state_name = "cutscene"
 
 [node name="Recoil" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("19_33mbb")
 player = NodePath("../..")
+state_name = "recoil"
 
 [node name="Stasis" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("20_3uy0y")
 player = NodePath("../..")
+state_name = "stasis"
 
 [node name="PhloWalk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("24_25sgx")
 player = NodePath("../..")
+state_name = "phlo_walk"
 
 [node name="PhloJump" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("24_6525m")
 player = NodePath("../..")
+state_name = "phlo_jump"
 
 [node name="PhloCutscene" type="Node" parent="StateMachine"]
 
 [node name="PhloFall" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("26_q5r2t")
 player = NodePath("../..")
+state_name = "phlo_fall"
 
 [node name="hit_box" type="Area2D" parent="."]
 visible = false

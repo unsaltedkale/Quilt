@@ -6,7 +6,7 @@ func phlo_walk():
 
 func Update(_delta):
 	an.play("phlo_idle")
-
+	
 func Physics_Update(_delta):
 	phlo_walk()
 	if !player.is_on_floor():
