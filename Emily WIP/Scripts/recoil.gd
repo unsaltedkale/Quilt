@@ -8,6 +8,8 @@ var joystick_direction
 var n : Vector2
 var value
 
+signal shoot_projectile()
+
 func recoil_vel_equation():
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
 	player_direction = player.get_local_mouse_position().normalized()
@@ -26,6 +28,7 @@ func shoot():
 		proj.projectile_direction = (proj.position - joystick_direction)
 	else:
 		proj.projectile_direction = (proj.get_global_mouse_position() - player.position).normalized()
+	shoot_projectile.emit()
 
 func Enter():
 	shoot()
