@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 
 func Update(_delta):
 	if player.is_phlo:
-		an.play("phlo_walk")
+		an.play("phlo_idle")
 	else:
 		an.play("walk")
 

@@ -1223,7 +1223,6 @@ stream_0 = ExtResource("25_wjwd1")
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
-is_phlo = true
 max_objects = 1
 
 [node name="QuiltCollider" type="CollisionShape2D" parent="."]
@@ -1232,14 +1231,13 @@ shape = SubResource("CapsuleShape2D_iemgc")
 
 [node name="PhloCollider" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0.5)
-scale = Vector2(0.86, 0.88)
+scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_1nwdr")
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"idle"
-frame_progress = 0.14621733
+animation = &"phlo_idle"
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
@@ -1260,11 +1258,6 @@ state_name = "walk"
 script = ExtResource("25_hiv3f")
 player = NodePath("../..")
 state_name = "jump"
-
-[node name="Stasis State" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
-script = ExtResource("20_3uy0y")
-player = NodePath("../..")
-state_name = "stasis_state"
 
 [node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("18_4hfjo")
