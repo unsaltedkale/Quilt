@@ -3,7 +3,7 @@ class_name Idle
 
 func idle_quilt():
 	if player.is_phlo:
-		an.play("phlo_walk")
+		an.play("phlo_idle")
 	else:
 		an.play("idle")
 

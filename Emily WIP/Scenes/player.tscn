@@ -1230,14 +1230,13 @@ shape = SubResource("CapsuleShape2D_iemgc")
 
 [node name="PhloCollider" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0.5)
-scale = Vector2(0.86, 0.88)
+scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_1nwdr")
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"idle"
-frame_progress = 0.14621733
+animation = &"phlo_idle"
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
