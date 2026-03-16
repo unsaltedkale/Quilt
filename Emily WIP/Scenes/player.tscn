@@ -27,7 +27,6 @@
 [ext_resource type="Script" uid="uid://muc8alk7w4hs" path="res://Emily WIP/Scripts/cutscene.gd" id="21_1nwdr"]
 [ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
 [ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
-[ext_resource type="AudioStream" uid="uid://e3ra8usp7x8j" path="res://Resources/SFX/Quilt Character SFX/Quilt Damage 1.wav" id="23_p2d1a"]
 [ext_resource type="Script" uid="uid://8wevgt7nqed1" path="res://Emily WIP/Scripts/phlo_walk.gd" id="24_25sgx"]
 [ext_resource type="Script" uid="uid://c2hy0nm4g4tpv" path="res://Emily WIP/Scripts/phlo_jump.gd" id="24_6525m"]
 [ext_resource type="AudioStream" uid="uid://b07ycwiuh74sk" path="res://Resources/SFX/Quilt Character SFX/Quilt Land.wav" id="24_hiv3f"]
@@ -35,6 +34,7 @@
 [ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
 [ext_resource type="AudioStream" uid="uid://dfnkjg7m1oeq0" path="res://Resources/SFX/Quilt Character SFX/Quilt Walkin'.wav" id="25_wjwd1"]
 [ext_resource type="Script" uid="uid://bcqpnemthyjwf" path="res://Emily WIP/Scripts/phlo_fall.gd" id="26_q5r2t"]
+[ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
 height = 44.0
@@ -1326,7 +1326,7 @@ stream = ExtResource("24_hiv3f")
 max_polyphony = 5
 
 [node name="Take Damage" type="AudioStreamPlayer" parent="SFX"]
-stream = ExtResource("23_p2d1a")
+stream = ExtResource("34_vfdg1")
 max_polyphony = 5
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="SFX"]
