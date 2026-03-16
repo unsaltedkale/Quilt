@@ -6,6 +6,6 @@
 script = ExtResource("1_hgwpj")
 animator = NodePath("fake quilt")
 animation_name = "intro_5_sitting_stoop"
-delay_after = 5.0
+delay_after = 1.0
 wait_until_done = false
 metadata/_custom_type_script = "uid://84oaxla2j74g"

@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_cmd1d")
-animator = NodePath("Player")
+animator = NodePath("fake quilt")
 animation_name = "intro_7_hand_out"
 metadata/_custom_type_script = "uid://84oaxla2j74g"
