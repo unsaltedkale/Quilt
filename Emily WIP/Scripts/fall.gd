@@ -7,11 +7,21 @@ signal has_landed()
 
 func Update(_delta):
 	if player.velocity.y <0:
-		an.play("jump")
+		if player.is_phlo:
+			an.play("phlo_jump")
+		else:
+			an.play("jump")
 	if player.velocity.y >=0:
-		an.play("fall")
+		if player.is_phlo:
+			an.play("phlo_fall")
+		else:
+			an.play("fall")
 	if player.is_on_floor():
-		an.play("land")
+		print("player on floor")
+		if player.is_phlo:
+			an.play("phlo_land")
+		else:
+			an.play("land")
 		has_landed.emit()
 		#this code doesn't run when it should
 

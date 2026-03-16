@@ -6,7 +6,10 @@ var timer : float = 7.0
 func quilt_jump():
 	if player.is_on_floor():
 		player.velocity.y = jump_velocity
-		an.play("jump")
+		if player.is_phlo:
+			an.play("phlo_jump")
+		else:
+			an.play("jump")
 
 func Enter():
 	timer = 7

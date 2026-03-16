@@ -16,7 +16,10 @@ func _physics_process(delta: float) -> void:
 	super(delta)
 
 func Update(_delta):
-	an.play("walk")
+	if player.is_phlo:
+		an.play("phlo_walk")
+	else:
+		an.play("walk")
 
 func Physics_Update(_delta):
 	quilt_walk()

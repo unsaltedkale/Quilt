@@ -2,7 +2,10 @@ extends State
 class_name Idle
 
 func idle_quilt():
-	an.play("idle")
+	if player.is_phlo:
+		an.play("phlo_walk")
+	else:
+		an.play("idle")
 
 func Enter():
 	idle_quilt()
