@@ -1222,7 +1222,6 @@ stream_0 = ExtResource("25_wjwd1")
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
-is_phlo = true
 max_objects = 1
 
 [node name="QuiltCollider" type="CollisionShape2D" parent="."]
