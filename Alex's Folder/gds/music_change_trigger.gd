@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var Conductor = $"../Conductor"
+@onready var Conductor = $"../../Conductor"
 @export var track: music_resource
 @export var change_if_same_music_track: bool
 

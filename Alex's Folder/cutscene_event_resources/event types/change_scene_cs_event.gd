@@ -11,7 +11,7 @@ class_name change_scene_cutscene_event
 func execute(cutscene_trigger: Node) -> void:
 	#place holder
 	
-	var rockp = cutscene_trigger.get_node("../" + str(rock))
+	var rockp = cutscene_trigger.get_node("../../" + str(rock))
 	
 	rockp.get_tree().call_deferred("change_scene_to_file", scene_path)
 	pass

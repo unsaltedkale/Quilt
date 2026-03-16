@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=4 uid="uid://co2xfwuly32r1"]
 
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_p4yn6"]
-[ext_resource type="PackedScene" uid="uid://bifokdbk5ab4o" path="res://Emily WIP/Scenes/player.tscn" id="2_dt4o1"]
+[ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_dt4o1"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="3_75p4f"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="4_6hoer"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_taae4"]
@@ -668,7 +668,9 @@ scale_amount_max = 16.0
 color = Color(9.014493, 7.9436636, 7.8022337, 1)
 color_ramp = SubResource("Gradient_8tppx")
 
-[node name="CutsceneTrigger" parent="." instance=ExtResource("12_kerix")]
+[node name="Cutscene Triggers" type="Node" parent="."]
+
+[node name="CutsceneTrigger" parent="Cutscene Triggers" instance=ExtResource("12_kerix")]
 position = Vector2(3350.0002, -2535)
 scale = Vector2(2.3, 1.91)
 container = ExtResource("13_kd6jj")

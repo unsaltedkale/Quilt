@@ -10,10 +10,10 @@ class_name animation_cutscene_event
 func execute(cutscene_trigger: Node) -> void:
 	
 	var animatorp
-	if cutscene_trigger.get_node("../" + str(animator)) is not AnimatedSprite2D:
-		animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
+	if cutscene_trigger.get_node("../../" + str(animator)) is not AnimatedSprite2D:
+		animatorp = cutscene_trigger.get_node("../../" + str(animator) + "/AnimatedSprite2D")
 	else:
-		animatorp = cutscene_trigger.get_node("../" + str(animator))
+		animatorp = cutscene_trigger.get_node("../../" + str(animator))
 	
 	print(animatorp.to_string() + "-------------------------------------------------")
 	

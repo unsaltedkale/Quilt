@@ -1,21 +1,50 @@
 extends Area2D
 
 @export var always_trigger: bool
+@export var play_on_interact: bool
 @export var container: cutscene_container
 @export var current_event_index: int
 @export var played: bool
-@onready var Player = $"../Player"
-@onready var Camera = $"../Camera2D"
+@onready var player = $"../../Player"
+@onready var Camera = $"../../Camera2D"
+@onready var player_in_trigger: bool
+@export var indicator: Node2D
+
+
+func _ready() -> void:
+	player_in_trigger = false
 
 func _on_area_entered(area: Area2D) -> void:
 	# lock player movement
-	if not played:
-		_read_events()
-		played = true
-	pass # Replace with function body.
+	if area.get_parent().is_in_group("Player"):
+		player_in_trigger = true
+		if indicator != null:
+			indicator._open()
+
+func _on_area_exited(area: Area2D) -> void:
+	if area.get_parent().is_in_group("Player"):
+		player_in_trigger = false
+		if indicator != null:
+			indicator._close()
+
+func _process(delta: float) -> void:
+	if player_in_trigger && not played:
+		if play_on_interact:
+			if Input.is_action_just_pressed("interact"):
+				_read_events()
+				played = true
+				if indicator != null:
+					indicator._close()
+		else:
+			_read_events()
+			played = true
+			if indicator != null:
+					indicator._close()
+		
+	pass
 
 func _read_events():
-	var tempvar = Player.find_child("StateMachine").current_state
+	var tempvar = player.find_child("StateMachine").current_state
 	var camera_zoom = Camera.zoom
 	tempvar.Transition.emit(tempvar, "cutscene")
 	for event in container.events:
@@ -46,5 +75,5 @@ func _read_events():
 	played = true
 	Camera.zoom = camera_zoom
 	Camera.has_control = true
-	tempvar = Player.find_child("StateMachine").current_state
+	tempvar = player.find_child("StateMachine").current_state
 	tempvar.Transition.emit(tempvar, "fall")

@@ -7,6 +7,6 @@ class_name music_change_cutscene_event
 
 
 func execute(cutscene_trigger: Node) -> void:
-	var conductor_real = cutscene_trigger.get_node("../" + str(conductor))
+	var conductor_real = cutscene_trigger.get_tree().get_nodes_in_group("Conductor")[0]
 	conductor_real._change_music_track(music, false)
 	

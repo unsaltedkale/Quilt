@@ -19,7 +19,7 @@ class_name camera_cutscene_event
 
 func execute(cutscene_trigger: Node) -> void:
 	var tween = cutscene_trigger.get_tree().create_tween()
-	var camerap = cutscene_trigger.get_node("../" + str(camera))
+	var camerap = cutscene_trigger.get_node("../../" + str(camera))
 	
 	camerap.has_control = false
 	

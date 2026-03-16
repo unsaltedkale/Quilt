@@ -33,6 +33,7 @@ Conductor=""
 Dialouge_Button=""
 Mirror=""
 Damage_Layer=""
+Interact_Indicator=""
 
 [input]
 
