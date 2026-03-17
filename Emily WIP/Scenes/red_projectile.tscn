@@ -53,5 +53,10 @@ scale = Vector2(7.7199984, 7.7199984)
 sprite_frames = SubResource("SpriteFrames_hsl4c")
 animation = &"FIRE"
 
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(62.85714, 0)
+target_position = Vector2(40, 0)
+collision_mask = 3
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_projectile_entered"]
