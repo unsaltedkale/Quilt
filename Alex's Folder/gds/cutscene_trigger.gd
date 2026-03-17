@@ -19,13 +19,23 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.get_parent().is_in_group("Player"):
 		player_in_trigger = true
 		if indicator != null:
-			indicator._open()
+			if always_trigger:
+				if player.find_child("StateMachine").current_state != Cutscene:
+					indicator._open()
+			elif not always_trigger:
+				if not played:
+					indicator._open()
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.get_parent().is_in_group("Player"):
 		player_in_trigger = false
 		if indicator != null:
-			indicator._close()
+			if always_trigger:
+				if player.find_child("StateMachine").current_state != Cutscene:
+					indicator._close()
+			elif not always_trigger:
+				if not played:
+					indicator._close()
 
 func _process(delta: float) -> void:
 	if player_in_trigger && not played:

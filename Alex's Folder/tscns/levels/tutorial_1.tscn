@@ -2424,6 +2424,7 @@ indicator = NodePath("InteractIndicator")
 [node name="InteractIndicator" parent="Cutscene Triggers/CutsceneTrigger2" groups=["Interact_Indicator"] instance=ExtResource("38_c6e1v")]
 position = Vector2(-0.9238281, -764.38477)
 scale = Vector2(0.23089357, 2.739726)
+type = 1
 
 [node name="CutsceneTrigger3" parent="Cutscene Triggers" instance=ExtResource("23_sp84p")]
 position = Vector2(104680, -40972)
