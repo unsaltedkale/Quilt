@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://dbkib5c4koj33"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_dc8yw"]
+
+[resource]
+script = ExtResource("1_dc8yw")
+text = Dictionary[String, String]({
+"0": "???: What was I thinking— I’ll never find my way out of here…",
+"1": "???: I’ll suffocate in here and no one will care…",
+"2": "???: …",
+"3": "[ ??? has a growing pit in their stomach. ]",
+"4": "???: If… if you can hear me… whoever you were in life…",
+"5": "???: Don’t let me go out like this…",
+"6": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

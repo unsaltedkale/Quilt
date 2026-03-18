@@ -4,13 +4,24 @@ class_name Cutscene
 # Called when the node enters the scene tree for the first time.
 
 @export var automatic_animations_frozen: bool
+@export var prev_position: Vector2
 
 func Enter():
+	prev_position = get_parent().get_parent().position
 	player.velocity = Vector2(0,0)
 	an.play("idle")
 	print("entered cutscene state")
 	
 func Update(_delta):
+	if abs(prev_position.x - player.position.x) > 0.001:
+		#print("click")
+		if prev_position.x > player.position.x:
+			player.find_child("AnimatedSprite2D").flip_h = true
+			pass
+		elif prev_position.x < player.position.x:
+			player.find_child("AnimatedSprite2D").flip_h = false
+			pass
+		pass
 	if not automatic_animations_frozen:
 		if not player.is_on_floor():
 			if player.is_phlo:
@@ -33,6 +44,7 @@ func Update(_delta):
 			else:
 				an.play("idle")
 		pass
+	prev_position = get_parent().get_parent().position
 	
 func Physics_Update(_delta):
 	pass
