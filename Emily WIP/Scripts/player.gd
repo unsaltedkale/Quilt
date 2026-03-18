@@ -41,7 +41,7 @@ func die():
 	spawn_player(spawn_point)
 	
 func _on_hit_box_body_entered(body: Node2D) -> void:
-	print_debug("NAME:" + str(body.name))
+	#print_debug("NAME:" + str(body.name))
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
 		
@@ -54,7 +54,8 @@ func spawn_player(spawn_point: Vector2):
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 	health = max_health  
-	
+
+
 '''
 @export var wall_stick_component: WallStickComponent
 @export var crouch_component: CrouchComponent
