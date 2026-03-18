@@ -9,14 +9,13 @@ var targetZoom
 var isPressed = false
 
 func _ready() -> void:
-	UiReference = $"../../CanvasLayer/UI"
+	UiReference = $"../../CanvasLayer/DialogueUi"
 	areaReferecnce = $Area2D
 	cameraReference = $"../../Camera2D"
 	playerReference = $"../../Player"
 	UiReference.visible = false
 	if playerReference == null:
 		playerReference = false
-	
 
 func _process(delta: float) -> void:
 	if areaReferecnce.isInTrigger == true:

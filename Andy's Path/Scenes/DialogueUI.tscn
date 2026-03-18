@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7htniexo5eqo"]
+
+[ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="1_5lshs"]
+[ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="2_yhc7a"]
+[ext_resource type="Script" uid="uid://ckiaiuvbfmd34" path="res://Andy's Path/Scripts/DialogueText.gd" id="3_vydyq"]
+[ext_resource type="FontFile" uid="uid://cm4qo3xfwurj4" path="res://Andy's Path/Resources/Fonts/pixel_3/pixel.ttf" id="4_fu85m"]
+[ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="5_1xo70"]
+
+[sub_resource type="Theme" id="Theme_6n2ox"]
+
+[node name="DialogueUi" type="Node2D"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueScreen" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationViewer" type="ColorRect" parent="UI/DialogueScreen"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1150.0
+offset_bottom = 648.0
+color = Color(0.12662229, 0.46256143, 0.3947214, 1)
+
+[node name="TextOutine" type="Sprite2D" parent="UI/DialogueScreen"]
+texture_filter = 1
+position = Vector2(673, 140)
+scale = Vector2(6.0681806, 6.068181)
+texture = ExtResource("1_5lshs")
+
+[node name="Dialogue" type="Label" parent="UI/DialogueScreen"]
+process_mode = 3
+layout_mode = 0
+offset_left = 236.0
+offset_top = 94.0
+offset_right = 832.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("2_yhc7a")
+autowrap_mode = 3
+visible_characters_behavior = 1
+script = ExtResource("3_vydyq")
+
+[node name="Button" type="Button" parent="UI/DialogueScreen" groups=["Dialouge_Button"]]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 1155.0
+offset_bottom = 658.0
+theme = SubResource("Theme_6n2ox")
+theme_override_fonts/font = ExtResource("4_fu85m")
+theme_override_font_sizes/font_size = 42
+script = ExtResource("5_1xo70")
+
+[connection signal="pressed" from="UI/DialogueScreen/Button" to="UI/DialogueScreen/Button" method="_on_pressed"]

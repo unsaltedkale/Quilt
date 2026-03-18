@@ -24,8 +24,9 @@ texture = ExtResource("1_pkhjh")
 
 [node name="Title Screen" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 648.0
+scale = Vector2(1.6666099, 1.6666232)
 script = ExtResource("2_1xr1c")
 
 [node name="Background" type="ColorRect" parent="Title Screen"]
@@ -68,10 +69,10 @@ theme_override_colors/font_color = Color(0.39688927, 0.39688927, 0.39688924, 1)
 theme_override_font_sizes/font_size = 159
 text = "QUILT"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Title Screen"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamWAV_tu0on")
 
-[node name="Conductor" parent="Title Screen" instance=ExtResource("3_tu0on")]
+[node name="Conductor" parent="." instance=ExtResource("3_tu0on")]
 current_music_resource = ExtResource("4_2k3je")
 
 [connection signal="pressed" from="Title Screen/Play" to="Title Screen" method="_on_play_pressed"]
