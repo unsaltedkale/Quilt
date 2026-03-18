@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://c70x01da4v53k"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_5kqub"]
+
+[resource]
+script = ExtResource("1_5kqub")
+text = Dictionary[String, String]({
+"0": "[ In front of the SLAB is a TABLET. ]",
+"1": "[ The TABLET has an inscription on it. It says the following: ]",
+"2": "[ HERE LIES SLAUGHTERED, DIVESTED, THE CHARLATAN HERO OF THE ASBESTINE. ]",
+"3": "[ WE ARE SUPERIOR TO THIS ONE PLAYING SAVIOR. ]",
+"4": "[ LET ONLY THE FALLEN PRAY TO THIS SPIRIOUS, BROKEN BASTION. ]",
+"5": "???: …",
+"6": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

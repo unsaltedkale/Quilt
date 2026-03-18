@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://s3dxq1anq0rg" path="res://Art/Phlo Wump.png" id="10_r8smo"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt/Quilt Animation Spritesheet Stop (1).png" id="11_4n2wd"]
 [ext_resource type="Texture2D" uid="uid://d4enw7wsgmurv" path="res://Art/Quilt/Quilt Animation Spritesheet Walk (1).png" id="12_6lnpg"]
-[ext_resource type="Script" uid="uid://bii7udb72wjr5" path="res://Alex's Folder/tscns/phlo_backpack.gd" id="13_m5qh6"]
+[ext_resource type="Script" uid="uid://bii7udb72wjr5" path="res://Alex's Folder/gds/phlo_backpack.gd" id="13_m5qh6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3i1d4"]
 shader = ExtResource("1_p1abe")

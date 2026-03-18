@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="movement_cutscene_event" load_steps=2 format=3 uid="uid://b438w886dppll"]
+
+[ext_resource type="Script" uid="uid://cvo6goabck1ac" path="res://Alex's Folder/cutscene_event_resources/event types/movement_cs_event.gd" id="1_gs4ad"]
+
+[resource]
+script = ExtResource("1_gs4ad")
+mover = NodePath("Camera2D")
+target = Vector2(35310, 4858)
+time = 1.0
+metadata/_custom_type_script = "uid://cvo6goabck1ac"

@@ -6,6 +6,6 @@
 script = ExtResource("1_x31j2")
 camera = NodePath("Camera2D")
 change_zoom = true
-zoom = Vector2(0.001, 0.001)
-zoom_is_relative = true
+zoom = Vector2(0.56, 0.56)
+time = 3.0
 metadata/_custom_type_script = "uid://csualf0138bpc"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://rviumk7i1bpq"]
 
 [ext_resource type="Texture2D" uid="uid://dlkj2a8ydiaqe" path="res://Art/Tool Tips.png" id="1_cljc2"]
-[ext_resource type="Script" uid="uid://xia7bnb0pmi7" path="res://Alex's Folder/tscns/level_tool_tip.gd" id="2_otvnc"]
+[ext_resource type="Script" uid="uid://xia7bnb0pmi7" path="res://Alex's Folder/gds/level_tool_tip.gd" id="2_otvnc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3dyvm"]
 atlas = ExtResource("1_cljc2")

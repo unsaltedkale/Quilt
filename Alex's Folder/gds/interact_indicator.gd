@@ -2,7 +2,6 @@ extends AnimatedSprite2D
 
 enum interact_type {TALK, READ}
 
-@onready var cst = get_parent()
 @export var type = interact_type.TALK
 
 

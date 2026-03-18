@@ -2,6 +2,7 @@ extends Area2D
 
 @export var always_trigger: bool
 @export var play_on_interact: bool
+@export var only_when_grounded: bool
 @export var container: cutscene_container
 @export var current_event_index: int
 @export var played: bool
@@ -39,19 +40,25 @@ func _on_area_exited(area: Area2D) -> void:
 
 func _process(delta: float) -> void:
 	if player_in_trigger && not played:
-		if play_on_interact:
-			if Input.is_action_just_pressed("interact"):
-				_read_events()
-				played = true
-				if indicator != null:
-					indicator._close()
-		else:
-			_read_events()
-			played = true
-			if indicator != null:
-					indicator._close()
+		if play_on_interact && Input.is_action_just_pressed("interact"):
+			if only_when_grounded && player.is_on_floor():
+				_play()
+			elif not only_when_grounded:
+				_play()
+		elif not play_on_interact:
+			if only_when_grounded && player.is_on_floor():
+				_play()
+			elif not only_when_grounded:
+				_play()
 		
 	pass
+
+func _play():
+		_read_events()
+		played = true
+		if indicator != null:
+			indicator._close()
+		pass
 
 func _read_events():
 	var tempvar = player.find_child("StateMachine").current_state

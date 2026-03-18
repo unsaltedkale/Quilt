@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d0l0knbqrd1r5" path="res://Art/Interact Icons/READ UI Interact.png" id="1_y6cj1"]
 [ext_resource type="Texture2D" uid="uid://cxkfyqn2cpn0j" path="res://Art/Interact Icons/TALK UI Interact.png" id="2_tfjyn"]
-[ext_resource type="Script" uid="uid://1m3hpnopov8c" path="res://Alex's Folder/tscns/interact_indicator.gd" id="3_0jypp"]
+[ext_resource type="Script" uid="uid://1m3hpnopov8c" path="res://Alex's Folder/gds/interact_indicator.gd" id="3_0jypp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qmtfb"]
 atlas = ExtResource("1_y6cj1")
@@ -312,6 +312,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"invisible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_b3tj3")
 }, {
 "duration": 1.0,
@@ -353,5 +361,5 @@ animations = [{
 
 [node name="InteractIndicator" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_ehyhv")
-animation = &"open_talk"
+animation = &"invisible"
 script = ExtResource("3_0jypp")
