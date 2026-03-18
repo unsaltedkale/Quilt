@@ -3315,6 +3315,16 @@ type = "movement"
 position = Vector2(5100, -524)
 type = "jump"
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 21325.998
+offset_top = 1229.0
+offset_right = 21611.998
+offset_bottom = 1278.0
+scale = Vector2(2.55, 2.55)
+text = "HOLD [ INTERACT ] AT A RESET POINT
+TO RESPAWN"
+horizontal_alignment = 1
+
 [node name="ResetPoint" parent="." instance=ExtResource("51_xu5pi")]
 position = Vector2(21694, 1136)
 

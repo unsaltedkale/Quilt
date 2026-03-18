@@ -20,7 +20,7 @@ func _ready() -> void:
 	position = inactive_position
 	
 	player_in_trigger = false
-	placeholder_text = "HOLD [INTERACT] TO RESET"
+	placeholder_text = ""
 	find_child("AnimatedSprite2D").play("unactive_checkpoint")
 	pass # Replace with function body.
 

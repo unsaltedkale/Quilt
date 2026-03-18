@@ -147,12 +147,12 @@ scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7ipui")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -144.00003
-offset_top = -73.50001
-offset_right = 67.99997
-offset_bottom = -50.500008
+offset_left = -26.0
+offset_top = -74.00001
+offset_right = 9.616436
+offset_bottom = -51.000008
 scale = Vector2(1.46, 1.46)
-text = "HOLD [INTERACT] TO RESET"
+text = "2.0"
 horizontal_alignment = 1
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

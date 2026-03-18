@@ -12,7 +12,7 @@ func _ready():
 	inactive_sprite = load("res://Art/Quilt STAR-2.png")
 
 func _process(delta: float) -> void:
-	if find_child("Sprite2D").texture == inactive_sprite && respawns == true:
+	if find_child("CollisionShape2D").disabled == true && respawns == true:
 		respawn_timer -= delta
 
 		if respawn_timer <= 0:
@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 			respawn_timer = respawn_timer_max
 
 func _on_STAR_entered(body: Node2D) -> void:
-	if body.is_in_group("Player") && find_child("CollisionShape2D").disabled == false:
+	if body.is_in_group("Player") && find_child("CollisionShape2D").disabled == false && find_child("Sprite2D").texture == active_sprite:
 		print("collected a star")
 		if body.collected_objects < body.max_objects:
 			body.collected_objects += 1
