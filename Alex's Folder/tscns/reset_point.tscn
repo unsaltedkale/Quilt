@@ -128,7 +128,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ipui"]
-size = Vector2(26, 40.25)
+size = Vector2(26, 40.125)
 
 [node name="ResetPoint" type="Area2D" node_paths=PackedStringArray("label")]
 scale = Vector2(2, 2)
@@ -142,6 +142,7 @@ sprite_frames = SubResource("SpriteFrames_y5i35")
 animation = &"active_checkpoint_white"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.125)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7ipui")
 

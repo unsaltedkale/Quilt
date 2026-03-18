@@ -2122,7 +2122,6 @@ animation = &"intro_1_lie_down_inactive"
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
 position = Vector2(20582, -2337)
-is_phlo = true
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 
@@ -3317,7 +3316,7 @@ position = Vector2(5100, -524)
 type = "jump"
 
 [node name="ResetPoint" parent="." instance=ExtResource("51_xu5pi")]
-position = Vector2(21694, 1134)
+position = Vector2(21694, 1136)
 
 [connection signal="finished" from="AudioStreamPlayer" to="Conductor" method="_on_audio_stream_player_finished"]
 [connection signal="pressed" from="CanvasLayer/UI/DialogueScreen/Button" to="CanvasLayer/UI/DialogueScreen/Button" method="_on_pressed"]

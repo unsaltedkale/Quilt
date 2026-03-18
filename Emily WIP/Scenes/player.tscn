@@ -32,7 +32,7 @@
 [ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
 [ext_resource type="AudioStream" uid="uid://dfnkjg7m1oeq0" path="res://Resources/SFX/Quilt Character SFX/Quilt Walkin'.wav" id="25_wjwd1"]
 [ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
-[ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://Resources/SFX/Quilt Character SFX/fireball shoot.wav" id="36_n7wni"]
+[ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://Resources/SFX/Quilt Character SFX/FIREBALL shoot.wav" id="36_n7wni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
 height = 44.0
@@ -1223,6 +1223,7 @@ stream_0 = ExtResource("25_wjwd1")
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
+is_phlo = true
 max_objects = 1
 
 [node name="QuiltCollider" type="CollisionShape2D" parent="."]
