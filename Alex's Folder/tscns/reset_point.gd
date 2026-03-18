@@ -16,12 +16,12 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	original_position = position
-	inactive_position = original_position + Vector2(0, 25)
+	inactive_position = original_position + Vector2(0, 35)
 	position = inactive_position
 	
 	player_in_trigger = false
 	placeholder_text = ""
-	find_child("AnimatedSprite2D").play("unactive_checkpoint")
+	find_child("AnimatedSprite2D").play("unactive_checkpoint_2")
 	pass # Replace with function body.
 
 
@@ -34,23 +34,23 @@ func _process(delta: float) -> void:
 		countdown = false
 		timer = timer_max
 		label.text = placeholder_text
-		find_child("AnimatedSprite2D").play("unactive_checkpoint")
+		find_child("AnimatedSprite2D").play("unactive_checkpoint_2")
 		position = inactive_position
 
 	if countdown:
 		timer -= delta
 		label.text = str(snapped(timer, 0.1))
 		if player.is_phlo:
-			find_child("AnimatedSprite2D").play("active_checkpoint_red")
+			find_child("AnimatedSprite2D").play("active_checkpoint_red_2")
 		else:
-			find_child("AnimatedSprite2D").play("active_checkpoint_white")
+			find_child("AnimatedSprite2D").play("active_checkpoint_white_2")
 		position = original_position
 	
 	if timer <= 0:
 		player.die()
 		timer = timer_max
 		label.text = placeholder_text
-		find_child("AnimatedSprite2D").play("unactive_checkpoint")
+		find_child("AnimatedSprite2D").play("unactive_checkpoint_2")
 		position = inactive_position
 		pass
 

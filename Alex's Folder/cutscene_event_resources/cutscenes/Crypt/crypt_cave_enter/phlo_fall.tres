@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="animation_cutscene_event" load_steps=2 format=3 uid="uid://bhe5vb5ngsegm"]
+
+[ext_resource type="Script" uid="uid://84oaxla2j74g" path="res://Alex's Folder/cutscene_event_resources/event types/animation_cs_event.gd" id="1_df4pt"]
+
+[resource]
+script = ExtResource("1_df4pt")
+animator = NodePath("Player")
+animation_name = "phlo_fall"
+wait_until_done = false
+metadata/_custom_type_script = "uid://84oaxla2j74g"

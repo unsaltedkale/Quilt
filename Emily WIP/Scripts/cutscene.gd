@@ -13,13 +13,25 @@ func Enter():
 func Update(_delta):
 	if not automatic_animations_frozen:
 		if not player.is_on_floor():
-			an.play("fall")
+			if player.is_phlo:
+				an.play("phlo_fall")
+			else:
+				an.play("fall")
 		elif player.velocity.y > 0:
-			an.play("jump")
+			if player.is_phlo:
+				an.play("phlo_jump")
+			else:
+				an.play("jump")
 		elif abs(player.velocity.x) > 0.01:
-			an.play("walk")
+			if player.is_phlo:
+				an.play("phlo_idle")
+			else:
+				an.play("walk")
 		else:
-			an.play("idle")
+			if player.is_phlo:
+				an.play("phlo_idle")
+			else:
+				an.play("idle")
 		pass
 	
 func Physics_Update(_delta):

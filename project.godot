@@ -18,6 +18,8 @@ config/icon="uid://dmcdml67v5cp1"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
 
 [global_group]

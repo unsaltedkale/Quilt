@@ -6,6 +6,11 @@ var playerReference
 var screenIsMoving
 var has_control: bool
 
+# NOTE: camera zoom HAS to evenly divide pixels or else it will double 
+# and half pixels randomly at sprites !!!!!!!!!! looks BAD!!!!
+# zoom like 0.25, 0.5, 1, etc. are good! just need to divide evenly
+
+
 func _ready() -> void:
 	has_control = true
 	screenIsMoving = false

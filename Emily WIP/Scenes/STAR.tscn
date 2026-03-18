@@ -19,7 +19,7 @@ shape = SubResource("RectangleShape2D_cd7gr")
 texture_filter = 1
 position = Vector2(0, -2.3841858e-07)
 rotation = 0.9738937
-scale = Vector2(5.2020907, 5.1654906)
+scale = Vector2(6, 6)
 texture = ExtResource("2_akwti")
 
 [node name="MakeItMusical" parent="." instance=ExtResource("3_akwti")]

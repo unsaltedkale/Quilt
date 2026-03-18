@@ -69,7 +69,8 @@ func _physics_process(delta):
 					if bar_delete == Conductor.barnumber and beat_delete == Conductor.beatnumber and get_node("../CollisionShape2D").disabled == false:
 						set_(false)
 	else:
-		print("condcutor is null")
+		#print("condcutor is null")
+		pass
 		
 func set_(b: bool):
 	# TRUE == platform exists, FALSE == platform does not exist
