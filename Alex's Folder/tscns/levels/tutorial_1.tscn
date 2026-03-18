@@ -1,4 +1,4 @@
-[gd_scene load_steps=218 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=219 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="1_mvhf0"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_2v7i3"]
@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://rviumk7i1bpq" path="res://Alex's Folder/tscns/level_tool_tip.tscn" id="29_5kyg4"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="30_8ce68"]
 [ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="38_c6e1v"]
+[ext_resource type="Resource" uid="uid://cj6lnkf7ujlrv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_slab/crypt_slab_container.tres" id="40_sp84p"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="51_xu5pi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17h1f"]
@@ -2121,7 +2122,7 @@ sprite_frames = SubResource("SpriteFrames_k3luj")
 animation = &"intro_1_lie_down_inactive"
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
-position = Vector2(3739, -2674)
+position = Vector2(73346, -15829)
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 
@@ -2306,7 +2307,7 @@ position = Vector2(53051, -13701)
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform3" index="2"]
 beat_appear = 1.5
 bar_delete = 1.0
-beat_delete = 2.0
+beat_delete = 2.5
 repeat_pattern = true
 mod_bar = 1
 
@@ -2316,7 +2317,7 @@ position = Vector2(53387, -13701)
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform11" index="2"]
 beat_appear = 2.0
 bar_delete = 1.0
-beat_delete = 2.5
+beat_delete = 3.0
 repeat_pattern = true
 mod_bar = 1
 
@@ -2326,7 +2327,7 @@ position = Vector2(53720, -13701)
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform12" index="2"]
 beat_appear = 2.5
 bar_delete = 1.0
-beat_delete = 3.0
+beat_delete = 3.5
 repeat_pattern = true
 mod_bar = 1
 
@@ -2336,7 +2337,7 @@ position = Vector2(54055, -13701)
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform13" index="2"]
 beat_appear = 3.0
 bar_delete = 1.0
-beat_delete = 3.5
+beat_delete = 4.0
 repeat_pattern = true
 mod_bar = 1
 
@@ -2346,7 +2347,7 @@ position = Vector2(54391, -13701)
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform14" index="2"]
 beat_appear = 3.5
 bar_delete = 1.0
-beat_delete = 4.0
+beat_delete = 4.5
 repeat_pattern = true
 mod_bar = 1
 
@@ -2356,7 +2357,7 @@ position = Vector2(54726, -13701)
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform15" index="2"]
 beat_appear = 4.0
 bar_delete = 1.0
-beat_delete = 4.5
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 1
 
@@ -2366,7 +2367,7 @@ position = Vector2(55061, -13701)
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform16" index="2"]
 beat_appear = 4.5
 bar_delete = 1.0
-beat_delete = 1.0
+beat_delete = 1.5
 repeat_pattern = true
 mod_bar = 1
 
@@ -2375,7 +2376,7 @@ position = Vector2(52717, -13701)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform2" index="2"]
 bar_delete = 1.0
-beat_delete = 1.5
+beat_delete = 2.0
 repeat_pattern = true
 mod_bar = 1
 
@@ -2430,6 +2431,18 @@ type = 1
 position = Vector2(104680, -40972)
 scale = Vector2(3.25, 16.68)
 container = ExtResource("26_uv8gf")
+
+[node name="CutsceneTrigger4" parent="Cutscene Triggers" node_paths=PackedStringArray("indicator") instance=ExtResource("23_sp84p")]
+position = Vector2(73923, -14890)
+scale = Vector2(4.26, 2.69)
+play_on_interact = true
+only_when_grounded = true
+container = ExtResource("40_sp84p")
+indicator = NodePath("../InteractIndicator2")
+
+[node name="InteractIndicator2" parent="Cutscene Triggers" instance=ExtResource("38_c6e1v")]
+position = Vector2(73923, -15030)
+type = 1
 
 [node name="Checkpoints" type="Node" parent="."]
 
