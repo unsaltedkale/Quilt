@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://qorxqun0h40h"
-path="res://.godot/imported/Quilt Land 2.wav-cae25afbbd47afa2bb156a9ec3d72554.sample"
+path="res://.godot/imported/Quilt Land 2 (unused).wav-8c483bba7afec85793bf2dd45fcd811b.sample"
 
 [deps]
 
-source_file="res://Resources/SFX/Quilt Character SFX/Quilt Land 2.wav"
-dest_files=["res://.godot/imported/Quilt Land 2.wav-cae25afbbd47afa2bb156a9ec3d72554.sample"]
+source_file="res://Resources/SFX/Unused/Quilt Land 2 (unused).wav"
+dest_files=["res://.godot/imported/Quilt Land 2 (unused).wav-8c483bba7afec85793bf2dd45fcd811b.sample"]
 
 [params]
 

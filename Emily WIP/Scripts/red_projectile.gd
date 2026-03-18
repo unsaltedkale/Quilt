@@ -3,11 +3,14 @@ extends Area2D
 @onready var ray = $RayCast2D
 @export var speed : Vector2
 var projectile_direction: Vector2 = Vector2.RIGHT
-
+const sfx_end = preload("res://Resources/SFX/Quilt Character SFX/fireball end.wav")
 
 func _ready() -> void:
 	ray.enabled = true
 	ray.target_position = Vector2(20,0)
+	await get_tree().create_timer(10).timeout
+	print("timed out")
+	queue_free()
 
 func _process(_delta):
 	$Sprite2D.play("FIRE")
@@ -29,15 +32,18 @@ func _physics_process(delta) -> void:
 				
 func _on_projectile_entered(body:Node2D):
 	if body.is_in_group("tilemap"):
+		_play_extinguish_sound()
 		queue_free()
 		
 func _on_area_entered(body: Area2D):
 	if body.is_in_group("Stasis"):
+		#_play_extinguish_sound() dont play sound because it will clash with stasis sfx
 		queue_free()
 
 func _play_extinguish_sound():
 	var sound = AudioStreamPlayer.new()
 	sound.finished.connect(sound.queue_free)
-	#TODO: Load fireball end sound effect
+	sound.stream = sfx_end
 	get_tree().current_scene.add_child(sound)
+	sound.play(0.33)
 	
