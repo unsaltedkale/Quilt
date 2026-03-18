@@ -6,5 +6,5 @@
 script = ExtResource("1_g2anb")
 camera = NodePath("Camera2D")
 change_position = true
-position = Vector2(637, -325)
+position = Vector2(784, -89)
 metadata/_custom_type_script = "uid://csualf0138bpc"

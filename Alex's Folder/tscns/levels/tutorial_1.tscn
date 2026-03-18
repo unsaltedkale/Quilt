@@ -2122,7 +2122,7 @@ sprite_frames = SubResource("SpriteFrames_k3luj")
 animation = &"intro_1_lie_down_inactive"
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
-position = Vector2(73346, -15829)
+position = Vector2(35404, 5001)
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 
