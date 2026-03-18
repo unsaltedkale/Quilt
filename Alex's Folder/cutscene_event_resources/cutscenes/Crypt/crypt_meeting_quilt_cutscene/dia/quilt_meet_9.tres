@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_7crn1")
 text = Dictionary[String, String]({
-"0": "PHLO: …Oh.",
+"0": "PHLO: Please get me out of here, QUILT.",
 "1": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

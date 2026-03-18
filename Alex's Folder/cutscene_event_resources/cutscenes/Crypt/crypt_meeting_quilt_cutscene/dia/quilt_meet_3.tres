@@ -6,6 +6,6 @@
 script = ExtResource("1_2ig7k")
 text = Dictionary[String, String]({
 "0": "???: What the—?! My flare just… hello?",
-"6": ""
+"1": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
