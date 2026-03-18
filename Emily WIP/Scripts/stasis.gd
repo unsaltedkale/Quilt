@@ -17,3 +17,10 @@ func on_body_entered(area: Area2D):
 			player.is_stasis = true
 			player.position = position
 			player.collected_objects = player.max_objects
+			$"SFX/Stasis Hum".play()
+			$"SFX/Enter Stasis".play()
+
+func on_body_exited(area: Area2D):
+	if area.is_in_group("Player"):
+		$"SFX/Stasis Hum".stop()
+		$"SFX/Exit Stasis".play()

@@ -1,7 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bm11upje0c6f2"]
+[gd_scene load_steps=16 format=3 uid="uid://bm11upje0c6f2"]
 
 [ext_resource type="Script" uid="uid://2mt3fdvrlct7" path="res://Emily WIP/Scripts/stasis.gd" id="1_r3qni"]
 [ext_resource type="Texture2D" uid="uid://btnfovw1agbdu" path="res://Art/Stasis Chamber.png" id="2_r3qni"]
+[ext_resource type="AudioStream" uid="uid://7amg26gynfed" path="res://Resources/SFX/Stasis SFX/Stasis Hum.wav" id="3_mp70r"]
+[ext_resource type="AudioStream" uid="uid://da01yfulq5dh6" path="res://Resources/SFX/Stasis SFX/Enter Stasis.wav" id="4_axs2h"]
+[ext_resource type="AudioStream" uid="uid://c83anh7poo8gw" path="res://Resources/SFX/Stasis SFX/Exit Stasis.wav" id="5_djhpt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3qni"]
 height = 28.91566
@@ -78,6 +81,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_mp70r"]
+fade_time = 1.0
+stream_count = 1
+stream_0 = ExtResource("3_mp70r")
+
 [node name="Stasis" type="Area2D" groups=["Stasis"]]
 script = ExtResource("1_r3qni")
 
@@ -90,6 +98,18 @@ position = Vector2(-5.0000005, 3.0000005)
 scale = Vector2(6.07, 6.07)
 sprite_frames = SubResource("SpriteFrames_wiqrp")
 animation = &"inactive"
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Stasis Hum" type="AudioStreamPlayer" parent="SFX"]
+stream = SubResource("AudioStreamPlaylist_mp70r")
+
+[node name="Enter Stasis" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_axs2h")
+volume_db = -15.0
+
+[node name="Exit Stasis" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_djhpt")
 
 [connection signal="area_entered" from="." to="." method="on_body_entered"]
 [connection signal="body_entered" from="." to="." method="on_body_entered"]

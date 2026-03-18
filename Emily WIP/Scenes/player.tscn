@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=3 uid="uid://dt1w85276yf8y"]
+[gd_scene load_steps=194 format=3 uid="uid://dt1w85276yf8y"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
@@ -31,8 +31,9 @@
 [ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
 [ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
 [ext_resource type="AudioStream" uid="uid://dfnkjg7m1oeq0" path="res://Resources/SFX/Quilt Character SFX/Quilt Walkin'.wav" id="25_wjwd1"]
+[ext_resource type="AudioStream" uid="uid://xewlitg8yvow" path="res://Resources/SFX/Phlo SFX/Phlo Death .wav" id="34_2k042"]
 [ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
-[ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://Resources/SFX/Quilt Character SFX/FIREBALL shoot.wav" id="36_n7wni"]
+[ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://Resources/SFX/Quilt Character SFX/fireball shoot.wav" id="36_n7wni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
 height = 44.0
@@ -1312,6 +1313,9 @@ stream = SubResource("AudioStreamPlaylist_hiv3f")
 stream = ExtResource("36_n7wni")
 volume_db = -15.0
 max_polyphony = 6
+
+[node name="Take Damage (Phlo)" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("34_2k042")
 
 [connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]
 [connection signal="stop_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="stop"]

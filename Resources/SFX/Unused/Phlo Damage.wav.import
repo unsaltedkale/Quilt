@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dhfkldowqtpcs"
-path="res://.godot/imported/Phlo Damage.wav-1cb646d6f7af9515ec0b70d4be3a7544.sample"
+path="res://.godot/imported/Phlo Damage.wav-34ddd5e973bedc5df1dcaadbaafea81d.sample"
 
 [deps]
 
-source_file="res://Resources/SFX/Phlo SFX/Phlo Damage.wav"
-dest_files=["res://.godot/imported/Phlo Damage.wav-1cb646d6f7af9515ec0b70d4be3a7544.sample"]
+source_file="res://Resources/SFX/Unused/Phlo Damage.wav"
+dest_files=["res://.godot/imported/Phlo Damage.wav-34ddd5e973bedc5df1dcaadbaafea81d.sample"]
 
 [params]
 
