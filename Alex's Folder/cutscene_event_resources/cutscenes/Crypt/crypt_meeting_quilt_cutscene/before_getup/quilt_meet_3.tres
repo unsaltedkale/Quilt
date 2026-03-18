@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="dialouge_cutscene_event" load_steps=2 format=3 uid="uid://bsyn3ehwr5wc8"]
+
+[ext_resource type="Script" uid="uid://g78pi7crnayb" path="res://Alex's Folder/cutscene_event_resources/event types/dialouge_cs_event.gd" id="1_07ep2"]
+
+[resource]
+script = ExtResource("1_07ep2")
+metadata/_custom_type_script = "uid://g78pi7crnayb"

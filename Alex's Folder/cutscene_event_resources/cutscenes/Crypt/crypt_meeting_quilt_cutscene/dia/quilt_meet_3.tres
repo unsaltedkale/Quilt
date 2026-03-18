@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://d0tkcxj2fpf7"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_2ig7k"]
+
+[resource]
+script = ExtResource("1_2ig7k")
+text = Dictionary[String, String]({
+"0": "???: What the—?! My flare just… hello?",
+"1": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

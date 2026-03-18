@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://n1erm7nb3uy5"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_jmhj7"]
+
+[resource]
+script = ExtResource("1_jmhj7")
+text = Dictionary[String, String]({
+"0": "PHLO: QUILT?",
+"1": "[ QUILT nods their head in the affirmative. ]",
+"2": "PHLO: You— You can understand me!",
+"3": "PHLO: That’s… that’s a good name, QUILT.",
+"4": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

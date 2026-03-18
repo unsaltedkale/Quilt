@@ -17,13 +17,10 @@ func Update(_delta):
 		else:
 			an.play("fall")
 	if player.is_on_floor():
-		print("player on floor")
 		if player.is_phlo:
 			an.play("phlo_land")
 		else:
 			an.play("land")
-		has_landed.emit()
-		#this code doesn't run when it should
 
 func Physics_Update(_delta):
 	if player.velocity.y <= max_grav:
@@ -35,6 +32,7 @@ func Physics_Update(_delta):
 	if player.is_on_floor():
 		player.velocity.x = 0
 		Transition.emit(self, "idle")
+		has_landed.emit() #signal to play landing sfx
 		player.collected_objects = player.max_objects
 	if player.is_stasis:
 		Transition.emit(self, "stasis")

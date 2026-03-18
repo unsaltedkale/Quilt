@@ -2105,15 +2105,15 @@ expand_margin_bottom = 3.0
 
 [node name="Tutorial1" type="Node2D"]
 
-[node name="phlo_backpack" parent="." instance=ExtResource("1_mvhf0")]
-visible = false
-position = Vector2(36746, 4850)
-scale = Vector2(4, 4)
-
 [node name="CryptQuiltPlinth" type="Sprite2D" parent="."]
 position = Vector2(35310, 5010)
 scale = Vector2(4.79, 4.79)
 texture = ExtResource("2_w8577")
+
+[node name="phlo_backpack" parent="." instance=ExtResource("1_mvhf0")]
+visible = false
+position = Vector2(36746, 4850)
+scale = Vector2(4, 4)
 
 [node name="fake quilt" type="AnimatedSprite2D" parent="."]
 position = Vector2(35238, 4981)
