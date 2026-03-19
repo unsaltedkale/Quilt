@@ -1,13 +1,22 @@
-[gd_scene load_steps=17 format=4 uid="uid://dhad0arf8wbp3"]
+[gd_scene load_steps=29 format=4 uid="uid://dhad0arf8wbp3"]
 
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="1_00bfq"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="1_dkbfa"]
+[ext_resource type="PackedScene" uid="uid://by0fnkk1m6i8f" path="res://Alex's Folder/tscns/flow_appearance.tscn" id="2_5qtfe"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="2_08pgk"]
 [ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_xjp2i"]
-[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="3_6jgst"]
+[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/orange_town.tres" id="3_iw5h8"]
+[ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="5_iw5h8"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="6_08pgk"]
 [ext_resource type="Resource" uid="uid://dhviui8cc6ihb" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Enter Orange Wasteland/container_enter_orange_wastes.tres" id="7_6jgst"]
 [ext_resource type="Resource" uid="uid://q7ng5lvh7kdp" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Meet Flow/meet_flow_container.tres" id="8_xl5kd"]
+[ext_resource type="PackedScene" uid="uid://2bpi2d7g1hn7" path="res://Alex's Folder/tscns/metronome.tscn" id="11_7to8y"]
+[ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="12_bajuo"]
+[ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="13_nunvv"]
+[ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="14_r5m36"]
+[ext_resource type="Script" uid="uid://ckiaiuvbfmd34" path="res://Andy's Path/Scripts/DialogueText.gd" id="15_4m7gb"]
+[ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="16_1epo3"]
+[ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="17_1dqyg"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_xl5kd"]
 
@@ -860,10 +869,37 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xl5kd")
 
+[sub_resource type="Theme" id="Theme_yh6dc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu8bv"]
+bg_color = Color(0.42105085, 0.6593775, 0.5580529, 1)
+border_width_left = 70
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.78350765, 0.7930483, 0.78495806, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 70.0
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uep3"]
+bg_color = Color(0.7357423, 0.5476578, 0.51643217, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_top = 3.0
+expand_margin_right = 4.0
+expand_margin_bottom = 3.0
+
 [node name="OrangeWastes1" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(637, -659)
+position = Vector2(8681, -1279)
 scale = Vector2(4, 4)
 zoom = Vector2(0.5, 0.5)
 limit_enabled = false
@@ -875,14 +911,21 @@ script = ExtResource("1_00bfq")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamWAV_xl5kd")
 
+[node name="FlowAppearance" parent="." instance=ExtResource("2_5qtfe")]
+position = Vector2(9225, -799)
+frame_progress = 0.6145071
+
 [node name="Conductor" parent="." instance=ExtResource("2_08pgk")]
 position = Vector2(-211.9961, -1082)
 scale = Vector2(4, 4)
-current_music_resource = ExtResource("3_6jgst")
+current_music_resource = ExtResource("3_iw5h8")
 
 [node name="Player" parent="." instance=ExtResource("1_dkbfa")]
-position = Vector2(-416, -89)
+position = Vector2(8106, -801)
 is_phlo = false
+
+[node name="phlo_backpack" parent="." instance=ExtResource("5_iw5h8")]
+position = Vector2(-511, -185)
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 
@@ -909,3 +952,103 @@ container = ExtResource("7_6jgst")
 position = Vector2(8361, -1118.0001)
 scale = Vector2(3.82, 6.227)
 container = ExtResource("8_xl5kd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Metronome" parent="CanvasLayer" instance=ExtResource("11_7to8y")]
+visible = false
+position = Vector2(560, 580)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(560, 580)
+scale = Vector2(5.59, 5.59)
+texture = ExtResource("12_bajuo")
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueScreen" type="Control" parent="CanvasLayer/UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationViewer" type="ColorRect" parent="CanvasLayer/UI/DialogueScreen"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1150.0
+offset_bottom = 648.0
+color = Color(0.12662229, 0.46256143, 0.3947214, 1)
+
+[node name="TextOutine" type="Sprite2D" parent="CanvasLayer/UI/DialogueScreen"]
+texture_filter = 1
+position = Vector2(673, 140)
+scale = Vector2(6.0681806, 6.068181)
+texture = ExtResource("13_nunvv")
+
+[node name="Dialogue" type="Label" parent="CanvasLayer/UI/DialogueScreen"]
+process_mode = 3
+layout_mode = 0
+offset_left = 236.0
+offset_top = 94.0
+offset_right = 832.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("14_r5m36")
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+visible_characters_behavior = 1
+script = ExtResource("15_4m7gb")
+
+[node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen" groups=["Dialouge_Button"]]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 647.0
+theme = SubResource("Theme_yh6dc")
+theme_override_fonts/font = ExtResource("16_1epo3")
+theme_override_font_sizes/font_size = 42
+script = ExtResource("17_1dqyg")
+
+[node name="Settings" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="CanvasLayer/Settings"]
+layout_mode = 0
+offset_right = 1147.0
+offset_bottom = 645.0
+color = Color(0.36098644, 0.43022326, 0.4866202, 1)
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Settings"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 19.0
+offset_right = 402.0
+offset_bottom = 69.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_vu8bv")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6uep3")
+value = 100.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings/HSlider"]
+layout_mode = 0
+offset_left = -68.0
+offset_top = 19.0
+offset_right = -1.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_r5m36")
+theme_override_font_sizes/font_size = 13
+text = "Text Size"
+
+[connection signal="pressed" from="CanvasLayer/UI/DialogueScreen/Button" to="CanvasLayer/UI/DialogueScreen/Button" method="_on_pressed"]

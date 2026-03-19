@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://dab1buvb12g0f"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_o3va6"]
+
+[resource]
+script = ExtResource("1_o3va6")
+text = Dictionary[String, String]({
+"0": "QUILT: …",
+"1": "PHLO: ( QUILT… did— )",
+"2": "[ QUILT’s thoughts are stilted. ]",
+"3": "QUILT: ( Don’t. listen to them. )",
+"4": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

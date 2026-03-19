@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="music_resource" load_steps=3 format=3 uid="uid://dl51jjqd6i8vd"]
+
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_f5wyw"]
+[ext_resource type="AudioStream" uid="uid://bnp72hhjpwb1u" path="res://Alex's Folder/music_resources/music_tracks/Orange II_ Town 80.mp3" id="2_y0sac"]
+
+[resource]
+script = ExtResource("1_f5wyw")
+track = ExtResource("2_y0sac")
+bpm = 80.0
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"

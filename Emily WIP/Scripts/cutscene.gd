@@ -13,6 +13,7 @@ func Enter():
 	print("entered cutscene state")
 	
 func Update(_delta):
+	player.velocity.x = 0
 	if abs(prev_position.x - player.position.x) > 0.001:
 		#print("click")
 		if prev_position.x > player.position.x:

@@ -691,6 +691,7 @@ animations = [{
 [node name="phlo_backpack" type="CharacterBody2D"]
 z_index = -1
 material = SubResource("ShaderMaterial_3i1d4")
+scale = Vector2(4, 4)
 script = ExtResource("13_m5qh6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

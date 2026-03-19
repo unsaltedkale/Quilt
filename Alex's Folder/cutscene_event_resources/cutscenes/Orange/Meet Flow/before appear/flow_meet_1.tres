@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="dialouge_cutscene_event" load_steps=3 format=3 uid="uid://bsho4ptrt3254"]
+
+[ext_resource type="Script" uid="uid://g78pi7crnayb" path="res://Alex's Folder/cutscene_event_resources/event types/dialouge_cs_event.gd" id="1_j8yuf"]
+[ext_resource type="Resource" uid="uid://e6dxp4w4v8sx" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Meet Flow/dia/flow_meet_1.tres" id="1_ts4fp"]
+
+[resource]
+script = ExtResource("1_j8yuf")
+dia = ExtResource("1_ts4fp")
+metadata/_custom_type_script = "uid://g78pi7crnayb"

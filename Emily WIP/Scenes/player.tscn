@@ -1,4 +1,4 @@
-[gd_scene load_steps=221 format=3 uid="uid://dt1w85276yf8y"]
+[gd_scene load_steps=222 format=3 uid="uid://dt1w85276yf8y"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
@@ -687,6 +687,10 @@ region = Rect2(0, 88, 34, 44)
 atlas = ExtResource("9_17h1f")
 region = Rect2(0, 132, 34, 44)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_igtxv"]
+atlas = ExtResource("9_17h1f")
+region = Rect2(0, 88, 34, 44)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_7bnyx"]
 atlas = ExtResource("10_ltfw8")
 region = Rect2(0, 0, 29, 46)
@@ -1333,6 +1337,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"stop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igtxv")
+}],
+"loop": true,
+"name": &"tense",
 "speed": 5.0
 }, {
 "frames": [{

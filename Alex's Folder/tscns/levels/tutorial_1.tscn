@@ -2297,12 +2297,11 @@ sprite_frames = SubResource("SpriteFrames_xo4aa")
 animation = &"intro_1_lie_down_inactive"
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
-position = Vector2(35314, 4965)
+position = Vector2(3742, -2675)
 
 [node name="phlo_backpack" parent="." instance=ExtResource("1_mvhf0")]
 visible = false
 position = Vector2(36746, 4850)
-scale = Vector2(4, 4)
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 

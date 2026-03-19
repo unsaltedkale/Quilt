@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=3 uid="uid://by0fnkk1m6i8f"]
+
+[ext_resource type="Texture2D" uid="uid://0hhuokw2fubi" path="res://Art/Blue Flow/Blue Flow Cloak Idle.png" id="1_k1h1i"]
+[ext_resource type="Texture2D" uid="uid://cqargt3jlju57" path="res://Art/Blue Flow/Blue Flow No Cloak Idle.png" id="2_57stf"]
+[ext_resource type="Texture2D" uid="uid://dxtp3xakk16vl" path="res://Art/Blue Flow/Blue Flow Hidden Idle.png" id="3_wwhs5"]
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="4_57stf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75pem"]
+atlas = ExtResource("1_k1h1i")
+region = Rect2(0, 0, 18, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nmnw"]
+atlas = ExtResource("1_k1h1i")
+region = Rect2(0, 45, 18, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpbyw"]
+atlas = ExtResource("2_57stf")
+region = Rect2(0, 0, 18, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_as6eu"]
+atlas = ExtResource("2_57stf")
+region = Rect2(0, 45, 18, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6l1s"]
+atlas = ExtResource("3_wwhs5")
+region = Rect2(0, 0, 17, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgad5"]
+atlas = ExtResource("3_wwhs5")
+region = Rect2(0, 45, 17, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_12l00"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75pem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nmnw")
+}],
+"loop": true,
+"name": &"half_cloak_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpbyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_as6eu")
+}],
+"loop": true,
+"name": &"no_cloak_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6l1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgad5")
+}],
+"loop": true,
+"name": &"whole_cloak_idle",
+"speed": 2.0
+}]
+
+[node name="FlowAppearance" type="AnimatedSprite2D"]
+scale = Vector2(4.25, 4.25)
+sprite_frames = SubResource("SpriteFrames_12l00")
+animation = &"whole_cloak_idle"
+frame_progress = 0.07319518
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 20
+texture = ExtResource("4_57stf")
+emission_shape = 1
+emission_sphere_radius = 1.35
+direction = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 92.9
+initial_velocity_max = 200.48
+radial_accel_min = 13.69
+radial_accel_max = 13.69
+scale_amount_min = 8.0
+scale_amount_max = 16.0

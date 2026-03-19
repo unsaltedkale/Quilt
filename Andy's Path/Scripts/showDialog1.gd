@@ -44,7 +44,7 @@ func _on_pressed() -> void:
 			
 		if dialogue_counter > len(dialogFolder.text) - 2:
 			UiReference.visible = false
-			$"../../../../NPCs/TestNPC".isPressed = false	
+			#$"../../../../NPCs/TestNPC".isPressed = false	
 			dialogue_counter = 0
 			dialouge_finished.emit()
 		isTyping = false

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnp72hhjpwb1u"
+path="res://.godot/imported/Orange II_ Town 80.mp3-feba2b6010fa415aaa027abc3c30c5d6.mp3str"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/music_tracks/Orange II_ Town 80.mp3"
+dest_files=["res://.godot/imported/Orange II_ Town 80.mp3-feba2b6010fa415aaa027abc3c30c5d6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
