@@ -23,10 +23,17 @@ func _ready() -> void:
 	dialogue_counter = 0
 	dialogueReference.add_theme_font_size_override("font_size", font_size)
 
+func _input(event: InputEvent) -> void:
+	pass
+	#probably works but commenting it out just in case -- alex
+	#if event.is_action_pressed("interact") && dialogFolder != null:
+		#_on_pressed()
+
 func _on_pressed() -> void:
 	if dialogFolder != null:
 		line = dialogFolder.text[str(dialogue_counter)]
 	if not isTyping:
+		print("boop")
 		dialogueReference.visible_characters = 0
 		isTyping = true
 		text = line
