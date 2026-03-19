@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var ray = $RayCast2D
 @export var speed : Vector2
-var projectile_direction: Vector2 = Vector2.RIGHT
+var projectile_direction: Vector2 
 const sfx_end = preload("res://Resources/SFX/Quilt Character SFX/fireball end.wav")
 
 func _ready() -> void:
