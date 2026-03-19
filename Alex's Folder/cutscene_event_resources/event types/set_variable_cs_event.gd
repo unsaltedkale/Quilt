@@ -26,6 +26,8 @@ func execute(cutscene_trigger: Node) -> void:
 	elif actor_real.get(variable_name) is Vector2:
 		value = value_vector2
 		pass
+	elif actor_real.get(variable_name) is int:
+		value = floor(value_float)
 	actor_real.set_deferred(variable_name, value)
 	pass
 	

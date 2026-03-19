@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="dialouge_cutscene_event" load_steps=2 format=3 uid="uid://cw0dxjm8ourmi"]
+[gd_resource type="Resource" script_class="dialouge_cutscene_event" load_steps=3 format=3 uid="uid://cw0dxjm8ourmi"]
 
 [ext_resource type="Script" uid="uid://g78pi7crnayb" path="res://Alex's Folder/cutscene_event_resources/event types/dialouge_cs_event.gd" id="1_3p0b7"]
+[ext_resource type="Resource" uid="uid://48ilwaneymlc" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/dia/quilt_meet_9.tres" id="1_haqyr"]
 
 [resource]
 script = ExtResource("1_3p0b7")
+dia = ExtResource("1_haqyr")
 metadata/_custom_type_script = "uid://g78pi7crnayb"

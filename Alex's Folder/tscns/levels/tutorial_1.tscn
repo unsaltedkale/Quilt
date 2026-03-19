@@ -1,4 +1,4 @@
-[gd_scene load_steps=219 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=218 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="1_mvhf0"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_2v7i3"]
@@ -33,7 +33,6 @@
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="16_w15ut"]
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="17_psnuy"]
 [ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="17_vl6hs"]
-[ext_resource type="FontFile" uid="uid://r01mvlj6msuj" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437.ttf" id="18_tdt2l"]
 [ext_resource type="Texture2D" uid="uid://s3dxq1anq0rg" path="res://Art/Phlo Wump.png" id="18_vlsoc"]
 [ext_resource type="Script" uid="uid://ckiaiuvbfmd34" path="res://Andy's Path/Scripts/DialogueText.gd" id="19_6bep7"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt/Quilt Animation Spritesheet Stop (1).png" id="19_50pfw"]
@@ -2106,14 +2105,9 @@ expand_margin_bottom = 3.0
 [node name="Tutorial1" type="Node2D"]
 
 [node name="CryptQuiltPlinth" type="Sprite2D" parent="."]
-position = Vector2(35310, 5010)
+position = Vector2(35310, 5010.9995)
 scale = Vector2(4.79, 4.79)
 texture = ExtResource("2_w8577")
-
-[node name="phlo_backpack" parent="." instance=ExtResource("1_mvhf0")]
-visible = false
-position = Vector2(36746, 4850)
-scale = Vector2(4, 4)
 
 [node name="fake quilt" type="AnimatedSprite2D" parent="."]
 position = Vector2(35238, 4981)
@@ -2122,7 +2116,12 @@ sprite_frames = SubResource("SpriteFrames_k3luj")
 animation = &"intro_1_lie_down_inactive"
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
-position = Vector2(35404, 5001)
+position = Vector2(35330, 4931)
+
+[node name="phlo_backpack" parent="." instance=ExtResource("1_mvhf0")]
+visible = false
+position = Vector2(36746, 4850)
+scale = Vector2(4, 4)
 
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 
@@ -2159,7 +2158,7 @@ position = Vector2(4317, 436)
 current_music_resource = ExtResource("6_t7uf3")
 
 [node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
-position = Vector2(35337, 5660)
+position = Vector2(35337, 5784)
 amount = 60
 texture = ExtResource("10_yy6t6")
 lifetime = 3.51
@@ -2433,8 +2432,8 @@ scale = Vector2(3.25, 16.68)
 container = ExtResource("26_uv8gf")
 
 [node name="CutsceneTrigger4" parent="Cutscene Triggers" node_paths=PackedStringArray("indicator") instance=ExtResource("23_sp84p")]
-position = Vector2(73923, -14890)
-scale = Vector2(4.26, 2.69)
+position = Vector2(73923, -14780)
+scale = Vector2(4.26, 0.18)
 play_on_interact = true
 only_when_grounded = true
 container = ExtResource("40_sp84p")
@@ -3267,7 +3266,7 @@ offset_left = 236.0
 offset_top = 94.0
 offset_right = 832.0
 offset_bottom = 150.0
-theme_override_fonts/font = ExtResource("18_tdt2l")
+theme_override_fonts/font = ExtResource("22_xu5pi")
 theme_override_font_sizes/font_size = 30
 autowrap_mode = 3
 visible_characters_behavior = 1
