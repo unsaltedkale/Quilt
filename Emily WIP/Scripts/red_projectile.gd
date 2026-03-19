@@ -22,7 +22,6 @@ func _physics_process(delta) -> void:
 	
 	if ray.is_colliding():
 		var collider = ray.get_collider()
-		print("Ray Hit Something")
 
 		if collider and collider.is_in_group("Mirror"):
 			var normal = ray.get_collision_normal()
