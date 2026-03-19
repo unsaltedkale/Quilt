@@ -34,7 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://xewlitg8yvow" path="res://Resources/SFX/Phlo SFX/Phlo Death .wav" id="34_2k042"]
 [ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
 [ext_resource type="AudioStream" uid="uid://cy2yj5j10fpl6" path="res://Resources/SFX/Quilt Character SFX/Quilt Jump.wav" id="35_vfdg1"]
-[ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://Resources/SFX/Quilt Character SFX/fireball shoot.wav" id="36_n7wni"]
+[ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://Resources/SFX/Quilt Character SFX/FIREBALL shoot.wav" id="36_n7wni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
 height = 44.0

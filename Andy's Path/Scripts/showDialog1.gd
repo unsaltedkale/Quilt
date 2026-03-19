@@ -31,9 +31,10 @@ func _on_pressed() -> void:
 		isTyping = true
 		text = line
 		for i in len(line):
+			await wait(0.01) # moving this before fixed number not moving up
 			dialogueReference.visible_characters += 1
-			#print(str(dialogueReference.visible_characters) + " / " + str(len(line)))
-			await wait(0.01)
+			#print(str(i) + " / " + str(dialogueReference.visible_characters) + " / " + str(len(line)))
+			
 		if dialogue_counter > len(dialogFolder.text) - 2:
 			UiReference.visible = false
 			$"../../../../NPCs/TestNPC".isPressed = false	

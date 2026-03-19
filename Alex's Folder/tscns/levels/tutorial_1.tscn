@@ -2116,7 +2116,7 @@ sprite_frames = SubResource("SpriteFrames_k3luj")
 animation = &"intro_1_lie_down_inactive"
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
-position = Vector2(35330, 4931)
+position = Vector2(35226, 4965)
 
 [node name="phlo_backpack" parent="." instance=ExtResource("1_mvhf0")]
 visible = false
