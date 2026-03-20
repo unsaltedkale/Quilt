@@ -42,7 +42,7 @@ func Physics_Update(_delta):
 		Transition.emit(self,"fall")
 	if player.is_on_floor():
 		Transition.emit(self, "idle")
-	if player.is_stasis:
+	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
 
 func _physics_process(_delta) -> void:

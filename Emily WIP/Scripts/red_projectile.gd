@@ -37,7 +37,8 @@ func _on_projectile_entered(body:Node2D):
 func _on_area_entered(body: Area2D):
 	if body.is_in_group("Stasis"):
 		#_play_extinguish_sound() dont play sound because it will clash with stasis sfx
-		queue_free()
+		if body.timer <= 0: #if the player wasn't just in this stasis chamber
+			queue_free()
 
 func _play_extinguish_sound():
 	var sound = AudioStreamPlayer.new()

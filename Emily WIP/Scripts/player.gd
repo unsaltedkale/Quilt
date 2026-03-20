@@ -5,7 +5,7 @@ class_name Player
 @export var is_phlo: bool = false
 var collected_objects: int
 @export var max_objects: int
-var is_stasis: bool = false
+var current_stasis: stasis_obj = null #Replaces is_stasis: we need to know which stasis chamber we're in to teleport to the right one
 
 @export var max_health: int = 1
 var health: int
@@ -49,7 +49,8 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 #Respawn
 func set_checkpoint(pos):
 	spawn_point = pos
-	
+
+
 func spawn_player(spawn_point: Vector2):
 	global_position = spawn_point
 	velocity = Vector2.ZERO

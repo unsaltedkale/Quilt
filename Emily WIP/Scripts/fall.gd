@@ -34,5 +34,5 @@ func Physics_Update(_delta):
 		Transition.emit(self, "idle")
 		has_landed.emit() #signal to play landing sfx
 		player.collected_objects = player.max_objects
-	if player.is_stasis:
+	if player.current_stasis != null:
 		Transition.emit(self, "stasis")

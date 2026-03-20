@@ -31,7 +31,7 @@ func Physics_Update(_delta):
 		Transition.emit(self, "jump")
 	if Input.is_action_just_pressed("fire_projectile") and player.collected_objects != 0:
 		Transition.emit(self, "recoil")
-	if player.is_stasis:
+	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
 
 func Exit():

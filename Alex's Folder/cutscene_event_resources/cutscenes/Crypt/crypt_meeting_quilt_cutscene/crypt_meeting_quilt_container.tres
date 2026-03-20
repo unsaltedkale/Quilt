@@ -37,7 +37,7 @@
 [ext_resource type="Resource" uid="uid://ct3ff80fdjx6h" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/after_getup/phlo_idle.tres" id="19_uwwqg"]
 [ext_resource type="Resource" uid="uid://cnd7pq7f60q63" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/after_getup/quilt_meet_7.tres" id="20_nm1lp"]
 [ext_resource type="Resource" uid="uid://yyvbkp0851ay" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/after_getup/set_fake_z_index.tres" id="23_a4t4s"]
-[ext_resource type="Resource" uid="uid://dfvdsecehte1a" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/after_getup/quilt_meet_8.tres" id="23_uwwqg"]
+[ext_resource type="Resource" uid="uid://dfvdsecehte1a" path="res://Alex's Folder/tscns/levels/quilt_meet_8.tres" id="23_uwwqg"]
 [ext_resource type="Resource" uid="uid://d0lm8m2lfuroa" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/zoom_out_reset.tres" id="24_2031a"]
 [ext_resource type="Resource" uid="uid://bwd8fnxqstfxs" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/after_getup/turn_right.tres" id="32_0y86r"]
 [ext_resource type="Resource" uid="uid://cw0dxjm8ourmi" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/after_getup/quilt_meet_9.tres" id="32_a4t4s"]
