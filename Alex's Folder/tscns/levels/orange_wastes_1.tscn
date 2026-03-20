@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dhad0arf8wbp3"]
+[gd_scene load_steps=26 format=4 uid="uid://dhad0arf8wbp3"]
 
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="1_00bfq"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="1_dkbfa"]
@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://hirmdj5gnnea" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Exit Orange Wastes/exit_orange_wastes.tres" id="11_bajuo"]
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="12_bajuo"]
 [ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="14_r5m36"]
+[ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="15_6m0yb"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_xl5kd"]
 
@@ -1002,5 +1003,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_r5m36")
 theme_override_font_sizes/font_size = 13
 text = "Text Size"
+
+[node name="DialogueUi" parent="CanvasLayer" instance=ExtResource("15_6m0yb")]
 
 [editable path="FlowAppearance"]

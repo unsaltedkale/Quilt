@@ -1,4 +1,4 @@
-[gd_scene load_steps=236 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=233 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="1_mvhf0"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_2v7i3"]
@@ -33,7 +33,6 @@
 [ext_resource type="Texture2D" uid="uid://s3dxq1anq0rg" path="res://Art/Phlo Wump.png" id="18_vlsoc"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt/Quilt Animation Spritesheet Stop (1).png" id="19_50pfw"]
 [ext_resource type="Texture2D" uid="uid://d4enw7wsgmurv" path="res://Art/Quilt/Quilt Animation Spritesheet Walk (1).png" id="20_3lcb7"]
-[ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="22_xu5pi"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="23_sp84p"]
 [ext_resource type="Resource" uid="uid://b8jvwjtaobo0a" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/crypt_cave_enter_container.tres" id="24_xo4aa"]
 [ext_resource type="Resource" uid="uid://dytjfs6d2xqxv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/crypt_meeting_quilt_container.tres" id="25_vl2pu"]
@@ -2247,31 +2246,6 @@ sources/0 = SubResource("TileSetAtlasSource_sp84p")
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 metadata/_snap_count = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2t46"]
-bg_color = Color(0.42105085, 0.6593775, 0.5580529, 1)
-border_width_left = 70
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.78350765, 0.7930483, 0.78495806, 1)
-corner_radius_top_left = 7
-corner_radius_top_right = 7
-corner_radius_bottom_right = 7
-corner_radius_bottom_left = 7
-expand_margin_left = 70.0
-expand_margin_top = 8.0
-expand_margin_bottom = 8.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u273h"]
-bg_color = Color(0.7357423, 0.5476578, 0.51643217, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-expand_margin_top = 3.0
-expand_margin_right = 4.0
-expand_margin_bottom = 3.0
-
 [node name="Tutorial1" type="Node2D"]
 
 [node name="CryptQuiltPlinth" type="Sprite2D" parent="."]
@@ -3378,40 +3352,6 @@ visible = false
 position = Vector2(560, 580)
 scale = Vector2(5.59, 5.59)
 texture = ExtResource("16_w15ut")
-
-[node name="Settings" type="Control" parent="CanvasLayer"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Background" type="ColorRect" parent="CanvasLayer/Settings"]
-layout_mode = 0
-offset_right = 1147.0
-offset_bottom = 645.0
-color = Color(0.36098644, 0.43022326, 0.4866202, 1)
-
-[node name="HSlider" type="HSlider" parent="CanvasLayer/Settings"]
-layout_mode = 0
-offset_left = 82.0
-offset_top = 19.0
-offset_right = 402.0
-offset_bottom = 69.0
-theme_override_styles/slider = SubResource("StyleBoxFlat_c2t46")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_u273h")
-value = 100.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Settings/HSlider"]
-layout_mode = 0
-offset_left = -68.0
-offset_top = 19.0
-offset_right = -1.0
-offset_bottom = 33.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("22_xu5pi")
-theme_override_font_sizes/font_size = 13
-text = "Text Size"
 
 [node name="DialogueUi" parent="CanvasLayer" instance=ExtResource("47_c3mfk")]
 

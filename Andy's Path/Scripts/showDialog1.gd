@@ -7,18 +7,22 @@ var char_list = []
 var line = ""
 var dialogue_counter
 var isTyping
-var font_size = 30
+var font_size
 
 var playerReference
 var dialogueReference
 var UiReference
+var sliderReference
 
 signal dialouge_finished
 
 func _ready() -> void:
 	playerReference = get_tree().get_nodes_in_group("Player")[0]
 	dialogueReference = $"../Dialogue"
-	UiReference = $"../.."
+	UiReference = $".."
+	sliderReference = $"../../Settings/HSlider"
+	
+	font_size = sliderReference.value
 	
 	UiReference.visible = false
 	dialogue_counter = 0
@@ -31,6 +35,7 @@ func _input(event: InputEvent) -> void:
 		#_on_pressed()
 
 func _on_pressed() -> void:
+	font_size = sliderReference.value
 	if dialogFolder != null:
 		line = dialogFolder.text[str(dialogue_counter)]
 	if not isTyping:
@@ -51,7 +56,7 @@ func _on_pressed() -> void:
 		isTyping = false
 		dialogue_counter += 1 #<-- having this at the end is causing problems -- alex
 func _process(delta: float) -> void:
-	print(str(dialogue_counter) + " / " + str(UiReference.visible))
+	#print(str(dialogue_counter) + " / " + str(UiReference.visible))
 	if Input.is_action_pressed("interact"):
 		Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
 	pass
