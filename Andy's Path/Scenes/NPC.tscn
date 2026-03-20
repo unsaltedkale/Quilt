@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dacdsqmpy7sns"]
+
+[ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="1_nw8a6"]
+[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_qj2v5"]
+[ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="3_whxce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ts75s"]
+size = Vector2(256, 256)
+
+[node name="Npc" type="Node2D"]
+
+[node name="TestNPC" type="Node2D" parent="."]
+position = Vector2(2457, -2556)
+scale = Vector2(2, 2)
+script = ExtResource("1_nw8a6")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestNPC"]
+texture = ExtResource("2_qj2v5")
+
+[node name="Area2D" type="Area2D" parent="TestNPC"]
+position = Vector2(-2500, -1200)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_whxce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNPC/Area2D"]
+position = Vector2(5000, 2400)
+shape = SubResource("RectangleShape2D_ts75s")
