@@ -7,5 +7,5 @@ script = ExtResource("1_dij0u")
 actor = NodePath("phlo_backpack")
 variable_name = "visible"
 delay_before = 0.3
-delay_after = 3.0
+delay_after = 0.5
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

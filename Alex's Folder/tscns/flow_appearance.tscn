@@ -66,10 +66,10 @@ animations = [{
 }]
 
 [node name="FlowAppearance" type="AnimatedSprite2D"]
-scale = Vector2(4.25, 4.25)
+scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_12l00")
 animation = &"whole_cloak_idle"
-frame_progress = 0.07319518
+autoplay = "whole_cloak_idle"
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 emitting = false

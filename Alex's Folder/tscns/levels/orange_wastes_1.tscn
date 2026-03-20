@@ -912,7 +912,7 @@ script = ExtResource("1_00bfq")
 stream = SubResource("AudioStreamWAV_xl5kd")
 
 [node name="FlowAppearance" parent="." instance=ExtResource("2_5qtfe")]
-position = Vector2(9225, -799)
+position = Vector2(9225, -805)
 frame_progress = 0.6145071
 
 [node name="Conductor" parent="." instance=ExtResource("2_08pgk")]
