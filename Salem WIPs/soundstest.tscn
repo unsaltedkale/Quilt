@@ -837,9 +837,16 @@ script = ExtResource("2_i2p2r")
 [node name="Player" parent="." instance=ExtResource("3_2k4q5")]
 position = Vector2(5483, 1490)
 is_phlo = false
+max_health = 1
 
 [node name="Stasis" parent="." instance=ExtResource("4_hdjal")]
-position = Vector2(2263, 505)
+position = Vector2(3956, 2115)
 
 [node name="Stasis2" parent="." instance=ExtResource("4_hdjal")]
-position = Vector2(3354, 1638)
+position = Vector2(3326, 1879)
+
+[node name="Stasis3" parent="." instance=ExtResource("4_hdjal")]
+position = Vector2(3208, 1229)
+
+[node name="Stasis4" parent="." instance=ExtResource("4_hdjal")]
+position = Vector2(2696, 599)
