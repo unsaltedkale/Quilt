@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="cutscene_container" load_steps=7 format=3 uid="uid://hirmdj5gnnea"]
+
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_0petn"]
+[ext_resource type="Resource" uid="uid://bpuj3i0yqkyop" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Exit Orange Wastes/lock_camera.tres" id="1_afh17"]
+[ext_resource type="Resource" uid="uid://c3syc7jcj0v37" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Exit Orange Wastes/quilt_to_ground.tres" id="2_6p1pj"]
+[ext_resource type="Resource" uid="uid://b1ljvyl7ewgmp" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Exit Orange Wastes/quilt_move.tres" id="3_1adi0"]
+[ext_resource type="Resource" uid="uid://ku8y4mwshrwi" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Exit Orange Wastes/quilt_walk.tres" id="3_6p1pj"]
+[ext_resource type="Resource" uid="uid://c38t20rdqnie3" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Exit Orange Wastes/orange_town.tres" id="5_1adi0"]
+
+[resource]
+script = ExtResource("1_0petn")
+events = [ExtResource("1_afh17"), ExtResource("3_6p1pj"), ExtResource("2_6p1pj"), ExtResource("3_1adi0"), ExtResource("5_1adi0")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"

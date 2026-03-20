@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://by0fnkk1m6i8f"]
+[gd_scene load_steps=14 format=3 uid="uid://by0fnkk1m6i8f"]
 
 [ext_resource type="Texture2D" uid="uid://0hhuokw2fubi" path="res://Art/Blue Flow/Blue Flow Cloak Idle.png" id="1_k1h1i"]
 [ext_resource type="Texture2D" uid="uid://cqargt3jlju57" path="res://Art/Blue Flow/Blue Flow No Cloak Idle.png" id="2_57stf"]
@@ -33,6 +33,14 @@ region = Rect2(0, 45, 17, 45)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_75pem")
 }, {
 "duration": 1.0,
@@ -65,24 +73,53 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_57stf"]
+offsets = PackedFloat32Array(0.57756233, 0.78531855, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1.4165919, 1.4165919, 1.4165919, 1, 1.8444428, 1.8444428, 1.8444428, 0)
+
+[sub_resource type="Gradient" id="Gradient_wwhs5"]
+offsets = PackedFloat32Array(0.57756233, 0.97229916, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1.4165919, 1.4165919, 1.4165919, 1, 1.8444428, 1.8444428, 1.8444428, 0)
+
 [node name="FlowAppearance" type="AnimatedSprite2D"]
 scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_12l00")
 animation = &"whole_cloak_idle"
 autoplay = "whole_cloak_idle"
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+[node name="ParticlesSpawn" type="CPUParticles2D" parent="."]
 emitting = false
-amount = 20
+amount = 40
 texture = ExtResource("4_57stf")
+one_shot = true
 emission_shape = 1
-emission_sphere_radius = 1.35
+emission_sphere_radius = 6.04
 direction = Vector2(1, 1)
 spread = 180.0
-gravity = Vector2(0, 0)
 initial_velocity_min = 92.9
-initial_velocity_max = 200.48
+initial_velocity_max = 322.73
 radial_accel_min = 13.69
 radial_accel_max = 13.69
 scale_amount_min = 8.0
-scale_amount_max = 16.0
+scale_amount_max = 12.0
+color = Color(0.5254902, 0.6745098, 0.9372549, 1)
+color_ramp = SubResource("Gradient_57stf")
+
+[node name="ParticlesSummon" type="CPUParticles2D" parent="."]
+position = Vector2(0, -410.6667)
+emitting = false
+amount = 40
+texture = ExtResource("4_57stf")
+lifetime = 1.1500000000000001
+emission_shape = 1
+emission_sphere_radius = 0.01
+direction = Vector2(0, 1)
+spread = 0.0
+initial_velocity_min = 250.0
+initial_velocity_max = 250.0
+radial_accel_min = 13.69
+radial_accel_max = 13.69
+scale_amount_min = 8.0
+scale_amount_max = 12.0
+color = Color(0.5254902, 0.6745098, 0.9372549, 1)
+color_ramp = SubResource("Gradient_wwhs5")

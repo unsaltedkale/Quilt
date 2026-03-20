@@ -7,8 +7,14 @@ script = ExtResource("1_o3va6")
 text = Dictionary[String, String]({
 "0": "QUILT: …",
 "1": "PHLO: ( QUILT… did— )",
+"10": "",
 "2": "[ QUILT’s thoughts are stilted. ]",
 "3": "QUILT: ( Don’t. listen to them. )",
-"4": ""
+"4": "PHLO: …",
+"5": "PHLO: Do you have any idea who they were?",
+"6": "[ QUILT is oddly quiet. PHLO feels a sense of recognition emanating from QUILT's consciousness. ]",
+"7": "PHLO: Do… do you know them?",
+"8": "[ QUILT minutely shakes their head. ]",
+"9": "QUILT: ( No… but maybe they’re… )"
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
