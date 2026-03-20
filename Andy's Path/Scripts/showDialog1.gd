@@ -52,8 +52,8 @@ func _on_pressed() -> void:
 		dialogue_counter += 1 #<-- having this at the end is causing problems -- alex
 func _process(delta: float) -> void:
 	print(str(dialogue_counter) + " / " + str(UiReference.visible))
-	#if Input.is_action_pressed("interact"):
-		#Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
+	if Input.is_action_pressed("interact"):
+		Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
 	pass
 func wait(duration):
 	await get_tree().create_timer(duration).timeout
@@ -64,6 +64,3 @@ func Dialogue(dialogueResource):
 	playerReference.find_child("StateMachine").find_child("Cutscene").Transition.emit(Player, "cutscene")
 	dialogFolder = load(dialogueResource)
 	dialogue_counter = 0
-	var loaded = load(dialogueResource)
-	print("loaded: " + str(loaded))  # Check if this is null
-	print("type: " + str(typeof(loaded)))
