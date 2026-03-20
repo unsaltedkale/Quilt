@@ -1,4 +1,4 @@
-[gd_scene load_steps=244 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=236 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="1_mvhf0"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_2v7i3"]
@@ -23,23 +23,16 @@
 [ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="11_671hy"]
 [ext_resource type="Texture2D" uid="uid://dh6we0cks1fgd" path="res://Art/Quilt/Quilt Game Cutscene 1 QuiltPhlo0000.png" id="11_frm60"]
 [ext_resource type="Texture2D" uid="uid://0qwf60hlqiwk" path="res://Art/Quilt/Quilt Animation Spritesheet Jump.png" id="12_5kyg4"]
-[ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="12_b0o0e"]
-[ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="13_1vic3"]
 [ext_resource type="Texture2D" uid="uid://c3nsbjc4e2qdy" path="res://Art/Quilt/Quilt Animation Spritesheet Land.png" id="13_8ce68"]
-[ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="14_3f7gy"]
 [ext_resource type="Texture2D" uid="uid://bnfs4jedu6cg2" path="res://Art/Phlo Spritesheet Fall.png" id="14_uo5ms"]
 [ext_resource type="Texture2D" uid="uid://v6lnp4ltt52v" path="res://Art/Phlo Spritesheet Idle.png" id="15_5w3r1"]
 [ext_resource type="PackedScene" uid="uid://2bpi2d7g1hn7" path="res://Alex's Folder/tscns/metronome.tscn" id="15_qre1y"]
 [ext_resource type="Texture2D" uid="uid://b11e7u6tdq2t" path="res://Art/Phlo Spritesheet Jump.png" id="16_4vfcq"]
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="16_w15ut"]
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="17_psnuy"]
-[ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="17_vl6hs"]
 [ext_resource type="Texture2D" uid="uid://s3dxq1anq0rg" path="res://Art/Phlo Wump.png" id="18_vlsoc"]
-[ext_resource type="Script" uid="uid://ckiaiuvbfmd34" path="res://Andy's Path/Scripts/DialogueText.gd" id="19_6bep7"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt/Quilt Animation Spritesheet Stop (1).png" id="19_50pfw"]
 [ext_resource type="Texture2D" uid="uid://d4enw7wsgmurv" path="res://Art/Quilt/Quilt Animation Spritesheet Walk (1).png" id="20_3lcb7"]
-[ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="20_c3mfk"]
-[ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="21_c6e1v"]
 [ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="22_xu5pi"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="23_sp84p"]
 [ext_resource type="Resource" uid="uid://b8jvwjtaobo0a" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/crypt_cave_enter_container.tres" id="24_xo4aa"]
@@ -51,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="30_8ce68"]
 [ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="38_c6e1v"]
 [ext_resource type="Resource" uid="uid://cj6lnkf7ujlrv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_slab/crypt_slab_container.tres" id="40_sp84p"]
+[ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="47_c3mfk"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="51_xu5pi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17h1f"]
@@ -2253,11 +2247,6 @@ sources/0 = SubResource("TileSetAtlasSource_sp84p")
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 metadata/_snap_count = 2
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpnre"]
-size = Vector2(256, 256)
-
-[sub_resource type="Theme" id="Theme_8eit8"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2t46"]
 bg_color = Color(0.42105085, 0.6593775, 0.5580529, 1)
 border_width_left = 70
@@ -2297,7 +2286,7 @@ sprite_frames = SubResource("SpriteFrames_xo4aa")
 animation = &"intro_1_lie_down_inactive"
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
-position = Vector2(3742, -2675)
+position = Vector2(19298, 3670)
 
 [node name="phlo_backpack" parent="." instance=ExtResource("1_mvhf0")]
 visible = false
@@ -2570,23 +2559,6 @@ mod_bar = 1
 
 [node name="NPCs" type="Node" parent="."]
 
-[node name="TestNPC" type="Node2D" parent="NPCs"]
-position = Vector2(2457, -2556)
-scale = Vector2(2, 2)
-script = ExtResource("12_b0o0e")
-
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/TestNPC"]
-texture = ExtResource("13_1vic3")
-
-[node name="Area2D" type="Area2D" parent="NPCs/TestNPC"]
-position = Vector2(-2500, -1200)
-scale = Vector2(0.5, 0.5)
-script = ExtResource("14_3f7gy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/TestNPC/Area2D"]
-position = Vector2(5000, 2400)
-shape = SubResource("RectangleShape2D_bpnre")
-
 [node name="Cutscene Triggers" type="Node" parent="."]
 
 [node name="CutsceneTrigger" parent="Cutscene Triggers" instance=ExtResource("23_sp84p")]
@@ -2730,11 +2702,6 @@ position = Vector2(20429, 827.0001)
 scale = Vector2(0.99999994, 0.99999994)
 respawns = true
 
-[node name="STAR64" parent="Stars" instance=ExtResource("28_frm60")]
-position = Vector2(19774, 3963.9995)
-scale = Vector2(0.99999994, 0.99999994)
-respawns = true
-
 [node name="STAR65" parent="Stars" instance=ExtResource("28_frm60")]
 position = Vector2(20190, 3892.9995)
 scale = Vector2(0.99999994, 0.99999994)
@@ -2746,7 +2713,7 @@ scale = Vector2(0.99999994, 0.99999994)
 respawns = true
 
 [node name="STAR68" parent="Stars" instance=ExtResource("28_frm60")]
-position = Vector2(23206.998, 3805)
+position = Vector2(24348.998, 3498)
 scale = Vector2(0.99999994, 0.99999994)
 respawns = true
 
@@ -2766,7 +2733,7 @@ scale = Vector2(0.99999994, 0.99999994)
 respawns = true
 
 [node name="STAR69" parent="Stars" instance=ExtResource("28_frm60")]
-position = Vector2(22533.002, 3972.0015)
+position = Vector2(23074.998, 3855.9995)
 scale = Vector2(0.99999994, 0.99999994)
 respawns = true
 
@@ -3412,58 +3379,6 @@ position = Vector2(560, 580)
 scale = Vector2(5.59, 5.59)
 texture = ExtResource("16_w15ut")
 
-[node name="UI" type="Control" parent="CanvasLayer"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="DialogueScreen" type="Control" parent="CanvasLayer/UI"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="AnimationViewer" type="ColorRect" parent="CanvasLayer/UI/DialogueScreen"]
-visible = false
-layout_mode = 0
-offset_left = 2.0
-offset_top = 5.0
-offset_right = 1150.0
-offset_bottom = 648.0
-color = Color(0.12662229, 0.46256143, 0.3947214, 1)
-
-[node name="TextOutine" type="Sprite2D" parent="CanvasLayer/UI/DialogueScreen"]
-texture_filter = 1
-position = Vector2(673, 140)
-scale = Vector2(6.0681806, 6.068181)
-texture = ExtResource("17_vl6hs")
-
-[node name="Dialogue" type="Label" parent="CanvasLayer/UI/DialogueScreen"]
-process_mode = 3
-layout_mode = 0
-offset_left = 236.0
-offset_top = 94.0
-offset_right = 832.0
-offset_bottom = 150.0
-theme_override_fonts/font = ExtResource("22_xu5pi")
-theme_override_font_sizes/font_size = 30
-autowrap_mode = 3
-visible_characters_behavior = 1
-script = ExtResource("19_6bep7")
-
-[node name="Button" type="Button" parent="CanvasLayer/UI/DialogueScreen" groups=["Dialouge_Button"]]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 1151.0
-offset_bottom = 647.0
-theme = SubResource("Theme_8eit8")
-theme_override_fonts/font = ExtResource("20_c3mfk")
-theme_override_font_sizes/font_size = 42
-script = ExtResource("21_c6e1v")
-
 [node name="Settings" type="Control" parent="CanvasLayer"]
 visible = false
 layout_mode = 3
@@ -3498,6 +3413,8 @@ theme_override_fonts/font = ExtResource("22_xu5pi")
 theme_override_font_sizes/font_size = 13
 text = "Text Size"
 
+[node name="DialogueUi" parent="CanvasLayer" instance=ExtResource("47_c3mfk")]
+
 [node name="LevelToolTip" parent="." instance=ExtResource("29_5kyg4")]
 position = Vector2(2523.0002, -559.00006)
 animation = &"movement"
@@ -3521,7 +3438,6 @@ horizontal_alignment = 1
 position = Vector2(21694, 1136)
 
 [connection signal="finished" from="AudioStreamPlayer" to="Conductor" method="_on_audio_stream_player_finished"]
-[connection signal="pressed" from="CanvasLayer/UI/DialogueScreen/Button" to="CanvasLayer/UI/DialogueScreen/Button" method="_on_pressed"]
 
 [editable path="Conductor_Platforms/Conductor_Platform7"]
 [editable path="Conductor_Platforms/Conductor_Platform8"]
@@ -3543,7 +3459,6 @@ position = Vector2(21694, 1136)
 [editable path="Stars/STAR61"]
 [editable path="Stars/STAR62"]
 [editable path="Stars/STAR63"]
-[editable path="Stars/STAR64"]
 [editable path="Stars/STAR65"]
 [editable path="Stars/STAR67"]
 [editable path="Stars/STAR68"]

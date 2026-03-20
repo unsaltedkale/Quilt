@@ -4,7 +4,7 @@ extends Button
 var dialogFolder
 var text_list = []
 var char_list = []
-var line = []
+var line = ""
 var dialogue_counter
 var isTyping
 var font_size = 30
@@ -20,6 +20,7 @@ func _ready() -> void:
 	dialogueReference = $"../Dialogue"
 	UiReference = $"../.."
 	
+	UiReference.visible = false
 	dialogue_counter = 0
 	dialogueReference.add_theme_font_size_override("font_size", font_size)
 
@@ -50,7 +51,7 @@ func _on_pressed() -> void:
 		isTyping = false
 		dialogue_counter += 1 #<-- having this at the end is causing problems -- alex
 func _process(delta: float) -> void:
-	#print(str(dialogue_counter) + " / " + str(isTyping))
+	print(str(dialogue_counter) + " / " + str(UiReference.visible))
 	#if Input.is_action_pressed("interact"):
 		#Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
 	pass
