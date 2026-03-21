@@ -18,6 +18,7 @@ signal dialouge_finished
 
 func _ready() -> void:
 	playerReference = get_tree().get_nodes_in_group("Player")[0]
+	print(playerReference)
 	dialogueReference = $"../Dialogue"
 	UiReference = $".."
 	sliderReference = $"../../Settings/HSlider"
@@ -57,8 +58,8 @@ func _on_pressed() -> void:
 		dialogue_counter += 1 #<-- having this at the end is causing problems -- alex
 func _process(delta: float) -> void:
 	#print(str(dialogue_counter) + " / " + str(UiReference.visible))
-	if Input.is_action_pressed("interact"):
-		Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
+	#if Input.is_action_pressed("interact"):
+		#Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
 	pass
 func wait(duration):
 	await get_tree().create_timer(duration).timeout

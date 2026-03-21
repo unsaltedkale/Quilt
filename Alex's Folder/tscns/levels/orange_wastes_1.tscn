@@ -894,6 +894,10 @@ expand_margin_bottom = 3.0
 
 [node name="OrangeWastes1" type="Node2D"]
 
+[node name="Player" parent="." instance=ExtResource("1_dkbfa")]
+position = Vector2(7920, -794)
+is_phlo = false
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8681, -1279)
 scale = Vector2(4, 4)
@@ -919,10 +923,6 @@ z_index = -1
 position = Vector2(-211.9961, -1082)
 scale = Vector2(4, 4)
 current_music_resource = ExtResource("3_iw5h8")
-
-[node name="Player" parent="." instance=ExtResource("1_dkbfa")]
-position = Vector2(7920, -794)
-is_phlo = false
 
 [node name="phlo_backpack" parent="." instance=ExtResource("5_iw5h8")]
 position = Vector2(-511, -185)

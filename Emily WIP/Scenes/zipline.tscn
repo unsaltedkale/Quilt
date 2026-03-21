@@ -1,10 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://dllltsro0jqkr"]
+[gd_scene load_steps=22 format=3 uid="uid://dllltsro0jqkr"]
 
 [ext_resource type="Script" uid="uid://cpqiw3bb4qy3a" path="res://Emily WIP/Scripts/zipline.gd" id="1_121v5"]
 [ext_resource type="Texture2D" uid="uid://b2by01d06tuus" path="res://Art/Zipline.png" id="2_121v5"]
+[ext_resource type="AudioStream" uid="uid://7amg26gynfed" path="res://Resources/SFX/Stasis SFX/Stasis Hum.wav" id="3_uj4gm"]
+[ext_resource type="AudioStream" uid="uid://da01yfulq5dh6" path="res://Resources/SFX/Stasis SFX/Enter Stasis.wav" id="4_d3tk3"]
+[ext_resource type="AudioStream" uid="uid://c83anh7poo8gw" path="res://Resources/SFX/Stasis SFX/Exit Stasis.wav" id="5_k1ahh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_121v5"]
-size = Vector2(13.333332, 20.166664)
+size = Vector2(13.333332, 13.833331)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c1lgv"]
 atlas = ExtResource("2_121v5")
@@ -125,21 +128,39 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_jf2j6"]
+loop = false
+fade_time = 1.0
+stream_count = 1
+stream_0 = ExtResource("3_uj4gm")
+
 [node name="Zipline" type="Area2D" groups=["Stasis"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_121v5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.000001, 0.49999526)
-scale = Vector2(6.0000005, 6.0000005)
+position = Vector2(-1.3333343, 0.16666484)
+scale = Vector2(6.000001, 6.000001)
 shape = SubResource("RectangleShape2D_121v5")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, 8)
+position = Vector2(0.6666667, -11.333333)
 scale = Vector2(3.8857143, 4)
 sprite_frames = SubResource("SpriteFrames_e4dn2")
 animation = &"idle"
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Stasis Hum" type="AudioStreamPlayer" parent="SFX"]
+stream = SubResource("AudioStreamPlaylist_jf2j6")
+
+[node name="Enter Stasis" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_d3tk3")
+volume_db = -15.0
+
+[node name="Exit Stasis" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_k1ahh")
 
 [connection signal="area_entered" from="." to="." method="on_body_entered"]
 [connection signal="body_exited" from="." to="." method="on_body_exited"]
