@@ -3,6 +3,8 @@ class_name stasis_obj
 
 @onready var player = $"../Player"
 @export var timer: float = 0
+@onready var ani = $Sprite2D
+
 
 func _physics_process(_delta: float) -> void:
 	if timer > 0:
@@ -13,6 +15,9 @@ func _physics_process(_delta: float) -> void:
 		if player.current_stasis == self:
 			timer = 0.5 #seconds
 			player.position = position
+		elif player.current_stasis != self && ani.animation == "capture":
+			ani.play("release")
+			pass
 
 func on_body_entered(area: Area2D):
 	if timer <= 0:
@@ -25,6 +30,8 @@ func on_body_entered(area: Area2D):
 				$"SFX/Stasis Hum".play()
 			if not $"SFX/Enter Stasis".is_playing():
 				$"SFX/Enter Stasis".play()
+			ani.play("capture")
+			
 
 func on_body_exited(area: Area2D):
 	print("click")

@@ -67,7 +67,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c1lgv")
 }, {
-"duration": 1.0,
+"duration": 1000.0,
 "texture": SubResource("AtlasTexture_8epog")
 }],
 "loop": false,
@@ -148,7 +148,7 @@ texture_filter = 1
 position = Vector2(0.6666667, -11.333333)
 scale = Vector2(3.8857143, 4)
 sprite_frames = SubResource("SpriteFrames_e4dn2")
-animation = &"idle"
+animation = &"break"
 
 [node name="SFX" type="Node" parent="."]
 

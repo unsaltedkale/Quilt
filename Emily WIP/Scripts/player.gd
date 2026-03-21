@@ -5,7 +5,7 @@ class_name Player
 @export var is_phlo: bool = false
 var collected_objects: int
 @export var max_objects: int
-var current_stasis: stasis_obj = null #Replaces is_stasis: we need to know which stasis chamber we're in to teleport to the right one
+var current_stasis = null #Replaces is_stasis: we need to know which stasis chamber we're in to teleport to the right one
 
 @export var max_health: int = 1
 var health: int
