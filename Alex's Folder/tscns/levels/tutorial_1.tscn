@@ -1,4 +1,4 @@
-[gd_scene load_steps=234 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=235 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="1_mvhf0"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_2v7i3"]
@@ -45,6 +45,7 @@
 [ext_resource type="Resource" uid="uid://cj6lnkf7ujlrv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_slab/crypt_slab_container.tres" id="40_sp84p"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="46_vl6hs"]
 [ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="47_c3mfk"]
+[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="47_tdt2l"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="51_xu5pi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17h1f"]
@@ -3382,6 +3383,9 @@ position = Vector2(21694, 1136)
 [node name="Zipline" parent="." instance=ExtResource("46_vl6hs")]
 position = Vector2(37963.223, -4497)
 end_position = Vector2(41490, -4500)
+
+[node name="Stasis" parent="." instance=ExtResource("47_tdt2l")]
+position = Vector2(37451, -4319)
 
 [connection signal="finished" from="AudioStreamPlayer" to="Conductor" method="_on_audio_stream_player_finished"]
 

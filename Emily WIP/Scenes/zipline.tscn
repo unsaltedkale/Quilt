@@ -129,7 +129,6 @@ animations = [{
 }]
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_jf2j6"]
-loop = false
 fade_time = 1.0
 stream_count = 1
 stream_0 = ExtResource("3_uj4gm")
