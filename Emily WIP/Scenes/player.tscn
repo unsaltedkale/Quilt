@@ -1514,7 +1514,6 @@ stream = ExtResource("34_2k042")
 
 [node name="Jump" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("35_vfdg1")
-volume_db = 24.0
 autoplay = true
 
 [connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]

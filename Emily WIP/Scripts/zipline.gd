@@ -6,14 +6,14 @@ class_name zipline_obj
 @export var timer: float = 0
 
 @export var speed: float = 500
-@onready var start_position: Vector2
+@export var start_position: Vector2
 @export var end_position: Vector2 = Vector2(6470,1234)
 @export var respawning: bool
 @export var respawn_time = 3
 
 func _ready() -> void:
 	respawning = false
-	start_position = position
+	position = start_position
 	ani.play("idle")
 
 func _physics_process(_delta: float) -> void:
@@ -64,10 +64,10 @@ func on_body_exited(area: Area2D):
 func basically_zero(u: Vector2, v: Vector2) -> bool:
 	var i: int
 	i = 0
-	if (u.x - v.x < 0.01):
+	if (abs(u.x - v.x) < 0.01):
 		i += 1
 	
-	if (u.y - v.y < 0.01):
+	if (abs(u.y - v.y) < 0.01):
 		i += 1
 		
 	if (i == 2):

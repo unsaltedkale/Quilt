@@ -26,7 +26,7 @@ func Physics_Update(_delta):
 func _physics_process(_delta) -> void:
 	player.get_node("QuiltCollider").disabled = false
 	player.get_node("PhloCollider").disabled = true
-	if !recoil || !cutscene:
+	if player.find_child("StateMachine").current_state.state_name != "cutscene" && player.find_child("StateMachine").current_state.state_name != "recoil":
 		move_dir = Input.get_axis("move_left","move_right")
 		if move_dir !=0:
 			player.velocity.x = move_dir * speed
