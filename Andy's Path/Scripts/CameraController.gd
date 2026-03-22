@@ -6,7 +6,7 @@ var playerReference
 var screenIsMoving
 var has_control: bool
 var recording_timer = 0
-var recording_timer_max = 2
+var recording_timer_max = 3
 var list: Array[Vector2]
 var TEST_LIST_FOR_CRYPT: Array[Vector2]
 var BREAK_THE_CYCLE: bool
@@ -43,29 +43,40 @@ func _path(string: String):
 		print("ERROR: VINYL STRING <flow appears> HAS NOT BEEN WRITTEN TO YET.")
 	else:
 		print("ERROR: VINYL STRING NOT VALID.")
+	BREAK_THE_CYCLE = false
 	if vinyl != null:
-		if tween != null	:
+		if tween:
 			tween.kill()
-		in_path = true
-		await wait(1)
-		has_control = false
+		await wait(1.5)
 		for i in vinyl.size():
+			print("click")
 			if BREAK_THE_CYCLE == true:
 				print_debug("TWEEN CAMERA CYCLE BROKEN")
-				tween.kill()
+				if tween:
+					tween.kill()
 				break
+				BREAK_THE_CYCLE = false
+				has_control = true
 			else:
-				if tween != null	:
+				if tween	:
 					tween.kill()
 				tween = get_tree().create_tween()
 				tween.tween_property(self, "position", vinyl[i], 2)
 				await tween.finished
 		print("TWEEN DONE")
-		in_path = false
-		has_control = true
-	
+
+func player_died():
+	tween.kill()
+	has_control = true
+	BREAK_THE_CYCLE = true
+	pass
 
 func _process(delta: float) -> void:
+	print(str(has_control) + " / " + str(BREAK_THE_CYCLE) + " / " + str(get_tree().get_processed_tweens()))
+	
+	if tween:
+		has_control = !tween.is_running()
+	
 	#pls no delete I actually Need this -- Alex
 	'''recording_timer -= delta
 	if recording_timer <= 0:
@@ -76,26 +87,30 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("crouch"):
 		print(list)'''
 	
-	if in_path && not playerReference.find_child("VOSN2D").is_on_screen():
+	if tween && not playerReference.find_child("VOSN2D").is_on_screen():
 		pity_kill_timer -= delta
-		if pity_kill_timer < 3.0:
+		if pity_kill_timer < 2.0:
 			$"../CanvasLayer/Pity Kill Timer".text = str(snapped(pity_kill_timer, 0.1))
 		if pity_kill_timer <= 0:
 			BREAK_THE_CYCLE = true
 			if tween != null	:
 				tween.kill()
 			playerReference.die()
-			has_control = true
+			tween.kill()
 			pity_kill_timer = pity_kill_timer_max
 			$"../CanvasLayer/Pity Kill Timer".text = ""
 	else:
 		$"../CanvasLayer/Pity Kill Timer".text = ""
 		pity_kill_timer = pity_kill_timer_max
-	
-	if BREAK_THE_CYCLE == true && has_control:
-		print_debug("BREAK CYCLE discarded, camera currently not in CYCLE.")
-		BREAK_THE_CYCLE = false
+
 	if has_control:	
+		
+		if (abs(global_position.x - playerReference.position.x) + abs(global_position.y - playerReference.position.y)) > 1000:
+			await wait(0.1)
+			if has_control:
+				print("TELEPORTED")
+				global_position = playerReference.position + Vector2(0, -500)
+		
 		#Horizontal Movement
 		self.global_position.x = lerp(self.global_position.x, playerReference.global_position.x, delta * 2)
 

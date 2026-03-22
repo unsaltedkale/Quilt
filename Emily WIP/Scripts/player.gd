@@ -38,7 +38,7 @@ func take_damage(amount: int) -> void:
 		
 func die():
 	print_debug("Player died")
-	$"../Camera2D".BREAK_THE_CYCLE = true
+	$"../Camera2D".player_died()
 	spawn_player(spawn_point)
 	
 func _on_hit_box_body_entered(body: Node2D) -> void:
