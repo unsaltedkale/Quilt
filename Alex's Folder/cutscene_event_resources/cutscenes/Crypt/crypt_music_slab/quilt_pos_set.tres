@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_bid4n")
 mover = NodePath("Player")
-target = Vector2(73760, -14860)
-time = 3.0
+target = Vector2(73760, -14875)
+time = 1.5
 metadata/_custom_type_script = "uid://cvo6goabck1ac"

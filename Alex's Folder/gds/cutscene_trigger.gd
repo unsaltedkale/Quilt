@@ -65,32 +65,33 @@ func _read_events():
 	var camera_zoom = Camera.zoom
 	tempvar.Transition.emit(tempvar, "cutscene")
 	for event in container.events:
-		print_debug(event.resource_path)
+		print(event.resource_path)
 		
-		print_debug("HEY:" + str(event.delay_before))
+		#print_debug("HEY:" + str(event.delay_before))
 		
 		if event.delay_before > 0:
-			print_debug("delay before timer started")
+			#print_debug("delay before timer started")
 			await get_tree().create_timer(event.delay_before).timeout
-			print_debug("delay before timer finished")
+			#print_debug("delay before timer finished")
 		
-		print_debug("started event")
+		#print_debug("started event")
 		
 		await event.execute(self)
 		
-		print_debug("ended event")
+		#print_debug("ended event")
 		
-		print_debug("HEY:" + str(event.delay_after))
+		#print_debug("HEY:" + str(event.delay_after))
 		
 		if event.delay_after > 0:
-			print_debug("delay after timer started")
+			#print_debug("delay after timer started")
 			await get_tree().create_timer(event.delay_after).timeout
-			print_debug("delay after timer finished")
+			#print_debug("delay after timer finished")
 		
-		print_debug("done!!!")
+		#print_debug("done!!!")
 	print_debug("cutscene finished")
 	played = true
-	Camera.zoom = camera_zoom
+	var tween = get_tree().create_tween()
+	tween.tween_property(Camera, "zoom", camera_zoom, 1)
 	Camera.has_control = true
 	tempvar = player.find_child("StateMachine").current_state
 	tempvar.Transition.emit(tempvar, "fall")

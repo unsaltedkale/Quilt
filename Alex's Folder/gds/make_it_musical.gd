@@ -10,13 +10,15 @@ extends Node2D
 @export var repeat_pattern: bool
 @export var mod_bar = 0
 @export var mod_beat = 0
+@export var active = true
 
 func _ready():
-	set_(false)
+	if active == true:
+		set_(false)
 	pass
 	
 func _physics_process(delta):
-	if Conductor != null:
+	if Conductor != null && active == true:
 		if Conductor.barnumber != null or Conductor.beatnumber != null:
 			if only_on_music_trigger_track == true:
 				if music_trigger.track.resource_path.get_file().get_basename() != Conductor.current_music_resource.track.resource_path.get_file().get_basename():

@@ -1420,7 +1420,6 @@ scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
 is_phlo = true
 max_objects = 1
-max_health = null
 
 [node name="QuiltCollider" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.75)
@@ -1515,6 +1514,9 @@ stream = ExtResource("34_2k042")
 [node name="Jump" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("35_vfdg1")
 autoplay = true
+
+[node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-10, -21.5, 20, 44)
 
 [connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]
 [connection signal="stop_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="stop"]

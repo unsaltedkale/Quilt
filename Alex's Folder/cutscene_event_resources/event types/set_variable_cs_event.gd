@@ -27,7 +27,14 @@ func execute(cutscene_trigger: Node) -> void:
 		value = value_vector2
 		pass
 	elif actor_real.get(variable_name) is int:
+		print("INT")
 		value = floor(value_float)
+	elif actor_real.get(variable_name) is Node.ProcessMode:
+		print("PROCESS NODE")
+		value = floor(value_float)
+		print(str(value))
+	else:
+		print("ERROR: VALUE TYPE NOT FOUND IN VARIABLE EVENT")
 	actor_real.set_deferred(variable_name, value)
 	pass
 	

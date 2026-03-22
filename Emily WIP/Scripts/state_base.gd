@@ -31,7 +31,7 @@ func _physics_process(_delta) -> void:
 	if player.find_child("StateMachine").current_state.state_name != "cutscene" && player.find_child("StateMachine").current_state.state_name != "recoil":
 		move_dir = Input.get_axis("move_left","move_right")
 		if move_dir !=0:
-			player.velocity.x = move_toward(player.velocity.x, move_dir * speed, acceleration * _delta)
+			player.velocity.x = move_dir * speed
 		elif move_dir == 0:
 			player.velocity.x = move_toward(player.velocity.x, 0, decceleration * _delta)
 	if player.is_phlo:

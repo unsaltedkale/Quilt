@@ -166,4 +166,5 @@ stream = ExtResource("5_k1ahh")
 [node name="MakeItMusical" parent="." instance=ExtResource("6_d3tk3")]
 
 [connection signal="area_entered" from="." to="." method="on_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="on_body_exited"]

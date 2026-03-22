@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="set_variable_cutscene_event" load_steps=2 format=3 uid="uid://ce5603ke0884y"]
+
+[ext_resource type="Script" uid="uid://ddqk0rwkpcnf2" path="res://Alex's Folder/cutscene_event_resources/event types/set_variable_cs_event.gd" id="1_jmp02"]
+
+[resource]
+script = ExtResource("1_jmp02")
+actor = NodePath("CPUParticles2D5")
+variable_name = "emitting"
+metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"
