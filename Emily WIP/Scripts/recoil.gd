@@ -13,6 +13,7 @@ signal shoot_projectile()
 func recoil_vel_equation():
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
 	player_direction = player.get_local_mouse_position().normalized()
+	#player_direction = 
 	if joystick_direction > Vector2(0,0) or joystick_direction < Vector2(0,0):
 		n = joystick_direction
 	else:

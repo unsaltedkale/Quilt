@@ -1,7 +1,9 @@
-[gd_scene load_steps=222 format=3 uid="uid://dt1w85276yf8y"]
+[gd_scene load_steps=224 format=3 uid="uid://dt1w85276yf8y"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
+[ext_resource type="Texture2D" uid="uid://b2onlr5ggkomh" path="res://Art/recoil indicator.png" id="2_icvrh"]
+[ext_resource type="Script" uid="uid://n0gaiwt35ltf" path="res://Alex's Folder/gds/recoil_indicator.gd" id="3_jgwx7"]
 [ext_resource type="Texture2D" uid="uid://c4js0vvukf2gu" path="res://Art/Quilt/Quilt Introduction Cutscene-8.png.png" id="5_n7wni"]
 [ext_resource type="Texture2D" uid="uid://qrhi63b343d6" path="res://Art/Quilt/Quilt Introduction Cutscene.png" id="6_d0p7j"]
 [ext_resource type="Texture2D" uid="uid://dlmtm1evbtdwv" path="res://Art/Quilt/Quilt Introduction Cutscene(1).png" id="7_icvrh"]
@@ -1420,6 +1422,11 @@ scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
 is_phlo = true
 max_objects = 1
+
+[node name="recoil_indicator" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_icvrh")
+script = ExtResource("3_jgwx7")
 
 [node name="QuiltCollider" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.75)
