@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://cw364rbjw7wxg"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_1wlk2"]
+
+[resource]
+script = ExtResource("1_1wlk2")
+text = Dictionary[String, String]({
+"0": "[ In front of QUILT is a MYSTERIOUS DEVICE. ]",
+"1": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

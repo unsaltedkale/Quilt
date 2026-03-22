@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://da3u5eyp7syyp"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_d5a78"]
+
+[resource]
+script = ExtResource("1_d5a78")
+text = Dictionary[String, String]({
+"0": "PHLO: Woah!",
+"1": "QUILT: ( This is what I was looking for. )",
+"10": "[ QUILT is trying to hide their apprehension. They are not doing a good job. ]",
+"11": "QUILT: ( Of course. )",
+"12": "QUILT: ( The first line says: I KNEW YOU COULD MAKE IT. )",
+"13": "QUILT: ( The next line says: I HOPE THEY’RE KIND. OR MAYBE YOU FOUND A WAY OUT OF IT, CLEVER ONE? )",
+"14": "QUILT: ( The last line says: FALL, AND THE NET WILL APPEAR. )",
+"15": "PHLO: What does it mean?",
+"16": "QUILT: ( Notes, from the spirits who made it. )",
+"17": "PHLO: But *what* does it mean? What are they saying, really?",
+"18": "[ QUILT seems to be considering something. ]",
+"19": "QUILT: ( …Encouragement. )",
+"2": "[ There is WHITE glowing markings projected in the air. ]",
+"20": "PHLO: Do you know what it really means? Is it addressed to you? Who are the spirits who made it—?",
+"21": "QUILT: ( We need to keep moving. )",
+"22": "PHLO: QUILT, come on—",
+"23": "QUILT: ( You wanted to get of here, correct? )",
+"24": "[ PHLO is on edge. ]",
+"25": "PHLO: …Okay.",
+"26": "",
+"3": "[ Both great sadness and happiness is overflowing from QUILT’s mind. ]",
+"4": "PHLO: Does it say anything?",
+"5": "[ QUILT’s mind stutters. ]",
+"6": "QUILT: ( Oh. You can’t read it. )",
+"7": "PHLO: …",
+"8": "PHLO: Could you read it to me?",
+"9": "QUILT: ( … )"
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

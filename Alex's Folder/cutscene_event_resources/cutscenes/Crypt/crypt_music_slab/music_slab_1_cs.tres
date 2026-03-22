@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="dialouge_cutscene_event" load_steps=3 format=3 uid="uid://cp6wgt332e5n4"]
+
+[ext_resource type="Script" uid="uid://g78pi7crnayb" path="res://Alex's Folder/cutscene_event_resources/event types/dialouge_cs_event.gd" id="1_ufgo2"]
+[ext_resource type="Resource" uid="uid://cw364rbjw7wxg" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/dia/music_slab_1.tres" id="1_uo6hg"]
+
+[resource]
+script = ExtResource("1_ufgo2")
+dia = ExtResource("1_uo6hg")
+metadata/_custom_type_script = "uid://g78pi7crnayb"

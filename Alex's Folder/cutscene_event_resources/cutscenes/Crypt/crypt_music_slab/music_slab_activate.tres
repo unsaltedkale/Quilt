@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="animation_cutscene_event" load_steps=2 format=3 uid="uid://b8u6j3mf5g44p"]
+
+[ext_resource type="Script" uid="uid://84oaxla2j74g" path="res://Alex's Folder/cutscene_event_resources/event types/animation_cs_event.gd" id="1_a6kxa"]
+
+[resource]
+script = ExtResource("1_a6kxa")
+animator = NodePath("music tablet")
+animation_name = "activate"
+metadata/_custom_type_script = "uid://84oaxla2j74g"

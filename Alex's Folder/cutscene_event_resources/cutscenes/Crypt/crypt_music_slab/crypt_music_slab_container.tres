@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="cutscene_container" load_steps=12 format=3 uid="uid://cj6lnkf7ujlrv"]
+
+[ext_resource type="Resource" uid="uid://criivvkwkv4ux" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/quilt_pos_set.tres" id="1_6u6xd"]
+[ext_resource type="Resource" uid="uid://dqdwa4usytms" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/set_camera.tres" id="1_ckyg0"]
+[ext_resource type="Resource" uid="uid://mt0ri08sgv6n" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/quilt_walk.tres" id="2_0ki60"]
+[ext_resource type="Resource" uid="uid://cp6wgt332e5n4" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/music_slab_1_cs.tres" id="2_idu33"]
+[ext_resource type="Resource" uid="uid://cu0hmvmrab1s8" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/quilt_turn_right.tres" id="3_0ki60"]
+[ext_resource type="Resource" uid="uid://b7jihe1mjh4o6" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/quilt_hand_out.tres" id="3_6u6xd"]
+[ext_resource type="Resource" uid="uid://b8u6j3mf5g44p" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/music_slab_activate.tres" id="4_0ki60"]
+[ext_resource type="Resource" uid="uid://bv2s4b1dmkff5" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/quilt_idle.tres" id="5_ypyv8"]
+[ext_resource type="Resource" uid="uid://dg2t0550gfmo8" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/music_slab_2_cs.tres" id="6_jfrht"]
+[ext_resource type="Resource" uid="uid://lvahu3osbfv8" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/temp_take_to_top.tres" id="7_8dw2v"]
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="8_ewvmk"]
+
+[resource]
+script = ExtResource("8_ewvmk")
+events = [ExtResource("1_ckyg0"), ExtResource("2_0ki60"), ExtResource("1_6u6xd"), ExtResource("5_ypyv8"), ExtResource("3_0ki60"), ExtResource("2_idu33"), ExtResource("3_6u6xd"), ExtResource("4_0ki60"), ExtResource("5_ypyv8"), ExtResource("6_jfrht"), ExtResource("7_8dw2v")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"
