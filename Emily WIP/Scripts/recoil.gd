@@ -13,11 +13,14 @@ signal shoot_projectile()
 func recoil_vel_equation():
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
 	player_direction = player.get_local_mouse_position().normalized()
-	#player_direction = 
-	if joystick_direction > Vector2(0,0) or joystick_direction < Vector2(0,0):
-		n = joystick_direction
+	if joystick_direction.x != 0 || joystick_direction.y != 0:
+		n = joystick_direction.normalized()
 	else:
-		n = player_direction
+		if player.r_calc == player.recoil_calculation_type.from_player:
+			n = player_direction
+		elif player.r_calc == player.recoil_calculation_type.from_center_of_screen:
+			n = (get_viewport().get_mouse_position() - Vector2(player.get_viewport_rect().size.x/2, player.get_viewport_rect().size.y/2)).normalized()
+			pass
 	value = n * force * -1
 	return value
 
@@ -25,10 +28,14 @@ func shoot():
 	var proj = projectile_scene.instantiate()
 	player.add_child(proj)
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
-	if abs(joystick_direction) > Vector2(0,0):
-		proj.projectile_direction = (proj.position - joystick_direction)
+	if joystick_direction.x != 0 || joystick_direction.y != 0:
+		proj.projectile_direction = joystick_direction.normalized()
 	else:
-		proj.projectile_direction = (proj.get_global_mouse_position() - player.position).normalized()
+		if player.r_calc == player.recoil_calculation_type.from_player:
+			proj.projectile_direction = (proj.get_global_mouse_position() - player.position).normalized()
+		elif player.r_calc == player.recoil_calculation_type.from_center_of_screen:
+			proj.projectile_direction = (get_viewport().get_mouse_position() - Vector2(player.get_viewport_rect().size.x/2, player.get_viewport_rect().size.y/2)).normalized()
+			pass
 	shoot_projectile.emit()
 
 func Enter():

@@ -12,6 +12,10 @@ var health: int
 var spawn_point
 var shrine_key: bool = false
 
+enum recoil_calculation_type {from_player, from_center_of_screen}
+
+@export var r_calc: recoil_calculation_type
+
 func _ready() -> void:
 	health = max_health
 	spawn_point = global_position

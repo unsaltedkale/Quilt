@@ -1424,7 +1424,7 @@ is_phlo = true
 max_objects = 1
 
 [node name="recoil_indicator" type="Sprite2D" parent="."]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2, 2)
 texture = ExtResource("2_icvrh")
 script = ExtResource("3_jgwx7")
 
