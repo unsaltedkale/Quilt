@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_y5a2b")
 text = Dictionary[String, String]({
-"0": "PHLO: Um… sorry to put this on you all at once— but I’m trapped here. I can’t get back home.",
-"1": "PHLO: Do you know a way out of here?",
+"0": "%phlo_worry%PHLO: Um… sorry to put this on you all at once— but I’m trapped here. I can’t get back home.",
+"1": "%phlo_neutral%PHLO: Do you know a way out of here?",
 "2": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

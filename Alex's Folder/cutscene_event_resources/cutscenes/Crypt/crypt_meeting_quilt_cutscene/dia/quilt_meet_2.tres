@@ -5,12 +5,12 @@
 [resource]
 script = ExtResource("1_dc8yw")
 text = Dictionary[String, String]({
-"0": "???: What was I thinking— I’ll never find my way out of here…",
-"1": "???: I’ll suffocate in here and no one will care…",
-"2": "???: …",
-"3": "[ ??? has a growing pit in their stomach. ]",
-"4": "???: If… if you can hear me… whoever you were in life…",
-"5": "???: Don’t let me go out like this…",
+"0": "%phlo_worry%???: What was I thinking— I’ll never find my way out of here…",
+"1": "%phlo_worry%???: I’ll suffocate in here and no one will care…",
+"2": "%phlo_cry%???: …",
+"3": "%phlo_worry%[ ??? has a growing pit in their stomach. ]",
+"4": "%phlo_worry%???: If… if you can hear me… whoever you were in life…",
+"5": "%phlo_cry%???: Don’t let me go out like this…",
 "6": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

@@ -10,7 +10,7 @@ text = Dictionary[String, String]({
 "2": "[ HERE LIES SLAUGHTERED, DIVESTED, THE CHARLATAN HERO OF THE ASBESTINE. ]",
 "3": "[ WE ARE SUPERIOR TO THIS ONE PLAYING SAVIOR. ]",
 "4": "[ LET ONLY THE FALLEN PRAY TO THIS SPIRIOUS, BROKEN BASTION. ]",
-"5": "???: …",
+"5": "%phlo_worry%???: …",
 "6": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

@@ -5,10 +5,10 @@
 [resource]
 script = ExtResource("1_jmhj7")
 text = Dictionary[String, String]({
-"0": "PHLO: QUILT?",
-"1": "[ QUILT nods their head in the affirmative. ]",
-"2": "PHLO: You— You can understand me!",
-"3": "PHLO: That’s… that’s a good name, QUILT.",
+"0": "%phlo_surprise%PHLO: QUILT?",
+"1": "%empty%[ QUILT nods their head in the affirmative. ]",
+"2": "%phlo_surprise%PHLO: You— You can understand me!",
+"3": "%phlo_happyPHLO: That’s… that’s a good name, QUILT.",
 "4": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbacm4eej53j"
-path="res://.godot/imported/phlo_idle_carp.png-4e6326f65faa67fa099f435888e5675e.ctex"
+path="res://.godot/imported/phlo_neutral_carp.png-71cd9ec45e4c1e195e04281724c7ed59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Character Portaits/phlo_idle_carp.png"
-dest_files=["res://.godot/imported/phlo_idle_carp.png-4e6326f65faa67fa099f435888e5675e.ctex"]
+source_file="res://Art/Character Portaits/phlo_neutral_carp.png"
+dest_files=["res://.godot/imported/phlo_neutral_carp.png-71cd9ec45e4c1e195e04281724c7ed59.ctex"]
 
 [params]
 

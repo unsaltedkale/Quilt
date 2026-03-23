@@ -1,4 +1,4 @@
-[gd_scene load_steps=257 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=254 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="1_mvhf0"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_2v7i3"]
@@ -48,8 +48,6 @@
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="46_vl6hs"]
 [ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="47_c3mfk"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="47_tdt2l"]
-[ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="50_c6e1v"]
-[ext_resource type="Script" uid="uid://kb0fkahyduml" path="res://Alex's Folder/tscns/levels/test_path_follower.gd" id="51_sp84p"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="51_xu5pi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17h1f"]
@@ -2379,12 +2377,6 @@ metadata/_snap_count = 2
 offsets = PackedFloat32Array(0.7894737, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.003921569, 0.003921569, 0.003921569, 0)
 
-[sub_resource type="Curve2D" id="Curve2D_xu5pi"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11009.547, 0, 0, 0, 0, 0, 12308.547, 1897.9609, 0, 0, 0, 0, 18119.547, -1248.0391, 0, 0, 0, -118.81, 25558.547, -1728.0391)
-}
-point_count = 5
-
 [node name="Tutorial1" type="Node2D"]
 
 [node name="CryptQuiltPlinth" type="Sprite2D" parent="."]
@@ -2408,7 +2400,7 @@ frame = 3
 frame_progress = 1.0
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
-position = Vector2(74043, -19791)
+position = Vector2(35306, 4392)
 is_phlo = false
 
 [node name="phlo_backpack" parent="." instance=ExtResource("1_mvhf0")]
@@ -3622,17 +3614,6 @@ visible = false
 
 [node name="MakeItMusical" parent="Zipline5" index="3"]
 active = false
-
-[node name="Path2D" type="Path2D" parent="."]
-visible = false
-position = Vector2(74534.45, -20103.96)
-curve = SubResource("Curve2D_xu5pi")
-script = ExtResource("51_sp84p")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
-texture = ExtResource("50_c6e1v")
 
 [connection signal="finished" from="AudioStreamPlayer" to="Conductor" method="_on_audio_stream_player_finished"]
 

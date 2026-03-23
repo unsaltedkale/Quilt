@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_tedxx")
 text = Dictionary[String, String]({
-"0": "PHLO: Wait, don’t go!",
+"0": "%phlo_surprise%PHLO: Wait, don’t go!",
 "1": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

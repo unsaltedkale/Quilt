@@ -5,13 +5,13 @@
 [resource]
 script = ExtResource("1_cjanx")
 text = Dictionary[String, String]({
-"0": "???: Uh— um— uh—",
-"1": "[ ???’s heartrate is spiking. ]",
-"2": "???: H—hi. My name is— My name is PHLOGISTION. Or PHLO.",
-"3": "PHLO: …P—please just call me PHLO. If you can.",
-"4": "PHLO: …",
-"5": "PHLO: ( They’re… they’re not attacking me… )",
-"6": "PHLO: What’s your… name?",
+"0": "%phlo_surprise%???: Uh— um— uh—",
+"1": "%phlo_surprise%[ ???’s heartrate is spiking. ]",
+"2": "%phlo_neutral%???: H—hi. My name is— My name is PHLOGISTION. Or PHLO.",
+"3": "%phlo_worry%PHLO: …P—please just call me PHLO. If you can.",
+"4": "%phlo_worry%PHLO: …",
+"5": "%phlo_neutral%PHLO: ( They’re… they’re not attacking me… )",
+"6": "%phlo_worry%PHLO: What’s your… name?",
 "7": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
