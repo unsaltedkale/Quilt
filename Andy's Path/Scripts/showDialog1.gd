@@ -30,10 +30,8 @@ func _ready() -> void:
 	dialogueReference.add_theme_font_size_override("font_size", font_size)
 
 func _input(event: InputEvent) -> void:
-	pass
-	#probably works but commenting it out just in case -- alex
-	#if event.is_action_pressed("interact") && dialogFolder != null:
-		#_on_pressed()
+	if event.is_action_pressed("interact") && dialogFolder != null:
+		_on_pressed()
 
 func _on_pressed() -> void:
 	font_size = sliderReference.value
@@ -47,8 +45,8 @@ func _on_pressed() -> void:
 		for i in len(line):
 			await wait(0.01) # moving this before fixed number not moving up
 			dialogueReference.visible_characters += 1
-			#print(str(i) + " / " + str(dialogueReference.visible_characters) + " / " + str(len(line)))
-			
+			if len(line) < dialogueReference.visible_characters:
+				break # ^ checks if was skipped to the end
 		if dialogue_counter > len(dialogFolder.text) - 2:
 			UiReference.visible = false
 			#$"../../../../NPCs/TestNPC".isPressed = false	
@@ -56,6 +54,8 @@ func _on_pressed() -> void:
 			dialouge_finished.emit()
 		isTyping = false
 		dialogue_counter += 1 #<-- having this at the end is causing problems -- alex
+	elif isTyping: # if player presses twice, line skips to the end.
+		dialogueReference.visible_characters = len(line)
 func _process(delta: float) -> void:
 	#print(str(dialogue_counter) + " / " + str(UiReference.visible))
 	#if Input.is_action_pressed("interact"):

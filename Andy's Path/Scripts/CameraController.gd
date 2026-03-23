@@ -107,7 +107,7 @@ func _process(delta: float) -> void:
 			tween.kill()
 			pity_kill_timer = pity_kill_timer_max
 			$"../CanvasLayer/Pity Kill Timer".text = ""
-	else:
+	elif $"../CanvasLayer/Pity Kill Timer" != null:
 		$"../CanvasLayer/Pity Kill Timer".text = ""
 		pity_kill_timer = pity_kill_timer_max
 
