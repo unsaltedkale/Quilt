@@ -24,6 +24,13 @@ func _joy_connection_changed(device: int, connected: bool):
 func _process(delta: float) -> void:
 	'''if Input.is_action_just_pressed("interact"):
 		controller = !controller'''
+	if Input.is_action_just_pressed("fire_projectile") && controller == true:
+		print("switched to mouse")
+		controller = false
+	elif Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
+		if controller == false:
+			print("switched to controller")
+			controller = true
 	var v 
 	if !controller:
 		if player.r_calc == player.recoil_calculation_type.from_player:
