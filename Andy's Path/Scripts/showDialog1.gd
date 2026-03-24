@@ -54,11 +54,11 @@ func _parse(l: String):
 	
 	if ws[0] == " ":
 		ws = ws.substr(1)
-		print("space cleaned")
+		#print("space cleaned")
 	
-	print("l: |" + l)
-	print("ws: |" + ws)
-	print("pic: |" + pic)
+	#print("l: |" + l)
+	#print("ws: |" + ws)
+	#print("pic: |" + pic)
 	
 	return ws
 
@@ -70,7 +70,7 @@ func _on_pressed() -> void:
 		characterportraitReference.play("empty")
 		line = _parse(line)
 	if not isTyping:
-		print("boop")
+		#print("boop")
 		dialogueReference.visible_characters = 0
 		isTyping = true
 		text = line
@@ -92,7 +92,7 @@ func _on_pressed() -> void:
 func _process(delta: float) -> void:
 	#if dialogueReference.visible_characters == 0 && dialogue_counter == 0:
 		
-	print(str(dialogueReference.visible_characters) + " / " + str(dialogue_counter))
+	#print(str(dialogueReference.visible_characters) + " / " + str(dialogue_counter))
 	#print(str(dialogue_counter) + " / " + str(UiReference.visible))
 	#if Input.is_action_pressed("interact"):
 		#Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
@@ -112,5 +112,5 @@ func Dialogue(dialogueResource):
 	playerReference.find_child("StateMachine").find_child("Cutscene").Transition.emit(Player, "cutscene")
 	dialogFolder = load(dialogueResource)
 	dialogue_counter = 0
-	print_debug("AUTO CLICKED")
+	#print_debug("AUTO CLICKED")
 	_on_pressed()
