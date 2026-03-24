@@ -1,19 +1,31 @@
 extends Path2D
 
 @export var inc = 0
-@export var speed = 800
-@onready var Conductor = $"../Conductor"
+@export var speed = 400
+@export var emit: bool
+@export var process_emit: bool
+@onready var spark = $PathFollow2D/Spark
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	spark.emitting = false
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Conductor.current_music_resource == load("res://Alex's Folder/music_resources/crypt_2_ebb_OUTRO.tres"):
+	if Input.is_action_just_pressed("crouch"):
+		emit = true
+	if emit == true:
+		spark.emitting = true
+		process_emit = true
+		emit = false
+		inc = 0
+	if process_emit == true:
 		inc+=delta*speed
 		$PathFollow2D.progress = inc
-	else:
-		inc = 0
+		if ($PathFollow2D.progress_ratio - 0.99) >= 0:
+			process_emit = false
+			inc = 0
+			spark.emitting = false
 	pass

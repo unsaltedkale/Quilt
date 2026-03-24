@@ -2,6 +2,8 @@ extends Sprite2D
 
 @onready var player = get_parent()
 @export var controller: bool
+@onready var sm = $"../StateMachine"
+@onready var tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,8 +24,21 @@ func _joy_connection_changed(device: int, connected: bool):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	'''if Input.is_action_just_pressed("interact"):
-		controller = !controller'''
+	
+	if sm.current_state.state_name == "cutscene" && modulate == Color("ffffffff"):
+		print("SETTING TRANSPARENT")
+		if tween != null:
+			tween.kill()
+		tween = get_tree().create_tween()
+		tween.tween_property(self, "modulate", Color("ffffff00"), 2)
+		
+	elif sm.current_state.state_name != "cutscene" && modulate == Color("ffffff00"):
+		print("SETTING OPAQUE")
+		if tween != null:
+			tween.kill()
+		tween = get_tree().create_tween()
+		tween.tween_property(self, "modulate", Color("ffffffff"), 2)
+
 	if Input.is_action_just_pressed("fire_projectile") && controller == true:
 		print("switched to mouse")
 		controller = false
@@ -32,6 +47,7 @@ func _process(delta: float) -> void:
 			print("switched to controller")
 			controller = true
 	var v 
+	
 	if !controller:
 		if player.r_calc == player.recoil_calculation_type.from_player:
 			v = (player.get_global_mouse_position() - player.position).normalized()

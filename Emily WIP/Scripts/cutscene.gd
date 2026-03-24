@@ -9,7 +9,10 @@ class_name Cutscene
 func Enter():
 	prev_position = get_parent().get_parent().position
 	player.velocity = Vector2(0,0)
-	an.play("idle")
+	if player.is_phlo:
+		an.play("phlo_idle")
+	else:
+		an.play("idle")
 	print("entered cutscene state")
 	
 func Update(_delta):
