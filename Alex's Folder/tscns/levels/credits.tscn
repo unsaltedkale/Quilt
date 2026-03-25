@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs3urn5ugh5mq"]
+
+[ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="1_n28yg"]
+[ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="2_ngbi8"]
+[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="3_ngbi8"]
+[ext_resource type="Resource" uid="uid://rqtthumyar3f" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Credits/credits_container.tres" id="4_l5sxb"]
+
+[node name="Credits" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(15.280004, 15.280004)
+text = "A game by hiccup
+
+—{+}—
+
+NARRATIVE
+Filler
+
+PLAYER SYSTEM
+Filler
+
+DIALOUGE SYSTEM
+Filler
+
+OBJECT AND LEVEL DESIGN
+Filler
+
+MUSIC AND SFX
+Filler
+
+TILESET AND LEVEL ART
+Filler
+
+
+Music recorded live by
+
+
+FILLER BAND NAME
+
+—{+}—
+
+INSTRUMENT
+Filler
+Filler
+
+INSTRUMENT
+Filler
+Filler
+
+INSTRUMENT
+Filler
+Filler
+
+INSTRUMENT
+Filler
+Filler
+
+INSTRUMENT
+Filler
+Filler
+
+Special Thanks
+
+You!
+
+
+Thank you for playing QUILT.
+
+
+
+
+
+
+
+THE END...?
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("1_n28yg")]
+position = Vector2(-1833, -908)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1695, 210)
+scale = Vector2(4, 4)
+zoom = Vector2(0.5, 0.5)
+limit_enabled = false
+limit_left = 1000000
+limit_top = 10000000
+limit_bottom = 3363
+script = ExtResource("2_ngbi8")
+
+[node name="Cutscene Trigger" type="Node" parent="."]
+
+[node name="CutsceneTrigger" parent="Cutscene Trigger" instance=ExtResource("3_ngbi8")]
+position = Vector2(-1841, -709)
+scale = Vector2(9.56, 7.76)
+container = ExtResource("4_l5sxb")

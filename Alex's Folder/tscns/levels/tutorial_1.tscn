@@ -35,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://dyflwb33jbhea" path="res://Art/Crypt Escape Tablet.png" id="21_6bep7"]
 [ext_resource type="Texture2D" uid="uid://buwo76jirgxpw" path="res://Art/Crypt Escape Tablet(1).png" id="21_c3mfk"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="23_sp84p"]
-[ext_resource type="Script" uid="uid://kb0fkahyduml" path="res://Alex's Folder/tscns/levels/test_path_follower.gd" id="24_c6e1v"]
+[ext_resource type="Script" uid="uid://kb0fkahyduml" path="res://Alex's Folder/gds/test_path_follower.gd" id="24_c6e1v"]
 [ext_resource type="Resource" uid="uid://b8jvwjtaobo0a" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/crypt_cave_enter_container.tres" id="24_xo4aa"]
 [ext_resource type="Resource" uid="uid://dytjfs6d2xqxv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/crypt_meeting_quilt_container.tres" id="25_vl2pu"]
 [ext_resource type="Resource" uid="uid://d24g4wdbk4vrl" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/exit_crypt_level/exit_crypt_level_container.tres" id="26_uv8gf"]
@@ -3656,7 +3656,6 @@ active = false
 
 [connection signal="finished" from="AudioStreamPlayer" to="Conductor" method="_on_audio_stream_player_finished"]
 
-[editable path="Player"]
 [editable path="Conductor_Platforms/Conductor_Platform7"]
 [editable path="Conductor_Platforms/Conductor_Platform8"]
 [editable path="Conductor_Platforms/Conductor_Platform9"]
