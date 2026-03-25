@@ -615,6 +615,9 @@ texture = ExtResource("11_pk5we")
 [node name="Player" parent="." instance=ExtResource("2_dt4o1")]
 position = Vector2(3338, -2586)
 
+[node name="recoil_indicator" parent="Player" index="0"]
+visible = false
+
 [node name="Tiles" type="Node2D" parent="." groups=["tilemap"]]
 
 [node name="Decorations" type="TileMapLayer" parent="Tiles"]
@@ -780,3 +783,5 @@ texture = ExtResource("23_egg1h")
 [node name="QuiltTitleScreen1_png" type="Sprite2D" parent="."]
 position = Vector2(5345, 20760)
 texture = ExtResource("21_uc7l3")
+
+[editable path="Player"]

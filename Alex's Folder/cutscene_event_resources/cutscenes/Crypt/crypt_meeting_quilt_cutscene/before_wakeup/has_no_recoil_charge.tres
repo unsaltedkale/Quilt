@@ -6,5 +6,5 @@
 script = ExtResource("1_sm35g")
 actor = NodePath("Player")
 variable_name = "collected_objects"
-delay_after = 3.0
+delay_after = 5.0
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

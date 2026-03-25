@@ -25,19 +25,19 @@ func _joy_connection_changed(device: int, connected: bool):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	if sm.current_state.state_name == "cutscene" && modulate == Color("ffffffff"):
+	if sm.current_state.state_name == "cutscene" && modulate.a == 1:
 		print("SETTING TRANSPARENT")
 		if tween != null:
 			tween.kill()
 		tween = get_tree().create_tween()
-		tween.tween_property(self, "modulate", Color("ffffff00"), 2)
+		tween.tween_property(self, "modulate:a", 0, 2)
 		
-	elif sm.current_state.state_name != "cutscene" && modulate == Color("ffffff00"):
+	elif sm.current_state.state_name != "cutscene" && modulate.a == 0:
 		print("SETTING OPAQUE")
 		if tween != null:
 			tween.kill()
 		tween = get_tree().create_tween()
-		tween.tween_property(self, "modulate", Color("ffffffff"), 2)
+		tween.tween_property(self, "modulate:a", 1, 2)
 
 	if Input.is_action_just_pressed("fire_projectile") && controller == true:
 		print("switched to mouse")

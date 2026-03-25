@@ -6,5 +6,5 @@
 script = ExtResource("1_uwh3f")
 actor = NodePath("fake quilt")
 variable_name = "z_index"
-value_float = 1.0
+value_float = 2.0
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"
