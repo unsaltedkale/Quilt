@@ -4,6 +4,10 @@ extends Sprite2D
 @export var controller: bool
 @onready var sm = $"../StateMachine"
 @onready var tween
+@export var charge_c: Color = Color("fff2f1e3")
+@export var no_charge_c: Color = Color("ba577a55")
+@export var charge_c_time: float = 0.1
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,22 +26,72 @@ func _joy_connection_changed(device: int, connected: bool):
 		controller = false
 	pass
 
+func safe_tween(s, v, t):
+	if tween != null:
+		tween.kill()
+	tween = get_tree().create_tween()
+	tween.tween_property(self, s, v, t)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	if sm.current_state.state_name == "cutscene" && modulate.a == 1:
-		print("SETTING TRANSPARENT")
+	if sm.current_state.state_name == "cutscene" && modulate.a != 0:
 		if tween != null:
-			tween.kill()
-		tween = get_tree().create_tween()
-		tween.tween_property(self, "modulate:a", 0, 2)
+			if tween.is_running():
+				#NO
+				pass
+			else:
+				#YES
+				print("SETTING TRANSPARENT")
+				safe_tween("modulate:a", 0, 2)
+		elif tween == null:
+			#YES
+			print("SETTING TRANSPARENT")
+			safe_tween("modulate:a", 0, 2)
 		
 	elif sm.current_state.state_name != "cutscene" && modulate.a == 0:
-		print("SETTING OPAQUE")
 		if tween != null:
-			tween.kill()
-		tween = get_tree().create_tween()
-		tween.tween_property(self, "modulate:a", 1, 2)
+			if tween.is_running():
+				#NO
+				pass
+			else:
+				#YES
+				print("SETTING OPAQUE")
+				safe_tween("modulate:a", charge_c.a, 2)
+		elif tween == null:
+			#YES
+			print("SETTING OPAQUE")
+			safe_tween("modulate:a", charge_c.a, 2)
+	
+	elif player.collected_objects > 0 && sm.current_state.state_name != "cutscene":
+		if !rgb_compare(charge_c, modulate) || modulate.a != charge_c.a:
+			if tween != null:
+				if tween.is_running():
+					#NO
+					pass
+				else:
+					#YES
+					print("SETTING CHARGE")
+					safe_tween("modulate", charge_c, charge_c_time)
+			elif tween == null:
+				#YES
+				print("SETTING CHARGE")
+				safe_tween("modulate", charge_c, charge_c_time)
+
+	elif player.collected_objects == 0 &&  sm.current_state.state_name != "cutscene":
+		if!rgb_compare(no_charge_c, modulate) || modulate.a != no_charge_c.a:
+			if tween != null:
+				if tween.is_running():
+					#NO
+					pass
+				else:
+					#YES
+					print("SETTING NO CHARGE")
+					safe_tween("modulate", no_charge_c, charge_c_time)
+			elif tween == null:
+				#YES
+				print("SETTING NO CHARGE")
+				safe_tween("modulate", no_charge_c, charge_c_time)
 
 	if Input.is_action_just_pressed("fire_projectile") && controller == true:
 		print("switched to mouse")
@@ -61,6 +115,21 @@ func _process(delta: float) -> void:
 	if v != null:
 		rotation = v.angle() + deg_to_rad(90)
 	pass
+
+func rgb_compare(a: Color, b: Color) -> bool:
+	var i = 0
+	if a.r == b.r:
+		i = i+1
+	if a.g == b.g:
+		i = i+1
+	if a.b == b.b:
+		i = i+1
+	
+	if i == 3:
+		return true
+	else:
+		return false
+	
 
 func wait(duration):
 	await get_tree().create_timer(duration).timeout

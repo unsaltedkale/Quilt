@@ -12,6 +12,7 @@ var BREAK_THE_CYCLE: bool
 var beepboop
 var testbetterrecording
 var in_path: bool
+var pk_timer
 var pity_kill_timer: float
 var pity_kill_timer_max: float = 3.0
 var tween
@@ -33,6 +34,7 @@ func _ready() -> void:
 	pity_kill_timer = pity_kill_timer_max
 	
 	playerReference = $"../Player"
+	pk_timer = $"../CanvasLayer/Pity Kill Timer"
 
 func _path(string: String):
 	var vinyl: PackedVector2Array
@@ -98,7 +100,7 @@ func _process(delta: float) -> void:
 	if tween && not playerReference.find_child("VOSN2D").is_on_screen():
 		pity_kill_timer -= delta
 		if pity_kill_timer < 2.0:
-			$"../CanvasLayer/Pity Kill Timer".text = str(snapped(pity_kill_timer, 0.1))
+			pk_timer.text = str(snapped(pity_kill_timer, 0.1))
 		if pity_kill_timer <= 0:
 			BREAK_THE_CYCLE = true
 			if tween != null	:
@@ -106,9 +108,9 @@ func _process(delta: float) -> void:
 			playerReference.die()
 			tween.kill()
 			pity_kill_timer = pity_kill_timer_max
-			$"../CanvasLayer/Pity Kill Timer".text = ""
-	elif $"../CanvasLayer/Pity Kill Timer" != null:
-		$"../CanvasLayer/Pity Kill Timer".text = ""
+			pk_timer.text = ""
+	elif pk_timer != null:
+		pk_timer.text = ""
 		pity_kill_timer = pity_kill_timer_max
 
 	if has_control:	

@@ -2418,7 +2418,7 @@ frame_progress = 1.0
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(34690, 4762)
+position = Vector2(3642, -2729)
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(35400, 5001)
