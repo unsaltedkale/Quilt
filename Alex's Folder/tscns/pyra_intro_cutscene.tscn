@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://co2xfwuly32r1"]
+[gd_scene load_steps=27 format=4 uid="uid://co2xfwuly32r1"]
 
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_p4yn6"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_dt4o1"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="15_g3p2m"]
 [ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="16_041gn"]
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="18_2jswo"]
+[ext_resource type="Texture2D" uid="uid://cy3orig8tnhxh" path="res://Art/Pyra Opening Cutscene Big-2.png" id="18_j3cf7"]
 [ext_resource type="Texture2D" uid="uid://c8hb4gaiwrno8" path="res://Art/Quilt Title Screen-1.png.png" id="21_uc7l3"]
 [ext_resource type="Texture2D" uid="uid://4fwkr023vvd3" path="res://Art/Pyra Opening Cutscene Big.png" id="23_egg1h"]
 
@@ -606,7 +607,7 @@ size = Vector2(256, 256)
 
 [node name="DustSquare" type="Sprite2D" parent="."]
 modulate = Color(0.08243547, 0.08243547, 0.08243547, 1)
-position = Vector2(7872.5, 9878.999)
+position = Vector2(7206.0005, 10566.001)
 scale = Vector2(11433.5, 19063)
 texture = ExtResource("11_pk5we")
 
@@ -633,8 +634,8 @@ tile_map_data = PackedByteArray("AAATANz/AAAAAAAAAAATAN3/AAAAAAAAAAATAN7/AAAAAAA
 tile_set = SubResource("TileSet_tembr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3337, -3541)
-zoom = Vector2(0.3, 0.3)
+position = Vector2(3202, -3135)
+zoom = Vector2(4, 4)
 limit_enabled = false
 limit_left = 1000000
 limit_top = 10000000
@@ -776,6 +777,7 @@ autowrap_mode = 3
 [node name="Stars" type="Node" parent="."]
 
 [node name="PyraOpeningCutsceneSprite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2175, -3347)
 scale = Vector2(10, 10)
 texture = ExtResource("23_egg1h")
@@ -783,5 +785,10 @@ texture = ExtResource("23_egg1h")
 [node name="QuiltTitleScreen1_png" type="Sprite2D" parent="."]
 position = Vector2(5345, 20760)
 texture = ExtResource("21_uc7l3")
+
+[node name="PyraOpeningCutsceneBig2" type="Sprite2D" parent="."]
+position = Vector2(1175.0001, -4347)
+scale = Vector2(10, 10)
+texture = ExtResource("18_j3cf7")
 
 [editable path="Player"]
