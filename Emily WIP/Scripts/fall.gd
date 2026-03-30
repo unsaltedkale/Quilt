@@ -2,10 +2,14 @@ extends State
 
 @export var gravity: float = 3000.0 #2000
 @export var max_grav: float = 2000.0
+var timer: float = 0.0
 
 signal has_landed()
+func Enter():
+	timer = 0
 
 func Update(_delta):
+	timer += 1
 	if player.velocity.y <0:
 		if player.is_phlo:
 			an.play("phlo_jump")
@@ -17,10 +21,17 @@ func Update(_delta):
 		else:
 			an.play("fall")
 	if player.is_on_floor():
-		if player.is_phlo:
-			an.play("phlo_land")
+		print("timer",timer)
+		if timer >= 5:
+			if player.is_phlo:
+				an.play("phlo_wump")
+			else:
+				an.play("land")
 		else:
-			an.play("land")
+			if player.is_phlo:
+				an.play("phlo_land")
+			else:
+				an.play("land")
 
 func Physics_Update(_delta):
 	if player.velocity.y <= max_grav:
