@@ -8,7 +8,6 @@ extends Sprite2D
 @export var no_charge_c: Color = Color("ba577a55")
 @export var charge_c_time: float = 0.1
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Input.joy_connection_changed.connect(_joy_connection_changed)

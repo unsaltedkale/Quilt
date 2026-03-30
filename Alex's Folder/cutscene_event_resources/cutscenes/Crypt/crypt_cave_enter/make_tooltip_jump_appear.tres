@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_wvpoo")
-actor = NodePath("LevelToolTip2")
+actor = NodePath("TTM Jump")
 variable_name = "visible"
 value_bool = true
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cutscene_container" load_steps=3 format=3 uid="uid://betbbuulk0dxs"]
+
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_mh3a4"]
+[ext_resource type="Resource" uid="uid://cid1n3n85l4mr" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/make_recoil_indicator_visible/make_ri_visible.tres" id="1_r78a0"]
+
+[resource]
+script = ExtResource("1_mh3a4")
+events = [ExtResource("1_r78a0")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"

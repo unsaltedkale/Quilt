@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://8g40qfiat0ar"]
+
+[ext_resource type="Script" uid="uid://e5uuj8kd4553" path="res://Alex's Folder/gds/tool_tip_message.gd" id="1_623h2"]
+
+[node name="ToolTipMessage" type="Label"]
+scale = Vector2(2.9999995, 2.9999995)
+text = "TEST MESSAGE BLAH BLAH BLAH"
+horizontal_alignment = 1
+script = ExtResource("1_623h2")
