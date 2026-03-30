@@ -5,12 +5,12 @@
 [resource]
 script = ExtResource("1_vhd2s")
 text = Dictionary[String, String]({
-"0": "[ QUILT shakes themselves out of whatever state they are in. ]",
-"1": "QUILT: ( No. I do not know them. All I know is that they are not from here. )",
-"2": "[ PHLO hasn't seen QUILT shaken before. ]",
-"3": "[ PHLO doesn’t like it. ]",
-"4": "PHLO: Let’s just keep going, okay? They’re probably just someone random.",
-"5": "QUILT: ( Yes. Let us get into the town. It should not be long from here. )",
+"0": "%quilt_neutral%[ QUILT shakes themselves out of whatever state they are in. ]",
+"1": "%quilt_neutral%QUILT: ( No. I do not know them. All I know is that they are not from here. )",
+"2": "%phlo_worry%[ PHLO hasn't seen QUILT shaken before. ]",
+"3": "%phlo_worry%[ PHLO doesn’t like it. ]",
+"4": "%phlo_neutral%PHLO: Let’s just keep going, okay? They’re probably just someone random.",
+"5": "%quilt_neutral%QUILT: ( Yes. Let us get into the town. It should not be long from here. )",
 "6": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

@@ -5,22 +5,22 @@
 [resource]
 script = ExtResource("1_xfv2m")
 text = Dictionary[String, String]({
-"0": "???: So you finally woke up from your nap and crawled out of the wreck you’ve made.",
-"1": "QUILT: …",
-"10": "???: Leave them to *rot*, little spark.",
-"11": "[ QUILT’s hands are shaking.]",
-"12": "QUILT: …",
-"13": "???: Oh, you won’t?",
-"14": "???: I knew you didn’t have a spine because you didn’t break one when you fell.",
-"15": "???: Have fun summoning the apocalypse again.",
+"0": "%flow_neutral%???: So you finally woke up from your nap and crawled out of the wreck you’ve made.",
+"1": "%quilt_neutral%QUILT: …",
+"10": "%flow_neutral%???: Leave them to *rot*, little spark.",
+"11": "%quilt_neutral%[ QUILT’s hands are shaking.]",
+"12": "%quilt_neutral%QUILT: …",
+"13": "%flow_neutral%???: Oh, you won’t?",
+"14": "%flow_neutral%???: I knew you didn’t have a spine because you didn’t break one when you fell.",
+"15": "%flow_neutral%???: Have fun summoning the apocalypse again.",
 "16": "",
-"2": "???: You can’t even speak? Hah! A classic.",
-"3": "???: I’ll keep it brief since you’re in *such* a rush.",
-"4": "???: I am going to dismantle you. Piece by piece.",
-"5": "???: And once you are nothing, this world will finally be sane again.",
-"6": "[ QUILT’s body is not moving. ]",
-"7": "???: Hah. If you won’t speak, I’ll tell them.",
-"8": "???: Little spark? Your *friend* here caused this whole mess.",
-"9": "???: I don’t know why they couldn’t possibly spit that out!"
+"2": "%flow_neutral%???: You can’t even speak? Hah! A classic.",
+"3": "%flow_neutral%???: I’ll keep it brief since you’re in *such* a rush.",
+"4": "%flow_neutral%???: I am going to dismantle you. Piece by piece.",
+"5": "%flow_neutral%???: And once you are nothing, this world will finally be sane again.",
+"6": "%quilt_neutral%[ QUILT’s body is not moving. ]",
+"7": "%flow_neutral%???: Hah. If you won’t speak, I’ll tell them.",
+"8": "%flow_neutral%???: Little spark? Your *friend* here caused this whole mess.",
+"9": "%flow_neutral%???: I don’t know why they couldn’t possibly spit that out!"
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

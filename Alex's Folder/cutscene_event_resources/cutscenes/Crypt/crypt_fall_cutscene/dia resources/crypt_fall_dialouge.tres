@@ -5,17 +5,17 @@
 [resource]
 script = ExtResource("1_epyi5")
 text = Dictionary[String, String]({
-"0": "???: Oh. You’ve reached the end of the trail, haven’t you? The little spark can’t run anymore.",
-"1": "???: PYRA please…",
-"10": "PYRA: LADY PYRA, spark.",
+"0": "%pyra_neutral%???: Oh. You’ve reached the end of the trail, haven’t you? The little spark can’t run anymore.",
+"1": "%phlo_cry%???: PYRA please…",
+"10": "%pyra_neutral%PYRA: LADY PYRA, spark.",
 "11": "",
-"2": "PYRA: That is LADY PYRA to you, spark.",
-"3": "PYRA: This is what you always do. You disrespect me, spit on me, and then beg for forgiveness after.",
-"4": "PYRA: I’m sick of it. I’m sick of you.",
-"5": "???: P-PYRA…",
-"6": "PYRA: Shut up. You want to see the outside world *sooooo* badly? Do you want to see how it treats your rotten attitude?",
-"7": "PYRA: You need to go on your little journey so desperately?",
-"8": "PYRA: Go. I don’t care. I’ve given enough to you.",
-"9": "???: Wait, no PYRA– no no no–"
+"2": "%pyra_neutral%PYRA: That is LADY PYRA to you, spark.",
+"3": "%pyra_neutral%PYRA: This is what you always do. You disrespect me, spit on me, and then beg for forgiveness after.",
+"4": "%pyra_neutral%PYRA: I’m sick of it. I’m sick of you.",
+"5": "%phlo_cry%???: P-PYRA…",
+"6": "%pyra_neutral%PYRA: Shut up. You want to see the outside world *sooooo* badly? Do you want to see how it treats your rotten attitude?",
+"7": "%pyra_neutral%PYRA: You need to go on your little journey so desperately?",
+"8": "%pyra_neutral%PYRA: Go. I don’t care. I’ve given enough to you.",
+"9": "%phlo_surprise%???: Wait, no PYRA– no no no–"
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"

@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_5kqub")
 text = Dictionary[String, String]({
-"0": "[ In front of the SLAB is a TABLET. ]",
+"0": "%empty%[ In front of the SLAB is a TABLET. ]",
 "1": "[ The TABLET has an inscription on it. It says the following: ]",
 "2": "[ HERE LIES SLAUGHTERED, DIVESTED, THE CHARLATAN HERO OF THE ASBESTINE. ]",
 "3": "[ WE ARE SUPERIOR TO THIS ONE PLAYING SAVIOR. ]",

@@ -5,10 +5,10 @@
 [resource]
 script = ExtResource("1_qkwnf")
 text = Dictionary[String, String]({
-"0": "QUILT: PHLO. Get in the liminal space. Now.",
-"1": "PHLO: Huh?!",
-"2": "QUILT: *Now*.",
-"3": "PHLO: Okay, okay!",
+"0": "%quilt_neutral%QUILT: PHLO. Get in the liminal space. Now.",
+"1": "%phlo_worry%PHLO: Huh?!",
+"2": "%quilt_neutral%QUILT: *Now*.",
+"3": "%phlo_surprise%PHLO: Okay, okay!",
 "4": ""
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
