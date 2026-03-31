@@ -2858,6 +2858,9 @@ can_get_twice = true
 [node name="checkpoint21" parent="Checkpoints" instance=ExtResource("30_8ce68")]
 position = Vector2(20769, -2320)
 
+[node name="checkpoint22" parent="Checkpoints" instance=ExtResource("30_8ce68")]
+position = Vector2(99506, -39696)
+
 [node name="Stars" type="Node" parent="."]
 
 [node name="STAR2" parent="Stars" instance=ExtResource("28_frm60")]
