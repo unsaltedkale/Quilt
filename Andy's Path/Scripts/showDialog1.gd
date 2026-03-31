@@ -33,9 +33,15 @@ func _ready() -> void:
 	dialogueReference.add_theme_font_size_override("font_size", font_size)
 
 func _input(event: InputEvent) -> void:
+	print("AYO")
 	if event.is_action_pressed("interact") || event.is_action_pressed("jump") || event.is_action_pressed("fire_projectile"):
 		if dialogFolder != null:
 			_on_pressed()
+	elif event.is_action_pressed("settings"):
+		settingsReference.visible = !settingsReference.visible
+		#get_tree().paused = !get_tree().paused <-- make this work later
+		#pause/unpause the music
+		#somehow pause camera tweening if it is running
 
 func _parse(l: String):
 	var ws = l
@@ -99,9 +105,9 @@ func _process(delta: float) -> void:
 		
 	#print(str(dialogueReference.visible_characters) + " / " + str(dialogue_counter))
 	#print(str(dialogue_counter) + " / " + str(UiReference.visible))
-	print(font_size)
-	if Input.is_action_just_pressed("settings"):
-		settingsReference.visible = !settingsReference.visible
+	#print(font_size)
+	pass
+		
 	
 	
 func wait(duration):
