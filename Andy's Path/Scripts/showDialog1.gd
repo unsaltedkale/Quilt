@@ -8,12 +8,14 @@ var line = ""
 var dialogue_counter
 var isTyping
 var font_size
+var settings_flag = false
 
 var playerReference
 var dialogueReference
 var UiReference
 var sliderReference
 var characterportraitReference
+var settingsReference
 
 signal dialouge_finished
 
@@ -22,6 +24,7 @@ func _ready() -> void:
 	UiReference = $".."
 	sliderReference = $"../../Settings/HSlider"
 	characterportraitReference = $"../CharacterPortrait"
+	settingsReference = $"../../Settings"
 	
 	font_size = sliderReference.value
 	
@@ -65,6 +68,7 @@ func _parse(l: String):
 
 func _on_pressed() -> void:
 	font_size = sliderReference.value
+	dialogueReference.add_theme_font_size_override("font_size", font_size)
 	if dialogFolder != null:
 		line = dialogFolder.text[str(dialogue_counter)]
 	if line.contains("%"):
@@ -76,7 +80,7 @@ func _on_pressed() -> void:
 		isTyping = true
 		text = line
 		for i in len(line):
-			await wait(0.01) # moving this before fixed number not moving up
+			await wait(0.03) # moving this before fixed number not moving up
 			dialogueReference.visible_characters += 1
 			if len(line) < dialogueReference.visible_characters:
 				break # ^ checks if was skipped to the end
@@ -95,9 +99,9 @@ func _process(delta: float) -> void:
 		
 	#print(str(dialogueReference.visible_characters) + " / " + str(dialogue_counter))
 	#print(str(dialogue_counter) + " / " + str(UiReference.visible))
-	#if Input.is_action_pressed("interact"):
-		#Dialogue("res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_fall_cutscene/dia resources/crypt_fall_dialouge.tres")
-	pass
+	print(font_size)
+	if Input.is_action_just_pressed("settings"):
+		settingsReference.visible = !settingsReference.visible
 	
 	
 func wait(duration):

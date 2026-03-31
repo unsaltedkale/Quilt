@@ -815,7 +815,7 @@ offset_bottom = 40.0
 
 [node name="Background" type="ColorRect" parent="UI/Settings"]
 layout_mode = 0
-offset_right = 482.11264
+offset_right = 1141.6571
 offset_bottom = 645.0
 scale = Vector2(1.6738826, 1.674369)
 color = Color(0.36098644, 0.43022326, 0.4866202, 1)
@@ -823,9 +823,9 @@ color = Color(0.36098644, 0.43022326, 0.4866202, 1)
 [node name="HSlider" type="HSlider" parent="UI/Settings"]
 layout_mode = 0
 offset_left = 184.0
-offset_top = 66.99999
+offset_top = 440.0
 offset_right = 504.0
-offset_bottom = 116.99999
+offset_bottom = 490.0
 scale = Vector2(1.6738826, 1.674369)
 theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
@@ -844,5 +844,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 13
 text = "Text Size"
+
+[node name="Label" type="Label" parent="UI/Settings"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 11.0
+offset_right = 1547.0
+offset_bottom = 360.0
+theme_override_fonts/font = ExtResource("2_yhc7a")
+theme_override_font_sizes/font_size = 256
+text = "SETTINGS"
 
 [connection signal="pressed" from="UI/DialogueScreen/Button" to="UI/DialogueScreen/Button" method="_on_pressed"]
