@@ -1,4 +1,4 @@
-[gd_scene load_steps=224 format=3 uid="uid://dt1w85276yf8y"]
+[gd_scene load_steps=225 format=3 uid="uid://dt1w85276yf8y"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
@@ -34,15 +34,18 @@
 [ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
 [ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
 [ext_resource type="AudioStream" uid="uid://dfnkjg7m1oeq0" path="res://Resources/SFX/Quilt Character SFX/Quilt Walkin'.wav" id="25_wjwd1"]
+[ext_resource type="Script" uid="uid://bbolaewr5lju4" path="res://Emily WIP/Scripts/wall_stick.gd" id="33_jgwx7"]
 [ext_resource type="AudioStream" uid="uid://xewlitg8yvow" path="res://Resources/SFX/Phlo SFX/Phlo Death .wav" id="34_2k042"]
 [ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
 [ext_resource type="AudioStream" uid="uid://cy2yj5j10fpl6" path="res://Resources/SFX/Quilt Character SFX/Quilt Jump.wav" id="35_vfdg1"]
 [ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://fireball shoot.wav" id="36_n7wni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
+radius = 5.75
 height = 44.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjwd1"]
+radius = 6.25
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
 shader = ExtResource("2_3uy0y")
@@ -1420,7 +1423,6 @@ stream_0 = ExtResource("25_wjwd1")
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
-is_phlo = true
 max_objects = 1
 
 [node name="recoil_indicator" type="Sprite2D" parent="."]
@@ -1430,18 +1432,18 @@ texture = ExtResource("2_icvrh")
 script = ExtResource("3_jgwx7")
 
 [node name="QuiltCollider" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.75)
+position = Vector2(0.75, 0.75)
 shape = SubResource("CapsuleShape2D_iemgc")
 
 [node name="PhloCollider" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
+position = Vector2(-0.25, 0.5)
 scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_1nwdr")
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"idle"
+animation = &"phlo_land"
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
@@ -1482,6 +1484,9 @@ state_name = "recoil"
 script = ExtResource("20_3uy0y")
 player = NodePath("../..")
 state_name = "stasis"
+
+[node name="WallStick" type="Node" parent="StateMachine"]
+script = ExtResource("33_jgwx7")
 
 [node name="hit_box" type="Area2D" parent="."]
 visible = false
