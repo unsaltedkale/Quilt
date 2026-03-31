@@ -30,7 +30,7 @@ func _ready() -> void:
 	dialogueReference.add_theme_font_size_override("font_size", font_size)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") || event.is_action_pressed("jump"):
+	if event.is_action_pressed("interact") || event.is_action_pressed("jump") || event.is_action_pressed("fire_projectile"):
 		if dialogFolder != null:
 			_on_pressed()
 
