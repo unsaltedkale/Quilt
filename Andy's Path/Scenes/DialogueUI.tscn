@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://b7htniexo5eqo"]
+[gd_scene load_steps=111 format=3 uid="uid://b7htniexo5eqo"]
 
 [ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="1_5lshs"]
 [ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="2_yhc7a"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://l10ym8gaj8d2" path="res://Art/Character Portaits/phlo_worry_carp.png" id="10_0nkvc"]
 [ext_resource type="Texture2D" uid="uid://bneivrxeql22q" path="res://Art/Character Portaits/pyra_neutral_carp.png" id="14_hed1w"]
 [ext_resource type="Texture2D" uid="uid://v753wwmurkgo" path="res://Art/Character Portaits/quilt_neutral_carp.png" id="15_7nw5b"]
+[ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="16_gi33v"]
 
 [sub_resource type="Theme" id="Theme_6n2ox"]
 
@@ -796,6 +797,15 @@ position = Vector2(1020.145, 143)
 scale = Vector2(6.0681806, 6.068181)
 sprite_frames = SubResource("SpriteFrames_wjj7j")
 animation = &"empty"
+
+[node name="ToolTipMessage" parent="UI/DialogueScreen" instance=ExtResource("16_gi33v")]
+layout_mode = 0
+offset_left = 217.77094
+offset_top = 181.56398
+offset_right = 817.77094
+offset_bottom = 301.56396
+text = "[img=64]res://Art/Tool Tips/ttm_20.png[/img]"
+type = 5
 
 [node name="Settings" type="Control" parent="UI"]
 visible = false

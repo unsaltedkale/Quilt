@@ -1,4 +1,4 @@
-[gd_scene load_steps=258 format=4 uid="uid://oui20ia8s15t"]
+[gd_scene load_steps=257 format=4 uid="uid://oui20ia8s15t"]
 
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="1_mvhf0"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_2v7i3"]
@@ -46,7 +46,6 @@
 [ext_resource type="Resource" uid="uid://cj6lnkf7ujlrv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/crypt_music_slab_container.tres" id="40_sp84p"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="46_vl6hs"]
 [ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="47_c3mfk"]
-[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="47_tdt2l"]
 [ext_resource type="Resource" uid="uid://betbbuulk0dxs" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/make_recoil_indicator_visible/make_ri_visible_container.tres" id="50_c6e1v"]
 [ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="50_xu5pi"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="51_xu5pi"]
@@ -2419,13 +2418,10 @@ frame_progress = 1.0
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(35303, 3898)
+position = Vector2(36262, 3985)
 
 [node name="recoil_indicator" parent="Player" index="0"]
 visible = false
-
-[node name="VOSN2D" parent="Player" index="8"]
-position = Vector2(-14831.25, 4610.75)
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(35400, 5001)
@@ -3558,16 +3554,6 @@ texture = ExtResource("16_w15ut")
 
 [node name="DialogueUi" parent="CanvasLayer" instance=ExtResource("47_c3mfk")]
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 21325.998
-offset_top = 1229.0
-offset_right = 21611.998
-offset_bottom = 1278.0
-scale = Vector2(2.55, 2.55)
-text = "HOLD [ INTERACT ] AT A RESET POINT
-TO RESPAWN"
-horizontal_alignment = 1
-
 [node name="ResetPoint" parent="." instance=ExtResource("51_xu5pi")]
 position = Vector2(21694, 1136)
 
@@ -3575,9 +3561,6 @@ position = Vector2(21694, 1136)
 position = Vector2(37963.22, -4497)
 start_position = Vector2(37960, -4500)
 end_position = Vector2(41490, -4500)
-
-[node name="Stasis" parent="." instance=ExtResource("47_tdt2l")]
-position = Vector2(37590, -4307)
 
 [node name="Zipline2" parent="." instance=ExtResource("46_vl6hs")]
 position = Vector2(98693, -29416)
@@ -3658,33 +3641,39 @@ visible = false
 active = false
 
 [node name="TTM Interact" parent="." instance=ExtResource("50_xu5pi")]
-offset_left = 34934.004
-offset_top = 5117.0005
-offset_right = 35185.004
-offset_bottom = 5140.0005
-horizontal_alignment = 0
+offset_left = 34701.0
+offset_top = 5069.0
+offset_right = 35301.0
+offset_bottom = 5189.0
+text = "TEST MESSAGE BLAH BLAH BLAH [img=64]res://Art/Tool Tips/ttm_21.png[/img]"
 type = 3
 
-[node name="TTM Recoil" parent="." instance=ExtResource("50_xu5pi")]
-offset_left = 15358.0
-offset_top = -903.00006
-offset_right = 15609.0
-offset_bottom = -880.00006
-horizontal_alignment = 0
-type = 2
+[node name="TTM Movement" parent="." instance=ExtResource("50_xu5pi")]
+offset_left = 3157.0
+offset_top = -4.0
+offset_right = 3757.0
+offset_bottom = 116.0
 
 [node name="TTM Jump" parent="." instance=ExtResource("50_xu5pi")]
-offset_left = 5350.0
-offset_top = -91.00006
-offset_right = 5601.0
-offset_bottom = -68.00006
+offset_left = 5244.0
+offset_top = -183.0
+offset_right = 5844.0
+offset_bottom = -63.0
 type = 1
 
-[node name="TTM Movement" parent="." instance=ExtResource("50_xu5pi")]
-offset_left = 3358.0
-offset_top = 43.000004
-offset_right = 3609.0
-offset_bottom = 66.0
+[node name="TTM Resetpoint" parent="." instance=ExtResource("50_xu5pi")]
+offset_left = 21104.0
+offset_top = 1225.0
+offset_right = 21704.0
+offset_bottom = 1345.0
+type = 4
+
+[node name="TTM Recoil" parent="." instance=ExtResource("50_xu5pi")]
+offset_left = 15164.0
+offset_top = -966.0
+offset_right = 15764.0
+offset_bottom = -846.0
+type = 2
 
 [connection signal="finished" from="AudioStreamPlayer" to="Conductor" method="_on_audio_stream_player_finished"]
 

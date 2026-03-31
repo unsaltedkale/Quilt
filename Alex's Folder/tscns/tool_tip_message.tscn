@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://e5uuj8kd4553" path="res://Alex's Folder/gds/tool_tip_message.gd" id="1_623h2"]
 
-[node name="ToolTipMessage" type="Label"]
-scale = Vector2(2.9999995, 2.9999995)
-text = "TEST MESSAGE BLAH BLAH BLAH"
+[node name="ToolTipMessage" type="RichTextLabel"]
+offset_right = 600.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "TEST MESSAGE BLAH BLAH BLAH [img=64]res://Art/Tool Tips/ttm_20.png[/img]"
 horizontal_alignment = 1
 script = ExtResource("1_623h2")

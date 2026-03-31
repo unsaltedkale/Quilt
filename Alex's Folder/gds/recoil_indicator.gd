@@ -15,7 +15,6 @@ func _ready() -> void:
 		controller = true
 	else: 
 		controller = false
-	print(Input.get_connected_joypads())
 	pass # Replace with function body.
 
 func _joy_connection_changed(device: int, connected: bool):
@@ -24,6 +23,12 @@ func _joy_connection_changed(device: int, connected: bool):
 	else: 
 		controller = false
 	pass
+
+func _input(InputEvent) -> void:
+	if InputEvent is InputEventKey || InputEvent is InputEventMouse:
+		controller = false
+	elif InputEvent is InputEventJoypadButton || InputEvent is InputEventJoypadMotion:
+		controller = true
 
 func safe_tween(s, v, t):
 	if tween != null:
