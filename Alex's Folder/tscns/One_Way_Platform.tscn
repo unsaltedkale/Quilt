@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2kyan412tqg1"]
+
+[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_bweri"]
+[ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/tscns/make_it_musical.tscn" id="2_rt5h5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
+size = Vector2(326, 58)
+
+[node name="One_Way_Platform" type="AnimatableBody2D" groups=["Environmental Feature"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -29)
+shape = SubResource("RectangleShape2D_lpq4i")
+one_way_collision = true
+one_way_collision_margin = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.0000076, 0.9999962)
+scale = Vector2(2.5000002, 1.7578125)
+texture = ExtResource("1_bweri")
+region_enabled = true
+region_rect = Rect2(448, 640.2267, 128, 63.773315)
+
+[node name="MakeItMusical" parent="." instance=ExtResource("2_rt5h5")]

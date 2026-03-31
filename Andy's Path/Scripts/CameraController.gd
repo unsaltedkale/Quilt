@@ -116,7 +116,7 @@ func _process(delta: float) -> void:
 	if has_control:	
 		
 		if (abs(global_position.x - playerReference.position.x) + abs(global_position.y - playerReference.position.y)) > 1000:
-			await wait(0.1)
+			await wait(0.01)
 			if has_control:
 				print("TELEPORTED")
 				global_position = playerReference.position + Vector2(0, -500)

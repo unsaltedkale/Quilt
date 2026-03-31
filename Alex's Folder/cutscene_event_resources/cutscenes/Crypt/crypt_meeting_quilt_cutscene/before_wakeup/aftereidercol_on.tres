@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="set_variable_cutscene_event" load_steps=2 format=3 uid="uid://q8geqpk6e7gl"]
+
+[ext_resource type="Script" uid="uid://ddqk0rwkpcnf2" path="res://Alex's Folder/cutscene_event_resources/event types/set_variable_cs_event.gd" id="1_2jarn"]
+
+[resource]
+script = ExtResource("1_2jarn")
+actor = NodePath("Tiles/AfterEiderTiles")
+variable_name = "click_on"
+value_bool = true
+metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"
