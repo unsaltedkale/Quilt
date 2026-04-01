@@ -22,10 +22,10 @@ func _physics_process(delta) -> void:
 		if collider.is_in_group("mirror"):
 			velocity = velocity.bounce(collision.get_normal())
 			
-		elif collider.is_in_group("Player"):
+		if collider.is_in_group("Player"):
 			pass
 			
-		else:
+		elif collider.is_in_group("tilemap"):
 			_play_extinguish_sound()
 			queue_free()
 			

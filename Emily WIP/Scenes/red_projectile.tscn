@@ -40,8 +40,8 @@ size = Vector2(26, 16)
 
 [node name="RedProjectile" type="CharacterBody2D" groups=["Projectile"]]
 scale = Vector2(0.35, 0.35)
-collision_layer = 31
-collision_mask = 3
+collision_layer = 30
+collision_mask = 2
 script = ExtResource("1_td6lh")
 metadata/_edit_group_ = true
 
