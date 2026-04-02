@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_li6kx")
-scene_path = "res://Alex's Folder/tscns/levels/orange_town_1.tscn"
+scene_path = "res://Alex's Folder/tscns/levels/credits.tscn"
 rock = NodePath("Player")
 metadata/_custom_type_script = "uid://djq6cs57ye4ds"

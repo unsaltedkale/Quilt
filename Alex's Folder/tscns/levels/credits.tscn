@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs3urn5ugh5mq"]
+[gd_scene load_steps=8 format=3 uid="uid://bs3urn5ugh5mq"]
 
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="1_n28yg"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="2_ngbi8"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="3_ngbi8"]
 [ext_resource type="Resource" uid="uid://rqtthumyar3f" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Credits/credits_container.tres" id="4_l5sxb"]
+[ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_pqvtf"]
+[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/orange_town.tres" id="6_p5f4b"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_8h123"]
 
 [node name="Credits" type="Node2D"]
 
@@ -106,3 +110,10 @@ script = ExtResource("2_ngbi8")
 position = Vector2(-1841, -709)
 scale = Vector2(9.56, 7.76)
 container = ExtResource("4_l5sxb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamWAV_8h123")
+
+[node name="Conductor" parent="." instance=ExtResource("5_pqvtf")]
+position = Vector2(4317, 436)
+current_music_resource = ExtResource("6_p5f4b")
