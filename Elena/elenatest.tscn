@@ -552,7 +552,8 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_1bvp3"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_4c57u")
 sources/0 = SubResource("TileSetAtlasSource_h2yge")
 
@@ -5490,8 +5491,8 @@ tile_set = SubResource("TileSet_jkah5")
 tile_map_data = PackedByteArray("AABmABsAAAAAAAAAAABmABwAAAAAAAAAAABmAB0AAAAAAAAAAABmAB4AAAAAAAAAAABmAB8AAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_y2ndt")
 
-[node name="Mirror" type="TileMapLayer" parent="Tiles"]
-tile_map_data = PackedByteArray("AABpACkAAAATAAUAAABpACoAAAATAAYAAABpACsAAAATAAYAAABpACwAAAATAAYAAAA=")
+[node name="Mirror" type="TileMapLayer" parent="Tiles" groups=["Mirror"]]
+tile_map_data = PackedByteArray("AABPACMAAAATAAUAAABPACQAAAATAAYAAABPACUAAAATAAYAAABPACYAAAATAAYAAAA=")
 tile_set = SubResource("TileSet_3ov1n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
