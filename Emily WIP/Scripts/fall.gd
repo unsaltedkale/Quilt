@@ -49,3 +49,5 @@ func Physics_Update(_delta):
 			player.collected_objects = player.max_objects
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
+	if player.velocity.y >=0 and player.is_on_wall():
+		Transition.emit(self, "wallstick")

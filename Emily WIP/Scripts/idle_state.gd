@@ -12,11 +12,11 @@ func Enter():
 
 func Physics_Update(_delta):
 	idle_quilt()
+	if Input.is_action_just_pressed("jump"):
+		Transition.emit(self, "jump")
 	move_dir = Input.get_axis("move_left","move_right")
 	if abs(move_dir) > 0:
 		Transition.emit(self, "walk")
-	if Input.is_action_just_pressed("jump"):
-		Transition.emit(self, "jump")
 	if not player.is_on_floor():
 		Transition.emit(self, "fall")
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
