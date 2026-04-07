@@ -9,6 +9,7 @@ func _ready() -> void:
 	velocity = projectile_direction * speed
 	await get_tree().create_timer(10).timeout
 	queue_free()
+	
 
 func _process(_delta):
 	$Sprite2D.play("FIRE")
@@ -19,10 +20,11 @@ func _physics_process(delta) -> void:
 	  
 	if collision:
 		var collider = collision.get_collider()
-		if collider.is_in_group("mirror"):
+		if collider.is_in_group("Mirror"):
+			print("hit mirror")
 			velocity = velocity.bounce(collision.get_normal())
 			
-		if collider.is_in_group("Player"):
+		elif collider.is_in_group("Player"):
 			pass
 			
 		elif collider.is_in_group("tilemap"):
