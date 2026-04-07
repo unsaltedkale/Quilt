@@ -46,11 +46,11 @@ func _process(delta: float) -> void:
 				pass
 			else:
 				#YES
-				print("SETTING TRANSPARENT")
+				#print("SETTING TRANSPARENT")
 				safe_tween("modulate:a", 0, 2)
 		elif tween == null:
 			#YES
-			print("SETTING TRANSPARENT")
+			#print("SETTING TRANSPARENT")
 			safe_tween("modulate:a", 0, 2)
 		
 	elif sm.current_state.state_name != "cutscene" && modulate.a == 0:
@@ -60,11 +60,11 @@ func _process(delta: float) -> void:
 				pass
 			else:
 				#YES
-				print("SETTING OPAQUE")
+				#print("SETTING OPAQUE")
 				safe_tween("modulate:a", charge_c.a, 2)
 		elif tween == null:
 			#YES
-			print("SETTING OPAQUE")
+			#print("SETTING OPAQUE")
 			safe_tween("modulate:a", charge_c.a, 2)
 	
 	elif player.collected_objects > 0 && sm.current_state.state_name != "cutscene":
@@ -75,11 +75,11 @@ func _process(delta: float) -> void:
 					pass
 				else:
 					#YES
-					print("SETTING CHARGE")
+					#print("SETTING CHARGE")
 					safe_tween("modulate", charge_c, charge_c_time)
 			elif tween == null:
 				#YES
-				print("SETTING CHARGE")
+				#print("SETTING CHARGE")
 				safe_tween("modulate", charge_c, charge_c_time)
 
 	elif player.collected_objects == 0 &&  sm.current_state.state_name != "cutscene":
@@ -90,19 +90,19 @@ func _process(delta: float) -> void:
 					pass
 				else:
 					#YES
-					print("SETTING NO CHARGE")
+					#print("SETTING NO CHARGE")
 					safe_tween("modulate", no_charge_c, charge_c_time)
 			elif tween == null:
 				#YES
-				print("SETTING NO CHARGE")
+				#print("SETTING NO CHARGE")
 				safe_tween("modulate", no_charge_c, charge_c_time)
 
 	if Input.is_action_just_pressed("fire_projectile") && controller == true:
-		print("switched to mouse")
+		#print("switched to mouse")
 		controller = false
 	elif Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if controller == false:
-			print("switched to controller")
+			#print("switched to controller")
 			controller = true
 	var v 
 	

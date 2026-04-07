@@ -615,6 +615,7 @@ texture = ExtResource("11_pk5we")
 
 [node name="Player" parent="." instance=ExtResource("2_dt4o1")]
 position = Vector2(3338, -2586)
+is_phlo = true
 
 [node name="recoil_indicator" parent="Player" index="0"]
 visible = false

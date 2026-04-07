@@ -26,16 +26,17 @@ func recoil_vel_equation():
 
 func shoot():
 	var proj = projectile_scene.instantiate()
-	player.add_child(proj)
+	proj.global_position = player.global_position
 	joystick_direction = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
-	if joystick_direction.x != 0 || joystick_direction.y != 0:
+	if joystick_direction.length() > 0:
 		proj.projectile_direction = joystick_direction.normalized()
 	else:
 		if player.r_calc == player.recoil_calculation_type.from_player:
-			proj.projectile_direction = (proj.get_global_mouse_position() - player.position).normalized()
+			proj.projectile_direction = (player.get_global_mouse_position() - player.global_position).normalized()
 		elif player.r_calc == player.recoil_calculation_type.from_center_of_screen:
-			proj.projectile_direction = (get_viewport().get_mouse_position() - Vector2(player.get_viewport_rect().size.x/2, player.get_viewport_rect().size.y/2)).normalized()
-			pass
+			var center = get_viewport().get_visible_rect().size / 2
+			proj.projectile_direction = (get_viewport().get_mouse_position() - center).normalized()
+	get_tree().current_scene.add_child(proj)
 	shoot_projectile.emit()
 
 func Enter():
