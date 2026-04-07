@@ -14,7 +14,9 @@ config/name="Quilt"
 run/main_scene="uid://1iv87qysc1dl"
 config/features=PackedStringArray("4.5", "Forward Plus")
 run/max_fps=60
-config/icon="uid://dmcdml67v5cp1"
+boot_splash/use_filter=false
+boot_splash/image="uid://b6pjq2yeuo7ny"
+config/icon="uid://b2onlr5ggkomh"
 
 [display]
 
@@ -105,3 +107,4 @@ settings={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
