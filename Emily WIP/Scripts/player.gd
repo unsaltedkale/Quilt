@@ -14,6 +14,8 @@ var shrine_key: bool = false
 
 enum recoil_calculation_type {from_player, from_center_of_screen}
 
+signal player_death
+
 @export var r_calc: recoil_calculation_type
 
 func _ready() -> void:
@@ -43,6 +45,7 @@ func take_damage(amount: int) -> void:
 func die():
 	print_debug("Player died")
 	$"../Camera2D".player_died()
+	player_death.emit()
 	spawn_player(spawn_point)
 	
 func _on_hit_box_body_entered(body: Node2D) -> void:

@@ -10,11 +10,18 @@ class_name zipline_obj
 @export var end_position: Vector2 = Vector2(6470,1234)
 @export var respawning: bool
 @export var respawn_time = 3
+@export var reverse_time: float
+@export var reverse_time_max = 2
 
 func _ready() -> void:
 	respawning = false
 	position = start_position
 	ani.play("idle")
+	reverse_time = reverse_time_max
+
+func _on_player_death():
+	position = start_position
+	pass
 
 func _physics_process(_delta: float) -> void:
 	if timer > 0:
@@ -22,7 +29,15 @@ func _physics_process(_delta: float) -> void:
 	else:
 		timer = 0
 	if player != null:
+		
+		if not player.player_death.is_connected(_on_player_death):
+			player.player_death.connect(_on_player_death)
+		
+		# if zipline is at the end of the path
 		if basically_zero(position, end_position) && not respawning:
+			
+			reverse_time = reverse_time_max
+			
 			player.current_stasis = null
 			var tempvar = player.find_child("StateMachine").current_state
 			tempvar.Transition.emit(tempvar, "fall")
@@ -33,12 +48,30 @@ func _physics_process(_delta: float) -> void:
 			position = start_position
 			visible = true
 			respawning = false
-		elif player.current_stasis == self:
+		
+		if player.current_stasis == self:
+			
+			reverse_time = reverse_time_max
+			
 			ani.play("carry")
 			position = position.move_toward(end_position, speed * _delta)
 			timer = 0.5 #seconds
 			player.position = position
+			
+		#if zipline is in the middle of the path
+		if not basically_zero(position, start_position) && not basically_zero(position, end_position):
+			if player.current_stasis != self:
+				ani.play("idle")
+				reverse_time -= _delta
+				if reverse_time <= 0:
+					position = position.move_toward(start_position, 5 * speed * _delta)
+					if basically_zero(position, start_position):
+						reverse_time = reverse_time_max
+			pass
+		
 		elif not respawning:
+			reverse_time = reverse_time_max
+			
 			ani.play("idle")
 
 func on_body_entered(area: Area2D):

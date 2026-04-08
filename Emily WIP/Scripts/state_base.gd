@@ -39,7 +39,7 @@ func _physics_process(_delta) -> void:
 			player.get_node("PhloCollider").disabled = true
 			if smcs.state_name == "wall_jump":
 				pass
-			elif smcs.state_name != "cutscene" && smcs.state_name != "recoil":
+			elif smcs.state_name != "cutscene" && smcs.state_name != "recoil" && smcs.state_name != "stasis":
 				#print("AAAA" + smcs.state_name)
 				move_dir = Input.get_axis("move_left","move_right")
 				if move_dir !=0:
