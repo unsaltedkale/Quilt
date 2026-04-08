@@ -18,10 +18,21 @@ func Enter():
 		pass
 
 func Physics_Update(_delta):
+	
+	#THIS is how you get the wall direction?????? PAIN!!!!!!!
+	
+	'''if player.get_slide_collision_count() != 0:
+		for i in player.get_slide_collision_count():
+			print(i)
+			var collision = player.get_slide_collision(i)
+			print("Collided with: ", collision.get_collider().get_path())
+			print("Collided with: ", collision.get_normal())'''
+	
 	# wall cling storage fix:
 	if not player.is_on_wall() and not player.is_on_floor():
 		wall_stick = false
 		Transition.emit(self, "idle")
+	
 	if Input.is_action_just_pressed("jump"):
 		wall_stick = false
 		Transition.emit(self, "walljump")

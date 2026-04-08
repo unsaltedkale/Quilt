@@ -1494,6 +1494,7 @@ state_name = "wall_stick"
 
 [node name="WallJump" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("34_a45e1")
+jump_force_y = 100.0
 jump_force_x = 100
 player = NodePath("../..")
 state_name = "wall_jump"
