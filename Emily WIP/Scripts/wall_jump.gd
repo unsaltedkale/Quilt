@@ -20,9 +20,11 @@ func Enter():
 
 func Physics_Update(_delta):
 	if timer <= 0:
+		print_debug("click")
 		Transition.emit(self,"fall")
 	else:
 		quilt_wall_jump()
+		print_debug("tap")
 		timer -= 1
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if player.collected_objects != 0:

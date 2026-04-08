@@ -30,6 +30,8 @@ func Physics_Update(_delta):
 			Transition.emit(self, "recoil")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
+	
+	_crouch_control()
 
 func Exit():
 	pass

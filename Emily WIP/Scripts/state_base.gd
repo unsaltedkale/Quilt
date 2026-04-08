@@ -9,7 +9,9 @@ var recoil: bool
 var cutscene: bool
 @export var state_name: String
 var acceleration = 1500
-var decceleration = 750
+var decceleration = 750 * 6
+var sm
+var smcs
 
 signal Transition
 
@@ -26,18 +28,38 @@ func Physics_Update(_delta):
 	pass
 
 func _physics_process(_delta) -> void:
-	if player != null:
-		player.get_node("QuiltCollider").disabled = false
-		player.get_node("PhloCollider").disabled = true
-		if player.find_child("StateMachine").current_state.state_name != "cutscene" && player.find_child("StateMachine").current_state.state_name != "recoil":
-			move_dir = Input.get_axis("move_left","move_right")
-			if move_dir !=0:
-				player.velocity.x = move_dir * speed
-			elif move_dir == 0:
-				player.velocity.x = move_toward(player.velocity.x, 0, decceleration * _delta)
-		if player.is_phlo:
-			#if find_parent("StateMachine").current_state.state_name != "phlo_walk" || find_parent("StateMachine").current_state.state_name != "phlo_fall" || find_parent("StateMachine").current_state.state_name != "phlo_jump" || find_parent("StateMachine").current_state.state_name != "phlo_cutscene":
-				#Transition.emit(self,"phlowalk")
-			player.get_node("QuiltCollider").disabled = true
-			player.get_node("PhloCollider").disabled = false
-		pass
+	if player != null && sm == null:
+		sm = player.find_child("StateMachine")
+		smcs = player.find_child("StateMachine").current_state
+	elif player != null && sm != null:
+		smcs = player.find_child("StateMachine").current_state
+		if self.state_name == smcs.state_name:
+			#print("hhhhhhh" + state_name)
+			player.get_node("QuiltCollider").disabled = false
+			player.get_node("PhloCollider").disabled = true
+			if smcs.state_name == "wall_jump":
+				pass
+			elif smcs.state_name != "cutscene" && smcs.state_name != "recoil":
+				print("AAAA" + smcs.state_name)
+				move_dir = Input.get_axis("move_left","move_right")
+				if move_dir !=0:
+					player.velocity.x = move_dir * speed
+				elif move_dir == 0:
+					player.velocity.x = move_toward(player.velocity.x, 0, decceleration * _delta)
+			if player.is_phlo:
+				#if find_parent("StateMachine").current_state.state_name != "phlo_walk" || find_parent("StateMachine").current_state.state_name != "phlo_fall" || find_parent("StateMachine").current_state.state_name != "phlo_jump" || find_parent("StateMachine").current_state.state_name != "phlo_cutscene":
+					#Transition.emit(self,"phlowalk")
+				player.get_node("QuiltCollider").disabled = true
+				player.get_node("PhloCollider").disabled = false
+			pass
+	
+
+func _crouch_control():
+	if Input.is_action_just_pressed("crouch"):
+		player.scale.y = 4 * 0.75
+	if Input.is_action_just_released("crouch"):
+		player.scale.y = 4
+	pass
+
+func _force_leave_crouch():
+	player.scale.y = 4

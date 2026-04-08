@@ -10,6 +10,9 @@ func idle_quilt():
 func Enter():
 	idle_quilt()
 
+func Exit():
+	pass
+
 func Physics_Update(_delta):
 	idle_quilt()
 	if Input.is_action_just_pressed("jump"):
@@ -26,7 +29,4 @@ func Physics_Update(_delta):
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
 		
-	'''if Input.is_action_just_pressed("crouch"):
-		player.scale.y *= .75
-	if Input.is_action_just_released("crouch"):
-		player.scale.y /= .75'''
+	_crouch_control()

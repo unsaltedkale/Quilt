@@ -51,3 +51,5 @@ func Physics_Update(_delta):
 		Transition.emit(self, "stasis")
 	if player.velocity.y >=0 and player.is_on_wall():
 		Transition.emit(self, "wallstick")
+	
+	_crouch_control()
