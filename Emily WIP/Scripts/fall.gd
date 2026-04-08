@@ -2,17 +2,19 @@ extends State
 
 @export var gravity: float = 3000.0 #2000
 @export var max_grav: float = 2000.0
-var timer: float = 0.0
+var fall_timer: float = 0.0
+var an_timer: float
 
 signal has_landed()
 func Enter():
-	timer = 0
+	an_timer = 0
+	fall_timer = 0
 
 func Exit():
 	_recoil_recharge_check()
 
 func Update(_delta):
-	timer += 1
+	fall_timer += _delta
 	if player.velocity.y <0:
 		if player.is_phlo:
 			an.play("phlo_jump")
@@ -23,20 +25,23 @@ func Update(_delta):
 			an.play("phlo_fall")
 		else:
 			an.play("fall")
-	if player.is_on_floor():
-		print("timer",timer)
-		if timer >= 5:
-			if player.is_phlo:
-				an.play("phlo_wump")
-			else:
-				an.play("land")
+
+func land():
+	if fall_timer >= 1:
+		if player.is_phlo:
+			an.play("phlo_wump")
+			an_timer = 1.5
 		else:
-			if player.is_phlo:
-				an.play("phlo_land")
-			else:
-				an.play("land")
+			an_timer = 1
+	else:
+		an_timer = 10/60
+		if player.is_phlo:
+			an.play("phlo_land")
+		else:
+			an.play("land")
 
 func Physics_Update(_delta):
+	an_timer -= _delta
 	if player.velocity.y <= max_grav:
 		player.velocity.y += gravity * _delta
 	else:
@@ -45,8 +50,10 @@ func Physics_Update(_delta):
 		if player.collected_objects != 0:
 			Transition.emit(self, "recoil")
 	if player.is_on_floor():
+		land()
 		player.velocity.x = 0
-		Transition.emit(self, "idle")
+		if an_timer <= 0:
+			Transition.emit(self, "idle")
 		has_landed.emit() #signal to play landing sfx
 		if not player.is_phlo:
 			player.collected_objects = player.max_objects
