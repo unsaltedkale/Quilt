@@ -47,7 +47,7 @@ func Enter():
 	recoil = true
 	
 func Physics_Update(_delta):
-	print(timer)
+	#print(timer)
 	timer -= 1
 	if timer <=0:
 		Transition.emit(self,"fall")
