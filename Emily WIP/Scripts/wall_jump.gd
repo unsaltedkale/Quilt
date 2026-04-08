@@ -2,13 +2,17 @@ extends State
 @export var jump_force_y: float
 @export var jump_force_x: int
 var timer: float
+var collision
 
 func quilt_wall_jump():
 	if not player.is_on_wall():
 		player.velocity.y -= jump_force_y
 	else:
 		player.velocity.y -= jump_force_y / 3
-	player.velocity.x += jump_force_x
+	if collision.get_normal().x < 0:
+		player.velocity.x -= jump_force_x
+	elif collision.get_normal().x > 0:
+		player.velocity.x += jump_force_x
 	if player.is_phlo:
 		an.play("phlo_jump")
 	else:
@@ -16,18 +20,20 @@ func quilt_wall_jump():
 
 func Enter():
 	timer = 12.0/60.0
+	player.jump_count += 1
+	jump_force_y = jump_force_y - player.jump_count
 	
 	if player.get_slide_collision_count() != 0:
 		for i in player.get_slide_collision_count():
 			print(i)
-			var collision = player.get_slide_collision(i)
-			print("Collided with: ", collision.get_collider().get_path())
+			collision = player.get_slide_collision(i)
+			'''print("Collided with: ", collision.get_collider().get_path())
 			print("Collided with: ", collision.get_normal())
-			
+			'''
 	quilt_wall_jump()
+	print("jump count : ",player.jump_count)
 
 func Physics_Update(_delta):
-	
 	if timer <= 0:
 		#print_debug("click")
 		Transition.emit(self,"fall")
@@ -40,3 +46,5 @@ func Physics_Update(_delta):
 			Transition.emit(self, "recoil")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
+	if player.is_on_floor():
+		Transition.emit(self, "idle")

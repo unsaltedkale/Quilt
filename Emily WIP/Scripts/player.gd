@@ -18,6 +18,8 @@ signal player_death
 
 @export var r_calc: recoil_calculation_type
 
+var jump_count : int
+
 func _ready() -> void:
 	health = max_health
 	spawn_point = global_position
@@ -27,7 +29,8 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = false
 	elif velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
-		
+	if is_on_floor():
+		jump_count = 0
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	

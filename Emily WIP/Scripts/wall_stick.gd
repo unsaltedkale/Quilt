@@ -38,4 +38,7 @@ func Physics_Update(_delta):
 	if move_dir == 0 and player.is_on_floor():
 		wall_stick = false
 		Transition.emit(self, "idle")
+	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
+		if player.collected_objects != 0:
+			Transition.emit(self, "recoil")
 	
