@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=4 uid="uid://b8xubtnpusv2a"]
 
-[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_ro15j"]
+[ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="1_ro15j"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="2_jbwj1"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="3_qrawa"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="4_jbwj1"]

@@ -15,7 +15,15 @@ func quilt_wall_jump():
 		an.play("jump")
 
 func Enter():
-	timer = 12
+	timer = 12.0/60.0
+	
+	if player.get_slide_collision_count() != 0:
+		for i in player.get_slide_collision_count():
+			print(i)
+			var collision = player.get_slide_collision(i)
+			print("Collided with: ", collision.get_collider().get_path())
+			print("Collided with: ", collision.get_normal())
+			
 	quilt_wall_jump()
 
 func Physics_Update(_delta):
@@ -26,7 +34,7 @@ func Physics_Update(_delta):
 	else:
 		quilt_wall_jump()
 		#print_debug("tap")
-		timer -= 1
+		timer -= _delta
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if player.collected_objects != 0:
 			Transition.emit(self, "recoil")
