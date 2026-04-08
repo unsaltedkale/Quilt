@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bh7oscis2injv"
+path="res://.godot/imported/quilt voice.wav-7001829b5b3a2fbba2f27391fb7376a0.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/Voices/quilt voice.wav"
+dest_files=["res://.godot/imported/quilt voice.wav-7001829b5b3a2fbba2f27391fb7376a0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

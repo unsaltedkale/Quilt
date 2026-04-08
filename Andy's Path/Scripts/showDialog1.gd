@@ -71,6 +71,41 @@ func _parse(l: String):
 	
 	return ws
 
+func _handle_voice() -> void:
+	
+	var letter_displayed
+	var character_speaking
+	
+	var l = dialogFolder.text[str(dialogue_counter)]
+	
+	var start = l.find("%")
+	
+	var end = l.find("_", start + 1)
+	
+	var pic = l.substr(start, end + 1)
+	
+	var picClean = pic.replace("%", "")
+	
+	picClean = picClean.replace("_", "")
+	
+	character_speaking = picClean
+	
+	#print("cs: " + character_speaking)
+	
+	if dialogueReference.visible_characters < _parse(dialogFolder.text[str(dialogue_counter)]).length():
+		letter_displayed = _parse(dialogFolder.text[str(dialogue_counter)])[dialogueReference.visible_characters]
+	else:
+		letter_displayed = ""
+	#print("ld: " + letter_displayed)
+
+	$"Voice Player"._voice_time(character_speaking, letter_displayed)
+	
+	#print("l: |" + l)
+	#print("ws: |" + ws)
+	#print("pic: |" + pic)
+	
+	pass
+
 func _on_pressed() -> void:
 	font_size = sliderReference.value
 	dialogueReference.add_theme_font_size_override("font_size", font_size)
@@ -87,6 +122,7 @@ func _on_pressed() -> void:
 		for i in len(line):
 			await wait(0.03) # moving this before fixed number not moving up
 			dialogueReference.visible_characters += 1
+			_handle_voice()
 			if len(line) < dialogueReference.visible_characters:
 				break # ^ checks if was skipped to the end
 		if dialogue_counter > len(dialogFolder.text) - 2:
