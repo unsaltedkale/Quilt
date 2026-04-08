@@ -40,7 +40,7 @@ func shoot():
 	shoot_projectile.emit()
 
 func Enter():
-	timer = 10
+	timer = 10.0/60.0
 	shoot()
 	player.velocity = recoil_vel_equation()
 	player.collected_objects -= 1
@@ -50,7 +50,7 @@ func Physics_Update(_delta):
 	_recoil_recharge_check()
 	
 	#print(timer)
-	timer -= 1
+	timer -= _delta
 	if timer <=0:
 		Transition.emit(self,"fall")
 	if player.is_on_floor():
