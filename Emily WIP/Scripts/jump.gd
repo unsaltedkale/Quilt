@@ -15,7 +15,7 @@ func quilt_jump():
 
 func Enter():
 	_recoil_recharge_check()
-	
+	player.jump_count += 1
 	timer = 7
 	quilt_jump()
 	#TODO: ADD JUMP SFX
