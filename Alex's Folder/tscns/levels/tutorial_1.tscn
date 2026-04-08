@@ -2420,7 +2420,7 @@ frame_progress = 1.0
 
 [node name="Player" parent="." instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(9674, -2208)
+position = Vector2(29326, 681)
 
 [node name="recoil_indicator" parent="Player" index="0"]
 visible = false

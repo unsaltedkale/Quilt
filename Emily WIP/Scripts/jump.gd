@@ -14,6 +14,8 @@ func quilt_jump():
 			an.play("jump")
 
 func Enter():
+	_recoil_recharge_check()
+	
 	timer = 7
 	quilt_jump()
 	#TODO: ADD JUMP SFX

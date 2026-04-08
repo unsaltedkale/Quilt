@@ -63,3 +63,8 @@ func _crouch_control():
 
 func _force_leave_crouch():
 	player.scale.y = 4
+
+func _recoil_recharge_check():
+	if player.is_on_floor():
+		if not player.is_phlo:
+			player.collected_objects = player.max_objects

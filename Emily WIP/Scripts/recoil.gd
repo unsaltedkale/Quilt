@@ -47,6 +47,8 @@ func Enter():
 	recoil = true
 	
 func Physics_Update(_delta):
+	_recoil_recharge_check()
+	
 	#print(timer)
 	timer -= 1
 	if timer <=0:

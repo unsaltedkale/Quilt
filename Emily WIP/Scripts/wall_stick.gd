@@ -18,6 +18,10 @@ func Enter():
 		pass
 
 func Physics_Update(_delta):
+	# wall cling storage fix:
+	if not player.is_on_wall() and not player.is_on_floor():
+		wall_stick = false
+		Transition.emit(self, "idle")
 	if Input.is_action_just_pressed("jump"):
 		wall_stick = false
 		Transition.emit(self, "walljump")

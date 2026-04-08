@@ -9,11 +9,14 @@ func idle_quilt():
 
 func Enter():
 	idle_quilt()
+	_recoil_recharge_check()
 
 func Exit():
 	pass
 
 func Physics_Update(_delta):
+	_recoil_recharge_check()
+	
 	idle_quilt()
 	if Input.is_action_just_pressed("jump"):
 		Transition.emit(self, "jump")

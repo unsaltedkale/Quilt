@@ -22,6 +22,8 @@ func Update(_delta):
 		an.play("walk")
 
 func Physics_Update(_delta):
+	_recoil_recharge_check()
+	
 	quilt_walk()
 	if abs(move_dir) == 0:
 		Transition.emit(self, "idle")

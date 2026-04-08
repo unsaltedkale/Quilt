@@ -8,6 +8,9 @@ signal has_landed()
 func Enter():
 	timer = 0
 
+func Exit():
+	_recoil_recharge_check()
+
 func Update(_delta):
 	timer += 1
 	if player.velocity.y <0:
