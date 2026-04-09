@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://b7htniexo5eqo"]
+[gd_scene format=3 uid="uid://b7htniexo5eqo"]
 
 [ext_resource type="Texture2D" uid="uid://b2xgng637vg5x" path="res://Art/TextOutine.png" id="1_5lshs"]
 [ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="2_yhc7a"]
@@ -742,21 +742,21 @@ expand_margin_top = 3.0
 expand_margin_right = 4.0
 expand_margin_bottom = 3.0
 
-[node name="DialogueUi" type="Node2D"]
+[node name="DialogueUi" type="Node2D" unique_id=1656784033]
 
-[node name="UI" type="Control" parent="."]
+[node name="UI" type="Control" parent="." unique_id=561328027]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="DialogueScreen" type="Control" parent="UI"]
+[node name="DialogueScreen" type="Control" parent="UI" unique_id=141330078]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1.6622972, 1.6412947)
 
-[node name="AnimationViewer" type="ColorRect" parent="UI/DialogueScreen"]
+[node name="AnimationViewer" type="ColorRect" parent="UI/DialogueScreen" unique_id=94854668]
 visible = false
 layout_mode = 0
 offset_left = 2.0
@@ -765,13 +765,13 @@ offset_right = 1150.0
 offset_bottom = 648.0
 color = Color(0.12662229, 0.46256143, 0.3947214, 1)
 
-[node name="TextOutine" type="Sprite2D" parent="UI/DialogueScreen"]
+[node name="TextOutine" type="Sprite2D" parent="UI/DialogueScreen" unique_id=105455377]
 texture_filter = 1
 position = Vector2(673, 140)
 scale = Vector2(6.0681806, 6.068181)
 texture = ExtResource("1_5lshs")
 
-[node name="Dialogue" type="Label" parent="UI/DialogueScreen"]
+[node name="Dialogue" type="Label" parent="UI/DialogueScreen" unique_id=1974313171]
 process_mode = 3
 layout_mode = 0
 offset_left = 236.0
@@ -783,7 +783,7 @@ autowrap_mode = 3
 visible_characters_behavior = 1
 script = ExtResource("3_vydyq")
 
-[node name="Button" type="Button" parent="UI/DialogueScreen" groups=["Dialouge_Button"]]
+[node name="Button" type="Button" parent="UI/DialogueScreen" unique_id=1035969372 groups=["Dialouge_Button"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -5.0
@@ -795,20 +795,20 @@ theme_override_fonts/font = ExtResource("4_fu85m")
 theme_override_font_sizes/font_size = 42
 script = ExtResource("5_1xo70")
 
-[node name="Voice Player" type="Node" parent="UI/DialogueScreen/Button"]
+[node name="Voice Player" type="Node" parent="UI/DialogueScreen/Button" unique_id=1138139125]
 script = ExtResource("6_yride")
 voices = Dictionary[String, AudioStream]({
 "phlo": ExtResource("7_7nw5b"),
 "quilt": ExtResource("8_37mxq")
 })
 
-[node name="CharacterPortrait" type="AnimatedSprite2D" parent="UI/DialogueScreen"]
+[node name="CharacterPortrait" type="AnimatedSprite2D" parent="UI/DialogueScreen" unique_id=251576153]
 position = Vector2(1020.145, 143)
 scale = Vector2(6.0681806, 6.068181)
 sprite_frames = SubResource("SpriteFrames_wjj7j")
 animation = &"empty"
 
-[node name="ToolTipMessage" parent="UI/DialogueScreen" instance=ExtResource("16_gi33v")]
+[node name="ToolTipMessage" parent="UI/DialogueScreen" unique_id=1195870865 instance=ExtResource("16_gi33v")]
 layout_mode = 0
 offset_left = 217.77094
 offset_top = 181.56398
@@ -817,20 +817,20 @@ offset_bottom = 301.56396
 text = "[img=64]res://Art/Tool Tips/ttm_20.png[/img]"
 type = 5
 
-[node name="Settings" type="Control" parent="UI"]
+[node name="Settings" type="Control" parent="UI" unique_id=1192461614]
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Background" type="ColorRect" parent="UI/Settings"]
+[node name="Background" type="ColorRect" parent="UI/Settings" unique_id=45762467]
 layout_mode = 0
 offset_right = 1141.6571
 offset_bottom = 645.0
 scale = Vector2(1.6738826, 1.674369)
 color = Color(0.36098644, 0.43022326, 0.4866202, 1)
 
-[node name="HSlider" type="HSlider" parent="UI/Settings"]
+[node name="HSlider" type="HSlider" parent="UI/Settings" unique_id=92704188]
 layout_mode = 0
 offset_left = 184.0
 offset_top = 440.0
@@ -844,7 +844,7 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
 max_value = 50.0
 value = 50.0
 
-[node name="Label" type="Label" parent="UI/Settings/HSlider"]
+[node name="Label" type="Label" parent="UI/Settings/HSlider" unique_id=1043472174]
 layout_mode = 0
 offset_left = -68.0
 offset_top = 19.0
@@ -855,7 +855,7 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 13
 text = "Text Size"
 
-[node name="Label" type="Label" parent="UI/Settings"]
+[node name="Label" type="Label" parent="UI/Settings" unique_id=1588879107]
 layout_mode = 0
 offset_left = 368.0
 offset_top = 11.0

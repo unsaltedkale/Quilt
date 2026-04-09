@@ -1,14 +1,15 @@
 extends State
 @export var jump_force_y: float
+@export var actual_jump_force_y: float
 @export var jump_force_x: int
 var timer: float
 var collision
 
 func quilt_wall_jump():
 	if not player.is_on_wall():
-		player.velocity.y -= jump_force_y
+		player.velocity.y -= actual_jump_force_y
 	else:
-		player.velocity.y -= jump_force_y / 3
+		player.velocity.y -= actual_jump_force_y / 3
 	if collision.get_normal().x < 0:
 		player.velocity.x -= jump_force_x
 	elif collision.get_normal().x > 0:
@@ -21,7 +22,10 @@ func quilt_wall_jump():
 func Enter():
 	timer = 12.0/60.0
 	player.jump_count += 1
-	jump_force_y = jump_force_y - player.jump_count
+	actual_jump_force_y = jump_force_y - ( player.jump_count * 20)
+	if actual_jump_force_y < 0:
+		actual_jump_force_y = 0
+	print(actual_jump_force_y)
 	
 	if player.get_slide_collision_count() != 0:
 		for i in player.get_slide_collision_count():

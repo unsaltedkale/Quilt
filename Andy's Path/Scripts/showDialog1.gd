@@ -17,6 +17,8 @@ var sliderReference
 var characterportraitReference
 var settingsReference
 
+enum dialouge_type {speech, thought, narration}
+
 signal dialouge_finished
 
 func _ready() -> void:
@@ -75,6 +77,7 @@ func _handle_voice() -> void:
 	
 	var letter_displayed
 	var character_speaking
+	var line_type
 	
 	var l = dialogFolder.text[str(dialogue_counter)]
 	
@@ -97,8 +100,15 @@ func _handle_voice() -> void:
 	else:
 		letter_displayed = ""
 	#print("ld: " + letter_displayed)
-
-	$"Voice Player"._voice_time(character_speaking, letter_displayed)
+	
+	if dialogFolder.text[str(dialogue_counter)].findn("[") != -1:
+		line_type = dialouge_type.narration
+	elif dialogFolder.text[str(dialogue_counter)].findn("(") != -1:
+		line_type = dialouge_type.thought
+	else:
+		line_type = dialouge_type.speech
+	
+	$"Voice Player"._voice_time(character_speaking, letter_displayed, line_type)
 	
 	#print("l: |" + l)
 	#print("ws: |" + ws)
