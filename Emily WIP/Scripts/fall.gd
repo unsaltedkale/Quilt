@@ -23,25 +23,26 @@ func Update(_delta):
 			an.play("phlo_fall")
 		else:
 			an.play("fall")
+	if player.is_on_floor():
+		land()
+
+func _on_animation_finished():
+	if player.is_phlo:
+		an.play("phlo_idle")
+	else:
+		an.play("idle")
 
 func land():
 	if fall_timer >= 1:
 		if player.is_phlo:
-			an.play("phlo_wump")
-			#await an.animation_finished
-			an.play("phlo_idle")
+			an.play("phlo_mini_wump")
 		else:
-			pass
+			an.play("land")
 	else:
 		if player.is_phlo:
 			an.play("phlo_land")
-			#await an.animation_finsihed
-			an.play("phlo_idle")
 		else:
 			an.play("land")
-			#await an.animation_finsihed
-			an.play("idle")
-	
 
 func Physics_Update(_delta):
 	if player.velocity.y <= max_grav:
@@ -54,6 +55,7 @@ func Physics_Update(_delta):
 	if player.is_on_floor():
 		player.velocity.x = 0
 		land()
+		_on_animation_finished() 
 		Transition.emit(self, "idle")
 		has_landed.emit() #signal to play landing sfx
 		if not player.is_phlo:
