@@ -40,6 +40,10 @@ func _input(event: InputEvent) -> void:
 			_on_pressed()
 	elif event.is_action_pressed("settings"):
 		settingsReference.visible = !settingsReference.visible
+		if settingsReference.visible == true:
+			get_tree().paused = true
+		else:
+			get_tree().paused = false
 		#get_tree().paused = !get_tree().paused <-- make this work later
 		#pause/unpause the music
 		#somehow pause camera tweening if it is running
@@ -150,8 +154,7 @@ func _process(delta: float) -> void:
 		
 	#print(str(dialogueReference.visible_characters) + " / " + str(dialogue_counter))
 	#print(str(dialogue_counter) + " / " + str(UiReference.visible))
-	#print(font_size)
-	pass
+	print(get_tree().paused)
 		
 	
 	

@@ -2433,10 +2433,10 @@ frame_progress = 1.0
 
 [node name="Player" parent="." unique_id=982598402 instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(59065, -17592)
+position = Vector2(3796, -548)
 is_phlo = true
 
-[node name="recoil_indicator" parent="Player" index="0" unique_id=1333642276]
+[node name="recoil_indicator" parent="Player" index="0"]
 visible = false
 
 [node name="Path2D" type="Path2D" parent="." unique_id=2072758238]
@@ -3569,7 +3569,6 @@ bar_appear = 5.0
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1724071896]
 
 [node name="Metronome" parent="CanvasLayer" unique_id=1291052349 instance=ExtResource("15_qre1y")]
-visible = false
 position = Vector2(560, 580)
 
 [node name="Pity Kill Timer" type="Label" parent="CanvasLayer" unique_id=123516512]
