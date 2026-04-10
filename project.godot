@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Quilt"
 run/main_scene="uid://1iv87qysc1dl"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 run/max_fps=60
 boot_splash/use_filter=false
 boot_splash/image="uid://b6pjq2yeuo7ny"
