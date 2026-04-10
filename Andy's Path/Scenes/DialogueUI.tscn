@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://v7r7qbvsu82m" path="res://Andy's Path/Scripts/showDialog1.gd" id="5_1xo70"]
 [ext_resource type="Texture2D" uid="uid://bos46oi0u6jox" path="res://Art/Character Portaits/flow_neutral_carp.png" id="6_1d12p"]
 [ext_resource type="Texture2D" uid="uid://bdg6nohopxgsp" path="res://Art/Character Portaits/phlo_cry_carp.png" id="6_6n2ox"]
-[ext_resource type="Script" uid="uid://cdd7aiyigkjam" path="res://Salem WIPs/dialogue voices.gd" id="6_yride"]
+[ext_resource type="Script" path="res://Salem WIPs/dialogue voices.gd" id="6_yride"]
 [ext_resource type="AudioStream" uid="uid://nb6lqf443jwo" path="res://Resources/SFX/Voices/phlo voice.wav" id="7_7nw5b"]
 [ext_resource type="Texture2D" uid="uid://cg8sco771rono" path="res://Art/Character Portaits/orangec1_neutral_carp.png" id="7_gi33v"]
 [ext_resource type="Texture2D" uid="uid://csl6igyy2gh45" path="res://Art/Character Portaits/phlo_happy_carp.png" id="7_pt12t"]
@@ -841,8 +841,9 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-max_value = 50.0
-value = 50.0
+min_value = 15.0
+max_value = 30.0
+value = 30.0
 
 [node name="Label" type="Label" parent="UI/Settings/HSlider" unique_id=1043472174]
 layout_mode = 0
