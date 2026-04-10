@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://bneivrxeql22q" path="res://Art/Character Portaits/pyra_neutral_carp.png" id="14_hed1w"]
 [ext_resource type="Texture2D" uid="uid://v753wwmurkgo" path="res://Art/Character Portaits/quilt_neutral_carp.png" id="15_7nw5b"]
 [ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="16_gi33v"]
+[ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="20_gqie4"]
+[ext_resource type="Script" uid="uid://bij8e4rk76007" path="res://Andy's Path/Scripts/Settings.gd" id="20_ikb8c"]
+[ext_resource type="Script" uid="uid://cjulrpdicpvgj" path="res://Andy's Path/Scenes/mainmenureturn.gd" id="21_ikb8c"]
 
 [sub_resource type="Theme" id="Theme_6n2ox"]
 
@@ -818,10 +821,12 @@ text = "[img=64]res://Art/Tool Tips/ttm_20.png[/img]"
 type = 5
 
 [node name="Settings" type="Control" parent="UI" unique_id=1192461614]
+process_mode = 2
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("20_ikb8c")
 
 [node name="Background" type="ColorRect" parent="UI/Settings" unique_id=45762467]
 layout_mode = 0
@@ -866,4 +871,42 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 256
 text = "SETTINGS"
 
+[node name="HSlider2" type="HSlider" parent="UI/Settings" unique_id=685647727]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 557.0
+offset_right = 504.0
+offset_bottom = 607.0
+scale = Vector2(1.6738826, 1.674369)
+theme_override_constants/center_grabber = 1
+theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
+min_value = 15.0
+max_value = 30.0
+value = 30.0
+
+[node name="Label" type="Label" parent="UI/Settings/HSlider2" unique_id=197192298]
+layout_mode = 0
+offset_left = -68.0
+offset_top = 19.0
+offset_right = -1.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_yhc7a")
+theme_override_font_sizes/font_size = 13
+text = "Volume"
+
+[node name="Main Menu Return" type="Button" parent="UI/Settings" unique_id=438751751]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 920.0
+offset_right = 350.66003
+offset_bottom = 1033.0
+theme_override_fonts/font = ExtResource("20_gqie4")
+theme_override_font_sizes/font_size = 56
+text = "MAIN MENU"
+script = ExtResource("21_ikb8c")
+
 [connection signal="pressed" from="UI/DialogueScreen/Button" to="UI/DialogueScreen/Button" method="_on_pressed"]
+[connection signal="pressed" from="UI/Settings/Main Menu Return" to="UI/Settings/Main Menu Return" method="_on_pressed"]
