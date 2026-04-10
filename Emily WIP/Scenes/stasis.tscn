@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bm11upje0c6f2"]
+[gd_scene format=3 uid="uid://bm11upje0c6f2"]
 
 [ext_resource type="Script" uid="uid://2mt3fdvrlct7" path="res://Emily WIP/Scripts/stasis.gd" id="1_r3qni"]
 [ext_resource type="Texture2D" uid="uid://btnfovw1agbdu" path="res://Art/Stasis Chamber.png" id="2_r3qni"]
@@ -87,31 +87,30 @@ fade_time = 1.0
 stream_count = 1
 stream_0 = ExtResource("3_mp70r")
 
-[node name="Stasis" type="Area2D" groups=["Stasis"]]
+[node name="Stasis" type="Area2D" unique_id=1921201016 groups=["Stasis"]]
 script = ExtResource("1_r3qni")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1284464407]
 scale = Vector2(6.64, 6.64)
 shape = SubResource("CapsuleShape2D_r3qni")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=759167159]
 position = Vector2(-5.0000005, 3.0000005)
 scale = Vector2(6.07, 6.07)
 sprite_frames = SubResource("SpriteFrames_wiqrp")
 animation = &"inactive"
 
-[node name="SFX" type="Node" parent="."]
+[node name="SFX" type="Node" parent="." unique_id=1243672458]
 
-[node name="Stasis Hum" type="AudioStreamPlayer" parent="SFX"]
+[node name="Stasis Hum" type="AudioStreamPlayer" parent="SFX" unique_id=66834281]
 stream = SubResource("AudioStreamPlaylist_mp70r")
 
-[node name="Enter Stasis" type="AudioStreamPlayer" parent="SFX"]
+[node name="Enter Stasis" type="AudioStreamPlayer" parent="SFX" unique_id=1505444897]
 stream = ExtResource("4_axs2h")
 volume_db = -15.0
 
-[node name="Exit Stasis" type="AudioStreamPlayer" parent="SFX"]
+[node name="Exit Stasis" type="AudioStreamPlayer" parent="SFX" unique_id=799109550]
 stream = ExtResource("5_djhpt")
 
 [connection signal="area_entered" from="." to="." method="on_body_entered"]
-[connection signal="body_entered" from="." to="." method="on_body_entered"]
-[connection signal="body_exited" from="." to="." method="on_body_exited"]
+[connection signal="area_exited" from="." to="." method="on_body_exited"]

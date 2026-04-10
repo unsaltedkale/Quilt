@@ -88,11 +88,12 @@ func on_body_entered(area: Area2D):
 
 func on_body_exited(area: Area2D):
 	print("click")
-	if area.get_parent().is_in_group("Player"):
+	if area.get_parent().is_in_group("Player") && not respawning:
 		print("player left")
 		#player.current_stasis = null
 		$"SFX/Stasis Hum".stop()
-		$"SFX/Exit Stasis".play()
+		if not $"SFX/Exit Stasis".is_playing():
+			$"SFX/Exit Stasis".play()
 
 func basically_zero(u: Vector2, v: Vector2) -> bool:
 	var i: int
@@ -164,3 +165,7 @@ func on_body_entered(area : Area2D):
 func on_body_exited(body: CharacterBody2D):
 	if body.is_in_group("Player"):
 		player.is_suspended_zipline = false'''
+
+
+func _on_body_exited(area: Area2D) -> void:
+	pass # Replace with function body.
