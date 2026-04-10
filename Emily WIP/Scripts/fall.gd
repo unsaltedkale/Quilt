@@ -28,7 +28,7 @@ func land():
 	if fall_timer >= 1:
 		if player.is_phlo:
 			an.play("phlo_wump")
-			await an.animation_finished
+			#await an.animation_finished
 			an.play("phlo_idle")
 		else:
 			pass
