@@ -618,7 +618,7 @@ texture = ExtResource("11_pk5we")
 position = Vector2(3338, -2586)
 is_phlo = true
 
-[node name="recoil_indicator" parent="Player" index="0"]
+[node name="recoil_indicator" parent="Player" index="0" unique_id=1283703100]
 visible = false
 
 [node name="Tiles" type="Node2D" parent="." unique_id=469047741 groups=["tilemap"]]

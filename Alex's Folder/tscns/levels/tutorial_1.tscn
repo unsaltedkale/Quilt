@@ -2405,9 +2405,9 @@ colors = PackedColorArray(1, 1, 1, 1, 0.003921569, 0.003921569, 0.003921569, 0)
 
 [node name="Tutorial1" type="Node2D" unique_id=1086951187]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=356165997]
+[node name="Background" type="Sprite2D" parent="." unique_id=356165997]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(44746, -13010)
+position = Vector2(35209, 4709)
 scale = Vector2(100000, 100000)
 texture = ExtResource("10_yy6t6")
 
@@ -2433,10 +2433,10 @@ frame_progress = 1.0
 
 [node name="Player" parent="." unique_id=982598402 instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(3796, -548)
+position = Vector2(72181, -15340)
 is_phlo = true
 
-[node name="recoil_indicator" parent="Player" index="0"]
+[node name="recoil_indicator" parent="Player" index="0" unique_id=1283703100]
 visible = false
 
 [node name="Path2D" type="Path2D" parent="." unique_id=2072758238]
@@ -3604,7 +3604,7 @@ end_position = Vector2(94147, -31805)
 respawning = true
 respawn_time = 1
 
-[node name="MakeItMusical" parent="Zipline2" index="3"]
+[node name="MakeItMusical" parent="Zipline2" index="3" unique_id=1352442624]
 bar_appear = 15.0
 
 [node name="Zipline3" parent="." unique_id=179716459 instance=ExtResource("46_vl6hs")]
@@ -3613,7 +3613,7 @@ speed = 1200.0
 start_position = Vector2(93130, -31805)
 end_position = Vector2(98169, -40045)
 
-[node name="MakeItMusical" parent="Zipline3" index="3"]
+[node name="MakeItMusical" parent="Zipline3" index="3" unique_id=1352442624]
 bar_appear = 17.0
 
 [node name="Zipline4" parent="." unique_id=1321359678 instance=ExtResource("46_vl6hs")]
@@ -3668,10 +3668,10 @@ start_position = Vector2(73765, -14875)
 end_position = Vector2(73765, -19960)
 respawning = true
 
-[node name="Sprite2D" parent="Zipline5" index="1"]
+[node name="Sprite2D" parent="Zipline5" index="1" unique_id=295640706]
 visible = false
 
-[node name="MakeItMusical" parent="Zipline5" index="3"]
+[node name="MakeItMusical" parent="Zipline5" index="3" unique_id=1352442624]
 active = false
 
 [node name="TTM Interact" parent="." unique_id=328477507 instance=ExtResource("50_xu5pi")]

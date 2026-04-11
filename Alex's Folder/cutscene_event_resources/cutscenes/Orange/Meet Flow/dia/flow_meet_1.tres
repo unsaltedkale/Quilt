@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://e6dxp4w4v8sx"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://e6dxp4w4v8sx"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_qkwnf"]
 
 [resource]
 script = ExtResource("1_qkwnf")
 text = Dictionary[String, String]({
-"0": "%quilt_neutral%QUILT: PHLO. Get in the liminal space. Now.",
+"0": "%quilt_neutral%QUILT: ( PHLO. Get in the liminal space. Now. )",
 "1": "%phlo_worry%PHLO: Huh?!",
-"2": "%quilt_neutral%QUILT: *Now*.",
+"2": "%quilt_neutral%QUILT: ( *Now*. )",
 "3": "%phlo_surprise%PHLO: Okay, okay!",
 "4": ""
 })
