@@ -85,4 +85,4 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 				stream = voices[character]
 				stop()
 				play()
-		newnote = newnotemax #how many vowels per note
+		newnote = newnotemax #how many vowels before a new vowel plays
