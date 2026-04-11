@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://nb6lqf443jwo" path="res://Resources/SFX/Voices/phlo voice.wav" id="7_7nw5b"]
 [ext_resource type="Texture2D" uid="uid://cg8sco771rono" path="res://Art/Character Portaits/orangec1_neutral_carp.png" id="7_gi33v"]
 [ext_resource type="Texture2D" uid="uid://csl6igyy2gh45" path="res://Art/Character Portaits/phlo_happy_carp.png" id="7_pt12t"]
+[ext_resource type="AudioStream" uid="uid://1cswcv0jnt4a" path="res://Resources/SFX/Voices/flow voice.wav" id="8_ikb8c"]
 [ext_resource type="Texture2D" uid="uid://bbacm4eej53j" path="res://Art/Character Portaits/phlo_neutral_carp.png" id="8_q6tpo"]
 [ext_resource type="Texture2D" uid="uid://cbulro3w5dht0" path="res://Art/Character Portaits/orangec2_neutral_carp.png" id="8_yride"]
 [ext_resource type="Texture2D" uid="uid://b1tc8dmep8bij" path="res://Art/Character Portaits/phlo_surprise_carp.png" id="9_wiv0r"]
@@ -811,6 +812,7 @@ script = ExtResource("5_1xo70")
 bus = &"Dialouge Echo"
 script = ExtResource("6_yride")
 voices = Dictionary[String, AudioStream]({
+"flow": ExtResource("8_ikb8c"),
 "phlo": ExtResource("7_7nw5b"),
 "pyra": SubResource("AudioStreamWAV_hed1w"),
 "quilt": SubResource("AudioStreamWAV_7nw5b")

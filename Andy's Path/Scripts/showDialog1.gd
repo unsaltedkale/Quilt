@@ -146,7 +146,6 @@ func _tick() -> void:
 			isTyping = true
 			text = line
 			$"Voice Player"._start_of_new_line()
-			print("LINE START")
 			for i in len(line):
 				await wait(0.03) # moving this before fixed number not moving up
 				dialogueReference.visible_characters += 1
@@ -158,7 +157,6 @@ func _tick() -> void:
 				UiReference.visible = false
 				#$"../../../../NPCs/TestNPC".isPressed = false	
 				dialogue_counter = -1
-				print("CLICK")
 				dialouge_finished.emit()
 			isTyping = false
 			if dialogue_counter != -1: 
