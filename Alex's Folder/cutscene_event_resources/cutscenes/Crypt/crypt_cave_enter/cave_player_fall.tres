@@ -1,12 +1,11 @@
-[gd_resource type="Resource" script_class="movement_cutscene_event" load_steps=2 format=3 uid="uid://cq6doswri72ee"]
+[gd_resource type="Resource" script_class="movement_cutscene_event" format=3 uid="uid://cq6doswri72ee"]
 
 [ext_resource type="Script" uid="uid://cvo6goabck1ac" path="res://Alex's Folder/cutscene_event_resources/event types/movement_cs_event.gd" id="1_p2crl"]
 
 [resource]
 script = ExtResource("1_p2crl")
 mover = NodePath("Player")
-target = Vector2(0, 3000)
+target = Vector2(3722, -45)
 time = 0.5
-is_relative = true
 delay_before = 4.0
 metadata/_custom_type_script = "uid://cvo6goabck1ac"
