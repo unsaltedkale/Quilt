@@ -6,14 +6,16 @@ extends Area2D
 @export var container: cutscene_container
 @export var current_event_index: int
 @export var played: bool
-@onready var player = $"../../Player"
-@onready var Camera = $"../../Camera2D"
+@onready var player
+@onready var Camera
 @onready var player_in_trigger: bool
 @export var indicator: Node2D
 
 
 func _ready() -> void:
 	player_in_trigger = false
+	player = get_tree().root.find_child("Player")
+	Camera = get_tree().root.find_child("Camera2D")
 
 func _on_area_entered(area: Area2D) -> void:
 	# lock player movement
