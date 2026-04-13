@@ -1,10 +1,15 @@
 extends RigidBody2D
 
-@onready var timer_length: float = 1.0
-@onready var Player: CharacterBody2D = $"../Player"
+@onready var timer: Timer = $Timer
+@onready var player: CharacterBody2D = $"../Player"
+@onready var start_pos: Vector2 = global_position
 
 func _ready() -> void:
 	self.gravity_scale = 0
+	
+func _process(_delta: float) -> void:
+	if player.player_has_died == 1:
+		pass
 
 func _on_timer_area_body_entered(body: Node2D) -> void:
 		if body.is_in_group("Player"):
@@ -16,8 +21,13 @@ func _on_timer_timeout() -> void:
 
 func _on_death_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		Player.take_damage(1)
-		self.queue_free()
-	
+		player.take_damage(1)
+		in_holding()
+		
 	if body.is_in_group("tilemap"):
-		self.queue_free()
+		in_holding()
+
+func in_holding():
+	self.modulate.a = 0
+	$DeathArea/DeathCollision.disabled = true
+	set_collision_layer_value(1, false)
