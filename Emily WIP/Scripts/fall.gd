@@ -3,11 +3,9 @@ extends State
 @export var gravity: float = 3000.0 #2000
 @export var max_grav: float = 2000.0
 var fall_timer: float = 0.0
-var an_timer: float
 
 signal has_landed()
 func Enter():
-	an_timer = 0
 	fall_timer = 0
 
 func Exit():
@@ -25,23 +23,28 @@ func Update(_delta):
 			an.play("phlo_fall")
 		else:
 			an.play("fall")
+	if player.is_on_floor():
+		land()
+
+func _on_animation_finished():
+	if player.is_phlo:
+		an.play("phlo_idle")
+	else:
+		an.play("idle")
 
 func land():
 	if fall_timer >= 1:
 		if player.is_phlo:
-			an.play("phlo_wump")
-			an_timer = 1.5
+			an.play("phlo_mini_wump")
 		else:
-			an_timer = 1
+			an.play("land")
 	else:
-		an_timer = 10/60
 		if player.is_phlo:
 			an.play("phlo_land")
 		else:
 			an.play("land")
 
 func Physics_Update(_delta):
-	an_timer -= _delta
 	if player.velocity.y <= max_grav:
 		player.velocity.y += gravity * _delta
 	else:
@@ -50,10 +53,10 @@ func Physics_Update(_delta):
 		if player.collected_objects != 0:
 			Transition.emit(self, "recoil")
 	if player.is_on_floor():
-		land()
 		player.velocity.x = 0
-		if an_timer <= 0:
-			Transition.emit(self, "idle")
+		land()
+		_on_animation_finished() 
+		Transition.emit(self, "idle")
 		has_landed.emit() #signal to play landing sfx
 		if not player.is_phlo:
 			player.collected_objects = player.max_objects

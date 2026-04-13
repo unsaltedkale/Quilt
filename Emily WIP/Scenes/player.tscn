@@ -1,4 +1,4 @@
-[gd_scene load_steps=226 format=3 uid="uid://dt1w85276yf8y"]
+[gd_scene format=3 uid="uid://dt1w85276yf8y"]
 
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
@@ -1325,6 +1325,104 @@ animations = [{
 "texture": SubResource("AtlasTexture_n7403")
 }],
 "loop": false,
+"name": &"phlo_mini_wump",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tt3ll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uovq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_682rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_em36v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mgld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffw8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l0wp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3x4vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smlsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tntb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0iqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqo0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfb20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipm88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmhy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocp8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_st1tm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nov7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cxry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaxeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn05p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjub8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41sol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vps0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b144s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xbtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk11t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao352")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01mia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hflgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7403")
+}],
+"loop": false,
 "name": &"phlo_wump",
 "speed": 2.5
 }, {
@@ -1421,127 +1519,128 @@ fade_time = 0.0
 stream_count = 1
 stream_0 = ExtResource("25_wjwd1")
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1296307351 groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
 max_objects = 1
 
-[node name="recoil_indicator" type="Sprite2D" parent="."]
+[node name="recoil_indicator" type="Sprite2D" parent="." unique_id=1283703100]
 modulate = Color(1, 0.9490196, 0.94509804, 0.8901961)
 scale = Vector2(2, 2)
 texture = ExtResource("2_icvrh")
 script = ExtResource("3_jgwx7")
 
-[node name="QuiltCollider" type="CollisionShape2D" parent="."]
+[node name="QuiltCollider" type="CollisionShape2D" parent="." unique_id=1308725148]
 position = Vector2(0.75, 0.75)
 shape = SubResource("CapsuleShape2D_iemgc")
 
-[node name="PhloCollider" type="CollisionShape2D" parent="."]
+[node name="PhloCollider" type="CollisionShape2D" parent="." unique_id=357307041]
 position = Vector2(-0.25, 0.5)
 scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=725135239]
 material = SubResource("ShaderMaterial_1nwdr")
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"land"
+animation = &"idle"
 script = ExtResource("13_1nwdr")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=621642771 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("22_0lugl")
 initial_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=2068681491 node_paths=PackedStringArray("player")]
 script = ExtResource("23_3jtwp")
 player = NodePath("../..")
 state_name = "idle"
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="Walk" type="Node" parent="StateMachine" unique_id=1116354773 node_paths=PackedStringArray("player")]
 script = ExtResource("24_p2d1a")
 player = NodePath("../..")
 state_name = "walk"
 
-[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="Jump" type="Node" parent="StateMachine" unique_id=1372076916 node_paths=PackedStringArray("player")]
 script = ExtResource("25_hiv3f")
 player = NodePath("../..")
 state_name = "jump"
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="Fall" type="Node" parent="StateMachine" unique_id=1539170508 node_paths=PackedStringArray("player")]
 script = ExtResource("18_4hfjo")
 player = NodePath("../..")
 state_name = "fall"
 
-[node name="Cutscene" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="Cutscene" type="Node" parent="StateMachine" unique_id=1632710382 node_paths=PackedStringArray("player")]
 script = ExtResource("21_1nwdr")
 player = NodePath("../..")
 state_name = "cutscene"
 
-[node name="Recoil" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="Recoil" type="Node" parent="StateMachine" unique_id=1250379640 node_paths=PackedStringArray("player")]
 script = ExtResource("19_33mbb")
 player = NodePath("../..")
 state_name = "recoil"
 
-[node name="Stasis" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="Stasis" type="Node" parent="StateMachine" unique_id=1577718049 node_paths=PackedStringArray("player")]
 script = ExtResource("20_3uy0y")
 player = NodePath("../..")
 state_name = "stasis"
 
-[node name="WallStick" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="WallStick" type="Node" parent="StateMachine" unique_id=901804962 node_paths=PackedStringArray("player")]
 script = ExtResource("33_jgwx7")
 temp_acc = 1.2
 player = NodePath("../..")
 state_name = "wall_stick"
 
-[node name="WallJump" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+[node name="WallJump" type="Node" parent="StateMachine" unique_id=1297171314 node_paths=PackedStringArray("player")]
 script = ExtResource("34_a45e1")
-jump_force_y = 45.0
+jump_force_y = 80.0
 jump_force_x = 80
 player = NodePath("../..")
 state_name = "wall_jump"
 
-[node name="hit_box" type="Area2D" parent="."]
+[node name="hit_box" type="Area2D" parent="." unique_id=154458134]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box" unique_id=729320847]
 position = Vector2(0, -0.5)
 shape = SubResource("CapsuleShape2D_33mbb")
 debug_color = Color(0.9925013, 0, 0.2575452, 0.41960785)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1321957790]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=552377334]
 position = Vector2(0, -1.25)
 shape = SubResource("RectangleShape2D_33mbb")
 
-[node name="SFX" type="Node" parent="."]
+[node name="SFX" type="Node" parent="." unique_id=577166608]
 
-[node name="Land" type="AudioStreamPlayer" parent="SFX"]
+[node name="Land" type="AudioStreamPlayer" parent="SFX" unique_id=1181986770]
 stream = ExtResource("24_hiv3f")
 max_polyphony = 4
 
-[node name="Take Damage" type="AudioStreamPlayer" parent="SFX"]
+[node name="Take Damage" type="AudioStreamPlayer" parent="SFX" unique_id=191552110]
 stream = ExtResource("34_vfdg1")
 max_polyphony = 4
 
-[node name="Footsteps" type="AudioStreamPlayer" parent="SFX"]
+[node name="Footsteps" type="AudioStreamPlayer" parent="SFX" unique_id=577343084]
 stream = SubResource("AudioStreamPlaylist_hiv3f")
 
-[node name="Shoot Projectile" type="AudioStreamPlayer" parent="SFX"]
+[node name="Shoot Projectile" type="AudioStreamPlayer" parent="SFX" unique_id=922950995]
 stream = ExtResource("36_n7wni")
 volume_db = -15.0
 max_polyphony = 6
 
-[node name="Take Damage (Phlo)" type="AudioStreamPlayer" parent="SFX"]
+[node name="Take Damage (Phlo)" type="AudioStreamPlayer" parent="SFX" unique_id=1477845529]
 stream = ExtResource("34_2k042")
 
-[node name="Jump" type="AudioStreamPlayer" parent="SFX"]
+[node name="Jump" type="AudioStreamPlayer" parent="SFX" unique_id=389697191]
 stream = ExtResource("35_vfdg1")
 autoplay = true
 
-[node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
 rect = Rect2(-10, -21.5, 20, 44)
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Fall" method="_on_animation_finished"]
 [connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]
 [connection signal="stop_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="stop"]
 [connection signal="jump_sound" from="StateMachine/Jump" to="SFX/Jump" method="play"]

@@ -17,6 +17,8 @@ var sliderReference
 var characterportraitReference
 var settingsReference
 
+enum dialouge_type {speech, thought, narration}
+
 signal dialouge_finished
 
 func _ready() -> void:
@@ -29,20 +31,26 @@ func _ready() -> void:
 	font_size = sliderReference.value
 	
 	UiReference.visible = false
-	dialogue_counter = 0
+	dialogue_counter = -1
 	dialogueReference.add_theme_font_size_override("font_size", font_size)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") || event.is_action_pressed("jump"):
-		if dialogFolder != null:
-			_on_pressed()
-	elif event.is_action_pressed("settings"):
-		settingsReference.visible = !settingsReference.visible
-		#get_tree().paused = !get_tree().paused <-- make this work later
-		#pause/unpause the music
-		#somehow pause camera tweening if it is running
+	if dialogue_counter != -1:
+		if event.is_action_pressed("interact") || event.is_action_pressed("jump") || event.is_action_pressed("fire_projectile"):
+			if dialogFolder != null:
+				_tick()
+		elif event.is_action_pressed("settings"):
+			settingsReference.visible = !settingsReference.visible
+			if settingsReference.visible == true:
+				get_tree().paused = true
+			else:
+				get_tree().paused = false
+			#get_tree().paused = !get_tree().paused <-- make this work later
+			#pause/unpause the music
+			#somehow pause camera tweening if it is running
 
-func _parse(l: String):
+func _parse(l: String, b: bool = false):
+
 	var ws = l
 	
 	var start = l.find("%")
@@ -53,11 +61,12 @@ func _parse(l: String):
 	
 	var picClean = pic.replace("%", "")
 	
-	#if animation not found throw error and play empty 
-	if characterportraitReference.sprite_frames.get_animation_names().has(picClean):
+	#if animation not found throw error and play empty. b is for whether
+	# to change the portrait or not.
+	if b == true && characterportraitReference.sprite_frames.get_animation_names().has(picClean):
 		characterportraitReference.play(picClean)
-	else:
-		print_debug("ERROR: Animation for Character Portrait not found.")
+	elif b == true:
+		print_debug("ERROR: Animation for Character Portrait (name: <%s> )not found.", picClean)
 	
 	ws = ws.replace(pic, "")
 	
@@ -75,6 +84,7 @@ func _handle_voice() -> void:
 	
 	var letter_displayed
 	var character_speaking
+	var line_type
 	
 	var l = dialogFolder.text[str(dialogue_counter)]
 	
@@ -93,12 +103,25 @@ func _handle_voice() -> void:
 	#print("cs: " + character_speaking)
 	
 	if dialogueReference.visible_characters < _parse(dialogFolder.text[str(dialogue_counter)]).length():
-		letter_displayed = _parse(dialogFolder.text[str(dialogue_counter)])[dialogueReference.visible_characters]
+		letter_displayed = _parse((dialogFolder.text[str(dialogue_counter)])[dialogueReference.visible_characters])
 	else:
 		letter_displayed = ""
 	#print("ld: " + letter_displayed)
-
-	$"Voice Player"._voice_time(character_speaking, letter_displayed)
+	
+	if dialogFolder.text[str(dialogue_counter)].findn("[") != -1:
+		line_type = dialouge_type.narration
+	elif dialogFolder.text[str(dialogue_counter)].findn("(") != -1:
+		line_type = dialouge_type.thought
+	else:
+		line_type = dialouge_type.speech
+	
+	# Does not hand off character speaking indicator to the voice box
+	if line_type != dialouge_type.narration:
+		var seperator = _parse(dialogFolder.text[str(dialogue_counter)]).find(":")
+		if dialogueReference.visible_characters <= seperator + 1:
+			letter_displayed = ""
+	
+	$"Voice Player"._voice_time(character_speaking, letter_displayed, line_type)
 	
 	#print("l: |" + l)
 	#print("ws: |" + ws)
@@ -106,41 +129,48 @@ func _handle_voice() -> void:
 	
 	pass
 
-func _on_pressed() -> void:
+func _tick() -> void:
+	
 	font_size = sliderReference.value
 	dialogueReference.add_theme_font_size_override("font_size", font_size)
-	if dialogFolder != null:
-		line = dialogFolder.text[str(dialogue_counter)]
-	if line.contains("%"):
-		characterportraitReference.play("empty")
-		line = _parse(line)
-	if not isTyping:
-		#print("boop")
-		dialogueReference.visible_characters = 0
-		isTyping = true
-		text = line
-		for i in len(line):
-			await wait(0.03) # moving this before fixed number not moving up
-			dialogueReference.visible_characters += 1
-			_handle_voice()
-			if len(line) < dialogueReference.visible_characters:
-				break # ^ checks if was skipped to the end
-		if dialogue_counter > len(dialogFolder.text) - 2:
-			UiReference.visible = false
-			#$"../../../../NPCs/TestNPC".isPressed = false	
-			dialogue_counter = 0
-			dialouge_finished.emit()
-		isTyping = false
-		dialogue_counter += 1 #<-- having this at the end is causing problems -- alex
-	elif isTyping: # if player presses twice, line skips to the end.
-		dialogueReference.visible_characters = len(line)
+	
+	if not dialogue_counter == -1:
+		if dialogFolder != null:
+			line = dialogFolder.text[str(dialogue_counter)]
+		if line.contains("%"):
+			characterportraitReference.play("empty")
+			line = _parse(line, true)
+		if not isTyping:
+			#print("boop")
+			dialogueReference.visible_characters = 0
+			isTyping = true
+			text = line
+			$"Voice Player"._start_of_new_line()
+			for i in len(line):
+				await wait(0.03) # moving this before fixed number not moving up
+				dialogueReference.visible_characters += 1
+				_handle_voice()
+			
+				if len(line) < dialogueReference.visible_characters:
+					break # ^ checks if was skipped to the end
+			if dialogue_counter > len(dialogFolder.text) - 2:
+				UiReference.visible = false
+				#$"../../../../NPCs/TestNPC".isPressed = false	
+				dialogue_counter = -1
+				dialouge_finished.emit()
+			isTyping = false
+			if dialogue_counter != -1: 
+				dialogue_counter += 1 #<-- having this at the end is causing problems -- alex
+		elif isTyping: # if player presses twice, line skips to the end.
+			dialogueReference.visible_characters = len(line)
 
 func _process(delta: float) -> void:
 	#if dialogueReference.visible_characters == 0 && dialogue_counter == 0:
 		
 	#print(str(dialogueReference.visible_characters) + " / " + str(dialogue_counter))
 	#print(str(dialogue_counter) + " / " + str(UiReference.visible))
-	#print(font_size)
+	#print(get_tree().paused)
+	
 	pass
 		
 	
@@ -159,4 +189,4 @@ func Dialogue(dialogueResource):
 	dialogFolder = load(dialogueResource)
 	dialogue_counter = 0
 	#print_debug("AUTO CLICKED")
-	_on_pressed()
+	_tick()

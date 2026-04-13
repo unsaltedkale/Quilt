@@ -39,4 +39,5 @@ func on_body_exited(area: Area2D):
 		print("player left")
 		#player.current_stasis = null
 		$"SFX/Stasis Hum".stop()
-		$"SFX/Exit Stasis".play()
+		if not $"SFX/Exit Stasis".is_playing():
+			$"SFX/Exit Stasis".play()

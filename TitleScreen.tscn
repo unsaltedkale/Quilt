@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://1iv87qysc1dl"]
+[gd_scene format=3 uid="uid://1iv87qysc1dl"]
 
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="1_pkhjh"]
 [ext_resource type="Script" uid="uid://d41acgjxcgvk" path="res://Andy's Path/Scripts/PlayButton.gd" id="2_1xr1c"]
@@ -9,7 +9,8 @@
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_tu0on"]
 
-[node name="UI" type="Control"]
+[node name="UI" type="Control" unique_id=1603564362]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,29 +18,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Health" type="Sprite2D" parent="."]
+[node name="Health" type="Sprite2D" parent="." unique_id=1132935516]
 visible = false
 position = Vector2(165, 535)
 texture = ExtResource("1_pkhjh")
 
-[node name="Title Screen" type="Control" parent="."]
+[node name="Title Screen" type="Control" parent="." unique_id=1850374261]
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 scale = Vector2(1.6666099, 1.6666232)
 script = ExtResource("2_1xr1c")
 
-[node name="Background" type="ColorRect" parent="Title Screen"]
+[node name="Background" type="ColorRect" parent="Title Screen" unique_id=631188275]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="QuiltTitleScreen2" type="Sprite2D" parent="Title Screen/Background"]
+[node name="QuiltTitleScreen2" type="Sprite2D" parent="Title Screen/Background" unique_id=909133779]
 position = Vector2(576, 324)
 scale = Vector2(6, 6)
 texture = ExtResource("3_2k3je")
 
-[node name="Play" type="Button" parent="Title Screen"]
+[node name="Play" type="Button" parent="Title Screen" unique_id=231228769]
 layout_mode = 0
 offset_left = 44.0
 offset_top = 333.0
@@ -49,7 +50,7 @@ theme_override_fonts/font = ExtResource("4_skwql")
 theme_override_font_sizes/font_size = 56
 text = "PLAY"
 
-[node name="Settings" type="Button" parent="Title Screen"]
+[node name="Settings" type="Button" parent="Title Screen" unique_id=1227252054]
 layout_mode = 0
 offset_left = 44.0
 offset_top = 493.0
@@ -59,7 +60,7 @@ theme_override_fonts/font = ExtResource("4_skwql")
 theme_override_font_sizes/font_size = 56
 text = "SETTINGS"
 
-[node name="Title" type="Label" parent="Title Screen"]
+[node name="Title" type="Label" parent="Title Screen" unique_id=1725295154]
 visible = false
 layout_mode = 0
 offset_left = 19.0
@@ -69,10 +70,10 @@ theme_override_colors/font_color = Color(0.39688927, 0.39688927, 0.39688924, 1)
 theme_override_font_sizes/font_size = 159
 text = "QUILT"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=855062033]
 stream = SubResource("AudioStreamWAV_tu0on")
 
-[node name="Conductor" parent="." instance=ExtResource("3_tu0on")]
+[node name="Conductor" parent="." unique_id=554276046 instance=ExtResource("3_tu0on")]
 current_music_resource = ExtResource("4_2k3je")
 
 [connection signal="pressed" from="Title Screen/Play" to="Title Screen" method="_on_play_pressed"]
