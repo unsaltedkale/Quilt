@@ -6,7 +6,7 @@ class_name Cutscene
 @export var automatic_animations_frozen: bool
 @export var prev_position: Vector2
 
-func Enter():
+func Enter(previous_state: State):
 	prev_position = get_parent().get_parent().position
 	player.velocity = Vector2(0,0)
 	if player.is_phlo:
@@ -52,5 +52,8 @@ func Update(_delta):
 	
 func Physics_Update(_delta):
 	pass
+
+
+
 
 	

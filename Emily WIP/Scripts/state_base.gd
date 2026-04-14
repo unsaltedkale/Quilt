@@ -1,8 +1,9 @@
 extends Node
 class_name State
 
+const PLAYER_DATA = preload("uid://c33m5ti1y2ang")
+
 @export var player: CharacterBody2D
-@export var speed: float = 800
 @onready var an = $"../../AnimatedSprite2D"
 var move_dir
 var recoil: bool
@@ -10,12 +11,13 @@ var cutscene: bool
 @export var state_name: String
 var acceleration = 1500
 var decceleration = 750 * 6
-var sm
-var smcs
+var sm : StateMachine
+var smcs : State
+
 
 signal Transition
 
-func Enter():
+func Enter(previous_state: State):
 	pass
 
 func Exit():
@@ -43,7 +45,7 @@ func _physics_process(_delta) -> void:
 				#print("AAAA" + smcs.state_name)
 				move_dir = Input.get_axis("move_left","move_right")
 				if move_dir !=0:
-					player.velocity.x = move_dir * speed
+					player.velocity.x = move_dir * PLAYER_DATA.walk_speed
 				elif move_dir == 0:
 					player.velocity.x = move_toward(player.velocity.x, 0, decceleration * _delta)
 			if player.is_phlo:

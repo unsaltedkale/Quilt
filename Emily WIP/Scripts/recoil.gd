@@ -1,6 +1,5 @@
 extends State
 
-@export var force : Vector2 = Vector2(1500,1500)
 @export var timer: float
 @onready var projectile_scene = preload("res://Emily WIP/Scenes/red_projectile.tscn")
 var player_direction
@@ -21,7 +20,7 @@ func recoil_vel_equation():
 		elif player.r_calc == player.recoil_calculation_type.from_center_of_screen:
 			n = (get_viewport().get_mouse_position() - Vector2(player.get_viewport_rect().size.x/2, player.get_viewport_rect().size.y/2)).normalized()
 			pass
-	value = n * force * -1
+	value = n * PLAYER_DATA.shooting_force * -1
 	return value
 
 func shoot():
@@ -39,7 +38,7 @@ func shoot():
 	get_tree().current_scene.add_child(proj)
 	shoot_projectile.emit()
 
-func Enter():
+func Enter(previous_state: State):
 	timer = 10.0/60.0
 	shoot()
 	player.velocity = recoil_vel_equation()
