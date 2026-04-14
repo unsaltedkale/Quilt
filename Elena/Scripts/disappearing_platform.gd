@@ -7,13 +7,22 @@ extends RigidBody2D
 func _ready() -> void:
 	if get_tree().root.get_child(0).find_child("Req") != null:
 		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
-	else:
+		print(player)
+	elif get_tree().root.find_child("Player") != null:
 		player = $"../Player"
 	self.gravity_scale = 0
+	print(player)
 	
 func _process(_delta: float) -> void:
-	if player.player_has_died == 1:
-		pass
+	if player == null:
+		if get_tree().root.get_child(0).find_child("Req") != null:
+			player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+			print(player)
+		elif get_tree().root.find_child("Player") != null:
+			player = $"../Player"
+	else:
+		if player.player_has_died == 1:
+			pass
 
 func _on_timer_area_body_entered(body: Node2D) -> void:
 		if body.is_in_group("Player"):
@@ -33,5 +42,5 @@ func _on_death_area_body_entered(body: Node2D) -> void:
 
 func in_holding():
 	self.modulate.a = 0
-	$DeathArea/DeathCollision.disabled = true
+	$DeathArea/DeathCollision.set_deferred("disable", true)
 	set_collision_layer_value(1, false)

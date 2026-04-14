@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://ba7v3jh153vt7"]
 
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_kebsd"]
+[ext_resource type="PackedScene" uid="uid://cdejhewttjubj" path="res://Alex's Folder/tscns/vinnies/vinnie_TEST1.tscn" id="2_swhi7"]
+[ext_resource type="PackedScene" uid="uid://eoa2p3m7kh4x" path="res://Alex's Folder/tscns/vinnies/vinnie_TEST2.tscn" id="3_i1c7e"]
+
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
+
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_kebsd")]
+position = Vector2(706, -9)
+
+[node name="VinnieTEST1" parent="." unique_id=467354812 instance=ExtResource("2_swhi7")]
+position = Vector2(62, 75)
+
+[node name="VinnieTEST2" parent="." unique_id=1406100599 instance=ExtResource("3_i1c7e")]
+position = Vector2(1933, -24)
