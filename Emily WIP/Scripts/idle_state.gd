@@ -7,7 +7,7 @@ func idle_quilt():
 	else:
 		an.play("idle")
 
-func Enter():
+func Enter(previous_state: State):
 	idle_quilt()
 	_recoil_recharge_check()
 

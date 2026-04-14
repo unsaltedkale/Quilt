@@ -3,7 +3,11 @@ extends State
 var fall_timer: float = 0.0
 
 signal has_landed()
-func Enter():
+func Enter(previous_state: State):
+	# TODO
+	# CAYOTE TIMER ADDING SOON
+	# ADDED PREVIOUS STATE SO TAHT COULD CHECK IF WAS WALKING BEFORE
+	# IF WAS WAKING BEFORE ANDGER A CERTAIN TIME DO JUMP
 	fall_timer = 0
 
 func Exit():

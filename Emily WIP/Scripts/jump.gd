@@ -12,7 +12,7 @@ func quilt_jump():
 		else:
 			an.play("jump")
 
-func Enter():
+func Enter(previous_state: State):
 	_recoil_recharge_check()
 	player.jump_count += 1
 	timer = 7

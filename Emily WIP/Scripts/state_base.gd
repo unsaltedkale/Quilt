@@ -17,7 +17,7 @@ var smcs : State
 
 signal Transition
 
-func Enter():
+func Enter(previous_state: State):
 	pass
 
 func Exit():

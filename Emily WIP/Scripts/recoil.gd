@@ -38,7 +38,7 @@ func shoot():
 	get_tree().current_scene.add_child(proj)
 	shoot_projectile.emit()
 
-func Enter():
+func Enter(previous_state: State):
 	timer = 10.0/60.0
 	shoot()
 	player.velocity = recoil_vel_equation()

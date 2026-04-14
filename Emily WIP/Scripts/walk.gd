@@ -6,7 +6,7 @@ signal stop_footsteps()
 func quilt_walk():
 	pass
 
-func Enter():
+func Enter(previous_state: State):
 	quilt_walk()
 	play_footsteps.emit()
 	#print("walking")

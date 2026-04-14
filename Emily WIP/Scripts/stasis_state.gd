@@ -2,7 +2,7 @@ extends State
 class_name Stasis
 
 
-func Enter():
+func Enter(previous_state: State):
 	player.velocity = Vector2(0,0)
 
 func Physics_Update(_delta):
