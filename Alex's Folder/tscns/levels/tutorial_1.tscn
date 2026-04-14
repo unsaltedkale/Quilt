@@ -2433,7 +2433,7 @@ frame_progress = 1.0
 
 [node name="Player" parent="." unique_id=982598402 instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(72606, -20776)
+position = Vector2(101882, -40276)
 is_phlo = true
 
 [node name="recoil_indicator" parent="Player" index="0" unique_id=1283703100]
