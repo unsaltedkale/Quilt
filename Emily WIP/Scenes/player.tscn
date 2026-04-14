@@ -1586,7 +1586,6 @@ state_name = "stasis"
 
 [node name="WallStick" type="Node" parent="StateMachine" unique_id=901804962 node_paths=PackedStringArray("player")]
 script = ExtResource("33_jgwx7")
-temp_acc = 1.2
 player = NodePath("../..")
 state_name = "wall_stick"
 

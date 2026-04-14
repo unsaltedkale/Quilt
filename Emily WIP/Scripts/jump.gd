@@ -1,13 +1,12 @@
 extends State
 
-@export var jump_velocity: float = -950.0 #change
 var timer : float = 7.0
 
 signal jump_sound()
 
 func quilt_jump():
 	if player.is_on_floor():
-		player.velocity.y = jump_velocity
+		player.velocity.y = PLAYER_DATA.jump_vel
 		if player.is_phlo:
 			an.play("phlo_jump")
 		else:

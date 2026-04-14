@@ -1,7 +1,5 @@
 extends State
 
-@export var gravity: float = 3000.0 #2000
-@export var max_grav: float = 2000.0
 var fall_timer: float = 0.0
 
 signal has_landed()
@@ -45,10 +43,10 @@ func land():
 			an.play("land")
 
 func Physics_Update(_delta):
-	if player.velocity.y <= max_grav:
-		player.velocity.y += gravity * _delta
+	if player.velocity.y <= PLAYER_DATA.max_fall_vel:
+		player.velocity.y += PLAYER_DATA.grav_accel * _delta
 	else:
-		player.velocity.y = max_grav
+		player.velocity.y = PLAYER_DATA.max_fall_vel
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if player.collected_objects != 0:
 			Transition.emit(self, "recoil")

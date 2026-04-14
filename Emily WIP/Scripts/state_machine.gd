@@ -1,8 +1,8 @@
-extends Node
+class_name StateMachine extends Node
 
 @export var initial_state : State
-
 @onready var current_state : State
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../AnimatedSprite2D"
 
 var states: Dictionary = {}
 

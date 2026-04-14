@@ -18,6 +18,13 @@ func Physics_Update(_delta):
 	_recoil_recharge_check()
 	
 	idle_quilt()
+	
+	_change_state()
+	
+	_crouch_control()
+
+
+func _change_state() -> void:
 	if Input.is_action_just_pressed("jump"):
 		Transition.emit(self, "jump")
 	move_dir = Input.get_axis("move_left","move_right")
@@ -31,5 +38,3 @@ func Physics_Update(_delta):
 			Transition.emit(self, "recoil")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
-		
-	_crouch_control()

@@ -4,8 +4,7 @@ signal play_footsteps()
 signal stop_footsteps()
 
 func quilt_walk():
-	move_dir = Input.get_axis("move_left","move_right")
-	player.velocity.x = move_dir * speed
+	pass
 
 func Enter():
 	quilt_walk()

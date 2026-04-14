@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerRes" format=3 uid="uid://c33m5ti1y2ang"]
+
+[ext_resource type="Script" uid="uid://vi6wpfq66741" path="res://Emily WIP/Scripts/player/player_res_script.gd" id="1_71fu4"]
+
+[resource]
+script = ExtResource("1_71fu4")
+walk_speed = 800.0
+jump_vel = -900.0
+max_fall_vel = 1800.0
+grav_accel = 4000.0
+shooting_force = Vector2(1000, 1000)
+wall_jump_force = Vector2(60, 100)
+metadata/_custom_type_script = "uid://vi6wpfq66741"
