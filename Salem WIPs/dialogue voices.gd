@@ -68,7 +68,7 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 				pass
 	if newnote <= 0 and line_type != dialouge_type.narration:
 		if line_type == dialouge_type.speech:
-			bus = &"Master"
+			bus = &"Dialogue Master"
 		if line_type == dialouge_type.thought:
 			bus = &"Dialouge Echo"
 		pitch_scale = pitch_hold
