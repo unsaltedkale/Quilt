@@ -1,7 +1,7 @@
 extends Area2D
 class_name zipline_obj
 
-@onready var player = $"../Player"
+@onready var player
 @onready var ani = $Sprite2D
 @export var timer: float = 0
 
@@ -18,12 +18,17 @@ func _ready() -> void:
 	position = start_position
 	ani.play("idle")
 	reverse_time = reverse_time_max
+	if get_tree().root.get_child(0).find_child("Req") != null:
+		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+	else:
+		player = $"../Player"
 
 func _on_player_death():
 	position = start_position
 	pass
 
 func _physics_process(_delta: float) -> void:
+	
 	if timer > 0:
 		timer -= _delta
 	else:

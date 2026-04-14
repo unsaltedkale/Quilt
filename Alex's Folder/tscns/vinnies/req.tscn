@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="1_d76ap"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="2_me2gu"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="3_abkbx"]
-[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/orange_town.tres" id="4_yvaxl"]
+[ext_resource type="Resource" uid="uid://bmif5lh5wrfbj" path="res://Alex's Folder/music_resources/crypt_1_sub.tres" id="4_d76ap"]
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="5_4jxkh"]
 [ext_resource type="PackedScene" uid="uid://2bpi2d7g1hn7" path="res://Alex's Folder/tscns/metronome.tscn" id="6_wtnwk"]
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="7_md1fj"]
@@ -58,7 +58,7 @@ stream = SubResource("AudioStreamWAV_xj211")
 [node name="Conductor" parent="." unique_id=438348041 instance=ExtResource("3_abkbx")]
 position = Vector2(-211.9961, -1082)
 scale = Vector2(4, 4)
-current_music_resource = ExtResource("4_yvaxl")
+current_music_resource = ExtResource("4_d76ap")
 
 [node name="phlo_backpack" parent="." unique_id=47144264 instance=ExtResource("5_4jxkh")]
 position = Vector2(-511, -185)

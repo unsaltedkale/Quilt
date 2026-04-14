@@ -1,12 +1,17 @@
 extends Area2D
 class_name stasis_obj
 
-@onready var player = $"../Player"
+@onready var player
 @export var timer: float = 0
 @onready var ani = $Sprite2D
 
 
 func _physics_process(_delta: float) -> void:
+	if get_tree().root.get_child(0).find_child("Req") != null:
+		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+	else:
+		player = $"../Player"
+	
 	if timer > 0:
 		timer -= _delta
 	else:
@@ -18,6 +23,7 @@ func _physics_process(_delta: float) -> void:
 		elif player.current_stasis != self && ani.animation == "capture":
 			ani.play("release")
 			pass
+	
 
 func on_body_entered(area: Area2D):
 	if timer <= 0:

@@ -14,9 +14,13 @@ extends Area2D
 
 func _ready() -> void:
 	player_in_trigger = false
-	player = get_tree().root.find_child("Player")
-	Camera = get_tree().root.find_child("Camera2D")
-
+	if get_tree().root.get_child(0).find_child("Req") != null:
+		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+		Camera = get_tree().root.get_child(0).find_child("Req").find_child("Camera2D")
+	else:
+		player = $"../../Player"
+		Camera = $"../../Camera2D"
+	
 func _on_area_entered(area: Area2D) -> void:
 	# lock player movement
 	if area.get_parent().is_in_group("Player"):
