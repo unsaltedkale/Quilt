@@ -1,10 +1,14 @@
 extends RigidBody2D
 
 @onready var timer: Timer = $Timer
-@onready var player: CharacterBody2D = $"../Player"
+@onready var player: CharacterBody2D
 @onready var start_pos: Vector2 = global_position
 
 func _ready() -> void:
+	if get_tree().root.get_child(0).find_child("Req") != null:
+		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+	else:
+		player = $"../Player"
 	self.gravity_scale = 0
 	
 func _process(_delta: float) -> void:

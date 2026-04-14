@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var player = $"../Player"
+@onready var player
 @export var timer_max = 2.0
 @export var timer: float
 @export var countdown: bool
@@ -16,8 +16,13 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	original_position = position
-	inactive_position = original_position + Vector2(0, 35)
+	inactive_position = original_position + Vector2(0, 12)
 	position = inactive_position
+	
+	if get_tree().root.get_child(0).find_child("Req") != null:
+		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+	else:
+		player = $"../Player"
 	
 	player_in_trigger = false
 	placeholder_text = ""

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dd622dnehfwdw"]
+[gd_scene format=3 uid="uid://dd622dnehfwdw"]
 
 [ext_resource type="Script" uid="uid://bnd2x4a11k37i" path="res://Elena/Scripts/checkpoint.gd" id="1_5xt0g"]
 [ext_resource type="Texture2D" uid="uid://d03o1v27vixs6" path="res://Art/Checkpoints/Checkpoint_D1_Lit.png" id="2_5xt0g"]
@@ -130,17 +130,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="checkpoint" type="Area2D"]
+[node name="checkpoint" type="Area2D" unique_id=1973848044]
 scale = Vector2(2, 2)
 script = ExtResource("1_5xt0g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=745667169]
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_5xt0g")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=536616511]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_53yl3")
-animation = &"unactive_checkpoint"
+animation = &"active_checkpoint_red"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

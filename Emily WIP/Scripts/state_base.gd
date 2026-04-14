@@ -56,7 +56,7 @@ func _physics_process(_delta) -> void:
 
 func _crouch_control():
 	if Input.is_action_just_pressed("crouch"):
-		player.scale.y = 4 * 0.75
+		player.scale.y = 4 * 0.5
 	if Input.is_action_just_released("crouch"):
 		player.scale.y = 4
 	pass

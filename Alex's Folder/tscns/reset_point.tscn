@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b7btpnbf85fqe"]
+[gd_scene format=3 uid="uid://b7btpnbf85fqe"]
 
 [ext_resource type="Script" uid="uid://df8dtbnbs4pl0" path="res://Alex's Folder/gds/reset_point.gd" id="1_fv8gk"]
 [ext_resource type="Texture2D" uid="uid://bphjxjlfehfsf" path="res://Art/Checkpoints/Checkpoint_D2_Lit.png" id="2_fv8gk"]
@@ -130,23 +130,24 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ipui"]
 size = Vector2(26, 40.125)
 
-[node name="ResetPoint" type="Area2D" node_paths=PackedStringArray("label")]
+[node name="ResetPoint" type="Area2D" unique_id=638936802 node_paths=PackedStringArray("label")]
 scale = Vector2(2, 2)
 script = ExtResource("1_fv8gk")
 label = NodePath("Label")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1518653933]
 modulate = Color(2.4498825, 2.4498825, 2.4498825, 1)
+position = Vector2(0, 12)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_k2sqa")
 animation = &"unactive_checkpoint_2"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1120830358]
 position = Vector2(0, -0.125)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7ipui")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1850340165]
 offset_left = -26.0
 offset_top = -74.00001
 offset_right = 9.616436
