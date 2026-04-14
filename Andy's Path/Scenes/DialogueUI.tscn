@@ -835,6 +835,7 @@ type = 5
 
 [node name="Settings" type="Control" parent="UI" unique_id=1192461614]
 process_mode = 3
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -910,9 +911,8 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = 15.0
-max_value = 30.0
-value = 30.0
+min_value = -80.0
+max_value = 10.0
 
 [node name="Label" type="Label" parent="UI/Settings/Volume Settings/General Volume" unique_id=197192298]
 layout_mode = 0
@@ -936,9 +936,8 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = 15.0
-max_value = 30.0
-value = 30.0
+min_value = -80.0
+max_value = 10.0
 
 [node name="Label" type="Label" parent="UI/Settings/Volume Settings/Dialogue Slider" unique_id=446566888]
 layout_mode = 0
@@ -962,9 +961,8 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = 15.0
-max_value = 30.0
-value = 30.0
+min_value = -80.0
+max_value = 10.0
 
 [node name="Label" type="Label" parent="UI/Settings/Volume Settings/Sound FX Slider" unique_id=1683998450]
 layout_mode = 0
@@ -988,9 +986,8 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = 15.0
-max_value = 30.0
-value = 30.0
+min_value = -80.0
+max_value = 10.0
 
 [node name="Label" type="Label" parent="UI/Settings/Volume Settings/Dialogue Echo Slider" unique_id=1362517421]
 layout_mode = 0
