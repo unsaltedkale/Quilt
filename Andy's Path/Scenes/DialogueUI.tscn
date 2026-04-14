@@ -826,11 +826,11 @@ animation = &"empty"
 
 [node name="ToolTipMessage" parent="UI/DialogueScreen" unique_id=1195870865 instance=ExtResource("16_gi33v")]
 layout_mode = 0
-offset_left = 217.77094
-offset_top = 181.56398
-offset_right = 817.77094
-offset_bottom = 301.56396
-text = "[img=64]res://Art/Tool Tips/ttm_20.png[/img]"
+offset_left = 211.75517
+offset_top = 175.47115
+offset_right = 811.7552
+offset_bottom = 295.47116
+text = "[img=64]res://Art/Tool Tips/ttm_22.png[/img]"
 type = 5
 
 [node name="Settings" type="Control" parent="UI" unique_id=1192461614]

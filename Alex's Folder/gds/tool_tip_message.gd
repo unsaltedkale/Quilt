@@ -23,7 +23,7 @@ var super_array: Array[Array]
 func _ready() -> void:
 	
 	if get_parent().name == "DialogueScreen":
-		pass
+		ri = $"../../../../../Player/recoil_indicator"
 	else:
 		ri = $"../Player/recoil_indicator"
 	
@@ -72,6 +72,9 @@ func _process(delta: float) -> void:
 				l = l.replace("{" + picClean +  "}", "[img=96]res://Art/Tool Tips/ttm_" + picClean + ".png[/img]")
 			else:
 				print_debug("ERROR: Image for text not found. Name: " + picClean)
+			
+			if get_parent().name == "DialogueScreen":
+				l = l.replace("96", "64")
 			
 		text = l
 		#print(text)
