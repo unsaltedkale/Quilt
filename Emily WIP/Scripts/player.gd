@@ -20,8 +20,6 @@ signal player_death
 
 var jump_count : int
 
-var player_has_died: int = 0
-
 func _ready() -> void:
 	health = max_health
 	spawn_point = global_position
@@ -49,8 +47,6 @@ func take_damage(amount: int) -> void:
 		
 func die():
 	print_debug("Player died")
-	player_has_died = 1
-	print("Player Has Died:",player_has_died)
 	$"../Camera2D".player_died()
 	player_death.emit()
 	spawn_player(spawn_point)
@@ -70,3 +66,4 @@ func spawn_player(spawn_point: Vector2):
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 	health = max_health  
+	
