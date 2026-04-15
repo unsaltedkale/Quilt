@@ -19,7 +19,7 @@ func _physics_process(_delta: float) -> void:
 	if player != null:
 		if player.current_stasis == self:
 			timer = 0.5 #seconds
-			player.position = position
+			player.global_position = global_position
 		elif player.current_stasis != self && ani.animation == "capture":
 			ani.play("release")
 			pass
@@ -30,7 +30,7 @@ func on_body_entered(area: Area2D):
 		if area.is_in_group("Projectile") or area.get_parent().is_in_group("Player"):
 			print(area)
 			player.current_stasis = self
-			player.position = position
+			player.global_position = global_position
 			player.collected_objects = player.max_objects
 			if not $"SFX/Stasis Hum".is_playing():
 				$"SFX/Stasis Hum".play()

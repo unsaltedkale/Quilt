@@ -34,6 +34,7 @@ func _ready() -> void:
 	pity_kill_timer = pity_kill_timer_max
 	
 	playerReference = $"../Player"
+	print(playerReference)
 	pk_timer = $"../CanvasLayer/Pity Kill Timer"
 
 func _path(string: String):
@@ -114,8 +115,7 @@ func _process(delta: float) -> void:
 		pity_kill_timer = pity_kill_timer_max
 
 	if has_control:	
-		
-		if (abs(global_position.x - playerReference.position.x) + abs(global_position.y - playerReference.position.y)) > 1000:
+		if (abs(global_position.x - playerReference.position.x) + abs(global_position.y - playerReference.position.y)) > 10000:
 			await wait(0.01)
 			if has_control:
 				print("TELEPORTED")

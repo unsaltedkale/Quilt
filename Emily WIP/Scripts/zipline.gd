@@ -24,7 +24,7 @@ func _ready() -> void:
 		player = $"../Player"
 
 func _on_player_death():
-	position = start_position
+	global_position = start_position
 	pass
 
 func _physics_process(_delta: float) -> void:
@@ -39,7 +39,7 @@ func _physics_process(_delta: float) -> void:
 			player.player_death.connect(_on_player_death)
 		
 		# if zipline is at the end of the path
-		if basically_zero(position, end_position) && not respawning:
+		if basically_zero(global_position, end_position) && not respawning:
 			
 			reverse_time = reverse_time_max
 			
@@ -50,7 +50,7 @@ func _physics_process(_delta: float) -> void:
 			respawning = true
 			await wait(respawn_time)
 			visible = false
-			position = start_position
+			global_position = start_position
 			visible = true
 			respawning = false
 		
@@ -59,18 +59,18 @@ func _physics_process(_delta: float) -> void:
 			reverse_time = reverse_time_max
 			
 			ani.play("carry")
-			position = position.move_toward(end_position, speed * _delta)
+			global_position = global_position.move_toward(end_position, speed * _delta)
 			timer = 0.5 #seconds
-			player.position = position
+			player.global_position = global_position
 			
 		#if zipline is in the middle of the path
-		if not basically_zero(position, start_position) && not basically_zero(position, end_position):
+		if not basically_zero(global_position, start_position) && not basically_zero(global_position, end_position):
 			if player.current_stasis != self:
 				ani.play("idle")
 				reverse_time -= _delta
 				if reverse_time <= 0:
-					position = position.move_toward(start_position, 5 * speed * _delta)
-					if basically_zero(position, start_position):
+					global_position = global_position.move_toward(start_position, 5 * speed * _delta)
+					if basically_zero(global_position, start_position):
 						reverse_time = reverse_time_max
 			pass
 		
@@ -83,7 +83,7 @@ func on_body_entered(area: Area2D):
 	if timer <= 0 && not respawning:
 		if area.is_in_group("Projectile") or area.get_parent().is_in_group("Player"):
 			player.current_stasis = self
-			player.position = position
+			player.global_position = global_position
 			player.collected_objects = player.max_objects
 			if not $"SFX/Stasis Hum".is_playing():
 				$"SFX/Stasis Hum".play()

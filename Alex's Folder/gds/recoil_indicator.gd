@@ -108,7 +108,8 @@ func _process(delta: float) -> void:
 	
 	if !controller:
 		if player.r_calc == player.recoil_calculation_type.from_player:
-			v = (player.get_global_mouse_position() - player.position).normalized()
+			v = (player.get_global_mouse_position() - player.global_position).normalized()
+			#v = (get_tree().root.get_child(0).get_global_mouse_position() - player.position).normalized()
 		elif player.r_calc == player.recoil_calculation_type.from_center_of_screen:
 			v = (get_viewport().get_mouse_position() - Vector2(get_viewport_rect().size.x/2, get_viewport_rect().size.y/2)).normalized()
 			pass
@@ -118,6 +119,7 @@ func _process(delta: float) -> void:
 		pass
 	if v != null:
 		rotation = v.angle() + deg_to_rad(90)
+		print(rad_to_deg(rotation))
 	pass
 
 func rgb_compare(a: Color, b: Color) -> bool:
