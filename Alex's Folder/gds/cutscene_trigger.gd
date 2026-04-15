@@ -56,6 +56,17 @@ func _process(delta: float) -> void:
 				_play()
 			elif not only_when_grounded:
 				_play()
+	elif player_in_trigger && played && always_trigger:
+		if play_on_interact && Input.is_action_just_pressed("interact"):
+			if only_when_grounded && player.is_on_floor():
+				_play()
+			elif not only_when_grounded:
+				_play()
+		'''elif not play_on_interact:
+			if only_when_grounded && player.is_on_floor():
+				_play()
+			elif not only_when_grounded:
+				_play()'''
 		
 	pass
 

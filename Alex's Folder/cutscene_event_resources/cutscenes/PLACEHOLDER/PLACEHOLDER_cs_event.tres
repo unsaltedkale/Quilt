@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="dialouge_cutscene_event" format=3 uid="uid://11j76j2kmtsl"]
+
+[ext_resource type="Resource" uid="uid://b0a7c3gofjk0c" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_dia.tres" id="1_1yard"]
+[ext_resource type="Script" uid="uid://g78pi7crnayb" path="res://Alex's Folder/cutscene_event_resources/event types/dialouge_cs_event.gd" id="1_jr0p7"]
+
+[resource]
+script = ExtResource("1_jr0p7")
+dia = ExtResource("1_1yard")
+metadata/_custom_type_script = "uid://g78pi7crnayb"

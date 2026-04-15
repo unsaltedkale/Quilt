@@ -9,8 +9,14 @@
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_kebsd")]
 position = Vector2(184, -603)
 
+[node name="Player" parent="Req" index="0" unique_id=1296307351]
+position = Vector2(-292, 272)
+
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)
+
+[node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
+position = Vector2(-330, 226)
 
 [node name="VinnieTEST1" parent="." unique_id=467354812 instance=ExtResource("2_swhi7")]
 position = Vector2(62, 75)

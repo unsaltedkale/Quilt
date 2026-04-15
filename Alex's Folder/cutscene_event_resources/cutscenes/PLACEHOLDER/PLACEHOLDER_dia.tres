@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://b0a7c3gofjk0c"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_2seoa"]
+
+[resource]
+script = ExtResource("1_2seoa")
+text = Dictionary[String, String]({
+"0": "%pyra_neutral%PYRA: lol you just got PLACEHOLDERED",
+"1": "%phlo_neutral%PHLO: reblog to totally PLACEHOLDER all of your friends!",
+"2": "%quilt_neutral%QUILT: This is a longer test message because I forgot what my own voice sounds like.",
+"3": "%flow_neutral%FLOW: I am the best character in the game and no one can say otherwise",
+"4": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"
