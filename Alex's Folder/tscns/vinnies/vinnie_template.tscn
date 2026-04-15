@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="8_tm6ij"]
 [ext_resource type="Resource" uid="uid://cshhei7elby56" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_container.tres" id="8_ukjh1"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="9_u68m5"]
-[ext_resource type="Resource" uid="uid://citr64fjyjkp0" path="res://Alex's Folder/music_resources/crypt_2_ebb_OUTRO.tres" id="10_r1lws"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="11_dug4m"]
+[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="11_ukjh1"]
 [ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="12_tm6ij"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="13_tm6ij"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="14_mkgea"]
@@ -73,7 +73,6 @@ position = Vector2(823, -214)
 
 [node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("6_r1lws")]
 position = Vector2(823, -66)
-always_trigger = true
 play_on_interact = true
 only_when_grounded = true
 container = ExtResource("8_ukjh1")
@@ -93,7 +92,7 @@ position = Vector2(-38, -171)
 
 [node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("9_u68m5")]
 position = Vector2(1247, -366)
-track = ExtResource("10_r1lws")
+track = ExtResource("11_ukjh1")
 
 [node name="Zipline" type="Node2D" parent="." unique_id=1757930451]
 position = Vector2(-38, -171)

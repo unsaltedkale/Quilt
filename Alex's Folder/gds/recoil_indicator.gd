@@ -119,7 +119,7 @@ func _process(delta: float) -> void:
 		pass
 	if v != null:
 		rotation = v.angle() + deg_to_rad(90)
-		print(rad_to_deg(rotation))
+		#print(rad_to_deg(rotation))
 	pass
 
 func rgb_compare(a: Color, b: Color) -> bool:
