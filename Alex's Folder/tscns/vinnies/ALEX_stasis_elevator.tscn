@@ -1,0 +1,129 @@
+[gd_scene format=4 uid="uid://d0ucv5xtmtnde"]
+
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_gba8b"]
+[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_vis31"]
+[ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="3_wx3dj"]
+[ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="4_n54cu"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="5_bfchj"]
+[ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="6_vv0p4"]
+[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="7_yr7bl"]
+[ext_resource type="Resource" uid="uid://cshhei7elby56" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_container.tres" id="8_4oq37"]
+[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="9_tk8d2"]
+[ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="10_mwr4t"]
+[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="11_8tdwq"]
+[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="12_a2613"]
+[ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="13_la8tr"]
+[ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="14_0e3tj"]
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="15_rnftl"]
+[ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="16_2kcr2"]
+
+[node name="ALEX_stasis_elevator" type="Node2D" unique_id=467354812]
+
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_gba8b")]
+position = Vector2(350, -263)
+
+[node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
+
+[node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AACAAPT/AAAJAAQAAACAAPP/AAAJAAQAAACAAPL/AAAJAAQAAACAAPH/AAAJAAQAAACAAPD/AAAJAAQAAACAAO//AAAJAAQAAACAAO7/AAAJAAQAAACAAO3/AAAJAAQAAACAAOz/AAAJAAQAAACAAOv/AAAJAAQAAACAAOr/AAAJAAQAAACAAOn/AAAJAAQAAAA=")
+tile_set = ExtResource("2_vis31")
+collision_enabled = false
+
+[node name="Collision" type="TileMapLayer" parent="Tiles" unique_id=982493535 groups=["tilemap"]]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAAAAP//AQAEAAQAAAABAP//AQAFAAQAAAACAP//AQADAAQAAAADAP//AQAEAAQAAAAEAP//AQAFAAQAAAAFAP//AQADAAQAAAAGAP//AQAEAAQAAAAHAP//AQAFAAQAAAD6//v/AQAAAAAAAAD6//z/AQAAAAEAAAD6//3/AQAAAAIAAAD7//v/AQABAAAAAAD7//z/AQABAAEAAAD7//3/AQABAAIAAAD8//v/AQACAAAAAAD8//z/AQACAAEAAAD8//3/AQACAAIAAAD///7/AQAFAAMAAAD/////AQAFAAQAAAD//wAAAQAFAAUAAAAAAP7/AQAEAAMAAAAAAAAAAQAEAAUAAAABAP7/AQAFAAMAAAABAAAAAQAFAAUAAAACAP7/AQADAAMAAAACAAAAAQADAAUAAAADAP7/AQAEAAMAAAADAAAAAQAEAAUAAAAEAP7/AQAFAAMAAAAEAAAAAQAFAAUAAAAFAP7/AQADAAMAAAAFAAAAAQADAAUAAAAGAP7/AQAEAAMAAAAGAAAAAQAEAAUAAAAHAP7/AQAFAAMAAAAHAAAAAQAFAAUAAAAIAP7/AQADAAMAAAAIAP//AQADAAQAAAAIAAAAAQADAAUAAAAJAP7/AQAEAAMAAAAJAP//AQAEAAQAAAAJAAAAAQAEAAUAAAAKAP7/AQAFAAMAAAAKAP//AQAFAAQAAAAKAAAAAQAFAAUAAAALAP7/AQADAAMAAAALAP//AQADAAQAAAALAAAAAQADAAUAAAAMAP7/AQAEAAMAAAAMAP//AQAEAAQAAAAMAAAAAQAEAAUAAAANAP7/AQAFAAMAAAANAP//AQAFAAQAAAANAAAAAQAFAAUAAAAOAP7/AQADAAMAAAAOAP//AQADAAQAAAAOAAAAAQADAAUAAAAPAP7/AQAEAAMAAAAPAP//AQAEAAQAAAAPAAAAAQAEAAUAAAAQAP7/AQAFAAMAAAAQAP//AQAFAAQAAAAQAAAAAQAFAAUAAAARAP7/AQADAAMAAAARAP//AQADAAQAAAARAAAAAQADAAUAAAASAP7/AQAEAAMAAAASAP//AQAEAAQAAAASAAAAAQAEAAUAAAATAP7/AQAGAAMAAAATAP//AQAGAAQAAAATAAAAAQAGAAUAAAD6//7/AQAAAAMAAAD6////AQAAAAQAAAD7//7/AQABAAMAAAD7////AQABAAQAAAD7/wAAAQABAAUAAAD8//7/AQACAAMAAAD8////AQACAAQAAAD8/wAAAQACAAUAAAD9//7/AQADAAMAAAD9////AQADAAQAAAD9/wAAAQADAAUAAAD+//7/AQAEAAMAAAD+////AQAEAAQAAAD+/wAAAQAEAAUAAAD6//j/AQAAAAAAAAD6//n/AQAAAAEAAAD6//r/AQAAAAIAAAD7//j/AQABAAAAAAD7//n/AQABAAEAAAD7//r/AQABAAIAAAD8//j/AQACAAAAAAD8//n/AQACAAEAAAD8//r/AQACAAIAAAD6//X/AQAAAAAAAAD6//b/AQAAAAEAAAD6//f/AQAAAAIAAAD7//X/AQABAAAAAAD7//b/AQABAAEAAAD7//f/AQABAAIAAAD8//X/AQACAAAAAAD8//b/AQACAAEAAAD8//f/AQACAAIAAAD6//L/AQAAAAAAAAD6//P/AQAAAAEAAAD6//T/AQAAAAIAAAD7//L/AQABAAAAAAD7//P/AQABAAEAAAD7//T/AQABAAIAAAD8//L/AQACAAAAAAD8//P/AQACAAEAAAD8//T/AQACAAIAAAD6/+//AQAAAAAAAAD6//D/AQAAAAEAAAD6//H/AQAAAAIAAAD7/+//AQABAAAAAAD7//D/AQABAAEAAAD7//H/AQABAAIAAAD8/+//AQACAAAAAAD8//D/AQACAAEAAAD8//H/AQACAAIAAAD6/+z/AQAAAAAAAAD6/+3/AQAAAAEAAAD6/+7/AQAAAAIAAAD7/+z/AQABAAAAAAD7/+3/AQABAAEAAAD7/+7/AQABAAIAAAD8/+z/AQACAAAAAAD8/+3/AQACAAEAAAD8/+7/AQACAAIAAAAUAP3/AQAOAAIAAAAVAPz/AQAPAAEAAAAVAP3/AQAPAAIAAAAWAPv/AQAQAAAAAAAWAPz/AQAQAAEAAAAWAP3/AQAQAAIAAAAXAPv/AQARAAAAAAAXAPz/AQARAAEAAAAXAP3/AQARAAIAAAAYAPv/AQASAAAAAAAYAPz/AQASAAEAAAAYAP3/AQASAAIAAAAZAPv/AQASAAAAAAAZAPz/AQASAAEAAAAZAP3/AQASAAIAAAAaAPv/AQANAAkAAAAaAPz/AQANAAoAAAAaAP3/AQANAAsAAAAbAPr/AQAOAAgAAAAbAPv/AQAOAAkAAAAbAPz/AQAOAAoAAAAbAP3/AQAOAAsAAAAcAPn/AQAPAAcAAAAcAPr/AQAPAAgAAAAcAPv/AQAPAAkAAAAcAPz/AQAPAAoAAAAcAP3/AQAPAAsAAAAdAPn/AQAQAAcAAAAdAPr/AQAQAAgAAAAdAPv/AQAQAAkAAAAdAPz/AQAQAAoAAAAdAP3/AQAQAAsAAAAeAPn/AQARAAcAAAAeAPr/AQARAAgAAAAeAPv/AQARAAkAAAAeAPz/AQARAAoAAAAeAP3/AQARAAsAAAAfAPn/AQASAAcAAAAfAPr/AQASAAgAAAAfAPv/AQASAAkAAAAfAPz/AQASAAoAAAAfAP3/AQASAAsAAAAgAPn/AQANAA8AAAAgAPr/AQANABAAAAAgAPv/AQANABEAAAAhAPn/AQAOAA8AAAAhAPr/AQAOABAAAAAhAPv/AQAOABEAAAAiAPj/AQAPAA4AAAAiAPn/AQAPAA8AAAAiAPr/AQAPABAAAAAiAPv/AQAPABEAAAAjAPj/AQAQAA4AAAAjAPn/AQAQAA8AAAAjAPr/AQAQABAAAAAjAPv/AQAQABEAAAAkAPj/AQARAA4AAAAkAPn/AQARAA8AAAAkAPr/AQARABAAAAAkAPv/AQARABEAAAAlAPj/AQASAA4AAAAlAPn/AQASAA8AAAAlAPr/AQASABAAAAAlAPv/AQASABEAAAAUAP7/AQAHAAMAAAAUAP//AQAHAAQAAAAUAAAAAQAHAAUAAAAVAP7/AQAIAAMAAAAVAP//AQAIAAQAAAAVAAAAAQAIAAUAAAATAP3/AQANAAIAAAAUAPz/AQAOAAEAAAAVAPv/AQAPAAAAAAAWAP7/AQAQAAMAAAAWAP//AQAQAAQAAAAWAAAAAQAQAAUAAAAXAP7/AQARAAMAAAAXAP//AQARAAQAAAAXAAAAAQARAAUAAAAYAP7/AQASAAMAAAAYAP//AQASAAQAAAAYAAAAAQASAAUAAAAmAPj/AQADAAMAAAAmAPn/AQADAAQAAAAmAPr/AQADAAUAAAAnAPj/AQAEAAMAAAAnAPn/AQAEAAQAAAAnAPr/AQAEAAUAAAAoAPj/AQAFAAMAAAAoAPn/AQAFAAQAAAAoAPr/AQAFAAUAAAApAPj/AQADAAMAAAApAPn/AQADAAQAAAApAPr/AQADAAUAAAAqAPj/AQAEAAMAAAAqAPn/AQAEAAQAAAAqAPr/AQAEAAUAAAArAPr/AQAFAAUAAAAsAPr/AQADAAUAAAAtAPr/AQAEAAUAAAAuAPr/AQAFAAUAAAAvAPj/AQADAAMAAAAvAPn/AQADAAQAAAAvAPr/AQADAAUAAAAwAPj/AQAEAAMAAAAwAPn/AQAEAAQAAAAwAPr/AQAEAAUAAAAxAPj/AQAFAAMAAAAxAPn/AQAFAAQAAAAxAPr/AQAFAAUAAAArAPn/AQADAAQAAAAsAPn/AQADAAQAAAAtAPn/AQAEAAQAAAAuAPn/AQAFAAQAAAA=")
+tile_set = ExtResource("2_vis31")
+
+[node name="Damgage_Layer" type="TileMapLayer" parent="Tiles" unique_id=770485730 groups=["Damage_Layer"]]
+scale = Vector2(4, 4)
+tile_set = ExtResource("2_vis31")
+
+[node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
+position = Vector2(-38, -171)
+
+[node name="Conductor_Platform" parent="Conductor_Platforms" unique_id=1167135782 instance=ExtResource("3_wx3dj")]
+position = Vector2(474, -133)
+
+[node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
+position = Vector2(-38, -171)
+
+[node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("4_n54cu")]
+position = Vector2(482, -268)
+
+[node name="Stars" type="Node2D" parent="." unique_id=1803044504]
+position = Vector2(-38, -171)
+
+[node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("5_bfchj")]
+position = Vector2(652, -300)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
+position = Vector2(-38, -171)
+
+[node name="InteractIndicator" parent="Cutscene Triggers" unique_id=1238723575 instance=ExtResource("6_vv0p4")]
+position = Vector2(823, -214)
+
+[node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("7_yr7bl")]
+position = Vector2(823, -66)
+play_on_interact = true
+only_when_grounded = true
+container = ExtResource("8_4oq37")
+indicator = NodePath("../InteractIndicator")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1296886211]
+position = Vector2(-38, -171)
+
+[node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
+position = Vector2(-38, -171)
+
+[node name="Stasis" parent="Stasis Chamber" unique_id=1921201016 instance=ExtResource("9_tk8d2")]
+position = Vector2(987, -261)
+
+[node name="Music Change Triggers" type="Node2D" parent="." unique_id=852063455]
+position = Vector2(-38, -171)
+
+[node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("10_mwr4t")]
+position = Vector2(1247, -366)
+track = ExtResource("11_8tdwq")
+
+[node name="Zipline" type="Node2D" parent="." unique_id=1757930451]
+position = Vector2(-38, -171)
+
+[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("12_a2613")]
+position = Vector2(995, -485)
+
+[node name="One-Way Platforms" type="Node2D" parent="." unique_id=1306004910]
+position = Vector2(-38, -171)
+
+[node name="One_Way_Platform" parent="One-Way Platforms" unique_id=113338548 instance=ExtResource("13_la8tr")]
+position = Vector2(160, -339)
+
+[node name="Disappearing Platforms" type="Node2D" parent="." unique_id=899769112]
+position = Vector2(-38, -171)
+
+[node name="Disappearing_Platform" parent="Disappearing Platforms" unique_id=607645916 instance=ExtResource("14_0e3tj")]
+position = Vector2(-65, -32)
+
+[node name="Particles" type="Node2D" parent="." unique_id=1086204351]
+position = Vector2(-38, -171)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Particles" unique_id=668623674]
+position = Vector2(183, -1492)
+amount = 30
+texture = ExtResource("15_rnftl")
+lifetime = 6.18
+preprocess = 10.0
+speed_scale = 0.45
+emission_shape = 3
+emission_rect_extents = Vector2(1200, 600)
+gravity = Vector2(100, 350)
+scale_amount_min = 8.0
+scale_amount_max = 16.0
+color = Color(0.4509804, 0.39215687, 0.38431373, 1)
+
+[node name="Resetpoints" type="Node2D" parent="." unique_id=1227821716]
+position = Vector2(-38, -171)
+
+[node name="ResetPoint" parent="Resetpoints" unique_id=126288163 instance=ExtResource("16_2kcr2")]
+position = Vector2(286, -145)

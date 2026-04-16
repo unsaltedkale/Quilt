@@ -1,18 +1,13 @@
 extends RigidBody2D
 
 @onready var timer: Timer = $Timer
-@onready var player: CharacterBody2D = $"../Player"
+@onready var player: CharacterBody2D
 @onready var start_position
 @onready var start_rotation
 
 
 
 func _ready() -> void:
-	#if get_tree().root.get_child(0).find_child("Req") != null:
-		#player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
-		#print(player)
-	#elif get_tree().root.find_child("Player") != null:
-		#player = $"../Player"
 	
 	self.gravity_scale = 0
 	start_position = global_position
@@ -22,14 +17,14 @@ func _ready() -> void:
 		player.player_death.connect(reset_platforms)
 
 func _process(_delta: float) -> void:
+	if player == null:
+		if get_tree().root.get_child(0).find_child("Req") != null:
+			player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+			print(player)
+		elif get_tree().root.find_child("Player") != null:
+			player = $"../Player"
+			
 	pass
-	
-	#if player == null:
-		#if get_tree().root.get_child(0).find_child("Req") != null:
-			#player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
-			#print(player)
-		#elif get_tree().root.find_child("Player") != null:
-			#player = $"../Player"
 			
 func _on_timer_area_body_entered(body: Node2D) -> void:
 		if body.is_in_group("Player"):
