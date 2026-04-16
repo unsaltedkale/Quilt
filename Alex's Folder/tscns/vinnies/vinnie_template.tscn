@@ -46,6 +46,21 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAArAPj/AQAAAAcAAAArAPn/AQAAAAgAAAAsAPj/AQAAAAcAAAAsAPn/AQAAAAgAAAAtAPj/AQAAAAcAAAAtAPn/AQAAAAgAAAAuAPj/AQAAAAcAAAAuAPn/AQAAAAgAAAA=")
 tile_set = ExtResource("2_mkgea")
 
+[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAqAAoAAAAUAAAAAAAqAAkAAAAUAAAAAAAqAAgAAAAUAAAAAAAqAAcAAAAUAAAAAAAqAAYAAAAUAAAAAAAqAAUAAAAUAAAAAAAMAPv/AQAXAAoAAAAMAPz/AQAXAAsAAAAMAP3/AQAXAAwAAAAMAPj/AQAXAAoAAAAMAPn/AQAXAAsAAAAMAPr/AQAXAAwAAAA=")
+tile_set = ExtResource("2_mkgea")
+
+[node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["tilemap"]]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AABmAB0AAAAAAAAAAABmAB4AAAAAAAAAAABmAB8AAAAAAAAAAAAQAPv/AQADAB0AAAAQAPz/AQADAB4AAAAQAP3/AQADAB8AAAAQAPj/AQADAB0AAAAQAPn/AQADAB4AAAAQAPr/AQADAB8AAAA=")
+tile_set = ExtResource("2_mkgea")
+
+[node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AABPACMAAAATAAUAAABPACQAAAATAAYAAABPACUAAAATAAYAAABPACYAAAATAAYAAAD9//f/AQADAAoAAAD9//j/AQADAAsAAAD9//n/AQADAAwAAAADAPP/AQADAAoAAFACAPP/AQADAAsAAFABAPP/AQADAAwAAFA=")
+tile_set = ExtResource("2_mkgea")
+
 [node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
 position = Vector2(-38, -171)
 

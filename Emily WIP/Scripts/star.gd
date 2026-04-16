@@ -27,9 +27,12 @@ func _process(delta: float) -> void:
 
 func _on_STAR_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") && find_child("Sprite2D").texture == active_sprite:
-		print("collected a star")
-		if body.collected_objects < body.max_objects:
-			body.collected_objects += 1
-		find_child("Sprite2D").texture = inactive_sprite
-		find_child("CollisionShape2D").set_deferred("disabled", true)
+		if body.collected_objects == 0:
+			print("collected a star")
+			if body.collected_objects < body.max_objects:
+				body.collected_objects += 1
+			find_child("Sprite2D").texture = inactive_sprite
+			find_child("CollisionShape2D").set_deferred("disabled", true)
+		else:
+			print("skipped")
 		

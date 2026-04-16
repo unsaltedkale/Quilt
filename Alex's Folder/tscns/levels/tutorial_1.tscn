@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://buwo76jirgxpw" path="res://Art/Crypt Escape Tablet(1).png" id="21_c3mfk"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="23_sp84p"]
 [ext_resource type="Script" uid="uid://kb0fkahyduml" path="res://Alex's Folder/gds/test_path_follower.gd" id="24_c6e1v"]
-[ext_resource type="Script" path="res://Andy's Path/Scripts/VolumeManager.gd" id="24_sp84p"]
+[ext_resource type="Script" uid="uid://qw7u7t1vs07f" path="res://Andy's Path/Scripts/VolumeManager.gd" id="24_sp84p"]
 [ext_resource type="Resource" uid="uid://b8jvwjtaobo0a" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/crypt_cave_enter_container.tres" id="24_xo4aa"]
 [ext_resource type="Resource" uid="uid://dytjfs6d2xqxv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/crypt_meeting_quilt_container.tres" id="25_vl2pu"]
 [ext_resource type="Resource" uid="uid://d24g4wdbk4vrl" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/exit_crypt_level/exit_crypt_level_container.tres" id="26_uv8gf"]
@@ -2434,7 +2434,7 @@ frame_progress = 1.0
 
 [node name="Player" parent="." unique_id=982598402 instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(71136, -19841)
+position = Vector2(39290, -851)
 
 [node name="recoil_indicator" parent="Player" index="0" unique_id=1283703100]
 visible = false
@@ -3246,7 +3246,7 @@ position = Vector2(57874.992, -14709.998)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR9" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR9" index="2" unique_id=1630730373]
 bar_delete = 1.0
 beat_delete = 1.5
 repeat_pattern = true
@@ -3258,7 +3258,7 @@ position = Vector2(58968, -15549.002)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR74" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR74" index="2" unique_id=1630730373]
 beat_appear = 1.5
 bar_delete = 1.0
 beat_delete = 2.0
@@ -3271,7 +3271,7 @@ position = Vector2(63896.996, -15253.002)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR75" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR75" index="2" unique_id=1630730373]
 bar_delete = 2.0
 beat_delete = 1.0
 repeat_pattern = true
@@ -3282,7 +3282,7 @@ position = Vector2(67136, -15300)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR76" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR76" index="2" unique_id=1630730373]
 bar_delete = 2.0
 beat_delete = 1.0
 repeat_pattern = true
@@ -3293,7 +3293,7 @@ position = Vector2(67968.99, -15300)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR77" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR77" index="2" unique_id=1630730373]
 bar_delete = 2.0
 beat_delete = 1.0
 repeat_pattern = true
@@ -3304,7 +3304,7 @@ position = Vector2(68884, -15300)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR78" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR78" index="2" unique_id=1630730373]
 bar_delete = 2.0
 beat_delete = 1.0
 repeat_pattern = true
@@ -3315,7 +3315,7 @@ position = Vector2(69747, -15300)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR79" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR79" index="2" unique_id=1630730373]
 bar_appear = 2.0
 bar_delete = 1.0
 beat_delete = 1.0
@@ -3327,7 +3327,7 @@ position = Vector2(70555, -15300)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR80" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR80" index="2" unique_id=1630730373]
 position = Vector2(1.0543242, -5.557734)
 bar_appear = 2.0
 bar_delete = 1.0
@@ -3340,7 +3340,7 @@ position = Vector2(71408, -15300)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR81" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR81" index="2" unique_id=1630730373]
 bar_appear = 2.0
 bar_delete = 1.0
 beat_delete = 1.0
@@ -3352,7 +3352,7 @@ position = Vector2(78725, -19583.998)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR82" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR82" index="2" unique_id=1630730373]
 beat_appear = 4.0
 bar_delete = 3.0
 beat_delete = 1.0
@@ -3372,7 +3372,7 @@ position = Vector2(88767, -18928)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR85" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR85" index="2" unique_id=1630730373]
 bar_appear = 4.0
 beat_appear = 4.75
 
@@ -3381,7 +3381,7 @@ position = Vector2(89276, -19209.996)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR86" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR86" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR87" parent="Stars" unique_id=269948659 instance=ExtResource("28_frm60")]
@@ -3389,7 +3389,7 @@ position = Vector2(90404.99, -19699)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR87" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR87" index="2" unique_id=1630730373]
 bar_appear = 4.0
 beat_appear = 4.75
 
@@ -3398,7 +3398,7 @@ position = Vector2(90950.99, -19986)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR88" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR88" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR89" parent="Stars" unique_id=1849999804 instance=ExtResource("28_frm60")]
@@ -3406,7 +3406,7 @@ position = Vector2(91899, -20379)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR89" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR89" index="2" unique_id=1630730373]
 bar_appear = 4.0
 beat_appear = 4.75
 
@@ -3415,7 +3415,7 @@ position = Vector2(92445, -20666)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR90" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR90" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR91" parent="Stars" unique_id=188477830 instance=ExtResource("28_frm60")]
@@ -3423,7 +3423,7 @@ position = Vector2(100374, -21938)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR91" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR91" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR92" parent="Stars" unique_id=279898078 instance=ExtResource("28_frm60")]
@@ -3431,7 +3431,7 @@ position = Vector2(98768, -22507.994)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR92" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR92" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR93" parent="Stars" unique_id=1316577977 instance=ExtResource("28_frm60")]
@@ -3439,7 +3439,7 @@ position = Vector2(100324, -22983.996)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR93" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR93" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR94" parent="Stars" unique_id=207692865 instance=ExtResource("28_frm60")]
@@ -3447,7 +3447,7 @@ position = Vector2(98749, -23503)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR94" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR94" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR95" parent="Stars" unique_id=1919478169 instance=ExtResource("28_frm60")]
@@ -3455,7 +3455,7 @@ position = Vector2(100324, -24001)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR95" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR95" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR97" parent="Stars" unique_id=1887083039 instance=ExtResource("28_frm60")]
@@ -3463,7 +3463,7 @@ position = Vector2(100316, -24615.992)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR97" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR97" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR99" parent="Stars" unique_id=1483505367 instance=ExtResource("28_frm60")]
@@ -3471,7 +3471,7 @@ position = Vector2(100324, -26021.996)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR99" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR99" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR101" parent="Stars" unique_id=1351883366 instance=ExtResource("28_frm60")]
@@ -3479,7 +3479,7 @@ position = Vector2(100316, -24309.996)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR101" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR101" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR96" parent="Stars" unique_id=1838879398 instance=ExtResource("28_frm60")]
@@ -3487,7 +3487,7 @@ position = Vector2(98748, -25001)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR96" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR96" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR98" parent="Stars" unique_id=791185961 instance=ExtResource("28_frm60")]
@@ -3495,7 +3495,7 @@ position = Vector2(98740, -25608.996)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR98" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR98" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR102" parent="Stars" unique_id=1916830932 instance=ExtResource("28_frm60")]
@@ -3503,7 +3503,7 @@ position = Vector2(98740, -25315.998)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR102" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR102" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR100" parent="Stars" unique_id=1196521755 instance=ExtResource("28_frm60")]
@@ -3511,7 +3511,7 @@ position = Vector2(98749, -26629)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR100" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR100" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR103" parent="Stars" unique_id=1638777134 instance=ExtResource("28_frm60")]
@@ -3519,7 +3519,7 @@ position = Vector2(100324, -27182)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR103" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR103" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR104" parent="Stars" unique_id=75082589 instance=ExtResource("28_frm60")]
@@ -3527,7 +3527,7 @@ position = Vector2(100316, -27796.992)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR104" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR104" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR105" parent="Stars" unique_id=929227886 instance=ExtResource("28_frm60")]
@@ -3535,7 +3535,7 @@ position = Vector2(100324, -29135.996)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR105" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR105" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR106" parent="Stars" unique_id=1900246282 instance=ExtResource("28_frm60")]
@@ -3543,7 +3543,7 @@ position = Vector2(100316, -27490.996)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR106" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR106" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR107" parent="Stars" unique_id=212988750 instance=ExtResource("28_frm60")]
@@ -3551,7 +3551,7 @@ position = Vector2(98748, -28182)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR107" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR107" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR108" parent="Stars" unique_id=613417760 instance=ExtResource("28_frm60")]
@@ -3559,7 +3559,7 @@ position = Vector2(98740, -28789.996)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR108" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR108" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="STAR109" parent="Stars" unique_id=1690284625 instance=ExtResource("28_frm60")]
@@ -3567,7 +3567,7 @@ position = Vector2(98740, -28496.998)
 respawns = true
 respawn_timer_max = 1
 
-[node name="MakeItMusical" parent="Stars/STAR109" index="2"]
+[node name="MakeItMusical" parent="Stars/STAR109" index="2" unique_id=1630730373]
 bar_appear = 5.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1724071896]
