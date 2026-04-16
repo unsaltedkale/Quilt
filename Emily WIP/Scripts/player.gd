@@ -71,4 +71,9 @@ func spawn_player(spawn_point: Vector2):
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 	health = max_health  
-	
+
+
+
+
+func change_player(player: int) -> void:
+	pass

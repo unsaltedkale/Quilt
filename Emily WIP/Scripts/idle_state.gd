@@ -5,13 +5,13 @@ func idle_quilt():
 	if player.is_phlo:
 		an.play("phlo_idle")
 	else:
-		if an.scale.y == 2:
+		if player.quilt_crouch.disabled == false:
 			an.play("crouch_idle")
-		if an.scale.y == 1:
+		else:
 			an.play("idle")
 
 func Enter(previous_state: State):
-	idle_quilt()
+	#idle_quilt()
 	_recoil_recharge_check()
 
 func Exit():
