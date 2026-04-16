@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://b2onlr5ggkomh" path="res://Art/recoil indicator.png" id="2_icvrh"]
 [ext_resource type="Script" uid="uid://n0gaiwt35ltf" path="res://Alex's Folder/gds/recoil_indicator.gd" id="3_jgwx7"]
+[ext_resource type="Texture2D" uid="uid://dx46xnonryujd" path="res://Art/Quilt/Quilt Animation Crouch.png" id="5_8lyhf"]
 [ext_resource type="Texture2D" uid="uid://c4js0vvukf2gu" path="res://Art/Quilt/Quilt Introduction Cutscene-8.png.png" id="5_n7wni"]
 [ext_resource type="Texture2D" uid="uid://qrhi63b343d6" path="res://Art/Quilt/Quilt Introduction Cutscene.png" id="6_d0p7j"]
 [ext_resource type="Texture2D" uid="uid://dlmtm1evbtdwv" path="res://Art/Quilt/Quilt Introduction Cutscene(1).png" id="7_icvrh"]
@@ -53,6 +54,14 @@ shader = ExtResource("2_3uy0y")
 shader_parameter/onoff = 0
 shader_parameter/is_phlo = false
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h3iu"]
+atlas = ExtResource("5_8lyhf")
+region = Rect2(0, 0, 25, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8i7r"]
+atlas = ExtResource("5_8lyhf")
+region = Rect2(25, 0, 25, 44)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_17h1f"]
 atlas = ExtResource("9_7a16b")
 region = Rect2(0, 0, 32, 46)
@@ -65,11 +74,11 @@ region = Rect2(0, 46, 32, 46)
 atlas = ExtResource("9_7a16b")
 region = Rect2(0, 92, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kndcx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_aom15"]
 atlas = ExtResource("9_ltfw8")
 region = Rect2(0, 0, 19, 45)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ueivr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7so64"]
 atlas = ExtResource("9_ltfw8")
 region = Rect2(0, 45, 19, 45)
 
@@ -769,6 +778,17 @@ region = Rect2(0, 736, 29, 46)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8h3iu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8i7r")
+}],
+"loop": true,
+"name": &"crouch_idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_17h1f")
 }, {
 "duration": 1.0,
@@ -783,14 +803,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kndcx")
+"texture": SubResource("AtlasTexture_aom15")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ueivr")
+"texture": SubResource("AtlasTexture_7so64")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 2.5
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,

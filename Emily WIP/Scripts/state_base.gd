@@ -59,12 +59,18 @@ func _physics_process(_delta) -> void:
 func _crouch_control():
 	if Input.is_action_just_pressed("crouch"):
 		player.scale.y = 4 * 0.5
+		an.scale.y = 2
+		an.position = Vector2(0,-20)
 	if Input.is_action_just_released("crouch"):
 		player.scale.y = 4
+		an.scale.y = 1
+		an.position = Vector2(0,0)
 	pass
 
 func _force_leave_crouch():
 	player.scale.y = 4
+	an.scale.y = 1
+	an.position = Vector2(0,0)
 
 func _recoil_recharge_check():
 	if player.is_on_floor():

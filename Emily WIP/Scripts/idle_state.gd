@@ -5,7 +5,10 @@ func idle_quilt():
 	if player.is_phlo:
 		an.play("phlo_idle")
 	else:
-		an.play("idle")
+		if an.scale.y == 2:
+			an.play("crouch_idle")
+		if an.scale.y == 1:
+			an.play("idle")
 
 func Enter(previous_state: State):
 	idle_quilt()

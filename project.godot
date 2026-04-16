@@ -22,6 +22,10 @@ boot_splash/use_filter=false
 boot_splash/image="uid://b6pjq2yeuo7ny"
 config/icon="uid://b2onlr5ggkomh"
 
+[audio]
+
+buses/default_bus_layout="uid://dg0vcx3jnieg"
+
 [display]
 
 window/size/viewport_width=1920

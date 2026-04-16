@@ -20,7 +20,7 @@
 [node name="VinnieTemplate" type="Node2D" unique_id=467354812]
 
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("2_lcli8")]
-position = Vector2(-21, -63)
+position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -155)
