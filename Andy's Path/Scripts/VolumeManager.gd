@@ -1,21 +1,8 @@
 extends Node
 
-var SFXsliderValue
+@onready var SoundFXSlider = $"../CanvasLayer/DialogueUi/UI/Settings/VolumeSettings/SoundFXSlider"
+@onready var busIndex = AudioServer.get_bus_index("SFX Master")
 
-var SFXSlider
-
-func _ready() -> void:
-	SFXSlider = $"UI/Settings/Volume Settings/Sound FX Slider"
-	
 func _process(delta: float) -> void:
-	pass
-	
-	#broken right now
-	##SFXsliderValue = SFXSlider.Value
-	#
-	#$Player/SFX/Land.VolumedB = SFXSlider.value
-	#$"Player/SFX/Take Damage".VolumedB = SFXSlider.value
-	#$Player/SFX/Footsteps.VolumedB = SFXSlider.value
-	#$"Player/SFX/Shoot Projectile".VolumedB = SFXSlider.value
-	#$"Player/SFX/Take Damage (Phlo)".VolumedB = SFXSlider.value
-	#$Player/SFX/Jump.VolumedB = SFXSlider.value"
+	#print(SoundFXSlider.value)
+	AudioServer.set_bus_volume_db(busIndex, SoundFXSlider.value)

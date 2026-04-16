@@ -884,7 +884,7 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 256
 text = "SETTINGS"
 
-[node name="Main Menu Return" type="Button" parent="UI/Settings" unique_id=438751751]
+[node name="MainMenuReturn" type="Button" parent="UI/Settings" unique_id=438751751]
 layout_mode = 0
 offset_left = 65.0
 offset_top = 920.0
@@ -895,12 +895,12 @@ theme_override_font_sizes/font_size = 56
 text = "MAIN MENU"
 script = ExtResource("21_ikb8c")
 
-[node name="Volume Settings" type="Control" parent="UI/Settings" unique_id=1605998030]
+[node name="VolumeSettings" type="Control" parent="UI/Settings" unique_id=1605998030]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="General Volume" type="HSlider" parent="UI/Settings/Volume Settings" unique_id=685647727]
+[node name="GeneralVolume" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=685647727]
 layout_mode = 0
 offset_left = 1253.0
 offset_top = 450.0
@@ -911,10 +911,10 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = -80.0
+min_value = -40.0
 max_value = 10.0
 
-[node name="Label" type="Label" parent="UI/Settings/Volume Settings/General Volume" unique_id=197192298]
+[node name="Label" type="Label" parent="UI/Settings/VolumeSettings/GeneralVolume" unique_id=197192298]
 layout_mode = 0
 offset_left = -69.8974
 offset_top = 17.319952
@@ -925,7 +925,7 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 13
 text = "General"
 
-[node name="Dialogue Slider" type="HSlider" parent="UI/Settings/Volume Settings" unique_id=1979577147]
+[node name="DialogueSlider" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=1979577147]
 layout_mode = 0
 offset_left = 1253.0
 offset_top = 517.0
@@ -936,10 +936,10 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = -80.0
+min_value = -40.0
 max_value = 10.0
 
-[node name="Label" type="Label" parent="UI/Settings/Volume Settings/Dialogue Slider" unique_id=446566888]
+[node name="Label" type="Label" parent="UI/Settings/VolumeSettings/DialogueSlider" unique_id=446566888]
 layout_mode = 0
 offset_left = -68.0
 offset_top = 19.0
@@ -950,7 +950,7 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 13
 text = "Dialogue"
 
-[node name="Sound FX Slider" type="HSlider" parent="UI/Settings/Volume Settings" unique_id=1598915664]
+[node name="SoundFXSlider" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=1598915664]
 layout_mode = 0
 offset_left = 1253.0
 offset_top = 584.0
@@ -961,10 +961,10 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = -80.0
+min_value = -40.0
 max_value = 10.0
 
-[node name="Label" type="Label" parent="UI/Settings/Volume Settings/Sound FX Slider" unique_id=1683998450]
+[node name="Label" type="Label" parent="UI/Settings/VolumeSettings/SoundFXSlider" unique_id=1683998450]
 layout_mode = 0
 offset_left = -68.0
 offset_top = 19.0
@@ -975,7 +975,7 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 13
 text = "Sound FX"
 
-[node name="Dialogue Echo Slider" type="HSlider" parent="UI/Settings/Volume Settings" unique_id=1372367874]
+[node name="DialogueEchoSlider" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=1372367874]
 layout_mode = 0
 offset_left = 1253.0
 offset_top = 650.0
@@ -986,10 +986,10 @@ theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = -80.0
+min_value = -40.0
 max_value = 10.0
 
-[node name="Label" type="Label" parent="UI/Settings/Volume Settings/Dialogue Echo Slider" unique_id=1362517421]
+[node name="Label" type="Label" parent="UI/Settings/VolumeSettings/DialogueEchoSlider" unique_id=1362517421]
 layout_mode = 0
 offset_left = -68.0
 offset_top = 19.0
@@ -1000,7 +1000,7 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 9
 text = "Dialogue Echo"
 
-[node name="Volume Settings Text" type="Label" parent="UI/Settings/Volume Settings" unique_id=2076297339]
+[node name="VolumeSettingsText" type="Label" parent="UI/Settings/VolumeSettings" unique_id=2076297339]
 layout_mode = 0
 offset_left = 1214.0
 offset_top = 380.0
@@ -1010,7 +1010,7 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 60
 text = "Volume Settings"
 
-[node name="General Settings Text" type="Label" parent="UI/Settings" unique_id=1308813363]
+[node name="GeneralSettingsText" type="Label" parent="UI/Settings" unique_id=1308813363]
 layout_mode = 0
 offset_left = 162.0
 offset_top = 380.0
@@ -1021,4 +1021,4 @@ theme_override_font_sizes/font_size = 60
 text = "General Settings"
 
 [connection signal="pressed" from="UI/DialogueScreen/Button" to="UI/DialogueScreen/Button" method="_on_pressed"]
-[connection signal="pressed" from="UI/Settings/Main Menu Return" to="UI/Settings/Main Menu Return" method="_on_pressed"]
+[connection signal="pressed" from="UI/Settings/MainMenuReturn" to="UI/Settings/MainMenuReturn" method="_on_pressed"]

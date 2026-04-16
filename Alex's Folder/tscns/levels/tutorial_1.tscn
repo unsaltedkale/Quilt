@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://buwo76jirgxpw" path="res://Art/Crypt Escape Tablet(1).png" id="21_c3mfk"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="23_sp84p"]
 [ext_resource type="Script" uid="uid://kb0fkahyduml" path="res://Alex's Folder/gds/test_path_follower.gd" id="24_c6e1v"]
-[ext_resource type="Script" path="res://Andy's Path/Scripts/VolumeManager.gd" id="24_sp84p"]
+[ext_resource type="Script" uid="uid://qw7u7t1vs07f" path="res://Andy's Path/Scripts/VolumeManager.gd" id="24_sp84p"]
 [ext_resource type="Resource" uid="uid://b8jvwjtaobo0a" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/crypt_cave_enter_container.tres" id="24_xo4aa"]
 [ext_resource type="Resource" uid="uid://dytjfs6d2xqxv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/crypt_meeting_quilt_container.tres" id="25_vl2pu"]
 [ext_resource type="Resource" uid="uid://d24g4wdbk4vrl" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/exit_crypt_level/exit_crypt_level_container.tres" id="26_uv8gf"]
@@ -2439,9 +2439,6 @@ position = Vector2(71136, -19841)
 [node name="recoil_indicator" parent="Player" index="0" unique_id=1283703100]
 visible = false
 
-[node name="SFX" parent="Player" index="7" unique_id=577166608]
-script = ExtResource("24_sp84p")
-
 [node name="Path2D" type="Path2D" parent="." unique_id=2072758238]
 position = Vector2(35400, 5001)
 curve = SubResource("Curve2D_xu5pi")
@@ -3749,6 +3746,13 @@ scale = Vector2(1.67, 1.23)
 [node name="One_Way_Platform4" parent="." unique_id=1387573209 instance=ExtResource("50_sp84p")]
 position = Vector2(44113.996, -11621.001)
 scale = Vector2(4.02, 3.729)
+
+[node name="SFXManager" type="Control" parent="." unique_id=1560166507]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("24_sp84p")
 
 [connection signal="finished" from="AudioStreamPlayer" to="Conductor" method="_on_audio_stream_player_finished"]
 
