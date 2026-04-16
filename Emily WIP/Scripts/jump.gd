@@ -5,12 +5,11 @@ var timer : float = 7.0
 signal jump_sound()
 
 func quilt_jump():
-	if player.is_on_floor():
-		player.velocity.y = PLAYER_DATA.jump_vel
-		if player.is_phlo:
-			an.play("phlo_jump")
-		else:
-			an.play("jump")
+	player.velocity.y = PLAYER_DATA.jump_vel
+	if player.is_phlo:
+		an.play("phlo_jump")
+	else:
+		an.play("jump")
 
 func Enter(previous_state: State):
 	_recoil_recharge_check()

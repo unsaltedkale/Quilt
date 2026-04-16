@@ -58,11 +58,13 @@ func _physics_process(_delta) -> void:
 
 func _crouch_control():
 	if Input.is_action_just_pressed("crouch"):
-		player.scale.y = 4 * 0.5
-		an.scale.y = 2
-		an.position = Vector2(0,-20)
+		player.quilt_crouch.disabled = false
+		player.quilt_collider.disabled = true
+		an.scale.y = 0.7
+		an.position = Vector2(0,6)
 	if Input.is_action_just_released("crouch"):
-		player.scale.y = 4
+		player.quilt_collider.disabled = false
+		player.quilt_crouch.disabled = true
 		an.scale.y = 1
 		an.position = Vector2(0,0)
 	pass
