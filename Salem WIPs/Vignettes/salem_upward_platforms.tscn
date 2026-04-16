@@ -1,0 +1,96 @@
+[gd_scene format=4 uid="uid://ddq1uf03ycfvq"]
+
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_2lmem"]
+[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_d85ek"]
+[ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="4_imvtg"]
+[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="9_3fdfb"]
+[ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="9_out4q"]
+[ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="10_xf1f3"]
+[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="11_7busn"]
+[ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="13_6d8hj"]
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="15_ajaea"]
+
+[node name="VinnieTemplate" type="Node2D" unique_id=467354812]
+
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_2lmem")]
+position = Vector2(233, -323)
+
+[node name="Player" parent="Req" index="0" unique_id=1296307351]
+position = Vector2(107, -155)
+
+[node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
+visible = false
+
+[node name="Particles" type="Node2D" parent="." unique_id=1086204351]
+visible = false
+position = Vector2(-38, -171)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Particles" unique_id=668623674]
+position = Vector2(183, -1492)
+amount = 30
+texture = ExtResource("15_ajaea")
+lifetime = 6.18
+preprocess = 10.0
+speed_scale = 0.45
+emission_shape = 3
+emission_rect_extents = Vector2(1200, 600)
+gravity = Vector2(100, 350)
+scale_amount_min = 8.0
+scale_amount_max = 16.0
+color = Color(0.4509804, 0.39215687, 0.38431373, 1)
+
+[node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
+
+[node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AACAAPT/AAAJAAQAAACAAPP/AAAJAAQAAACAAPL/AAAJAAQAAACAAPH/AAAJAAQAAACAAPD/AAAJAAQAAACAAO//AAAJAAQAAACAAO7/AAAJAAQAAACAAO3/AAAJAAQAAACAAOz/AAAJAAQAAACAAOv/AAAJAAQAAACAAOr/AAAJAAQAAACAAOn/AAAJAAQAAAA=")
+tile_set = ExtResource("2_d85ek")
+collision_enabled = false
+
+[node name="Collision" type="TileMapLayer" parent="Tiles" unique_id=982493535 groups=["tilemap"]]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAAAAAAAAQADAAMAAAAAAAEAAQADAAQAAAAAAAIAAQADAAUAAAABAAAAAQAEAAMAAAABAAEAAQAEAAQAAAABAAIAAQAEAAUAAAACAAAAAQAFAAMAAAACAAEAAQAFAAQAAAACAAIAAQAFAAUAAAADAAAAAQADAAMAAAADAAEAAQADAAQAAAADAAIAAQADAAUAAAAEAAAAAQAEAAMAAAAEAAEAAQAEAAQAAAAEAAIAAQAEAAUAAAAFAAAAAQAFAAMAAAAFAAEAAQAFAAQAAAAFAAIAAQAFAAUAAAAGAAAAAQADAAMAAAAGAAEAAQADAAQAAAAGAAIAAQADAAUAAAAHAAAAAQAEAAMAAAAHAAEAAQAEAAQAAAAHAAIAAQAEAAUAAAAIAAAAAQAFAAMAAAAIAAEAAQAFAAQAAAAIAAIAAQAFAAUAAAAJAAAAAQADAAMAAAAJAAEAAQADAAQAAAAJAAIAAQADAAUAAAAKAAAAAQAEAAMAAAAKAAEAAQAEAAQAAAAKAAIAAQAEAAUAAAALAAAAAQAFAAMAAAALAAEAAQAFAAQAAAALAAIAAQAFAAUAAAD9/wIAAQADAAUAAAD+/wIAAQAEAAUAAAD//wIAAQAFAAUAAAD9/wEAAQADAAQAAAD+/wEAAQAEAAQAAAD//wEAAQAFAAQAAAD9/wAAAQADAAMAAAD+/wAAAQAEAAMAAAD//wAAAQAFAAMAAAD6/wIAAQADAAUAAAD7/wIAAQAEAAUAAAD8/wIAAQAFAAUAAAD6/wEAAQADAAQAAAD7/wEAAQAEAAQAAAD8/wEAAQAFAAQAAAD6/wAAAQADAAMAAAD7/wAAAQAEAAMAAAD8/wAAAQAFAAMAAAD3/wIAAQADAAUAAAD4/wIAAQAEAAUAAAD5/wIAAQAFAAUAAAD3/wEAAQADAAQAAAD4/wEAAQAEAAQAAAD5/wEAAQAFAAQAAAD3/wAAAQADAAMAAAD4/wAAAQAEAAMAAAD5/wAAAQAFAAMAAAD0/wIAAQAFAAUAAAD1/wIAAQAEAAUAAAD2/wIAAQAFAAUAAAD0/wEAAQAFAAQAAAD1/wEAAQAEAAQAAAD2/wEAAQAFAAQAAAD0/wAAAQAFAAMAAAD1/wAAAQAEAAMAAAD2/wAAAQAFAAMAAADy/wIAAQADAAUAAADz/wIAAQAEAAUAAADy/wEAAQADAAQAAADz/wEAAQAEAAQAAADy/wAAAQADAAMAAADz/wAAAQAEAAMAAAAJAPr/AQADAAMAACAKAPr/AQAEAAMAACALAPr/AQAFAAMAACAJAPn/AQADAAQAACAKAPn/AQAEAAQAACALAPn/AQAFAAQAACAJAPj/AQADAAUAACAKAPj/AQAEAAUAACALAPj/AQAFAAUAACAGAPr/AQADAAMAACAHAPr/AQAEAAMAACAIAPr/AQAFAAMAACAGAPn/AQADAAQAACAHAPn/AQAEAAQAACAIAPn/AQAFAAQAACAGAPj/AQADAAUAACAHAPj/AQAEAAUAACAIAPj/AQAFAAUAACADAPr/AQADAAMAACAEAPr/AQAEAAMAACAFAPr/AQAFAAMAACADAPn/AQADAAQAACAEAPn/AQAEAAQAACAFAPn/AQAFAAQAACADAPj/AQADAAUAACAEAPj/AQAEAAUAACAFAPj/AQAFAAUAACAAAPr/AQADAAMAACABAPr/AQAEAAMAACACAPr/AQAFAAMAACAAAPn/AQADAAQAACABAPn/AQAEAAQAACACAPn/AQAFAAQAACAAAPj/AQADAAUAACABAPj/AQAEAAUAACACAPj/AQAFAAUAACD8//L/AQAAAAAAABD7//L/AQABAAAAABD6//L/AQACAAAAABD8//P/AQAAAAEAABD7//P/AQABAAEAABD6//P/AQACAAEAABD8//T/AQAAAAIAABD7//T/AQABAAIAABD6//T/AQACAAIAABD8/+//AQAAAAAAABD7/+//AQABAAAAABD6/+//AQACAAAAABD8//D/AQAAAAEAABD7//D/AQABAAEAABD6//D/AQACAAEAABD8//H/AQAAAAIAABD7//H/AQABAAIAABD6//H/AQACAAIAABD8/+z/AQAAAAAAABD7/+z/AQABAAAAABD6/+z/AQACAAAAABD8/+3/AQAAAAEAABD7/+3/AQABAAEAABD6/+3/AQACAAEAABD8/+7/AQAAAAIAABD7/+7/AQABAAIAABD6/+7/AQACAAIAABD8/+n/AQAAAAAAABD7/+n/AQABAAAAABD6/+n/AQACAAAAABD8/+r/AQAAAAEAABD7/+r/AQABAAEAABD6/+r/AQACAAEAABD8/+v/AQAAAAIAABD7/+v/AQABAAIAABD6/+v/AQACAAIAABD8/+b/AQAAAAAAABD7/+b/AQABAAAAABD6/+b/AQACAAAAABD8/+f/AQAAAAEAABD7/+f/AQABAAEAABD6/+f/AQACAAEAABD8/+j/AQAAAAIAABD7/+j/AQABAAIAABD6/+j/AQACAAIAABD7//X/AQABAAMAAAD7//b/AQABAAQAAAD8//X/AQACAAMAAAD8//b/AQACAAQAAAD8//f/AQACAAUAAAD9//j/AQAAAAMAAAD+//j/AQABAAMAAAD+//n/AQABAAQAAAD///j/AQACAAMAAAD///n/AQACAAQAAAD9//n/AQAAAAQAAAD+//r/AQABAAUAAAD///r/AQACAAUAAAD6//X/AQAAAAMAAAD6//b/AQAAAAQAAAD7//f/AQABAAUAAAD8//j/AQABAAUAAAA=")
+tile_set = ExtResource("2_d85ek")
+
+[node name="Damgage_Layer" type="TileMapLayer" parent="Tiles" unique_id=770485730 groups=["Damage_Layer"]]
+scale = Vector2(4, 4)
+tile_set = ExtResource("2_d85ek")
+
+[node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
+
+[node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("4_imvtg")]
+position = Vector2(96, -63)
+
+[node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
+position = Vector2(-38, -171)
+
+[node name="Stasis" parent="Stasis Chamber" unique_id=1921201016 instance=ExtResource("9_3fdfb")]
+position = Vector2(-1360, -402)
+
+[node name="Stasis2" parent="Stasis Chamber" unique_id=1909405189 instance=ExtResource("9_3fdfb")]
+position = Vector2(-1439, -980)
+
+[node name="Music Change Triggers" type="Node2D" parent="." unique_id=852063455]
+position = Vector2(-38, -171)
+
+[node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("10_xf1f3")]
+position = Vector2(1247, -366)
+track = ExtResource("11_7busn")
+
+[node name="One-Way Platforms" type="Node2D" parent="." unique_id=1306004910]
+position = Vector2(-38, -171)
+
+[node name="One_Way_Platform" parent="One-Way Platforms" unique_id=113338548 instance=ExtResource("13_6d8hj")]
+position = Vector2(-1244, -2141)
+
+[node name="Moving Platforms" type="Node2D" parent="." unique_id=2123795197]
+position = Vector2(-38, -171)
+
+[node name="MovingPlatform" parent="Moving Platforms" unique_id=2003949319 instance=ExtResource("9_out4q")]
+position = Vector2(-890, -2005)
+point_a = Vector2(-890, -250)
+point_b = Vector2(-890, -2056)
+speed = 500.0
+wait_time = 0.1
+
+[editable path="Req"]
