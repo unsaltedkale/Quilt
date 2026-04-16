@@ -2,7 +2,11 @@ class_name PlayerRes extends Resource
 
 @export_category("BASE MOVMENT")
 @export var walk_speed: float
+
+@export_category("JUMPING")
 @export var jump_vel: float
+@export var cayote_time: float
+@export var jump_buffer_time: float
 
 @export_category("FALLING")
 @export var max_fall_vel: float
