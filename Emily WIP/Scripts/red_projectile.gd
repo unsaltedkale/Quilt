@@ -18,8 +18,6 @@ func _physics_process(delta) -> void:
 	rotation = velocity.angle()
 	var collision = move_and_collide(velocity * delta)
 	
-	print(collision)
-	  
 	if collision:
 		print("RAAAAAA")
 		var collider = collision.get_collider()
@@ -36,6 +34,7 @@ func _physics_process(delta) -> void:
 			
 
 func _on_area_2d_area_entered(area: Area2D):
+	print("awawa")
 	if area.is_in_group("Stasis"):
 		queue_free()
 

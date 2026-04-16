@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c84vwure2ykyn"]
+[gd_scene format=3 uid="uid://c84vwure2ykyn"]
 
 [ext_resource type="Script" uid="uid://gfx0nxrde3oa" path="res://Emily WIP/Scripts/red_projectile.gd" id="1_td6lh"]
 [ext_resource type="Texture2D" uid="uid://rxj00c2u02jg" path="res://Art/Fireball Animation Quilt.png" id="2_t6jt8"]
@@ -38,28 +38,28 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td6lh"]
 size = Vector2(26, 16)
 
-[node name="RedProjectile" type="CharacterBody2D" groups=["Projectile"]]
+[node name="RedProjectile" type="CharacterBody2D" unique_id=133263133 groups=["Projectile"]]
 scale = Vector2(0.35, 0.35)
 collision_layer = 30
 collision_mask = 2
 script = ExtResource("1_td6lh")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1755399348]
 position = Vector2(5.9945223e-06, 1.1920927e-06)
 scale = Vector2(0.9999995, 0.9999995)
 shape = SubResource("RectangleShape2D_t6jt8")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=581001867]
 texture_filter = 1
 position = Vector2(1.19209275e-07, 0)
 scale = Vector2(7.7199984, 7.7199984)
 sprite_frames = SubResource("SpriteFrames_hsl4c")
 animation = &"FIRE"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=974048314]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1540387625]
 scale = Vector2(4.825003, 4.825003)
 shape = SubResource("RectangleShape2D_td6lh")
 

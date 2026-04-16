@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dacoqwe3msj05"]
+[gd_scene format=3 uid="uid://dacoqwe3msj05"]
 
 [ext_resource type="Script" uid="uid://chkiutvlrmjjr" path="res://Elena/Scripts/movingplatform.gd" id="1_7qba8"]
-[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="2_rwlvc"]
+[ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="2_rwlvc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
 size = Vector2(326, 58)
 
-[node name="MovingPlatform" type="AnimatableBody2D" groups=["Environmental Feature"]]
+[node name="MovingPlatform" type="AnimatableBody2D" unique_id=1943217819 groups=["Environmental Feature"]]
 script = ExtResource("1_7qba8")
 speed = 200.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=225021296]
 position = Vector2(2, -29)
 shape = SubResource("RectangleShape2D_lpq4i")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=135997064]
 position = Vector2(2.0000076, 0.9999962)
 scale = Vector2(2.5000002, 1.7578125)
 texture = ExtResource("2_rwlvc")
