@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="7_md1fj"]
 [ext_resource type="FontFile" uid="uid://ba8drb6lcxeql" path="res://Andy's Path/Resources/Fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf" id="8_jvykh"]
 [ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="9_nu105"]
+[ext_resource type="Script" uid="uid://qw7u7t1vs07f" path="res://Andy's Path/Scripts/VolumeManager.gd" id="10_me2gu"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_xj211"]
 
@@ -54,6 +55,7 @@ script = ExtResource("2_me2gu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=432694589]
 stream = SubResource("AudioStreamWAV_xj211")
+bus = &"Music Master"
 
 [node name="Conductor" parent="." unique_id=438348041 instance=ExtResource("3_abkbx")]
 position = Vector2(-211.9961, -1082)
@@ -120,3 +122,11 @@ scale = Vector2(7.76, 7.76)
 text = "4.0"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="SFXManager" type="Control" parent="." unique_id=1390490036]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_me2gu")
+DialogueUI = null

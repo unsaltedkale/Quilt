@@ -2439,9 +2439,6 @@ position = Vector2(39290, -851)
 [node name="recoil_indicator" parent="Player" index="0" unique_id=1283703100]
 visible = false
 
-[node name="SFX" parent="Player" index="7" unique_id=577166608]
-script = ExtResource("24_sp84p")
-
 [node name="Path2D" type="Path2D" parent="." unique_id=2072758238]
 position = Vector2(35400, 5001)
 curve = SubResource("Curve2D_xu5pi")
@@ -3749,6 +3746,13 @@ scale = Vector2(1.67, 1.23)
 [node name="One_Way_Platform4" parent="." unique_id=1387573209 instance=ExtResource("50_sp84p")]
 position = Vector2(44113.996, -11621.001)
 scale = Vector2(4.02, 3.729)
+
+[node name="SFXManager" type="Control" parent="." unique_id=1560166507]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("24_sp84p")
 
 [connection signal="finished" from="AudioStreamPlayer" to="Conductor" method="_on_audio_stream_player_finished"]
 
