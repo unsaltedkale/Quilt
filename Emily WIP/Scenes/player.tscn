@@ -46,6 +46,10 @@
 radius = 5.75
 height = 44.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8lyhf"]
+radius = 5.75
+height = 20.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjwd1"]
 radius = 6.25
 
@@ -1554,10 +1558,16 @@ script = ExtResource("3_jgwx7")
 position = Vector2(0.75, 0.75)
 shape = SubResource("CapsuleShape2D_iemgc")
 
+[node name="QuiltCrouch" type="CollisionShape2D" parent="." unique_id=2076445300]
+position = Vector2(0.75, 12.75)
+shape = SubResource("CapsuleShape2D_8lyhf")
+disabled = true
+
 [node name="PhloCollider" type="CollisionShape2D" parent="." unique_id=357307041]
 position = Vector2(-0.25, 0.5)
 scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=725135239]
 material = SubResource("ShaderMaterial_1nwdr")

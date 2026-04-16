@@ -20,8 +20,10 @@ func Update(_delta):
 	else:
 		an.play("walk")
 
+
 func Physics_Update(_delta):
 	_recoil_recharge_check()
+	
 	
 	quilt_walk()
 	if abs(move_dir) == 0:
@@ -36,8 +38,6 @@ func Physics_Update(_delta):
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
 	
-	_crouch_control()
-
 func Exit():
 	stop_footsteps.emit()
 	#print("notwalk")

@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 class_name Player
 
+
+@onready var quilt_collider: CollisionShape2D = $QuiltCollider
+@onready var quilt_crouch: CollisionShape2D = $QuiltCrouch
+
+
 @export var is_phlo: bool = false
 var collected_objects: int
 @export var max_objects: int
@@ -66,4 +71,9 @@ func spawn_player(spawn_point: Vector2):
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 	health = max_health  
-	
+
+
+
+
+func change_player(player: int) -> void:
+	pass

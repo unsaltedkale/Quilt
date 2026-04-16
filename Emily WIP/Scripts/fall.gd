@@ -1,9 +1,18 @@
 extends State
 
 var fall_timer: float = 0.0
+var time_since_last_jump_press: float = -5000
+
+var walking_last_state: bool = false
 
 signal has_landed()
 func Enter(previous_state: State):
+	time_since_last_jump_press = -5000000000000000
+	if previous_state.state_name == "walk":
+		walking_last_state = true
+	else:
+		walking_last_state = false
+			
 	# TODO
 	# CAYOTE TIMER ADDING SOON
 	# ADDED PREVIOUS STATE SO TAHT COULD CHECK IF WAS WALKING BEFORE
@@ -15,6 +24,7 @@ func Exit():
 
 func Update(_delta):
 	fall_timer += _delta
+	
 	if player.velocity.y <0:
 		if player.is_phlo:
 			an.play("phlo_jump")
@@ -47,6 +57,13 @@ func land():
 			an.play("land")
 
 func Physics_Update(_delta):
+	if Input.is_action_just_pressed("jump"):
+		time_since_last_jump_press = fall_timer
+	
+	if walking_last_state:
+		if PLAYER_DATA.cayote_time >= fall_timer and Input.is_action_just_pressed("jump"):
+			Transition.emit(self, "jump")
+			walking_last_state = false
 	if player.velocity.y <= PLAYER_DATA.max_fall_vel:
 		player.velocity.y += PLAYER_DATA.grav_accel * _delta
 	else:
@@ -57,7 +74,11 @@ func Physics_Update(_delta):
 	if player.is_on_floor():
 		player.velocity.x = 0
 		land()
-		_on_animation_finished() 
+		_on_animation_finished()
+		
+		if fall_timer - time_since_last_jump_press <= PLAYER_DATA.jump_buffer_time:
+			Transition.emit(self, "jump")
+
 		Transition.emit(self, "idle")
 		has_landed.emit() #signal to play landing sfx
 		if not player.is_phlo:
