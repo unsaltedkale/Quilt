@@ -1650,6 +1650,21 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
+texture = ExtResource("3_m2847")
+texture_region_size = Vector2i(32, 32)
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 16, -16, 16)
+0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_rq4vl"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_eulau")
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5e7ya"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
 
@@ -4728,8 +4743,8 @@ tile_set = SubResource("TileSet_fg0v8")
 
 [node name="Damgage_Layer" type="TileMapLayer" parent="Tiles" unique_id=770485730 groups=["Damage_Layer"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAArAPj/AQAAAAcAAAArAPn/AQAAAAgAAAAsAPj/AQAAAAcAAAAsAPn/AQAAAAgAAAAtAPj/AQAAAAcAAAAtAPn/AQAAAAgAAAAuAPj/AQAAAAcAAAAuAPn/AQAAAAgAAAA=")
-tile_set = ExtResource("2_mkgea")
+tile_map_data = PackedByteArray("AAArAPj/AAAAAAgAAAArAPn/AAAAAAkAAAAsAPj/AAAAAAgAAAAsAPn/AAAAAAkAAAAtAPj/AAAAAAgAAAAtAPn/AAAAAAkAAAAuAPj/AAAAAAgAAAAuAPn/AAAAAAkAAAArAPf/AAAAAAcAAAAsAPf/AAAAAAcAAAAtAPf/AAAAAAcAAAAuAPf/AAAAAAcAAAA=")
+tile_set = SubResource("TileSet_rq4vl")
 
 [node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
 scale = Vector2(4, 4)
