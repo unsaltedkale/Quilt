@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://n0gaiwt35ltf" path="res://Alex's Folder/gds/recoil_indicator.gd" id="3_jgwx7"]
 [ext_resource type="Texture2D" uid="uid://dx46xnonryujd" path="res://Art/Quilt/Quilt Animation Crouch.png" id="5_8lyhf"]
 [ext_resource type="Texture2D" uid="uid://c4js0vvukf2gu" path="res://Art/Quilt/Quilt Introduction Cutscene-8.png.png" id="5_n7wni"]
+[ext_resource type="Texture2D" uid="uid://bc2ldq5ixpykc" path="res://Art/Quilt/Quilt Animation Crouch Walk(1).png" id="6_1jo8y"]
 [ext_resource type="Texture2D" uid="uid://qrhi63b343d6" path="res://Art/Quilt/Quilt Introduction Cutscene.png" id="6_d0p7j"]
 [ext_resource type="Texture2D" uid="uid://dlmtm1evbtdwv" path="res://Art/Quilt/Quilt Introduction Cutscene(1).png" id="7_icvrh"]
 [ext_resource type="Texture2D" uid="uid://c3e2w8i5mfrj7" path="res://Art/Quilt/Quilt Introduction Cutscene(2).png" id="8_jgwx7"]
@@ -65,6 +66,42 @@ region = Rect2(0, 0, 25, 44)
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8i7r"]
 atlas = ExtResource("5_8lyhf")
 region = Rect2(25, 0, 25, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tfio"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 0, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ecm5"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 44, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1t2b"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 88, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2b71"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 132, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eoiy"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 176, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uadta"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 220, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qibon"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 308, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x47yu"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 352, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh35q"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 396, 49, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17h1f"]
 atlas = ExtResource("9_7a16b")
@@ -790,6 +827,38 @@ animations = [{
 "loop": true,
 "name": &"crouch_idle",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tfio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ecm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1t2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2b71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eoiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uadta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qibon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x47yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh35q")
+}],
+"loop": true,
+"name": &"crouch_walk",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1572,7 +1641,8 @@ disabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=725135239]
 material = SubResource("ShaderMaterial_1nwdr")
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"crouch_idle"
+animation = &"idle"
+frame_progress = 0.9102572
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." unique_id=621642771 node_paths=PackedStringArray("initial_state")]
