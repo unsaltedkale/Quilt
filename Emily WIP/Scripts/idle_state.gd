@@ -11,7 +11,7 @@ func idle_quilt():
 			an.play("idle")
 
 func Enter(previous_state: State):
-	if crouch_speed == true:
+	if player.crouch_speed == true:
 		_crouch_control()
 	else:
 		#idle_quilt()
@@ -28,10 +28,9 @@ func Physics_Update(_delta):
 	_change_state()
 	
 	_crouch_control()
-	if crouch_speed == true and walk_speed != 100:
-		
+	if player.crouch_speed == true and walk_speed != 100:
 		walk_speed = 100
-	elif crouch_speed == false:
+	elif player.crouch_speed == false and walk_speed == 100:
 		walk_speed = 800
 
 

@@ -3,14 +3,10 @@ extends State
 signal play_footsteps()
 signal stop_footsteps()
 
-func quilt_walk():
-	pass
-
 func Enter(previous_state: State):
-	if crouch_speed == true:
+	if player.crouch_speed == true:
+		walk_speed = 100
 		_crouch_control()
-	else:
-		quilt_walk()
 	play_footsteps.emit()
 	#print("walking")
 
@@ -30,12 +26,10 @@ func Update(_delta):
 func Physics_Update(_delta):
 	_recoil_recharge_check()
 	
-	quilt_walk()
-	
 	_crouch_control()
-	if crouch_speed == true and walk_speed != 100:
+	if player.crouch_speed == true and walk_speed != 100:
 		walk_speed = 100
-	elif crouch_speed == false:
+	elif player.crouch_speed == false and walk_speed == 100:
 		walk_speed = 800
 	
 	if abs(move_dir) == 0:

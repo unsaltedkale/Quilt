@@ -13,7 +13,6 @@ var acceleration = 1500
 var decceleration = 750 * 6
 var sm : StateMachine
 var smcs : State
-var crouch_speed : bool
 
 
 signal Transition
@@ -58,11 +57,9 @@ func _physics_process(_delta) -> void:
 	
 func _crouch_control():
 	if Input.is_action_just_pressed("crouch"):
-		crouch_speed = true
 		player.quilt_crouch.disabled = false
 		player.quilt_collider.disabled = true
 	if Input.is_action_just_released("crouch"):
-		crouch_speed = false
 		player.quilt_collider.disabled = false
 		player.quilt_crouch.disabled = true
 	pass

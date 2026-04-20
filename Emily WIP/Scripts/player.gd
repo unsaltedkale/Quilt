@@ -25,6 +25,8 @@ signal player_death
 
 var jump_count : int
 
+var crouch_speed : bool
+
 func _ready() -> void:
 	health = max_health
 	spawn_point = global_position
