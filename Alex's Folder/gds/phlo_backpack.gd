@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var ani = find_child("AnimatedSprite2D")
 @onready var timer_max = 0.15
 @onready var timer = 0
-@onready var speed = $"../Player".find_child("StateMachine").find_child("Idle").PLAYER_DATA.walk_speed + 700
+@onready var speed = $"../Player".find_child("StateMachine").find_child("Idle").walk_speed + 700
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
