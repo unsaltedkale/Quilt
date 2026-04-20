@@ -809,7 +809,6 @@ theme_override_font_sizes/font_size = 42
 script = ExtResource("5_1xo70")
 
 [node name="Voice Player" type="AudioStreamPlayer" parent="UI/DialogueScreen/Button" unique_id=665154871]
-bus = &"Dialouge Echo"
 script = ExtResource("6_yride")
 voices = Dictionary[String, AudioStream]({
 "flow": ExtResource("8_ikb8c"),
@@ -1043,6 +1042,16 @@ offset_bottom = 440.0
 theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 60
 text = "General Settings"
+
+[node name="ColorBlindMode" type="CheckButton" parent="UI/Settings" unique_id=1405796437]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 544.0
+offset_right = 243.0
+offset_bottom = 568.0
+scale = Vector2(3.1871705, 3.1871705)
+theme_override_fonts/font = ExtResource("2_yhc7a")
+text = "Colorblind Mode"
 
 [connection signal="pressed" from="UI/DialogueScreen/Button" to="UI/DialogueScreen/Button" method="_on_pressed"]
 [connection signal="pressed" from="UI/Settings/MainMenuReturn" to="UI/Settings/MainMenuReturn" method="_on_pressed"]

@@ -155,13 +155,16 @@ animation = &"idle"
 
 [node name="Stasis Hum" type="AudioStreamPlayer" parent="SFX" unique_id=1521192767]
 stream = SubResource("AudioStreamPlaylist_jf2j6")
+bus = &"SFXMaster"
 
 [node name="Enter Stasis" type="AudioStreamPlayer" parent="SFX" unique_id=1884281628]
 stream = ExtResource("4_d3tk3")
 volume_db = -15.0
+bus = &"SFXMaster"
 
 [node name="Exit Stasis" type="AudioStreamPlayer" parent="SFX" unique_id=1039792]
 stream = ExtResource("5_k1ahh")
+bus = &"SFXMaster"
 
 [node name="MakeItMusical" parent="." unique_id=1352442624 instance=ExtResource("6_d3tk3")]
 
