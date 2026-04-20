@@ -835,7 +835,7 @@ zoom = Vector2(0.4, 0.4)
 script = ExtResource("2_jbwj1")
 
 [node name="Player" parent="." unique_id=796459201 instance=ExtResource("3_qrawa")]
-position = Vector2(5438, 1443)
+position = Vector2(7166, 2748)
 
 [node name="Stasis" parent="." unique_id=1377558403 instance=ExtResource("4_jbwj1")]
 position = Vector2(2263, 505)

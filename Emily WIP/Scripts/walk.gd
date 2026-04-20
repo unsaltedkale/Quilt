@@ -7,7 +7,10 @@ func quilt_walk():
 	pass
 
 func Enter(previous_state: State):
-	quilt_walk()
+	if crouch_speed == true:
+		_crouch_control()
+	else:
+		quilt_walk()
 	play_footsteps.emit()
 	#print("walking")
 
@@ -18,14 +21,23 @@ func Update(_delta):
 	if player.is_phlo:
 		an.play("phlo_idle")
 	else:
-		an.play("walk")
+		if player.quilt_crouch.disabled == false:
+			an.play("crouch_idle")
+		else:
+			an.play("walk")
 
 
 func Physics_Update(_delta):
 	_recoil_recharge_check()
 	
-	
 	quilt_walk()
+	
+	_crouch_control()
+	if crouch_speed == true and walk_speed != 100:
+		walk_speed = 100
+	elif crouch_speed == false:
+		walk_speed = 800
+	
 	if abs(move_dir) == 0:
 		Transition.emit(self, "idle")
 	if not player.is_on_floor():

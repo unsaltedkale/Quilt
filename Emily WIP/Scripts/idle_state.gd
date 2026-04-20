@@ -11,8 +11,11 @@ func idle_quilt():
 			an.play("idle")
 
 func Enter(previous_state: State):
-	#idle_quilt()
-	_recoil_recharge_check()
+	if crouch_speed == true:
+		_crouch_control()
+	else:
+		#idle_quilt()
+		_recoil_recharge_check()
 
 func Exit():
 	pass
@@ -25,6 +28,11 @@ func Physics_Update(_delta):
 	_change_state()
 	
 	_crouch_control()
+	if crouch_speed == true and walk_speed != 100:
+		
+		walk_speed = 100
+	elif crouch_speed == false:
+		walk_speed = 800
 
 
 func _change_state() -> void:
@@ -37,7 +45,7 @@ func _change_state() -> void:
 		Transition.emit(self, "fall")
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if player.collected_objects != 0:
-			print("recoil state")
+			#print("recoil state")
 			Transition.emit(self, "recoil")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
