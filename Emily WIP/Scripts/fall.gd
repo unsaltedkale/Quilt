@@ -12,11 +12,6 @@ func Enter(previous_state: State):
 		walking_last_state = true
 	else:
 		walking_last_state = false
-			
-	# TODO
-	# CAYOTE TIMER ADDING SOON
-	# ADDED PREVIOUS STATE SO TAHT COULD CHECK IF WAS WALKING BEFORE
-	# IF WAS WAKING BEFORE ANDGER A CERTAIN TIME DO JUMP
 	fall_timer = 0
 
 func Exit():
@@ -38,14 +33,8 @@ func Update(_delta):
 	if player.is_on_floor():
 		land()
 
-func _on_animation_finished():
-	if player.is_phlo:
-		an.play("phlo_idle")
-	else:
-		an.play("idle")
-
 func land():
-	if fall_timer >= 1:
+	if fall_timer >= .9:
 		if player.is_phlo:
 			an.play("phlo_mini_wump")
 		else:
@@ -74,8 +63,6 @@ func Physics_Update(_delta):
 	if player.is_on_floor():
 		player.velocity.x = 0
 		land()
-		_on_animation_finished()
-		
 		if fall_timer - time_since_last_jump_press <= PLAYER_DATA.jump_buffer_time:
 			Transition.emit(self, "jump")
 
@@ -89,3 +76,9 @@ func Physics_Update(_delta):
 		Transition.emit(self, "wallstick")
 	
 	_crouch_control()
+
+func _on_animation_finished(anim):
+	if anim == "phlo_mini_wump" or "phlo_land":
+		Transition.emit(self, "phlo_idle")
+	elif anim == "land":
+		Transition.emit(self, "idle")

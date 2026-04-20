@@ -24,7 +24,10 @@ func _physics_process(delta):
 		_target_point = point_b if _moving_to_b else point_a
 		_wait()
 	else:
-		global_position += direction * speed * delta
+		var movement: Vector2 = speed * delta * direction
+		if movement.length() > distance:
+			movement = movement.normalized() * distance
+		global_position += movement
 
 func _wait():
 	_waiting = true

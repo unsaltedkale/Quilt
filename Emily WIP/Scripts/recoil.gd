@@ -41,7 +41,8 @@ func shoot():
 func Enter(previous_state: State):
 	timer = 10.0/60.0
 	shoot()
-	player.velocity = recoil_vel_equation()
+	if player.quilt_crouch.disabled:
+		player.velocity = recoil_vel_equation()
 	player.collected_objects -= 1
 	recoil = true
 	
