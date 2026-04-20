@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed : float = 800.0
+@export var speed : float = 1000.0
 var projectile_direction: Vector2 = Vector2.RIGHT 
 
 const sfx_end = preload("res://Resources/SFX/Quilt Character SFX/fireball end.wav")
@@ -19,7 +19,6 @@ func _physics_process(delta) -> void:
 	var collision = move_and_collide(velocity * delta)
 	
 	if collision:
-		#print("RAAAAAA")
 		var collider = collision.get_collider()
 		if collider.is_in_group("Mirror"):
 			print("hit mirror")
@@ -36,7 +35,13 @@ func _physics_process(delta) -> void:
 func _on_area_2d_area_entered(area: Area2D):
 	#print("awawa")
 	if area.is_in_group("Stasis"):
+		area.on_body_entered($Area2D)
+		#queue_free()
+		pass
+	if area.is_in_group("tilemap"):
 		queue_free()
+
+
 
 func _play_extinguish_sound():
 	var sound = AudioStreamPlayer.new()
@@ -45,3 +50,9 @@ func _play_extinguish_sound():
 	get_tree().current_scene.add_child(sound)
 	sound.play(0.33)
 	
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("tilemap"):
+		queue_free()
+	pass # Replace with function body.

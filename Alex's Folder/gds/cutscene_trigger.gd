@@ -112,3 +112,6 @@ func _read_events():
 	Camera.has_control = true
 	tempvar = player.find_child("StateMachine").current_state
 	tempvar.Transition.emit(tempvar, "fall")
+	if get_parent().is_in_group("Vinyl"):
+		get_parent().queue_free()
+	
