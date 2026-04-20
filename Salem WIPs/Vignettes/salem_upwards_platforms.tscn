@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="10_16o6s"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="14_p7o4k"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="16_k5bpx"]
+[ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="17_5jiip"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -4735,6 +4736,7 @@ tile_set = SubResource("TileSet_fg0v8")
 
 [node name="Damgage_Layer" type="TileMapLayer" parent="Tiles" unique_id=770485730 groups=["Damage_Layer"]]
 scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AADc/woAAAAAAAcAAFDc/wkAAAAAAAcAAFDc/wgAAAAAAAcAAFDc/wcAAAAAAAcAAFDf/wQAAAAAAAcAAGDf/wUAAAAAAAcAAGDf/wYAAAAAAAcAAGDf/wcAAAAAAAcAAGDf/xAAAAAAAAcAAGDf/w8AAAAAAAcAAGDf/w4AAAAAAAcAAGDf/w0AAAAAAAcAAGDc/xAAAAAAAAcAAFDc/w8AAAAAAAcAAFDc/w4AAAAAAAcAAFA=")
 tile_set = SubResource("TileSet_rq4vl")
 
 [node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
@@ -4744,7 +4746,7 @@ tile_set = SubResource("TileSet_eulau")
 
 [node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["tilemap"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AABmAB0AAAAAAAAAAABmAB4AAAAAAAAAAABmAB8AAAAAAAAAAAAQAPv/AAADAB0AAAAQAPz/AAADAB4AAAAQAP3/AAADAB8AAAAQAPj/AAADAB0AAAAQAPn/AAADAB4AAAAQAPr/AAADAB8AAAA=")
+tile_map_data = PackedByteArray("AABmAB0AAAAAAAAAAABmAB4AAAAAAAAAAABmAB8AAAAAAAAAAADd/xQAAAADAB4AAGDc/xQAAAADAB4AAGDb/xQAAAAAAB8AAADg/xIAAAADAB8AADDg/xMAAAADAB4AADDg/xQAAAACAB8AAADb/xIAAAADAB8AADDb/xMAAAADAB4AADDe/xQAAAADAB4AAGDf/xQAAAADAB4AAGA=")
 tile_set = SubResource("TileSet_6pqo5")
 
 [node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
@@ -4861,9 +4863,70 @@ wait_time = 0.1
 position = Vector2(-4450, 200)
 script = ExtResource("9_57ius")
 point_a = Vector2(-4450, 200)
-point_b = Vector2(-4450, 1200)
+point_b = Vector2(-4450, 2600)
 speed = 500.0
 wait_time = 0.2
+
+[node name="One_Way_Platform13" parent="One-Way Platforms" unique_id=794994700 instance=ExtResource("14_p7o4k")]
+position = Vector2(-4450, 1400)
+script = ExtResource("9_57ius")
+point_a = Vector2(-4450, 200)
+point_b = Vector2(-4450, 2600)
+speed = 500.0
+wait_time = 0.2
+
+[node name="One_Way_Platform15" parent="One-Way Platforms" unique_id=117044435 instance=ExtResource("14_p7o4k")]
+position = Vector2(-4450, 1400)
+script = ExtResource("9_57ius")
+point_a = Vector2(-4450, 2600)
+point_b = Vector2(-4450, 200)
+speed = 500.0
+wait_time = 0.2
+
+[node name="One_Way_Platform14" parent="One-Way Platforms" unique_id=1599970668 instance=ExtResource("14_p7o4k")]
+position = Vector2(-4450, 2600)
+script = ExtResource("9_57ius")
+point_a = Vector2(-4450, 200)
+point_b = Vector2(-4450, 2600)
+speed = 500.0
+wait_time = 0.2
+
+[node name="One_Way_Platform16" parent="One-Way Platforms" unique_id=994741832 instance=ExtResource("14_p7o4k")]
+position = Vector2(-4200, 200)
+script = ExtResource("9_57ius")
+point_a = Vector2(-4200, 200)
+point_b = Vector2(-4200, 2600)
+speed = 600.0
+wait_time = 0.3
+
+[node name="One_Way_Platform17" parent="One-Way Platforms" unique_id=1878134168 instance=ExtResource("14_p7o4k")]
+position = Vector2(-4200, 1400)
+script = ExtResource("9_57ius")
+point_a = Vector2(-4200, 200)
+point_b = Vector2(-4200, 2600)
+speed = 600.0
+wait_time = 0.3
+
+[node name="One_Way_Platform18" parent="One-Way Platforms" unique_id=562638886 instance=ExtResource("14_p7o4k")]
+position = Vector2(-4200, 1400)
+script = ExtResource("9_57ius")
+point_a = Vector2(-4200, 2600)
+point_b = Vector2(-4200, 200)
+speed = 600.0
+wait_time = 0.3
+
+[node name="One_Way_Platform19" parent="One-Way Platforms" unique_id=410302203 instance=ExtResource("14_p7o4k")]
+position = Vector2(-4200, 2600)
+script = ExtResource("9_57ius")
+point_a = Vector2(-4200, 200)
+point_b = Vector2(-4200, 2600)
+speed = 600.0
+wait_time = 0.3
+
+[node name="Resetpoints" type="Node2D" parent="." unique_id=875063470]
+
+[node name="ResetPoint" parent="Resetpoints" unique_id=638936802 instance=ExtResource("17_5jiip")]
+position = Vector2(-1488, -3400)
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 visible = false
