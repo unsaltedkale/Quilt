@@ -835,7 +835,6 @@ type = 5
 
 [node name="Settings" type="Control" parent="UI" unique_id=1192461614]
 process_mode = 3
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -916,9 +915,9 @@ max_value = 10.0
 
 [node name="Label" type="Label" parent="UI/Settings/VolumeSettings/GeneralVolume" unique_id=197192298]
 layout_mode = 0
-offset_left = -69.8974
+offset_left = -68.105156
 offset_top = 17.319952
-offset_right = -2.8974
+offset_right = -1.105156
 offset_bottom = 31.319952
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_yhc7a")
@@ -999,6 +998,31 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 9
 text = "Dialogue Echo"
+
+[node name="MusicSlider" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=1585397373]
+layout_mode = 0
+offset_left = 1253.0
+offset_top = 718.0
+offset_right = 1573.0
+offset_bottom = 768.0
+scale = Vector2(1.6738826, 1.674369)
+theme_override_constants/center_grabber = 1
+theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
+min_value = -40.0
+max_value = 10.0
+
+[node name="Label" type="Label" parent="UI/Settings/VolumeSettings/MusicSlider" unique_id=281650534]
+layout_mode = 0
+offset_left = -66.31287
+offset_top = 19.11169
+offset_right = 0.6871338
+offset_bottom = 34.11169
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_yhc7a")
+theme_override_font_sizes/font_size = 14
+text = "Music"
 
 [node name="VolumeSettingsText" type="Label" parent="UI/Settings/VolumeSettings" unique_id=2076297339]
 layout_mode = 0
