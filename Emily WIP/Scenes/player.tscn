@@ -1646,31 +1646,31 @@ shape = SubResource("RectangleShape2D_33mbb")
 [node name="Land" type="AudioStreamPlayer" parent="SFX" unique_id=1181986770]
 stream = ExtResource("24_hiv3f")
 max_polyphony = 4
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Take Damage" type="AudioStreamPlayer" parent="SFX" unique_id=191552110]
 stream = ExtResource("34_vfdg1")
 max_polyphony = 4
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="SFX" unique_id=577343084]
 stream = SubResource("AudioStreamPlaylist_hiv3f")
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Shoot Projectile" type="AudioStreamPlayer" parent="SFX" unique_id=922950995]
 stream = ExtResource("36_n7wni")
 volume_db = -15.0
 max_polyphony = 6
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Take Damage (Phlo)" type="AudioStreamPlayer" parent="SFX" unique_id=1477845529]
 stream = ExtResource("34_2k042")
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Jump" type="AudioStreamPlayer" parent="SFX" unique_id=389697191]
 stream = ExtResource("35_vfdg1")
 autoplay = true
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
 rect = Rect2(-10, -21.5, 20, 44)
