@@ -1643,7 +1643,6 @@ material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(0, 0.25)
 sprite_frames = SubResource("SpriteFrames_qn8pe")
 animation = &"idle"
-frame_progress = 0.9102572
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." unique_id=621642771 node_paths=PackedStringArray("initial_state")]

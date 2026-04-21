@@ -39,6 +39,11 @@ func shoot():
 	shoot_projectile.emit()
 
 func Enter(previous_state: State):
+	
+	#if colliding with non-magical zone
+		#trasnition idle
+	#else:
+	
 	timer = 10.0/60.0
 	shoot()
 	if player.quilt_crouch.disabled:

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://cshhei7elby56"]
 
-[ext_resource type="Resource" uid="uid://11j76j2kmtsl" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_cs_event.tres" id="1_0i1g2"]
+[ext_resource type="Resource" uid="uid://b8jvwjtaobo0a" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/crypt_cave_enter_container.tres" id="1_0i1g2"]
 [ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_bt44m"]
 
 [resource]

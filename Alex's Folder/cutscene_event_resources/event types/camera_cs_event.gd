@@ -19,8 +19,12 @@ class_name camera_cutscene_event
 
 func execute(cutscene_trigger: Node) -> void:
 	var tween = cutscene_trigger.get_tree().create_tween()
-	var camerap = cutscene_trigger.get_node("../../" + str(camera))
+	var camerap
 	
+	if cutscene_trigger.get_tree().get_nodes_in_group("Camera") != []:
+		camerap = cutscene_trigger.get_tree().get_nodes_in_group("Camera")[0]
+	else:
+		camerap = cutscene_trigger.get_node("../../" + str(camera))
 	camerap.has_control = false
 	
 	# doesn't work -> animatorp.flip_h = horizontal_flip

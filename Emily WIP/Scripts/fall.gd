@@ -77,8 +77,9 @@ func Physics_Update(_delta):
 	
 	_crouch_control()
 
-func _on_animation_finished(anim):
+func _on_animation_finished():
+	var anim = str($"../../AnimatedSprite2D".animation)
 	if anim == "phlo_mini_wump" or "phlo_land":
-		Transition.emit(self, "phlo_idle")
+		Transition.emit(self, "idle")
 	elif anim == "land":
 		Transition.emit(self, "idle")

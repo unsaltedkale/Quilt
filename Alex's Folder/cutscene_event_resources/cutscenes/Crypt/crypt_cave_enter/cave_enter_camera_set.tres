@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="camera_cutscene_event" load_steps=2 format=3 uid="uid://bewi6bnn7cn0m"]
+[gd_resource type="Resource" script_class="camera_cutscene_event" format=3 uid="uid://bewi6bnn7cn0m"]
 
 [ext_resource type="Script" uid="uid://csualf0138bpc" path="res://Alex's Folder/cutscene_event_resources/event types/camera_cs_event.gd" id="1_hkgko"]
 

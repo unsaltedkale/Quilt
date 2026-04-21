@@ -41,7 +41,7 @@ func _on_area_2d_area_entered(area: Area2D):
 	if area.is_in_group("tilemap"):
 		queue_free()
 	if area.is_in_group("Projectile"):
-		queue_free()
+		pass
 
 
 func _play_extinguish_sound():

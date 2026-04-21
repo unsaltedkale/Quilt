@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_p2crl")
-mover = NodePath("Player")
+mover = NodePath("../../Req/Player")
 target = Vector2(3722, -45)
 time = 0.5
 delay_before = 4.0

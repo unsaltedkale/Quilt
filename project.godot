@@ -47,6 +47,8 @@ Mirror=""
 Damage_Layer=""
 Interact_Indicator=""
 Vinyl=""
+Req=""
+Camera=""
 
 [input]
 

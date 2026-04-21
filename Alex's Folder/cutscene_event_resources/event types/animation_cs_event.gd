@@ -10,10 +10,23 @@ class_name animation_cutscene_event
 func execute(cutscene_trigger: Node) -> void:
 	
 	var animatorp
-	if cutscene_trigger.get_node("../../" + str(animator)) is not AnimatedSprite2D:
-		animatorp = cutscene_trigger.get_node("../../" + str(animator) + "/AnimatedSprite2D")
+	
+	if cutscene_trigger.get_tree().root.get_child(0).find_child("Req") != null:
+	
+		animatorp = cutscene_trigger.get_node(str(animator))
+		
+		if animatorp is not AnimatedSprite2D:
+			animatorp = cutscene_trigger.get_node(str(animator) + "/AnimatedSprite2D")
+	
 	else:
+		print("click")
+		if animator.get_name_count() != 0:
+			animator = str(animator.get_name(animator.get_name_count() - 1))
+		
 		animatorp = cutscene_trigger.get_node("../../" + str(animator))
+		
+		if animatorp is not AnimatedSprite2D:
+			animatorp = cutscene_trigger.get_node("../../" + str(animator) + "/AnimatedSprite2D")
 	
 	print(animatorp.to_string() + "-------------------------------------------------")
 	
