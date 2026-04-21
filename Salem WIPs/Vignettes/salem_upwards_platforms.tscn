@@ -4,7 +4,6 @@
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_fu7wd"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_4v35e"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_5y7r4"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="6_hmgs3"]
 [ext_resource type="Script" uid="uid://chkiutvlrmjjr" path="res://Elena/Scripts/movingplatform.gd" id="9_57ius"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="10_16o6s"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="14_p7o4k"]
@@ -4718,6 +4717,9 @@ position = Vector2(233, -323)
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -155)
 
+[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
+bus = &"Master"
+
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 visible = false
 
@@ -4741,7 +4743,6 @@ tile_set = SubResource("TileSet_rq4vl")
 
 [node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAqAAoAAAAUAAAAAAAqAAkAAAAUAAAAAAAqAAgAAAAUAAAAAAAqAAcAAAAUAAAAAAAqAAYAAAAUAAAAAAAqAAUAAAAUAAAAAAAMAPv/AAAXAAoAAAAMAPz/AAAXAAsAAAAMAP3/AAAXAAwAAAAMAPj/AAAXAAoAAAAMAPn/AAAXAAsAAAAMAPr/AAAXAAwAAAA=")
 tile_set = SubResource("TileSet_eulau")
 
 [node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["tilemap"]]
@@ -4759,16 +4760,6 @@ position = Vector2(-38, -171)
 
 [node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("5_5y7r4")]
 position = Vector2(878, 155)
-
-[node name="Stars" type="Node2D" parent="." unique_id=1803044504]
-position = Vector2(-38, -171)
-
-[node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_hmgs3")]
-position = Vector2(652, -300)
-scale = Vector2(0.9999999, 0.9999999)
-
-[node name="NPCs" type="Node2D" parent="." unique_id=1296886211]
-position = Vector2(-38, -171)
 
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 position = Vector2(-38, -171)
@@ -4929,7 +4920,6 @@ wait_time = 0.3
 position = Vector2(-1488, -3400)
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
-visible = false
 position = Vector2(-38, -171)
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="Particles" unique_id=668623674]
