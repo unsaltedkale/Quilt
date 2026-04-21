@@ -1640,6 +1640,7 @@ disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=725135239]
 material = SubResource("ShaderMaterial_1nwdr")
+position = Vector2(0, 0.25)
 sprite_frames = SubResource("SpriteFrames_qn8pe")
 animation = &"idle"
 frame_progress = 0.9102572

@@ -8,6 +8,11 @@ extends RigidBody2D
 
 func _ready() -> void:
 	
+	if get_tree().root.get_child(0).find_child("Req") != null:
+		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+	else:
+		player = $"../Player"
+	
 	self.gravity_scale = 0
 	start_position = global_position
 	start_rotation = rotation
