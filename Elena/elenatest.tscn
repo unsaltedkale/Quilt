@@ -6347,9 +6347,11 @@ position = Vector2(5826, 1616)
 
 [node name="Disappearing_Platform" parent="." unique_id=1113499443 instance=ExtResource("8_5l0qf")]
 position = Vector2(4431, 2588)
+time = 1.0
 
 [node name="Disappearing_Platform2" parent="." unique_id=1873329641 instance=ExtResource("8_5l0qf")]
 position = Vector2(3566, 1571)
+time = 2.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="collectable_object" to="." method="_on_area_2d_body_exited"]

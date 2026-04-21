@@ -75,7 +75,5 @@ func spawn_player(spawn_point: Vector2):
 	health = max_health  
 
 
-
-
 func change_player(player: int) -> void:
 	pass
