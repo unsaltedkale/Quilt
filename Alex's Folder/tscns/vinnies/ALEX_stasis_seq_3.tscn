@@ -3214,6 +3214,9 @@ position = Vector2(233, -323)
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -155)
 
+[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
+bus = &"Master"
+
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 visible = false
 

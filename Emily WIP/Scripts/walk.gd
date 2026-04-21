@@ -5,6 +5,7 @@ signal stop_footsteps()
 
 func Enter(previous_state: State):
 	if player.crouch_speed == true:
+		print("yus")
 		walk_speed = 100
 		_crouch_control()
 	play_footsteps.emit()
@@ -18,7 +19,7 @@ func Update(_delta):
 		an.play("phlo_idle")
 	else:
 		if player.quilt_crouch.disabled == false:
-			an.play("crouch_idle")
+			an.play("crouch_walk")
 		else:
 			an.play("walk")
 
