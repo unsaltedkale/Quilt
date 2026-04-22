@@ -41,15 +41,21 @@ func shoot():
 func Enter(previous_state: State):
 	
 	#if colliding with non-magical zone
+	'''
+	get tiles 2D child, tilemap position
+	get player global position relative to tilemap
+	'''
 		#trasnition idle
 	#else:
-	
-	timer = 10.0/60.0
-	shoot()
-	if player.quilt_crouch.disabled:
-		player.velocity = recoil_vel_equation()
-	player.collected_objects -= 1
-	recoil = true
+	if player.no_recoil == true:
+		timer = 10.0/60.0
+		shoot()
+		if player.quilt_crouch.disabled:
+			player.velocity = recoil_vel_equation()
+		player.collected_objects -= 1
+		recoil = true
+	else:
+		Transition.emit(self, "idle")
 	
 func Physics_Update(_delta):
 	_recoil_recharge_check()

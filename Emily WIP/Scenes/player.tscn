@@ -54,6 +54,9 @@ height = 20.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjwd1"]
 radius = 6.25
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jo8y"]
+size = Vector2(11.25, 10.75)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
 shader = ExtResource("2_3uy0y")
 shader_parameter/onoff = 0
@@ -1618,6 +1621,7 @@ script = ExtResource("1_jfghr")
 max_objects = 1
 
 [node name="recoil_indicator" type="Sprite2D" parent="." unique_id=1283703100]
+visible = false
 modulate = Color(1, 0.9490196, 0.94509804, 0.8901961)
 scale = Vector2(2, 2)
 texture = ExtResource("2_icvrh")
@@ -1637,6 +1641,16 @@ position = Vector2(-0.25, 0.5)
 scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
 disabled = true
+
+[node name="TileMapCheck" type="Area2D" parent="." unique_id=529154427]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapCheck" unique_id=682589927]
+position = Vector2(0.625, 8.375)
+shape = SubResource("RectangleShape2D_1jo8y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=725135239]
 material = SubResource("ShaderMaterial_1nwdr")
