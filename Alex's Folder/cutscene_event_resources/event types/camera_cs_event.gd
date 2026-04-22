@@ -29,11 +29,11 @@ func execute(cutscene_trigger: Node) -> void:
 	
 	# doesn't work -> animatorp.flip_h = horizontal_flip
 	if change_position && position_is_relative:
-			tween.tween_property(camerap, "position", position, time).as_relative()
+			tween.tween_property(camerap, "global_position", position, time).as_relative()
 	if change_zoom && zoom_is_relative:	
 		tween.tween_property(camerap, "zoom", zoom, time).as_relative()
 	if change_position && not position_is_relative:
-		tween.tween_property(camerap, "position", position, time)
+		tween.tween_property(camerap, "global_position", position, time)
 	if change_zoom && not zoom_is_relative:	
 		tween.tween_property(camerap, "zoom", zoom, time)
 	

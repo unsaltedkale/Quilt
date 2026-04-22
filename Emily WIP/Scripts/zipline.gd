@@ -13,15 +13,29 @@ class_name zipline_obj
 @export var reverse_time: float
 @export var reverse_time_max = 2
 
+@export var dot = preload("res://Alex's Folder/tscns/zipline_dot.tscn")
+
 func _ready() -> void:
 	respawning = false
-	position = start_position
+	global_position = start_position
 	ani.play("idle")
 	reverse_time = reverse_time_max
 	if get_tree().root.get_child(0).find_child("Req") != null:
 		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
 	else:
 		player = $"../Player"
+		
+	var d = dot.instantiate()
+	d.global_position = start_position
+	
+	var e = dot.instantiate()
+	e.global_position = end_position
+	
+	get_tree().current_scene.add_child.call_deferred(d)
+	get_tree().current_scene.add_child.call_deferred(e)
+	
+	print(d.position)
+	print(d.global_position)
 
 func _on_player_death():
 	global_position = start_position

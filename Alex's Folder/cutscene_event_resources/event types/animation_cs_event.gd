@@ -6,17 +6,31 @@ class_name animation_cutscene_event
 @export var animation_name: String
 @export var horizontal_flip: bool
 
+var req = preload("res://Alex's Folder/gds/req.gd")
 
 func execute(cutscene_trigger: Node) -> void:
 	
 	var animatorp
 	
-	if cutscene_trigger.get_tree().root.get_child(0).find_child("Req") != null:
+	if cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.staging:
 	
+		print("staging")
+		
 		animatorp = cutscene_trigger.get_node(str(animator))
 		
 		if animatorp is not AnimatedSprite2D:
 			animatorp = cutscene_trigger.get_node(str(animator) + "/AnimatedSprite2D")
+		
+	elif cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.prod:
+		
+		print("prod")
+		
+		animatorp = cutscene_trigger.get_node("../" + str(animator))
+		
+		if animatorp is not AnimatedSprite2D:
+			animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
+		
+		pass
 	
 	else:
 		print("click")

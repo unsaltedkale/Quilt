@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://blcvns0oudln0"]
 
+[ext_resource type="Script" uid="uid://b5phg8gwp5lpp" path="res://Alex's Folder/gds/req.gd" id="1_abkbx"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="1_d76ap"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="2_me2gu"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="3_abkbx"]
@@ -38,12 +39,13 @@ expand_margin_top = 3.0
 expand_margin_right = 4.0
 expand_margin_bottom = 3.0
 
-[node name="Req" type="Node2D" unique_id=276038067]
+[node name="Req" type="Node2D" unique_id=276038067 groups=["Req"]]
+script = ExtResource("1_abkbx")
 
 [node name="Player" parent="." unique_id=1296307351 instance=ExtResource("1_d76ap")]
 position = Vector2(-561, -130)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=218093542]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=218093542 groups=["Camera"]]
 position = Vector2(8681, -1279)
 scale = Vector2(4, 4)
 zoom = Vector2(0.5, 0.5)
@@ -55,7 +57,6 @@ script = ExtResource("2_me2gu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=432694589]
 stream = SubResource("AudioStreamWAV_xj211")
-bus = &"Music Master"
 
 [node name="Conductor" parent="." unique_id=438348041 instance=ExtResource("3_abkbx")]
 position = Vector2(-211.9961, -1082)
@@ -63,6 +64,7 @@ scale = Vector2(4, 4)
 current_music_resource = ExtResource("4_d76ap")
 
 [node name="phlo_backpack" parent="." unique_id=47144264 instance=ExtResource("5_4jxkh")]
+visible = false
 position = Vector2(-511, -185)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=356970283]
@@ -129,4 +131,3 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("10_me2gu")
-DialogueUI = null

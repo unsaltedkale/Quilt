@@ -8,20 +8,28 @@ class_name movement_cutscene_event
 @export var is_relative: bool
 @export var horizontal_flip: bool
 
+var req = preload("res://Alex's Folder/gds/req.gd")
+
 
 func execute(cutscene_trigger: Node) -> void:
 	var tween = cutscene_trigger.get_tree().create_tween()
 	var moverp
 	
-	if cutscene_trigger.get_tree().root.get_child(0).find_child("Req") != null:
+	if cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.staging:
 	
+		print("staging")
+		
 		moverp = cutscene_trigger.get_node(str(mover))
 		
 		print("mover: " + str(mover))
 		
-	elif cutscene_trigger.get_tree().root.get_child(0):
+	elif cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.prod:
+		
+		print("prod")
+		
+		moverp = cutscene_trigger.get_node("../" + str(mover))
+		
 		pass
-		# in container situaiton
 	
 	else:
 		print("click")
@@ -34,9 +42,9 @@ func execute(cutscene_trigger: Node) -> void:
 	
 	
 	if is_relative:
-		tween.tween_property(moverp, "position", target, time).as_relative()
+		tween.tween_property(moverp, "global_position", target, time).as_relative()
 	elif not is_relative:
-		tween.tween_property(moverp, "position", target, time)
+		tween.tween_property(moverp, "global_position", target, time)
 	if wait_until_done:
 		await tween.finished
 	
