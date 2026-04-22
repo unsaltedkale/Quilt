@@ -13,25 +13,34 @@ func idle_quilt():
 func Enter(previous_state: State):
 	if player.crouch_speed == true:
 		_crouch_control()
-	else:
-		#idle_quilt()
-		_recoil_recharge_check()
+	if player.start_wump == true:
+		an.play("phlo_mini_wump")
+	_recoil_recharge_check()
 
 func Exit():
 	pass
 
+func _anim_end():
+	print("sup")
+	var anim = str(an.animation)
+	if anim == "phlo_mini_wump":
+		player.start_wump = false
+	else:
+		idle_quilt()
+
 func Physics_Update(_delta):
-	_recoil_recharge_check()
-	
-	idle_quilt()
-	
-	_change_state()
-	
-	_crouch_control()
-	if player.crouch_speed == true and walk_speed != 100:
-		walk_speed = 100
-	elif player.crouch_speed == false and walk_speed == 100:
-		walk_speed = 800
+	if player.start_wump == false:
+		_recoil_recharge_check()
+		idle_quilt()
+		_change_state()
+		_crouch_control()
+		if player.crouch_speed == true and walk_speed != 100:
+			walk_speed = 100
+		elif player.crouch_speed == false and walk_speed == 100:
+			walk_speed = 800
+	else:
+		walk_speed = 0
+		pass
 
 
 func _change_state() -> void:

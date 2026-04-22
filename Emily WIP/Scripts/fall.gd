@@ -36,7 +36,7 @@ func Update(_delta):
 func land():
 	if fall_timer >= .9:
 		if player.is_phlo:
-			an.play("phlo_mini_wump")
+			player.start_wump = true
 		else:
 			an.play("land")
 	else:
@@ -65,7 +65,6 @@ func Physics_Update(_delta):
 		land()
 		if fall_timer - time_since_last_jump_press <= PLAYER_DATA.jump_buffer_time:
 			Transition.emit(self, "jump")
-
 		Transition.emit(self, "idle")
 		has_landed.emit() #signal to play landing sfx
 		if not player.is_phlo:
@@ -76,10 +75,3 @@ func Physics_Update(_delta):
 		Transition.emit(self, "wallstick")
 	
 	_crouch_control()
-
-func _on_animation_finished():
-	var anim = str($"../../AnimatedSprite2D".animation)
-	if anim == "phlo_mini_wump" or "phlo_land":
-		Transition.emit(self, "idle")
-	elif anim == "land":
-		Transition.emit(self, "idle")
