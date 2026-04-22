@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="2_jbwj1"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="3_qrawa"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="4_jbwj1"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="5_qrawa"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4c57u"]
 
@@ -835,10 +836,15 @@ zoom = Vector2(0.4, 0.4)
 script = ExtResource("2_jbwj1")
 
 [node name="Player" parent="." unique_id=796459201 instance=ExtResource("3_qrawa")]
-position = Vector2(7166, 2748)
+position = Vector2(5349, 1423)
+is_phlo = true
 
 [node name="Stasis" parent="." unique_id=1377558403 instance=ExtResource("4_jbwj1")]
 position = Vector2(2263, 505)
 
 [node name="Stasis2" parent="." unique_id=650201569 instance=ExtResource("4_jbwj1")]
 position = Vector2(3354, 1638)
+
+[node name="STAR" parent="." unique_id=1440804062 instance=ExtResource("5_qrawa")]
+position = Vector2(5128, 1524)
+respawns = true

@@ -1642,7 +1642,7 @@ disabled = true
 material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(0, 0.25)
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"idle"
+animation = &"phlo_wump"
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." unique_id=621642771 node_paths=PackedStringArray("initial_state")]
@@ -1745,7 +1745,7 @@ bus = &"SFXMaster"
 [node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
 rect = Rect2(-10, -21.5, 20, 44)
 
-[connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Fall" method="_on_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Idle" method="_anim_end"]
 [connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]
 [connection signal="stop_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="stop"]
 [connection signal="jump_sound" from="StateMachine/Jump" to="SFX/Jump" method="play"]

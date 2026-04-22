@@ -26,6 +26,7 @@ signal player_death
 var jump_count : int
 
 var crouch_speed : bool
+var start_wump : bool
 
 func _ready() -> void:
 	health = max_health
@@ -62,8 +63,8 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	#print_debug("NAME:" + str(body.name))
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
-		
-	
+	if body.name == "Unmagical_Barrier":
+		var in_barrier : bool = true
 #Respawn
 func set_checkpoint(pos):
 	spawn_point = pos
