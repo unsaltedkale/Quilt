@@ -4725,12 +4725,6 @@ position = Vector2(233, -323)
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -155)
 
-[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
-bus = &"Master"
-
-[node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
-visible = false
-
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
@@ -4751,17 +4745,17 @@ tile_set = SubResource("TileSet_rq4vl")
 
 [node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAqAAoAAAAUAAAAAAAqAAkAAAAUAAAAAAAqAAgAAAAUAAAAAAAqAAcAAAAUAAAAAAAqAAYAAAAUAAAAAAAqAAUAAAAUAAAAAAAMAPv/AAAXAAoAAAAMAPz/AAAXAAsAAAAMAP3/AAAXAAwAAAAMAPj/AAAXAAoAAAAMAPn/AAAXAAsAAAAMAPr/AAAXAAwAAAA=")
+tile_map_data = PackedByteArray("AAAMAPv/AAAXAAoAAAAMAPz/AAAXAAsAAAAMAP3/AAAXAAwAAAAMAPj/AAAXAAoAAAAMAPn/AAAXAAsAAAAMAPr/AAAXAAwAAAA=")
 tile_set = SubResource("TileSet_eulau")
 
 [node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["tilemap"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AABmAB0AAAAAAAAAAABmAB4AAAAAAAAAAABmAB8AAAAAAAAAAAAQAPv/AAADAB0AAAAQAPz/AAADAB4AAAAQAP3/AAADAB8AAAAQAPj/AAADAB0AAAAQAPn/AAADAB4AAAAQAPr/AAADAB8AAAA=")
+tile_map_data = PackedByteArray("AAAQAPv/AAADAB0AAAAQAPz/AAADAB4AAAAQAP3/AAADAB8AAAAQAPj/AAADAB0AAAAQAPn/AAADAB4AAAAQAPr/AAADAB8AAAA=")
 tile_set = SubResource("TileSet_6pqo5")
 
 [node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AABPACMAAAATAAUAAABPACQAAAATAAYAAABPACUAAAATAAYAAABPACYAAAATAAYAAAD9//f/AAADAAoAAAD9//j/AAADAAsAAAD9//n/AAADAAwAAAADAPP/AAADAAoAAFACAPP/AAADAAsAAFABAPP/AAADAAwAAFA=")
+tile_map_data = PackedByteArray("AAD9//f/AAADAAoAAAD9//j/AAADAAsAAAD9//n/AAADAAwAAAADAPP/AAADAAoAAFACAPP/AAADAAsAAFABAPP/AAADAAwAAFA=")
 tile_set = SubResource("TileSet_5e7ya")
 
 [node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
