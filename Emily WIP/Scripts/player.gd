@@ -32,6 +32,7 @@ var no_recoil : bool
 func _ready() -> void:
 	health = max_health
 	spawn_point = global_position
+	no_recoil = false
 
 func _process(_delta: float) -> void:
 	if velocity.x > 0:
@@ -40,6 +41,10 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 	if is_on_floor():
 		jump_count = 0
+		
+	#print(no_recoil)
+	
+	
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
@@ -66,6 +71,7 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 		take_damage(1)
 
 func _on_area_entered(body: Area2D):
+	print("click")
 	if body.name == "Unmagical_Barrier":
 		no_recoil = true
 

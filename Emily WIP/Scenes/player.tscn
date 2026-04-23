@@ -1759,6 +1759,7 @@ bus = &"SFXMaster"
 [node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
 rect = Rect2(-10, -21.5, 20, 44)
 
+[connection signal="area_entered" from="TileMapCheck" to="." method="_on_area_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Idle" method="_anim_end"]
 [connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]
 [connection signal="stop_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="stop"]

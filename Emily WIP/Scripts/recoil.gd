@@ -47,7 +47,7 @@ func Enter(previous_state: State):
 	'''
 		#trasnition idle
 	#else:
-	if player.no_recoil == true:
+	if player.no_recoil == false:
 		timer = 10.0/60.0
 		shoot()
 		if player.quilt_crouch.disabled:

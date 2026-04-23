@@ -14,6 +14,7 @@ class_name zipline_obj
 @export var reverse_time_max = 2
 
 @export var dot = preload("res://Alex's Folder/tscns/zipline_dot.tscn")
+@export var line = preload("res://Alex's Folder/tscns/zipline_line.tscn")
 
 func _ready() -> void:
 	respawning = false
@@ -31,8 +32,14 @@ func _ready() -> void:
 	var e = dot.instantiate()
 	e.global_position = end_position
 	
+	var del = line.instantiate()
+	del.clear_points()
+	del.add_point(start_position)
+	del.add_point(end_position)
+	
 	get_tree().current_scene.add_child.call_deferred(d)
 	get_tree().current_scene.add_child.call_deferred(e)
+	get_tree().current_scene.add_child.call_deferred(del)
 	
 	print(d.position)
 	print(d.global_position)
