@@ -41,7 +41,7 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 	if is_on_floor():
 		jump_count = 0
-		
+	
 	#print(no_recoil)
 	
 	
@@ -66,14 +66,26 @@ func die():
 	spawn_player(spawn_point)
 	
 func _on_hit_box_body_entered(body: Node2D) -> void:
-	#print_debug("NAME:" + str(body.name))
+	print_debug("NAME:" + str(body.name))
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
 
 func _on_area_entered(body: Area2D):
-	print("click")
-	if body.name == "Unmagical_Barrier":
+	#Unmagical barrier detection work with on area entered. must be body. for
+	#SOME REASON?!?!?!?!
+	pass
+		
+func _on_tile_map_check_body_entered(body: Node2D) -> void:
+	print_debug("ENTERED:" + str(body.name))
+	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
 		no_recoil = true
+	pass # Replace with function body.
+
+func _on_tile_map_check_body_exited(body: Node2D) -> void:
+	print_debug("EXITED:" + str(body.name))
+	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
+		no_recoil = false
+	pass # Replace with function body.
 
 #Respawn
 func set_checkpoint(pos):
