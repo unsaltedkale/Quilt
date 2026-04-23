@@ -31,7 +31,7 @@ func _on_lever_changed(new_state: String):
 		
 	
 
-func _physics_process(delta):
+func _physics_process(delta):		
 	if _waiting:
 		return
 
@@ -49,3 +49,7 @@ func _wait():
 	_waiting = true
 	await get_tree().create_timer(wait_time).timeout
 	_waiting = false
+	
+	
+	
+	
