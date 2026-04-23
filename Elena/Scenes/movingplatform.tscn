@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dacoqwe3msj05"]
 
 [ext_resource type="Script" uid="uid://chkiutvlrmjjr" path="res://Elena/Scripts/movingplatform.gd" id="1_7qba8"]
-[ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="2_rwlvc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
 size = Vector2(326, 58)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1dysu"]
+load_path = "res://.godot/imported/tilesheet_complete.png-0c56dbab861f26a1f65a00b9cbe41a19.ctex"
 
 [node name="MovingPlatform" type="AnimatableBody2D" unique_id=1943217819 groups=["Environmental Feature"]]
 script = ExtResource("1_7qba8")
@@ -17,6 +19,6 @@ shape = SubResource("RectangleShape2D_lpq4i")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=135997064]
 position = Vector2(2.0000076, 0.9999962)
 scale = Vector2(2.5000002, 1.7578125)
-texture = ExtResource("2_rwlvc")
+texture = SubResource("CompressedTexture2D_1dysu")
 region_enabled = true
 region_rect = Rect2(448, 64, 128, 64)

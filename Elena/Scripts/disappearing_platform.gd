@@ -22,13 +22,7 @@ func _process(_delta: float) -> void:
 	if player != null:
 		if not player.player_death.is_connected(reset_platforms):
 			player.player_death.connect(reset_platforms)
-	#if player == null:
-		#if get_tree().root.get_child(0).find_child("Req") != null:
-			#player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
-			#print(player)
-			#
-		#elif get_tree().root.find_child("Player") != null:
-			#player = $"../Player"
+			
 	else:
 		if get_tree().get_first_node_in_group("Req") != null:
 			player = get_tree().get_first_node_in_group("Player")

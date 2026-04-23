@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2x1phn2coruw"]
 
 [ext_resource type="Script" uid="uid://c5rhlghlmoruo" path="res://Elena/Scripts/disappearing_platform.gd" id="1_bhhk5"]
-[ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="2_y4u5j"]
+[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="2_y4u5j"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y4u5j"]
 
@@ -22,7 +22,7 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709421900]
 texture = ExtResource("2_y4u5j")
 region_enabled = true
-region_rect = Rect2(320, 128, 128, 64)
+region_rect = Rect2(192, 128, 128, 64)
 
 [node name="DeathArea" type="Area2D" parent="." unique_id=799005219]
 
