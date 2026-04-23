@@ -5,7 +5,6 @@ extends RigidBody2D
 @onready var start_rotation
 @export var time: float
 
-
 func _ready() -> void:
 	
 	if get_tree().get_first_node_in_group("Req") != null:
@@ -45,22 +44,28 @@ func _on_timer_area_body_entered(body: Node2D) -> void:
 func _on_death_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		player.take_damage(1)
-		in_holding()
+		self.modulate.a = 0
+		$DeathArea/DeathCollision.set_deferred("disabled", true)
+		set_collision_layer_value(1, false)
 		
 		
 	if body.is_in_group("tilemap"):
-		in_holding()
+		self.modulate.a = 0
+		$DeathArea/DeathCollision.set_deferred("disabled", true)
+		set_collision_layer_value(1, false)
 
-func in_holding():
-	self.modulate = 0
-	$DeathArea/DeathCollision.set_deferred("disabled", true)
-	set_collision_layer_value(1, false)
-	
 
 func reset_platforms():
-	self.modulate = 1
-	print("platforms respawning")
-	self.gravity_scale = 0
+	linear_velocity = Vector2.ZERO
+	angular_velocity = 0.0
+	gravity_scale = 0
 	global_position = start_position
+	rotation = start_rotation
+	self.modulate.a = 1
+	set_collision_layer_value(1, true)
+	$DeathArea/DeathCollision.set_deferred("disabled", false)
+	
+	
+	
 	
 	
