@@ -1,22 +1,13 @@
-[gd_scene format=4 uid="uid://d04ijf60ctwlh"]
+[gd_scene format=4 uid="uid://sprvnuwmranp"]
 
-[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_cmoiv"]
-[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_8co1s"]
-[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_v4rec"]
-[ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="4_v1auy"]
-[ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_u8gbe"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="6_6xldd"]
-[ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="7_h1u4y"]
-[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="8_qlomd"]
-[ext_resource type="Resource" uid="uid://cshhei7elby56" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_container.tres" id="9_djcbf"]
-[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="10_xl3ft"]
-[ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="11_ix47r"]
-[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="12_vsl06"]
-[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="13_kk0h4"]
-[ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="14_3dmwd"]
-[ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="15_3dg56"]
-[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="16_qk281"]
-[ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="17_8gwif"]
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_4lsxw"]
+[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_uhiqi"]
+[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_dw5gy"]
+[ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="4_shj4a"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="5_1decq"]
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="7_2rilt"]
+[ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="9_81nnw"]
+[ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="10_r2nvr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -1651,7 +1642,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
-texture = ExtResource("3_v4rec")
+texture = ExtResource("3_dw5gy")
 texture_region_size = Vector2i(32, 32)
 0:7/0 = 0
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 16, -16, 16)
@@ -3173,7 +3164,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fg0v8")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq4vl"]
-texture = ExtResource("3_v4rec")
+texture = ExtResource("3_dw5gy")
 texture_region_size = Vector2i(32, 32)
 38:37/0 = 0
 37:37/0 = 0
@@ -4678,7 +4669,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_rq4vl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2847"]
-texture = ExtResource("3_v4rec")
+texture = ExtResource("3_dw5gy")
 texture_region_size = Vector2i(32, 32)
 0:10/0 = 0
 0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -4719,109 +4710,62 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 
 [node name="VinnieTemplate" type="Node2D" unique_id=467354812]
 
-[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_cmoiv")]
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_4lsxw")]
 position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(107, -155)
+position = Vector2(-1660, 136)
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AACAAPT/AAAJAAQAAACAAPP/AAAJAAQAAACAAPL/AAAJAAQAAACAAPH/AAAJAAQAAACAAPD/AAAJAAQAAACAAO//AAAJAAQAAACAAO7/AAAJAAQAAACAAO3/AAAJAAQAAACAAOz/AAAJAAQAAACAAOv/AAAJAAQAAACAAOr/AAAJAAQAAACAAOn/AAAJAAQAAAA=")
-tile_set = ExtResource("2_8co1s")
+tile_set = ExtResource("2_uhiqi")
 collision_enabled = false
 
 [node name="Collision" type="TileMapLayer" parent="Tiles" unique_id=982493535 groups=["tilemap"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAADy/wEAAAADAAMAAADy/wIAAAADAAQAAADy/wMAAAADAAUAAADz/wEAAAAEAAMAAADz/wIAAAAEAAQAAADz/wMAAAAEAAUAAAD0/wEAAAAFAAMAAAD0/wIAAAAFAAQAAAD0/wMAAAAFAAUAAAD1/wEAAAADAAMAAAD1/wIAAAADAAQAAAD1/wMAAAADAAUAAAD2/wEAAAAEAAMAAAD2/wIAAAAEAAQAAAD2/wMAAAAEAAUAAAD3/wEAAAAFAAMAAAD3/wIAAAAFAAQAAAD3/wMAAAAFAAUAAAD4/wEAAAADAAMAAAD4/wIAAAADAAQAAAD4/wMAAAADAAUAAAD5/wEAAAAEAAMAAAD5/wIAAAAEAAQAAAD5/wMAAAAEAAUAAAD6/wEAAAAFAAMAAAD6/wIAAAAFAAQAAAD6/wMAAAAFAAUAAAD7/wEAAAADAAMAAAD7/wIAAAADAAQAAAD7/wMAAAADAAUAAAD8/wEAAAAEAAMAAAD8/wIAAAAEAAQAAAD8/wMAAAAEAAUAAAD9/wEAAAAFAAMAAAD9/wIAAAAFAAQAAAD9/wMAAAAFAAUAAAD+/wEAAAADAAMAAAD+/wIAAAADAAQAAAD+/wMAAAADAAUAAAD//wEAAAAEAAMAAAD//wIAAAAEAAQAAAD//wMAAAAEAAUAAAAAAAEAAAAFAAMAAAAAAAIAAAAFAAQAAAAAAAMAAAAFAAUAAAABAAEAAAADAAMAAAABAAIAAAADAAQAAAABAAMAAAADAAUAAAACAAEAAAAEAAMAAAACAAIAAAAEAAQAAAACAAMAAAAEAAUAAAADAAEAAAAFAAMAAAADAAIAAAAFAAQAAAADAAMAAAAFAAUAAAAEAAEAAAADAAMAAAAEAAIAAAADAAQAAAAEAAMAAAADAAUAAAAFAAEAAAAEAAMAAAAFAAIAAAAEAAQAAAAFAAMAAAAEAAUAAAAGAAEAAAAFAAMAAAAGAAIAAAAFAAQAAAAGAAMAAAAFAAUAAAAHAAEAAAADAAMAAAAHAAIAAAADAAQAAAAHAAMAAAADAAUAAAAIAAEAAAAEAAMAAAAIAAIAAAAEAAQAAAAIAAMAAAAEAAUAAAAJAAEAAAAFAAMAAAAJAAIAAAAFAAQAAAAJAAMAAAAFAAUAAAAKAAEAAAADAAMAAAAKAAIAAAADAAQAAAAKAAMAAAADAAUAAAALAAEAAAAEAAMAAAALAAIAAAAEAAQAAAALAAMAAAAEAAUAAAAMAAEAAAAFAAMAAAAMAAIAAAAFAAQAAAAMAAMAAAAFAAUAAAA=")
+tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAD9/wAAAAADAAMAAAD9/wEAAAADAAQAAAD9/wIAAAADAAUAAAD+/wAAAAAEAAMAAAD+/wEAAAAEAAQAAAD+/wIAAAAEAAUAAAD//wAAAAAFAAMAAAD//wEAAAAFAAQAAAD//wIAAAAFAAUAAAD6/wAAAAADAAMAAAD6/wEAAAADAAQAAAD6/wIAAAADAAUAAAD7/wAAAAAEAAMAAAD7/wEAAAAEAAQAAAD7/wIAAAAEAAUAAAD8/wAAAAAFAAMAAAD8/wEAAAAFAAQAAAD8/wIAAAAFAAUAAAD3/wAAAAADAAMAAAD3/wEAAAADAAQAAAD3/wIAAAADAAUAAAD4/wAAAAAEAAMAAAD4/wEAAAAEAAQAAAD4/wIAAAAEAAUAAAD5/wAAAAAFAAMAAAD5/wEAAAAFAAQAAAD5/wIAAAAFAAUAAAD0/wAAAAADAAMAAAD0/wEAAAADAAQAAAD0/wIAAAADAAUAAAD1/wAAAAAEAAMAAAD1/wEAAAAEAAQAAAD1/wIAAAAEAAUAAAD2/wAAAAAFAAMAAAD2/wEAAAAFAAQAAAD2/wIAAAAFAAUAAADx/wAAAAADAAMAAADx/wEAAAADAAQAAADx/wIAAAADAAUAAADy/wAAAAAEAAMAAADy/wEAAAAEAAQAAADy/wIAAAAEAAUAAADz/wAAAAAFAAMAAADz/wEAAAAFAAQAAADz/wIAAAAFAAUAAAARAAAAAAADAAMAAAARAAEAAAADAAQAAAARAAIAAAADAAUAAAASAAAAAAAEAAMAAAASAAEAAAAEAAQAAAASAAIAAAAEAAUAAAATAAAAAAAFAAMAAAATAAEAAAAFAAQAAAATAAIAAAAFAAUAAAAUAAAAAAADAAMAAAAUAAEAAAADAAQAAAAUAAIAAAADAAUAAAAVAAAAAAAEAAMAAAAVAAEAAAAEAAQAAAAVAAIAAAAEAAUAAAAWAAAAAAAFAAMAAAAWAAEAAAAFAAQAAAAWAAIAAAAFAAUAAAAXAAAAAAADAAMAAAAXAAEAAAADAAQAAAAXAAIAAAADAAUAAAAYAAAAAAAEAAMAAAAYAAEAAAAEAAQAAAAYAAIAAAAEAAUAAAAZAAAAAAAFAAMAAAAZAAEAAAAFAAQAAAAZAAIAAAAFAAUAAAAaAAAAAAADAAMAAAAaAAEAAAADAAQAAAAaAAIAAAADAAUAAAAbAAAAAAAEAAMAAAAbAAEAAAAEAAQAAAAbAAIAAAAEAAUAAAAcAAAAAAAFAAMAAAAcAAEAAAAFAAQAAAAcAAIAAAAFAAUAAAD9/wMAAAADAAQAAAD9/wQAAAADAAUAAAD+/wMAAAAEAAQAAAD+/wQAAAAEAAUAAAD//wMAAAAFAAQAAAD//wQAAAAFAAUAAAD9/wUAAAADAAQAAAD9/wYAAAADAAUAAAD+/wUAAAAEAAQAAAD+/wYAAAAEAAUAAAD//wUAAAAFAAQAAAD//wYAAAAFAAUAAAD9/wcAAAADAAQAAAD9/wgAAAADAAUAAAD+/wcAAAAEAAQAAAD+/wgAAAAEAAUAAAD//wcAAAAFAAQAAAD//wgAAAAFAAUAAAAAAAcAAAADAAQAAAAAAAgAAAADAAUAAAABAAcAAAAEAAQAAAABAAgAAAAEAAUAAAACAAcAAAAFAAQAAAACAAgAAAAFAAUAAAADAAcAAAADAAQAAAADAAgAAAADAAUAAAAEAAcAAAAEAAQAAAAEAAgAAAAEAAUAAAAFAAcAAAAFAAQAAAAFAAgAAAAFAAUAAAAGAAcAAAADAAQAAAAGAAgAAAADAAUAAAAHAAcAAAAEAAQAAAAHAAgAAAAEAAUAAAAIAAcAAAAFAAQAAAAIAAgAAAAFAAUAAAAJAAcAAAADAAQAAAAJAAgAAAADAAUAAAAKAAcAAAAEAAQAAAAKAAgAAAAEAAUAAAALAAcAAAAFAAQAAAALAAgAAAAFAAUAAAAMAAcAAAADAAQAAAAMAAgAAAADAAUAAAANAAcAAAAEAAQAAAANAAgAAAAEAAUAAAAOAAcAAAAFAAQAAAAOAAgAAAAFAAUAAAAPAAcAAAADAAQAAAAPAAgAAAADAAUAAAAQAAcAAAAEAAQAAAAQAAgAAAAEAAUAAAARAAcAAAAFAAQAAAARAAgAAAAFAAUAAAASAAcAAAADAAQAAAASAAgAAAADAAUAAAATAAcAAAAEAAQAAAATAAgAAAAEAAUAAAAUAAcAAAAFAAQAAAAUAAgAAAAFAAUAAAASAAUAAAADAAQAAAASAAYAAAADAAUAAAATAAUAAAAEAAQAAAATAAYAAAAEAAUAAAAUAAUAAAAFAAQAAAAUAAYAAAAFAAUAAAARAAUAAAAFAAQAAAARAAYAAAAFAAUAAAARAAMAAAAFAAQAAAARAAQAAAAFAAUAAAASAAMAAAADAAQAAAASAAQAAAADAAUAAAATAAMAAAAEAAQAAAATAAQAAAAEAAUAAAAUAAMAAAAFAAQAAAAUAAQAAAAFAAUAAAD5//D/AAADAAMAAAD5//H/AAADAAQAAAD5//L/AAADAAUAAAD6//D/AAAEAAMAAAD6//H/AAAEAAQAAAD6//L/AAAEAAUAAAD7//D/AAAFAAMAAAD7//H/AAAFAAQAAAD7//L/AAAFAAUAAAD2//D/AAADAAMAAAD2//H/AAADAAQAAAD2//L/AAADAAUAAAD3//D/AAAEAAMAAAD3//H/AAAEAAQAAAD3//L/AAAEAAUAAAD4//D/AAAFAAMAAAD4//H/AAAFAAQAAAD4//L/AAAFAAUAAADz//D/AAADAAMAAADz//H/AAADAAQAAADz//L/AAADAAUAAAD0//D/AAAEAAMAAAD0//H/AAAEAAQAAAD0//L/AAAEAAUAAAD1//D/AAAFAAMAAAD1//H/AAAFAAQAAAD1//L/AAAFAAUAAADw//D/AAADAAMAAADw//H/AAADAAQAAADw//L/AAADAAUAAADx//D/AAAEAAMAAADx//H/AAAEAAQAAADx//L/AAAEAAUAAADy//D/AAAFAAMAAADy//H/AAAFAAQAAADy//L/AAAFAAUAAADt//D/AAADAAMAAADt//H/AAADAAQAAADt//L/AAADAAUAAADu//D/AAAEAAMAAADu//H/AAAEAAQAAADu//L/AAAEAAUAAADv//D/AAAFAAMAAADv//H/AAAFAAQAAADv//L/AAAFAAUAAADq//D/AAADAAMAAADq//H/AAADAAQAAADq//L/AAADAAUAAADr//D/AAAEAAMAAADr//H/AAAEAAQAAADr//L/AAAEAAUAAADs//D/AAAFAAMAAADs//H/AAAFAAQAAADs//L/AAAFAAUAAAABAAMAAAADAAMAAAACAAMAAAADAAMAAAADAAMAAAADAAMAAAAEAAMAAAADAAMAAAA=")
 tile_set = SubResource("TileSet_fg0v8")
 
 [node name="Damgage_Layer" type="TileMapLayer" parent="Tiles" unique_id=770485730 groups=["Damage_Layer"]]
 scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAPAAQAAAAAAAcAAAAPAAUAAAAAAAgAAAAPAAYAAAAAAAkAAAAQAAQAAAAAAAcAAAAQAAUAAAAAAAgAAAAQAAYAAAAAAAkAAAAOAAQAAAAAAAcAAAAOAAUAAAAAAAgAAAAOAAYAAAAAAAkAAAANAAQAAAAAAAcAAAANAAUAAAAAAAgAAAANAAYAAAAAAAkAAAAMAAQAAAAAAAcAAAAMAAUAAAAAAAgAAAAMAAYAAAAAAAkAAAALAAQAAAAAAAcAAAALAAUAAAAAAAgAAAALAAYAAAAAAAkAAAAKAAQAAAAAAAcAAAAKAAUAAAAAAAgAAAAKAAYAAAAAAAkAAAAJAAQAAAAAAAcAAAAJAAUAAAAAAAgAAAAJAAYAAAAAAAkAAAAIAAQAAAAAAAcAAAAIAAUAAAAAAAgAAAAIAAYAAAAAAAkAAAAHAAQAAAAAAAcAAAAHAAUAAAAAAAgAAAAHAAYAAAAAAAkAAAAGAAQAAAAAAAcAAAAGAAUAAAAAAAgAAAAGAAYAAAAAAAkAAAAFAAQAAAAAAAcAAAAFAAUAAAAAAAgAAAAFAAYAAAAAAAkAAAAEAAQAAAAAAAcAAAAEAAUAAAAAAAgAAAAEAAYAAAAAAAkAAAADAAQAAAAAAAcAAAADAAUAAAAAAAgAAAADAAYAAAAAAAkAAAACAAQAAAAAAAcAAAACAAUAAAAAAAgAAAACAAYAAAAAAAkAAAABAAQAAAAAAAcAAAABAAUAAAAAAAgAAAABAAYAAAAAAAkAAAAAAAQAAAAAAAcAAAAAAAUAAAAAAAgAAAAAAAYAAAAAAAkAAAA=")
 tile_set = SubResource("TileSet_rq4vl")
 
 [node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAMAPv/AAAXAAoAAAAMAPz/AAAXAAsAAAAMAP3/AAAXAAwAAAAMAPj/AAAXAAoAAAAMAPn/AAAXAAsAAAAMAPr/AAAXAAwAAAA=")
 tile_set = SubResource("TileSet_eulau")
 
 [node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["tilemap"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAQAPv/AAADAB0AAAAQAPz/AAADAB4AAAAQAP3/AAADAB8AAAAQAPj/AAADAB0AAAAQAPn/AAADAB4AAAAQAPr/AAADAB8AAAA=")
 tile_set = SubResource("TileSet_6pqo5")
 
 [node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAD9//f/AAADAAoAAAD9//j/AAADAAsAAAD9//n/AAADAAwAAAADAPP/AAADAAoAAFACAPP/AAADAAsAAFABAPP/AAADAAwAAFA=")
 tile_set = SubResource("TileSet_5e7ya")
-
-[node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
-position = Vector2(-38, -171)
-
-[node name="Conductor_Platform" parent="Conductor_Platforms" unique_id=1167135782 instance=ExtResource("4_v1auy")]
-position = Vector2(474, -133)
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
 position = Vector2(-38, -171)
 
-[node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("5_u8gbe")]
-position = Vector2(482, -268)
+[node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("4_shj4a")]
+position = Vector2(-1672, 122)
+
+[node name="checkpoint2" parent="Checkpoints" unique_id=1973848044 instance=ExtResource("4_shj4a")]
+position = Vector2(-1267, -1916)
 
 [node name="Stars" type="Node2D" parent="." unique_id=1803044504]
 position = Vector2(-38, -171)
 
-[node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_6xldd")]
-position = Vector2(652, -300)
+[node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("5_1decq")]
+position = Vector2(1369.0001, -237.99997)
 scale = Vector2(0.9999999, 0.9999999)
-
-[node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
-position = Vector2(-38, -171)
-
-[node name="InteractIndicator" parent="Cutscene Triggers" unique_id=1238723575 instance=ExtResource("7_h1u4y")]
-position = Vector2(823, -214)
-
-[node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("8_qlomd")]
-position = Vector2(823, -66)
-play_on_interact = true
-only_when_grounded = true
-container = ExtResource("9_djcbf")
-indicator = NodePath("../InteractIndicator")
+respawns = true
+respawn_timer_max = 2
 
 [node name="NPCs" type="Node2D" parent="." unique_id=1296886211]
 position = Vector2(-38, -171)
-
-[node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
-position = Vector2(-38, -171)
-
-[node name="Stasis" parent="Stasis Chamber" unique_id=1921201016 instance=ExtResource("10_xl3ft")]
-position = Vector2(987, -261)
-
-[node name="Music Change Triggers" type="Node2D" parent="." unique_id=852063455]
-position = Vector2(-38, -171)
-
-[node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("11_ix47r")]
-position = Vector2(1247, -366)
-track = ExtResource("12_vsl06")
-
-[node name="Zipline" type="Node2D" parent="." unique_id=1757930451]
-position = Vector2(-38, -171)
-
-[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("13_kk0h4")]
-position = Vector2(995, -485)
-
-[node name="One-Way Platforms" type="Node2D" parent="." unique_id=1306004910]
-position = Vector2(-38, -171)
-
-[node name="One_Way_Platform" parent="One-Way Platforms" unique_id=113338548 instance=ExtResource("14_3dmwd")]
-position = Vector2(160, -339)
-
-[node name="Disappearing Platforms" type="Node2D" parent="." unique_id=899769112]
-position = Vector2(-38, -171)
-
-[node name="Disappearing_Platform" parent="Disappearing Platforms" unique_id=607645916 instance=ExtResource("15_3dg56")]
-position = Vector2(-65, -32)
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)
@@ -4829,7 +4773,7 @@ position = Vector2(-38, -171)
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="Particles" unique_id=668623674]
 position = Vector2(183, -1492)
 amount = 30
-texture = ExtResource("16_qk281")
+texture = ExtResource("7_2rilt")
 lifetime = 6.18
 preprocess = 10.0
 speed_scale = 0.45
@@ -4840,10 +4784,16 @@ scale_amount_min = 8.0
 scale_amount_max = 16.0
 color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 
-[node name="Resetpoints" type="Node2D" parent="." unique_id=1227821716]
-position = Vector2(-38, -171)
+[node name="Lever" parent="." unique_id=1838558751 instance=ExtResource("9_81nnw")]
+position = Vector2(2809, -60)
 
-[node name="ResetPoint" parent="Resetpoints" unique_id=126288163 instance=ExtResource("17_8gwif")]
-position = Vector2(286, -145)
+[node name="leverplatform" parent="." unique_id=767755531 instance=ExtResource("10_r2nvr")]
+position = Vector2(400, 0)
+scale = Vector2(2, 2)
+point_a = Vector2(400, 0)
+point_b = Vector2(400, -2000)
+speed = 300.0
+wait_time = 1.0
+lever_path = NodePath("../Lever")
 
 [editable path="Req"]
