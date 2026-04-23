@@ -24,8 +24,6 @@ func _ready() -> void:
 	
 	if get_parent().name == "DialogueScreen":
 		ri = $"../../../../../Player/recoil_indicator"
-	else:
-		ri = $"../Player/recoil_indicator"
 	
 	#KEYBOARD MOUSE = 0, CONTROLLER = 1
 	
@@ -45,40 +43,43 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
-	var i
-	if ri != null:
-		if ri.controller == false:
-			i = 0
-		elif ri.controller == true:
-			i = 1
-		
-		var l = (str(super_array[type][i]))
-		
-		while l.contains("{"):
-			var start = l.find("{")
-			
-			var end = l.find("}", start + 1)
-			
-			var pic = l.substr(start, end - start + 1)
-			
-			var picClean = pic.replace("{", "")
-			
-			picClean = picClean.replace("}", "")
-			
-			#[img=64]res://Art/Tool Tips/ttm_20.png[/img]
-			
-			#if animation not found throw error and play empty 
-			if load("res://Art/Tool Tips/ttm_" + picClean + ".png") != null:
-				l = l.replace("{" + picClean +  "}", "[img=96]res://Art/Tool Tips/ttm_" + picClean + ".png[/img]")
-			else:
-				print_debug("ERROR: Image for text not found. Name: " + picClean)
-			
-			if get_parent().name == "DialogueScreen":
-				l = l.replace("96", "64")
-			
-		text = l
-		#print(text)
+	if ri == null && get_tree().get_first_node_in_group("Player") != null:
+		ri = get_tree().get_first_node_in_group("Player").find_child("recoil_indicator")
 	else:
-		if get_tree().get_first_node_in_group("player") != null:
-			ri = get_tree().get_first_node_in_group("player").find_child("recoil_indicator")
-	pass
+		var i
+		if ri != null:
+			if ri.controller == false:
+				i = 0
+			elif ri.controller == true:
+				i = 1
+			
+			var l = (str(super_array[type][i]))
+			
+			while l.contains("{"):
+				var start = l.find("{")
+				
+				var end = l.find("}", start + 1)
+				
+				var pic = l.substr(start, end - start + 1)
+				
+				var picClean = pic.replace("{", "")
+				
+				picClean = picClean.replace("}", "")
+				
+				#[img=64]res://Art/Tool Tips/ttm_20.png[/img]
+				
+				#if animation not found throw error and play empty 
+				if load("res://Art/Tool Tips/ttm_" + picClean + ".png") != null:
+					l = l.replace("{" + picClean +  "}", "[img=96]res://Art/Tool Tips/ttm_" + picClean + ".png[/img]")
+				else:
+					print_debug("ERROR: Image for text not found. Name: " + picClean)
+				
+				if get_parent().name == "DialogueScreen":
+					l = l.replace("96", "64")
+				
+			text = l
+			#print(text)
+		else:
+			if get_tree().get_first_node_in_group("player") != null:
+				ri = get_tree().get_first_node_in_group("player").find_child("recoil_indicator")
+		pass

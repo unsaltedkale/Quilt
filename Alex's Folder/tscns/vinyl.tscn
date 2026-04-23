@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://d11wvbu82dkqx"]
+
+[ext_resource type="Texture2D" uid="uid://jjwcvy1ydq53" path="res://Art/Quilt Vinyls.png" id="1_miyhb"]
+[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="2_kdra6"]
+[ext_resource type="Resource" uid="uid://cshhei7elby56" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_container.tres" id="3_7bxv6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_laren"]
+radius = 128.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve6mv"]
+atlas = ExtResource("1_miyhb")
+region = Rect2(0, 0, 34, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kdra6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ve6mv")
+}],
+"loop": true,
+"name": &"crypt",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_diytr"]
+radius = 128.09406
+
+[node name="Vinyl" type="Area2D" unique_id=2078547140 groups=["Vinyl"]]
+scale = Vector2(0.75, 0.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=886524472]
+shape = SubResource("CircleShape2D_laren")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1057446240]
+position = Vector2(-0.4999895, 0.4999895)
+scale = Vector2(7.088236, 7.088236)
+sprite_frames = SubResource("SpriteFrames_kdra6")
+animation = &"crypt"
+
+[node name="CutsceneTrigger" parent="." unique_id=673335087 instance=ExtResource("2_kdra6")]
+only_when_grounded = true
+container = ExtResource("3_7bxv6")
+
+[node name="CollisionShape2D" parent="CutsceneTrigger" index="1" unique_id=682882553]
+position = Vector2(0, -5.850763e-07)
+scale = Vector2(1, 0.6)
+shape = SubResource("CircleShape2D_diytr")
+
+[editable path="CutsceneTrigger"]

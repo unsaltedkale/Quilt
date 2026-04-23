@@ -13,9 +13,9 @@ func Enter(previous_state: State):
 	if wall_stick:
 		player.velocity.y += 50 * temp_acc
 		temp_acc += 0.1
-		if player.velocity.y > 240: # some numer
-			player.velocity.y = 240
-		print("body hit wall")
+		if player.velocity.y > 300: # some numer
+			player.velocity.y = 300
+		#print("body hit wall")
 	else:
 		pass
 

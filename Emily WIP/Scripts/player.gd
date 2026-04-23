@@ -25,9 +25,14 @@ signal player_death
 
 var jump_count : int
 
+var crouch_speed : bool
+var start_wump : bool
+var no_recoil : bool
+
 func _ready() -> void:
 	health = max_health
 	spawn_point = global_position
+	no_recoil = false
 
 func _process(_delta: float) -> void:
 	if velocity.x > 0:
@@ -36,6 +41,10 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 	if is_on_floor():
 		jump_count = 0
+		
+	#print(no_recoil)
+	
+	
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
@@ -60,8 +69,12 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	#print_debug("NAME:" + str(body.name))
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
-		
-	
+
+func _on_area_entered(body: Area2D):
+	print("click")
+	if body.name == "Unmagical_Barrier":
+		no_recoil = true
+
 #Respawn
 func set_checkpoint(pos):
 	spawn_point = pos
@@ -71,8 +84,6 @@ func spawn_player(spawn_point: Vector2):
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 	health = max_health  
-
-
 
 
 func change_player(player: int) -> void:

@@ -2,7 +2,7 @@ extends Node
 class_name State
 
 const PLAYER_DATA = preload("uid://c33m5ti1y2ang")
-
+@export var walk_speed: float = 800
 @export var player: CharacterBody2D
 @onready var an = $"../../AnimatedSprite2D"
 var move_dir
@@ -45,7 +45,7 @@ func _physics_process(_delta) -> void:
 				#print("AAAA" + smcs.state_name)
 				move_dir = Input.get_axis("move_left","move_right")
 				if move_dir !=0:
-					player.velocity.x = move_dir * PLAYER_DATA.walk_speed
+					player.velocity.x = move_dir * walk_speed
 				elif move_dir == 0:
 					player.velocity.x = move_toward(player.velocity.x, 0, decceleration * _delta)
 			if player.is_phlo:
@@ -55,20 +55,24 @@ func _physics_process(_delta) -> void:
 				player.get_node("PhloCollider").disabled = false
 			pass
 	
-
 func _crouch_control():
 	if Input.is_action_just_pressed("crouch"):
 		player.quilt_crouch.disabled = false
 		player.quilt_collider.disabled = true
+		player.crouch_speed = true
 	if Input.is_action_just_released("crouch"):
 		player.quilt_collider.disabled = false
 		player.quilt_crouch.disabled = true
+		player.crouch_speed = false
 	pass
 
 func _force_leave_crouch():
 	player.scale.y = 4
 	an.scale.y = 1
 	an.position = Vector2(0,0)
+	player.crouch_speed = false
+	player.quilt_collider.disabled = false
+	player.quilt_crouch.disabled = true
 
 func _recoil_recharge_check():
 	if player.is_on_floor():

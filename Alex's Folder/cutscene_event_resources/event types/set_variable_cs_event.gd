@@ -12,7 +12,20 @@ class_name set_variable_cutscene_event
 
 func execute(cutscene_trigger: Node) -> void:
 	#place holder
-	var actor_real = cutscene_trigger.get_node("../../" + str(actor))
+	var actor_real
+	
+	if cutscene_trigger.get_tree().root.get_child(0).find_child("Req") != null:
+	
+		actor_real = cutscene_trigger.get_node(str(actor))
+	
+	else:
+		print("click")
+		if actor.get_name_count() != 0:
+			actor = str(actor.get_name(actor.get_name_count() - 1))
+		actor_real = cutscene_trigger.get_node("../../" + str(actor))
+	
+	print(actor_real)
+	
 	var value
 	if actor_real.get(variable_name) is bool:
 		value = value_bool

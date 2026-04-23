@@ -6306,7 +6306,7 @@ offset_bottom = -77.0
 script = ExtResource("5_16365")
 
 [node name="Player" parent="." unique_id=520556446 instance=ExtResource("6_y2ndt")]
-position = Vector2(2607, 1041)
+position = Vector2(5533, 1487)
 scale = Vector2(2, 2)
 
 [node name="MovingPlatform" parent="." unique_id=308256681 instance=ExtResource("7_3ov1n")]
@@ -6317,7 +6317,7 @@ point_b = Vector2(9563, 2166)
 [node name="Timer" type="Timer" parent="." unique_id=370736227]
 
 [node name="Lever" parent="." unique_id=531317337 instance=ExtResource("10_bwo6f")]
-position = Vector2(5315, 1475)
+position = Vector2(5316, 1465)
 
 [node name="leverplatform" parent="." unique_id=805061478 instance=ExtResource("11_22rvv")]
 position = Vector2(3312, 1596)
@@ -6339,17 +6339,19 @@ position = Vector2(7304, 2758)
 position = Vector2(2159, 1023)
 
 [node name="checkpoint" parent="." unique_id=1553798222 instance=ExtResource("17_jkah5")]
-position = Vector2(4002, 2511)
+position = Vector2(3997, 2492)
 can_get_twice = true
 
 [node name="checkpoint2" parent="." unique_id=1741567098 instance=ExtResource("17_jkah5")]
-position = Vector2(5826, 1616)
+position = Vector2(5821, 1597)
 
 [node name="Disappearing_Platform" parent="." unique_id=1113499443 instance=ExtResource("8_5l0qf")]
 position = Vector2(4431, 2588)
+time = 1.0
 
 [node name="Disappearing_Platform2" parent="." unique_id=1873329641 instance=ExtResource("8_5l0qf")]
 position = Vector2(3566, 1571)
+time = 2.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="collectable_object" to="." method="_on_area_2d_body_exited"]

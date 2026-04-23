@@ -1,7 +1,7 @@
 class_name PlayerRes extends Resource 
 
-@export_category("BASE MOVMENT")
-@export var walk_speed: float
+#@export_category("BASE MOVMENT")
+#@export var walk_speed: float
 
 @export_category("JUMPING")
 @export var jump_vel: float

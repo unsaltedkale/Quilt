@@ -104,13 +104,16 @@ animation = &"inactive"
 
 [node name="Stasis Hum" type="AudioStreamPlayer" parent="SFX" unique_id=66834281]
 stream = SubResource("AudioStreamPlaylist_mp70r")
+bus = &"SFXMaster"
 
 [node name="Enter Stasis" type="AudioStreamPlayer" parent="SFX" unique_id=1505444897]
 stream = ExtResource("4_axs2h")
 volume_db = -15.0
+bus = &"SFXMaster"
 
 [node name="Exit Stasis" type="AudioStreamPlayer" parent="SFX" unique_id=799109550]
 stream = ExtResource("5_djhpt")
+bus = &"SFXMaster"
 
 [connection signal="area_entered" from="." to="." method="on_body_entered"]
 [connection signal="area_exited" from="." to="." method="on_body_exited"]

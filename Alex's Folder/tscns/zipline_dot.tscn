@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bpjaaelxp55hm"]
+
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="1_8v8px"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42yq3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8v8px")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ZiplineDot" type="AnimatedSprite2D" unique_id=1046529679]
+modulate = Color(1, 1, 1, 0.5294118)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_42yq3")

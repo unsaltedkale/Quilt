@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ba7v3jh153vt7"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_kebsd"]
-[ext_resource type="PackedScene" uid="uid://cdejhewttjubj" path="res://Alex's Folder/tscns/vinnies/vinnie_TEST1.tscn" id="2_swhi7"]
-[ext_resource type="PackedScene" uid="uid://eoa2p3m7kh4x" path="res://Alex's Folder/tscns/vinnies/vinnie_TEST2.tscn" id="3_i1c7e"]
+[ext_resource type="PackedScene" uid="uid://baekup37wfgqw" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/phlo_enter_crypt.tscn" id="2_8b5ur"]
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_kebsd")]
 position = Vector2(184, -603)
+a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(-292, 272)
@@ -18,10 +18,6 @@ position = Vector2(-46, 318)
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 position = Vector2(-330, 226)
 
-[node name="VinnieTEST1" parent="." unique_id=467354812 instance=ExtResource("2_swhi7")]
-position = Vector2(62, 75)
-
-[node name="VinnieTEST2" parent="." unique_id=1406100599 instance=ExtResource("3_i1c7e")]
-position = Vector2(5234, 2281)
+[node name="phlo_enter_crypt" parent="." unique_id=467354812 instance=ExtResource("2_8b5ur")]
 
 [editable path="Req"]

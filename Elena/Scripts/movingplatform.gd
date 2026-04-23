@@ -5,6 +5,7 @@ extends AnimatableBody2D
 @export var speed: float = 100.0
 @export var wait_time: float = 0.5
 
+
 var _target_point: Vector2
 var _moving_to_b = true
 var _waiting = false
@@ -24,7 +25,10 @@ func _physics_process(delta):
 		_target_point = point_b if _moving_to_b else point_a
 		_wait()
 	else:
-		global_position += direction * speed * delta
+		var movement: Vector2 = speed * delta * direction
+		if movement.length() > distance:
+			movement = movement.normalized() * distance
+		global_position += movement
 
 func _wait():
 	_waiting = true

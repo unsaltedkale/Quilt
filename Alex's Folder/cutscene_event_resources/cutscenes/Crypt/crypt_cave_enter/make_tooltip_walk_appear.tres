@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="set_variable_cutscene_event" load_steps=2 format=3 uid="uid://c54mwxhoeba30"]
+[gd_resource type="Resource" script_class="set_variable_cutscene_event" format=3 uid="uid://c54mwxhoeba30"]
 
 [ext_resource type="Script" uid="uid://ddqk0rwkpcnf2" path="res://Alex's Folder/cutscene_event_resources/event types/set_variable_cs_event.gd" id="1_jl7r1"]
 
 [resource]
 script = ExtResource("1_jl7r1")
-actor = NodePath("TTM Movement")
+actor = NodePath("../../Tooltips/TTM Movement")
 variable_name = "visible"
 value_bool = true
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

@@ -11,20 +11,36 @@ func idle_quilt():
 			an.play("idle")
 
 func Enter(previous_state: State):
-	#idle_quilt()
+	if player.crouch_speed == true:
+		_crouch_control()
+	if player.start_wump == true:
+		an.play("phlo_mini_wump")
 	_recoil_recharge_check()
 
 func Exit():
 	pass
 
+func _anim_end():
+	print("sup")
+	var anim = str(an.animation)
+	if anim == "phlo_mini_wump":
+		player.start_wump = false
+	else:
+		idle_quilt()
+
 func Physics_Update(_delta):
-	_recoil_recharge_check()
-	
-	idle_quilt()
-	
-	_change_state()
-	
-	_crouch_control()
+	if player.start_wump == false:
+		_recoil_recharge_check()
+		idle_quilt()
+		_change_state()
+		_crouch_control()
+		if player.crouch_speed == true and walk_speed != 100:
+			walk_speed = 100
+		elif player.crouch_speed == false and walk_speed == 100:
+			walk_speed = 800
+	else:
+		walk_speed = 0
+		pass
 
 
 func _change_state() -> void:
@@ -37,7 +53,7 @@ func _change_state() -> void:
 		Transition.emit(self, "fall")
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if player.collected_objects != 0:
-			print("recoil state")
+			#print("recoil state")
 			Transition.emit(self, "recoil")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")

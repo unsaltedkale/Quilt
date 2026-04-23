@@ -19,17 +19,21 @@ class_name camera_cutscene_event
 
 func execute(cutscene_trigger: Node) -> void:
 	var tween = cutscene_trigger.get_tree().create_tween()
-	var camerap = cutscene_trigger.get_node("../../" + str(camera))
+	var camerap
 	
+	if cutscene_trigger.get_tree().get_nodes_in_group("Camera") != []:
+		camerap = cutscene_trigger.get_tree().get_nodes_in_group("Camera")[0]
+	else:
+		camerap = cutscene_trigger.get_node("../../" + str(camera))
 	camerap.has_control = false
 	
 	# doesn't work -> animatorp.flip_h = horizontal_flip
 	if change_position && position_is_relative:
-			tween.tween_property(camerap, "position", position, time).as_relative()
+			tween.tween_property(camerap, "global_position", position, time).as_relative()
 	if change_zoom && zoom_is_relative:	
 		tween.tween_property(camerap, "zoom", zoom, time).as_relative()
 	if change_position && not position_is_relative:
-		tween.tween_property(camerap, "position", position, time)
+		tween.tween_property(camerap, "global_position", position, time)
 	if change_zoom && not zoom_is_relative:	
 		tween.tween_property(camerap, "zoom", zoom, time)
 	

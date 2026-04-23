@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://n0gaiwt35ltf" path="res://Alex's Folder/gds/recoil_indicator.gd" id="3_jgwx7"]
 [ext_resource type="Texture2D" uid="uid://dx46xnonryujd" path="res://Art/Quilt/Quilt Animation Crouch.png" id="5_8lyhf"]
 [ext_resource type="Texture2D" uid="uid://c4js0vvukf2gu" path="res://Art/Quilt/Quilt Introduction Cutscene-8.png.png" id="5_n7wni"]
+[ext_resource type="Texture2D" uid="uid://bc2ldq5ixpykc" path="res://Art/Quilt/Quilt Animation Crouch Walk(1).png" id="6_1jo8y"]
 [ext_resource type="Texture2D" uid="uid://qrhi63b343d6" path="res://Art/Quilt/Quilt Introduction Cutscene.png" id="6_d0p7j"]
 [ext_resource type="Texture2D" uid="uid://dlmtm1evbtdwv" path="res://Art/Quilt/Quilt Introduction Cutscene(1).png" id="7_icvrh"]
 [ext_resource type="Texture2D" uid="uid://c3e2w8i5mfrj7" path="res://Art/Quilt/Quilt Introduction Cutscene(2).png" id="8_jgwx7"]
@@ -53,6 +54,9 @@ height = 20.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjwd1"]
 radius = 6.25
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jo8y"]
+size = Vector2(11.25, 10.75)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
 shader = ExtResource("2_3uy0y")
 shader_parameter/onoff = 0
@@ -65,6 +69,42 @@ region = Rect2(0, 0, 25, 44)
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8i7r"]
 atlas = ExtResource("5_8lyhf")
 region = Rect2(25, 0, 25, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tfio"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 0, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ecm5"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 44, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1t2b"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 88, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2b71"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 132, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eoiy"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 176, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uadta"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 220, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qibon"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 308, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x47yu"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 352, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh35q"]
+atlas = ExtResource("6_1jo8y")
+region = Rect2(0, 396, 49, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17h1f"]
 atlas = ExtResource("9_7a16b")
@@ -790,6 +830,38 @@ animations = [{
 "loop": true,
 "name": &"crouch_idle",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tfio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ecm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1t2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2b71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eoiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uadta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qibon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x47yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh35q")
+}],
+"loop": true,
+"name": &"crouch_walk",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1549,6 +1621,7 @@ script = ExtResource("1_jfghr")
 max_objects = 1
 
 [node name="recoil_indicator" type="Sprite2D" parent="." unique_id=1283703100]
+visible = false
 modulate = Color(1, 0.9490196, 0.94509804, 0.8901961)
 scale = Vector2(2, 2)
 texture = ExtResource("2_icvrh")
@@ -1569,10 +1642,21 @@ scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
 disabled = true
 
+[node name="TileMapCheck" type="Area2D" parent="." unique_id=529154427]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapCheck" unique_id=682589927]
+position = Vector2(0.625, 8.375)
+shape = SubResource("RectangleShape2D_1jo8y")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=725135239]
 material = SubResource("ShaderMaterial_1nwdr")
+position = Vector2(0, 0.25)
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"idle"
+animation = &"phlo_wump"
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." unique_id=621642771 node_paths=PackedStringArray("initial_state")]
@@ -1646,36 +1730,37 @@ shape = SubResource("RectangleShape2D_33mbb")
 [node name="Land" type="AudioStreamPlayer" parent="SFX" unique_id=1181986770]
 stream = ExtResource("24_hiv3f")
 max_polyphony = 4
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Take Damage" type="AudioStreamPlayer" parent="SFX" unique_id=191552110]
 stream = ExtResource("34_vfdg1")
 max_polyphony = 4
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="SFX" unique_id=577343084]
 stream = SubResource("AudioStreamPlaylist_hiv3f")
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Shoot Projectile" type="AudioStreamPlayer" parent="SFX" unique_id=922950995]
 stream = ExtResource("36_n7wni")
 volume_db = -15.0
 max_polyphony = 6
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Take Damage (Phlo)" type="AudioStreamPlayer" parent="SFX" unique_id=1477845529]
 stream = ExtResource("34_2k042")
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="Jump" type="AudioStreamPlayer" parent="SFX" unique_id=389697191]
 stream = ExtResource("35_vfdg1")
 autoplay = true
-bus = &"SFX Master"
+bus = &"SFXMaster"
 
 [node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
 rect = Rect2(-10, -21.5, 20, 44)
 
-[connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Fall" method="_on_animation_finished"]
+[connection signal="area_entered" from="TileMapCheck" to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Idle" method="_anim_end"]
 [connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]
 [connection signal="stop_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="stop"]
 [connection signal="jump_sound" from="StateMachine/Jump" to="SFX/Jump" method="play"]

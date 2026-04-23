@@ -27,8 +27,12 @@ func _physics_process(_delta: float) -> void:
 
 func on_body_entered(area: Area2D):
 	if timer <= 0:
+		print(area.get_groups())
 		if area.is_in_group("Projectile") or area.get_parent().is_in_group("Player"):
+			print("click: " + str(area))
 			print(area)
+			if area.is_in_group("Projectile"):
+				area.get_parent().queue_free()
 			player.current_stasis = self
 			player.global_position = global_position
 			player.collected_objects = player.max_objects
@@ -40,7 +44,6 @@ func on_body_entered(area: Area2D):
 			
 
 func on_body_exited(area: Area2D):
-	print("click")
 	if area.get_parent().is_in_group("Player"):
 		print("player left")
 		#player.current_stasis = null

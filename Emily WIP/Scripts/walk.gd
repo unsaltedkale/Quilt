@@ -3,11 +3,11 @@ extends State
 signal play_footsteps()
 signal stop_footsteps()
 
-func quilt_walk():
-	pass
-
 func Enter(previous_state: State):
-	quilt_walk()
+	if player.crouch_speed == true:
+		print("yus")
+		walk_speed = 100
+		_crouch_control()
 	play_footsteps.emit()
 	#print("walking")
 
@@ -18,14 +18,21 @@ func Update(_delta):
 	if player.is_phlo:
 		an.play("phlo_idle")
 	else:
-		an.play("walk")
+		if player.quilt_crouch.disabled == false:
+			an.play("crouch_walk")
+		else:
+			an.play("walk")
 
 
 func Physics_Update(_delta):
 	_recoil_recharge_check()
 	
+	_crouch_control()
+	if player.crouch_speed == true and walk_speed != 100:
+		walk_speed = 100
+	elif player.crouch_speed == false and walk_speed == 100:
+		walk_speed = 800
 	
-	quilt_walk()
 	if abs(move_dir) == 0:
 		Transition.emit(self, "idle")
 	if not player.is_on_floor():
