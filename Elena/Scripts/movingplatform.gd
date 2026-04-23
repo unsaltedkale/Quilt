@@ -5,6 +5,7 @@ extends AnimatableBody2D
 @export var speed: float = 100.0
 @export var wait_time: float = 0.5
 
+
 var _target_point: Vector2
 var _moving_to_b = true
 var _waiting = false
