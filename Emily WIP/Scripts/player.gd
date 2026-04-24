@@ -111,19 +111,21 @@ func _quilt_uncrouch_check_changed(b: bool):
 	
 	#b means if the area2D is hitting a tilemap it shouldn't be able to uncrouch into
 	
-	if not b:
+	if b == false:
 		# no collision, they can crouch if they want.
 		force_crouch = false
 	
-	if b:
+	if b == true:
 		force_crouch = true
 	
 	if quilt_crouch.disabled == false:
 		#currently crouching
 		
 		if not Input.is_action_pressed("crouch") && not b:
+			print("force_uncrouching")
 			#player does not want to crouch and can uncrouch-- uncrouch them
-			$StateMachine.current_state._force_leave_crouch()
+			$StateMachine/Idle._force_leave_crouch()
+			force_crouch = false
 			
 
 #Respawn

@@ -2,7 +2,7 @@ extends Node
 class_name State
 
 const PLAYER_DATA = preload("uid://c33m5ti1y2ang")
-@export var walk_speed: float = 800
+@export var walk_speed: float = PLAYER_DATA.walk_speed
 @export var player: CharacterBody2D
 @onready var an = $"../../AnimatedSprite2D"
 var move_dir
@@ -30,6 +30,12 @@ func Physics_Update(_delta):
 	pass
 
 func _physics_process(_delta) -> void:
+	
+	'''if Input.is_action_just_pressed("interact"):
+		print("false: " + str(player.quilt_collider.disabled))
+		print("true: " + str(player.quilt_crouch.disabled))
+		print("false: " + str(player.crouch_speed))'''
+	
 	if player != null && sm == null:
 		sm = player.find_child("StateMachine")
 		smcs = player.find_child("StateMachine").current_state
@@ -69,9 +75,10 @@ func _crouch_control():
 	pass
 
 func _force_leave_crouch():
-	set_deferred("player.quilt_collider.disabled", false)
-	set_deferred("player.quilt_crouch.disabled", true)
-	set_deferred("player.crouch_speed", false)
+	print("click")
+	player.quilt_collider.set_deferred("disabled", false)
+	player.quilt_crouch.set_deferred("disabled", true)
+	player.set_deferred("crouch_speed", false)
 
 
 func _recoil_recharge_check():

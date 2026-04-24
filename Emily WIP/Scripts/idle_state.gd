@@ -34,10 +34,10 @@ func Physics_Update(_delta):
 		idle_quilt()
 		_change_state()
 		_crouch_control()
-		if player.crouch_speed == true and walk_speed != 100:
-			walk_speed = 100
-		elif player.crouch_speed == false and walk_speed == 100:
-			walk_speed = 800
+		if player.crouch_speed == true and walk_speed != PLAYER_DATA.walk_speed:
+			walk_speed = PLAYER_DATA.crouch_speed
+		elif player.crouch_speed == false and walk_speed == PLAYER_DATA.crouch_speed:
+			walk_speed = PLAYER_DATA.walk_speed
 	else:
 		walk_speed = 0
 		pass
