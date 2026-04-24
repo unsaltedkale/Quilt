@@ -3,6 +3,9 @@ class_name Stasis
 
 
 func Enter(previous_state: State):
+	
+	_force_leave_crouch()
+	
 	player.velocity = Vector2(0,0)
 
 func Physics_Update(_delta):

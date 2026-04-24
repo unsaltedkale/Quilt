@@ -20,6 +20,9 @@ func quilt_wall_jump():
 		an.play("jump")
 
 func Enter(previous_state: State):
+	
+	_force_leave_crouch()
+	
 	timer = 12.0/60.0
 	player.jump_count += 1
 	actual_jump_force_y = jump_force_y - ( player.jump_count * 20)

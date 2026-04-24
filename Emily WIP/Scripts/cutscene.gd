@@ -7,6 +7,9 @@ class_name Cutscene
 @export var prev_position: Vector2
 
 func Enter(previous_state: State):
+	
+	_force_leave_crouch()
+	
 	prev_position = get_parent().get_parent().position
 	player.velocity = Vector2(0,0)
 	if player.is_phlo:

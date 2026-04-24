@@ -4,6 +4,9 @@ var wall_stick :bool
 @export var temp_acc: float
 
 func Enter(previous_state: State):
+	
+	_force_leave_crouch()
+	
 	move_dir = Input.get_axis("move_left","move_right")
 	if player.is_on_wall() and not player.is_on_floor():
 		if move_dir != 0:

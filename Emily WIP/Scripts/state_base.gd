@@ -67,12 +67,9 @@ func _crouch_control():
 	pass
 
 func _force_leave_crouch():
-	player.scale.y = 4
-	an.scale.y = 1
-	an.position = Vector2(0,0)
-	player.crouch_speed = false
 	player.quilt_collider.disabled = false
 	player.quilt_crouch.disabled = true
+	player.crouch_speed = false
 
 func _recoil_recharge_check():
 	if player.is_on_floor():
