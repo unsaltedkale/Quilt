@@ -2,8 +2,9 @@ extends State
 class_name Stasis
 
 var tooltip_timer: float
-var tooltip_timer_max: float = 5000
+var tooltip_timer_max: float = 0.7 
 @export var tt: RichTextLabel
+var fade_speed = 1
 
 func Enter(previous_state: State):
 	
@@ -11,16 +12,32 @@ func Enter(previous_state: State):
 	
 	player.velocity = Vector2(0,0)
 	
+	tt.visible = false
 	tooltip_timer = tooltip_timer_max
 
 func Physics_Update(_delta):
-	if Input.is_action_just_pressed("move_left") || Input.is_action_just_pressed("move_right"):
-		tooltip_timer -= _delta
-		if tooltip_timer < 0:
-			tt.visible = true
-			tooltip_timer = tooltip_timer_max
-	else:
-		tooltip_timer = 0
+	
+	print(tooltip_timer)
+	
+	if not tt.visible:
+		if Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right"):
+			
+			tooltip_timer -= _delta
+			if tooltip_timer < 0:
+				tt.visible = true
+				tt.modulate = Color(1,1,1,1.5)
+		
+	elif tt.visible:
+		if Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right"):
+			tooltip_timer -= _delta
+			if tooltip_timer <= 0:
+				tt.modulate.a = 1.5
+		elif tt.modulate.a > 0:
+			tt.modulate.a -= _delta * fade_speed
+		elif tt.modulate.a <= 0:
+			tooltip_timer = 0.3
+
+	
 		
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		player.current_stasis = null
