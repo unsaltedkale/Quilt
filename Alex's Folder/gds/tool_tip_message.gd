@@ -3,7 +3,7 @@ extends RichTextLabel
 @export var type: message_type
 @onready var ri
 
-enum message_type {movement, jump, recoil, interact, reset_point, dialouge_continue}
+enum message_type {movement, jump, recoil, interact, reset_point, dialouge_continue, stasis_warning}
 
 var movement_message: Array[String]
 
@@ -16,6 +16,8 @@ var interact_message: Array[String]
 var resetpoint_message: Array[String]
 
 var dialouge_continue_message: Array[String]
+
+var stasis_warning_message: Array[String]
 
 var super_array: Array[Array]
 
@@ -33,9 +35,9 @@ func _ready() -> void:
 	interact_message = ["press {22} to interact","press {20} to interact"]
 	resetpoint_message = ["hold {22} at a resetpoint to reset", "hold {20} at a reset point to reset"]
 	dialouge_continue_message = ["{22}","{20}"]
+	stasis_warning_message = ["use {12} or {24} to break from a stasis chamber","use {14} or {26} to break from a stasis chamber"]
 	
-	
-	super_array = [movement_message,jump_message,recoil_message,interact_message,resetpoint_message,dialouge_continue_message]
+	super_array = [movement_message,jump_message,recoil_message,interact_message,resetpoint_message,dialouge_continue_message,stasis_warning_message]
 	
 	pass # Replace with function body.
 

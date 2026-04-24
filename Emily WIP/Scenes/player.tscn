@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://b2onlr5ggkomh" path="res://Art/recoil indicator.png" id="2_icvrh"]
+[ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="2_sfidj"]
 [ext_resource type="Script" uid="uid://n0gaiwt35ltf" path="res://Alex's Folder/gds/recoil_indicator.gd" id="3_jgwx7"]
 [ext_resource type="Texture2D" uid="uid://dx46xnonryujd" path="res://Art/Quilt/Quilt Animation Crouch.png" id="5_8lyhf"]
 [ext_resource type="Texture2D" uid="uid://c4js0vvukf2gu" path="res://Art/Quilt/Quilt Introduction Cutscene-8.png.png" id="5_n7wni"]
@@ -1624,6 +1625,15 @@ scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
 max_objects = 1
 
+[node name="ToolTipMessage" parent="." unique_id=704983199 instance=ExtResource("2_sfidj")]
+visible = false
+offset_left = -70.75
+offset_top = -57.75
+offset_right = 529.25
+offset_bottom = 62.25
+scale = Vector2(0.25000036, 0.25000036)
+type = 6
+
 [node name="recoil_indicator" type="Sprite2D" parent="." unique_id=1283703100]
 visible = false
 modulate = Color(1, 0.9490196, 0.94509804, 0.8901961)
@@ -1705,8 +1715,9 @@ script = ExtResource("19_33mbb")
 player = NodePath("../..")
 state_name = "recoil"
 
-[node name="Stasis" type="Node" parent="StateMachine" unique_id=1577718049 node_paths=PackedStringArray("player")]
+[node name="Stasis" type="Node" parent="StateMachine" unique_id=1577718049 node_paths=PackedStringArray("tt", "player")]
 script = ExtResource("20_3uy0y")
+tt = NodePath("../../ToolTipMessage")
 player = NodePath("../..")
 state_name = "stasis"
 
