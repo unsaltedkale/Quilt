@@ -134,6 +134,8 @@ func _process(delta: float) -> void:
 			#Move to target position if magnitude of distance < 10
 			if abs((self.global_position.y - playerReference.global_position.y)) < 5:
 				screenIsMoving = false
+func ResetCamera():
+	self.global_position.y = playerReference.global_position.y
 
 func wait(duration):
 	await get_tree().create_timer(duration).timeout

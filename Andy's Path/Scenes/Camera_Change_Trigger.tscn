@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://je46xra7st0p"]
+
+[ext_resource type="Script" uid="uid://6aevw0500ipy" path="res://Andy's Path/Scripts/CameraTrigger.gd" id="1_xm8ns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcf2o"]
+
+[node name="Camera_Change_Trigger" type="Node2D" unique_id=76563749]
+script = ExtResource("1_xm8ns")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=404059404]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2097930247]
+shape = SubResource("RectangleShape2D_qcf2o")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

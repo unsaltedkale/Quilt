@@ -6,7 +6,7 @@ signal stop_footsteps()
 func Enter(previous_state: State):
 	if player.crouch_speed == true:
 		print("yus")
-		walk_speed = 100
+		walk_speed = PLAYER_DATA.crouch_speed
 		_crouch_control()
 	play_footsteps.emit()
 	#print("walking")
@@ -28,10 +28,10 @@ func Physics_Update(_delta):
 	_recoil_recharge_check()
 	
 	_crouch_control()
-	if player.crouch_speed == true and walk_speed != 100:
-		walk_speed = 100
-	elif player.crouch_speed == false and walk_speed == 100:
-		walk_speed = 800
+	if player.crouch_speed == true and walk_speed != PLAYER_DATA.crouch_speed:
+		walk_speed = PLAYER_DATA.crouch_speed
+	elif player.crouch_speed == false and walk_speed != PLAYER_DATA.walk_speed:
+		walk_speed = PLAYER_DATA.walk_speed
 	
 	if abs(move_dir) == 0:
 		Transition.emit(self, "idle")
