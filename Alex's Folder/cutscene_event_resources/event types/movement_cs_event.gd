@@ -15,21 +15,22 @@ func execute(cutscene_trigger: Node) -> void:
 	var tween = cutscene_trigger.get_tree().create_tween()
 	var moverp
 	
-	if cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.staging:
-	
-		print("staging")
+	if cutscene_trigger.get_tree().get_first_node_in_group("Req") != null:
+		if cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.staging:
 		
-		moverp = cutscene_trigger.get_node(str(mover))
-		
-		print("mover: " + str(mover))
-		
-	elif cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.prod:
-		
-		print("prod")
-		
-		moverp = cutscene_trigger.get_node("../" + str(mover))
-		
-		pass
+			print("staging")
+			
+			moverp = cutscene_trigger.get_node(str(mover))
+			
+			print("mover: " + str(mover))
+			
+		elif cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.prod:
+			
+			print("prod")
+			
+			moverp = cutscene_trigger.get_node("../" + str(mover))
+			
+			pass
 	
 	else:
 		print("click")

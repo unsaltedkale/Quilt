@@ -39,12 +39,6 @@ func _input(event: InputEvent) -> void:
 		if event.is_action_pressed("interact") || event.is_action_pressed("jump") || event.is_action_pressed("fire_projectile"):
 			if dialogFolder != null:
 				_tick()
-		elif event.is_action_pressed("settings"):
-			settingsReference.visible = !settingsReference.visible
-			if settingsReference.visible == true:
-				get_tree().paused = true
-			else:
-				get_tree().paused = false
 			#get_tree().paused = !get_tree().paused <-- make this work later
 			#pause/unpause the music
 			#somehow pause camera tweening if it is running

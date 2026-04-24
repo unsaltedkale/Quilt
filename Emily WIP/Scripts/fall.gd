@@ -50,6 +50,7 @@ func Physics_Update(_delta):
 		time_since_last_jump_press = fall_timer
 	
 	if walking_last_state:
+		# maybe add && not player.force_crouch here idk -- alex
 		if PLAYER_DATA.cayote_time >= fall_timer and Input.is_action_just_pressed("jump"):
 			Transition.emit(self, "jump")
 			walking_last_state = false

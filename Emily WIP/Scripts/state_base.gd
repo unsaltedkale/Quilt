@@ -37,8 +37,9 @@ func _physics_process(_delta) -> void:
 		smcs = player.find_child("StateMachine").current_state
 		if self.state_name == smcs.state_name:
 			#print("hhhhhhh" + state_name)
-			player.get_node("QuiltCollider").disabled = false
-			player.get_node("PhloCollider").disabled = true
+			if not player.is_phlo && player.get_node("PhloCollider").disabled == false:
+				player.get_node("QuiltCollider").disabled = false
+				player.get_node("PhloCollider").disabled = true
 			if smcs.state_name == "wall_jump":
 				pass
 			elif smcs.state_name != "cutscene" && smcs.state_name != "recoil" && smcs.state_name != "stasis":
@@ -61,15 +62,17 @@ func _crouch_control():
 		player.quilt_collider.disabled = true
 		player.crouch_speed = true
 	if Input.is_action_just_released("crouch"):
-		player.quilt_collider.disabled = false
-		player.quilt_crouch.disabled = true
-		player.crouch_speed = false
+		if not player.force_crouch:
+			player.quilt_collider.disabled = false
+			player.quilt_crouch.disabled = true
+			player.crouch_speed = false
 	pass
 
 func _force_leave_crouch():
-	player.quilt_collider.disabled = false
-	player.quilt_crouch.disabled = true
-	player.crouch_speed = false
+	set_deferred("player.quilt_collider.disabled", false)
+	set_deferred("player.quilt_crouch.disabled", true)
+	set_deferred("player.crouch_speed", false)
+
 
 func _recoil_recharge_check():
 	if player.is_on_floor():

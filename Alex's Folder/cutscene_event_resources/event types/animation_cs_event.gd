@@ -12,25 +12,27 @@ func execute(cutscene_trigger: Node) -> void:
 	
 	var animatorp
 	
-	if cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.staging:
+	if cutscene_trigger.get_tree().get_first_node_in_group("Req") != null:
 	
-		print("staging")
+		if cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.staging:
 		
-		animatorp = cutscene_trigger.get_node(str(animator))
-		
-		if animatorp is not AnimatedSprite2D:
-			animatorp = cutscene_trigger.get_node(str(animator) + "/AnimatedSprite2D")
-		
-	elif cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.prod:
-		
-		print("prod")
-		
-		animatorp = cutscene_trigger.get_node("../" + str(animator))
-		
-		if animatorp is not AnimatedSprite2D:
-			animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
-		
-		pass
+			print("staging")
+			
+			animatorp = cutscene_trigger.get_node(str(animator))
+			
+			if animatorp is not AnimatedSprite2D:
+				animatorp = cutscene_trigger.get_node(str(animator) + "/AnimatedSprite2D")
+			
+		elif cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.prod:
+			
+			print("prod")
+			
+			animatorp = cutscene_trigger.get_node("../" + str(animator))
+			
+			if animatorp is not AnimatedSprite2D:
+				animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
+			
+			pass
 	
 	else:
 		print("click")

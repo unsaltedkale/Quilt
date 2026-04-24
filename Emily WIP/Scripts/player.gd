@@ -5,7 +5,8 @@ class_name Player
 
 @onready var quilt_collider: CollisionShape2D = $QuiltCollider
 @onready var quilt_crouch: CollisionShape2D = $QuiltCrouch
-
+@onready var quilt_uncrouch_check: Area2D = $QuiltUncrouchCheck
+@onready var force_crouch: bool = false
 
 @export var is_phlo: bool = false
 var collected_objects: int
@@ -46,6 +47,9 @@ func _process(_delta: float) -> void:
 	
 	
 func _physics_process(_delta: float) -> void:
+	
+	#print(force_crouch)
+	
 	move_and_slide()
 	
 #HEALTH/DAMAGE STUFF	
@@ -86,6 +90,41 @@ func _on_tile_map_check_body_exited(body: Node2D) -> void:
 	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
 		no_recoil = false
 	pass # Replace with function body.
+
+func _on_quilt_uncrouch_check_body_entered(body: Node2D) -> void:
+	if body.name == "Collision" || body.name == "Magical_Barrier" || body.name == "Damage_Layer" || body.name == "Mirror":
+		print_debug("ENTERED:" + str(body.name))
+		_quilt_uncrouch_check_changed(true)
+	
+	pass # Replace with function body.
+
+
+func _on_quilt_uncrouch_check_body_exited(body: Node2D) -> void:
+	
+	if body.name == "Collision" || body.name == "Magical_Barrier" || body.name == "Damage_Layer" || body.name == "Mirror":
+		print_debug("EXITED:" + str(body.name))
+		_quilt_uncrouch_check_changed(false)
+	pass # Replace with function body.
+
+
+func _quilt_uncrouch_check_changed(b: bool):
+	
+	#b means if the area2D is hitting a tilemap it shouldn't be able to uncrouch into
+	
+	if not b:
+		# no collision, they can crouch if they want.
+		force_crouch = false
+	
+	if b:
+		force_crouch = true
+	
+	if quilt_crouch.disabled == false:
+		#currently crouching
+		
+		if not Input.is_action_pressed("crouch") && not b:
+			#player does not want to crouch and can uncrouch-- uncrouch them
+			$StateMachine.current_state._force_leave_crouch()
+			
 
 #Respawn
 func set_checkpoint(pos):

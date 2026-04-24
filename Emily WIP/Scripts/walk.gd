@@ -37,7 +37,7 @@ func Physics_Update(_delta):
 		Transition.emit(self, "idle")
 	if not player.is_on_floor():
 		Transition.emit(self, "fall")
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") && not player.force_crouch:
 		Transition.emit(self, "jump")
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if player.collected_objects != 0:

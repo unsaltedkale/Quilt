@@ -844,7 +844,7 @@ layout_mode = 0
 offset_right = 1141.6571
 offset_bottom = 645.0
 scale = Vector2(1.6738826, 1.674369)
-color = Color(0.36098644, 0.43022326, 0.4866202, 1)
+color = Color(0.36078432, 0.43137255, 0.4862745, 0.8627451)
 
 [node name="HSlider" type="HSlider" parent="UI/Settings" unique_id=92704188]
 layout_mode = 0

@@ -44,7 +44,7 @@ func Physics_Update(_delta):
 
 
 func _change_state() -> void:
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") && not player.force_crouch:
 		Transition.emit(self, "jump")
 	move_dir = Input.get_axis("move_left","move_right")
 	if abs(move_dir) > 0:

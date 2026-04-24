@@ -2436,9 +2436,6 @@ frame_progress = 1.0
 z_index = 1
 position = Vector2(3740, -2649)
 
-[node name="recoil_indicator" parent="Player" index="0" unique_id=1283703100]
-visible = false
-
 [node name="Path2D" type="Path2D" parent="." unique_id=2072758238]
 position = Vector2(35400, 5001)
 curve = SubResource("Curve2D_xu5pi")
@@ -2880,367 +2877,294 @@ position = Vector2(99506, -39696)
 [node name="STAR2" parent="Stars" unique_id=1577701745 instance=ExtResource("28_frm60")]
 position = Vector2(18948, -55.999878)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR61" parent="Stars" unique_id=1385760830 instance=ExtResource("28_frm60")]
 position = Vector2(17856, 60.999878)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR62" parent="Stars" unique_id=1405679901 instance=ExtResource("28_frm60")]
 position = Vector2(21060, 1798.9999)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR63" parent="Stars" unique_id=1470770177 instance=ExtResource("28_frm60")]
 position = Vector2(20429, 827.0001)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR65" parent="Stars" unique_id=1826894798 instance=ExtResource("28_frm60")]
 position = Vector2(20190, 3892.9995)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR67" parent="Stars" unique_id=12183447 instance=ExtResource("28_frm60")]
 position = Vector2(21485, 3895.9995)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR68" parent="Stars" unique_id=31187326 instance=ExtResource("28_frm60")]
 position = Vector2(24348.998, 3694)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR110" parent="Stars" unique_id=1613464380 instance=ExtResource("28_frm60")]
 position = Vector2(24348.998, 3095)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR70" parent="Stars" unique_id=1206132241 instance=ExtResource("28_frm60")]
 position = Vector2(23558, 2619.999)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR71" parent="Stars" unique_id=1584821326 instance=ExtResource("28_frm60")]
 position = Vector2(23182, 2297.999)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR72" parent="Stars" unique_id=1312990823 instance=ExtResource("28_frm60")]
 position = Vector2(23493, 2013.999)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR69" parent="Stars" unique_id=236383955 instance=ExtResource("28_frm60")]
 position = Vector2(23074.998, 3855.9995)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR57" parent="Stars" unique_id=1221364256 instance=ExtResource("28_frm60")]
 position = Vector2(16714, -1606.0001)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR58" parent="Stars" unique_id=954646266 instance=ExtResource("28_frm60")]
 position = Vector2(15890, -1036.9994)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR59" parent="Stars" unique_id=415857844 instance=ExtResource("28_frm60")]
 position = Vector2(16937, -1347.0001)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR60" parent="Stars" unique_id=1829591113 instance=ExtResource("28_frm60")]
 position = Vector2(18191, -1915)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR3" parent="Stars" unique_id=927556946 instance=ExtResource("28_frm60")]
 position = Vector2(21999, -927.00085)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR4" parent="Stars" unique_id=138207330 instance=ExtResource("28_frm60")]
 position = Vector2(19858, -1915.999)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR5" parent="Stars" unique_id=1565359049 instance=ExtResource("28_frm60")]
 position = Vector2(25740.998, 1437.9994)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR6" parent="Stars" unique_id=1802994315 instance=ExtResource("28_frm60")]
 position = Vector2(26641, 1271.0007)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR66" parent="Stars" unique_id=1864298939 instance=ExtResource("28_frm60")]
 position = Vector2(27352, 1054.9998)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR73" parent="Stars" unique_id=1851677913 instance=ExtResource("28_frm60")]
 position = Vector2(28275, 1006.99927)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR8" parent="Stars" unique_id=1912503791 instance=ExtResource("28_frm60")]
 position = Vector2(32757.998, -385.00024)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR10" parent="Stars" unique_id=1083295831 instance=ExtResource("28_frm60")]
 position = Vector2(30151.998, 1030.0006)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR11" parent="Stars" unique_id=2014599385 instance=ExtResource("28_frm60")]
 position = Vector2(30645, 1025.0002)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR12" parent="Stars" unique_id=569570818 instance=ExtResource("28_frm60")]
 position = Vector2(36062, 1928.9998)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR13" parent="Stars" unique_id=389990903 instance=ExtResource("28_frm60")]
 position = Vector2(37903, 3301.001)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR43" parent="Stars" unique_id=2145932710 instance=ExtResource("28_frm60")]
 position = Vector2(40699, 2913.9976)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR44" parent="Stars" unique_id=822050803 instance=ExtResource("28_frm60")]
 position = Vector2(40141.004, 2903.0002)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR14" parent="Stars" unique_id=1341648503 instance=ExtResource("28_frm60")]
 position = Vector2(31995.998, 1019.0012)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR16" parent="Stars" unique_id=1970755666 instance=ExtResource("28_frm60")]
 position = Vector2(32094, 377.00055)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR45" parent="Stars" unique_id=1748470253 instance=ExtResource("28_frm60")]
 position = Vector2(32300.998, 734.99945)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR46" parent="Stars" unique_id=428372346 instance=ExtResource("28_frm60")]
 position = Vector2(34478, -486.00067)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR47" parent="Stars" unique_id=155208780 instance=ExtResource("28_frm60")]
 position = Vector2(34782, -656.9983)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR48" parent="Stars" unique_id=721071171 instance=ExtResource("28_frm60")]
 position = Vector2(35019, -826.0007)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR49" parent="Stars" unique_id=258306713 instance=ExtResource("28_frm60")]
 position = Vector2(36251, -914.99725)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR17" parent="Stars" unique_id=358278323 instance=ExtResource("28_frm60")]
 position = Vector2(38560, -931.9992)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR18" parent="Stars" unique_id=1089502474 instance=ExtResource("28_frm60")]
 position = Vector2(39878, -1125.0007)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR19" parent="Stars" unique_id=1352195795 instance=ExtResource("28_frm60")]
 position = Vector2(39466, -1569.0012)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR20" parent="Stars" unique_id=1231271686 instance=ExtResource("28_frm60")]
 position = Vector2(39898.996, -1969.0005)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR21" parent="Stars" unique_id=381714891 instance=ExtResource("28_frm60")]
 position = Vector2(39450.996, -2243.9993)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR22" parent="Stars" unique_id=1874899397 instance=ExtResource("28_frm60")]
 position = Vector2(35857, -2919.9985)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR23" parent="Stars" unique_id=1975410301 instance=ExtResource("28_frm60")]
 position = Vector2(35846.996, -3379.9993)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR24" parent="Stars" unique_id=1426348325 instance=ExtResource("28_frm60")]
 position = Vector2(42602.996, -1347.0009)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR25" parent="Stars" unique_id=1064692359 instance=ExtResource("28_frm60")]
 position = Vector2(42753.996, 1293.0005)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR50" parent="Stars" unique_id=775643174 instance=ExtResource("28_frm60")]
 position = Vector2(43323, 1298.0005)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR26" parent="Stars" unique_id=494605505 instance=ExtResource("28_frm60")]
 position = Vector2(43860.996, 1275.0005)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR27" parent="Stars" unique_id=799727766 instance=ExtResource("28_frm60")]
 position = Vector2(44074.996, 994.0005)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR28" parent="Stars" unique_id=1054061383 instance=ExtResource("28_frm60")]
 position = Vector2(44073, 586.0006)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR29" parent="Stars" unique_id=1473274332 instance=ExtResource("28_frm60")]
 position = Vector2(44068, 172.00142)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR30" parent="Stars" unique_id=745233049 instance=ExtResource("28_frm60")]
 position = Vector2(44066, -191.9993)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR31" parent="Stars" unique_id=1606278464 instance=ExtResource("28_frm60")]
 position = Vector2(44059, -489.9975)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR51" parent="Stars" unique_id=665253547 instance=ExtResource("28_frm60")]
 position = Vector2(44061, -776.999)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR52" parent="Stars" unique_id=1942903489 instance=ExtResource("28_frm60")]
 position = Vector2(44061, -1187)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR32" parent="Stars" unique_id=888285577 instance=ExtResource("28_frm60")]
 position = Vector2(44068, -1493.0009)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR33" parent="Stars" unique_id=1068728695 instance=ExtResource("28_frm60")]
 position = Vector2(44062.004, -1746.0002)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR34" parent="Stars" unique_id=595487914 instance=ExtResource("28_frm60")]
 position = Vector2(44065.004, -2023.0002)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR35" parent="Stars" unique_id=714732253 instance=ExtResource("28_frm60")]
 position = Vector2(44059, -2326.999)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR36" parent="Stars" unique_id=538507302 instance=ExtResource("28_frm60")]
 position = Vector2(44070.004, -2617)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR37" parent="Stars" unique_id=506078512 instance=ExtResource("28_frm60")]
 position = Vector2(44065.996, -2871.9998)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR38" parent="Stars" unique_id=1917081853 instance=ExtResource("28_frm60")]
 position = Vector2(44060.996, -3169.0005)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR39" parent="Stars" unique_id=1441462464 instance=ExtResource("28_frm60")]
 position = Vector2(44059, -3439)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR40" parent="Stars" unique_id=234822707 instance=ExtResource("28_frm60")]
 position = Vector2(44059, -3755.9985)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR41" parent="Stars" unique_id=260933836 instance=ExtResource("28_frm60")]
 position = Vector2(44050.004, -4060)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR53" parent="Stars" unique_id=1666489252 instance=ExtResource("28_frm60")]
 position = Vector2(44038, -4325.0024)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR54" parent="Stars" unique_id=1370729333 instance=ExtResource("28_frm60")]
 position = Vector2(44038.004, -4634)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR55" parent="Stars" unique_id=1087916222 instance=ExtResource("28_frm60")]
 position = Vector2(44030, -4877.0024)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR56" parent="Stars" unique_id=1478770693 instance=ExtResource("28_frm60")]
 position = Vector2(44034, -5085)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR42" parent="Stars" unique_id=36025260 instance=ExtResource("28_frm60")]
 position = Vector2(44044.004, -5250)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR15" parent="Stars" unique_id=1712520080 instance=ExtResource("28_frm60")]
 position = Vector2(44162.996, 5122.999)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 
 [node name="STAR" parent="Stars" unique_id=1499774270 instance=ExtResource("28_frm60")]
 position = Vector2(46301, -12127)
 scale = Vector2(0.99999994, 0.99999994)
-respawns = true
 respawn_timer_max = 1
 
 [node name="STAR7" parent="Stars" unique_id=419306856 instance=ExtResource("28_frm60")]
 position = Vector2(54920, -14076)
-respawns = true
 respawn_timer_max = 2
 
 [node name="STAR9" parent="Stars" unique_id=1455956126 instance=ExtResource("28_frm60")]
 position = Vector2(57874.992, -14709.998)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR9" index="2" unique_id=1630730373]
@@ -3252,7 +3176,6 @@ mod_beat = 2
 
 [node name="STAR74" parent="Stars" unique_id=625806614 instance=ExtResource("28_frm60")]
 position = Vector2(58968, -15549.002)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR74" index="2" unique_id=1630730373]
@@ -3265,7 +3188,6 @@ mod_beat = 2
 
 [node name="STAR75" parent="Stars" unique_id=809158109 instance=ExtResource("28_frm60")]
 position = Vector2(63896.996, -15253.002)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR75" index="2" unique_id=1630730373]
@@ -3276,7 +3198,6 @@ mod_bar = 2
 
 [node name="STAR76" parent="Stars" unique_id=105207812 instance=ExtResource("28_frm60")]
 position = Vector2(67136, -15300)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR76" index="2" unique_id=1630730373]
@@ -3287,7 +3208,6 @@ mod_bar = 2
 
 [node name="STAR77" parent="Stars" unique_id=871538114 instance=ExtResource("28_frm60")]
 position = Vector2(67968.99, -15300)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR77" index="2" unique_id=1630730373]
@@ -3298,7 +3218,6 @@ mod_bar = 2
 
 [node name="STAR78" parent="Stars" unique_id=182546419 instance=ExtResource("28_frm60")]
 position = Vector2(68884, -15300)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR78" index="2" unique_id=1630730373]
@@ -3309,7 +3228,6 @@ mod_bar = 2
 
 [node name="STAR79" parent="Stars" unique_id=858887740 instance=ExtResource("28_frm60")]
 position = Vector2(69747, -15300)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR79" index="2" unique_id=1630730373]
@@ -3321,7 +3239,6 @@ mod_bar = 2
 
 [node name="STAR80" parent="Stars" unique_id=457315437 instance=ExtResource("28_frm60")]
 position = Vector2(70555, -15300)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR80" index="2" unique_id=1630730373]
@@ -3334,7 +3251,6 @@ mod_bar = 2
 
 [node name="STAR81" parent="Stars" unique_id=920830184 instance=ExtResource("28_frm60")]
 position = Vector2(71408, -15300)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR81" index="2" unique_id=1630730373]
@@ -3346,7 +3262,6 @@ mod_bar = 2
 
 [node name="STAR82" parent="Stars" unique_id=1207286071 instance=ExtResource("28_frm60")]
 position = Vector2(78725, -19583.998)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR82" index="2" unique_id=1630730373]
@@ -3356,17 +3271,14 @@ beat_delete = 1.0
 
 [node name="STAR83" parent="Stars" unique_id=384934447 instance=ExtResource("28_frm60")]
 position = Vector2(87212, -18170.998)
-respawns = true
 respawn_timer_max = 1
 
 [node name="STAR84" parent="Stars" unique_id=139671330 instance=ExtResource("28_frm60")]
 position = Vector2(87769.01, -18544)
-respawns = true
 respawn_timer_max = 1
 
 [node name="STAR85" parent="Stars" unique_id=71460974 instance=ExtResource("28_frm60")]
 position = Vector2(88767, -18928)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR85" index="2" unique_id=1630730373]
@@ -3375,7 +3287,6 @@ beat_appear = 4.75
 
 [node name="STAR86" parent="Stars" unique_id=872974609 instance=ExtResource("28_frm60")]
 position = Vector2(89276, -19209.996)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR86" index="2" unique_id=1630730373]
@@ -3383,7 +3294,6 @@ bar_appear = 5.0
 
 [node name="STAR87" parent="Stars" unique_id=269948659 instance=ExtResource("28_frm60")]
 position = Vector2(90404.99, -19699)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR87" index="2" unique_id=1630730373]
@@ -3392,7 +3302,6 @@ beat_appear = 4.75
 
 [node name="STAR88" parent="Stars" unique_id=1690178319 instance=ExtResource("28_frm60")]
 position = Vector2(90950.99, -19986)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR88" index="2" unique_id=1630730373]
@@ -3400,7 +3309,6 @@ bar_appear = 5.0
 
 [node name="STAR89" parent="Stars" unique_id=1849999804 instance=ExtResource("28_frm60")]
 position = Vector2(91899, -20379)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR89" index="2" unique_id=1630730373]
@@ -3409,7 +3317,6 @@ beat_appear = 4.75
 
 [node name="STAR90" parent="Stars" unique_id=1351100053 instance=ExtResource("28_frm60")]
 position = Vector2(92445, -20666)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR90" index="2" unique_id=1630730373]
@@ -3417,7 +3324,6 @@ bar_appear = 5.0
 
 [node name="STAR91" parent="Stars" unique_id=188477830 instance=ExtResource("28_frm60")]
 position = Vector2(100374, -21938)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR91" index="2" unique_id=1630730373]
@@ -3425,7 +3331,6 @@ bar_appear = 5.0
 
 [node name="STAR92" parent="Stars" unique_id=279898078 instance=ExtResource("28_frm60")]
 position = Vector2(98768, -22507.994)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR92" index="2" unique_id=1630730373]
@@ -3433,7 +3338,6 @@ bar_appear = 5.0
 
 [node name="STAR93" parent="Stars" unique_id=1316577977 instance=ExtResource("28_frm60")]
 position = Vector2(100324, -22983.996)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR93" index="2" unique_id=1630730373]
@@ -3441,7 +3345,6 @@ bar_appear = 5.0
 
 [node name="STAR94" parent="Stars" unique_id=207692865 instance=ExtResource("28_frm60")]
 position = Vector2(98749, -23503)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR94" index="2" unique_id=1630730373]
@@ -3449,7 +3352,6 @@ bar_appear = 5.0
 
 [node name="STAR95" parent="Stars" unique_id=1919478169 instance=ExtResource("28_frm60")]
 position = Vector2(100324, -24001)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR95" index="2" unique_id=1630730373]
@@ -3457,7 +3359,6 @@ bar_appear = 5.0
 
 [node name="STAR97" parent="Stars" unique_id=1887083039 instance=ExtResource("28_frm60")]
 position = Vector2(100316, -24615.992)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR97" index="2" unique_id=1630730373]
@@ -3465,7 +3366,6 @@ bar_appear = 5.0
 
 [node name="STAR99" parent="Stars" unique_id=1483505367 instance=ExtResource("28_frm60")]
 position = Vector2(100324, -26021.996)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR99" index="2" unique_id=1630730373]
@@ -3473,7 +3373,6 @@ bar_appear = 5.0
 
 [node name="STAR101" parent="Stars" unique_id=1351883366 instance=ExtResource("28_frm60")]
 position = Vector2(100316, -24309.996)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR101" index="2" unique_id=1630730373]
@@ -3481,7 +3380,6 @@ bar_appear = 5.0
 
 [node name="STAR96" parent="Stars" unique_id=1838879398 instance=ExtResource("28_frm60")]
 position = Vector2(98748, -25001)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR96" index="2" unique_id=1630730373]
@@ -3489,7 +3387,6 @@ bar_appear = 5.0
 
 [node name="STAR98" parent="Stars" unique_id=791185961 instance=ExtResource("28_frm60")]
 position = Vector2(98740, -25608.996)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR98" index="2" unique_id=1630730373]
@@ -3497,7 +3394,6 @@ bar_appear = 5.0
 
 [node name="STAR102" parent="Stars" unique_id=1916830932 instance=ExtResource("28_frm60")]
 position = Vector2(98740, -25315.998)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR102" index="2" unique_id=1630730373]
@@ -3505,7 +3401,6 @@ bar_appear = 5.0
 
 [node name="STAR100" parent="Stars" unique_id=1196521755 instance=ExtResource("28_frm60")]
 position = Vector2(98749, -26629)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR100" index="2" unique_id=1630730373]
@@ -3513,7 +3408,6 @@ bar_appear = 5.0
 
 [node name="STAR103" parent="Stars" unique_id=1638777134 instance=ExtResource("28_frm60")]
 position = Vector2(100324, -27182)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR103" index="2" unique_id=1630730373]
@@ -3521,7 +3415,6 @@ bar_appear = 5.0
 
 [node name="STAR104" parent="Stars" unique_id=75082589 instance=ExtResource("28_frm60")]
 position = Vector2(100316, -27796.992)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR104" index="2" unique_id=1630730373]
@@ -3529,7 +3422,6 @@ bar_appear = 5.0
 
 [node name="STAR105" parent="Stars" unique_id=929227886 instance=ExtResource("28_frm60")]
 position = Vector2(100324, -29135.996)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR105" index="2" unique_id=1630730373]
@@ -3537,7 +3429,6 @@ bar_appear = 5.0
 
 [node name="STAR106" parent="Stars" unique_id=1900246282 instance=ExtResource("28_frm60")]
 position = Vector2(100316, -27490.996)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR106" index="2" unique_id=1630730373]
@@ -3545,7 +3436,6 @@ bar_appear = 5.0
 
 [node name="STAR107" parent="Stars" unique_id=212988750 instance=ExtResource("28_frm60")]
 position = Vector2(98748, -28182)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR107" index="2" unique_id=1630730373]
@@ -3553,7 +3443,6 @@ bar_appear = 5.0
 
 [node name="STAR108" parent="Stars" unique_id=613417760 instance=ExtResource("28_frm60")]
 position = Vector2(98740, -28789.996)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR108" index="2" unique_id=1630730373]
@@ -3561,7 +3450,6 @@ bar_appear = 5.0
 
 [node name="STAR109" parent="Stars" unique_id=1690284625 instance=ExtResource("28_frm60")]
 position = Vector2(98740, -28496.998)
-respawns = true
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR109" index="2" unique_id=1630730373]
