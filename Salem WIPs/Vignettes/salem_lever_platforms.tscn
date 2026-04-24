@@ -4765,17 +4765,14 @@ position = Vector2(-38, -171)
 [node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_ulk73")]
 position = Vector2(-1194, -499.0001)
 scale = Vector2(0.9999999, 0.9999999)
-respawns = true
 
 [node name="STAR2" parent="Stars" unique_id=1440804062 instance=ExtResource("6_ulk73")]
 position = Vector2(-1089, -960)
 scale = Vector2(0.9999999, 0.9999999)
-respawns = true
 
 [node name="STAR3" parent="Stars" unique_id=2066281405 instance=ExtResource("6_ulk73")]
 position = Vector2(-848, -1359)
 scale = Vector2(0.9999999, 0.9999999)
-respawns = true
 
 [node name="NPCs" type="Node2D" parent="." unique_id=1296886211]
 position = Vector2(-38, -171)

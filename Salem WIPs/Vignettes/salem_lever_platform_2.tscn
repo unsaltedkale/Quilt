@@ -4761,7 +4761,6 @@ position = Vector2(-38, -171)
 [node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("5_1decq")]
 position = Vector2(1369.0001, -237.99997)
 scale = Vector2(0.9999999, 0.9999999)
-respawns = true
 respawn_timer_max = 2
 
 [node name="NPCs" type="Node2D" parent="." unique_id=1296886211]
