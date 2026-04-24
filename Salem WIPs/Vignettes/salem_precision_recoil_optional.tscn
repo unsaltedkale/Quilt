@@ -4761,14 +4761,17 @@ position = Vector2(-38, -171)
 [node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_jhcl7")]
 position = Vector2(-834.00006, 2676.0002)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 2.0
 
 [node name="STAR2" parent="Stars" unique_id=1440804062 instance=ExtResource("6_jhcl7")]
 position = Vector2(-1325, 2173)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 2.0
 
 [node name="STAR3" parent="Stars" unique_id=1067712475 instance=ExtResource("6_jhcl7")]
 position = Vector2(-1123.9999, 1611)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 2.0
 
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 position = Vector2(-38, -171)
