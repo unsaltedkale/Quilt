@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://gj7e8ngq2qr1"]
+
+[ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="1_2bww8"]
+
+[node name="MagicalBarrierParticle" type="CPUParticles2D" unique_id=167435820]
+amount = 4
+texture = ExtResource("1_2bww8")
+randomness = 1.0
+lifetime_randomness = 0.6
+emission_shape = 3
+emission_rect_extents = Vector2(64, 64)
+gravity = Vector2(0, 0)
+radial_accel_min = -3.0
+radial_accel_max = 3.0
+color = Color(1, 0.2627451, 0.38039216, 1)

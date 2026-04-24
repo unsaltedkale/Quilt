@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://j6awepgiv1q6"]
+
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="1_8dowb"]
+
+[node name="MagicalBarrierParticle" type="CPUParticles2D" unique_id=167435820]
+amount = 4
+texture = ExtResource("1_8dowb")
+randomness = 1.0
+lifetime_randomness = 0.6
+emission_shape = 3
+emission_rect_extents = Vector2(64, 64)
+gravity = Vector2(0, 0)
+radial_accel_min = -3.0
+radial_accel_max = 3.0
+scale_amount_min = 6.0
+scale_amount_max = 6.0
