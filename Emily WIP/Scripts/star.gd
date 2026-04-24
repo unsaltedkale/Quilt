@@ -1,7 +1,7 @@
 extends Area2D
 @export_subgroup("Settings")
-@export var respawns: bool
-@export var respawn_timer_max = 3
+@export var respawns: bool = true
+@export var respawn_timer_max : float = 3.0
 var respawn_timer
 
 @onready var active_sprite = load("res://Art/Quilt STAR-1.png")
