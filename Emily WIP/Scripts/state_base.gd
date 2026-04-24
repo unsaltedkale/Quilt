@@ -30,6 +30,12 @@ func Physics_Update(_delta):
 	pass
 
 func _physics_process(_delta) -> void:
+	
+	if Input.is_action_just_pressed("interact"):
+		print("false: " + str(player.quilt_collider.disabled))
+		print("true: " + str(player.quilt_crouch.disabled))
+		print("false: " + str(player.crouch_speed))
+	
 	if player != null && sm == null:
 		sm = player.find_child("StateMachine")
 		smcs = player.find_child("StateMachine").current_state
@@ -69,6 +75,7 @@ func _crouch_control():
 	pass
 
 func _force_leave_crouch():
+	print("click")
 	set_deferred("player.quilt_collider.disabled", false)
 	set_deferred("player.quilt_crouch.disabled", true)
 	set_deferred("player.crouch_speed", false)
