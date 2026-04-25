@@ -1,16 +1,21 @@
-[gd_scene format=3 uid="uid://j6awepgiv1q6"]
+[gd_scene format=3 uid="uid://btdkxowennlir"]
 
-[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="1_8dowb"]
+[ext_resource type="Texture2D" uid="uid://wsgwc0d6x75f" path="res://Alex's Folder/tscns/Tile Particle Effects/Mirror Particle Image.png" id="1_hgrg3"]
+[ext_resource type="Gradient" uid="uid://bog8ae86fgsvr" path="res://Alex's Folder/tscns/Tile Particle Effects/rainbow_mirror_particle_gradient.tres" id="2_hgrg3"]
 
-[node name="MagicalBarrierParticle" type="CPUParticles2D" unique_id=167435820]
-amount = 4
-texture = ExtResource("1_8dowb")
+[node name="MirrorParticle" type="CPUParticles2D" unique_id=167435820]
+texture = ExtResource("1_hgrg3")
+lifetime = 18.84
+preprocess = 10.0
 randomness = 1.0
 lifetime_randomness = 0.6
 emission_shape = 3
-emission_rect_extents = Vector2(64, 64)
+emission_rect_extents = Vector2(48, 48)
 gravity = Vector2(0, 0)
-radial_accel_min = -3.0
-radial_accel_max = 3.0
-scale_amount_min = 6.0
-scale_amount_max = 6.0
+radial_accel_min = -0.1
+radial_accel_max = 0.1
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 1.5
+scale_amount_max = 1.5
+color_initial_ramp = ExtResource("2_hgrg3")
