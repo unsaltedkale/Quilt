@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_71fu4")
 walk_speed = 800.0
-crouch_speed = 100.0
+crouch_speed = 200.0
 jump_vel = -900.0
 cayote_time = 0.15
 jump_buffer_time = 0.1

@@ -4723,7 +4723,10 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 position = Vector2(56, 6752)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(-799, -7099)
+position = Vector2(-320, -7099)
+
+[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
+bus = &"MusicMaster"
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
@@ -4810,7 +4813,9 @@ track = ExtResource("12_ynl5n")
 position = Vector2(-38, -171)
 
 [node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("13_0okwu")]
-position = Vector2(995, -485)
+position = Vector2(100, -770)
+start_position = Vector2(100, -1000)
+end_position = Vector2(700, -1000)
 
 [node name="One-Way Platforms" type="Node2D" parent="." unique_id=1306004910]
 position = Vector2(-38, -171)
