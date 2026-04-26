@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="3_tu0on"]
 [ext_resource type="Resource" uid="uid://bf2bffq3wpki3" path="res://Alex's Folder/music_resources/opening_theme.tres" id="4_2k3je"]
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="4_skwql"]
+[ext_resource type="PackedScene" uid="uid://2bpi2d7g1hn7" path="res://Alex's Folder/tscns/metronome.tscn" id="7_5trnc"]
+[ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="8_ianhm"]
+[ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="9_c6htr"]
+[ext_resource type="PackedScene" uid="uid://dgc273t50ewtn" path="res://Alex's Folder/tscns/heads_up_conductor.tscn" id="10_8skst"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_tu0on"]
 
@@ -75,6 +79,32 @@ stream = SubResource("AudioStreamWAV_tu0on")
 
 [node name="Conductor" parent="." unique_id=554276046 instance=ExtResource("3_tu0on")]
 current_music_resource = ExtResource("4_2k3je")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=611708121]
+
+[node name="Metronome" parent="CanvasLayer" unique_id=767028165 instance=ExtResource("7_5trnc")]
+visible = false
+position = Vector2(560, 580)
+
+[node name="Pity Kill Timer" type="Label" parent="CanvasLayer" unique_id=226725528]
+offset_left = -6.109476e-05
+offset_top = -6.1511986e-05
+offset_right = 247.42267
+offset_bottom = 22.999939
+scale = Vector2(7.76, 7.76)
+text = "4.0"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=2091663204]
+visible = false
+position = Vector2(560, 580)
+scale = Vector2(5.59, 5.59)
+texture = ExtResource("8_ianhm")
+
+[node name="DialogueUi" parent="CanvasLayer" unique_id=1656784033 instance=ExtResource("9_c6htr")]
+
+[node name="Heads-up Conductor" parent="CanvasLayer" unique_id=1585035843 instance=ExtResource("10_8skst")]
+position = Vector2(2230, 960)
 
 [connection signal="pressed" from="Title Screen/Play" to="Title Screen" method="_on_play_pressed"]
 [connection signal="pressed" from="Title Screen/Settings" to="Title Screen" method="_on_settings_pressed"]

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://2bpi2d7g1hn7" path="res://Alex's Folder/tscns/metronome.tscn" id="6_wtnwk"]
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="7_md1fj"]
 [ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="9_nu105"]
+[ext_resource type="PackedScene" uid="uid://dgc273t50ewtn" path="res://Alex's Folder/tscns/heads_up_conductor.tscn" id="10_abkbx"]
 [ext_resource type="Script" uid="uid://qw7u7t1vs07f" path="res://Andy's Path/Scripts/VolumeManager.gd" id="10_me2gu"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_xj211"]
@@ -45,7 +46,7 @@ position = Vector2(-511, -185)
 
 [node name="Metronome" parent="CanvasLayer" unique_id=939664078 instance=ExtResource("6_wtnwk")]
 visible = false
-position = Vector2(560, 580)
+position = Vector2(960, 806)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1849977681]
 visible = false
@@ -64,6 +65,9 @@ scale = Vector2(7.76, 7.76)
 text = "4.0"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Heads-up Conductor" parent="CanvasLayer" unique_id=1585035843 instance=ExtResource("10_abkbx")]
+position = Vector2(2230, 960)
 
 [node name="SFXManager" type="Control" parent="." unique_id=1390490036]
 layout_mode = 3

@@ -16,6 +16,9 @@ extends Node2D
 
 @onready var prev_playback_position
 
+@onready var hudc= $"../CanvasLayer/Heads-up Conductor"
+@onready var heads_up_display_moving
+
 func _ready():
 	quarternote = 60/bpm
 	eighthnote = 30/bpm
@@ -28,6 +31,12 @@ func _ready():
 	audioplayer.play()
 	print(barnumber, ", ", beatnumber)
 	prev_playback_position = audioplayer.get_playback_position()
+	
+	heads_up_display_moving = false
+	
+	if current_music_resource != preload("res://Alex's Folder/music_resources/empty_music.tres"):
+		_heads_up_conductor(current_music_resource)
+	
 	pass
 	
 func _process(delta: float) -> void:
@@ -50,6 +59,8 @@ func _change_music_track(m_resource: music_resource, change_if_same_music_track:
 		pass
 	else:
 		audioplayer.stop()
+		if current_music_resource != m_resource && m_resource != preload("res://Alex's Folder/music_resources/empty_music.tres"):
+			_heads_up_conductor(m_resource)
 		current_music_resource = m_resource
 		audioplayer.stream = m_resource.track
 		bpm = m_resource.bpm
@@ -58,6 +69,9 @@ func _change_music_track(m_resource: music_resource, change_if_same_music_track:
 		reset_conductor_numbers()
 		audioplayer.play()
 
+func _heads_up_conductor(mr: music_resource):
+	hudc._execute(mr)
+	
 func reset_conductor_numbers():
 	beatnumber = 1
 	barnumber = 1

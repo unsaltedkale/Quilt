@@ -17,7 +17,7 @@ func Enter(previous_state: State):
 
 func Physics_Update(_delta):
 	
-	print(tooltip_timer)
+	#print(tooltip_timer)
 	
 	if not tt.visible:
 		if Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right"):

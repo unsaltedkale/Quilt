@@ -48,6 +48,7 @@
 [ext_resource type="Resource" uid="uid://cj6lnkf7ujlrv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/crypt_music_slab_container.tres" id="40_sp84p"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="46_vl6hs"]
 [ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="47_c3mfk"]
+[ext_resource type="PackedScene" uid="uid://dgc273t50ewtn" path="res://Alex's Folder/tscns/heads_up_conductor.tscn" id="48_xo4aa"]
 [ext_resource type="Resource" uid="uid://betbbuulk0dxs" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/make_recoil_indicator_visible/make_ri_visible_container.tres" id="50_c6e1v"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="50_sp84p"]
 [ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="50_xu5pi"]
@@ -3477,6 +3478,9 @@ scale = Vector2(5.59, 5.59)
 texture = ExtResource("16_w15ut")
 
 [node name="DialogueUi" parent="CanvasLayer" unique_id=1172144860 instance=ExtResource("47_c3mfk")]
+
+[node name="Heads-up Conductor" parent="CanvasLayer" unique_id=1585035843 instance=ExtResource("48_xo4aa")]
+position = Vector2(2230, 960)
 
 [node name="ResetPoint" parent="." unique_id=544001709 instance=ExtResource("51_xu5pi")]
 position = Vector2(21694, 1136)

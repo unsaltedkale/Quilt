@@ -40,8 +40,9 @@ func _physics_process(delta) -> void:
 			print("hit mirror")
 			velocity = velocity.bounce(collision.get_normal())
 			
-		elif collider.is_in_group("Player"):
-			pass
+		elif collider.is_in_group("Projectile"):
+			_play_extinguish_sound()
+			queue_free()
 			
 		elif collider.is_in_group("tilemap"):
 			_play_extinguish_sound()
@@ -56,8 +57,6 @@ func _on_area_2d_area_entered(area: Area2D):
 		pass
 	if area.is_in_group("tilemap"):
 		queue_free()
-	if area.is_in_group("Projectile"):
-		pass
 
 
 func _play_extinguish_sound():
