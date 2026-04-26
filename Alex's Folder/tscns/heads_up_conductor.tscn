@@ -23,6 +23,11 @@ animations = [{
 [node name="Heads-up Conductor" type="Node2D" unique_id=1585035843]
 script = ExtResource("1_wwxg2")
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=335919627]
+modulate = Color(1, 1, 1, 0.11372549)
+scale = Vector2(324, 74)
+texture = ExtResource("2_dym6i")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1921300281]
 modulate = Color(0, 0, 0, 0.56078434)
 scale = Vector2(315, 64)

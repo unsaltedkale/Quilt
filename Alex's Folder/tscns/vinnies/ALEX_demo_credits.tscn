@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://cmtasm87yklbv"]
+
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_6r5xd"]
+[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/orange_town.tres" id="2_7q63t"]
+[ext_resource type="Resource" uid="uid://rqtthumyar3f" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Credits/credits_container.tres" id="4_7q63t"]
+[ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="5_65a5r"]
+[ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="6_pki7s"]
+[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="8_hwmqt"]
+
+[node name="VinnieTemplate" type="Node2D" unique_id=467354812]
+
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_6r5xd")]
+position = Vector2(-668, -409)
+
+[node name="Player" parent="Req" index="0" unique_id=1296307351]
+position = Vector2(107, -155)
+
+[node name="Conductor" parent="Req" index="3" unique_id=438348041]
+current_music_resource = ExtResource("2_7q63t")
+
+[node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
+
+[node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
+position = Vector2(-38, -171)
+
+[node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("8_hwmqt")]
+position = Vector2(-517, -311)
+container = ExtResource("4_7q63t")
+indicator = NodePath("")
+
+[node name="Label" type="Label" parent="." unique_id=1642844523]
+texture_filter = 1
+offset_right = 883.74756
+offset_bottom = 4966.558
+scale = Vector2(0.80000216, 0.80000216)
+theme_override_constants/line_spacing = 160
+theme_override_fonts/font = ExtResource("5_65a5r")
+theme_override_font_sizes/font_size = 400
+text = "A game by hiccup
+
+—{+}—
+
+NARRATIVE  AND
+CHARACTER ART
+Filler
+
+PLAYER SYSTEM
+Filler
+
+DIALOUGE SYSTEM
+Filler
+
+OBJECT AND LEVEL DESIGN
+Filler
+
+MUSIC AND SFX
+Filler
+
+TILESET AND LEVEL ART
+Filler
+
+—{+}—
+
+Live music preformed by
+
+FILLER BAND NAME
+
+COMPOSER
+FILLER
+
+SOUND ENGINEER
+FILLER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Special Thanks
+
+Filler
+Filler
+
+You!
+
+
+Thank you for playing QUILT.
+
+
+
+
+
+THE END...?
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=415581108]
+texture_filter = 1
+offset_top = 12348.0
+offset_right = 2079.9941
+offset_bottom = 21758.0
+scale = Vector2(0.80000216, 0.80000216)
+theme_override_colors/font_color = Color(1, 1, 1, 0.76862746)
+theme_override_constants/line_spacing = 160
+theme_override_fonts/font = ExtResource("5_65a5r")
+theme_override_font_sizes/font_size = 400
+text = "VOCALS	 |
+|
+FLUTE	 |
+|
+CLARINET |
+|
+TRUMPET |
+|
+TROMBONE |
+BARI. SAX |
+VIOLIN |
+CELLO |
+BASS |
+ELEC. BASS |
+GUITAR |
+PERCUSSION |
+|
+PIANO |
+
+
+
+"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="." unique_id=1121491010]
+texture_filter = 1
+offset_left = 1792.0
+offset_top = 12348.0
+offset_right = 3827.006
+offset_bottom = 20018.0
+scale = Vector2(0.80000216, 0.80000216)
+theme_override_constants/line_spacing = 160
+theme_override_fonts/font = ExtResource("5_65a5r")
+theme_override_font_sizes/font_size = 400
+text = "Filler
+Filler		
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler
+Filler"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2023058523]
+position = Vector2(1695, 25210)
+texture = ExtResource("6_pki7s")
+
+[editable path="Req"]

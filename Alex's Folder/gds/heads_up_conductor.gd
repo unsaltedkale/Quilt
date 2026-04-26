@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var c = $"../../Conductor"
 @onready var t = $RichTextLabel2
+@onready var tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,8 +18,6 @@ func _execute(mr: music_resource):
 	var on_screen_pos = Vector2(1690, 960)
 	var off_screen_pos = Vector2(2230, 960)
 	
-	var tween = get_tree().create_tween()
-	
 	c = $"../../Conductor"
 	
 	t = $RichTextLabel2
@@ -28,6 +27,8 @@ func _execute(mr: music_resource):
 		print("<" + mr.display_name + ">")
 		
 		t.text = mr.display_name
+		
+		tween = get_tree().create_tween()
 	
 		if c.heads_up_display_moving == true:
 			tween.stop()

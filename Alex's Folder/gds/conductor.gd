@@ -16,7 +16,7 @@ extends Node2D
 
 @onready var prev_playback_position
 
-@onready var hudc= $"../CanvasLayer/Heads-up Conductor"
+@export var hudc: Node2D
 @onready var heads_up_display_moving
 
 func _ready():

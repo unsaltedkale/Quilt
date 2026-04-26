@@ -33,10 +33,11 @@ script = ExtResource("2_me2gu")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=432694589]
 stream = SubResource("AudioStreamWAV_xj211")
 
-[node name="Conductor" parent="." unique_id=438348041 instance=ExtResource("3_abkbx")]
+[node name="Conductor" parent="." unique_id=438348041 node_paths=PackedStringArray("hudc") instance=ExtResource("3_abkbx")]
 position = Vector2(-211.9961, -1082)
 scale = Vector2(4, 4)
 current_music_resource = ExtResource("4_d76ap")
+hudc = NodePath("../CanvasLayer/Heads-up Conductor")
 
 [node name="phlo_backpack" parent="." unique_id=47144264 instance=ExtResource("5_4jxkh")]
 visible = false

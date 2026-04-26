@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="camera_cutscene_event" load_steps=2 format=3 uid="uid://0e64c8o8dbar"]
+[gd_resource type="Resource" script_class="camera_cutscene_event" format=3 uid="uid://0e64c8o8dbar"]
 
 [ext_resource type="Script" uid="uid://csualf0138bpc" path="res://Alex's Folder/cutscene_event_resources/event types/camera_cs_event.gd" id="1_31pcc"]
 
 [resource]
 script = ExtResource("1_31pcc")
-camera = NodePath("Camera2D")
+camera = NodePath("../../Req/Camera2D")
 change_position = true
 position = Vector2(0, 25000)
 position_is_relative = true

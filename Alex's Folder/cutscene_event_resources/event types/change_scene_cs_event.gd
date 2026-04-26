@@ -13,6 +13,6 @@ func execute(cutscene_trigger: Node) -> void:
 	
 	var rockp = cutscene_trigger.get_node("../../" + str(rock))
 	
-	rockp.get_tree().call_deferred("change_scene_to_file", scene_path)
+	cutscene_trigger.get_tree().call_deferred("change_scene_to_file", scene_path)
 	pass
 	
