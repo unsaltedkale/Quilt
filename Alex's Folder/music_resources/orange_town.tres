@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_f5wyw")
-display_name = "Orange I: Town"
+display_name = "Town"
 track = ExtResource("2_y0sac")
 bpm = 80.0
 metadata/_custom_type_script = "uid://4ekgwvgt60r0"

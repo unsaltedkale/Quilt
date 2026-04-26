@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_ds733")
-display_name = "Crypt II: Ebb"
+display_name = "Ebb"
 track = ExtResource("2_lb3hw")
 metadata/_custom_type_script = "uid://4ekgwvgt60r0"
