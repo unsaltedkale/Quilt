@@ -6,6 +6,7 @@ extends RigidBody2D
 #Could do Timer or Area2D, need to see which would be better for how we want to use them
 
 func _ready() -> void:
+	Player = get_tree().get_first_node_in_group("Player")
 	self.gravity_scale = 0
 	#$Timer.start()
 

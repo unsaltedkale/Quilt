@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="6_pki7s"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="8_hwmqt"]
 
-[node name="VinnieTemplate" type="Node2D" unique_id=467354812]
+[node name="ALEX_demo_credits" type="Node2D" unique_id=467354812]
 
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_6r5xd")]
 position = Vector2(-668, -409)
@@ -23,10 +23,9 @@ current_music_resource = ExtResource("2_7q63t")
 [node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
 position = Vector2(-38, -171)
 
-[node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("8_hwmqt")]
+[node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 instance=ExtResource("8_hwmqt")]
 position = Vector2(-517, -311)
 container = ExtResource("4_7q63t")
-indicator = NodePath("")
 
 [node name="Label" type="Label" parent="." unique_id=1642844523]
 texture_filter = 1

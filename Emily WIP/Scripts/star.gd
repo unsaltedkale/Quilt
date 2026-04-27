@@ -3,6 +3,7 @@ extends Area2D
 @export var respawns: bool = true
 @export var respawn_timer_max : float = 3.0
 var respawn_timer
+@onready var player: Node2D
 
 @onready var active_sprite = load("res://Art/Quilt STAR-1.png")
 @onready var inactive_sprite = load("res://Art/Quilt STAR-2.png")
@@ -12,9 +13,15 @@ func _ready():
 	active_sprite = load("res://Art/Quilt STAR-1.png")
 	inactive_sprite = load("res://Art/Quilt STAR-2.png")
 	find_child("Sprite2D").texture = active_sprite
-	
+	player = get_tree().get_first_node_in_group("Player")
 
 func _process(delta: float) -> void:
+	
+	if player != null:
+		if get_overlapping_areas().has(player.find_child("Area2D")):
+			_on_STAR_entered(player)
+	else:
+		player = get_tree().get_first_node_in_group("Player")
 	if respawns == true && find_child("Sprite2D").texture == inactive_sprite:
 		respawn_timer =  respawn_timer - delta
 		#print(str(respawn_timer) + " / " + str(get_path()))
@@ -34,5 +41,4 @@ func _on_STAR_entered(body: Node2D) -> void:
 			find_child("Sprite2D").texture = inactive_sprite
 			find_child("CollisionShape2D").set_deferred("disabled", true)
 		else:
-			print("skipped")
-		
+			pass
