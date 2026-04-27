@@ -25,7 +25,7 @@ func Enter(_previous_state: State):
 func Physics_Update(_delta):
 	
 	#THIS is how you get the wall direction?????? PAIN!!!!!!!
-	
+	#TODO: wall stick buffer timer, set, when exit wall slide, check for jump
 	
 	
 	# wall cling storage fix:
