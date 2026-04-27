@@ -33,16 +33,16 @@
 [ext_resource type="Script" uid="uid://muc8alk7w4hs" path="res://Emily WIP/Scripts/cutscene.gd" id="21_1nwdr"]
 [ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
 [ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
-[ext_resource type="AudioStream" uid="uid://b07ycwiuh74sk" path="res://Resources/SFX/Quilt Character SFX/Quilt Land.wav" id="24_hiv3f"]
 [ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
 [ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
-[ext_resource type="AudioStream" uid="uid://dfnkjg7m1oeq0" path="res://Resources/SFX/Quilt Character SFX/Quilt Walkin'.wav" id="25_wjwd1"]
 [ext_resource type="Script" uid="uid://bbolaewr5lju4" path="res://Emily WIP/Scripts/wall_stick.gd" id="33_jgwx7"]
 [ext_resource type="AudioStream" uid="uid://xewlitg8yvow" path="res://Resources/SFX/Phlo SFX/Phlo Death .wav" id="34_2k042"]
 [ext_resource type="Script" uid="uid://cirmqgmvmxwv" path="res://Emily WIP/Scripts/wall_jump.gd" id="34_a45e1"]
 [ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
 [ext_resource type="AudioStream" uid="uid://cy2yj5j10fpl6" path="res://Resources/SFX/Quilt Character SFX/Quilt Jump.wav" id="35_vfdg1"]
 [ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://fireball shoot.wav" id="36_n7wni"]
+[ext_resource type="AudioStream" uid="uid://devwh1two2jj0" path="res://Resources/SFX/Quilt Character SFX/Quilt Land v2.wav" id="38_sfidj"]
+[ext_resource type="AudioStream" uid="uid://jmgtjahfo57p" path="res://Resources/SFX/Quilt Character SFX/Quilt Walk v2.wav" id="40_sfidj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iemgc"]
 radius = 5.75
@@ -1747,7 +1747,7 @@ shape = SubResource("RectangleShape2D_33mbb")
 [node name="SFX" type="Node" parent="." unique_id=577166608]
 
 [node name="Land" type="AudioStreamPlayer" parent="SFX" unique_id=1181986770]
-stream = ExtResource("24_hiv3f")
+stream = ExtResource("38_sfidj")
 max_polyphony = 4
 bus = &"SFXMaster"
 
@@ -1757,7 +1757,7 @@ max_polyphony = 4
 bus = &"SFXMaster"
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="SFX" unique_id=577343084]
-stream = ExtResource("25_wjwd1")
+stream = ExtResource("40_sfidj")
 
 [node name="Timer" type="Timer" parent="SFX/Footsteps" unique_id=825603606]
 wait_time = 0.2
