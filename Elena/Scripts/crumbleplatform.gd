@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 @onready var timer_length: float = 1.0
-@onready var Player: CharacterBody2D = $"../Player"
+@onready var Player: CharacterBody2D
 
 #Could do Timer or Area2D, need to see which would be better for how we want to use them
 

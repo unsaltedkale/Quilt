@@ -4758,21 +4758,25 @@ position = Vector2(-38, -171)
 [node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_lb8wv")]
 position = Vector2(1958, -853.00006)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 0.0
 
 [node name="STAR2" parent="Stars" unique_id=1440804062 instance=ExtResource("6_lb8wv")]
 position = Vector2(2406.0002, -853.00006)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 0.0
 
 [node name="STAR3" parent="Stars" unique_id=1241938125 instance=ExtResource("6_lb8wv")]
 position = Vector2(2854.0002, -853.00006)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 0.0
 
 [node name="Lever Platforms" type="Node2D" parent="." unique_id=922098560]
 
 [node name="leverplatform" parent="Lever Platforms" unique_id=96890641 instance=ExtResource("16_d2lty")]
 position = Vector2(161, -198)
 point_a = Vector2(161, -198)
-point_b = Vector2(161, -198)
+point_b = Vector2(10000, -198)
+speed = 300.0
 lever_path = NodePath("../../Levers/Lever")
 
 [node name="Levers" type="Node2D" parent="." unique_id=645564461]
