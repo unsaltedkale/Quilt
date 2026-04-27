@@ -1,14 +1,16 @@
 extends State
 
 @export var walk_sfx : AudioStreamPlayer
+@onready var walk_sfx_lag_timer : Timer = walk_sfx.get_child(0)
 
 func Enter(_previous_state: State):
 	if player.crouch_speed:
 		#print("crouched")
 		walk_speed = PLAYER_DATA.crouch_speed
 		_crouch_control()
-	walk_sfx.play()
-	#print("walking")
+	if walk_sfx.get_playback_position() == 0: walk_sfx.play()
+	else: walk_sfx.set_stream_paused(false)
+	walk_sfx_lag_timer.stop()
 
 func _physics_process(delta: float) -> void:
 	super(delta)
@@ -21,10 +23,8 @@ func Update(_delta):
 			an.play("crouch_walk")
 		else:
 			an.play("walk")
-#	if player.crouch_speed: #Slows down walking sound effect
-#		walk_sfx.pitch_scale = PLAYER_DATA.crouch_speed / PLAYER_DATA.walk_speed
-#	else: walk_sfx.pitch_scale = 1
-	
+	#Slows down walking sound effect when crouching
+	walk_sfx.pitch_scale = (walk_speed / PLAYER_DATA.walk_speed) ** (1.0 / 3)
 
 
 func Physics_Update(_delta):
@@ -49,5 +49,12 @@ func Physics_Update(_delta):
 		Transition.emit(self, "stasis")
 	
 func Exit():
-	walk_sfx.stop()
-	#print("notwalk")
+	walk_sfx_lag_timer.start()
+	walk_sfx.volume_db = -5
+
+func _on_footsteps_finished() -> void:
+	walk_sfx.play()
+
+func _on_timer_timeout() -> void:
+	walk_sfx.volume_db = 0
+	walk_sfx.set_stream_paused(true)

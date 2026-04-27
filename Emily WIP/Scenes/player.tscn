@@ -1615,11 +1615,6 @@ height = 48.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
 size = Vector2(20, 17.5)
 
-[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_hiv3f"]
-fade_time = 0.0
-stream_count = 1
-stream_0 = ExtResource("25_wjwd1")
-
 [node name="Player" type="CharacterBody2D" unique_id=1296307351 groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
@@ -1762,9 +1757,10 @@ max_polyphony = 4
 bus = &"SFXMaster"
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="SFX" unique_id=577343084]
-stream = SubResource("AudioStreamPlaylist_hiv3f")
-volume_db = 15.0
-playback_type = 1
+stream = ExtResource("25_wjwd1")
+
+[node name="Timer" type="Timer" parent="SFX/Footsteps" unique_id=825603606]
+wait_time = 0.2
 
 [node name="Shoot Projectile" type="AudioStreamPlayer" parent="SFX" unique_id=922950995]
 stream = ExtResource("36_n7wni")
@@ -1778,7 +1774,7 @@ bus = &"SFXMaster"
 
 [node name="Jump" type="AudioStreamPlayer" parent="SFX" unique_id=389697191]
 stream = ExtResource("35_vfdg1")
-autoplay = true
+volume_db = 10.0
 bus = &"SFXMaster"
 
 [node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
@@ -1794,3 +1790,5 @@ rect = Rect2(-10, -21.5, 20, 44)
 [connection signal="has_landed" from="StateMachine/Fall" to="SFX/Land" method="play"]
 [connection signal="shoot_projectile" from="StateMachine/Recoil" to="SFX/Shoot Projectile" method="play"]
 [connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]
+[connection signal="finished" from="SFX/Footsteps" to="StateMachine/Walk" method="_on_footsteps_finished"]
+[connection signal="timeout" from="SFX/Footsteps/Timer" to="StateMachine/Walk" method="_on_timer_timeout"]
