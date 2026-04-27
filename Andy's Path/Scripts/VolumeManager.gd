@@ -11,7 +11,7 @@ extends Node
 @onready var DialogueEchoBusIndex = AudioServer.get_bus_index("DialougeEcho")
 @onready var MusicSliderBusIndex = AudioServer.get_bus_index("MusicMaster")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	AudioServer.set_bus_volume_db(SFXBusIndex, SoundFXSlider.value)
 	AudioServer.set_bus_volume_db(GeneralBusIndex, GeneralSlider.value)
 	AudioServer.set_bus_volume_db(DialogueBusIndex, DialogueSlider.value)

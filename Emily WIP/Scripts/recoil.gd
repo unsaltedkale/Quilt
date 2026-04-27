@@ -38,7 +38,7 @@ func shoot():
 	get_tree().current_scene.add_child(proj)
 	shoot_projectile.emit()
 
-func Enter(previous_state: State):
+func Enter(_previous_state: State):
 	
 	#if colliding with non-magical zone
 	'''

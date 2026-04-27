@@ -6,7 +6,7 @@ class_name Cutscene
 @export var automatic_animations_frozen: bool
 @export var prev_position: Vector2
 
-func Enter(previous_state: State):
+func Enter(_previous_state: State):
 	
 	_force_leave_crouch()
 	

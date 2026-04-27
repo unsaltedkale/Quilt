@@ -6,7 +6,7 @@ var tooltip_timer_max: float = 0.7
 @export var tt: RichTextLabel
 var fade_speed = 1
 
-func Enter(previous_state: State):
+func Enter(_previous_state: State):
 	
 	_force_leave_crouch()
 	

@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if conductor != null:
 		if conductor.beatnumber != null && conductor.barnumber != null:
 			if conductor.beatnumber == floor(conductor.beatnumber):

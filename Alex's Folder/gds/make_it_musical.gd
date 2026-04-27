@@ -17,7 +17,7 @@ func _ready():
 		set_(false)
 	pass
 	
-func _physics_process(delta):
+func _physics_process(_delta): #Why is this in physics process?
 	if Conductor != null && active == true:
 		if Conductor.barnumber != null or Conductor.beatnumber != null:
 			if only_on_music_trigger_track == true:

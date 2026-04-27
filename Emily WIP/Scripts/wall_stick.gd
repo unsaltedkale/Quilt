@@ -3,7 +3,7 @@ var wall_stick :bool
 
 @export var temp_acc: float
 
-func Enter(previous_state: State):
+func Enter(_previous_state: State):
 	
 	_force_leave_crouch()
 	

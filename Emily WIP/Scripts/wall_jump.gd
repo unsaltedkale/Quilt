@@ -19,7 +19,7 @@ func quilt_wall_jump():
 	else:
 		an.play("jump")
 
-func Enter(previous_state: State):
+func Enter(_previous_state: State):
 	
 	_force_leave_crouch()
 	

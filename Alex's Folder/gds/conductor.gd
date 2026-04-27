@@ -39,7 +39,7 @@ func _ready():
 	
 	pass
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	songposition = audioplayer.get_playback_position() + offset
 	if prev_playback_position > audioplayer.get_playback_position():
 		reset_conductor_numbers()

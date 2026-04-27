@@ -74,7 +74,7 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
 
-func _on_area_entered(body: Area2D):
+func _on_area_entered(_body: Area2D):
 	#Unmagical barrier detection work with on area entered. must be body. for
 	#SOME REASON?!?!?!?!
 	pass
@@ -133,11 +133,11 @@ func set_checkpoint(pos):
 	spawn_point = pos
 
 
-func spawn_player(spawn_point: Vector2):
+func spawn_player(spawn_point: Vector2): #someone needs to check out the warning message here
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 	health = max_health  
 
 
-func change_player(player: int) -> void:
+func change_player(_player: int) -> void:
 	pass

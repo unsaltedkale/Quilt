@@ -10,7 +10,7 @@ func idle_quilt():
 		else:
 			an.play("idle")
 
-func Enter(previous_state: State):
+func Enter(_previous_state: State):
 	if player.crouch_speed == true:
 		_crouch_control()
 	if player.start_wump == true:

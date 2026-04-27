@@ -1763,7 +1763,7 @@ bus = &"SFXMaster"
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="SFX" unique_id=577343084]
 stream = SubResource("AudioStreamPlaylist_hiv3f")
-volume_db = 20.0
+volume_db = 15.0
 playback_type = 1
 
 [node name="Shoot Projectile" type="AudioStreamPlayer" parent="SFX" unique_id=922950995]

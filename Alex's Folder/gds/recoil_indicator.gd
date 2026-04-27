@@ -17,14 +17,14 @@ func _ready() -> void:
 		controller = false
 	pass # Replace with function body.
 
-func _joy_connection_changed(device: int, connected: bool):
+func _joy_connection_changed(_device: int, _connected: bool):
 	if Input.get_connected_joypads() != []:
 		controller = true
 	else: 
 		controller = false
 	pass
 
-func _input(InputEvent) -> void:
+func _input(InputEvent) -> void: #Someone needs to check out this warning message, you shouldn't name a variable InputEvent.
 	if InputEvent is InputEventKey || InputEvent is InputEventMouse:
 		controller = false
 	elif InputEvent is InputEventJoypadButton || InputEvent is InputEventJoypadMotion:
@@ -37,7 +37,7 @@ func safe_tween(s, v, t):
 	tween.tween_property(self, s, v, t)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	if sm.current_state.state_name == "cutscene" && modulate.a != 0:
 		if tween != null:

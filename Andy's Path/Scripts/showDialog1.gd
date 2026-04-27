@@ -158,7 +158,7 @@ func _tick() -> void:
 		elif isTyping: # if player presses twice, line skips to the end.
 			dialogueReference.visible_characters = len(line)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#if dialogueReference.visible_characters == 0 && dialogue_counter == 0:
 		
 	#print(str(dialogueReference.visible_characters) + " / " + str(dialogue_counter))

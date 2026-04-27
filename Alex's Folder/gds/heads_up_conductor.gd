@@ -4,15 +4,6 @@ extends Node2D
 @onready var t = $RichTextLabel2
 @onready var tween
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
 func _execute(mr: music_resource):
 	print("heads_up")
 	var on_screen_pos = Vector2(1690, 960)
