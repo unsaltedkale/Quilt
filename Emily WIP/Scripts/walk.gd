@@ -1,14 +1,13 @@
 extends State
 
-signal play_footsteps()
-signal stop_footsteps()
+@export var walk_sfx : AudioStreamPlayer
 
-func Enter(previous_state: State):
-	if player.crouch_speed == true:
-		print("yus")
+func Enter(_previous_state: State):
+	if player.crouch_speed:
+		#print("crouched")
 		walk_speed = PLAYER_DATA.crouch_speed
 		_crouch_control()
-	play_footsteps.emit()
+	walk_sfx.play()
 	#print("walking")
 
 func _physics_process(delta: float) -> void:
@@ -22,6 +21,10 @@ func Update(_delta):
 			an.play("crouch_walk")
 		else:
 			an.play("walk")
+#	if player.crouch_speed: #Slows down walking sound effect
+#		walk_sfx.pitch_scale = PLAYER_DATA.crouch_speed / PLAYER_DATA.walk_speed
+#	else: walk_sfx.pitch_scale = 1
+	
 
 
 func Physics_Update(_delta):
@@ -46,5 +49,5 @@ func Physics_Update(_delta):
 		Transition.emit(self, "stasis")
 	
 func Exit():
-	stop_footsteps.emit()
+	walk_sfx.stop()
 	#print("notwalk")

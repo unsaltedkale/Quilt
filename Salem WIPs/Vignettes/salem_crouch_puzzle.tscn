@@ -3,15 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_38m0h"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_gorvn"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_roayi"]
-[ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="4_4cefc"]
-[ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_6bccy"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="6_npbov"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="7_rey4r"]
-[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="8_0bq73"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="9_g4iuj"]
-[ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="10_dnnng"]
-[ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="11_bq4bf"]
-[ext_resource type="PackedScene" uid="uid://dacoqwe3msj05" path="res://Elena/Scenes/movingplatform.tscn" id="12_5nfj3"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="13_7bugf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
@@ -4746,32 +4739,13 @@ tile_set = SubResource("TileSet_eulau")
 
 [node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["tilemap"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAD7//v/AAAEAB8AAADm/wYAAAADAB0AAGDn/wYAAAADAB4AAGDo/wYAAAADAB8AAGA=")
+tile_map_data = PackedByteArray("AADm/wYAAAADAB0AAGDn/wYAAAADAB4AAGDo/wYAAAADAB8AAGA=")
 tile_set = SubResource("TileSet_6pqo5")
 
 [node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AADv//z/AAAEAAwAAADj/woAAAAEAAwAAADf/woAAAAEAAwAAADh/wcAAAAEAAwAAADp//3/AAADAAoAAGDq//3/AAADAAsAAGDr//3/AAADAAwAAGA=")
+tile_map_data = PackedByteArray("AADj/woAAAAEAAwAAADf/woAAAAEAAwAAADh/wcAAAAEAAwAAADp//3/AAADAAoAAGDq//3/AAADAAsAAGDr//3/AAADAAwAAGA=")
 tile_set = SubResource("TileSet_5e7ya")
-
-[node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
-position = Vector2(-38, -171)
-
-[node name="Conductor_Platform" parent="Conductor_Platforms" unique_id=1167135782 instance=ExtResource("4_4cefc")]
-position = Vector2(474, -133)
-
-[node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
-position = Vector2(-38, -171)
-
-[node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("5_6bccy")]
-position = Vector2(482, -268)
-
-[node name="Stars" type="Node2D" parent="." unique_id=1803044504]
-position = Vector2(-38, -171)
-
-[node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_npbov")]
-position = Vector2(652, -300)
-scale = Vector2(0.9999999, 0.9999999)
 
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 position = Vector2(-38, -171)
@@ -4782,33 +4756,10 @@ position = Vector2(-3084, 719)
 [node name="Stasis2" parent="Stasis Chamber" unique_id=2067666756 instance=ExtResource("7_rey4r")]
 position = Vector2(-4454, 1135)
 
-[node name="Zipline" type="Node2D" parent="." unique_id=1757930451]
-
-[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("8_0bq73")]
-position = Vector2(-138, -913)
-
 [node name="One-Way Platforms" type="Node2D" parent="." unique_id=1306004910]
 
 [node name="One_Way_Platform" parent="One-Way Platforms" unique_id=113338548 instance=ExtResource("9_g4iuj")]
 position = Vector2(-4408, 701)
-
-[node name="Disappearing Platforms" type="Node2D" parent="." unique_id=899769112]
-position = Vector2(-38, -171)
-
-[node name="Disappearing_Platform" parent="Disappearing Platforms" unique_id=607645916 instance=ExtResource("10_dnnng")]
-position = Vector2(-65, -32)
-
-[node name="Resetpoints" type="Node2D" parent="." unique_id=1227821716]
-position = Vector2(-38, -171)
-
-[node name="ResetPoint" parent="Resetpoints" unique_id=126288163 instance=ExtResource("11_bq4bf")]
-position = Vector2(286, -145)
-
-[node name="MovingPlatforms" type="Node2D" parent="." unique_id=1066724718]
-
-[node name="MovingPlatform" parent="MovingPlatforms" unique_id=1943217819 instance=ExtResource("12_5nfj3")]
-position = Vector2(-1068, -221)
-speed = 500.0
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)

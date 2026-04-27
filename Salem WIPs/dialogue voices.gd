@@ -59,7 +59,7 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 			"o", "O":
 				newnote -= 1
 				pitch_hold = p[3]
-			"u", "U":
+			"u", "U", ".":
 				newnote -= 1
 				pitch_hold = p[4]
 			":": #On new dialogue line

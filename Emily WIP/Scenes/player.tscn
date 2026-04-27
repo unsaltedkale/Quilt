@@ -1690,8 +1690,9 @@ script = ExtResource("23_3jtwp")
 player = NodePath("../..")
 state_name = "idle"
 
-[node name="Walk" type="Node" parent="StateMachine" unique_id=1116354773 node_paths=PackedStringArray("player")]
+[node name="Walk" type="Node" parent="StateMachine" unique_id=1116354773 node_paths=PackedStringArray("walk_sfx", "player")]
 script = ExtResource("24_p2d1a")
+walk_sfx = NodePath("../../SFX/Footsteps")
 player = NodePath("../..")
 state_name = "walk"
 
@@ -1762,11 +1763,12 @@ bus = &"SFXMaster"
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="SFX" unique_id=577343084]
 stream = SubResource("AudioStreamPlaylist_hiv3f")
-bus = &"SFXMaster"
+volume_db = 20.0
+playback_type = 1
 
 [node name="Shoot Projectile" type="AudioStreamPlayer" parent="SFX" unique_id=922950995]
 stream = ExtResource("36_n7wni")
-volume_db = -15.0
+volume_db = -14.0
 max_polyphony = 6
 bus = &"SFXMaster"
 
@@ -1788,8 +1790,6 @@ rect = Rect2(-10, -21.5, 20, 44)
 [connection signal="body_entered" from="TileMapCheck" to="." method="_on_tile_map_check_body_entered"]
 [connection signal="body_exited" from="TileMapCheck" to="." method="_on_tile_map_check_body_exited"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Idle" method="_anim_end"]
-[connection signal="play_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="play"]
-[connection signal="stop_footsteps" from="StateMachine/Walk" to="SFX/Footsteps" method="stop"]
 [connection signal="jump_sound" from="StateMachine/Jump" to="SFX/Jump" method="play"]
 [connection signal="has_landed" from="StateMachine/Fall" to="SFX/Land" method="play"]
 [connection signal="shoot_projectile" from="StateMachine/Recoil" to="SFX/Shoot Projectile" method="play"]
