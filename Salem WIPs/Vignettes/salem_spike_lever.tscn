@@ -4756,18 +4756,22 @@ position = Vector2(-38, -171)
 [node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_u3dgu")]
 position = Vector2(-6366, 2846.9998)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 2.0
 
 [node name="STAR2" parent="Stars" unique_id=1440804062 instance=ExtResource("6_u3dgu")]
 position = Vector2(-6402.001, 3248.0005)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 2.0
 
 [node name="STAR3" parent="Stars" unique_id=257753382 instance=ExtResource("6_u3dgu")]
 position = Vector2(-6381, 3656.0002)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 2.0
 
 [node name="STAR4" parent="Stars" unique_id=466367524 instance=ExtResource("6_u3dgu")]
 position = Vector2(-6342.0005, 4054.0002)
 scale = Vector2(0.9999999, 0.9999999)
+respawn_timer_max = 2.0
 
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 position = Vector2(-38, -171)
@@ -4820,9 +4824,6 @@ scale_amount_min = 8.0
 scale_amount_max = 16.0
 color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 
-[node name="Vinyl" parent="." unique_id=2078547140 instance=ExtResource("12_3ryns")]
-position = Vector2(-4019, 6492)
-
 [node name="Lever stuff" type="Node2D" parent="." unique_id=753698931]
 
 [node name="leverplatform" parent="Lever stuff" unique_id=96890641 instance=ExtResource("11_n6i1r")]
@@ -4856,5 +4857,8 @@ lever_path = NodePath("../Lever")
 position = Vector2(-6141, 3452)
 rotation = -1.5707964
 scale = Vector2(2, 2)
+
+[node name="Vinyl" parent="." unique_id=2078547140 instance=ExtResource("12_3ryns")]
+position = Vector2(-4019, 6492)
 
 [editable path="Req"]

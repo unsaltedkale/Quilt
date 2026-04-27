@@ -1,17 +1,30 @@
 extends Node2D
-
-@export var state = "left"
+var state = "left"
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+var player : Player
 
 var player_in_area: bool = false
 signal changed(new_state)
 
 func _ready() -> void:
-	state = "left"
+	if get_tree().get_first_node_in_group("Req") != null:
+		player = get_tree().get_first_node_in_group("Player")
+	else:
+		player = $"../Player"
 
 func _process(_delta) -> void:
 	if player_in_area and Input.is_action_just_pressed("interact"):
 		_toggle_lever()
+	
+	#Connect player death to reset lever
+	if player != null:
+		if not player.player_death.is_connected(reset_lever):
+			player.player_death.connect(reset_lever)
+	else:
+		if get_tree().get_first_node_in_group("Req") != null:
+			player = get_tree().get_first_node_in_group("Player")
+		else:
+			player = $"../Player"
 	
 func _toggle_lever():
 	if state == "right":
@@ -34,3 +47,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		player_in_area = false
+		
+func reset_lever():
+	state = "left"
+	changed.emit(state)
