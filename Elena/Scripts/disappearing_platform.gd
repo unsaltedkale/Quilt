@@ -1,8 +1,8 @@
 extends RigidBody2D
 
-@onready var player
-@onready var start_position
-@onready var start_rotation
+var player
+var start_position
+var start_rotation
 @export var time: float
 
 func _ready() -> void:
@@ -22,7 +22,6 @@ func _process(_delta: float) -> void:
 	if player != null:
 		if not player.player_death.is_connected(reset_platforms):
 			player.player_death.connect(reset_platforms)
-			
 	else:
 		if get_tree().get_first_node_in_group("Req") != null:
 			player = get_tree().get_first_node_in_group("Player")
