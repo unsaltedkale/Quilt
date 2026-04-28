@@ -141,7 +141,7 @@ func _tick() -> void:
 			text = line
 			$"Voice Player"._start_of_new_line()
 			for i in len(line):
-				await wait(0.03) # moving this before fixed number not moving up
+				await wait(0.03)
 				dialogueReference.visible_characters += 1
 				_handle_voice()
 			

@@ -77,6 +77,12 @@ func _play():
 			indicator._close()
 		pass
 
+
+
+
+
+
+
 func _read_events():
 	var tempvar = player.find_child("StateMachine").current_state
 	var camera_zoom = Camera.zoom
@@ -84,27 +90,14 @@ func _read_events():
 	for event in container.events:
 		print(event.resource_path)
 		
-		#print_debug("HEY:" + str(event.delay_before))
-		
 		if event.delay_before > 0:
-			#print_debug("delay before timer started")
 			await get_tree().create_timer(event.delay_before).timeout
-			#print_debug("delay before timer finished")
-		
-		#print_debug("started event")
-		
+
 		await event.execute(self)
 		
-		#print_debug("ended event")
-		
-		#print_debug("HEY:" + str(event.delay_after))
-		
 		if event.delay_after > 0:
-			#print_debug("delay after timer started")
 			await get_tree().create_timer(event.delay_after).timeout
-			#print_debug("delay after timer finished")
-		
-		#print_debug("done!!!")
+
 	print_debug("cutscene finished")
 	played = true
 	var tween = get_tree().create_tween()

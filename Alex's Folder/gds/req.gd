@@ -34,8 +34,6 @@ func _set_tile_particles() -> void:
 		
 		var p = null
 		
-		#print(tml.name)
-		#print(tml.get_used_cells())
 		match tml.name:
 			"Magical_Barrier":
 				p = mb_p

@@ -3,7 +3,11 @@ extends RichTextLabel
 @export var type: message_type
 @onready var ri
 
-enum message_type {movement, jump, recoil, interact, reset_point, dialouge_continue, stasis_warning}
+enum input_type {keyboard, controller}
+
+enum message_type {movement, jump, recoil, interact, reset_point, dialogue_continue, stasis_warning}
+
+var input: input_type
 
 var movement_message: Array[String]
 
@@ -15,14 +19,18 @@ var interact_message: Array[String]
 
 var resetpoint_message: Array[String]
 
-var dialouge_continue_message: Array[String]
+var dialogue_continue_message: Array[String]
 
 var stasis_warning_message: Array[String]
 
 var super_array: Array[Array]
 
+var super_dictionary: Dictionary[message_type, Array]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	input = input_type.keyboard
 	
 	if get_parent().name == "DialogueScreen":
 		ri = $"../../../../../Player/recoil_indicator"
@@ -34,10 +42,20 @@ func _ready() -> void:
 	recoil_message = ["click with {24} anywhere on screen to recoil","flick {26} in any direction to recoil"]
 	interact_message = ["press {22} to interact","press {20} to interact"]
 	resetpoint_message = ["hold {22} at a resetpoint to reset", "hold {20} at a reset point to reset"]
-	dialouge_continue_message = ["{22}","{20}"]
+	dialogue_continue_message = ["{22}","{20}"]
 	stasis_warning_message = ["use {12} or {24} to break from a stasis chamber","use {14} or {26} to break from a stasis chamber"]
 	
-	super_array = [movement_message,jump_message,recoil_message,interact_message,resetpoint_message,dialouge_continue_message,stasis_warning_message]
+	#super_array = [movement_message,jump_message,recoil_message,interact_message,resetpoint_message,dialouge_continue_message,stasis_warning_message]
+	
+	super_dictionary = {
+		message_type.movement: movement_message, 
+		message_type.jump: jump_message,
+		message_type.recoil: recoil_message,
+		message_type.interact: interact_message,
+		message_type.reset_point: resetpoint_message,
+		message_type.dialogue_continue: dialogue_continue_message,
+		message_type.stasis_warning: stasis_warning_message,
+		}
 	
 	pass # Replace with function body.
 
@@ -48,15 +66,12 @@ func _process(_delta: float) -> void:
 	if ri == null && get_tree().get_first_node_in_group("Player") != null:
 		ri = get_tree().get_first_node_in_group("Player").find_child("recoil_indicator")
 	else:
-		var i
 		if ri != null:
 			if ri.controller == false:
-				i = 0
+				input = input_type.keyboard
 			elif ri.controller == true:
-				i = 1
-			
-			var l = (str(super_array[type][i]))
-			
+				input = input_type.controller
+			var l = (str(super_dictionary[type][input]))
 			while l.contains("{"):
 				var start = l.find("{")
 				

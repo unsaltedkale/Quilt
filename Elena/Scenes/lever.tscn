@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_3t248"]
 [ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="2_r2igf"]
+[ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="3_lqrpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu6v1"]
 size = Vector2(97, 92)
@@ -61,8 +62,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Lever" type="Node2D" unique_id=1957476101]
+[node name="Lever" type="Node2D" unique_id=1957476101 node_paths=PackedStringArray("tt")]
 script = ExtResource("1_3t248")
+tt = NodePath("ToolTipMessage")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1295953268]
 
@@ -75,6 +77,13 @@ shape = SubResource("RectangleShape2D_iu6v1")
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_xxbqi")
 animation = &"lever_switch_to_left"
+
+[node name="ToolTipMessage" parent="." unique_id=783056906 instance=ExtResource("3_lqrpp")]
+offset_left = -568.0
+offset_top = -240.0
+offset_right = 32.0
+offset_bottom = -120.0
+type = 5
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
