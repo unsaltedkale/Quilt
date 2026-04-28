@@ -21,7 +21,6 @@ func Exit():
 	pass
 
 func _anim_end():
-	print("sup")
 	var anim = str(an.animation)
 	if anim == "phlo_mini_wump":
 		player.start_wump = false

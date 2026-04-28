@@ -64,13 +64,13 @@ func take_damage(amount: int) -> void:
 	#allows for different damage amounts if we ever want to do that
 		
 func die():
-	print_debug("Player died")
+	#print_debug("Player died")
 	$"../Camera2D".player_died()
 	player_death.emit()
 	spawn_player(spawn_point)
 	
 func _on_hit_box_body_entered(body: Node2D) -> void:
-	print_debug("NAME:" + str(body.name))
+	#print_debug("NAME:" + str(body.name))
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
 
@@ -80,20 +80,20 @@ func _on_area_entered(_body: Area2D):
 	pass
 		
 func _on_tile_map_check_body_entered(body: Node2D) -> void:
-	print_debug("ENTERED:" + str(body.name))
+	#print_debug("ENTERED:" + str(body.name))
 	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
 		no_recoil = true
 	pass # Replace with function body.
 
 func _on_tile_map_check_body_exited(body: Node2D) -> void:
-	print_debug("EXITED:" + str(body.name))
+	#print_debug("EXITED:" + str(body.name))
 	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
 		no_recoil = false
 	pass # Replace with function body.
 
 func _on_quilt_uncrouch_check_body_entered(body: Node2D) -> void:
 	if body.name == "Collision" || body.name == "Magical_Barrier" || body.name == "Damage_Layer" || body.name == "Mirror":
-		print_debug("ENTERED:" + str(body.name))
+		#print_debug("ENTERED:" + str(body.name))
 		_quilt_uncrouch_check_changed(true)
 	
 	pass # Replace with function body.
@@ -102,7 +102,7 @@ func _on_quilt_uncrouch_check_body_entered(body: Node2D) -> void:
 func _on_quilt_uncrouch_check_body_exited(body: Node2D) -> void:
 	
 	if body.name == "Collision" || body.name == "Magical_Barrier" || body.name == "Damage_Layer" || body.name == "Mirror":
-		print_debug("EXITED:" + str(body.name))
+		#print_debug("EXITED:" + str(body.name))
 		_quilt_uncrouch_check_changed(false)
 	pass # Replace with function body.
 
@@ -122,7 +122,7 @@ func _quilt_uncrouch_check_changed(b: bool):
 		#currently crouching
 		
 		if not Input.is_action_pressed("crouch") && not b:
-			print("force_uncrouching")
+			#print("force_uncrouching")
 			#player does not want to crouch and can uncrouch-- uncrouch them
 			$StateMachine/Idle._force_leave_crouch()
 			force_crouch = false

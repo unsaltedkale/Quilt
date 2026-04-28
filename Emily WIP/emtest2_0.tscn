@@ -847,4 +847,3 @@ position = Vector2(3354, 1638)
 
 [node name="STAR" parent="." unique_id=1440804062 instance=ExtResource("5_qrawa")]
 position = Vector2(5128, 1524)
-respawns = true

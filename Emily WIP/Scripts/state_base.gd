@@ -75,7 +75,7 @@ func _crouch_control():
 	pass
 
 func _force_leave_crouch():
-	print("click")
+	#print("click")
 	player.quilt_collider.set_deferred("disabled", false)
 	player.quilt_crouch.set_deferred("disabled", true)
 	player.set_deferred("crouch_speed", false)
