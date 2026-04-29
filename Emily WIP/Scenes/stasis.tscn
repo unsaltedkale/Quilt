@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://2mt3fdvrlct7" path="res://Emily WIP/Scripts/stasis.gd" id="1_r3qni"]
 [ext_resource type="Texture2D" uid="uid://btnfovw1agbdu" path="res://Art/Stasis Chamber.png" id="2_r3qni"]
-[ext_resource type="AudioStream" uid="uid://7amg26gynfed" path="res://Resources/SFX/Stasis SFX/Stasis Hum.wav" id="3_mp70r"]
-[ext_resource type="AudioStream" uid="uid://da01yfulq5dh6" path="res://Resources/SFX/Stasis SFX/Enter Stasis.wav" id="4_axs2h"]
-[ext_resource type="AudioStream" uid="uid://c83anh7poo8gw" path="res://Resources/SFX/Stasis SFX/Exit Stasis.wav" id="5_djhpt"]
+[ext_resource type="AudioStream" uid="uid://7amg26gynfed" path="res://Resources/SFX/Enivronment/Stasis SFX/Stasis Hum.wav" id="3_mp70r"]
+[ext_resource type="AudioStream" uid="uid://da01yfulq5dh6" path="res://Resources/SFX/Enivronment/Stasis SFX/Enter Stasis.wav" id="4_axs2h"]
+[ext_resource type="AudioStream" uid="uid://c83anh7poo8gw" path="res://Resources/SFX/Enivronment/Stasis SFX/Exit Stasis.wav" id="5_djhpt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3qni"]
 height = 28.91566

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c83anh7poo8gw"
-path="res://.godot/imported/Exit Stasis.wav-293b93930943382e0df8ba6818aafd8d.sample"
+path="res://.godot/imported/Exit Stasis.wav-e00f0b2be9eb1064d715ca7adeb61bc5.sample"
 
 [deps]
 
-source_file="res://Resources/SFX/Stasis SFX/Exit Stasis.wav"
-dest_files=["res://.godot/imported/Exit Stasis.wav-293b93930943382e0df8ba6818aafd8d.sample"]
+source_file="res://Resources/SFX/Enivronment/Stasis SFX/Exit Stasis.wav"
+dest_files=["res://.godot/imported/Exit Stasis.wav-e00f0b2be9eb1064d715ca7adeb61bc5.sample"]
 
 [params]
 

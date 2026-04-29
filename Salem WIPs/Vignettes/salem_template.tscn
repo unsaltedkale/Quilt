@@ -4796,7 +4796,6 @@ position = Vector2(-38, -171)
 position = Vector2(-65, -32)
 
 [node name="Resetpoints" type="Node2D" parent="." unique_id=1227821716]
-position = Vector2(-38, -171)
 
 [node name="ResetPoint" parent="Resetpoints" unique_id=126288163 instance=ExtResource("11_bq4bf")]
 position = Vector2(286, -145)
