@@ -7,6 +7,8 @@ var player : Player
 var player_in_area: bool = false
 signal changed(new_state)
 
+@onready var click_sfx : AudioStreamPlayer = $"Click"
+
 func _ready() -> void:
 	if get_tree().get_first_node_in_group("Req") != null:
 		player = get_tree().get_first_node_in_group("Player")
@@ -38,12 +40,16 @@ func _toggle_lever():
 	if state == "right":
 		state = "left"
 		anim.play("lever_switch_to_left")
+		click_sfx.pitch_scale = 0.22
+		click_sfx.play()
 		print("lever: state=left")
 		changed.emit(state)
 		
 	elif state == "left":
 		state = "right" 
 		anim.play("lever_switch_to_right")
+		click_sfx.pitch_scale = 0.2
+		click_sfx.play()
 		print("lever: state=right")
 		changed.emit(state)
 
