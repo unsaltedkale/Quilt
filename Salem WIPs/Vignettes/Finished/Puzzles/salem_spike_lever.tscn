@@ -1,18 +1,18 @@
 [gd_scene format=4 uid="uid://d047sxdj3la1k"]
 
-[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_n6i1r"]
-[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_flhve"]
-[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_6ncbl"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="6_u3dgu"]
-[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="7_qdn40"]
-[ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="9_f6671"]
-[ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="10_di7cx"]
-[ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="11_3ryns"]
-[ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="11_n6i1r"]
-[ext_resource type="PackedScene" uid="uid://d11wvbu82dkqx" path="res://Alex's Folder/tscns/vinyl.tscn" id="12_3ryns"]
-[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="12_n6i1r"]
-[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="13_kfng7"]
-[ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="13_n6i1r"]
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_yu2y3"]
+[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_marqg"]
+[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_ittqq"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="4_vlnbi"]
+[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="5_68865"]
+[ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="6_rbto4"]
+[ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="7_epu2y"]
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="8_d4n6g"]
+[ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="9_gn1im"]
+[ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="10_fb416"]
+[ext_resource type="PackedScene" uid="uid://d11wvbu82dkqx" path="res://Alex's Folder/tscns/vinyl.tscn" id="11_027id"]
+[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="12_s7ug7"]
+[ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="13_nqicb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -1647,7 +1647,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
-texture = ExtResource("3_6ncbl")
+texture = ExtResource("3_ittqq")
 texture_region_size = Vector2i(32, 32)
 0:7/0 = 0
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 16, -16, 16)
@@ -3169,7 +3169,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fg0v8")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq4vl"]
-texture = ExtResource("3_6ncbl")
+texture = ExtResource("3_ittqq")
 texture_region_size = Vector2i(32, 32)
 38:37/0 = 0
 37:37/0 = 0
@@ -4674,7 +4674,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_rq4vl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2847"]
-texture = ExtResource("3_6ncbl")
+texture = ExtResource("3_ittqq")
 texture_region_size = Vector2i(32, 32)
 0:10/0 = 0
 0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -4715,7 +4715,7 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 
 [node name="VinnieTemplate" type="Node2D" unique_id=467354812]
 
-[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_n6i1r")]
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_yu2y3")]
 position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
@@ -4726,7 +4726,7 @@ position = Vector2(-1419, 280)
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AACAAPT/AAAJAAQAAACAAPP/AAAJAAQAAACAAPL/AAAJAAQAAACAAPH/AAAJAAQAAACAAPD/AAAJAAQAAACAAO//AAAJAAQAAACAAO7/AAAJAAQAAACAAO3/AAAJAAQAAACAAOz/AAAJAAQAAACAAOv/AAAJAAQAAACAAOr/AAAJAAQAAACAAOn/AAAJAAQAAAA=")
-tile_set = ExtResource("2_flhve")
+tile_set = ExtResource("2_marqg")
 collision_enabled = false
 
 [node name="Collision" type="TileMapLayer" parent="Tiles" unique_id=982493535 groups=["tilemap"]]
@@ -4755,22 +4755,22 @@ tile_set = SubResource("TileSet_5e7ya")
 [node name="Stars" type="Node2D" parent="." unique_id=1803044504]
 position = Vector2(-38, -171)
 
-[node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_u3dgu")]
+[node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("4_vlnbi")]
 position = Vector2(-6366, 2846.9998)
 scale = Vector2(0.9999999, 0.9999999)
 respawn_timer_max = 2.0
 
-[node name="STAR2" parent="Stars" unique_id=1440804062 instance=ExtResource("6_u3dgu")]
+[node name="STAR2" parent="Stars" unique_id=1440804062 instance=ExtResource("4_vlnbi")]
 position = Vector2(-6402.001, 3248.0005)
 scale = Vector2(0.9999999, 0.9999999)
 respawn_timer_max = 2.0
 
-[node name="STAR3" parent="Stars" unique_id=257753382 instance=ExtResource("6_u3dgu")]
+[node name="STAR3" parent="Stars" unique_id=257753382 instance=ExtResource("4_vlnbi")]
 position = Vector2(-6381, 3656.0002)
 scale = Vector2(0.9999999, 0.9999999)
 respawn_timer_max = 2.0
 
-[node name="STAR4" parent="Stars" unique_id=466367524 instance=ExtResource("6_u3dgu")]
+[node name="STAR4" parent="Stars" unique_id=466367524 instance=ExtResource("4_vlnbi")]
 position = Vector2(-6342.0005, 4054.0002)
 scale = Vector2(0.9999999, 0.9999999)
 respawn_timer_max = 2.0
@@ -4778,34 +4778,34 @@ respawn_timer_max = 2.0
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 position = Vector2(-38, -171)
 
-[node name="Stasis" parent="Stasis Chamber" unique_id=1921201016 instance=ExtResource("7_qdn40")]
+[node name="Stasis" parent="Stasis Chamber" unique_id=1921201016 instance=ExtResource("5_68865")]
 position = Vector2(-6570, 1024)
 
-[node name="Stasis2" parent="Stasis Chamber" unique_id=1017569396 instance=ExtResource("7_qdn40")]
+[node name="Stasis2" parent="Stasis Chamber" unique_id=1017569396 instance=ExtResource("5_68865")]
 position = Vector2(-6713, 3055)
 
-[node name="Stasis3" parent="Stasis Chamber" unique_id=1499663601 instance=ExtResource("7_qdn40")]
+[node name="Stasis3" parent="Stasis Chamber" unique_id=1499663601 instance=ExtResource("5_68865")]
 position = Vector2(-5247, 6676)
 
 [node name="One-Way Platforms" type="Node2D" parent="." unique_id=1306004910]
 position = Vector2(-38, -171)
 
-[node name="One_Way_Platform" parent="One-Way Platforms" unique_id=113338548 instance=ExtResource("9_f6671")]
+[node name="One_Way_Platform" parent="One-Way Platforms" unique_id=113338548 instance=ExtResource("6_rbto4")]
 position = Vector2(-2224, 6295.0005)
 scale = Vector2(3, 3)
 
-[node name="One_Way_Platform2" parent="One-Way Platforms" unique_id=80684697 instance=ExtResource("9_f6671")]
+[node name="One_Way_Platform2" parent="One-Way Platforms" unique_id=80684697 instance=ExtResource("6_rbto4")]
 position = Vector2(-2224, 6800)
 scale = Vector2(3, 3)
 
 [node name="Disappearing Platforms" type="Node2D" parent="." unique_id=899769112]
 position = Vector2(-38, -171)
 
-[node name="Disappearing_Platform" parent="Disappearing Platforms" unique_id=607645916 instance=ExtResource("10_di7cx")]
+[node name="Disappearing_Platform" parent="Disappearing Platforms" unique_id=607645916 instance=ExtResource("7_epu2y")]
 position = Vector2(-4118, 767)
 time = 0.3
 
-[node name="Disappearing_Platform2" parent="Disappearing Platforms" unique_id=681802562 instance=ExtResource("10_di7cx")]
+[node name="Disappearing_Platform2" parent="Disappearing Platforms" unique_id=681802562 instance=ExtResource("7_epu2y")]
 position = Vector2(-4647, 1062)
 time = 0.3
 
@@ -4815,7 +4815,7 @@ position = Vector2(-38, -171)
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="Particles" unique_id=668623674]
 position = Vector2(183, -1492)
 amount = 30
-texture = ExtResource("13_kfng7")
+texture = ExtResource("8_d4n6g")
 lifetime = 6.18
 preprocess = 10.0
 speed_scale = 0.45
@@ -4828,7 +4828,7 @@ color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 
 [node name="Lever stuff" type="Node2D" parent="." unique_id=753698931]
 
-[node name="leverplatform" parent="Lever stuff" unique_id=96890641 instance=ExtResource("11_n6i1r")]
+[node name="leverplatform" parent="Lever stuff" unique_id=96890641 instance=ExtResource("9_gn1im")]
 position = Vector2(-6600, 6800)
 scale = Vector2(2, 2)
 point_a = Vector2(-6600, 6800)
@@ -4837,7 +4837,7 @@ speed = 25.0
 wait_time = 1.0
 lever_path = NodePath("../Lever")
 
-[node name="leverplatform2" parent="Lever stuff" unique_id=602379060 instance=ExtResource("11_n6i1r")]
+[node name="leverplatform2" parent="Lever stuff" unique_id=602379060 instance=ExtResource("9_gn1im")]
 position = Vector2(-5300, 3100)
 scale = Vector2(2, 2)
 point_a = Vector2(-5300, 3100)
@@ -4846,7 +4846,7 @@ speed = 300.0
 wait_time = 1.0
 lever_path = NodePath("../Lever")
 
-[node name="leverplatform3" parent="Lever stuff" unique_id=244019384 instance=ExtResource("11_n6i1r")]
+[node name="leverplatform3" parent="Lever stuff" unique_id=244019384 instance=ExtResource("9_gn1im")]
 position = Vector2(-2254, 6022)
 scale = Vector2(2, 2)
 point_a = Vector2(-2254, 6022)
@@ -4855,17 +4855,17 @@ speed = 300.0
 wait_time = 1.0
 lever_path = NodePath("../Lever")
 
-[node name="Lever" parent="Lever stuff" unique_id=1957476101 instance=ExtResource("11_3ryns")]
+[node name="Lever" parent="Lever stuff" unique_id=1957476101 instance=ExtResource("10_fb416")]
 position = Vector2(-6141, 3452)
 rotation = -1.5707964
 scale = Vector2(2, 2)
 
-[node name="Vinyl" parent="." unique_id=2078547140 instance=ExtResource("12_3ryns")]
+[node name="Vinyl" parent="." unique_id=2078547140 instance=ExtResource("11_027id")]
 position = Vector2(-4019, 6492)
 
 [node name="Zipline" type="Node2D" parent="." unique_id=1300336663]
 
-[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("12_n6i1r")]
+[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("12_s7ug7")]
 position = Vector2(-5325, 5604)
 speed = 2000.0
 start_position = Vector2(-5325, 5604)
@@ -4874,7 +4874,7 @@ reverse_time = 1.0
 
 [node name="Resetpoints" type="Node2D" parent="." unique_id=1875436325]
 
-[node name="ResetPoint" parent="Resetpoints" unique_id=638936802 instance=ExtResource("13_n6i1r")]
+[node name="ResetPoint" parent="Resetpoints" unique_id=638936802 instance=ExtResource("13_nqicb")]
 position = Vector2(-4582, 6711)
 
 [editable path="Req"]
