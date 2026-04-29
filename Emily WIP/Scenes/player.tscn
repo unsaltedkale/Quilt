@@ -1760,6 +1760,7 @@ bus = &"SFXMaster"
 [node name="Footsteps" type="AudioStreamPlayer" parent="SFX" unique_id=577343084]
 stream = ExtResource("40_sfidj")
 volume_db = -5.0
+bus = &"SFXMaster"
 
 [node name="Timer" type="Timer" parent="SFX/Footsteps" unique_id=825603606]
 wait_time = 0.2

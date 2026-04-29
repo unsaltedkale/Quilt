@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dvteui4csx23w" path="res://Art/Quilt STAR-1.png" id="2_akwti"]
 [ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/tscns/make_it_musical.tscn" id="3_akwti"]
 [ext_resource type="AudioStream" uid="uid://cfm1pmjn8nif4" path="res://Resources/SFX/Enivronment/Collect Star.wav" id="4_mjb6q"]
-[ext_resource type="AudioStream" uid="uid://fdp2dt68j46v" path="res://Resources/SFX/Enivronment/Star Respwan.wav" id="5_iq27v"]
+[ext_resource type="AudioStream" uid="uid://fdp2dt68j46v" path="res://Resources/SFX/Enivronment/Star Respawn.wav" id="5_iq27v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7gr"]
 
@@ -29,9 +29,11 @@ texture = ExtResource("2_akwti")
 [node name="Collect Star" type="AudioStreamPlayer" parent="." unique_id=1111091794]
 stream = ExtResource("4_mjb6q")
 volume_db = -28.0
+bus = &"SFXMaster"
 
 [node name="Star Respawn" type="AudioStreamPlayer" parent="." unique_id=1393009056]
 stream = ExtResource("5_iq27v")
 volume_db = -23.0
+bus = &"SFXMaster"
 
 [connection signal="body_entered" from="." to="." method="_on_STAR_entered"]

@@ -89,6 +89,7 @@ type = 5
 [node name="Click" type="AudioStreamPlayer" parent="." unique_id=129455520]
 stream = ExtResource("4_pcow5")
 volume_db = -10.0
+bus = &"SFXMaster"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
