@@ -77,8 +77,9 @@ text = "QUILT"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=855062033]
 stream = SubResource("AudioStreamWAV_tu0on")
 
-[node name="Conductor" parent="." unique_id=554276046 instance=ExtResource("3_tu0on")]
+[node name="Conductor" parent="." unique_id=554276046 node_paths=PackedStringArray("hudc") instance=ExtResource("3_tu0on")]
 current_music_resource = ExtResource("4_2k3je")
+hudc = NodePath("../CanvasLayer/Heads-up Conductor")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=611708121]
 
@@ -87,6 +88,7 @@ visible = false
 position = Vector2(560, 580)
 
 [node name="Pity Kill Timer" type="Label" parent="CanvasLayer" unique_id=226725528]
+visible = false
 offset_left = -6.109476e-05
 offset_top = -6.1511986e-05
 offset_right = 247.42267

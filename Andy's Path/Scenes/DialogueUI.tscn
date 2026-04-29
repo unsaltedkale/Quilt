@@ -841,10 +841,10 @@ script = ExtResource("20_ikb8c")
 
 [node name="Background" type="ColorRect" parent="UI/Settings" unique_id=45762467]
 layout_mode = 0
-offset_right = 1141.6571
-offset_bottom = 645.0
+offset_right = 1147.0338
+offset_bottom = 649.797
 scale = Vector2(1.6738826, 1.674369)
-color = Color(0.36078432, 0.43137255, 0.4862745, 0.8627451)
+color = Color(0.39607844, 0.2901961, 0.29803923, 0.8627451)
 
 [node name="HSlider" type="HSlider" parent="UI/Settings" unique_id=92704188]
 layout_mode = 0
@@ -973,37 +973,12 @@ theme_override_fonts/font = ExtResource("2_yhc7a")
 theme_override_font_sizes/font_size = 13
 text = "Sound FX"
 
-[node name="DialogueEchoSlider" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=1372367874]
-layout_mode = 0
-offset_left = 1253.0
-offset_top = 650.0
-offset_right = 1573.0
-offset_bottom = 700.0
-scale = Vector2(1.6738826, 1.674369)
-theme_override_constants/center_grabber = 1
-theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_yhc7a")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yhc7a")
-min_value = -40.0
-max_value = 10.0
-
-[node name="Label" type="Label" parent="UI/Settings/VolumeSettings/DialogueEchoSlider" unique_id=1362517421]
-layout_mode = 0
-offset_left = -68.0
-offset_top = 19.0
-offset_right = -1.0
-offset_bottom = 33.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_yhc7a")
-theme_override_font_sizes/font_size = 9
-text = "Dialogue Echo"
-
 [node name="MusicSlider" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=1585397373]
 layout_mode = 0
 offset_left = 1253.0
-offset_top = 718.0
+offset_top = 648.0
 offset_right = 1573.0
-offset_bottom = 768.0
+offset_bottom = 698.0
 scale = Vector2(1.6738826, 1.674369)
 theme_override_constants/center_grabber = 1
 theme_override_styles/slider = SubResource("StyleBoxFlat_5lshs")

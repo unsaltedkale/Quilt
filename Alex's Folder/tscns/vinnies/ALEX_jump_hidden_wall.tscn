@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="10_4x1vg"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="11_n5oyy"]
 [ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="12_wu724"]
-[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="13_dmnsp"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="14_idxqr"]
 [ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="15_vgm8x"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="16_xbs2i"]
@@ -4807,9 +4806,6 @@ position = Vector2(233, -323)
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -155)
 
-[node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
-visible = false
-
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
@@ -4830,17 +4826,17 @@ tile_set = SubResource("TileSet_rq4vl")
 
 [node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAqAAoAAAAUAAAAAAAqAAkAAAAUAAAAAAAqAAgAAAAUAAAAAAAqAAcAAAAUAAAAAAAqAAYAAAAUAAAAAAAqAAUAAAAUAAAAAAAMAPv/AAAXAAoAAAAMAPz/AAAXAAsAAAAMAP3/AAAXAAwAAAAMAPj/AAAXAAoAAAAMAPn/AAAXAAsAAAAMAPr/AAAXAAwAAAA=")
+tile_map_data = PackedByteArray("AAAqAAoAAAAUAAAAAAAqAAkAAAAUAAAAAAAqAAgAAAAUAAAAAAAqAAcAAAAUAAAAAAAqAAYAAAAUAAAAAAAqAAUAAAAUAAAAAAA=")
 tile_set = SubResource("TileSet_eulau")
 
 [node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["tilemap"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AABmAB0AAAAAAAAAAABmAB4AAAAAAAAAAABmAB8AAAAAAAAAAAAQAPv/AAADAB0AAAAQAPz/AAADAB4AAAAQAP3/AAADAB8AAAAQAPj/AAADAB0AAAAQAPn/AAADAB4AAAAQAPr/AAADAB8AAAA=")
+tile_map_data = PackedByteArray("AABmAB0AAAAAAAAAAABmAB4AAAAAAAAAAABmAB8AAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_6pqo5")
 
 [node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AABPACMAAAATAAUAAABPACQAAAATAAYAAABPACUAAAATAAYAAABPACYAAAATAAYAAAD9//f/AAADAAoAAAD9//j/AAADAAsAAAD9//n/AAADAAwAAAADAPP/AAADAAoAAFACAPP/AAADAAsAAFABAPP/AAADAAwAAFA=")
+tile_map_data = PackedByteArray("AABPACMAAAATAAUAAABPACQAAAATAAYAAABPACUAAAATAAYAAABPACYAAAATAAYAAAA=")
 tile_set = SubResource("TileSet_5e7ya")
 
 [node name="Hidden_Area" type="TileMapLayer" parent="Tiles" unique_id=1935180194 groups=["tilemap"]]
@@ -4869,6 +4865,7 @@ position = Vector2(482, -268)
 position = Vector2(-38, -171)
 
 [node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("6_1ppb4")]
+visible = false
 position = Vector2(652, -300)
 scale = Vector2(0.9999999, 0.9999999)
 
@@ -4876,9 +4873,11 @@ scale = Vector2(0.9999999, 0.9999999)
 position = Vector2(-38, -171)
 
 [node name="InteractIndicator" parent="Cutscene Triggers" unique_id=1238723575 instance=ExtResource("7_wqu8x")]
+visible = false
 position = Vector2(823, -214)
 
 [node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("8_d3mdt")]
+visible = false
 position = Vector2(823, -66)
 play_on_interact = true
 only_when_grounded = true
@@ -4892,31 +4891,32 @@ position = Vector2(-38, -171)
 position = Vector2(-38, -171)
 
 [node name="Stasis" parent="Stasis Chamber" unique_id=1921201016 instance=ExtResource("10_4x1vg")]
+visible = false
 position = Vector2(987, -261)
 
 [node name="Music Change Triggers" type="Node2D" parent="." unique_id=852063455]
 position = Vector2(-38, -171)
 
 [node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("11_n5oyy")]
+visible = false
 position = Vector2(1247, -366)
 track = ExtResource("12_wu724")
 
 [node name="Zipline" type="Node2D" parent="." unique_id=1757930451]
 position = Vector2(-38, -171)
 
-[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("13_dmnsp")]
-position = Vector2(995, -485)
-
 [node name="One-Way Platforms" type="Node2D" parent="." unique_id=1306004910]
 position = Vector2(-38, -171)
 
 [node name="One_Way_Platform" parent="One-Way Platforms" unique_id=113338548 instance=ExtResource("14_idxqr")]
+visible = false
 position = Vector2(160, -339)
 
 [node name="Disappearing Platforms" type="Node2D" parent="." unique_id=899769112]
 position = Vector2(-38, -171)
 
 [node name="Disappearing_Platform" parent="Disappearing Platforms" unique_id=607645916 instance=ExtResource("15_vgm8x")]
+visible = false
 position = Vector2(-65, -32)
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
@@ -4940,6 +4940,7 @@ color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 position = Vector2(-38, -171)
 
 [node name="ResetPoint" parent="Resetpoints" unique_id=126288163 instance=ExtResource("17_2u3ry")]
+visible = false
 position = Vector2(286, -145)
 
 [editable path="Req"]

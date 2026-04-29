@@ -7,7 +7,7 @@ extends Node2D
 func _execute(mr: music_resource):
 	print("heads_up")
 	var on_screen_pos = Vector2(1690, 960)
-	var off_screen_pos = Vector2(2230, 960)
+	var off_screen_pos = Vector2(2330, 960)
 	
 	c = $"../../Conductor"
 	
