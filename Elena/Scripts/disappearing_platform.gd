@@ -5,6 +5,7 @@ var start_position: Vector2
 var start_rotation: float
 @export var time: float
 
+var timer : SceneTreeTimer
 
 func _ready() -> void:
 	
@@ -30,12 +31,14 @@ func _process(_delta: float) -> void:
 	
 func _on_timer_area_body_entered(body: Node2D) -> void:
 		if body.is_in_group("Player"):
-			await get_tree().create_timer(time).timeout
+			timer = get_tree().create_timer(time)
+			await timer.timeout
 			set_collision_layer_value(1, false)
 			self.modulate.a = 0
 			#playanimationforplatformbreaking?
 		
 func reset_platforms():
+		if timer != null: timer.timeout.emit()
 		global_position = start_position
 		rotation = start_rotation
 		self.modulate.a = 1
