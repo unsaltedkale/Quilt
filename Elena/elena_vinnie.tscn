@@ -4723,7 +4723,7 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(249, -144)
+position = Vector2(3071, -913)
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
@@ -4821,15 +4821,19 @@ position = Vector2(-38, -171)
 
 [node name="Disappearing_Platform" parent="Disappearing Platforms" unique_id=607645916 instance=ExtResource("15_1p6jd")]
 position = Vector2(3556, -1071)
+time = 0.5
 
 [node name="Disappearing_Platform2" parent="Disappearing Platforms" unique_id=206484625 instance=ExtResource("15_1p6jd")]
 position = Vector2(4514, -1432)
+time = 0.5
 
 [node name="Disappearing_Platform3" parent="Disappearing Platforms" unique_id=783352381 instance=ExtResource("15_1p6jd")]
 position = Vector2(3882, -1190)
+time = 0.5
 
 [node name="Disappearing_Platform4" parent="Disappearing Platforms" unique_id=970458457 instance=ExtResource("15_1p6jd")]
 position = Vector2(4201, -1308)
+time = 0.5
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)
