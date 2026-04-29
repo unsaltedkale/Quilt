@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="11_3ryns"]
 [ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="11_n6i1r"]
 [ext_resource type="PackedScene" uid="uid://d11wvbu82dkqx" path="res://Alex's Folder/tscns/vinyl.tscn" id="12_3ryns"]
+[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="12_n6i1r"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="13_kfng7"]
+[ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="13_n6i1r"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -4860,5 +4862,19 @@ scale = Vector2(2, 2)
 
 [node name="Vinyl" parent="." unique_id=2078547140 instance=ExtResource("12_3ryns")]
 position = Vector2(-4019, 6492)
+
+[node name="Zipline" type="Node2D" parent="." unique_id=1300336663]
+
+[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("12_n6i1r")]
+position = Vector2(-5325, 5604)
+speed = 2000.0
+start_position = Vector2(-5325, 5604)
+end_position = Vector2(-6300, 5604)
+reverse_time = 1.0
+
+[node name="Resetpoints" type="Node2D" parent="." unique_id=1875436325]
+
+[node name="ResetPoint" parent="Resetpoints" unique_id=638936802 instance=ExtResource("13_n6i1r")]
+position = Vector2(-4582, 6711)
 
 [editable path="Req"]

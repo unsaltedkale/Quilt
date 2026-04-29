@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_3t248"]
 [ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="2_r2igf"]
 [ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="3_lqrpp"]
+[ext_resource type="AudioStream" uid="uid://bffru660nbdv3" path="res://Resources/SFX/Enivronment/Lever.wav" id="4_pcow5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu6v1"]
 size = Vector2(97, 92)
@@ -84,6 +85,10 @@ offset_top = -240.0
 offset_right = 32.0
 offset_bottom = -120.0
 type = 5
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=129455520]
+stream = ExtResource("4_pcow5")
+volume_db = -10.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
