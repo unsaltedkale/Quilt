@@ -110,6 +110,8 @@ func _physics_process(_delta: float) -> void:
 func on_body_entered(area: Area2D):
 	if timer <= 0 && not respawning:
 		if area.is_in_group("Projectile") or area.get_parent().is_in_group("Player"):
+			if area.is_in_group("Projectile"):
+				area.get_parent().queue_free()
 			player.current_stasis = self
 			player.global_position = global_position
 			player.collected_objects = player.max_objects
