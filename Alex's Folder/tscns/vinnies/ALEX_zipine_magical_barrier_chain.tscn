@@ -4768,7 +4768,6 @@ speed = 750.0
 start_position = Vector2(2350, -1216)
 end_position = Vector2(4134, -1216)
 respawning = true
-respawn_time = 0
 
 [node name="Zipline3" parent="Zipline" unique_id=382486535 instance=ExtResource("13_nqnpc")]
 position = Vector2(4134, -680)
@@ -4776,7 +4775,6 @@ speed = 750.0
 start_position = Vector2(4134, -680)
 end_position = Vector2(5224, -680)
 respawning = true
-respawn_time = 0
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)

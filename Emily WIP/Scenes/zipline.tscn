@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://da01yfulq5dh6" path="res://Resources/SFX/Enivronment/Stasis SFX/Enter Stasis.wav" id="4_d3tk3"]
 [ext_resource type="AudioStream" uid="uid://c83anh7poo8gw" path="res://Resources/SFX/Enivronment/Stasis SFX/Exit Stasis.wav" id="5_k1ahh"]
 [ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/tscns/make_it_musical.tscn" id="6_d3tk3"]
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="7_k1ahh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_121v5"]
 size = Vector2(13.333332, 13.833331)
@@ -135,18 +136,23 @@ fade_time = 1.0
 stream_count = 1
 stream_0 = ExtResource("3_uj4gm")
 
-[node name="Zipline" type="Area2D" unique_id=1421325365 groups=["Stasis"]]
+[sub_resource type="Gradient" id="Gradient_jf2j6"]
+offsets = PackedFloat32Array(0.10772834, 0.26229507, 0.44028103)
+colors = PackedColorArray(1, 1, 1, 1, 1.4165919, 1.4165919, 1.4165919, 1, 1.8444428, 1.8444428, 1.8444428, 0)
+
+[node name="Zipline" type="Area2D" unique_id=1421325365 node_paths=PackedStringArray("particles") groups=["Stasis"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_121v5")
+particles = NodePath("ParticlesSpawn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1188933772]
-position = Vector2(-1.3333343, 0.16666484)
-scale = Vector2(6.000001, 6.000001)
+position = Vector2(-1.1920929e-07, 1.4901161e-08)
+scale = Vector2(6.0000014, 6.0000014)
 shape = SubResource("RectangleShape2D_121v5")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=295640706]
 texture_filter = 1
-position = Vector2(0.6666667, -11.333333)
+position = Vector2(2, -12)
 scale = Vector2(3.8857143, 4)
 sprite_frames = SubResource("SpriteFrames_e4dn2")
 animation = &"idle"
@@ -167,6 +173,19 @@ stream = ExtResource("5_k1ahh")
 bus = &"SFXMaster"
 
 [node name="MakeItMusical" parent="." unique_id=1352442624 instance=ExtResource("6_d3tk3")]
+
+[node name="ParticlesSpawn" type="CPUParticles2D" parent="." unique_id=1922312589]
+emitting = false
+amount = 20
+texture = ExtResource("7_k1ahh")
+lifetime = 1.5
+direction = Vector2(0, 0)
+spread = 0.0
+gravity = Vector2(0, 0)
+scale_amount_min = 8.0
+scale_amount_max = 12.0
+color = Color(1, 0.5019608, 0.5019608, 1)
+color_ramp = SubResource("Gradient_jf2j6")
 
 [connection signal="area_entered" from="." to="." method="on_body_entered"]
 [connection signal="area_exited" from="." to="." method="on_body_exited"]

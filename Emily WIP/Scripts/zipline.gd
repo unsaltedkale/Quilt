@@ -16,6 +16,8 @@ class_name zipline_obj
 @export var dot = preload("res://Alex's Folder/tscns/zipline_dot.tscn")
 @export var line = preload("res://Alex's Folder/tscns/zipline_line.tscn")
 
+@export var particles: CPUParticles2D
+
 func _ready() -> void:
 	respawning = false
 	global_position = start_position
@@ -84,6 +86,11 @@ func _physics_process(_delta: float) -> void:
 			timer = 0.5 #seconds
 			player.global_position = global_position
 			
+			particles.emitting = true
+		
+		if player.current_stasis != self:
+			particles.emitting = false
+		
 		#if zipline is in the middle of the path
 		if not basically_zero(global_position, start_position) && not basically_zero(global_position, end_position):
 			if player.current_stasis != self:
@@ -113,9 +120,7 @@ func on_body_entered(area: Area2D):
 			ani.play("catch")
 
 func on_body_exited(area: Area2D):
-	print("click")
 	if area.get_parent().is_in_group("Player") && not respawning:
-		print("player left")
 		#player.current_stasis = null
 		$"SFX/Stasis Hum".stop()
 		if not $"SFX/Exit Stasis".is_playing():

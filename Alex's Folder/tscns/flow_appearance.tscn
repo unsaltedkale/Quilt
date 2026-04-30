@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://by0fnkk1m6i8f"]
+[gd_scene format=3 uid="uid://by0fnkk1m6i8f"]
 
 [ext_resource type="Texture2D" uid="uid://0hhuokw2fubi" path="res://Art/Blue Flow/Blue Flow Cloak Idle.png" id="1_k1h1i"]
 [ext_resource type="Texture2D" uid="uid://cqargt3jlju57" path="res://Art/Blue Flow/Blue Flow No Cloak Idle.png" id="2_57stf"]
@@ -81,13 +81,13 @@ colors = PackedColorArray(1, 1, 1, 1, 1.4165919, 1.4165919, 1.4165919, 1, 1.8444
 offsets = PackedFloat32Array(0.57756233, 0.97229916, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1.4165919, 1.4165919, 1.4165919, 1, 1.8444428, 1.8444428, 1.8444428, 0)
 
-[node name="FlowAppearance" type="AnimatedSprite2D"]
+[node name="FlowAppearance" type="AnimatedSprite2D" unique_id=311545617]
 scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_12l00")
 animation = &"whole_cloak_idle"
 autoplay = "whole_cloak_idle"
 
-[node name="ParticlesSpawn" type="CPUParticles2D" parent="."]
+[node name="ParticlesSpawn" type="CPUParticles2D" parent="." unique_id=1920943360]
 emitting = false
 amount = 40
 texture = ExtResource("4_57stf")
@@ -105,12 +105,12 @@ scale_amount_max = 12.0
 color = Color(0.5254902, 0.6745098, 0.9372549, 1)
 color_ramp = SubResource("Gradient_57stf")
 
-[node name="ParticlesSummon" type="CPUParticles2D" parent="."]
+[node name="ParticlesSummon" type="CPUParticles2D" parent="." unique_id=3657591]
 position = Vector2(0, -410.6667)
 emitting = false
 amount = 40
 texture = ExtResource("4_57stf")
-lifetime = 1.1500000000000001
+lifetime = 1.15
 emission_shape = 1
 emission_sphere_radius = 0.01
 direction = Vector2(0, 1)

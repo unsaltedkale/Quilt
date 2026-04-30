@@ -11,6 +11,8 @@ var respawn_timer
 @onready var collect_star_sfx : AudioStreamPlayer = $"Collect Star"
 @onready var respawn_star_sfx : AudioStreamPlayer = $"Star Respawn"
 
+@onready var particles = $ParticlesSpawn
+
 func _ready():
 	respawn_timer = respawn_timer_max
 	active_sprite = load("res://Art/Quilt STAR-1.png")
@@ -21,10 +23,13 @@ func _ready():
 func _process(delta: float) -> void:
 	
 	if player != null:
+		if not player.player_death.is_connected(_on_player_death):
+			player.player_death.connect(_on_player_death)
 		if get_overlapping_areas().has(player.find_child("Area2D")):
 			_on_STAR_entered(player)
 	else:
 		player = get_tree().get_first_node_in_group("Player")
+		
 	if respawns == true && find_child("Sprite2D").texture == inactive_sprite:
 		respawn_timer =  respawn_timer - delta
 		#print(str(respawn_timer) + " / " + str(get_path()))
@@ -35,7 +40,13 @@ func _process(delta: float) -> void:
 		#print("RESPAWN" + str(get_path()))
 		find_child("Sprite2D").texture = active_sprite
 		find_child("CollisionShape2D").set_deferred("disabled", false)
+		particles.emitting = true
 		respawn_timer = respawn_timer_max
+
+func _on_player_death():
+	if find_child("Sprite2D").texture == inactive_sprite:
+		respawn_timer = 0
+	pass
 
 func _on_STAR_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") && find_child("Sprite2D").texture == active_sprite:

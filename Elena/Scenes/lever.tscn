@@ -1,53 +1,55 @@
 [gd_scene format=3 uid="uid://cruolbbn4dkbf"]
 
 [ext_resource type="Script" uid="uid://d0ax7m8u1yprv" path="res://Elena/Scripts/lever.gd" id="1_3t248"]
-[ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="2_r2igf"]
+[ext_resource type="Texture2D" uid="uid://des0cid2m4pgh" path="res://Art/Lever.png" id="2_pcow5"]
 [ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="3_lqrpp"]
 [ext_resource type="AudioStream" uid="uid://bffru660nbdv3" path="res://Resources/SFX/Enivronment/Lever.wav" id="4_pcow5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu6v1"]
 size = Vector2(97, 92)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bw72p"]
-atlas = ExtResource("2_r2igf")
-region = Rect2(696, 704, 58, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lqrpp"]
-atlas = ExtResource("2_r2igf")
-region = Rect2(638, 704, 58, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pcow5"]
-atlas = ExtResource("2_r2igf")
-region = Rect2(580, 704, 58, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0jhb"]
-atlas = ExtResource("2_r2igf")
-region = Rect2(576, 704, 64, 64)
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 96, 20, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_04boh"]
-atlas = ExtResource("2_r2igf")
-region = Rect2(640, 704, 64, 64)
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 72, 20, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m75n8"]
-atlas = ExtResource("2_r2igf")
-region = Rect2(704, 704, 64, 64)
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 48, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxbqi"]
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 24, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csxji"]
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frljd"]
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj2r4"]
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 24, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7rfk"]
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 48, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc8rh"]
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 72, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqrsu"]
+atlas = ExtResource("2_pcow5")
+region = Rect2(0, 96, 20, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xxbqi"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bw72p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lqrpp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pcow5")
-}],
-"loop": false,
-"name": &"lever_switch_to_left",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b0jhb")
@@ -57,6 +59,32 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m75n8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxbqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csxji")
+}],
+"loop": false,
+"name": &"lever_switch_to_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frljd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj2r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7rfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc8rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqrsu")
 }],
 "loop": false,
 "name": &"lever_switch_to_right",
@@ -75,14 +103,15 @@ scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_iu6v1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1940288413]
-scale = Vector2(2, 2)
+position = Vector2(2.7105054e-20, -13)
+scale = Vector2(6.4000006, 6.4000015)
 sprite_frames = SubResource("SpriteFrames_xxbqi")
 animation = &"lever_switch_to_left"
 
 [node name="ToolTipMessage" parent="." unique_id=783056906 instance=ExtResource("3_lqrpp")]
-offset_left = -568.0
+offset_left = -584.0
 offset_top = -240.0
-offset_right = 32.0
+offset_right = 16.0
 offset_bottom = -120.0
 type = 5
 
