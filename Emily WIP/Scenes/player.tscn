@@ -1784,6 +1784,7 @@ bus = &"SFXMaster"
 visible = false
 rect = Rect2(-10, -21.5, 20, 44)
 
+[connection signal="player_death" from="." to="StateMachine/Stasis" method="_on_player_player_death"]
 [connection signal="body_entered" from="QuiltUncrouchCheck" to="." method="_on_quilt_uncrouch_check_body_entered"]
 [connection signal="body_exited" from="QuiltUncrouchCheck" to="." method="_on_quilt_uncrouch_check_body_exited"]
 [connection signal="body_entered" from="TileMapCheck" to="." method="_on_tile_map_check_body_entered"]

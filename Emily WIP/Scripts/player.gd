@@ -67,6 +67,7 @@ func die():
 	#print_debug("Player died")
 	$"../Camera2D".player_died()
 	player_death.emit()
+	current_stasis = null #Make sure ziplines don't trap us when we die
 	spawn_player(spawn_point)
 	
 func _on_hit_box_body_entered(body: Node2D) -> void:

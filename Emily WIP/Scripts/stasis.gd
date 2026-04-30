@@ -46,7 +46,22 @@ func on_body_entered(area: Area2D):
 func on_body_exited(area: Area2D):
 	if area.get_parent().is_in_group("Player"):
 		print("player left")
-		#player.current_stasis = null
+		#player.current_stasis = null #Why is this commented out?
 		$"SFX/Stasis Hum".stop()
 		if not $"SFX/Exit Stasis".is_playing():
 			$"SFX/Exit Stasis".play()
+
+'''func _process(_delta):
+	#Connect player death to reset stasis
+	if player != null:
+		if not player.player_death.is_connected(reset_stasis):
+			player.player_death.connect(reset_stasis)
+	else:
+		if get_tree().get_first_node_in_group("Req") != null:
+			player = get_tree().get_first_node_in_group("Player")
+		else:
+			player = $"../Player"
+
+func reset_stasis():
+	player.current_stasis = null
+	$"SFX/Stasis Hum".stop()'''

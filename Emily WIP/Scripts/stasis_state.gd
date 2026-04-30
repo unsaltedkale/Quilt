@@ -55,3 +55,7 @@ func Physics_Update(_delta):
 
 func Exit():
 	tt.visible = false
+
+
+func _on_player_player_death() -> void:
+	Transition.emit(self, "idle") #Ensure ziplines can't trap you in loops
