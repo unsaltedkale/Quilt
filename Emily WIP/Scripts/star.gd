@@ -34,9 +34,9 @@ func _process(delta: float) -> void:
 		respawn_timer =  respawn_timer - delta
 		#print(str(respawn_timer) + " / " + str(get_path()))
 
-	if respawn_timer <= 1.5 && !respawn_star_sfx.playing:
+	if respawn_timer <= 1.5 && !respawn_star_sfx.playing && find_child("Sprite2D").texture == inactive_sprite:
 		respawn_star_sfx.play()
-	if respawn_timer <= 0 && respawns == true:
+	if respawn_timer <= 0 && respawns == true && find_child("Sprite2D").texture == inactive_sprite:
 		#print("RESPAWN" + str(get_path()))
 		find_child("Sprite2D").texture = active_sprite
 		find_child("CollisionShape2D").set_deferred("disabled", false)

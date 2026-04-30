@@ -29,17 +29,17 @@ func _execute(mr: music_resource):
 		
 		c.heads_up_display_moving = true	
 		
-		print("one")
+		#print("one")
 		
 		tween.tween_property(self, "position", on_screen_pos, 1.0)
 		
 		await tween.finished
 		
-		print("one finished")
+		#print("one finished")
 		
 		await wait(4)
 		
-		print("two")
+		#print("two")
 		
 		tween = get_tree().create_tween()
 		
@@ -47,7 +47,7 @@ func _execute(mr: music_resource):
 		
 		await tween.finished
 		
-		print("two finished")
+		#print("two finished")
 		
 		c.heads_up_display_moving = false
 	
