@@ -1,22 +1,75 @@
 [gd_scene format=3 uid="uid://duk0dr4rdam4g"]
 
 [ext_resource type="Script" uid="uid://big6rcegqu0nl" path="res://Elena/Scripts/leverplatform.gd" id="1_dcb7x"]
-[ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="2_71v7q"]
+[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="2_dcb7x"]
+[ext_resource type="Texture2D" uid="uid://cguc4ullkpx2m" path="res://Art/Lever Gear.png" id="3_71v7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
-size = Vector2(326, 117)
+size = Vector2(326, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc68x"]
+atlas = ExtResource("3_71v7q")
+region = Rect2(0, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gi248"]
+atlas = ExtResource("3_71v7q")
+region = Rect2(0, 14, 14, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4sj20"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc68x")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc68x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gi248")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
 
 [node name="leverplatform" type="AnimatableBody2D" unique_id=96890641 groups=["Environmental Feature"]]
 script = ExtResource("1_dcb7x")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1282405017]
-position = Vector2(2, 0.5)
+position = Vector2(2, -23.5)
 shape = SubResource("RectangleShape2D_lpq4i")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1979991778]
-position = Vector2(2.0000076, 0.9999962)
-scale = Vector2(2.5000002, 1.7578125)
-texture = ExtResource("2_71v7q")
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1426997280]
+position = Vector2(2.0000002, 19)
+rotation = 3.1415927
+scale = Vector2(1.968, 1.384)
+texture = ExtResource("2_dcb7x")
 region_enabled = true
-region_rect = Rect2(448, 128, 128, 64)
+region_rect = Rect2(64, 288, 96, 16)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1736584138]
+position = Vector2(2.1333466, -4)
+rotation = -3.1415925
+scale = Vector2(2.448, 1.721)
+texture = ExtResource("2_dcb7x")
+region_enabled = true
+region_rect = Rect2(64, 288, 96, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1979991778]
+position = Vector2(2.1333466, -37)
+scale = Vector2(3.377778, 2.375)
+texture = ExtResource("2_dcb7x")
+region_enabled = true
+region_rect = Rect2(64, 288, 96, 16)
+
+[node name="Gear" type="AnimatedSprite2D" parent="." unique_id=235621676]
+position = Vector2(-1.1920929e-07, -1.9073486e-06)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_4sj20")
+animation = &"move"

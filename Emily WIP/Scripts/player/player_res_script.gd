@@ -6,6 +6,7 @@ class_name PlayerRes extends Resource
 
 @export_category("JUMPING")
 @export var jump_vel: float
+@export var crouch_jump_vel: float
 @export var cayote_time: float
 @export var jump_buffer_time: float
 
