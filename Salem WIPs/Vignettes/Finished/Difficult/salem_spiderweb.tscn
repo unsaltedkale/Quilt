@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dmivaa748vgmc"]
 
-[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_a12uq"]
-[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_ey7vn"]
-[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_2djmp"]
-[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="4_c4vg7"]
-[ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_pmpod"]
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_858y6"]
+[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_ppegj"]
+[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_03wsl"]
+[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="4_7o24m"]
+[ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_rlpph"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -1639,7 +1639,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
-texture = ExtResource("3_2djmp")
+texture = ExtResource("3_03wsl")
 texture_region_size = Vector2i(32, 32)
 0:7/0 = 0
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 16, -16, 16)
@@ -3161,7 +3161,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fg0v8")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq4vl"]
-texture = ExtResource("3_2djmp")
+texture = ExtResource("3_03wsl")
 texture_region_size = Vector2i(32, 32)
 38:37/0 = 0
 37:37/0 = 0
@@ -4666,7 +4666,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_rq4vl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2847"]
-texture = ExtResource("3_2djmp")
+texture = ExtResource("3_03wsl")
 texture_region_size = Vector2i(32, 32)
 0:10/0 = 0
 0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -4707,7 +4707,7 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 
 [node name="VinnieTemplate" type="Node2D" unique_id=467354812]
 
-[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_a12uq")]
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_858y6")]
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(-355, -49)
@@ -4717,7 +4717,7 @@ position = Vector2(-355, -49)
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AACAAPT/AAAJAAQAAACAAPP/AAAJAAQAAACAAPL/AAAJAAQAAACAAPH/AAAJAAQAAACAAPD/AAAJAAQAAACAAO//AAAJAAQAAACAAO7/AAAJAAQAAACAAO3/AAAJAAQAAACAAOz/AAAJAAQAAACAAOv/AAAJAAQAAACAAOr/AAAJAAQAAACAAOn/AAAJAAQAAAA=")
-tile_set = ExtResource("2_ey7vn")
+tile_set = ExtResource("2_ppegj")
 collision_enabled = false
 
 [node name="Collision" type="TileMapLayer" parent="Tiles" unique_id=982493535 groups=["tilemap"]]
@@ -4744,105 +4744,105 @@ tile_set = SubResource("TileSet_5e7ya")
 
 [node name="Zipline" type="Node2D" parent="." unique_id=1757930451]
 
-[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("4_c4vg7")]
+[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("4_7o24m")]
 position = Vector2(2078, 12)
 speed = 1500.0
 start_position = Vector2(2078, 12)
 end_position = Vector2(2078, -2000)
 
-[node name="Zipline2" parent="Zipline" unique_id=683049690 instance=ExtResource("4_c4vg7")]
+[node name="Zipline2" parent="Zipline" unique_id=683049690 instance=ExtResource("4_7o24m")]
 position = Vector2(2503, 3)
 speed = 1500.0
 start_position = Vector2(2503, 3)
 end_position = Vector2(2503, -2000)
 
-[node name="Zipline3" parent="Zipline" unique_id=1291192171 instance=ExtResource("4_c4vg7")]
+[node name="Zipline3" parent="Zipline" unique_id=1291192171 instance=ExtResource("4_7o24m")]
 position = Vector2(3560, -6)
 speed = 1500.0
 start_position = Vector2(3560, -6)
 end_position = Vector2(3560, -2000)
 
-[node name="Zipline4" parent="Zipline" unique_id=1907980315 instance=ExtResource("4_c4vg7")]
+[node name="Zipline4" parent="Zipline" unique_id=1907980315 instance=ExtResource("4_7o24m")]
 position = Vector2(3794.0002, -15)
 speed = 1500.0
 start_position = Vector2(3794.0002, -15)
 end_position = Vector2(3794.0002, -2000)
 
-[node name="Zipline5" parent="Zipline" unique_id=1113892296 instance=ExtResource("4_c4vg7")]
+[node name="Zipline5" parent="Zipline" unique_id=1113892296 instance=ExtResource("4_7o24m")]
 position = Vector2(4037, -24)
 speed = 1500.0
 start_position = Vector2(4037, -24)
 end_position = Vector2(4037, -2000)
 
-[node name="Zipline6" parent="Zipline" unique_id=1958808694 instance=ExtResource("4_c4vg7")]
+[node name="Zipline6" parent="Zipline" unique_id=1958808694 instance=ExtResource("4_7o24m")]
 position = Vector2(4834, -249)
 speed = 2500.0
 start_position = Vector2(4834, -249)
 end_position = Vector2(4834, -2000)
 
-[node name="Zipline7" parent="Zipline" unique_id=2055507472 instance=ExtResource("4_c4vg7")]
+[node name="Zipline7" parent="Zipline" unique_id=2055507472 instance=ExtResource("4_7o24m")]
 position = Vector2(5120, -734)
 speed = 2500.0
 start_position = Vector2(5120, -734)
 end_position = Vector2(5120, -2000)
 
-[node name="Zipline8" parent="Zipline" unique_id=1760291434 instance=ExtResource("4_c4vg7")]
+[node name="Zipline8" parent="Zipline" unique_id=1760291434 instance=ExtResource("4_7o24m")]
 position = Vector2(5406, -275)
 speed = 2500.0
 start_position = Vector2(5406, -275)
 end_position = Vector2(5406, -2000)
 
-[node name="Zipline9" parent="Zipline" unique_id=1029790870 instance=ExtResource("4_c4vg7")]
+[node name="Zipline9" parent="Zipline" unique_id=1029790870 instance=ExtResource("4_7o24m")]
 position = Vector2(5960, -229)
 speed = 2500.0
 start_position = Vector2(5960, -229)
 end_position = Vector2(5960, -2000)
 
-[node name="Zipline10" parent="Zipline" unique_id=1712613564 instance=ExtResource("4_c4vg7")]
+[node name="Zipline10" parent="Zipline" unique_id=1712613564 instance=ExtResource("4_7o24m")]
 position = Vector2(6123, -282)
 speed = 2500.0
 start_position = Vector2(6123, -282)
 end_position = Vector2(6123, -2000)
 
-[node name="Zipline11" parent="Zipline" unique_id=2034734896 instance=ExtResource("4_c4vg7")]
+[node name="Zipline11" parent="Zipline" unique_id=2034734896 instance=ExtResource("4_7o24m")]
 position = Vector2(6273, -341)
 speed = 2500.0
 start_position = Vector2(6273, -341)
 end_position = Vector2(6273, -2000)
 
-[node name="Zipline12" parent="Zipline" unique_id=1750584997 instance=ExtResource("4_c4vg7")]
+[node name="Zipline12" parent="Zipline" unique_id=1750584997 instance=ExtResource("4_7o24m")]
 position = Vector2(6956, -236)
 speed = 2500.0
 start_position = Vector2(6956, -236)
 end_position = Vector2(6956, -2000)
 
-[node name="Zipline13" parent="Zipline" unique_id=598327347 instance=ExtResource("4_c4vg7")]
+[node name="Zipline13" parent="Zipline" unique_id=598327347 instance=ExtResource("4_7o24m")]
 position = Vector2(7119, -289)
 speed = 2500.0
 start_position = Vector2(7119, -289)
 end_position = Vector2(7119, -2000)
 
-[node name="Zipline14" parent="Zipline" unique_id=1655214830 instance=ExtResource("4_c4vg7")]
+[node name="Zipline14" parent="Zipline" unique_id=1655214830 instance=ExtResource("4_7o24m")]
 position = Vector2(7269, -348)
 speed = 2500.0
 start_position = Vector2(7269, -348)
 end_position = Vector2(7269, -2000)
 
-[node name="Zipline15" parent="Zipline" unique_id=773711407 instance=ExtResource("4_c4vg7")]
+[node name="Zipline15" parent="Zipline" unique_id=773711407 instance=ExtResource("4_7o24m")]
 position = Vector2(8168, -590)
 speed = 5000.0
 start_position = Vector2(8168, -602)
 end_position = Vector2(0, -200)
 
-[node name="Zipline16" parent="Zipline" unique_id=2126873376 instance=ExtResource("4_c4vg7")]
-position = Vector2(8499, -961)
+[node name="Zipline16" parent="Zipline" unique_id=2126873376 instance=ExtResource("4_7o24m")]
+position = Vector2(8399, -1004)
 speed = 5000.0
-start_position = Vector2(8418, -1074)
+start_position = Vector2(8399, -1004)
 end_position = Vector2(5669.683, -811.1372)
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
 
-[node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("5_pmpod")]
+[node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("5_rlpph")]
 position = Vector2(241, 70)
 
 [connection signal="player_death" from="Req/Player" to="Req/Player/StateMachine" method="_on_player_player_death"]

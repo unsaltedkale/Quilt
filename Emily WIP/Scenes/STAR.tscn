@@ -33,7 +33,7 @@ texture = ExtResource("2_akwti")
 
 [node name="Collect Star" type="AudioStreamPlayer" parent="." unique_id=1111091794]
 stream = ExtResource("4_mjb6q")
-volume_db = -28.0
+volume_db = -25.0
 bus = &"SFXMaster"
 
 [node name="Star Respawn" type="AudioStreamPlayer" parent="." unique_id=1393009056]
