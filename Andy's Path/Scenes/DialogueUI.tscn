@@ -809,6 +809,7 @@ theme_override_font_sizes/font_size = 42
 script = ExtResource("5_1xo70")
 
 [node name="Voice Player" type="AudioStreamPlayer" parent="UI/DialogueScreen/Button" unique_id=665154871]
+bus = &"DialougeMaster"
 script = ExtResource("6_yride")
 voices = Dictionary[String, AudioStream]({
 "flow": ExtResource("8_ikb8c"),

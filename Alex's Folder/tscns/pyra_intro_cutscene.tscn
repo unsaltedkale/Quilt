@@ -644,6 +644,7 @@ script = ExtResource("4_6hoer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=786658140]
 stream = SubResource("AudioStreamWAV_80spu")
+bus = &"MusicMaster"
 
 [node name="Conductor" parent="." unique_id=2062512460 node_paths=PackedStringArray("hudc") instance=ExtResource("5_taae4")]
 position = Vector2(4317, 436)
