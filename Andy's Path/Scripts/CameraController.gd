@@ -16,6 +16,7 @@ var pk_timer
 var pity_kill_timer: float
 var pity_kill_timer_max: float = 3.0
 var tween
+var cameraTriggerRef
 
 
 # NOTE: camera zoom HAS to evenly divide pixels or else it will double 
@@ -33,6 +34,7 @@ func _ready() -> void:
 	in_path = false
 	pity_kill_timer = pity_kill_timer_max
 	
+	cameraTriggerRef = $"../Camera_Change_Trigger"
 	playerReference = $"../Player"
 	print(playerReference)
 	pk_timer = $"../CanvasLayer/Pity Kill Timer"
@@ -114,7 +116,7 @@ func _process(delta: float) -> void:
 		pk_timer.text = ""
 		pity_kill_timer = pity_kill_timer_max
 
-	if has_control:	
+	if has_control && !cameraTriggerRef.inCameraTrigger:
 		if (abs(global_position.x - playerReference.position.x) + abs(global_position.y - playerReference.position.y)) > 10000:
 			await wait(0.01)
 			if has_control:
