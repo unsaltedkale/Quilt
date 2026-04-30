@@ -109,10 +109,11 @@ sprite_frames = SubResource("SpriteFrames_xxbqi")
 animation = &"lever_switch_to_left"
 
 [node name="ToolTipMessage" parent="." unique_id=783056906 instance=ExtResource("3_lqrpp")]
-offset_left = -584.0
+offset_left = -600.0
 offset_top = -240.0
-offset_right = 16.0
+offset_right = 0.0
 offset_bottom = -120.0
+text = "[img=64]res://Art/Tool Tips/ttm_20.png[/img]"
 type = 5
 
 [node name="Click" type="AudioStreamPlayer" parent="." unique_id=129455520]

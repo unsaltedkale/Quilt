@@ -35,7 +35,7 @@ func _process(_delta) -> void:
 	else:
 		tt.visible = false
 	
-	if player_in_area and Input.is_action_just_pressed("interact"):
+	if player_in_area and Input.is_action_just_pressed("interact") && not anim.is_playing():
 		_toggle_lever(true, false)
 	
 	#Connect player death to reset lever
