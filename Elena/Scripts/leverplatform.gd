@@ -6,6 +6,7 @@ extends AnimatableBody2D
 @export var wait_time: float = 0.5
 @export var lever_path: NodePath
 var player : Player
+@onready var gear = $Gear
 
 var _target_point: Vector2
 var _waiting = false
@@ -15,6 +16,8 @@ var _reached_target = false
 @export var line = preload("res://Alex's Folder/tscns/zipline_line.tscn")
 
 func _ready():
+	gear.play("idle")
+	
 	_target_point = point_a
 	
 	if lever_path != NodePath():
@@ -70,8 +73,13 @@ func _physics_process(delta):
 	if distance < 2.0:
 		_reached_target = true
 		global_position = _target_point
-	
+		gear.play("idle")
+		if direction.x > 0:
+			gear.flip_h = false
+		else: 
+			gear.flip_h = true
 	else:
+		gear.play("move")
 		global_position += direction * speed * delta
 
 func _wait():

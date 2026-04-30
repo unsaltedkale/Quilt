@@ -24,12 +24,18 @@ func Update(_delta):
 		if player.is_phlo:
 			an.play("phlo_jump")
 		else:
-			an.play("jump")
+			if player.quilt_crouch.disabled == false:
+				an.play("crouch_idle")
+			else:
+				an.play("jump")
 	if player.velocity.y >=0:
 		if player.is_phlo:
 			an.play("phlo_fall")
 		else:
-			an.play("fall")
+			if player.quilt_crouch.disabled == false:
+				an.play("crouch_idle")
+			else:
+				an.play("fall")
 	if player.is_on_floor():
 		land()
 
@@ -43,7 +49,10 @@ func land():
 		if player.is_phlo:
 			an.play("phlo_land")
 		else:
-			an.play("land")
+			if player.quilt_crouch.disabled == false:
+				an.play("crouch_idle")
+			else:
+				an.play("land")
 
 func Physics_Update(_delta):
 	if Input.is_action_just_pressed("jump"):
