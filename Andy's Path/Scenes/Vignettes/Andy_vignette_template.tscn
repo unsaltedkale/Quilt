@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="15_55ctw"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="16_gkl86"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="17_urtoi"]
+[ext_resource type="PackedScene" uid="uid://je46xra7st0p" path="res://Andy's Path/Scenes/Camera_Change_Trigger.tscn" id="19_7ai76"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -4724,12 +4725,17 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(107, -155)
+position = Vector2(5229, -1324)
 
 [node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
 bus = &"MusicMaster"
 
 [node name="Vinyl" parent="Req" unique_id=2078547140 instance=ExtResource("2_qrqpf")]
+
+[node name="Camera_Change_Trigger" parent="Req" unique_id=404059404 instance=ExtResource("19_7ai76")]
+position = Vector2(588, -792)
+rotation = 3.1415925
+scale = Vector2(7.5388293, 7.5388293)
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 

@@ -4,13 +4,11 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcf2o"]
 
-[node name="Camera_Change_Trigger" type="Node2D" unique_id=76563749]
-
-[node name="Area2D" type="Area2D" parent="." unique_id=404059404]
+[node name="Change_Camera_Trigger" type="Area2D" unique_id=404059404]
 script = ExtResource("1_xm8ns")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2097930247]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2097930247]
 shape = SubResource("RectangleShape2D_qcf2o")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
