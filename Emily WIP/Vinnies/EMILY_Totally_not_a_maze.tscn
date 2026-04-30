@@ -4,12 +4,6 @@
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_uk4ql"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_swcq1"]
 [ext_resource type="PackedScene" uid="uid://jvlnv4fp7geb" path="res://Elena/Scenes/breakable_area.tscn" id="5_uj0rg"]
-[ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="6_gg41k"]
-[ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_nlf4p"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="8_k8n8g"]
-[ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="9_p8mnb"]
-[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="10_gs6ox"]
-[ext_resource type="Resource" uid="uid://cshhei7elby56" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_container.tres" id="11_kwd57"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="12_bre4g"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="15_7ny8a"]
 
@@ -4785,41 +4779,6 @@ tile_set = SubResource("TileSet_fg0v8")
 [node name="breakable_area" parent="Tiles/Breakable_Area" unique_id=1911439178 instance=ExtResource("5_uj0rg")]
 position = Vector2(-127.25, -274.00003)
 scale = Vector2(6.63, 11.370008)
-
-[node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
-position = Vector2(-1931, -1803)
-
-[node name="Conductor_Platform" parent="Conductor_Platforms" unique_id=1167135782 instance=ExtResource("6_gg41k")]
-position = Vector2(474, -133)
-
-[node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
-position = Vector2(-1949, -1942)
-
-[node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("7_nlf4p")]
-position = Vector2(482, -268)
-
-[node name="Stars" type="Node2D" parent="." unique_id=1803044504]
-position = Vector2(-2071, -1366)
-
-[node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("8_k8n8g")]
-position = Vector2(652, -300)
-scale = Vector2(0.9999999, 0.9999999)
-
-[node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
-position = Vector2(-2149, -1148)
-
-[node name="InteractIndicator" parent="Cutscene Triggers" unique_id=1238723575 instance=ExtResource("9_p8mnb")]
-position = Vector2(823, -214)
-
-[node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("10_gs6ox")]
-position = Vector2(823, -66)
-play_on_interact = true
-only_when_grounded = true
-container = ExtResource("11_kwd57")
-indicator = NodePath("../InteractIndicator")
-
-[node name="NPCs" type="Node2D" parent="." unique_id=1296886211]
-position = Vector2(-1399, -921)
 
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 
