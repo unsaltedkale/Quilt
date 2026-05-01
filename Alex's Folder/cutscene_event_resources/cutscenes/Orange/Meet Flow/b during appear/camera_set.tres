@@ -6,7 +6,7 @@
 script = ExtResource("1_yt0wk")
 camera = NodePath("../../Req/Camera2D")
 change_position = true
-position = Vector2(8681, -1030)
+position = Vector2(951, -773)
 change_zoom = true
 zoom = Vector2(1, 1)
 time = 2.5
