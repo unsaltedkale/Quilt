@@ -28,10 +28,7 @@ func execute(cutscene_trigger: Node) -> void:
 			
 			print("prod")
 			
-			if str(mover).contains("Req"):
-				moverp = cutscene_trigger.get_node("../" + str(mover))
-			else:
-				moverp = cutscene_trigger.get_node(str(mover))
+			moverp = cutscene_trigger.get_node("../" + str(mover))
 			
 			pass
 	
@@ -44,10 +41,10 @@ func execute(cutscene_trigger: Node) -> void:
 	#var animatorp = cutscene_trigger.get_node("../" + str(mover) + "/AnimatedSprite2D")
 	# doesn't work -> animatorp.flip_h = horizontal_flip
 	
+	
 	if is_relative:
 		tween.tween_property(moverp, "global_position", target, time).as_relative()
 	elif not is_relative:
-		target += cutscene_trigger.get_parent().get_parent().global_position
 		tween.tween_property(moverp, "global_position", target, time)
 	if wait_until_done:
 		await tween.finished

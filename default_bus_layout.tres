@@ -7,7 +7,6 @@ spread = 0.06
 dry = 0.75
 
 [resource]
-bus/0/volume_db = -0.010509491
 bus/1/name = &"DialougeMaster"
 bus/1/solo = false
 bus/1/mute = false

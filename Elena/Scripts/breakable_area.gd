@@ -7,3 +7,4 @@ func _on_body_entered(body: Node2D) -> void:
 		print("Projectile hit Breakable Wall")
 		if parent:
 			parent.queue_free()
+			body.queue_free()

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="dialouge_cutscene_event" format=3 uid="uid://dny830ai42d2h"]
-
-[ext_resource type="Resource" uid="uid://fxwjeo6bd734" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Citizen 1/dia/citizen_1_dia.tres" id="1_7e07b"]
-[ext_resource type="Script" uid="uid://g78pi7crnayb" path="res://Alex's Folder/cutscene_event_resources/event types/dialouge_cs_event.gd" id="1_hi2sy"]
-
-[resource]
-script = ExtResource("1_hi2sy")
-dia = ExtResource("1_7e07b")
-metadata/_custom_type_script = "uid://g78pi7crnayb"

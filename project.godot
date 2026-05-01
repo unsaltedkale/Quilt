@@ -26,10 +26,6 @@ config/icon="uid://b2onlr5ggkomh"
 
 buses/default_bus_layout="uid://dg0vcx3jnieg"
 
-[autoload]
-
-SettingsData="*uid://be5yc83ot15fx"
-
 [display]
 
 window/size/viewport_width=1920

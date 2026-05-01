@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://bbacm4eej53j" path="res://Art/Character Portaits/phlo_neutral_carp.png" id="8_q6tpo"]
 [ext_resource type="AudioStream" uid="uid://bh7oscis2injv" path="res://Resources/SFX/Voices/quilt voice.wav" id="8_uc4dt"]
 [ext_resource type="Texture2D" uid="uid://cbulro3w5dht0" path="res://Art/Character Portaits/orangec2_neutral_carp.png" id="8_yride"]
-[ext_resource type="AudioStream" uid="uid://drwj43x20051w" path="res://Resources/SFX/Voices/quilt voice v2.mp3" id="9_uc4dt"]
 [ext_resource type="Texture2D" uid="uid://b1tc8dmep8bij" path="res://Art/Character Portaits/phlo_surprise_carp.png" id="9_wiv0r"]
 [ext_resource type="Texture2D" uid="uid://l10ym8gaj8d2" path="res://Art/Character Portaits/phlo_worry_carp.png" id="10_0nkvc"]
 [ext_resource type="Texture2D" uid="uid://bneivrxeql22q" path="res://Art/Character Portaits/pyra_neutral_carp.png" id="14_hed1w"]
@@ -23,7 +22,6 @@
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="20_gqie4"]
 [ext_resource type="Script" uid="uid://bij8e4rk76007" path="res://Andy's Path/Scripts/Settings.gd" id="20_ikb8c"]
 [ext_resource type="Script" uid="uid://cjulrpdicpvgj" path="res://Andy's Path/Scenes/mainmenureturn.gd" id="21_ikb8c"]
-[ext_resource type="Script" uid="uid://qw7u7t1vs07f" path="res://Andy's Path/Scripts/VolumeManager.gd" id="23_uc4dt"]
 
 [sub_resource type="Theme" id="Theme_6n2ox"]
 
@@ -814,7 +812,6 @@ script = ExtResource("5_1xo70")
 bus = &"DialougeMaster"
 script = ExtResource("6_yride")
 voices = Dictionary[String, AudioStream]({
-"default": ExtResource("9_uc4dt"),
 "flow": ExtResource("8_ikb8c"),
 "phlo": SubResource("AudioStreamWAV_gqie4"),
 "pyra": SubResource("AudioStreamWAV_hed1w"),
@@ -825,7 +822,7 @@ voices = Dictionary[String, AudioStream]({
 position = Vector2(1020.145, 143)
 scale = Vector2(6.0681806, 6.068181)
 sprite_frames = SubResource("SpriteFrames_wjj7j")
-animation = &"orangec2_netural"
+animation = &"empty"
 
 [node name="ToolTipMessage" parent="UI/DialogueScreen" unique_id=1195870865 instance=ExtResource("16_gi33v")]
 layout_mode = 0
@@ -850,7 +847,7 @@ offset_bottom = 649.797
 scale = Vector2(1.6738826, 1.674369)
 color = Color(0.39607844, 0.2901961, 0.29803923, 0.8627451)
 
-[node name="TextSize" type="HSlider" parent="UI/Settings" unique_id=92704188]
+[node name="HSlider" type="HSlider" parent="UI/Settings" unique_id=92704188]
 layout_mode = 0
 offset_left = 184.0
 offset_top = 440.0
@@ -865,7 +862,7 @@ min_value = 15.0
 max_value = 30.0
 value = 30.0
 
-[node name="Label" type="Label" parent="UI/Settings/TextSize" unique_id=1043472174]
+[node name="Label" type="Label" parent="UI/Settings/HSlider" unique_id=1043472174]
 layout_mode = 0
 offset_left = -68.0
 offset_top = 19.0
@@ -901,7 +898,6 @@ script = ExtResource("21_ikb8c")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("23_uc4dt")
 
 [node name="GeneralVolume" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=685647727]
 layout_mode = 0

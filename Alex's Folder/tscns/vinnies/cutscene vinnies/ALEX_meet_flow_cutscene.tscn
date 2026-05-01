@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_2e3fq"]
 [ext_resource type="Resource" uid="uid://q7ng5lvh7kdp" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Meet Flow/meet_flow_container.tres" id="5_wmeu7"]
 [ext_resource type="PackedScene" uid="uid://by0fnkk1m6i8f" path="res://Alex's Folder/tscns/flow_appearance.tscn" id="8_enl0d"]
+[ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="9_7hl1m"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="10_8bhqi"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="20_2aby2"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="21_3nqbx"]
@@ -1815,7 +1816,7 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
-[node name="ALEX_meet_flow_cutscene" type="Node2D" unique_id=467354812]
+[node name="VinnieTemplate" type="Node2D" unique_id=467354812]
 
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_dg5v0")]
 
@@ -1841,12 +1842,15 @@ tile_set = SubResource("TileSet_fg0v8")
 [node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
 position = Vector2(-38, -171)
 
+[node name="InteractIndicator" parent="Cutscene Triggers" unique_id=1238723575 instance=ExtResource("9_7hl1m")]
+position = Vector2(823, -214)
+
 [node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("10_8bhqi")]
 position = Vector2(660, -187)
 always_trigger = true
 only_when_grounded = true
 container = ExtResource("5_wmeu7")
-indicator = NodePath("")
+indicator = NodePath("../InteractIndicator")
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)

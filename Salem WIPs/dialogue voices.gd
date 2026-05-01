@@ -27,7 +27,6 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 	var quilt_pitches = [1.0 / 3, 0.9 / 3, 0.8 / 3, 0.6 / 3, 0.4 / 3]
 	var flow_pitches = [1, 0.92, 0.78, 0.641, 0.43]
 	var pyra_pitches = [0.5, 0.46, 0.41, 0.33, 0.22]
-	var default_pitches = [1, 0.92, 0.78, 0.641, 0.43]
 	
 	var p = []
 	
@@ -44,10 +43,6 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 		"pyra":
 			p = pyra_pitches
 			newnotemax = 4
-		_:
-			p = default_pitches
-			newnotemax = 3
-			character_speaking = "default"
 	pitch_hold = p.pick_random()
 	if line_type != dialouge_type.narration:
 		match letter_displayed:

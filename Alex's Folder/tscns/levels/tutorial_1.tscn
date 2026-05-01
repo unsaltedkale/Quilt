@@ -2435,7 +2435,7 @@ frame_progress = 1.0
 
 [node name="Player" parent="." unique_id=982598402 instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(74283, -19838)
+position = Vector2(34850, 4249)
 is_phlo = true
 
 [node name="Path2D" type="Path2D" parent="." unique_id=2072758238]
@@ -2720,6 +2720,7 @@ mod_bar = 1
 position = Vector2(55061, -13701)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform16" index="2" unique_id=1643081023]
+position = Vector2(0, -4)
 beat_appear = 4.5
 bar_delete = 1.0
 beat_delete = 1.5
@@ -3182,6 +3183,7 @@ position = Vector2(58968, -15549.002)
 respawn_timer_max = 1
 
 [node name="MakeItMusical" parent="Stars/STAR74" index="2" unique_id=1630730373]
+position = Vector2(-4.1341505, 2.8157306)
 beat_appear = 1.5
 bar_delete = 1.0
 beat_delete = 2.0

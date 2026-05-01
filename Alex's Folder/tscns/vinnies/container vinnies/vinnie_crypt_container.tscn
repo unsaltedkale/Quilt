@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://be4hocxkgbx4f" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_recoil_tutorial_phlo.tscn" id="3_7qoo3"]
 [ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_phlo_platforms.tscn" id="4_lcxdb"]
 [ext_resource type="PackedScene" uid="uid://bcafj313e7kp5" path="res://Emily WIP/Vinnies/short/Emily_Phlo_Crypt_jump.tscn" id="5_r6uf6"]
-[ext_resource type="PackedScene" uid="uid://bljewcm07ht45" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
+[ext_resource type="PackedScene" uid="uid://c4m3b84ph3441" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
 [ext_resource type="PackedScene" uid="uid://dvubqeyj1ycv2" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_1.tscn" id="7_e7kwk"]
 [ext_resource type="PackedScene" uid="uid://sprvnuwmranp" path="res://Salem WIPs/Vignettes/Finished/Platforming/salem_lever_platform_2.tscn" id="9_8v5aw"]
 [ext_resource type="PackedScene" uid="uid://c1e3fl0y77dg0" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_3.tscn" id="10_qbogy"]
-[ext_resource type="PackedScene" uid="uid://dp88kb1msrmx5" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_4.tscn" id="11_krjvu"]
-[ext_resource type="PackedScene" uid="uid://bd58ylkll8vsw" path="res://Elena/elena_vinnie1.tscn" id="12_q0spj"]
+[ext_resource type="PackedScene" uid="uid://cm75jtiuut4xj" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_crouchtutorial.tscn" id="11_q0spj"]
+[ext_resource type="PackedScene" uid="uid://cyhd2wbfvgpj3" path="res://Elena/elena_vinnie1.tscn" id="12_q0spj"]
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
@@ -54,10 +54,10 @@ position = Vector2(22016, -2944)
 [node name="stasis3" parent="." unique_id=449052590 instance=ExtResource("10_qbogy")]
 position = Vector2(19840, -4736)
 
-[node name="ALEX_stasis_seq_4" parent="." unique_id=726315619 instance=ExtResource("11_krjvu")]
-position = Vector2(22528, -5632)
+[node name="crouch_intro" parent="." unique_id=1799661821 instance=ExtResource("11_q0spj")]
+position = Vector2(22528, -6272)
 
-[node name="VinnieTemplate" parent="." unique_id=850338888 instance=ExtResource("12_q0spj")]
-position = Vector2(22276, -9020)
+[node name="crumble&lever" parent="." unique_id=850338888 instance=ExtResource("12_q0spj")]
+position = Vector2(26624, -6400)
 
 [editable path="Req"]

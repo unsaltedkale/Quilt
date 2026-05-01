@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://bpshsnte276ag"]
-
-[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_11hai"]
-[ext_resource type="Resource" uid="uid://bjunyh5vdw5hl" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Citizen 2/citizen_2_speak.tres" id="1_m4d0q"]
-
-[resource]
-script = ExtResource("1_11hai")
-events = [ExtResource("1_m4d0q")]
-metadata/_custom_type_script = "uid://bqmpakucoot4i"

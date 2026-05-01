@@ -1,20 +1,4 @@
 [gd_resource type="TileSet" format=3 uid="uid://wqwo4u5eiycn"]
 
-[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="1_1mx8n"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aj4j7"]
-texture = ExtResource("1_1mx8n")
-texture_region_size = Vector2i(32, 32)
-9:22/0 = 0
-10:22/0 = 0
-10:23/0 = 0
-11:23/0 = 0
-11:24/0 = 0
-10:24/0 = 0
-9:24/0 = 0
-9:23/0 = 0
-11:22/0 = 0
-
 [resource]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_aj4j7")

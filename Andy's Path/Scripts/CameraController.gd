@@ -34,10 +34,7 @@ func _ready() -> void:
 	in_path = false
 	pity_kill_timer = pity_kill_timer_max
 	
-	if has_node("../Camera_Change_Trigger"):
-		cameraTriggerRef = $"../Camera_Change_Trigger"
-	else:
-		cameraTriggerRef 
+	#cameraTriggerRef = $"../Camera_Change_Trigger"
 	playerReference = $"../Player"
 	print(playerReference)
 	pk_timer = $"../CanvasLayer/Pity Kill Timer"
@@ -83,8 +80,10 @@ func player_died():
 
 func _process(delta: float) -> void:
 	#ddprint(str(has_control) + " / " + str(BREAK_THE_CYCLE) + " / " + str(get_tree().get_processed_tweens()))
+	
 	if tween:
 		has_control = !tween.is_running()
+	
 	#pls no delete I actually Need this -- Alex
 	'''recording_timer -= delta
 	if recording_timer <= 0:
@@ -117,7 +116,7 @@ func _process(delta: float) -> void:
 		pk_timer.text = ""
 		pity_kill_timer = pity_kill_timer_max
 
-	if has_control && (cameraTriggerRef == null or !cameraTriggerRef.inCameraTrigger):
+	if has_control: #&& !cameraTriggerRef.inCameraTrigger:
 		if (abs(global_position.x - playerReference.position.x) + abs(global_position.y - playerReference.position.y)) > 10000:
 			await wait(0.01)
 			if has_control:

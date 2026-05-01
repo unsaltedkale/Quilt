@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("2_jnsws")
-conductor = NodePath("../../../Req/Conductor")
+conductor = NodePath("Conductor")
 music = ExtResource("1_tedh2")
 metadata/_custom_type_script = "uid://b2p5bxsxnf2rh"
