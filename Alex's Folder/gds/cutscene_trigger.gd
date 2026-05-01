@@ -44,7 +44,7 @@ func _on_area_exited(area: Area2D) -> void:
 				if not played:
 					indicator._close()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player_in_trigger && not played:
 		if play_on_interact && Input.is_action_just_pressed("interact"):
 			if only_when_grounded && player.is_on_floor():

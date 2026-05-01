@@ -3,9 +3,9 @@ extends Node
 func _ready() -> void:
 	self.visible = false
 	
-	if $"../../../../Title Screen" != null:
-		$MainMenuReturn.visible = false
-		$MainMenuReturn.disabled = true
+#	if $"../../../../Title Screen" != null:
+#		$MainMenuReturn.visible = false
+#		$MainMenuReturn.disabled = true
 
 func _force_open():
 	get_tree().paused = true

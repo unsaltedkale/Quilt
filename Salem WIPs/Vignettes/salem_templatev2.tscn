@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://b1876h38dwx6o"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_q5k5q"]
+[ext_resource type="AudioStream" uid="uid://bt2k15nbnjbcj" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_substratum.mp3" id="2_b0kju"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_m60k4"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_b0kju"]
 [ext_resource type="PackedScene" uid="uid://c5plspa3idgyl" path="res://Elena/Scenes/fade_area.tscn" id="4_6ap5x"]
@@ -4785,6 +4786,9 @@ sources/0 = SubResource("TileSetAtlasSource_6pqo5")
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -500)
+
+[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
+stream = ExtResource("2_b0kju")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 

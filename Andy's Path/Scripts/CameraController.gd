@@ -34,7 +34,7 @@ func _ready() -> void:
 	in_path = false
 	pity_kill_timer = pity_kill_timer_max
 	
-	cameraTriggerRef = $"../Camera_Change_Trigger"
+	#cameraTriggerRef = $"../Camera_Change_Trigger"
 	playerReference = $"../Player"
 	print(playerReference)
 	pk_timer = $"../CanvasLayer/Pity Kill Timer"
@@ -116,7 +116,7 @@ func _process(delta: float) -> void:
 		pk_timer.text = ""
 		pity_kill_timer = pity_kill_timer_max
 
-	if has_control && !cameraTriggerRef.inCameraTrigger:
+	if has_control: #&& !cameraTriggerRef.inCameraTrigger:
 		if (abs(global_position.x - playerReference.position.x) + abs(global_position.y - playerReference.position.y)) > 10000:
 			await wait(0.01)
 			if has_control:

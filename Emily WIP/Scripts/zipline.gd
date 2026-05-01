@@ -200,5 +200,5 @@ func on_body_exited(body: CharacterBody2D):
 		player.is_suspended_zipline = false'''
 
 
-func _on_body_exited(area: Area2D) -> void:
-	pass # Replace with function body.
+#func _on_body_exited(area: Area2D) -> void:
+#	pass # Replace with function body.
