@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://c0xwsg63ssyvs" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_castle.mp3" id="2_a1od5"]
 [ext_resource type="PackedScene" uid="uid://cuaf5o8ymkp1i" path="res://Salem WIPs/Vignettes/Finished/Platforming/Left to Right/salem_backwards_zipline.tscn" id="4_v38ga"]
 [ext_resource type="PackedScene" uid="uid://cjaau4aunv2q" path="res://Salem WIPs/Vignettes/Finished/Platforming/Left to Right/salem_mirror_zipline.tscn" id="5_60bpb"]
+[ext_resource type="PackedScene" uid="uid://dm4iddsdvxo7v" path="res://Emily WIP/Vinnies/short/Emily_fall_recoil.tscn" id="6_8n2p8"]
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
@@ -29,7 +30,10 @@ position = Vector2(-330, 226)
 [node name="bwzipline" parent="." unique_id=1761938015 instance=ExtResource("4_v38ga")]
 position = Vector2(3712, -256)
 
-[node name="VinnieTemplate" parent="." unique_id=1518112261 instance=ExtResource("5_60bpb")]
+[node name="mirrorzipline" parent="." unique_id=1518112261 instance=ExtResource("5_60bpb")]
 position = Vector2(8576, -1024)
+
+[node name="Fall_Recoil" parent="." unique_id=376128983 instance=ExtResource("6_8n2p8")]
+position = Vector2(12288, -2048)
 
 [editable path="Req"]
