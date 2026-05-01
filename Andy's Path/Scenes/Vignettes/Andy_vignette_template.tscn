@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://do3cmg2v2sevp"]
+[gd_scene format=4 uid="uid://bl4opc7ga7x67"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_f23kg"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_buvo3"]
@@ -4726,9 +4726,6 @@ position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(5229, -1324)
-
-[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
-bus = &"MusicMaster"
 
 [node name="Vinyl" parent="Req" unique_id=2078547140 instance=ExtResource("2_qrqpf")]
 

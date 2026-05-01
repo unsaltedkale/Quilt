@@ -2,11 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_fk6r7"]
 [ext_resource type="PackedScene" uid="uid://7bl0do2fiwnq" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_phlo_enter_crypt.tscn" id="2_cyaf8"]
+[ext_resource type="PackedScene" uid="uid://q5d5pmbhobtw" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_2.tscn" id="2_vnuq1"]
 [ext_resource type="PackedScene" uid="uid://be4hocxkgbx4f" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_recoil_tutorial_phlo.tscn" id="3_7qoo3"]
 [ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_phlo_platforms.tscn" id="4_lcxdb"]
 [ext_resource type="PackedScene" uid="uid://bcafj313e7kp5" path="res://Emily WIP/Vinnies/short/Emily_Phlo_Crypt_jump.tscn" id="5_r6uf6"]
 [ext_resource type="PackedScene" uid="uid://c4m3b84ph3441" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
 [ext_resource type="PackedScene" uid="uid://dvubqeyj1ycv2" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_1.tscn" id="7_e7kwk"]
+[ext_resource type="PackedScene" uid="uid://sprvnuwmranp" path="res://Salem WIPs/Vignettes/Finished/Platforming/salem_lever_platform_2.tscn" id="9_8v5aw"]
+[ext_resource type="PackedScene" uid="uid://c1e3fl0y77dg0" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_3.tscn" id="10_qbogy"]
+[ext_resource type="PackedScene" uid="uid://cm75jtiuut4xj" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_crouchtutorial.tscn" id="11_q0spj"]
+[ext_resource type="PackedScene" uid="uid://cyhd2wbfvgpj3" path="res://Elena/elena_vinnie1.tscn" id="12_q0spj"]
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
@@ -15,7 +20,7 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(-292, 272)
+position = Vector2(332, 172)
 is_phlo = true
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
@@ -24,7 +29,7 @@ position = Vector2(-46, 318)
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 position = Vector2(-330, 226)
 
-[node name="ALEX_phlo_enter_crypt" parent="." unique_id=467354812 instance=ExtResource("2_cyaf8")]
+[node name="ALEX_phlo_enter_crypt" parent="." unique_id=1021613602 instance=ExtResource("2_cyaf8")]
 
 [node name="Recoil_tutorial" parent="." unique_id=451898822 instance=ExtResource("3_7qoo3")]
 position = Vector2(3328, 0)
@@ -40,5 +45,20 @@ position = Vector2(13056, 256)
 
 [node name="ALEX_stasis_sequence" parent="." unique_id=228213048 instance=ExtResource("7_e7kwk")]
 position = Vector2(13696, 256)
+
+[node name="stasis2" parent="." unique_id=467354812 instance=ExtResource("2_vnuq1")]
+position = Vector2(17152, -1408)
+
+[node name="lever_intro" parent="." unique_id=844763640 instance=ExtResource("9_8v5aw")]
+position = Vector2(22016, -2944)
+
+[node name="stasis3" parent="." unique_id=449052590 instance=ExtResource("10_qbogy")]
+position = Vector2(19840, -4736)
+
+[node name="crouch_intro" parent="." unique_id=1799661821 instance=ExtResource("11_q0spj")]
+position = Vector2(22528, -6272)
+
+[node name="crumble&lever" parent="." unique_id=850338888 instance=ExtResource("12_q0spj")]
+position = Vector2(26624, -6400)
 
 [editable path="Req"]

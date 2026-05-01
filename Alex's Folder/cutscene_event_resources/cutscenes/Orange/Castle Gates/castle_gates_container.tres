@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://dcg7alp3bmtal"]
+
+[ext_resource type="Resource" uid="uid://c5y11lu631bpy" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/castle_gates_1.tres" id="1_kdjpg"]
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_p2ca3"]
+
+[resource]
+script = ExtResource("1_p2ca3")
+events = [ExtResource("1_kdjpg")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"

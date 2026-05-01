@@ -14,9 +14,9 @@ extends Area2D
 
 func _ready() -> void:
 	player_in_trigger = false
-	if get_tree().root.get_child(0).find_child("Req") != null:
-		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
-		Camera = get_tree().root.get_child(0).find_child("Req").find_child("Camera2D")
+	if get_tree().get_first_node_in_group("Req") != null:
+		player = get_tree().get_first_node_in_group("Req").find_child("Player")
+		Camera = get_tree().get_first_node_in_group("Req").find_child("Camera2D")
 	else:
 		player = $"../../Player"
 		Camera = $"../../Camera2D"
