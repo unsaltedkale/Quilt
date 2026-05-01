@@ -4786,13 +4786,15 @@ color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 [node name="Lever" parent="." unique_id=1838558751 instance=ExtResource("9_81nnw")]
 position = Vector2(2809, -60)
 
-[node name="leverplatform" parent="." unique_id=767755531 instance=ExtResource("10_r2nvr")]
+[node name="Lever Platforms" type="Node2D" parent="." unique_id=965360559]
+
+[node name="leverplatform" parent="Lever Platforms" unique_id=767755531 instance=ExtResource("10_r2nvr")]
 position = Vector2(400, 0)
 scale = Vector2(2, 2)
 point_a = Vector2(400, 0)
 point_b = Vector2(400, -2000)
 speed = 300.0
 wait_time = 1.0
-lever_path = NodePath("../Lever")
+lever_path = NodePath("../../Lever")
 
 [editable path="Req"]

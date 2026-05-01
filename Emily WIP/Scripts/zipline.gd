@@ -19,6 +19,10 @@ class_name zipline_obj
 @export var particles: CPUParticles2D
 
 func _ready() -> void:
+	
+	start_position += get_parent().get_parent().global_position
+	end_position += get_parent().get_parent().global_position
+	
 	respawning = false
 	global_position = start_position
 	ani.play("idle")

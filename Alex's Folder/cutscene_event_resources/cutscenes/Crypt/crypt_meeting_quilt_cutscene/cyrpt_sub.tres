@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="music_change_cutscene_event" format=3 uid="uid://dtuyy6ha74qrc"]
 
-[ext_resource type="Resource" uid="uid://bmif5lh5wrfbj" path="res://Alex's Folder/music_resources/ARTIFICAL music/crypt_1_sub.tres" id="1_5aec1"]
+[ext_resource type="Resource" uid="uid://c2ss8pv6a60lc" path="res://Alex's Folder/music_resources/LIVE music/LIVE_substratum.tres" id="1_tedh2"]
 [ext_resource type="Script" uid="uid://b2p5bxsxnf2rh" path="res://Alex's Folder/cutscene_event_resources/event types/music_change_cs_event.gd" id="2_jnsws"]
 
 [resource]
 script = ExtResource("2_jnsws")
 conductor = NodePath("Conductor")
-music = ExtResource("1_5aec1")
+music = ExtResource("1_tedh2")
 metadata/_custom_type_script = "uid://b2p5bxsxnf2rh"

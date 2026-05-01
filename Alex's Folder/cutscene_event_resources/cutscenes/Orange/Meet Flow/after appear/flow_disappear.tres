@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="animation_cutscene_event" load_steps=2 format=3 uid="uid://bgf4pn5reeayu"]
+[gd_resource type="Resource" script_class="animation_cutscene_event" format=3 uid="uid://bgf4pn5reeayu"]
 
 [ext_resource type="Script" uid="uid://84oaxla2j74g" path="res://Alex's Folder/cutscene_event_resources/event types/animation_cs_event.gd" id="1_trcav"]
 
 [resource]
 script = ExtResource("1_trcav")
-animator = NodePath("FlowAppearance")
+animator = NodePath("../../Cutscene Extras/FlowAppearance")
 animation_name = "empty"
 wait_until_done = false
 metadata/_custom_type_script = "uid://84oaxla2j74g"

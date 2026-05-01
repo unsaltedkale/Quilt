@@ -53,22 +53,22 @@ text = "A game by hiccup
 
 NARRATIVE  AND
 CHARACTER ART
-Alex B.
+Alex Buckley
 
 PLAYER SYSTEM
-Filler
+Emily Whyms
 
 DIALOUGE SYSTEM
-Filler
+Andy Platosh
 
 OBJECT AND LEVEL DESIGN
 Filler
 
 MUSIC AND SFX
-Filler
+Salem Silkie
 
 TILESET AND LEVEL ART
-Filler
+Lily Morgan
 
 —{+}—
 
@@ -77,9 +77,9 @@ Live music preformed by
 FILLER BAND NAME
 
 COMPOSER
-FILLER
+Salem Selkie
 
-SOUND ENGINEER
+RECORDING TECHNICIAN
 FILLER
 
 
@@ -106,8 +106,10 @@ FILLER
 
 Special Thanks
 
+Max E.
+Ashu G.
 Max Ratner
-Filler
+Sawyer V.
 
 You!
 
@@ -143,7 +145,6 @@ FLUTE	 |
 CLARINET |
 |
 TRUMPET |
-|
 TROMBONE |
 BARITONE SAXOPHONE |
 VIOLIN |
@@ -170,24 +171,23 @@ scale = Vector2(0.80000216, 0.80000216)
 theme_override_constants/line_spacing = 160
 theme_override_fonts/font = ExtResource("5_65a5r")
 theme_override_font_sizes/font_size = 400
-text = "Alex B.		
+text = "Alex Buckley
 Jay Elstad-Mastrolondardo
 Alder Silkie
-Filler
-Alex B.
-Filler
+Darrien W.
+Alex Buckley
+Andy Platosh
 Brennen Robb
-Filler
 Ixitikos Cortes
 Quinn Vanderwal
 Ruby Parr
-Filler
-Filler
+Isaac F.
+Aiden R.
 Jay Elstad-Mastrolondardo
 Alder Silkie
 Jessie Ginsberg
 Dylan Amato
-Filler"
+Salem Selkie"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2023058523]
 position = Vector2(1695, 25210)
