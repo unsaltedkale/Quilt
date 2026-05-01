@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://be4hocxkgbx4f" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_recoil_tutorial_phlo.tscn" id="3_7qoo3"]
 [ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_phlo_platforms.tscn" id="4_lcxdb"]
 [ext_resource type="PackedScene" uid="uid://bcafj313e7kp5" path="res://Emily WIP/Vinnies/short/Emily_Phlo_Crypt_jump.tscn" id="5_r6uf6"]
+[ext_resource type="PackedScene" uid="uid://c4m3b84ph3441" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
+[ext_resource type="PackedScene" uid="uid://dvubqeyj1ycv2" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_1.tscn" id="7_e7kwk"]
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
@@ -30,7 +32,13 @@ position = Vector2(3328, 0)
 [node name="Phlo_platforms" parent="." unique_id=1509295080 instance=ExtResource("4_lcxdb")]
 position = Vector2(6144, -640)
 
-[node name="VinnieTemplate" parent="." unique_id=780773229 instance=ExtResource("5_r6uf6")]
-position = Vector2(8609, -809)
+[node name="phloplatforms2" parent="." unique_id=780773229 instance=ExtResource("5_r6uf6")]
+position = Vector2(8704, -768)
+
+[node name="ALEX_meet_quilt_cutscene" parent="." unique_id=448999508 instance=ExtResource("6_n6xr7")]
+position = Vector2(13056, 256)
+
+[node name="ALEX_stasis_sequence" parent="." unique_id=228213048 instance=ExtResource("7_e7kwk")]
+position = Vector2(13696, 256)
 
 [editable path="Req"]
