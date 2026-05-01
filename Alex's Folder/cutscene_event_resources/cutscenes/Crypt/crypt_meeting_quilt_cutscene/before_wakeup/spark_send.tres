@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="set_variable_cutscene_event" load_steps=2 format=3 uid="uid://krbg4bgsm3wc"]
+[gd_resource type="Resource" script_class="set_variable_cutscene_event" format=3 uid="uid://krbg4bgsm3wc"]
 
 [ext_resource type="Script" uid="uid://ddqk0rwkpcnf2" path="res://Alex's Folder/cutscene_event_resources/event types/set_variable_cs_event.gd" id="1_mqht5"]
 
 [resource]
 script = ExtResource("1_mqht5")
-actor = NodePath("Path2D")
+actor = NodePath("../../Cutscene Objects/Path2D")
 variable_name = "emit"
 value_bool = true
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

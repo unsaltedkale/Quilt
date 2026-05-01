@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="animation_cutscene_event" load_steps=2 format=3 uid="uid://beuu713abtih0"]
+[gd_resource type="Resource" script_class="animation_cutscene_event" format=3 uid="uid://beuu713abtih0"]
 
 [ext_resource type="Script" uid="uid://84oaxla2j74g" path="res://Alex's Folder/cutscene_event_resources/event types/animation_cs_event.gd" id="1_fi2ai"]
 
 [resource]
 script = ExtResource("1_fi2ai")
-animator = NodePath("fake quilt")
+animator = NodePath("../../Cutscene Objects/fake quilt")
 animation_name = "intro_5_2_spell"
 metadata/_custom_type_script = "uid://84oaxla2j74g"

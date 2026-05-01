@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_p2crl")
 mover = NodePath("../../Req/Player")
-target = Vector2(3722, -45)
+target = Vector2(277, -317)
 time = 0.5
 delay_before = 4.0
 metadata/_custom_type_script = "uid://cvo6goabck1ac"

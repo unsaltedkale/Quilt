@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dc086mi1p7d80"]
+
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_fk6r7"]
+[ext_resource type="PackedScene" uid="uid://7bl0do2fiwnq" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_phlo_enter_crypt.tscn" id="2_cyaf8"]
+[ext_resource type="PackedScene" uid="uid://be4hocxkgbx4f" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_recoil_tutorial_phlo.tscn" id="3_7qoo3"]
+[ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_phlo_platforms.tscn" id="4_lcxdb"]
+[ext_resource type="PackedScene" uid="uid://bcafj313e7kp5" path="res://Emily WIP/Vinnies/short/Emily_Phlo_Crypt_jump.tscn" id="5_r6uf6"]
+
+[node name="VinnieContainer" type="Node2D" unique_id=1741857314]
+
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_fk6r7")]
+position = Vector2(184, -603)
+a = 1
+
+[node name="Player" parent="Req" index="0" unique_id=1296307351]
+position = Vector2(-292, 272)
+is_phlo = true
+
+[node name="Camera2D" parent="Req" index="1" unique_id=218093542]
+position = Vector2(-46, 318)
+
+[node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
+position = Vector2(-330, 226)
+
+[node name="ALEX_phlo_enter_crypt" parent="." unique_id=467354812 instance=ExtResource("2_cyaf8")]
+
+[node name="Recoil_tutorial" parent="." unique_id=451898822 instance=ExtResource("3_7qoo3")]
+position = Vector2(3328, 0)
+
+[node name="Phlo_platforms" parent="." unique_id=1509295080 instance=ExtResource("4_lcxdb")]
+position = Vector2(6144, -640)
+
+[node name="VinnieTemplate" parent="." unique_id=780773229 instance=ExtResource("5_r6uf6")]
+position = Vector2(8609, -809)
+
+[editable path="Req"]

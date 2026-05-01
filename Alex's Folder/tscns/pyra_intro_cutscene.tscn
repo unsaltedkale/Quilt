@@ -607,7 +607,6 @@ size = Vector2(256, 256)
 [node name="Tutorial1" type="Node2D" unique_id=208246498]
 
 [node name="DustSquare" type="Sprite2D" parent="." unique_id=917492422]
-visible = false
 modulate = Color(0.08243547, 0.08243547, 0.08243547, 1)
 position = Vector2(7206.0005, 10566.001)
 scale = Vector2(11433.5, 19063)

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="cutscene_container" load_steps=22 format=3 uid="uid://q7ng5lvh7kdp"]
+[gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://q7ng5lvh7kdp"]
 
 [ext_resource type="Resource" uid="uid://5x7vlmgokkuj" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Meet Flow/before appear/stop_music.tres" id="1_t0l73"]
 [ext_resource type="Resource" uid="uid://ew3iosm6bisn" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Meet Flow/before appear/quilt_stop.tres" id="2_gl5un"]

@@ -24,10 +24,10 @@ func _joy_connection_changed(_device: int, _connected: bool):
 		controller = false
 	pass
 
-func _input(InputEvent) -> void: #Someone needs to check out this warning message, you shouldn't name a variable InputEvent.
-	if InputEvent is InputEventKey || InputEvent is InputEventMouse:
+func _input(input_event : InputEvent) -> void: #Someone needs to check out this warning message, you shouldn't name a variable InputEvent.
+	if input_event is InputEventKey || input_event is InputEventMouse:
 		controller = false
-	elif InputEvent is InputEventJoypadButton || InputEvent is InputEventJoypadMotion:
+	elif input_event is InputEventJoypadButton || input_event is InputEventJoypadMotion:
 		controller = true
 
 func safe_tween(s, v, t):

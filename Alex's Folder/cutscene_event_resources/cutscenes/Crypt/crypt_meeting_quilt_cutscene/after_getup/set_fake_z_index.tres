@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="set_variable_cutscene_event" load_steps=2 format=3 uid="uid://yyvbkp0851ay"]
+[gd_resource type="Resource" script_class="set_variable_cutscene_event" format=3 uid="uid://yyvbkp0851ay"]
 
 [ext_resource type="Script" uid="uid://ddqk0rwkpcnf2" path="res://Alex's Folder/cutscene_event_resources/event types/set_variable_cs_event.gd" id="1_uwh3f"]
 
 [resource]
 script = ExtResource("1_uwh3f")
-actor = NodePath("fake quilt")
+actor = NodePath("../../Cutscene Objects/fake quilt")
 variable_name = "z_index"
 value_float = 2.0
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

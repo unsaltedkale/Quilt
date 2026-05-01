@@ -11,6 +11,10 @@ var _moving_to_b = true
 var _waiting = false
 
 func _ready():
+	point_a += get_parent().get_parent().global_position
+	point_b += get_parent().get_parent().global_position
+	
+	
 	_target_point = point_b
 
 func _physics_process(delta):

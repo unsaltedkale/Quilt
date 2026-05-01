@@ -68,7 +68,7 @@ func die():
 	$"../Camera2D".player_died()
 	player_death.emit()
 	current_stasis = null #Make sure ziplines don't trap us when we die
-	spawn_player(spawn_point)
+	spawn_player()
 	
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	#print_debug("NAME:" + str(body.name))
@@ -134,7 +134,7 @@ func set_checkpoint(pos):
 	spawn_point = pos
 
 
-func spawn_player(spawn_point: Vector2): #someone needs to check out the warning message here
+func spawn_player(): #someone needs to check out the warning message here
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 	health = max_health  
