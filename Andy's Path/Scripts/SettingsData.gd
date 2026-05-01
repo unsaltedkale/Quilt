@@ -1,11 +1,15 @@
 extends Node
 
+var textSize = 0
+var generalVolumeValue = 0
+var dialogueVolumeValue = 0
+var SFXVolumeValue = 0
+var MusicVolumeValue = 0
+var isColorblind = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func updateValues(new_text_size, new_general, new_dialogue, new_sfx, new_music):
+	textSize = new_text_size
+	generalVolumeValue = new_general
+	dialogueVolumeValue = new_dialogue
+	SFXVolumeValue = new_sfx
+	MusicVolumeValue = new_music

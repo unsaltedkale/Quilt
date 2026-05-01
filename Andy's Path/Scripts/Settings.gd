@@ -8,6 +8,14 @@ var MusicVolumeValue
 var isColorblind
 
 func _ready() -> void:
+	await get_tree().process_frame
+	
+	$TextSize.value = SettingsData.textSize
+	$VolumeSettings/GeneralVolume.value = SettingsData.generalVolumeValue
+	$VolumeSettings/DialogueSlider.value = SettingsData.dialogueVolumeValue
+	$VolumeSettings/SoundFXSlider.value = SettingsData.SFXVolumeValue
+	$VolumeSettings/MusicSlider.value = SettingsData.MusicVolumeValue
+	
 	self.visible = false
 #	if $"../../../../Title Screen" != null:
 #		$MainMenuReturn.visible = false
@@ -19,6 +27,7 @@ func _process(delta: float) -> void:
 	dialogueVolumeValue = $VolumeSettings/DialogueSlider.value
 	SFXVolumeValue = $VolumeSettings/SoundFXSlider.value
 	MusicVolumeValue = $VolumeSettings/MusicSlider.value
+	SettingsData.updateValues(textSize, generalVolumeValue, dialogueVolumeValue, SFXVolumeValue, MusicVolumeValue)
 	
 func _force_open():
 	get_tree().paused = true

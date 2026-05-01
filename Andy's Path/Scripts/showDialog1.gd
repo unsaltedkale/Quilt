@@ -24,7 +24,7 @@ signal dialouge_finished
 func _ready() -> void:
 	dialogueReference = $"../Dialogue"
 	UiReference = $".."
-	sliderReference = $"../../Settings/HSlider"
+	sliderReference = $"../../Settings/TextSize"
 	characterportraitReference = $"../CharacterPortrait"
 	settingsReference = $"../../Settings"
 	

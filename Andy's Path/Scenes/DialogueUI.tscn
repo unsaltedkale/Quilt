@@ -23,6 +23,7 @@
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="20_gqie4"]
 [ext_resource type="Script" uid="uid://bij8e4rk76007" path="res://Andy's Path/Scripts/Settings.gd" id="20_ikb8c"]
 [ext_resource type="Script" uid="uid://cjulrpdicpvgj" path="res://Andy's Path/Scenes/mainmenureturn.gd" id="21_ikb8c"]
+[ext_resource type="Script" uid="uid://qw7u7t1vs07f" path="res://Andy's Path/Scripts/VolumeManager.gd" id="23_uc4dt"]
 
 [sub_resource type="Theme" id="Theme_6n2ox"]
 
@@ -900,6 +901,7 @@ script = ExtResource("21_ikb8c")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("23_uc4dt")
 
 [node name="GeneralVolume" type="HSlider" parent="UI/Settings/VolumeSettings" unique_id=685647727]
 layout_mode = 0
