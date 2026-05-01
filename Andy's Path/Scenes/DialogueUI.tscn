@@ -847,7 +847,7 @@ offset_bottom = 649.797
 scale = Vector2(1.6738826, 1.674369)
 color = Color(0.39607844, 0.2901961, 0.29803923, 0.8627451)
 
-[node name="HSlider" type="HSlider" parent="UI/Settings" unique_id=92704188]
+[node name="TextSize" type="HSlider" parent="UI/Settings" unique_id=92704188]
 layout_mode = 0
 offset_left = 184.0
 offset_top = 440.0
@@ -862,7 +862,7 @@ min_value = 15.0
 max_value = 30.0
 value = 30.0
 
-[node name="Label" type="Label" parent="UI/Settings/HSlider" unique_id=1043472174]
+[node name="Label" type="Label" parent="UI/Settings/TextSize" unique_id=1043472174]
 layout_mode = 0
 offset_left = -68.0
 offset_top = 19.0

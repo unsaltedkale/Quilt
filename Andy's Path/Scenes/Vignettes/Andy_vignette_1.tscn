@@ -4730,9 +4730,6 @@ position = Vector2(233, -323)
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(7706, -505)
 
-[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
-bus = &"MusicMaster"
-
 [node name="Vinyl" parent="Req" unique_id=2078547140 instance=ExtResource("2_5ld3x")]
 position = Vector2(11353, 5447)
 
