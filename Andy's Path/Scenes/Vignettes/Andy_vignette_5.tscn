@@ -13,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://cshhei7elby56" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_container.tres" id="11_6sra4"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="12_g82v5"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="13_tlaqx"]
-[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="14_ypqdb"]
+[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/ARTIFICAL music/empty_music.tres" id="14_ypqdb"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="15_uhlxu"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="16_o6csj"]
 [ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="17_gml7p"]
@@ -4750,9 +4750,6 @@ position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(10283, -809)
-
-[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
-bus = &"MusicMaster"
 
 [node name="Vinyl" parent="Req" unique_id=2078547140 instance=ExtResource("2_smyth")]
 position = Vector2(10138, -6692)

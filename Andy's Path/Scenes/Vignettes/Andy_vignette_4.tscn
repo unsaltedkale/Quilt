@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://d11wvbu82dkqx" path="res://Alex's Folder/tscns/vinyl.tscn" id="2_qvej1"]
 [ext_resource type="PackedScene" uid="uid://je46xra7st0p" path="res://Andy's Path/Scenes/Camera_Change_Trigger.tscn" id="3_723vm"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="4_5xs7b"]
-[ext_resource type="Texture2D" path="res://Art/Background2 - Final 2?.png" id="4_qvej1"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="5_4csey"]
 [ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="6_du5b2"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_qsnck"]
@@ -4728,21 +4727,12 @@ position = Vector2(233, -323)
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(8251, -724)
 
-[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
-bus = &"MusicMaster"
-
 [node name="Vinyl" parent="Req" unique_id=2078547140 instance=ExtResource("2_qvej1")]
 
 [node name="Camera_Change_Trigger" parent="Req" unique_id=404059404 instance=ExtResource("3_723vm")]
 position = Vector2(588, -792)
 rotation = 3.1415925
 scale = Vector2(7.5388293, 7.5388293)
-
-[node name="Background2Final2?" type="Sprite2D" parent="Req" unique_id=706682099]
-z_index = -5
-position = Vector2(13135, 2381.9995)
-scale = Vector2(6.456751, 6.456751)
-texture = ExtResource("4_qvej1")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
