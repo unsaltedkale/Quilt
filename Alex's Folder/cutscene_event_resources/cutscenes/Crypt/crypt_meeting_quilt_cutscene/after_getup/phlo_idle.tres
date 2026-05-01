@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="animation_cutscene_event" load_steps=2 format=3 uid="uid://ct3ff80fdjx6h"]
+[gd_resource type="Resource" script_class="animation_cutscene_event" format=3 uid="uid://ct3ff80fdjx6h"]
 
 [ext_resource type="Script" uid="uid://84oaxla2j74g" path="res://Alex's Folder/cutscene_event_resources/event types/animation_cs_event.gd" id="1_c6rei"]
 
 [resource]
 script = ExtResource("1_c6rei")
-animator = NodePath("Player")
+animator = NodePath("../../Req/Player")
 animation_name = "phlo_idle"
 wait_until_done = false
 metadata/_custom_type_script = "uid://84oaxla2j74g"

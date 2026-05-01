@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_3aebc")
-conductor = NodePath("Conductor")
+conductor = NodePath("../../Req/Conductor")
 music = ExtResource("1_jp7wt")
 metadata/_custom_type_script = "uid://b2p5bxsxnf2rh"

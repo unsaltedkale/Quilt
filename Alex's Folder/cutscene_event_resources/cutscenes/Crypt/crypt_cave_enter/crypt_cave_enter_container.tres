@@ -4,15 +4,13 @@
 [ext_resource type="Resource" uid="uid://blohsjbgkvk7j" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/cave_player_set.tres" id="1_8ymdk"]
 [ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_bsbn7"]
 [ext_resource type="Resource" uid="uid://bewi6bnn7cn0m" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/cave_enter_camera_set.tres" id="2_2k7yh"]
-[ext_resource type="Resource" uid="uid://cy6rqc2kr0w05" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/make_tooltip_jump_disappear.tres" id="2_houtj"]
 [ext_resource type="Resource" uid="uid://cq6doswri72ee" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/cave_player_fall.tres" id="3_2k7yh"]
 [ext_resource type="Resource" uid="uid://c54mwxhoeba30" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/make_tooltip_walk_appear.tres" id="5_cxyio"]
 [ext_resource type="Resource" uid="uid://bhe5vb5ngsegm" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/phlo_fall.tres" id="5_qywqq"]
 [ext_resource type="Resource" uid="uid://d0obtvdf0qios" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/phlo_wump.tres" id="6_qvv12"]
-[ext_resource type="Resource" uid="uid://2ryr2qav67b3" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/make_tooltip_jump_appear.tres" id="7_qvv12"]
 [ext_resource type="Resource" uid="uid://dagalkvq1x7ss" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/regain_control_pos.tres" id="9_gsiwr"]
 
 [resource]
 script = ExtResource("1_bsbn7")
-events = [ExtResource("1_1cg6q"), ExtResource("2_houtj"), ExtResource("1_8ymdk"), ExtResource("2_2k7yh"), ExtResource("5_qywqq"), ExtResource("3_2k7yh"), ExtResource("6_qvv12"), ExtResource("5_cxyio"), ExtResource("7_qvv12"), ExtResource("9_gsiwr")]
+events = [ExtResource("1_1cg6q"), ExtResource("1_8ymdk"), ExtResource("2_2k7yh"), ExtResource("5_qywqq"), ExtResource("3_2k7yh"), ExtResource("6_qvv12"), ExtResource("5_cxyio"), ExtResource("9_gsiwr")]
 metadata/_custom_type_script = "uid://bqmpakucoot4i"

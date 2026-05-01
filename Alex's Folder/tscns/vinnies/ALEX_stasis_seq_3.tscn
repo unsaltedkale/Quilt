@@ -3288,6 +3288,7 @@ color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 
 [node name="Vinyl" parent="Vinyls" unique_id=2078547140 instance=ExtResource("10_3diw0")]
 position = Vector2(256, -2200)
+color = 1
 
 [node name="Resetpoints" type="Node2D" parent="." unique_id=1068662191]
 position = Vector2(-38, -171)
