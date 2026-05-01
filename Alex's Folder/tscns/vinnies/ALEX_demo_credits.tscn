@@ -35,6 +35,8 @@ position = Vector2(-38, -171)
 
 [node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 instance=ExtResource("8_hwmqt")]
 position = Vector2(-517, -311)
+monitorable = false
+always_trigger = true
 container = ExtResource("4_7q63t")
 
 [node name="Label" type="Label" parent="." unique_id=1642844523]

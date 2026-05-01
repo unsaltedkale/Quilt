@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://cnaagyx6ylx7"]
 
 [ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_eggvk"]
-[ext_resource type="AudioStream" uid="uid://demf4g84jefw7" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_hellow.wav" id="2_mhaoy"]
+[ext_resource type="AudioStream" uid="uid://cu77p30un7wdu" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_hellow.mp3" id="2_mhaoy"]
 
 [resource]
 script = ExtResource("1_eggvk")

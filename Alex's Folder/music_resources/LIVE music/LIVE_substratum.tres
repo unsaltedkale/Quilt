@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://c2ss8pv6a60lc"]
 
 [ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_ynehs"]
-[ext_resource type="AudioStream" uid="uid://bf5sfane05rl0" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_substratum.wav" id="2_stvpp"]
+[ext_resource type="AudioStream" uid="uid://bt2k15nbnjbcj" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_substratum.mp3" id="2_ynehs"]
 
 [resource]
 script = ExtResource("1_ynehs")
 display_name = "Substratum"
-track = ExtResource("2_stvpp")
+track = ExtResource("2_ynehs")
 metadata/_custom_type_script = "uid://4ekgwvgt60r0"
