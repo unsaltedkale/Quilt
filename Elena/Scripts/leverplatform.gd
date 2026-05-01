@@ -18,6 +18,9 @@ var _reached_target = false
 func _ready():
 	gear.play("idle")
 	
+	point_a += get_parent().get_parent().global_position
+	point_b += get_parent().get_parent().global_position
+	
 	_target_point = point_a
 	
 	if lever_path != NodePath():

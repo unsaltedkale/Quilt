@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_jdra7")
 mover = NodePath("../../Req/Player")
-target = Vector2(3722, -2900)
+target = Vector2(277, -3390)
 metadata/_custom_type_script = "uid://cvo6goabck1ac"

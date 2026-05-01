@@ -21,36 +21,83 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
-	if has_set_tile_particles == false:
-		_set_tile_particles()
-		has_set_tile_particles = true
-			
-	pass
+	if a == req_type.staging:
+		if get_tree().get_nodes_in_group("Req").size() > 1:
+			print("REQ STAGING OF " + get_parent().name + " IN PROD, SELF DESTRUCTING!")
+			queue_free()
+		pass 
+	
+	else:
+		if has_set_tile_particles == false:
+			_set_tile_particles()
+			has_set_tile_particles = true
+				
+		pass
 	
 func _set_tile_particles() -> void:
-	var tiles = $"../Tiles"
-	print("setting...")
-	for tml in tiles.get_children():
+	
+	if get_tree().get_first_node_in_group("Req").a == req_type.staging:
 		
-		var p = null
+		var tiles = $"../Tiles"
+		print("setting...")
+		for tml in tiles.get_children():
+			
+			var p = null
+			
+			match tml.name:
+				"Magical_Barrier":
+					p = mb_p
+				"Unmagical_Barrier":
+					p = umb_p
+				"Mirror":
+					p = mir_p
+			
+			if p != null:
+				for v in tml.get_used_cells():
+					
+					var localCellPosition = tml.map_to_local(v)
+					var globalCellPosition = tml.to_global(localCellPosition)
+					
+					var part = p.instantiate()
+					part.position = globalCellPosition
+					get_tree().current_scene.add_child(part)
+					pass
+			pass
+	
+	elif get_tree().get_first_node_in_group("Req").a == req_type.prod:
 		
-		match tml.name:
-			"Magical_Barrier":
-				p = mb_p
-			"Unmagical_Barrier":
-				p = umb_p
-			"Mirror":
-				p = mir_p
-		
-		if p != null:
-			for v in tml.get_used_cells():
-				
-				var localCellPosition = tml.map_to_local(v)
-				var globalCellPosition = tml.to_global(localCellPosition)
-				
-				var part = p.instantiate()
-				part.position = globalCellPosition
-				get_tree().current_scene.add_child(part)
+		for vinnie in get_parent().get_children():
+			
+			if vinnie.is_in_group("Req"):
 				pass
-		pass
+			elif vinnie.find_child("Tiles") != null:
+				var tiles = vinnie.find_child("Tiles")
+				
+				print(vinnie)
+				
+				print("setting...")
+				
+				for tml in tiles.get_children():
+					
+					var p = null
+					
+					match tml.name:
+						"Magical_Barrier":
+							p = mb_p
+						"Unmagical_Barrier":
+							p = umb_p
+						"Mirror":
+							p = mir_p
+					
+					if p != null:
+						for v in tml.get_used_cells():
+							
+							var localCellPosition = tml.map_to_local(v)
+							var globalCellPosition = tml.to_global(localCellPosition)
+							
+							var part = p.instantiate()
+							part.position = globalCellPosition
+							get_tree().current_scene.add_child(part)
+							pass
+					pass
 	pass

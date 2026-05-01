@@ -6,5 +6,5 @@
 script = ExtResource("1_hkgko")
 camera = NodePath("Camera2D")
 change_position = true
-position = Vector2(3720, -140)
+position = Vector2(277, -200)
 metadata/_custom_type_script = "uid://csualf0138bpc"
