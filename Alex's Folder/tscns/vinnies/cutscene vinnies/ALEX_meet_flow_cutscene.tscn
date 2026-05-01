@@ -1823,6 +1823,9 @@ sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(571, -347)
 
+[node name="Camera2D" parent="Req" index="1" unique_id=218093542]
+position = Vector2(951, -773)
+
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
@@ -1845,6 +1848,7 @@ position = Vector2(823, -214)
 [node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("10_8bhqi")]
 position = Vector2(660, -187)
 always_trigger = true
+only_when_grounded = true
 container = ExtResource("5_wmeu7")
 indicator = NodePath("../InteractIndicator")
 
