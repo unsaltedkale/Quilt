@@ -1,23 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://bs3urn5ugh5mq"]
+[gd_scene format=3 uid="uid://bs3urn5ugh5mq"]
 
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="1_n28yg"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="2_ngbi8"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="3_ngbi8"]
 [ext_resource type="Resource" uid="uid://rqtthumyar3f" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Credits/credits_container.tres" id="4_l5sxb"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_pqvtf"]
-[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/orange_town.tres" id="6_p5f4b"]
+[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/ARTIFICAL music/orange_town.tres" id="6_p5f4b"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_8h123"]
 
-[node name="Credits" type="Node2D"]
+[node name="Credits" type="Node2D" unique_id=774867805]
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=215351835]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=757429654]
 offset_right = 40.0
 offset_bottom = 23.0
 scale = Vector2(15.280004, 15.280004)
@@ -91,10 +91,10 @@ THE END...?
 "
 horizontal_alignment = 1
 
-[node name="Player" parent="." instance=ExtResource("1_n28yg")]
+[node name="Player" parent="." unique_id=1469873627 instance=ExtResource("1_n28yg")]
 position = Vector2(-1833, -908)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2028745691]
 position = Vector2(1695, 210)
 scale = Vector2(4, 4)
 zoom = Vector2(0.5, 0.5)
@@ -104,16 +104,16 @@ limit_top = 10000000
 limit_bottom = 3363
 script = ExtResource("2_ngbi8")
 
-[node name="Cutscene Trigger" type="Node" parent="."]
+[node name="Cutscene Trigger" type="Node" parent="." unique_id=281167583]
 
-[node name="CutsceneTrigger" parent="Cutscene Trigger" instance=ExtResource("3_ngbi8")]
+[node name="CutsceneTrigger" parent="Cutscene Trigger" unique_id=1895140471 instance=ExtResource("3_ngbi8")]
 position = Vector2(-1841, -709)
 scale = Vector2(9.56, 7.76)
 container = ExtResource("4_l5sxb")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=629063726]
 stream = SubResource("AudioStreamWAV_8h123")
 
-[node name="Conductor" parent="." instance=ExtResource("5_pqvtf")]
+[node name="Conductor" parent="." unique_id=433032382 instance=ExtResource("5_pqvtf")]
 position = Vector2(4317, 436)
 current_music_resource = ExtResource("6_p5f4b")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://d1r0m3wlo32fc"]
+
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_0f1lk"]
+[ext_resource type="AudioStream" uid="uid://b44oucsuumrju" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_opening theme.wav" id="2_fb4ct"]
+
+[resource]
+script = ExtResource("1_0f1lk")
+display_name = "Opening Theme"
+track = ExtResource("2_fb4ct")
+bpm = 80.0
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"

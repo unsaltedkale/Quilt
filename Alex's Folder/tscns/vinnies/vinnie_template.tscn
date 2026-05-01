@@ -15,10 +15,10 @@
 [ext_resource type="Resource" uid="uid://cshhei7elby56" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_container.tres" id="8_ukjh1"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="9_u68m5"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="11_dug4m"]
-[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="11_ukjh1"]
 [ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="12_tm6ij"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="13_tm6ij"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="14_mkgea"]
+[ext_resource type="Resource" uid="uid://byd0brg0xkpg1" path="res://Alex's Folder/music_resources/LIVE music/LIVE_orange_flow_appears.tres" id="14_rq4vl"]
 [ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="16_fg0v8"]
 [ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="17_eulau"]
 
@@ -5060,7 +5060,7 @@ position = Vector2(-38, -171)
 
 [node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("9_u68m5")]
 position = Vector2(1247, -366)
-track = ExtResource("11_ukjh1")
+track = ExtResource("14_rq4vl")
 
 [node name="Zipline" type="Node2D" parent="." unique_id=1757930451]
 position = Vector2(-38, -171)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bdkoai4xy8lgb"
+path="res://.godot/imported/Hellow 120_OUTRO.wav-5c3200458d221dd067ee83efe321e921.sample"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/ARTIFICAL music/music_tracks/Hellow 120_OUTRO.wav"
+dest_files=["res://.godot/imported/Hellow 120_OUTRO.wav-5c3200458d221dd067ee83efe321e921.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2fky7ji2nk1"
+path="res://.godot/imported/LIVE_ebb.mp3-96a6be6b8100e4c9618b9a372da845da.mp3str"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_ebb.mp3"
+dest_files=["res://.godot/imported/LIVE_ebb.mp3-96a6be6b8100e4c9618b9a372da845da.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

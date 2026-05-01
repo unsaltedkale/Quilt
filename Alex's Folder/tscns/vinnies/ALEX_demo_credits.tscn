@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://cmtasm87yklbv"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_6r5xd"]
-[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/orange_town.tres" id="2_7q63t"]
+[ext_resource type="Resource" uid="uid://by1aa2fwe2mxk" path="res://Alex's Folder/music_resources/LIVE music/LIVEkinda_credits.tres" id="2_2di3w"]
 [ext_resource type="Resource" uid="uid://rqtthumyar3f" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Credits/credits_container.tres" id="4_7q63t"]
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="5_65a5r"]
 [ext_resource type="Texture2D" uid="uid://bdm4pm1wj7did" path="res://Art/STAR.png" id="6_pki7s"]
+[ext_resource type="Texture2D" uid="uid://qdspb5lk06hl" path="res://Art/Developer Art/quilt_developer_art_3.png" id="7_2di3w"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="8_hwmqt"]
+[ext_resource type="Texture2D" uid="uid://b844udovpgven" path="res://Art/Developer Art/quilt_developer_art_0.png" id="8_qgoyt"]
+[ext_resource type="Texture2D" uid="uid://dqhwk2dcct8ld" path="res://Art/Developer Art/quilt_developer_art_5.png" id="9_tnpf5"]
+[ext_resource type="Texture2D" uid="uid://cjfm4f2dlv43c" path="res://Art/Developer Art/quilt_developer_art_2.png" id="10_m0m6x"]
+[ext_resource type="Texture2D" uid="uid://db3btb5md0e20" path="res://Art/Developer Art/quilt_developer_art_4.png" id="11_c1i8e"]
+[ext_resource type="Texture2D" uid="uid://cia5dgeqminq5" path="res://Art/Developer Art/quilt_developer_art_1.png" id="12_6r5xd"]
 
 [node name="ALEX_demo_credits" type="Node2D" unique_id=467354812]
 
@@ -13,10 +19,14 @@
 position = Vector2(-668, -409)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
+visible = false
 position = Vector2(107, -155)
 
+[node name="Camera2D" parent="Req" index="1" unique_id=218093542]
+zoom = Vector2(0.25, 0.25)
+
 [node name="Conductor" parent="Req" index="3" unique_id=438348041]
-current_music_resource = ExtResource("2_7q63t")
+current_music_resource = ExtResource("2_2di3w")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
@@ -41,7 +51,7 @@ text = "A game by hiccup
 
 NARRATIVE  AND
 CHARACTER ART
-Filler
+Alex B.
 
 PLAYER SYSTEM
 Filler
@@ -94,7 +104,7 @@ FILLER
 
 Special Thanks
 
-Filler
+Max Ratner
 Filler
 
 You!
@@ -157,27 +167,57 @@ scale = Vector2(0.80000216, 0.80000216)
 theme_override_constants/line_spacing = 160
 theme_override_fonts/font = ExtResource("5_65a5r")
 theme_override_font_sizes/font_size = 400
-text = "Filler
-Filler		
+text = "Jay
+Alex B.		
+Alder Silkie
+Filler
+Alex B.
+Filler
+Brennen Robb
+Filler
+Ixitikos Cortes
+Quinn Vanderwal
+Ruby Parr
 Filler
 Filler
-Filler
-Filler
-Filler
-Filler
-Filler
-Filler
-Filler
-Filler
-Filler
-Filler
-Filler
-Filler
-Filler
+Jay
+Alder Silkie
+Jessie Ginsberg
+Dylan
 Filler"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2023058523]
 position = Vector2(1695, 25210)
 texture = ExtResource("6_pki7s")
+
+[node name="QuiltDeveloperArt3" type="Sprite2D" parent="." unique_id=133440024]
+position = Vector2(3217, 2040.0001)
+scale = Vector2(30, 30)
+texture = ExtResource("7_2di3w")
+
+[node name="QuiltDeveloperArt0" type="Sprite2D" parent="." unique_id=138039763]
+position = Vector2(-152, 3020.0002)
+scale = Vector2(-30, 30)
+texture = ExtResource("8_qgoyt")
+
+[node name="QuiltDeveloperArt5" type="Sprite2D" parent="." unique_id=1216770974]
+position = Vector2(3316, 4171.0005)
+scale = Vector2(30, 30)
+texture = ExtResource("9_tnpf5")
+
+[node name="QuiltDeveloperArt2" type="Sprite2D" parent="." unique_id=1082845617]
+position = Vector2(-120.00001, 5249.0005)
+scale = Vector2(-30, 30)
+texture = ExtResource("10_m0m6x")
+
+[node name="QuiltDeveloperArt4" type="Sprite2D" parent="." unique_id=1707966256]
+position = Vector2(3209, 6203)
+scale = Vector2(30, 30)
+texture = ExtResource("11_c1i8e")
+
+[node name="QuiltDeveloperArt1" type="Sprite2D" parent="." unique_id=447996112]
+position = Vector2(-97, 7381.0005)
+scale = Vector2(-30, 30)
+texture = ExtResource("12_6r5xd")
 
 [editable path="Req"]

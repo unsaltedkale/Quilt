@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d41acgjxcgvk" path="res://Andy's Path/Scripts/PlayButton.gd" id="2_1xr1c"]
 [ext_resource type="Texture2D" uid="uid://b6pjq2yeuo7ny" path="res://Art/Quilt Title Screen-2.png" id="3_2k3je"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="3_tu0on"]
-[ext_resource type="Resource" uid="uid://bf2bffq3wpki3" path="res://Alex's Folder/music_resources/opening_theme.tres" id="4_2k3je"]
+[ext_resource type="Resource" uid="uid://bf2bffq3wpki3" path="res://Alex's Folder/music_resources/ARTIFICAL music/opening_theme.tres" id="4_2k3je"]
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="4_skwql"]
 [ext_resource type="PackedScene" uid="uid://2bpi2d7g1hn7" path="res://Alex's Folder/tscns/metronome.tscn" id="7_5trnc"]
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="8_ianhm"]

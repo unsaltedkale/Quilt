@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://dufsbmeb7g6qq"]
+
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_x866k"]
+[ext_resource type="AudioStream" uid="uid://deyvaj68etbi5" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_prolouge.wav" id="2_0vkli"]
+
+[resource]
+script = ExtResource("1_x866k")
+display_name = "Prologue"
+track = ExtResource("2_0vkli")
+bpm = 70.0
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"

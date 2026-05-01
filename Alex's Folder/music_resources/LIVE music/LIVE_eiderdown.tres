@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://bgt1df53elp5m"]
+
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_d3wpl"]
+[ext_resource type="AudioStream" uid="uid://qkg1f08n216b" path="res://Alex's Folder/music_resources/ARTIFICAL music/music_tracks/Eiderdown 80.mp3" id="2_yca8b"]
+
+[resource]
+script = ExtResource("1_d3wpl")
+display_name = "Eiderdown"
+track = ExtResource("2_yca8b")
+bpm = 80.0
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"

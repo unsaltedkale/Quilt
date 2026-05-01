@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://rykhf70jq0jv"]
+
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_p7efp"]
+[ext_resource type="AudioStream" uid="uid://bkb2p7g0bjqv" path="res://Alex's Folder/music_resources/ARTIFICAL music/music_tracks/Crypt II_ Ebb_OUTRO 60bpm(1).wav" id="2_61ftp"]
+
+[resource]
+script = ExtResource("1_p7efp")
+display_name = "Ebb"
+track = ExtResource("2_61ftp")
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"

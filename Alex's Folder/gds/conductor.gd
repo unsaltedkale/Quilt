@@ -34,7 +34,7 @@ func _ready():
 	
 	heads_up_display_moving = false
 	
-	if current_music_resource != preload("res://Alex's Folder/music_resources/empty_music.tres"):
+	if current_music_resource != preload("res://Alex's Folder/music_resources/LIVE music/empty_music.tres"):
 		_heads_up_conductor(current_music_resource)
 	
 	pass
@@ -59,7 +59,7 @@ func _change_music_track(m_resource: music_resource, change_if_same_music_track:
 		pass
 	else:
 		audioplayer.stop()
-		if current_music_resource != m_resource && m_resource != preload("res://Alex's Folder/music_resources/empty_music.tres"):
+		if current_music_resource != m_resource && m_resource != preload("res://Alex's Folder/music_resources/LIVE music/empty_music.tres"):
 			_heads_up_conductor(m_resource)
 		current_music_resource = m_resource
 		audioplayer.stream = m_resource.track

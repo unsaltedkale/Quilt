@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="1_4svni"]
 [ext_resource type="Texture2D" uid="uid://x5bo3bhcuj54" path="res://Art/Orange Citizens.png" id="1_5etmj"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="2_gne1f"]
-[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="3_4mgi7"]
+[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/ARTIFICAL music/empty_music.tres" id="3_4mgi7"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="4_4mgi7"]
 [ext_resource type="Resource" uid="uid://dhviui8cc6ihb" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Enter Orange Wasteland/container_enter_orange_wastes.tres" id="5_0tfuo"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="6_tcncn"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="7_tcncn"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="8_hpb22"]
-[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/orange_town.tres" id="9_5etmj"]
+[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/ARTIFICAL music/orange_town.tres" id="9_5etmj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohewi"]
 atlas = ExtResource("1_5etmj")

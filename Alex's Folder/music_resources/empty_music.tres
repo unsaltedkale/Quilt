@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="music_resource" load_steps=3 format=3 uid="uid://t5ktt4rvlxib"]
-
-[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_wvn5w"]
-[ext_resource type="AudioStream" uid="uid://di4fccy3gyjl3" path="res://Alex's Folder/music_resources/music_tracks/Empty-Song.wav" id="2_dl0dy"]
-
-[resource]
-script = ExtResource("1_wvn5w")
-track = ExtResource("2_dl0dy")
-metadata/_custom_type_script = "uid://4ekgwvgt60r0"

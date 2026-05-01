@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bc0lc544r53sm"
+path="res://.godot/imported/LIVE_argument.mp3-6b3330d032e5ddaa08f3c64e4cd68725.mp3str"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_argument.mp3"
+dest_files=["res://.godot/imported/LIVE_argument.mp3-6b3330d032e5ddaa08f3c64e4cd68725.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

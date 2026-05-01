@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://82yjqdl34r48"]
+
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_woj8c"]
+[ext_resource type="AudioStream" uid="uid://cw7cd85w1retu" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_town.wav" id="2_rglvf"]
+
+[resource]
+script = ExtResource("1_woj8c")
+display_name = "Town"
+track = ExtResource("2_rglvf")
+bpm = 80.0
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"

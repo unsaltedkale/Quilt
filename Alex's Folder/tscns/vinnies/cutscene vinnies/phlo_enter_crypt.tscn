@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="6_xqn4f"]
 [ext_resource type="Resource" uid="uid://b8jvwjtaobo0a" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_cave_enter/crypt_cave_enter_container.tres" id="7_g7tio"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="8_pf3aw"]
-[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/empty_music.tres" id="9_xdtj1"]
+[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/ARTIFICAL music/empty_music.tres" id="9_xdtj1"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="10_yo8wt"]
 [ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="11_u87ib"]
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://byd0brg0xkpg1"]
+
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_650np"]
+[ext_resource type="AudioStream" uid="uid://b1n0lnixxbg5a" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_flow appears.wav" id="2_4h41i"]
+
+[resource]
+script = ExtResource("1_650np")
+track = ExtResource("2_4h41i")
+bpm = 140.0
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"

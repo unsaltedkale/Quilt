@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://blrmensgpe7je"
+path="res://.godot/imported/LIVE_credits.wav-db863836de8ba8fb6b5bdd9f68a8d322.sample"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_credits.wav"
+dest_files=["res://.godot/imported/LIVE_credits.wav-db863836de8ba8fb6b5bdd9f68a8d322.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

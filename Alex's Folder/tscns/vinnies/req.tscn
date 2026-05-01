@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="1_d76ap"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="2_me2gu"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="3_abkbx"]
-[ext_resource type="Resource" uid="uid://bmif5lh5wrfbj" path="res://Alex's Folder/music_resources/crypt_1_sub.tres" id="4_d76ap"]
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="5_4jxkh"]
+[ext_resource type="Resource" uid="uid://c2ss8pv6a60lc" path="res://Alex's Folder/music_resources/LIVE music/LIVE_substratum.tres" id="5_abkbx"]
 [ext_resource type="PackedScene" uid="uid://2bpi2d7g1hn7" path="res://Alex's Folder/tscns/metronome.tscn" id="6_wtnwk"]
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="7_md1fj"]
 [ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="9_nu105"]
@@ -37,7 +37,7 @@ bus = &"MusicMaster"
 [node name="Conductor" parent="." unique_id=438348041 node_paths=PackedStringArray("hudc") instance=ExtResource("3_abkbx")]
 position = Vector2(-211.9961, -1082)
 scale = Vector2(4, 4)
-current_music_resource = ExtResource("4_d76ap")
+current_music_resource = ExtResource("5_abkbx")
 hudc = NodePath("../CanvasLayer/Heads-up Conductor")
 
 [node name="phlo_backpack" parent="." unique_id=47144264 instance=ExtResource("5_4jxkh")]

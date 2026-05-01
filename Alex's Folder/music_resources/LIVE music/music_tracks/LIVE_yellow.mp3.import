@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc35d3p7bri6k"
+path="res://.godot/imported/LIVE_yellow.mp3-aff781092c66b1a83436f79c3713d070.mp3str"
+
+[deps]
+
+source_file="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_yellow.mp3"
+dest_files=["res://.godot/imported/LIVE_yellow.mp3-aff781092c66b1a83436f79c3713d070.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

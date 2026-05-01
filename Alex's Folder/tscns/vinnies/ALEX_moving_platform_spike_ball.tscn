@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bv573vomvxt5m"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_uk65b"]
+[ext_resource type="Resource" uid="uid://c2ss8pv6a60lc" path="res://Alex's Folder/music_resources/LIVE music/LIVE_substratum.tres" id="2_lxo22"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_yy4ar"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_u1ses"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_4hise"]
@@ -1664,8 +1665,8 @@ position = Vector2(-491, -219)
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -155)
 
-[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
-bus = &"MusicMaster"
+[node name="Conductor" parent="Req" index="3" unique_id=438348041]
+current_music_resource = ExtResource("2_lxo22")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 

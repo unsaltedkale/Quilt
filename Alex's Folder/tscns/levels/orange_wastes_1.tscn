@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://by0fnkk1m6i8f" path="res://Alex's Folder/tscns/flow_appearance.tscn" id="2_5qtfe"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="2_08pgk"]
 [ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="2_xjp2i"]
-[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/orange_town.tres" id="3_iw5h8"]
+[ext_resource type="Resource" uid="uid://dl51jjqd6i8vd" path="res://Alex's Folder/music_resources/ARTIFICAL music/orange_town.tres" id="3_iw5h8"]
 [ext_resource type="PackedScene" uid="uid://b2cw65um8a3ki" path="res://Alex's Folder/tscns/phlo_backpack.tscn" id="5_iw5h8"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="6_08pgk"]
 [ext_resource type="Resource" uid="uid://dhviui8cc6ihb" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Enter Orange Wasteland/container_enter_orange_wastes.tres" id="7_6jgst"]

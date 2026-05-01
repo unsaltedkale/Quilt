@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="music_change_cutscene_event" load_steps=3 format=3 uid="uid://chmakvjup4gmo"]
+[gd_resource type="Resource" script_class="music_change_cutscene_event" format=3 uid="uid://chmakvjup4gmo"]
 
 [ext_resource type="Script" uid="uid://b2p5bxsxnf2rh" path="res://Alex's Folder/cutscene_event_resources/event types/music_change_cs_event.gd" id="1_83erq"]
-[ext_resource type="Resource" uid="uid://bba85abxvyt07" path="res://Alex's Folder/music_resources/pyra_prolouge_OUTRO.tres" id="1_sdufs"]
+[ext_resource type="Resource" uid="uid://bba85abxvyt07" path="res://Alex's Folder/music_resources/ARTIFICAL music/pyra_prolouge_OUTRO.tres" id="1_sdufs"]
 
 [resource]
 script = ExtResource("1_83erq")
