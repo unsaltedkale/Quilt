@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://bpbmd4pxopxyu"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_yuar0"]
+
+[resource]
+script = ExtResource("1_yuar0")
+text = Dictionary[String, String]({
+"0": "%quilt_neutral%QUILT: ( This town should be safe enough for you. )",
+"1": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

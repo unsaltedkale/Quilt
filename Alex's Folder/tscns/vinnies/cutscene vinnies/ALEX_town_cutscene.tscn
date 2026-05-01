@@ -7,10 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="3_ufi15"]
 [ext_resource type="Resource" uid="uid://dnljj4q0gl11h" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Citizen 1/citizen_1_container.tres" id="5_31kmf"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="5_d1o1w"]
-[ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="6_24o8t"]
 [ext_resource type="Resource" uid="uid://bpshsnte276ag" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Citizen 2/citizen_2_container.tres" id="6_bl4su"]
 [ext_resource type="Texture2D" uid="uid://x5bo3bhcuj54" path="res://Art/Orange Citizens.png" id="7_0ui4c"]
-[ext_resource type="Resource" uid="uid://cshhei7elby56" path="res://Alex's Folder/cutscene_event_resources/cutscenes/PLACEHOLDER/PLACEHOLDER_container.tres" id="8_d1o1w"]
+[ext_resource type="Resource" uid="uid://dcg7alp3bmtal" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/castle_gates_container.tres" id="8_bl4su"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -1946,7 +1945,7 @@ indicator = NodePath("../InteractIndicator2")
 [node name="CutsceneTrigger3" parent="Cutscene Triggers" unique_id=1801366961 instance=ExtResource("3_31kmf")]
 position = Vector2(3470.0002, -1966)
 scale = Vector2(3.16, 28.52)
-container = ExtResource("8_d1o1w")
+container = ExtResource("8_bl4su")
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)
@@ -1964,12 +1963,6 @@ gravity = Vector2(100, 350)
 scale_amount_min = 8.0
 scale_amount_max = 16.0
 color = Color(0.4509804, 0.39215687, 0.38431373, 1)
-
-[node name="Resetpoints" type="Node2D" parent="." unique_id=1227821716]
-position = Vector2(-38, -171)
-
-[node name="ResetPoint" parent="Resetpoints" unique_id=126288163 instance=ExtResource("6_24o8t")]
-position = Vector2(286, -145)
 
 [node name="Cutscene Extras" type="Node2D" parent="." unique_id=375800508]
 
