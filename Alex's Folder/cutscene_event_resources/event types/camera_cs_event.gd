@@ -27,6 +27,8 @@ func execute(cutscene_trigger: Node) -> void:
 		camerap = cutscene_trigger.get_node("../../" + str(camera))
 	camerap.has_control = false
 	
+	position += cutscene_trigger.get_parent().get_parent().global_position
+	
 	# doesn't work -> animatorp.flip_h = horizontal_flip
 	if change_position && position_is_relative:
 			tween.tween_property(camerap, "global_position", position, time).as_relative()

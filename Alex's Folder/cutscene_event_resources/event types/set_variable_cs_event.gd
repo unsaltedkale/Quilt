@@ -9,13 +9,34 @@ class_name set_variable_cutscene_event
 @export var value_float: float
 @export var value_vector2: Vector2
 
+var req = preload("res://Alex's Folder/gds/req.gd")
 
 func execute(cutscene_trigger: Node) -> void:
-	#place holder
+
 	var actor_real
 	
 	if cutscene_trigger.get_tree().root.get_child(0).find_child("Req") != null:
-	
+		
+		if cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.staging:
+		
+			print("staging")
+			
+			actor_real = cutscene_trigger.get_node(str(actor))
+			
+			print("mover: " + str(actor))
+			
+		elif cutscene_trigger.get_tree().get_first_node_in_group("Req").a == req.req_type.prod:
+			
+			print("prod")
+			
+			if str(actor).contains("Req") && not str(actor).contains("Player") && not (str(actor).contains("phlo_backpack")):
+				actor_real = cutscene_trigger.get_node("../" + str(actor))
+			else:
+				actor_real = cutscene_trigger.get_node(str(actor))
+			
+			pass
+		
+		
 		actor_real = cutscene_trigger.get_node(str(actor))
 	
 	else:
@@ -23,8 +44,6 @@ func execute(cutscene_trigger: Node) -> void:
 		if actor.get_name_count() != 0:
 			actor = str(actor.get_name(actor.get_name_count() - 1))
 		actor_real = cutscene_trigger.get_node("../../" + str(actor))
-	
-	print(actor_real)
 	
 	var value
 	if actor_real.get(variable_name) is bool:
