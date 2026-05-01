@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_jbfsp"]
 [ext_resource type="Texture2D" uid="uid://b73ihf1c0ibpv" path="res://Resources/Tile set EDIT - FINAL.png" id="4_p8l36"]
 [ext_resource type="PackedScene" uid="uid://jvlnv4fp7geb" path="res://Elena/Scenes/breakable_area.tscn" id="5_w63lo"]
-[ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="6_cq27j"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_4hym6"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="12_frw3b"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="13_sp76m"]
@@ -7736,12 +7735,6 @@ tile_set = SubResource("TileSet_h4gul")
 position = Vector2(1359.25, -706.25006)
 scale = Vector2(5, 10)
 
-[node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
-position = Vector2(-38, -171)
-
-[node name="Conductor_Platform" parent="Conductor_Platforms" unique_id=1167135782 instance=ExtResource("6_cq27j")]
-position = Vector2(1131, -1606)
-
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
 position = Vector2(-38, -171)
 
@@ -7750,6 +7743,9 @@ position = Vector2(5077, -1565)
 
 [node name="checkpoint2" parent="Checkpoints" unique_id=1973848044 instance=ExtResource("7_4hym6")]
 position = Vector2(3418, -3101)
+
+[node name="checkpoint3" parent="Checkpoints" unique_id=1966553213 instance=ExtResource("7_4hym6")]
+position = Vector2(520, -272)
 
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 position = Vector2(-38, -171)
