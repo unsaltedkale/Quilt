@@ -2435,7 +2435,7 @@ frame_progress = 1.0
 
 [node name="Player" parent="." unique_id=982598402 instance=ExtResource("2_2v7i3")]
 z_index = 1
-position = Vector2(34850, 4249)
+position = Vector2(74283, -19838)
 is_phlo = true
 
 [node name="Path2D" type="Path2D" parent="." unique_id=2072758238]
@@ -2592,7 +2592,7 @@ track = ExtResource("6_t7uf3")
 [node name="Conductor_Platform7" parent="Conductor_Platforms" unique_id=798075820 instance=ExtResource("11_671hy")]
 position = Vector2(47657, -12123)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform7" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform7" index="2" unique_id=1643081023]
 beat_appear = 3.0
 bar_delete = 1.0
 beat_delete = 1.0
@@ -2602,7 +2602,7 @@ mod_bar = 1
 [node name="Conductor_Platform8" parent="Conductor_Platforms" unique_id=1397926535 instance=ExtResource("11_671hy")]
 position = Vector2(48158, -12260)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform8" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform8" index="2" unique_id=1643081023]
 bar_delete = 1.0
 beat_delete = 3.0
 repeat_pattern = true
@@ -2611,7 +2611,7 @@ mod_bar = 1
 [node name="Conductor_Platform9" parent="Conductor_Platforms" unique_id=1315726476 instance=ExtResource("11_671hy")]
 position = Vector2(48667, -12398)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform9" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform9" index="2" unique_id=1643081023]
 beat_appear = 3.0
 bar_delete = 1.0
 beat_delete = 1.0
@@ -2621,7 +2621,7 @@ mod_bar = 1
 [node name="Conductor_Platform10" parent="Conductor_Platforms" unique_id=333937656 instance=ExtResource("11_671hy")]
 position = Vector2(50487, -12424)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform10" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform10" index="2" unique_id=1643081023]
 bar_delete = 1.0
 beat_delete = 3.0
 repeat_pattern = true
@@ -2630,7 +2630,7 @@ mod_bar = 1
 [node name="Conductor_Platform6" parent="Conductor_Platforms" unique_id=1060183410 instance=ExtResource("11_671hy")]
 position = Vector2(50487, -12746)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform6" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform6" index="2" unique_id=1643081023]
 beat_appear = 3.0
 bar_delete = 1.0
 beat_delete = 1.0
@@ -2640,7 +2640,7 @@ mod_bar = 1
 [node name="Conductor_Platform5" parent="Conductor_Platforms" unique_id=1410760741 instance=ExtResource("11_671hy")]
 position = Vector2(50487, -13041)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform5" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform5" index="2" unique_id=1643081023]
 bar_delete = 1.0
 beat_delete = 3.0
 repeat_pattern = true
@@ -2649,7 +2649,7 @@ mod_bar = 1
 [node name="Conductor_Platform4" parent="Conductor_Platforms" unique_id=961347685 instance=ExtResource("11_671hy")]
 position = Vector2(50487, -13315)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform4" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform4" index="2" unique_id=1643081023]
 beat_appear = 3.0
 bar_delete = 1.0
 beat_delete = 1.0
@@ -2659,7 +2659,7 @@ mod_bar = 1
 [node name="Conductor_Platform3" parent="Conductor_Platforms" unique_id=1258326027 instance=ExtResource("11_671hy")]
 position = Vector2(53051, -13701)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform3" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform3" index="2" unique_id=1643081023]
 beat_appear = 1.5
 bar_delete = 1.0
 beat_delete = 2.5
@@ -2669,7 +2669,7 @@ mod_bar = 1
 [node name="Conductor_Platform11" parent="Conductor_Platforms" unique_id=1526053253 instance=ExtResource("11_671hy")]
 position = Vector2(53387, -13701)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform11" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform11" index="2" unique_id=1643081023]
 beat_appear = 2.0
 bar_delete = 1.0
 beat_delete = 3.0
@@ -2679,7 +2679,7 @@ mod_bar = 1
 [node name="Conductor_Platform12" parent="Conductor_Platforms" unique_id=309158619 instance=ExtResource("11_671hy")]
 position = Vector2(53720, -13701)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform12" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform12" index="2" unique_id=1643081023]
 beat_appear = 2.5
 bar_delete = 1.0
 beat_delete = 3.5
@@ -2689,7 +2689,7 @@ mod_bar = 1
 [node name="Conductor_Platform13" parent="Conductor_Platforms" unique_id=466186287 instance=ExtResource("11_671hy")]
 position = Vector2(54055, -13701)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform13" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform13" index="2" unique_id=1643081023]
 beat_appear = 3.0
 bar_delete = 1.0
 beat_delete = 4.0
@@ -2699,7 +2699,7 @@ mod_bar = 1
 [node name="Conductor_Platform14" parent="Conductor_Platforms" unique_id=1044521980 instance=ExtResource("11_671hy")]
 position = Vector2(54391, -13701)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform14" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform14" index="2" unique_id=1643081023]
 beat_appear = 3.5
 bar_delete = 1.0
 beat_delete = 4.5
@@ -2709,7 +2709,7 @@ mod_bar = 1
 [node name="Conductor_Platform15" parent="Conductor_Platforms" unique_id=1178023510 instance=ExtResource("11_671hy")]
 position = Vector2(54726, -13701)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform15" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform15" index="2" unique_id=1643081023]
 beat_appear = 4.0
 bar_delete = 1.0
 beat_delete = 1.0
@@ -2719,7 +2719,7 @@ mod_bar = 1
 [node name="Conductor_Platform16" parent="Conductor_Platforms" unique_id=1321253171 instance=ExtResource("11_671hy")]
 position = Vector2(55061, -13701)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform16" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform16" index="2" unique_id=1643081023]
 beat_appear = 4.5
 bar_delete = 1.0
 beat_delete = 1.5
@@ -2729,7 +2729,7 @@ mod_bar = 1
 [node name="Conductor_Platform2" parent="Conductor_Platforms" unique_id=2144998195 instance=ExtResource("11_671hy")]
 position = Vector2(52717, -13701)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform2" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform2" index="2" unique_id=1643081023]
 bar_delete = 1.0
 beat_delete = 2.0
 repeat_pattern = true
@@ -2738,7 +2738,7 @@ mod_bar = 1
 [node name="Conductor_Platform" parent="Conductor_Platforms" unique_id=821099925 instance=ExtResource("11_671hy")]
 position = Vector2(47124, -11997)
 
-[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform" index="2"]
+[node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform" index="2" unique_id=1643081023]
 bar_delete = 1.0
 beat_delete = 3.0
 repeat_pattern = true

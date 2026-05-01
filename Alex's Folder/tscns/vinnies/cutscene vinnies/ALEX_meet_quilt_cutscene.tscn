@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://c4m3b84ph3441"]
+[gd_scene format=4 uid="uid://bljewcm07ht45"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_5xutf"]
 [ext_resource type="PackedScene" uid="uid://jvlnv4fp7geb" path="res://Elena/Scenes/breakable_area.tscn" id="2_t1y3l"]
@@ -5010,6 +5010,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 0.3882353, 0.23921569, 1, 1, 0.43529412
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(170, -347)
+is_phlo = true
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(192, -512)
