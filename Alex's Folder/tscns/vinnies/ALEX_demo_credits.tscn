@@ -127,8 +127,9 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=415581108]
 texture_filter = 1
-offset_top = 12348.0
-offset_right = 2079.9941
+offset_left = -884.0
+offset_top = 12348.001
+offset_right = 2366.0
 offset_bottom = 21758.0
 scale = Vector2(0.80000216, 0.80000216)
 theme_override_colors/font_color = Color(1, 1, 1, 0.76862746)
@@ -144,11 +145,11 @@ CLARINET |
 TRUMPET |
 |
 TROMBONE |
-BARI. SAX |
+BARITONE SAXOPHONE |
 VIOLIN |
 CELLO |
 BASS |
-ELEC. BASS |
+ELECTRIC BASS |
 GUITAR |
 PERCUSSION |
 |
@@ -169,8 +170,8 @@ scale = Vector2(0.80000216, 0.80000216)
 theme_override_constants/line_spacing = 160
 theme_override_fonts/font = ExtResource("5_65a5r")
 theme_override_font_sizes/font_size = 400
-text = "Jay
-Alex B.		
+text = "Alex B.		
+Jay Elstad-Mastrolondardo
 Alder Silkie
 Filler
 Alex B.
@@ -182,10 +183,10 @@ Quinn Vanderwal
 Ruby Parr
 Filler
 Filler
-Jay
+Jay Elstad-Mastrolondardo
 Alder Silkie
 Jessie Ginsberg
-Dylan
+Dylan Amato
 Filler"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2023058523]
