@@ -1,10 +1,11 @@
-[gd_scene format=4 uid="uid://be4hocxkgbx4f"]
+[gd_scene format=4 uid="uid://cr72akoc1a1ic"]
 
-[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_d57jf"]
-[ext_resource type="AudioStream" uid="uid://bt2k15nbnjbcj" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_substratum.mp3" id="2_kxuvy"]
-[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="3_rpohy"]
-[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="4_20wd5"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="5_3x04i"]
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_hldg6"]
+[ext_resource type="AudioStream" uid="uid://bt2k15nbnjbcj" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_substratum.mp3" id="2_510pf"]
+[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="3_kdopp"]
+[ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="4_8c0v8"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="5_rw14o"]
+[ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="6_510pf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -1639,7 +1640,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
-texture = ExtResource("4_20wd5")
+texture = ExtResource("4_8c0v8")
 texture_region_size = Vector2i(32, 32)
 0:7/0 = 0
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 16, -16, 16)
@@ -3161,7 +3162,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fg0v8")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq4vl"]
-texture = ExtResource("4_20wd5")
+texture = ExtResource("4_8c0v8")
 texture_region_size = Vector2i(32, 32)
 38:37/0 = 0
 37:37/0 = 0
@@ -4666,7 +4667,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_rq4vl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2847"]
-texture = ExtResource("4_20wd5")
+texture = ExtResource("4_8c0v8")
 texture_region_size = Vector2i(32, 32)
 0:10/0 = 0
 0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -4705,28 +4706,28 @@ physics_layer_0/collision_layer = 3
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_m2847")
 
-[node name="VinnieTemplate" type="Node2D" unique_id=467354812]
+[node name="Phlo_platforms" type="Node2D" unique_id=467354812]
 
-[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_d57jf")]
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_hldg6")]
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -500)
 is_phlo = true
 
 [node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
-stream = ExtResource("2_kxuvy")
+stream = ExtResource("2_510pf")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AACAAPT/AAAJAAQAAACAAPP/AAAJAAQAAACAAPL/AAAJAAQAAACAAPH/AAAJAAQAAACAAPD/AAAJAAQAAACAAO//AAAJAAQAAACAAO7/AAAJAAQAAACAAO3/AAAJAAQAAACAAOz/AAAJAAQAAACAAOv/AAAJAAQAAACAAOr/AAAJAAQAAACAAOn/AAAJAAQAAAA=")
-tile_set = ExtResource("3_rpohy")
+tile_set = ExtResource("3_kdopp")
 collision_enabled = false
 
 [node name="Collision" type="TileMapLayer" parent="Tiles" unique_id=982493535 groups=["tilemap"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAAFAAAAAAAGAAMAABAFAAEAAAAGAAQAABAFAAIAAAAGAAUAABAGAAAAAAADAAMAAAAGAAEAAAADAAQAAAAGAAIAAAADAAUAAAAHAAAAAAAEAAMAAAAHAAEAAAAEAAQAAAAHAAIAAAAEAAUAAAAIAAAAAAAFAAMAAAAIAAEAAAAFAAQAAAAIAAIAAAAFAAUAAAAJAAAAAAADAAMAAAAJAAEAAAADAAQAAAAJAAIAAAADAAUAAAARAP3/AAAFAAQAAAAQAP3/AAAEAAQAAAAPAP3/AAADAAQAAAARAP7/AAAFAAUAAAAQAP7/AAAEAAUAAAAPAP7/AAADAAUAAAARAP//AAAAAAIAABAQAP//AAABAAIAABAPAP//AAACAAIAABARAAAAAAAAAAMAABAQAAAAAAABAAMAABAPAAAAAAACAAMAABARAAEAAAAAAAQAABAQAAEAAAABAAQAABAPAAEAAAACAAQAABARAAIAAAAAAAUAABAQAAIAAAABAAUAABAPAAIAAAACAAUAABARAPz/AAAFAAQAAAAQAPz/AAAEAAQAAAAPAPz/AAADAAQAAAAMAAAAAAADAAMAAAAMAAEAAAADAAQAAAAMAAIAAAADAAUAAAANAAAAAAAEAAMAAAANAAEAAAAEAAQAAAANAAIAAAAEAAUAAAAOAAAAAAAFAAMAAAAOAAEAAAAFAAQAAAAOAAIAAAAFAAUAAAAKAAAAAAAEAAMAAAAKAAEAAAAEAAQAAAAKAAIAAAAEAAUAAAALAAAAAAAFAAMAAAALAAEAAAAFAAQAAAALAAIAAAAFAAUAAAAPAPv/AAADAAMAAAAQAPv/AAAEAAMAAAARAPv/AAAFAAMAAAADAP3/AAAIAAAAABADAP7/AAAIAAEAABADAP//AAAIAAIAABADAAAAAAAIAAMAABADAAEAAAAIAAQAABADAAIAAAAIAAUAABAEAAAAAAAHAAMAABAEAAEAAAAHAAQAABAEAAIAAAAHAAUAABAEAP3/AAAHAAAAABAEAP7/AAAHAAEAABAEAP//AAAHAAIAABAFAP3/AAAGAAAAABAFAP7/AAAGAAEAABAFAP//AAAGAAIAABACAP3/AAADAAMAAAACAP7/AAADAAQAAAACAP//AAADAAUAAAABAP3/AAADAAMAAAABAP7/AAADAAQAAAABAP//AAADAAUAAAAAAP3/AAADAAMAAAAAAP7/AAADAAQAAAAAAP//AAADAAUAAAA=")
+tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAD8/wAAAAADAAMAAAD8/wEAAAADAAQAAAD8/wIAAAADAAUAAAD9/wAAAAAEAAMAAAD9/wEAAAAEAAQAAAD9/wIAAAAEAAUAAAD+/wAAAAAFAAMAAAD+/wEAAAAFAAQAAAD+/wIAAAAFAAUAAAD//wAAAAADAAMAAAD//wEAAAADAAQAAAD//wIAAAADAAUAAAAAAAAAAAAIAAAAABAAAAEAAAAIAAEAABAAAAIAAAAIAAIAABABAAEAAAAHAAEAABABAAIAAAAHAAIAABACAAIAAAAGAAIAABACAAMAAAAGAAMAABABAAMAAAAHAAMAABAAAAMAAAAIAAMAABACAAQAAAAGAAQAABABAAQAAAAHAAQAABAAAAQAAAAIAAQAABACAAUAAAAGAAUAABABAAUAAAAHAAUAABAAAAUAAAAIAAUAABADAAQAAAADAAQAAAADAAUAAAADAAQAAAAEAAQAAAADAAQAAAAEAAUAAAAEAAUAAAAFAAQAAAAEAAQAAAAFAAUAAAAFAAUAAAAGAAQAAAADAAQAAAAGAAUAAAADAAUAAAAHAAQAAAAEAAQAAAAHAAUAAAAEAAUAAAAIAAQAAAAFAAQAAAAIAAUAAAAFAAUAAAAJAAQAAAADAAQAAAAJAAUAAAADAAUAAAAKAAQAAAAEAAQAAAAKAAUAAAAEAAUAAAALAAQAAAAFAAQAAAALAAUAAAAFAAUAAAAMAAQAAAADAAQAAAAMAAUAAAADAAUAAAANAAQAAAAEAAQAAAANAAUAAAAEAAUAAAAOAAQAAAAFAAQAAAAOAAUAAAAFAAUAAAAPAAQAAAADAAQAAAAPAAUAAAADAAUAAAAQAAQAAAAEAAQAAAAQAAUAAAAEAAUAAAARAAQAAAAFAAQAAAARAAUAAAAFAAUAAAAEAAMAAAADAAMAAAAFAAMAAAAEAAMAAAAGAAMAAAADAAMAAAAHAAMAAAAEAAMAAAAIAAMAAAAFAAMAAAAJAAMAAAADAAMAAAAKAAMAAAAEAAMAAAALAAMAAAAFAAMAAAAMAAMAAAADAAMAAAANAAMAAAAEAAMAAAAOAAMAAAAFAAMAAAAPAAMAAAADAAMAAAAQAAMAAAAEAAMAAAARAAMAAAAFAAMAAAADAAMAAAADAAMAAAA=")
 tile_set = SubResource("TileSet_fg0v8")
 
 [node name="Damgage_Layer" type="TileMapLayer" parent="Tiles" unique_id=770485730 groups=["Damage_Layer"]]
@@ -4747,9 +4748,23 @@ tile_set = SubResource("TileSet_5e7ya")
 
 [node name="Stars" type="Node2D" parent="." unique_id=2140260063]
 
-[node name="STAR" parent="Stars" unique_id=1440804062 instance=ExtResource("5_3x04i")]
-position = Vector2(1729, -326)
+[node name="STAR" parent="Stars" unique_id=1440804062 instance=ExtResource("5_rw14o")]
+position = Vector2(178, -107.00017)
 scale = Vector2(0.9999999, 0.9999999)
 respawn_timer_max = 1.0
+
+[node name="One-Way Platforms" type="Node2D" parent="." unique_id=723777252]
+
+[node name="One_Way_Platform" parent="One-Way Platforms" unique_id=1852772826 instance=ExtResource("6_510pf")]
+position = Vector2(432, -268)
+
+[node name="One_Way_Platform2" parent="One-Way Platforms" unique_id=1346779251 instance=ExtResource("6_510pf")]
+position = Vector2(929, -126)
+
+[node name="One_Way_Platform3" parent="One-Way Platforms" unique_id=69007998 instance=ExtResource("6_510pf")]
+position = Vector2(1456, -138)
+
+[node name="One_Way_Platform4" parent="One-Way Platforms" unique_id=860951063 instance=ExtResource("6_510pf")]
+position = Vector2(1554, -278)
 
 [editable path="Req"]
