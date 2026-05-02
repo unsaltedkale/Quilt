@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://bgbi6jcjl0wa7"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_x1nms"]
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="2_02qbp"]
+[ext_resource type="PackedScene" uid="uid://8fqj856k2fl2" path="res://Salem WIPs/Vignettes/Finished/Difficult/salem_crumbling.tscn" id="2_47wpx"]
+[ext_resource type="AudioStream" uid="uid://bjyvd2pvp72h2" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_flow_appears.mp3" id="3_jll2y"]
+[ext_resource type="PackedScene" uid="uid://d04ijf60ctwlh" path="res://Salem WIPs/Vignettes/Finished/Puzzles/salem_crouch_puzzle.tscn" id="5_jll2y"]
+[ext_resource type="PackedScene" uid="uid://bfgb7ex7c8dd4" path="res://Andy's Path/Scenes/Vignettes/Andy_vignette_5.tscn" id="6_sh3um"]
+[ext_resource type="PackedScene" uid="uid://dmivaa748vgmc" path="res://Salem WIPs/Vignettes/Finished/Difficult/salem_spiderweb.tscn" id="7_xcmr2"]
+
+[sub_resource type="Resource" id="Resource_sh3um"]
+script = ExtResource("2_02qbp")
+display_name = "Flow Appears!"
+track = ExtResource("3_jll2y")
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
@@ -9,12 +21,26 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(-292, 272)
+position = Vector2(896, 247)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)
 
+[node name="Conductor" parent="Req" index="3" unique_id=438348041]
+current_music_resource = SubResource("Resource_sh3um")
+
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 position = Vector2(-330, 226)
+
+[node name="crumbling" parent="." unique_id=467354812 instance=ExtResource("2_47wpx")]
+
+[node name="crouchpuzzle" parent="." unique_id=91287903 instance=ExtResource("5_jll2y")]
+position = Vector2(-2560, -3456)
+
+[node name="mobilegame" parent="." unique_id=1932893549 instance=ExtResource("6_sh3um")]
+position = Vector2(-20861, -4910)
+
+[node name="spiderweb" parent="." unique_id=156226622 instance=ExtResource("7_xcmr2")]
+position = Vector2(-5376, -4864)
 
 [editable path="Req"]

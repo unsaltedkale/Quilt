@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_p4yn6"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_dt4o1"]
-[ext_resource type="Texture2D" uid="uid://b4k5biurfaqe6" path="res://Resources/tilesheet_complete.png" id="3_75p4f"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="4_6hoer"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_taae4"]
 [ext_resource type="Resource" uid="uid://njrcluu75tnn" path="res://Alex's Folder/music_resources/ARTIFICAL music/pyra_prolouge_VAMP.tres" id="6_kqnod"]
@@ -21,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://4fwkr023vvd3" path="res://Art/Pyra Opening Cutscene Big.png" id="23_egg1h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80spu"]
-texture = ExtResource("3_75p4f")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -294,7 +292,6 @@ sources/0 = SubResource("TileSetAtlasSource_80spu")
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tembr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuu6h"]
-texture = ExtResource("3_75p4f")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
