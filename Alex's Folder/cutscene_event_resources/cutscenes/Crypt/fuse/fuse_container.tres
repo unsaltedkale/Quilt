@@ -1,7 +1,14 @@
 [gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://bl35uqfp41nci"]
 
+[ext_resource type="Resource" uid="uid://mvygjg452k5q" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/fuse/phlo_backpack_invisible.tres" id="1_3uuub"]
 [ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_7tibr"]
+[ext_resource type="Resource" uid="uid://da8bsf3yi7u30" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/fuse/fake_phlo_visible.tres" id="2_nh4tc"]
+[ext_resource type="Resource" uid="uid://dq25awukcvlvo" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/fuse/fuse_talk_1.tres" id="3_nh4tc"]
+[ext_resource type="Resource" uid="uid://cj6k2y80a6utn" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/fuse/fake_phlo_invisible.tres" id="4_jm113"]
+[ext_resource type="Resource" uid="uid://c3nmcvn1w750j" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/fuse/fuse_talk_2.tres" id="5_dvkop"]
+[ext_resource type="Resource" uid="uid://dpkciwpwf7urs" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/Exit_crypt_to_ebb/to_ebb_level_transition.tres" id="6_nh4tc"]
 
 [resource]
 script = ExtResource("1_7tibr")
+events = [ExtResource("1_3uuub"), ExtResource("2_nh4tc"), ExtResource("3_nh4tc"), ExtResource("4_jm113"), ExtResource("5_dvkop"), ExtResource("6_nh4tc")]
 metadata/_custom_type_script = "uid://bqmpakucoot4i"

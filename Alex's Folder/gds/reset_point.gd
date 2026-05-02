@@ -19,8 +19,8 @@ func _ready() -> void:
 	inactive_position = original_position + Vector2(0, 12)
 	position = inactive_position
 	
-	if get_tree().root.get_child(0).find_child("Req") != null:
-		player = get_tree().root.get_child(0).find_child("Req").find_child("Player")
+	if get_tree().get_first_node_in_group("Req") != null:
+		player = get_tree().get_first_node_in_group("Req").find_child("Player")
 	else:
 		player = $"../Player"
 	

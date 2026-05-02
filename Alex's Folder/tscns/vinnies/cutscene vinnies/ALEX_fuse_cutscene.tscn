@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_vn0ao"]
 [ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="3_pxl8p"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="4_6b2kf"]
+[ext_resource type="Resource" uid="uid://bl35uqfp41nci" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/fuse/fuse_container.tres" id="4_8sclb"]
 [ext_resource type="Resource" uid="uid://dytjfs6d2xqxv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_meeting_quilt_cutscene/crypt_meeting_quilt_container.tres" id="5_wbnuo"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="6_k0b6a"]
 [ext_resource type="Texture2D" uid="uid://bye0p8jff0guv" path="res://Art/Quilt/Quilt Animation Spritesheet Fall .png" id="8_i0vfx"]
@@ -22,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="22_855wh"]
 [ext_resource type="Texture2D" uid="uid://s3dxq1anq0rg" path="res://Art/Phlo Wump.png" id="23_8wjbt"]
 [ext_resource type="Texture2D" uid="uid://b2ufgpd8bdbdn" path="res://Art/Quilt/Quilt Animation Spritesheet Stop (1).png" id="24_c0qvs"]
+[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="24_dav3m"]
 [ext_resource type="Texture2D" uid="uid://d4enw7wsgmurv" path="res://Art/Quilt/Quilt Animation Spritesheet Walk (1).png" id="25_iqq6p"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
@@ -3197,7 +3199,7 @@ position = Vector2(192, -512)
 
 [node name="Collision" type="TileMapLayer" parent="Tiles" unique_id=982493535 groups=["tilemap"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAAAAP//AAALAAQAAAABAP//AAAIAAQAAAACAP//AAAJAAQAAAADAP//AAAIAAQAAAAEAP//AAAJAAQAAAAFAP//AAAKAAQAAAAGAP//AAALAAQAAAD///7/AAAKAAMAAAD/////AAAKAAQAAAD//wAAAAAKAAUAAAAAAP7/AAALAAMAAAAAAAAAAAALAAUAAAABAP7/AAAIAAMAAAABAAAAAAAIAAUAAAACAP7/AAAJAAMAAAACAAAAAAAJAAUAAAADAP7/AAAIAAMAAAADAAAAAAAIAAUAAAAEAP7/AAAJAAMAAAAEAAAAAAAJAAUAAAAFAP7/AAAKAAMAAAAFAAAAAAAKAAUAAAAGAP7/AAALAAMAAAAGAAAAAAALAAUAAAD9//7/AAAIAAMAAAD9////AAAIAAQAAAD9/wAAAAAIAAUAAAD+//7/AAAJAAMAAAD+////AAAJAAQAAAD+/wAAAAAJAAUAAAD6/wAAAAAAAAUAAAAHAP7/AAADAAMAAAAHAP//AAADAAQAAAAHAAAAAAADAAUAAAA=")
+tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAD6/wAAAAAAAAUAAAA=")
 tile_set = SubResource("TileSet_fg0v8")
 
 [node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
@@ -3208,6 +3210,14 @@ position = Vector2(230, -405)
 
 [node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("4_6b2kf")]
 position = Vector2(246, -93.00001)
+scale = Vector2(6.34, 0.37)
+play_on_interact = true
+only_when_grounded = true
+container = ExtResource("4_8sclb")
+indicator = NodePath("../InteractIndicator")
+
+[node name="CutsceneTrigger2" parent="Cutscene Triggers" unique_id=673335087 node_paths=PackedStringArray("indicator") instance=ExtResource("4_6b2kf")]
+position = Vector2(246, -1750)
 scale = Vector2(6.34, 0.37)
 play_on_interact = true
 only_when_grounded = true
@@ -3242,5 +3252,12 @@ animation = &"phlo_idle"
 autoplay = "phlo_idle"
 
 [node name="Tooltips" type="Node2D" parent="." unique_id=691410537]
+
+[node name="Zipline" type="Node2D" parent="." unique_id=1519956172]
+
+[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("24_dav3m")]
+position = Vector2(182, -5243)
+start_position = Vector2(179, -690)
+end_position = Vector2(179, -5244)
 
 [editable path="Req"]

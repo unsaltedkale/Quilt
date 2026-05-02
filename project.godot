@@ -29,6 +29,7 @@ buses/default_bus_layout="uid://dg0vcx3jnieg"
 [autoload]
 
 SettingsData="*uid://be5yc83ot15fx"
+Ignore="*uid://cvteudbdsinhu"
 
 [display]
 

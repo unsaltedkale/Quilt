@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://cgob6bxttdt2v"]
+
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_05hyd"]
+[ext_resource type="Resource" uid="uid://ddprd1epyugl2" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/castle_to_flow_appears/c_t_fa_transition.tres" id="1_so7gq"]
+
+[resource]
+script = ExtResource("1_05hyd")
+events = [ExtResource("1_so7gq")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"

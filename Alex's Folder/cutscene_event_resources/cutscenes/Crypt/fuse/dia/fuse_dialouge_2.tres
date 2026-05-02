@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://dbpxv001fcoi7"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_eo6f8"]
+
+[resource]
+script = ExtResource("1_eo6f8")
+text = Dictionary[String, String]({
+"0": "%empty%[ QUILT’s body is very tense. ]",
+"1": "%phlo_neutral%PHLO: What— what happened?! Where am I?!",
+"10": "%quilt_neutral%QUILT: ( We can communicate telepathically. However, emotions still bleed over sometimes. )",
+"11": "%quilt_neutral%QUILT: ( The telepathy is how I am talking to you. )",
+"12": "%phlo_neutral%PHLO: Why can’t you speak?",
+"13": "[ QUILT is tense. ]",
+"14": "%quilt_neutral%QUILT: ( … )",
+"15": "%quilt_neutral%QUILT: ( I lost my own vocal cords a long time ago, and I will not be able to get them back. )",
+"16": "%quilt_neutral%QUILT: ( But I can use yours. )",
+"17": "QUILT: ( It makes my throat ache, however. I prefer telepathic messaging. )",
+"18": "QUILT: ( We control the same fused body. Either one of us could move my body. )",
+"19": "QUILT: ( We can also use *your* abilities, from the liminal space you’re in. )",
+"2": "%quilt_neutral%QUILT: ( I’m sorry, I’m sorry, I’m sorry— )",
+"20": "QUILT: ( I don’t like to, though. I only do it for the voice, if needed. )",
+"21": "QUILT: ( I promise. )",
+"22": "%phlo_neutral%PHLO: … Okay…",
+"23": "PHLO: …",
+"24": "%phlo_neutral%PHLO: Does that mean we can get out of here?",
+"25": "%quilt_neutral%QUILT: Yes. That means we can leave this area.",
+"26": "%phlo_neutral%PHLO: Okay. Let’s just do that then. It’s cramped in your head.",
+"27": "%quilt_neutral%QUILT: ( That is alright. Just relax and I will get us out. )",
+"28": "%phlo_neutral%PHLO: ( Thank you QUILT… )",
+"29": "%quilt_neutral%QUILT: ( My pleasure. )",
+"3": "%phlo_neutral%PHLO: !!!",
+"30": "%empty%[ QUILT’s body flinches. ]",
+"31": "%phlo_neutral%PHLO: Right. Telepathy. That is going to get some getting used to.",
+"32": "",
+"4": "%phlo_neutral%PHLO: Q-Quilt is that you?!",
+"5": "%empty%[ QUILT breathes in. ]",
+"6": "%quilt_neutral%QUILT: ( …Yes. It is me. Apologizes for the intrusion. )",
+"7": "%quilt_neutral%QUILT ( I can explain. Please. )",
+"8": "%quilt_neutral%QUILT ( I know how disorienting it is, I can feel it from your consciousness. )",
+"9": "%quilt_neutral%QUILT: ( In simplistic terms, we have control over the same body. The same *fused* body.)"
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://cwgdg12gsrhuo"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_4vwt2"]
+
+[resource]
+script = ExtResource("1_4vwt2")
+text = Dictionary[String, String]({
+"0": "%quilt_neutral%[ QUILT points to themself. Then to PHLO. ]",
+"1": "[ They then put their hands together and wring them. ]",
+"2": "%phlo_neutral%PHLO: We need to… what? Merge? Fuse?",
+"3": "%quilt_neutral%[ QUILT nods enthusiastically at the word “fuse”. ]",
+"4": "%phlo_neutral%PHLO: How do we do that?",
+"5": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"
