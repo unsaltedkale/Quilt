@@ -34,7 +34,7 @@ func _ready() -> void:
 	in_path = false
 	pity_kill_timer = pity_kill_timer_max
 	
-	#cameraTriggerRef = $"../Camera_Change_Trigger"
+	cameraTriggerRef = $"../Camera_Change_Trigger"
 	playerReference = $"../Player"
 	print(playerReference)
 	pk_timer = $"../CanvasLayer/Pity Kill Timer"
@@ -80,7 +80,6 @@ func player_died():
 
 func _process(delta: float) -> void:
 	#ddprint(str(has_control) + " / " + str(BREAK_THE_CYCLE) + " / " + str(get_tree().get_processed_tweens()))
-	
 	if tween:
 		has_control = !tween.is_running()
 	
@@ -116,25 +115,25 @@ func _process(delta: float) -> void:
 		pk_timer.text = ""
 		pity_kill_timer = pity_kill_timer_max
 
-	if has_control: #&& !cameraTriggerRef.inCameraTrigger:
+	if has_control and (cameraTriggerRef == null or !cameraTriggerRef.inCameraTrigger):
 		if (abs(global_position.x - playerReference.position.x) + abs(global_position.y - playerReference.position.y)) > 10000:
 			await wait(0.01)
 			if has_control:
 				print("TELEPORTED")
 				global_position = playerReference.position + Vector2(0, -500)
 		
-		#Horizontal Movement
+		# Horizontal Movement
 		self.global_position.x = lerp(self.global_position.x, playerReference.global_position.x, delta * 2)
 
 		if screenIsMoving == false:
 			if abs(self.global_position.y - playerReference.global_position.y) > offset1:
 				screenIsMoving = true
 		else:
-			#Vertical Movement
+			# Vertical Movement
 			self.global_position.y = lerp(self.global_position.y, playerReference.global_position.y, delta * 10)
 			
-			#Move to target position if magnitude of distance < 10
-			if abs((self.global_position.y - playerReference.global_position.y)) < 5:
+			# Stop moving when close enough
+			if abs(self.global_position.y - playerReference.global_position.y) < 5:
 				screenIsMoving = false
 func ResetCamera():
 	self.global_position.y = playerReference.global_position.y
