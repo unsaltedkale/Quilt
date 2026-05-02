@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_03wsl"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="4_7o24m"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_rlpph"]
+[ext_resource type="PackedScene" uid="uid://d11wvbu82dkqx" path="res://Alex's Folder/tscns/vinyl.tscn" id="6_ppegj"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yg3vf"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -5019,6 +5020,11 @@ end_position = Vector2(5669.683, -811.1372)
 
 [node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("5_rlpph")]
 position = Vector2(771, 74)
+
+[node name="vinyl" type="Node2D" parent="." unique_id=1193894923]
+
+[node name="Vinyl" parent="vinyl" unique_id=2078547140 instance=ExtResource("6_ppegj")]
+position = Vector2(11029, -911)
 
 [connection signal="player_death" from="Req/Player" to="Req/Player/StateMachine" method="_on_player_player_death"]
 
