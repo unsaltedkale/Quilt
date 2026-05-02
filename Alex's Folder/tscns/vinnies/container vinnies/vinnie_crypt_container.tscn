@@ -6,13 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://be4hocxkgbx4f" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_recoil_tutorial_phlo.tscn" id="3_7qoo3"]
 [ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_phlo_platforms.tscn" id="4_lcxdb"]
 [ext_resource type="PackedScene" uid="uid://bcafj313e7kp5" path="res://Emily WIP/Vinnies/short/Emily_Phlo_Crypt_jump.tscn" id="5_r6uf6"]
-[ext_resource type="PackedScene" uid="uid://c4m3b84ph3441" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
+[ext_resource type="PackedScene" uid="uid://bljewcm07ht45" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
 [ext_resource type="PackedScene" uid="uid://dvubqeyj1ycv2" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_1.tscn" id="7_e7kwk"]
 [ext_resource type="PackedScene" uid="uid://sprvnuwmranp" path="res://Salem WIPs/Vignettes/Finished/Platforming/salem_lever_platform_2.tscn" id="9_8v5aw"]
 [ext_resource type="PackedScene" uid="uid://c1e3fl0y77dg0" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_3.tscn" id="10_qbogy"]
 [ext_resource type="PackedScene" uid="uid://cm75jtiuut4xj" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_crouchtutorial.tscn" id="11_q0spj"]
 [ext_resource type="PackedScene" uid="uid://cyhd2wbfvgpj3" path="res://Elena/elena_vinnie1.tscn" id="12_q0spj"]
-[ext_resource type="PackedScene" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_fuse_cutscene.tscn" id="13_j1yyl"]
+[ext_resource type="PackedScene" uid="uid://63vpsyn2o2vy" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_fuse_cutscene.tscn" id="13_j1yyl"]
 [ext_resource type="Resource" uid="uid://cbdttg3jao2vv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/Exit_crypt_to_ebb/exit_crypt_to_ebb_container.tres" id="14_iqi3a"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
@@ -1647,14 +1647,14 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_q0spj")
 
-[node name="VinnieContainer" type="Node2D" unique_id=1741857314]
+[node name="VinnieContainer2" type="Node2D" unique_id=1741857314]
 
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_fk6r7")]
 position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(300, 200)
+position = Vector2(13552, 107)
 is_phlo = true
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
