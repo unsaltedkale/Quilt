@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="4_p8l36"]
 [ext_resource type="PackedScene" uid="uid://jvlnv4fp7geb" path="res://Elena/Scenes/breakable_area.tscn" id="5_w63lo"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_4hym6"]
-[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="12_frw3b"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="13_sp76m"]
 [ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/ARTIFICAL music/empty_music.tres" id="14_b6fkh"]
 [ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="17_6g548"]
@@ -7745,12 +7744,6 @@ position = Vector2(3418, -3101)
 
 [node name="checkpoint3" parent="Checkpoints" unique_id=1966553213 instance=ExtResource("7_4hym6")]
 position = Vector2(520, -272)
-
-[node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
-position = Vector2(-38, -171)
-
-[node name="Stasis" parent="Stasis Chamber" unique_id=1921201016 instance=ExtResource("12_frw3b")]
-position = Vector2(2048, -1394)
 
 [node name="Music Change Triggers" type="Node2D" parent="." unique_id=852063455]
 position = Vector2(-38, -171)
