@@ -4893,7 +4893,7 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(8735, -16853)
+position = Vector2(-2192, -119)
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
@@ -4930,7 +4930,7 @@ tile_set = SubResource("TileSet_5e7ya")
 position = Vector2(-38, -171)
 
 [node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("7_m3yx1")]
-position = Vector2(-1980, -166)
+position = Vector2(-1371, -153)
 
 [node name="Stars" type="Node2D" parent="." unique_id=1803044504]
 position = Vector2(-38, -171)
@@ -5122,8 +5122,10 @@ scale = Vector2(0.9999999, 0.9999999)
 position = Vector2(-38, -171)
 
 [node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("13_chbkr")]
-position = Vector2(-1181, -160)
+position = Vector2(-1159, -1078)
+scale = Vector2(1, 20)
 track = ExtResource("14_85smj")
+change_if_same_music_track = true
 start_camera_pathing = true
 vinyl_string = "crypt"
 
