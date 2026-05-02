@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_gs4ad")
-mover = NodePath("../../Req/Camera2D")
+mover = NodePath("../../../Req/Camera2D")
 target = Vector2(192, -512)
 time = 1.0
 metadata/_custom_type_script = "uid://cvo6goabck1ac"

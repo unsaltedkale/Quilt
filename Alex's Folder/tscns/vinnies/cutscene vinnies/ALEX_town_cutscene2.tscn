@@ -1,15 +1,15 @@
-[gd_scene format=4 uid="uid://b0d7tbi0mty35"]
+[gd_scene format=4 uid="uid://cq5qj8xllbq65"]
 
-[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_0ui4c"]
-[ext_resource type="Resource" uid="uid://82yjqdl34r48" path="res://Alex's Folder/music_resources/LIVE music/LIVE_orange_town.tres" id="2_bl4su"]
-[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_ufi15"]
-[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="3_31kmf"]
-[ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="3_ufi15"]
-[ext_resource type="Resource" uid="uid://mb7ylj3e5vk" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Orange Citizens/orange_citizen_1_container.tres" id="5_31kmf"]
-[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="5_d1o1w"]
-[ext_resource type="Resource" uid="uid://bd0dvj7gnnn0o" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Orange Citizen 2/orange_citizen_2_container.tres" id="6_bl4su"]
-[ext_resource type="Texture2D" uid="uid://x5bo3bhcuj54" path="res://Art/Orange Citizens.png" id="7_0ui4c"]
-[ext_resource type="Resource" uid="uid://dcg7alp3bmtal" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/castle_gates_container.tres" id="8_bl4su"]
+[ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_8u8qx"]
+[ext_resource type="Resource" uid="uid://82yjqdl34r48" path="res://Alex's Folder/music_resources/LIVE music/LIVE_orange_town.tres" id="2_tca8v"]
+[ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="3_yo6uw"]
+[ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="4_hnhj2"]
+[ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="5_pnao1"]
+[ext_resource type="Resource" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Citizen 1/citizen_1_container.tres" id="6_yn5qn"]
+[ext_resource type="Resource" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Citizen 2/citizen_2_container.tres" id="7_nb61r"]
+[ext_resource type="Resource" uid="uid://dcg7alp3bmtal" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/castle_gates_container.tres" id="8_andng"]
+[ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="9_nqc8y"]
+[ext_resource type="Texture2D" uid="uid://x5bo3bhcuj54" path="res://Art/Orange Citizens.png" id="10_b3bvv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -1819,19 +1819,19 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohewi"]
-atlas = ExtResource("7_0ui4c")
+atlas = ExtResource("10_b3bvv")
 region = Rect2(0, 0, 31, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j3lsf"]
-atlas = ExtResource("7_0ui4c")
+atlas = ExtResource("10_b3bvv")
 region = Rect2(0, 44, 31, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_brjqt"]
-atlas = ExtResource("7_0ui4c")
+atlas = ExtResource("10_b3bvv")
 region = Rect2(0, 88, 31, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0kphg"]
-atlas = ExtResource("7_0ui4c")
+atlas = ExtResource("10_b3bvv")
 region = Rect2(0, 132, 31, 44)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ufi15"]
@@ -1892,7 +1892,7 @@ animations = [{
 
 [node name="ALEX_town_cutscene" type="Node2D" unique_id=467354812]
 
-[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_0ui4c")]
+[node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_8u8qx")]
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(571, -347)
@@ -1901,7 +1901,7 @@ position = Vector2(571, -347)
 position = Vector2(951, -773)
 
 [node name="Conductor" parent="Req" index="3" unique_id=438348041]
-current_music_resource = ExtResource("2_bl4su")
+current_music_resource = ExtResource("2_tca8v")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
@@ -1909,7 +1909,7 @@ current_music_resource = ExtResource("2_bl4su")
 z_index = -1
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AACAAPT/AAAJAAQAAACAAPP/AAAJAAQAAACAAPL/AAAJAAQAAACAAPH/AAAJAAQAAACAAPD/AAAJAAQAAACAAO//AAAJAAQAAACAAO7/AAAJAAQAAACAAO3/AAAJAAQAAACAAOz/AAAJAAQAAACAAOv/AAAJAAQAAACAAOr/AAAJAAQAAACAAOn/AAAJAAQAAAAGAPv/AAAJABYAAAAGAPz/AAAJABcAAAAGAP3/AAAJABgAAAAHAPv/AAAKABYAAAAHAPz/AAAKABcAAAAHAP3/AAAKABgAAAAIAPv/AAALABYAAAAIAPz/AAALABcAAAAIAP3/AAALABgAAAAGAPj/AAAJABYAAAAGAPn/AAAJABcAAAAGAPr/AAAJABgAAAAHAPj/AAAKABYAAAAHAPn/AAAKABcAAAAHAPr/AAAKABgAAAAIAPj/AAALABYAAAAIAPn/AAALABcAAAAIAPr/AAALABgAAAAGAPX/AAAJABYAAAAGAPb/AAAJABcAAAAGAPf/AAAJABgAAAAHAPX/AAAKABYAAAAHAPb/AAAKABcAAAAHAPf/AAAKABgAAAAIAPX/AAALABYAAAAIAPb/AAALABcAAAAIAPf/AAALABgAAAAGAPL/AAAJABYAAAAGAPP/AAAJABcAAAAGAPT/AAAJABgAAAAHAPL/AAAKABYAAAAHAPP/AAAKABcAAAAHAPT/AAAKABgAAAAIAPL/AAALABYAAAAIAPP/AAALABcAAAAIAPT/AAALABgAAAAJAPL/AAAJABYAAAAJAPP/AAAJABcAAAAJAPT/AAAJABgAAAAKAPL/AAAKABYAAAAKAPP/AAAKABcAAAAKAPT/AAAKABgAAAALAPL/AAALABYAAAALAPP/AAALABcAAAALAPT/AAALABgAAAAMAPL/AAAJABYAAAAMAPP/AAAJABcAAAAMAPT/AAAJABgAAAANAPL/AAAKABYAAAANAPP/AAAKABcAAAANAPT/AAAKABgAAAAOAPL/AAALABYAAAAOAPP/AAALABcAAAAOAPT/AAALABgAAAAMAPX/AAAJABYAAAAMAPb/AAAJABcAAAAMAPf/AAAJABgAAAANAPX/AAAKABYAAAANAPb/AAAKABcAAAANAPf/AAAKABgAAAAOAPX/AAALABYAAAAOAPb/AAALABcAAAAOAPf/AAALABgAAAAMAPj/AAAJABYAAAAMAPn/AAAJABcAAAAMAPr/AAAJABgAAAANAPj/AAAKABYAAAANAPn/AAAKABcAAAANAPr/AAAKABgAAAAOAPj/AAALABYAAAAOAPn/AAALABcAAAAOAPr/AAALABgAAAAMAPv/AAAJABYAAAAMAPz/AAAJABcAAAAMAP3/AAAJABgAAAANAPv/AAAKABYAAAANAPz/AAAKABcAAAANAP3/AAAKABgAAAAOAPv/AAALABYAAAAOAPz/AAALABcAAAAOAP3/AAALABgAAAAJAPv/AAAJABYAAAAJAPz/AAAJABcAAAAJAP3/AAAJABgAAAAKAPv/AAAKABYAAAAKAPz/AAAKABcAAAAKAP3/AAAKABgAAAALAPv/AAALABYAAAALAPz/AAALABcAAAALAP3/AAALABgAAAAJAPj/AAAJABYAAAAJAPn/AAAJABcAAAAJAPr/AAAJABgAAAAKAPj/AAAKABYAAAAKAPn/AAAKABcAAAAKAPr/AAAKABgAAAALAPj/AAALABYAAAALAPn/AAALABcAAAALAPr/AAALABgAAAAJAPX/AAAJABYAAAAJAPb/AAAJABcAAAAJAPf/AAAJABgAAAAKAPX/AAAKABYAAAAKAPb/AAAKABcAAAAKAPf/AAAKABgAAAALAPX/AAALABYAAAALAPb/AAALABcAAAALAPf/AAALABgAAAATAPv/AAAJABYAAAATAPz/AAAJABcAAAATAP3/AAAJABgAAAAUAPv/AAAKABYAAAAUAPz/AAAKABcAAAAUAP3/AAAKABgAAAAVAPv/AAALABYAAAAVAPz/AAALABcAAAAVAP3/AAALABgAAAATAPj/AAAJABYAAAATAPn/AAAJABcAAAATAPr/AAAJABgAAAAUAPj/AAAKABYAAAAUAPn/AAAKABcAAAAUAPr/AAAKABgAAAAVAPj/AAALABYAAAAVAPn/AAALABcAAAAVAPr/AAALABgAAAAWAPj/AAAJABYAAAAWAPn/AAAJABcAAAAWAPr/AAAJABgAAAAXAPj/AAAKABYAAAAXAPn/AAAKABcAAAAXAPr/AAAKABgAAAAYAPj/AAALABYAAAAYAPn/AAALABcAAAAYAPr/AAALABgAAAAZAPj/AAAJABYAAAAZAPn/AAAJABcAAAAZAPr/AAAJABgAAAAaAPj/AAAKABYAAAAaAPn/AAAKABcAAAAaAPr/AAAKABgAAAAbAPj/AAALABYAAAAbAPn/AAALABcAAAAbAPr/AAALABgAAAAZAPv/AAAJABYAAAAZAPz/AAAJABcAAAAZAP3/AAAJABgAAAAaAPv/AAAKABYAAAAaAPz/AAAKABcAAAAaAP3/AAAKABgAAAAbAPv/AAALABYAAAAbAPz/AAALABcAAAAbAP3/AAALABgAAAAWAPv/AAAJABYAAAAWAPz/AAAJABcAAAAWAP3/AAAJABgAAAAXAPv/AAAKABYAAAAXAPz/AAAKABcAAAAXAP3/AAAKABgAAAAYAPv/AAALABYAAAAYAPz/AAALABcAAAAYAP3/AAALABgAAAAhAPv/AAAJABYAAAAhAPz/AAAJABcAAAAhAP3/AAAJABgAAAAiAPv/AAAKABYAAAAiAPz/AAAKABcAAAAiAP3/AAAKABgAAAAjAPv/AAALABYAAAAjAPz/AAALABcAAAAjAP3/AAALABgAAAAhAPj/AAAJABYAAAAhAPn/AAAJABcAAAAhAPr/AAAJABgAAAAiAPj/AAAKABYAAAAiAPn/AAAKABcAAAAiAPr/AAAKABgAAAAjAPj/AAALABYAAAAjAPn/AAALABcAAAAjAPr/AAALABgAAAAhAPX/AAAJABYAAAAhAPb/AAAJABcAAAAhAPf/AAAJABgAAAAiAPX/AAAKABYAAAAiAPb/AAAKABcAAAAiAPf/AAAKABgAAAAjAPX/AAALABYAAAAjAPb/AAALABcAAAAjAPf/AAALABgAAAAhAPL/AAAJABYAAAAhAPP/AAAJABYAAAAhAPT/AAAJABgAAAAiAPL/AAAKABYAAAAiAPP/AAAKABcAAAAiAPT/AAAKABgAAAAjAPL/AAALABYAAAAjAPP/AAALABcAAAAjAPT/AAALABgAAAAhAO//AAAJABYAAAAhAPD/AAAJABcAAAAhAPH/AAAJABgAAAAiAO//AAAKABYAAAAiAPD/AAAKABcAAAAiAPH/AAAKABgAAAAjAO//AAALABYAAAAjAPD/AAALABcAAAAjAPH/AAALABgAAAAkAO//AAAJABYAAAAkAPD/AAAJABcAAAAkAPH/AAAJABYAAAAlAO//AAAKABYAAAAlAPD/AAAKABcAAAAlAPH/AAAKABYAAAAmAO//AAALABYAAAAmAPD/AAALABcAAAAmAPH/AAALABYAAAAkAOz/AAAJABYAAAAkAO3/AAAJABcAAAAkAO7/AAAJABgAAAAlAOz/AAAKABYAAAAlAO3/AAAKABcAAAAlAO7/AAAKABgAAAAmAOz/AAALABYAAAAmAO3/AAALABcAAAAmAO7/AAALABgAAAAnAOz/AAAJABYAAAAnAO3/AAAJABcAAAAnAO7/AAAJABYAAAAoAOz/AAAKABYAAAAoAO3/AAAKABcAAAAoAO7/AAAKABYAAAApAOz/AAALABYAAAApAO3/AAALABcAAAApAO7/AAALABYAAAAqAOz/AAAJABYAAAAqAO3/AAAJABcAAAAqAO7/AAAJABgAAAArAOz/AAAKABYAAAArAO3/AAAKABcAAAArAO7/AAAKABgAAAAsAOz/AAALABYAAAAsAO3/AAALABcAAAAsAO7/AAALABgAAAAkAPL/AAAJABcAAAAkAPP/AAAJABgAAAAlAPL/AAAKABcAAAAlAPP/AAAKABgAAAAmAPL/AAALABcAAAAmAPP/AAALABgAAAAkAPT/AAAJABYAAAAkAPX/AAAJABcAAAAkAPb/AAAJABgAAAAlAPT/AAAKABYAAAAlAPX/AAAKABcAAAAlAPb/AAAKABgAAAAmAPT/AAALABYAAAAmAPX/AAALABcAAAAmAPb/AAALABgAAAAkAPf/AAAJABYAAAAkAPj/AAAJABcAAAAkAPn/AAAJABgAAAAlAPf/AAAKABYAAAAlAPj/AAAKABcAAAAlAPn/AAAKABgAAAAmAPf/AAALABYAAAAmAPj/AAALABcAAAAmAPn/AAALABgAAAAkAPr/AAAJABYAAAAkAPv/AAAJABcAAAAkAPz/AAAJABgAAAAlAPr/AAAKABYAAAAlAPv/AAAKABcAAAAlAPz/AAAKABgAAAAmAPr/AAALABYAAAAmAPv/AAALABcAAAAmAPz/AAALABgAAAAkAP3/AAAJABYAAAAkAP7/AAAJABcAAAAkAP//AAAJABgAAAAlAP3/AAAKABYAAAAlAP7/AAAKABcAAAAlAP//AAAKABgAAAAmAP3/AAALABYAAAAmAP7/AAALABcAAAAmAP//AAALABgAAAAnAP3/AAAJABYAAAAnAP7/AAAJABcAAAAnAP//AAAJABgAAAAoAP3/AAAKABYAAAAoAP7/AAAKABcAAAAoAP//AAAKABgAAAApAP3/AAALABYAAAApAP7/AAALABcAAAApAP//AAALABgAAAAnAPr/AAAJABYAAAAnAPv/AAAJABcAAAAnAPz/AAAJABgAAAAoAPr/AAAKABYAAAAoAPv/AAAKABcAAAAoAPz/AAAKABgAAAApAPr/AAALABYAAAApAPv/AAALABcAAAApAPz/AAALABgAAAAnAPf/AAAJABYAAAAnAPj/AAAJABcAAAAnAPn/AAAJABgAAAAoAPf/AAAKABYAAAAoAPj/AAAKABcAAAAoAPn/AAAKABgAAAApAPf/AAALABYAAAApAPj/AAALABcAAAApAPn/AAALABgAAAAnAPT/AAAJABYAAAAnAPX/AAAJABcAAAAnAPb/AAAJABgAAAAoAPT/AAAKABYAAAAoAPX/AAAKABcAAAAoAPb/AAAKABgAAAApAPT/AAALABYAAAApAPX/AAALABcAAAApAPb/AAALABgAAAAnAPH/AAAJABYAAAAnAPL/AAAJABcAAAAnAPP/AAAJABgAAAAoAPH/AAAKABYAAAAoAPL/AAAKABcAAAAoAPP/AAAKABgAAAApAPH/AAALABYAAAApAPL/AAALABcAAAApAPP/AAALABgAAAAnAO//AAAJABcAAAAnAPD/AAAJABgAAAAoAO//AAAKABcAAAAoAPD/AAAKABgAAAApAO//AAALABcAAAApAPD/AAALABgAAAAqAPH/AAAJABgAAAAqAPL/AAAJABYAAAAqAPP/AAAJABcAAAArAPH/AAAKABgAAAArAPL/AAAKABYAAAArAPP/AAAKABcAAAAsAPH/AAALABgAAAAsAPL/AAALABYAAAAsAPP/AAALABcAAAAqAPT/AAAJABgAAAAqAPX/AAAJABYAAAAqAPb/AAAJABcAAAArAPT/AAAKABgAAAArAPX/AAAKABYAAAArAPb/AAAKABcAAAAsAPT/AAALABgAAAAsAPX/AAALABYAAAAsAPb/AAALABcAAAAqAPf/AAAJABgAAAAqAPj/AAAJABYAAAAqAPn/AAAJABcAAAArAPf/AAAKABgAAAArAPj/AAAKABYAAAArAPn/AAAKABcAAAAsAPf/AAALABgAAAAsAPj/AAALABYAAAAsAPn/AAALABcAAAAqAPv/AAAJABYAAAAqAPz/AAAJABcAAAAqAP3/AAAJABgAAAArAPv/AAAKABYAAAArAPz/AAAKABcAAAArAP3/AAAKABgAAAAsAPv/AAALABYAAAAsAPz/AAALABcAAAAsAP3/AAALABgAAAAqAPr/AAAJABgAAAArAPr/AAAKABgAAAAsAPr/AAALABgAAAAqAO//AAAJABYAAAAqAPD/AAAJABcAAAArAO//AAAKABYAAAArAPD/AAAKABcAAAAsAO//AAALABYAAAAsAPD/AAALABcAAAATAPf/AAAJABYAAAAUAPf/AAAKABYAAAATAPb/AAAJABYAAAAUAPb/AAAKABYAAAATAPX/AAAJABYAAAAUAPX/AAAKABYAAAATAPT/AAAJABYAAAAUAPT/AAAKABYAAAAMAPH/AAAJABYAAAANAPH/AAAKABYAAAAMAPD/AAAJABYAAAANAPD/AAAKABYAAAAMAO//AAAJABYAAAANAO//AAAKABYAAAAMAO7/AAAJABYAAAANAO7/AAAKABYAAAAMAO3/AAAJABYAAAANAO3/AAAKABYAAAAgAPD/AAAJABYAAAAgAPL/AAAJABYAAAAgAPT/AAAJABYAAAAiAO7/AAAJABYAAAAjAO3/AAAJABYAAAAjAO7/AAAJABYAAAAeAPT/AAAJABYAAAAfAPT/AAAJABYAAAAgAPP/AAAJABYAAAAfAPP/AAAJABYAAAAgAPH/AAAJABYAAAA=")
-tile_set = ExtResource("2_ufi15")
+tile_set = ExtResource("3_yo6uw")
 collision_enabled = false
 
 [node name="Collision" type="TileMapLayer" parent="Tiles" unique_id=982493535 groups=["tilemap"]]
@@ -1920,32 +1920,32 @@ tile_set = SubResource("TileSet_fg0v8")
 [node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
 position = Vector2(-38, -171)
 
-[node name="InteractIndicator" parent="Cutscene Triggers" unique_id=1287784044 instance=ExtResource("3_ufi15")]
+[node name="InteractIndicator" parent="Cutscene Triggers" unique_id=1287784044 instance=ExtResource("4_hnhj2")]
 position = Vector2(1224, -306)
 
-[node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("3_31kmf")]
+[node name="CutsceneTrigger" parent="Cutscene Triggers" unique_id=513125029 node_paths=PackedStringArray("indicator") instance=ExtResource("5_pnao1")]
 position = Vector2(1130, -193)
 scale = Vector2(1.74, 1.63)
 play_on_interact = true
 only_when_grounded = true
-container = ExtResource("5_31kmf")
+container = ExtResource("6_yn5qn")
 indicator = NodePath("../InteractIndicator")
 
-[node name="InteractIndicator2" parent="Cutscene Triggers" unique_id=1411572850 instance=ExtResource("3_ufi15")]
+[node name="InteractIndicator2" parent="Cutscene Triggers" unique_id=1411572850 instance=ExtResource("4_hnhj2")]
 position = Vector2(2111, -306)
 
-[node name="CutsceneTrigger2" parent="Cutscene Triggers" unique_id=673335087 node_paths=PackedStringArray("indicator") instance=ExtResource("3_31kmf")]
+[node name="CutsceneTrigger2" parent="Cutscene Triggers" unique_id=673335087 node_paths=PackedStringArray("indicator") instance=ExtResource("5_pnao1")]
 position = Vector2(2017, -193)
 scale = Vector2(1.74, 1.63)
 play_on_interact = true
 only_when_grounded = true
-container = ExtResource("6_bl4su")
+container = ExtResource("7_nb61r")
 indicator = NodePath("../InteractIndicator2")
 
-[node name="CutsceneTrigger3" parent="Cutscene Triggers" unique_id=1801366961 instance=ExtResource("3_31kmf")]
+[node name="CutsceneTrigger3" parent="Cutscene Triggers" unique_id=1801366961 instance=ExtResource("5_pnao1")]
 position = Vector2(3470.0002, -1966)
 scale = Vector2(3.16, 28.52)
-container = ExtResource("8_bl4su")
+container = ExtResource("8_andng")
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)
@@ -1953,7 +1953,7 @@ position = Vector2(-38, -171)
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="Particles" unique_id=668623674]
 position = Vector2(183, -1492)
 amount = 30
-texture = ExtResource("5_d1o1w")
+texture = ExtResource("9_nqc8y")
 lifetime = 6.18
 preprocess = 10.0
 speed_scale = 0.45
