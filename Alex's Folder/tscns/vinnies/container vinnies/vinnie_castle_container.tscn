@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cuaf5o8ymkp1i" path="res://Salem WIPs/Vignettes/Finished/Platforming/Left to Right/salem_backwards_zipline.tscn" id="4_v38ga"]
 [ext_resource type="PackedScene" uid="uid://cjaau4aunv2q" path="res://Salem WIPs/Vignettes/Finished/Platforming/Left to Right/salem_mirror_zipline.tscn" id="5_60bpb"]
 [ext_resource type="PackedScene" uid="uid://dm4iddsdvxo7v" path="res://Emily WIP/Vinnies/short/Emily_fall_recoil.tscn" id="6_8n2p8"]
+[ext_resource type="PackedScene" uid="uid://bfmdp1q6uqeng" path="res://Salem WIPs/Vignettes/Finished/Difficult/salem_precision_recoil_optional.tscn" id="7_qghba"]
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
@@ -14,7 +15,7 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(4916, -447)
+position = Vector2(7778, -210)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)
@@ -35,5 +36,8 @@ position = Vector2(8576, -1024)
 
 [node name="Fall_Recoil" parent="." unique_id=376128983 instance=ExtResource("6_8n2p8")]
 position = Vector2(12288, -2048)
+
+[node name="platformingvinyl" parent="." unique_id=1857579035 instance=ExtResource("7_qghba")]
+position = Vector2(19584, -2560)
 
 [editable path="Req"]
