@@ -1831,6 +1831,7 @@ sources/0 = SubResource("TileSetAtlasSource_mcxyt")
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
 [node name="Background" type="Node2D" parent="." unique_id=1150744281]
+z_index = -50
 position = Vector2(-12000, 2000)
 
 [node name="seam" type="Sprite2D" parent="Background" unique_id=1789274484]
@@ -1859,6 +1860,7 @@ scale = Vector2(8, 8)
 texture = ExtResource("2_ikbdc")
 
 [node name="Background2" type="Node2D" parent="." unique_id=1897453346]
+z_index = -50
 position = Vector2(-12000, 18000)
 
 [node name="seam" type="Sprite2D" parent="Background2" unique_id=1597985093]

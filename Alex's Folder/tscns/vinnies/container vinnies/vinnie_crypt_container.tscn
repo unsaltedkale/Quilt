@@ -1652,6 +1652,7 @@ sources/0 = SubResource("TileSetAtlasSource_q0spj")
 [node name="VinnieContainer2" type="Node2D" unique_id=1741857314]
 
 [node name="Background" type="Node2D" parent="." unique_id=1591342103]
+z_index = -50
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=297138947]
 position = Vector2(7000, -8000)
