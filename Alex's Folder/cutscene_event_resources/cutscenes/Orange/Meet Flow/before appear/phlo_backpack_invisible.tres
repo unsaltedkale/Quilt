@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_dij0u")
-actor = NodePath("../../../Req/phlo_backpack")
+actor = NodePath("../../Req/phlo_backpack")
 variable_name = "visible"
 delay_before = 0.3
 delay_after = 0.5
