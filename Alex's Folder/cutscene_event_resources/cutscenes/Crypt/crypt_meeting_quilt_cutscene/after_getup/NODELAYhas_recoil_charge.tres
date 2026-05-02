@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_gxsfw")
-actor = NodePath("../../Req/Player")
+actor = NodePath("../../../Req/Player")
 variable_name = "collected_objects"
 value_float = 1.0
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

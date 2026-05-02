@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_bb2vh")
-mover = NodePath("../../Req/Player")
+mover = NodePath("../../../Req/Player")
 target = Vector2(232, -368)
 time = 1.0
 metadata/_custom_type_script = "uid://cvo6goabck1ac"
