@@ -4779,7 +4779,7 @@ tile_set = SubResource("TileSet_5e7ya")
 position = Vector2(-38, -171)
 
 [node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("7_uw4xv")]
-position = Vector2(10593, -662)
+position = Vector2(12128, -666)
 
 [node name="Stars" type="Node2D" parent="." unique_id=1803044504]
 position = Vector2(-38, -171)
