@@ -36,8 +36,9 @@ func Physics_Update(_delta):
 	elif player.crouch_speed == false and walk_speed != PLAYER_DATA.walk_speed:
 		walk_speed = PLAYER_DATA.walk_speed
 	
-	if abs(move_dir) == 0:
-		Transition.emit(self, "idle")
+	if move_dir is int || move_dir is float:
+		if abs(move_dir) == 0:
+			Transition.emit(self, "idle")
 	if not player.is_on_floor():
 		Transition.emit(self, "fall")
 	if Input.is_action_just_pressed("jump") && not player.force_crouch:
