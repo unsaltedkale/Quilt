@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="music_resource" format=3 uid="uid://bf2bffq3wpki3"]
 
 [ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="1_axkmb"]
-[ext_resource type="AudioStream" uid="uid://c2dx7ahifrapr" path="res://Alex's Folder/music_resources/ARTIFICAL music/music_tracks/Opening Theme 80.wav" id="2_ucfpl"]
+[ext_resource type="AudioStream" uid="uid://cgyt2236rdrvd" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_opening_theme.mp3" id="2_k2adx"]
 
 [resource]
 script = ExtResource("1_axkmb")
 display_name = "Opening Theme"
-track = ExtResource("2_ucfpl")
+track = ExtResource("2_k2adx")
 bpm = 80.0
 metadata/_custom_type_script = "uid://4ekgwvgt60r0"

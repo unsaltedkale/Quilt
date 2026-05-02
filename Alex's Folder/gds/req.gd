@@ -52,6 +52,12 @@ func _set_tile_particles() -> void:
 				"Mirror":
 					p = mir_p
 			
+			'''print(tml.get_children())
+			
+			if tml.find_child("breakable_area") != null:
+				print("BA FOUND -----------------------")
+				p = mb_p'''
+			
 			if p != null:
 				for v in tml.get_used_cells():
 					

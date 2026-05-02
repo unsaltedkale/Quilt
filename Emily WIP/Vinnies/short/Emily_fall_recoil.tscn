@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_qluxe"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_7370y"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="8_dtwu0"]
-[ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="11_5o0k5"]
 [ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="13_b3yqv"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="14_eguvn"]
 
@@ -4945,13 +4944,6 @@ scale = Vector2(0.9999999, 0.9999999)
 [node name="STAR4" parent="Stars" unique_id=1858825434 instance=ExtResource("8_dtwu0")]
 position = Vector2(2753.0002, -655.99994)
 scale = Vector2(0.9999999, 0.9999999)
-
-[node name="Zipline" type="Node2D" parent="." unique_id=1757930451]
-
-[node name="Zipline" parent="Zipline" unique_id=1421325365 instance=ExtResource("11_5o0k5")]
-position = Vector2(4717, -1051)
-start_position = Vector2(4717, -1051)
-end_position = Vector2(5000, -1051)
 
 [node name="Disappearing Platforms" type="Node2D" parent="." unique_id=899769112]
 

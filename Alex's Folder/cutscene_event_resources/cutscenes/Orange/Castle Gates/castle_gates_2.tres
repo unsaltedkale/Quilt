@@ -1,7 +1,9 @@
 [gd_resource type="Resource" script_class="dialouge_cutscene_event" format=3 uid="uid://symm61nyrm52"]
 
+[ext_resource type="Resource" uid="uid://csvixl88r8ijf" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/dia/castle_gates_2_dia.tres" id="1_bx5f8"]
 [ext_resource type="Script" uid="uid://g78pi7crnayb" path="res://Alex's Folder/cutscene_event_resources/event types/dialouge_cs_event.gd" id="1_sq05c"]
 
 [resource]
 script = ExtResource("1_sq05c")
+dia = ExtResource("1_bx5f8")
 metadata/_custom_type_script = "uid://g78pi7crnayb"

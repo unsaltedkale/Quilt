@@ -28,7 +28,7 @@ func execute(cutscene_trigger: Node) -> void:
 			
 			print("prod")
 			
-			moverp = cutscene_trigger.get_node("../" + str(mover))
+			moverp = cutscene_trigger.get_node(str(mover))
 			
 			pass
 	
@@ -45,6 +45,7 @@ func execute(cutscene_trigger: Node) -> void:
 	if is_relative:
 		tween.tween_property(moverp, "global_position", target, time).as_relative()
 	elif not is_relative:
+		target += cutscene_trigger.get_parent().get_parent().global_position
 		tween.tween_property(moverp, "global_position", target, time)
 	if wait_until_done:
 		await tween.finished

@@ -8,13 +8,13 @@ extends Area2D
 @export var vinyl_string: String
 
 func _ready() -> void:
-	if get_tree().root.get_child(0).find_child("Req") != null:
-		Conductor = get_tree().root.get_child(0).find_child("Req").find_child("Conductor")
+	if get_tree().get_first_node_in_group("Req") != null:
+		Conductor = get_tree().get_first_node_in_group("Req").find_child("Conductor")
 	else:
 		Conductor = $"../../Conductor"
 	
-	if get_tree().root.get_child(0).find_child("Req") != null:
-		Camera = get_tree().root.get_child(0).find_child("Req").find_child("Camera2D")
+	if get_tree().get_first_node_in_group("Req") != null:
+		Camera = get_tree().get_first_node_in_group("Req").find_child("Camera2D")
 	else:
 		Camera = $"../../Camera2D"
 

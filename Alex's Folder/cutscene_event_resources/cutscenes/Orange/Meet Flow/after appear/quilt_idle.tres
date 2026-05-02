@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_mlfqa")
-animator = NodePath("../../Req/Player")
+animator = NodePath("../../../Req/Player")
 animation_name = "idle"
 wait_until_done = false
 metadata/_custom_type_script = "uid://84oaxla2j74g"

@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bt2k15nbnjbcj" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_substratum.mp3" id="2_oy2oj"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="3_hp5hw"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="4_62cfs"]
+[ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="5_13iic"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -4743,5 +4744,14 @@ tile_set = SubResource("TileSet_6pqo5")
 [node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_5e7ya")
+
+[node name="Tooltips" type="Node2D" parent="." unique_id=1099231818]
+
+[node name="ToolTipMessage" parent="Tooltips" unique_id=783056906 instance=ExtResource("5_13iic")]
+offset_left = 460.0
+offset_top = -278.0
+offset_right = 1060.0
+offset_bottom = -158.0
+type = 7
 
 [editable path="Req"]

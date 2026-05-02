@@ -27,10 +27,14 @@ func execute(cutscene_trigger: Node) -> void:
 			
 			print("prod")
 			
-			animatorp = cutscene_trigger.get_node("../" + str(animator))
+			if str(animatorp).contains("Req"):
+				animatorp = cutscene_trigger.get_node("../" + str(animator))
+			
+			else:
+				animatorp = cutscene_trigger.get_node(str(animator))
 			
 			if animatorp is not AnimatedSprite2D:
-				animatorp = cutscene_trigger.get_node("../" + str(animator) + "/AnimatedSprite2D")
+				animatorp = cutscene_trigger.get_node(str(animator) + "/AnimatedSprite2D")
 			
 			pass
 	

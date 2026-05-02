@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="dialouge_cutscene_event" format=3 uid="uid://c3nmcvn1w750j"]
+
+[ext_resource type="Resource" uid="uid://dbpxv001fcoi7" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/fuse/dia/fuse_dialouge_2.tres" id="1_hmft3"]
+[ext_resource type="Script" uid="uid://g78pi7crnayb" path="res://Alex's Folder/cutscene_event_resources/event types/dialouge_cs_event.gd" id="1_q60gs"]
+
+[resource]
+script = ExtResource("1_q60gs")
+dia = ExtResource("1_hmft3")
+metadata/_custom_type_script = "uid://g78pi7crnayb"

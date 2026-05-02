@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_hi0g6")
-animator = NodePath("../../Req/Player")
+animator = NodePath("../../../Req/Player")
 animation_name = "tense"
 delay_after = 1.0
 wait_until_done = false

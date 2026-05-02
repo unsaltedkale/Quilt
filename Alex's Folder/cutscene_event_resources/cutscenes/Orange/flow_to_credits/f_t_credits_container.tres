@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://phw768rmo6k1"]
+
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_33l5r"]
+[ext_resource type="Resource" uid="uid://b154daget7nuh" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/flow_to_credits/f_t_credits_transition.tres" id="1_afiyv"]
+
+[resource]
+script = ExtResource("1_33l5r")
+events = [ExtResource("1_afiyv")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"

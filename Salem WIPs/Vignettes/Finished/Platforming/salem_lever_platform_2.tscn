@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="4_shj4a"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="5_1decq"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="7_2rilt"]
+[ext_resource type="PackedScene" uid="uid://d11wvbu82dkqx" path="res://Alex's Folder/tscns/vinyl.tscn" id="9_32ci8"]
 [ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="9_81nnw"]
 [ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="10_r2nvr"]
 
@@ -4758,7 +4759,7 @@ position = Vector2(-38, -171)
 [node name="STAR" parent="Stars" unique_id=1310160594 instance=ExtResource("5_1decq")]
 position = Vector2(1369.0001, -237.99997)
 scale = Vector2(0.9999999, 0.9999999)
-respawn_timer_max = 2
+respawn_timer_max = 1.0
 
 [node name="NPCs" type="Node2D" parent="." unique_id=1296886211]
 position = Vector2(-38, -171)
@@ -4793,5 +4794,10 @@ point_b = Vector2(400, -2000)
 speed = 400.0
 wait_time = 2.0
 lever_path = NodePath("../Lever")
+
+[node name="Vinyls" type="Node2D" parent="." unique_id=446841229]
+
+[node name="Vinyl" parent="." unique_id=2078547140 instance=ExtResource("9_32ci8")]
+position = Vector2(2987, -377)
 
 [editable path="Req"]

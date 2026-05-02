@@ -4,4 +4,10 @@
 
 [resource]
 script = ExtResource("1_hae1p")
+text = Dictionary[String, String]({
+"0": "%quilt_neutral%QUILT: ( Look. There. )",
+"1": "%quilt_neutral%QUILT: ( There's an alley going around the castle. )",
+"2": "%quilt_neutral%QUILT: ( There has to be a way through here. )",
+"3": ""
+})
 metadata/_custom_type_script = "uid://owus6erkinoy"

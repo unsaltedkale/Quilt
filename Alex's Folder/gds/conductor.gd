@@ -37,9 +37,8 @@ func _ready():
 	if current_music_resource != preload("res://Alex's Folder/music_resources/LIVE music/empty_music.tres"):
 		_heads_up_conductor(current_music_resource)
 	
-	pass
-	
 func _process(_delta: float) -> void:
+	if (!audioplayer.playing): audioplayer.play() #Loops
 	songposition = audioplayer.get_playback_position() + offset
 	if prev_playback_position > audioplayer.get_playback_position():
 		reset_conductor_numbers()

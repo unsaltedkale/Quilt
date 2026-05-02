@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://cbdttg3jao2vv"]
+
+[ext_resource type="Resource" uid="uid://dpkciwpwf7urs" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/Exit_crypt_to_ebb/to_ebb_level_transition.tres" id="1_3d4c0"]
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_ae077"]
+
+[resource]
+script = ExtResource("1_ae077")
+events = [ExtResource("1_3d4c0")]
+metadata/_custom_type_script = "uid://bqmpakucoot4i"

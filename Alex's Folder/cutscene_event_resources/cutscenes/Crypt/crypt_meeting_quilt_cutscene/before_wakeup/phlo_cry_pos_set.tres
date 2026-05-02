@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_3514b")
-mover = NodePath("../../Req/Player")
+mover = NodePath("../../../Req/Player")
 target = Vector2(337, -310)
 time = 0.5
 wait_until_done = false

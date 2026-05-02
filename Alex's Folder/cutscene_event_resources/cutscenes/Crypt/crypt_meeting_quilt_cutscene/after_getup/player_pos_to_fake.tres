@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_urq3i")
-mover = NodePath("../../Req/Player")
+mover = NodePath("../../../Req/Player")
 target = Vector2(170, -347)
 metadata/_custom_type_script = "uid://cvo6goabck1ac"

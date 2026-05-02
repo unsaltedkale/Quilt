@@ -7,9 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="4_sbsso"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_0vx17"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="10_4fxwd"]
-[ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="11_o2a0x"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="11_w4sak"]
-[ext_resource type="Resource" uid="uid://t5ktt4rvlxib" path="res://Alex's Folder/music_resources/ARTIFICAL music/empty_music.tres" id="12_cwmbe"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -4986,13 +4984,6 @@ position = Vector2(5804, -2463)
 
 [node name="Stasis4" parent="Stasis Chamber" unique_id=689546443 instance=ExtResource("10_4fxwd")]
 position = Vector2(6308, -4791)
-
-[node name="Music Change Triggers" type="Node2D" parent="." unique_id=852063455]
-position = Vector2(3643, -6622)
-
-[node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("11_o2a0x")]
-position = Vector2(1247, -366)
-track = ExtResource("12_cwmbe")
 
 [node name="One-Way Platforms" type="Node2D" parent="." unique_id=1280126793]
 

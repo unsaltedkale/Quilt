@@ -33,6 +33,7 @@ func execute(cutscene_trigger: Node) -> void:
 	if change_zoom && zoom_is_relative:	
 		tween.tween_property(camerap, "zoom", zoom, time).as_relative()
 	if change_position && not position_is_relative:
+		position += cutscene_trigger.get_parent().get_parent().position
 		tween.tween_property(camerap, "global_position", position, time)
 	if change_zoom && not zoom_is_relative:	
 		tween.tween_property(camerap, "zoom", zoom, time)

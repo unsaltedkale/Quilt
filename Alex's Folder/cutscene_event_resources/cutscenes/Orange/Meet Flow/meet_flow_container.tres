@@ -24,5 +24,5 @@
 
 [resource]
 script = ExtResource("2_kr4tn")
-events = [ExtResource("1_t0l73"), ExtResource("2_mtxhy"), ExtResource("2_gl5un"), ExtResource("3_8vnoi"), ExtResource("4_n62k3"), ExtResource("5_slnbt"), ExtResource("6_566eb"), ExtResource("6_ep1l8"), ExtResource("7_kxm4u"), ExtResource("9_347j1"), ExtResource("10_s0nfs"), ExtResource("11_566eb"), ExtResource("9_ok6nk"), ExtResource("13_566eb"), ExtResource("10_s0nfs"), ExtResource("10_347j1"), ExtResource("11_s0nfs"), ExtResource("12_mtxhy"), ExtResource("17_347j1"), ExtResource("18_s0nfs"), ExtResource("19_s0nfs")]
+events = [ExtResource("1_t0l73"), ExtResource("2_mtxhy"), ExtResource("2_gl5un"), ExtResource("3_8vnoi"), ExtResource("4_n62k3"), ExtResource("5_slnbt"), ExtResource("6_566eb"), ExtResource("6_ep1l8"), ExtResource("7_kxm4u"), ExtResource("9_347j1"), ExtResource("10_s0nfs"), ExtResource("11_566eb"), ExtResource("9_ok6nk"), ExtResource("13_566eb"), ExtResource("10_s0nfs"), ExtResource("10_347j1"), ExtResource("11_s0nfs"), ExtResource("12_mtxhy"), ExtResource("17_347j1"), ExtResource("18_s0nfs"), ExtResource("5_slnbt"), ExtResource("19_s0nfs")]
 metadata/_custom_type_script = "uid://bqmpakucoot4i"
