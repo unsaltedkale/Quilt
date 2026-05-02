@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_pkvd0")
-animator = NodePath("../../Req/Player")
+animator = NodePath("../../../Req/Player")
 animation_name = "stop"
 delay_after = 0.6
 wait_until_done = false

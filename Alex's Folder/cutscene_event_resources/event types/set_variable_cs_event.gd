@@ -16,7 +16,10 @@ func execute(cutscene_trigger: Node) -> void:
 	
 	if cutscene_trigger.get_tree().root.get_child(0).find_child("Req") != null:
 	
-		actor_real = cutscene_trigger.get_node(str(actor))
+		if str(actor).contains("Req"):
+			actor_real = cutscene_trigger.get_node(str(actor))
+		else:
+			actor_real = cutscene_trigger.get_node(str(actor))
 	
 	else:
 		print("click")
