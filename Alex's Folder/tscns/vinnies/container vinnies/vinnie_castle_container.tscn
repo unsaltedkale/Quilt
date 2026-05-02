@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_32cjk"]
 [ext_resource type="PackedScene" uid="uid://mnwppfl4hxet" path="res://Emily WIP/Vinnies/longer_vinnies/EMILY_stasis_maze.tscn" id="2_76k58"]
 [ext_resource type="AudioStream" uid="uid://c0xwsg63ssyvs" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_castle.mp3" id="2_a1od5"]
+[ext_resource type="PackedScene" uid="uid://dqs7ffkpkn30f" path="res://Salem WIPs/Vignettes/Finished/Platforming/Right to Left/salem_barrier_jumps.tscn" id="3_0gdtb"]
 [ext_resource type="PackedScene" uid="uid://cuaf5o8ymkp1i" path="res://Salem WIPs/Vignettes/Finished/Platforming/Left to Right/salem_backwards_zipline.tscn" id="4_v38ga"]
 [ext_resource type="PackedScene" uid="uid://cjaau4aunv2q" path="res://Salem WIPs/Vignettes/Finished/Platforming/Left to Right/salem_mirror_zipline.tscn" id="5_60bpb"]
 [ext_resource type="PackedScene" uid="uid://dm4iddsdvxo7v" path="res://Emily WIP/Vinnies/short/Emily_fall_recoil.tscn" id="6_8n2p8"]
@@ -15,7 +16,7 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(7778, -210)
+position = Vector2(18860, -2203)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)
@@ -26,7 +27,7 @@ stream = ExtResource("2_a1od5")
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 position = Vector2(-330, 226)
 
-[node name="Stasis_Maze" parent="." unique_id=467354812 instance=ExtResource("2_76k58")]
+[node name="Stasis_Maze" parent="." unique_id=654006925 instance=ExtResource("2_76k58")]
 
 [node name="bwzipline" parent="." unique_id=1761938015 instance=ExtResource("4_v38ga")]
 position = Vector2(3712, -256)
@@ -39,5 +40,8 @@ position = Vector2(12288, -2048)
 
 [node name="platformingvinyl" parent="." unique_id=1857579035 instance=ExtResource("7_qghba")]
 position = Vector2(19584, -2560)
+
+[node name="barrierjumps" parent="." unique_id=467354812 instance=ExtResource("3_0gdtb")]
+position = Vector2(17280, -4608)
 
 [editable path="Req"]
