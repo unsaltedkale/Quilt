@@ -5033,12 +5033,15 @@ position = Vector2(12616, -499)
 bar_delete = 2.0
 beat_delete = 1.0
 repeat_pattern = true
-mod_bar = 4
+mod_bar = 2
 
 [node name="Conductor_Platform2" parent="Conductor_Platforms" unique_id=1546004137 instance=ExtResource("6_hvyum")]
 position = Vector2(13239, -499)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform2" index="2" unique_id=1643081023]
+bar_appear = 2.0
+bar_delete = 1.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5046,6 +5049,8 @@ mod_bar = 2
 position = Vector2(13870, -499)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform3" index="2" unique_id=1643081023]
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5053,6 +5058,8 @@ mod_bar = 2
 position = Vector2(17290, -939)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform4" index="2" unique_id=1643081023]
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5060,6 +5067,9 @@ mod_bar = 2
 position = Vector2(17983, -939)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform5" index="2" unique_id=1643081023]
+bar_appear = 2.0
+bar_delete = 1.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5067,6 +5077,8 @@ mod_bar = 2
 position = Vector2(18703, -943)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform6" index="2" unique_id=1643081023]
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5081,6 +5093,9 @@ mod_bar = 2
 position = Vector2(17290, -2073)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform10" index="2" unique_id=1643081023]
+bar_appear = 2.0
+bar_delete = 1.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5088,6 +5103,8 @@ mod_bar = 2
 position = Vector2(15358, -2300)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform11" index="2" unique_id=1643081023]
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5095,6 +5112,9 @@ mod_bar = 2
 position = Vector2(14650, -2607)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform12" index="2" unique_id=1643081023]
+bar_appear = 2.0
+bar_delete = 1.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5102,6 +5122,8 @@ mod_bar = 2
 position = Vector2(14038, -2888)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform13" index="2" unique_id=1643081023]
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5109,6 +5131,9 @@ mod_bar = 2
 position = Vector2(13443, -3162)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform14" index="2" unique_id=1643081023]
+bar_appear = 2.0
+bar_delete = 1.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5116,6 +5141,8 @@ mod_bar = 2
 position = Vector2(12195, -3504)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform15" index="2" unique_id=1643081023]
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5123,6 +5150,9 @@ mod_bar = 2
 position = Vector2(12195, -3886)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform16" index="2" unique_id=1643081023]
+bar_appear = 2.0
+bar_delete = 1.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5130,6 +5160,8 @@ mod_bar = 2
 position = Vector2(12195, -4248)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform17" index="2" unique_id=1643081023]
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5137,6 +5169,9 @@ mod_bar = 2
 position = Vector2(12195, -4629)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform18" index="2" unique_id=1643081023]
+bar_appear = 2.0
+bar_delete = 1.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5144,6 +5179,8 @@ mod_bar = 2
 position = Vector2(17983, -2073)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform8" index="2" unique_id=1643081023]
+bar_delete = 2.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
@@ -5151,6 +5188,9 @@ mod_bar = 2
 position = Vector2(18703, -2077)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform9" index="2" unique_id=1643081023]
+bar_appear = 2.0
+bar_delete = 1.0
+beat_delete = 1.0
 repeat_pattern = true
 mod_bar = 2
 
