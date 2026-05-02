@@ -11,7 +11,7 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(-2713, 272)
+position = Vector2(-928, 272)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)

@@ -14,10 +14,10 @@ func execute(cutscene_trigger: Node) -> void:
 	#place holder
 	var actor_real
 	
-	if cutscene_trigger.get_tree().root.get_child(0).find_child("Req") != null:
+	if cutscene_trigger.get_tree().get_first_node_in_group("Req") != null:
 	
 		if str(actor).contains("Req"):
-			actor_real = cutscene_trigger.get_node(str(actor))
+			actor_real = cutscene_trigger.get_node("../" + str(actor))
 		else:
 			actor_real = cutscene_trigger.get_node(str(actor))
 	
