@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://chkiutvlrmjjr" path="res://Elena/Scripts/movingplatform.gd" id="8_xad50"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="9_xad50"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="10_4lkuy"]
+[ext_resource type="PackedScene" uid="uid://d11wvbu82dkqx" path="res://Alex's Folder/tscns/vinyl.tscn" id="11_q76gh"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="16_xau81"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
@@ -4926,7 +4927,6 @@ tile_set = SubResource("TileSet_6pqo5")
 
 [node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAiAAUAAAAEAAwAAAAjAAUAAAAEAAwAAAA=")
 tile_set = SubResource("TileSet_5e7ya")
 
 [node name="Stars" type="Node2D" parent="." unique_id=1803044504]
@@ -5057,6 +5057,12 @@ position = Vector2(-38, -171)
 [node name="One_Way_Platform" parent="One-Way Platforms" unique_id=912261591 instance=ExtResource("9_xad50")]
 position = Vector2(4514, 1273)
 
+[node name="One_Way_Platform4" parent="One-Way Platforms" unique_id=1895570656 instance=ExtResource("9_xad50")]
+position = Vector2(4323, 1416)
+
+[node name="One_Way_Platform5" parent="One-Way Platforms" unique_id=1245662246 instance=ExtResource("9_xad50")]
+position = Vector2(4685, 1397)
+
 [node name="One_Way_Platform2" parent="One-Way Platforms" unique_id=2021163722 instance=ExtResource("9_xad50")]
 position = Vector2(-1936, 3004)
 
@@ -5079,5 +5085,10 @@ gravity = Vector2(100, 350)
 scale_amount_min = 8.0
 scale_amount_max = 16.0
 color = Color(0.4509804, 0.39215687, 0.38431373, 1)
+
+[node name="Vinyl" type="Node2D" parent="." unique_id=1912128515]
+
+[node name="Vinyl2" parent="Vinyl" unique_id=2078547140 instance=ExtResource("11_q76gh")]
+position = Vector2(4439, 747)
 
 [editable path="Req"]

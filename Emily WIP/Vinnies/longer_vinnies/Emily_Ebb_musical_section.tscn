@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://imi1pwxms1gb"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_gpwul"]
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="2_h43qx"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_vtkpl"]
+[ext_resource type="AudioStream" uid="uid://b2fky7ji2nk1" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_ebb.mp3" id="3_h43qx"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_l35j0"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_m3yx1"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="8_or3un"]
@@ -12,6 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="15_lsahl"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="16_4dq8q"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="20_n5g5y"]
+
+[sub_resource type="Resource" id="Resource_xjm36"]
+script = ExtResource("2_h43qx")
+display_name = "Ebb"
+track = ExtResource("3_h43qx")
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -4894,6 +4902,9 @@ position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(-2192, -119)
+
+[node name="Conductor" parent="Req" index="3" unique_id=438348041]
+current_music_resource = SubResource("Resource_xjm36")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
