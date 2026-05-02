@@ -467,7 +467,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_35wx8")
 }],
 "loop": true,
-"name": &"orangec1_neutral",
+"name": &"orange_c1_neutral",
 "speed": 5.0
 }, {
 "frames": [{
@@ -499,7 +499,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_k41jd")
 }],
 "loop": true,
-"name": &"orangec2_netural",
+"name": &"orange_c2_neutral",
 "speed": 5.0
 }, {
 "frames": [{
@@ -823,7 +823,7 @@ voices = Dictionary[String, AudioStream]({
 position = Vector2(1020.145, 143)
 scale = Vector2(6.0681806, 6.068181)
 sprite_frames = SubResource("SpriteFrames_wjj7j")
-animation = &"empty"
+animation = &"orange_c2_neutral"
 
 [node name="ToolTipMessage" parent="UI/DialogueScreen" unique_id=1195870865 instance=ExtResource("16_gi33v")]
 layout_mode = 0
