@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d04ijf60ctwlh" path="res://Salem WIPs/Vignettes/Finished/Puzzles/salem_crouch_puzzle.tscn" id="5_jll2y"]
 [ext_resource type="PackedScene" uid="uid://bfgb7ex7c8dd4" path="res://Andy's Path/Scenes/Vignettes/Andy_vignette_5.tscn" id="6_sh3um"]
 [ext_resource type="PackedScene" uid="uid://dmivaa748vgmc" path="res://Salem WIPs/Vignettes/Finished/Difficult/salem_spiderweb.tscn" id="7_xcmr2"]
+[ext_resource type="PackedScene" uid="uid://cpb6qqofnqpxv" path="res://Andy's Path/Scenes/Vignettes/Andy_vignette_6.tscn" id="8_pkjh2"]
 
 [sub_resource type="Resource" id="Resource_sh3um"]
 script = ExtResource("2_02qbp")
@@ -42,5 +43,8 @@ position = Vector2(-20861, -4910)
 
 [node name="spiderweb" parent="." unique_id=156226622 instance=ExtResource("7_xcmr2")]
 position = Vector2(-5376, -4864)
+
+[node name="VinnieTemplate" parent="." unique_id=717044410 instance=ExtResource("8_pkjh2")]
+position = Vector2(-7808, 6528)
 
 [editable path="Req"]
