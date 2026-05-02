@@ -77,7 +77,6 @@ sprite_frames = SubResource("SpriteFrames_kdra6")
 animation = &"crypt"
 
 [node name="CutsceneTrigger" parent="." unique_id=673335087 instance=ExtResource("2_kdra6")]
-only_when_grounded = true
 container = ExtResource("3_7bxv6")
 
 [node name="CollisionShape2D" parent="CutsceneTrigger" index="1" unique_id=682882553]
