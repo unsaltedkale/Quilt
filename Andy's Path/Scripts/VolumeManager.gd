@@ -11,4 +11,3 @@ func _process(_delta: float) -> void:
 	AudioServer.set_bus_volume_db(GeneralBusIndex, SettingsData.generalVolumeValue)
 	AudioServer.set_bus_volume_db(DialogueBusIndex, SettingsData.dialogueVolumeValue)
 	AudioServer.set_bus_volume_db(MusicSliderBusIndex, SettingsData.MusicVolumeValue)
-	print(AudioServer.get_bus_volume_db(GeneralBusIndex))
