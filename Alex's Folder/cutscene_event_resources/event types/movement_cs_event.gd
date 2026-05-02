@@ -28,7 +28,6 @@ func execute(cutscene_trigger: Node) -> void:
 			
 			print("prod")
 			
-			
 			moverp = cutscene_trigger.get_node(str(mover))
 			
 			pass

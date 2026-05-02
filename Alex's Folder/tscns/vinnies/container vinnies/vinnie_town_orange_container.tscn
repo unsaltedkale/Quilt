@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b4ea2nb2qkqrq"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_bscnu"]
+[ext_resource type="PackedScene" uid="uid://b0d7tbi0mty35" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_town_cutscene.tscn" id="2_gqvvk"]
+[ext_resource type="PackedScene" uid="uid://bw2uxgaho4176" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_flow_cutscene.tscn" id="3_jk0i8"]
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
@@ -9,7 +11,7 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(-292, 272)
+position = Vector2(-2713, 272)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)
@@ -17,4 +19,14 @@ position = Vector2(-46, 318)
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 position = Vector2(-330, 226)
 
+[node name="ALEX_town_cutscene" parent="." unique_id=467354812 instance=ExtResource("2_gqvvk")]
+
+[node name="ALEX_meet_flow_cutscene" parent="." unique_id=369026009 instance=ExtResource("3_jk0i8")]
+position = Vector2(-2432, 0)
+
 [editable path="Req"]
+[editable path="ALEX_town_cutscene"]
+[editable path="ALEX_town_cutscene/Req"]
+[editable path="ALEX_meet_flow_cutscene"]
+[editable path="ALEX_meet_flow_cutscene/Req"]
+[editable path="ALEX_meet_flow_cutscene/Cutscene Extras/FlowAppearance"]

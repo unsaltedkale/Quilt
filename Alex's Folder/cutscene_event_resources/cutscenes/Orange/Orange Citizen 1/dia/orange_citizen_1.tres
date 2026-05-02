@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://cqgx4l3pwytg5"]
+
+[ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_6ff3p"]
+
+[resource]
+script = ExtResource("1_6ff3p")
+text = Dictionary[String, String]({
+"0": "%quilt_neutral%QUILT: Good evening, honored citizen.",
+"1": "%orange_c1_neutral%CITIZEN: Good evening, sir!",
+"2": "%quilt_neutral%QUILT: ( … )",
+"3": ""
+})
+metadata/_custom_type_script = "uid://owus6erkinoy"

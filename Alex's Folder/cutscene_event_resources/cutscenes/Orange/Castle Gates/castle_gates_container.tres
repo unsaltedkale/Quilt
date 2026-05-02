@@ -2,8 +2,14 @@
 
 [ext_resource type="Resource" uid="uid://c5y11lu631bpy" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/castle_gates_1.tres" id="1_kdjpg"]
 [ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_p2ca3"]
+[ext_resource type="Resource" uid="uid://symm61nyrm52" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/castle_gates_2.tres" id="2_7kyoa"]
+[ext_resource type="Resource" uid="uid://n73yc48yefft" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/quilt_face_right.tres" id="2_ksbxc"]
+[ext_resource type="Resource" uid="uid://crieifwtbyni2" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/set_z_down.tres" id="3_ltqmh"]
+[ext_resource type="Resource" uid="uid://cwqhkp513nf43" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/quilt_right.tres" id="4_ksbxc"]
+[ext_resource type="Resource" uid="uid://dnctteknrwab3" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/quilt_walk.tres" id="5_f0ii0"]
+[ext_resource type="Resource" uid="uid://dme3x44qfd3e6" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/inside_castle_change.tres" id="7_f0ii0"]
 
 [resource]
 script = ExtResource("1_p2ca3")
-events = [ExtResource("1_kdjpg")]
+events = [ExtResource("1_kdjpg"), ExtResource("2_ksbxc"), ExtResource("2_7kyoa"), ExtResource("3_ltqmh"), ExtResource("5_f0ii0"), ExtResource("4_ksbxc"), ExtResource("7_f0ii0")]
 metadata/_custom_type_script = "uid://bqmpakucoot4i"

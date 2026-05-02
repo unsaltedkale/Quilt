@@ -6,6 +6,32 @@
 script = ExtResource("1_yuar0")
 text = Dictionary[String, String]({
 "0": "%quilt_neutral%QUILT: ( This town should be safe enough for you. )",
-"1": ""
+"1": "%phlo_neutral%PHLO: ( What? )",
+"10": "%quilt_neutral%QUILT: ( …I want to visit all of the WHEEL. Before… … )",
+"11": "%quilt_neutral%QUILT: ( I simply want to visit all of the WHEEL. )",
+"12": "%phlo_neutral%PHLO: ( Then we are going in the same direction! )",
+"13": "%phlo_neutral%PHLO: ( It would be more dangerous for you to leave me to take the journey alone! )",
+"14": "%quilt_neutral%QUILT: ( That is true. )",
+"15": "%quilt_neutral%QUILT: ( … )",
+"16": "%quilt_neutral%QUILT: ( Fine. You can be my cargo. )",
+"17": "%phlo_neutral%PHLO: ( YAY!! )",
+"18": "%quilt_neutral%QUILT: ( I—… … We need to get through the castle. )",
+"19": "[ There are GUARDS at the entrance to the CASTLE. ]",
+"2": "%quilt_neutral%QUILT: ( …You wanted to get out of that CRYPT, right? )",
+"20": "[ Despite others being closer to the doors than you are, they seem to be eyeing QUILT closely. ]",
+"21": "%phlo_neutral%PHLO: ( I don’t think they will let us in easily. )",
+"22": "%quilt_neutral%QUILT: ( Do not worry. There will be another way through. )",
+"23": "%phlo_neutral%PHLO: ( Like what? Trying to muscle through the guards? )",
+"24": "[ QUILT breathes. ]",
+"25": "%quilt_neutral%QUILT: ( The town is very big. There will be a way around the castle. )",
+"26": "%quilt_neutral%QUILT: ( If we just look around— )",
+"27": "",
+"3": "%quilt_neutral%QUILT: ( To safety. Here it is safe… enough.)",
+"4": "%phlo_neutral%PHLO: ( I… )",
+"5": "%phlo_neutral%PHLO: ( I wanna go home, QUILT. )",
+"6": "%quilt_neutral%QUILT: ( It is very dangerous. You have seen how treacherous this world has become. )",
+"7": "%phlo_neutral%PHLO: ( Where are you going, then? )",
+"8": "%quilt_neutral%QUILT: ( … )",
+"9": "[ QUILT thinks for a long time. Much longer than normal. ]"
 })
 metadata/_custom_type_script = "uid://owus6erkinoy"
