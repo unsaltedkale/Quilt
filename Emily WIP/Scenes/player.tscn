@@ -1711,7 +1711,6 @@ stream = ExtResource("43_nvsa4")
 bus = &"SFXMaster"
 
 [node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
-visible = false
 rect = Rect2(-10, -21.5, 20, 44)
 
 [connection signal="player_death" from="." to="StateMachine/Stasis" method="_on_player_player_death"]
