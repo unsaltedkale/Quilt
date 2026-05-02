@@ -3,16 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_gpwul"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_vtkpl"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_l35j0"]
-[ext_resource type="PackedScene" uid="uid://jvlnv4fp7geb" path="res://Elena/Scenes/breakable_area.tscn" id="5_dr5ap"]
-[ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="6_po2kl"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_m3yx1"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="8_or3un"]
-[ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="12_b4ed8"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="13_chbkr"]
 [ext_resource type="Resource" uid="uid://byd0brg0xkpg1" path="res://Alex's Folder/music_resources/LIVE music/LIVE_orange_flow_appears.tres" id="14_85smj"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="15_lsahl"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="16_4dq8q"]
-[ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="17_2y144"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="20_n5g5y"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
@@ -4895,7 +4891,7 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 position = Vector2(233, -323)
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(4494, -1980)
+position = Vector2(-2366, -30)
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
@@ -4912,7 +4908,7 @@ tile_set = SubResource("TileSet_fg0v8")
 
 [node name="Damgage_Layer" type="TileMapLayer" parent="Tiles" unique_id=770485730 groups=["Damage_Layer"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAUAAEAAAAAAAcAAAAVAAEAAAAAAAcAAAAWAAEAAAAAAAcAAAAXAAEAAAAAAAcAAAAYAAEAAAAAAAcAAAAZAAEAAAAAAAcAAAAaAAEAAAAAAAcAAAAbAAEAAAAAAAcAAAAcAAEAAAAAAAcAAAAdAAEAAAAAAAcAAAAeAAEAAAAAAAcAAAAfAAEAAAAAAAcAAAAgAAEAAAAAAAcAAAAhAAEAAAAAAAcAAAAiAAEAAAAAAAcAAAAjAAEAAAAAAAcAAABTAPP/AAAAAAcAAABSAPP/AAAAAAcAAABRAPP/AAAAAAcAAABQAPP/AAAAAAcAAABPAPP/AAAAAAcAAABOAPP/AAAAAAcAAABNAPP/AAAAAAcAAABMAPP/AAAAAAcAAABLAPP/AAAAAAcAAABKAPP/AAAAAAcAAABJAPP/AAAAAAcAAABIAPP/AAAAAAcAAABUAPP/AAAAAAcAAAAjAPP/AAAAAAcAAAAkAPP/AAAAAAcAAAAlAPP/AAAAAAcAAAAmAPP/AAAAAAcAAAAnAPP/AAAAAAcAAAAoAPP/AAAAAAcAAAApAPP/AAAAAAcAAAAqAPP/AAAAAAcAAAArAPP/AAAAAAcAAAAsAPP/AAAAAAcAAAAtAPP/AAAAAAcAAAAuAPP/AAAAAAcAAAAvAPP/AAAAAAcAAAAwAPP/AAAAAAcAAAAxAPP/AAAAAAcAAAAyAPP/AAAAAAcAAAAzAPP/AAAAAAcAAAA0APP/AAAAAAcAAAA1APP/AAAAAAcAAAA2APP/AAAAAAcAAAA3APP/AAAAAAcAAAA4APP/AAAAAAcAAAA5APP/AAAAAAcAAAA6APP/AAAAAAcAAAA7APP/AAAAAAcAAAA8APP/AAAAAAcAAAA9APP/AAAAAAcAAAA+APP/AAAAAAcAAAA/APP/AAAAAAcAAABAAPP/AAAAAAcAAABBAPP/AAAAAAcAAABCAPP/AAAAAAcAAABDAPP/AAAAAAcAAABEAPP/AAAAAAcAAABFAPP/AAAAAAcAAABGAPP/AAAAAAcAAABHAPP/AAAAAAcAAABPAAEAAAAAAAcAAABQAAEAAAAAAAcAAABRAAEAAAAAAAcAAABSAAEAAAAAAAcAAABTAAEAAAAAAAcAAABUAAEAAAAAAAcAAABVAAEAAAAAAAcAAABWAAEAAAAAAAcAAABXAAEAAAAAAAcAAABYAAEAAAAAAAcAAABZAAEAAAAAAAcAAABaAAEAAAAAAAcAAABbAAEAAAAAAAcAAABcAAEAAAAAAAcAAABdAAEAAAAAAAcAAABeAAEAAAAAAAcAAABfAAEAAAAAAAcAAABgAAEAAAAAAAcAAABhAAEAAAAAAAcAAABiAAEAAAAAAAcAAABjAAEAAAAAAAcAAABkAAEAAAAAAAcAAABlAAEAAAAAAAcAAABmAAEAAAAAAAcAAABnAAEAAAAAAAcAAABoAAEAAAAAAAcAAABpAAEAAAAAAAcAAAA=")
+tile_map_data = PackedByteArray("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")
 tile_set = SubResource("TileSet_rq4vl")
 
 [node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
@@ -4927,21 +4923,6 @@ tile_set = SubResource("TileSet_6pqo5")
 [node name="Mirror" type="TileMapLayer" parent="Tiles" unique_id=406341122 groups=["Mirror"]]
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_5e7ya")
-
-[node name="Breakable_Area" type="TileMapLayer" parent="Tiles" unique_id=1191877973 groups=["tilemap"]]
-scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAA=")
-tile_set = SubResource("TileSet_fg0v8")
-
-[node name="breakable_area" parent="Tiles/Breakable_Area" unique_id=1911439178 instance=ExtResource("5_dr5ap")]
-position = Vector2(-675.75, -126.75)
-scale = Vector2(4.82, 4.82)
-
-[node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
-position = Vector2(-38, -171)
-
-[node name="Conductor_Platform" parent="Conductor_Platforms" unique_id=1167135782 instance=ExtResource("6_po2kl")]
-position = Vector2(-1029, 1869)
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
 position = Vector2(-38, -171)
@@ -5051,11 +5032,45 @@ scale = Vector2(0.9999999, 0.9999999)
 position = Vector2(7724, -9368)
 scale = Vector2(0.9999999, 0.9999999)
 
-[node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
-position = Vector2(-38, -171)
+[node name="STAR21" parent="Stars" unique_id=864985411 instance=ExtResource("8_or3un")]
+position = Vector2(5920.9995, -10014.001)
+scale = Vector2(0.9999999, 0.9999999)
 
-[node name="Stasis" parent="Stasis Chamber" unique_id=1921201016 instance=ExtResource("12_b4ed8")]
-position = Vector2(-2421, -7)
+[node name="STAR22" parent="Stars" unique_id=2012761046 instance=ExtResource("8_or3un")]
+position = Vector2(5917.9995, -10441.001)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="STAR23" parent="Stars" unique_id=1433503187 instance=ExtResource("8_or3un")]
+position = Vector2(5925.9995, -10804.001)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="STAR24" parent="Stars" unique_id=40994682 instance=ExtResource("8_or3un")]
+position = Vector2(7732, -11403)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="STAR25" parent="Stars" unique_id=613823002 instance=ExtResource("8_or3un")]
+position = Vector2(5919, -12062)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="STAR26" parent="Stars" unique_id=1442678665 instance=ExtResource("8_or3un")]
+position = Vector2(7721.9995, -12697)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="STAR27" parent="Stars" unique_id=1244935556 instance=ExtResource("8_or3un")]
+position = Vector2(7706.9995, -13172)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="STAR28" parent="Stars" unique_id=273281103 instance=ExtResource("8_or3un")]
+position = Vector2(7706.9995, -13576)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="STAR29" parent="Stars" unique_id=1674738409 instance=ExtResource("8_or3un")]
+position = Vector2(5918.9995, -14225)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="STAR30" parent="Stars" unique_id=1717982069 instance=ExtResource("8_or3un")]
+position = Vector2(7721.9995, -14889)
+scale = Vector2(0.9999999, 0.9999999)
 
 [node name="Music Change Triggers" type="Node2D" parent="." unique_id=852063455]
 position = Vector2(-38, -171)
@@ -5091,17 +5106,11 @@ position = Vector2(-38, -171)
 position = Vector2(13919, -1694)
 scale = Vector2(1, 3.2)
 
-[node name="Disappearing Platforms" type="Node2D" parent="." unique_id=899769112]
-position = Vector2(-38, -171)
-
-[node name="Disappearing_Platform" parent="Disappearing Platforms" unique_id=607645916 instance=ExtResource("17_2y144")]
-position = Vector2(-2961, 254)
-
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="Particles" unique_id=668623674]
-position = Vector2(-2677, -944)
+position = Vector2(7342, -4015)
 amount = 30
 texture = ExtResource("20_n5g5y")
 lifetime = 6.18
