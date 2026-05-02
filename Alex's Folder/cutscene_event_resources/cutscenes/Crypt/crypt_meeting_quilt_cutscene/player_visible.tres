@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_jgncq")
-actor = NodePath("../../Req/Player")
+actor = NodePath("../../../Req/Player")
 variable_name = "visible"
 value_bool = true
 metadata/_custom_type_script = "uid://ddqk0rwkpcnf2"

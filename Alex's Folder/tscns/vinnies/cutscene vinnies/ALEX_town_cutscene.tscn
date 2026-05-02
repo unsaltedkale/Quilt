@@ -5,9 +5,9 @@
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_ufi15"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="3_31kmf"]
 [ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="3_ufi15"]
-[ext_resource type="Resource" uid="uid://dnljj4q0gl11h" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Citizen 1/citizen_1_container.tres" id="5_31kmf"]
+[ext_resource type="Resource" uid="uid://mb7ylj3e5vk" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Orange Citizens/orange_citizen_1_container.tres" id="5_31kmf"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="5_d1o1w"]
-[ext_resource type="Resource" uid="uid://bpshsnte276ag" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Citizen 2/citizen_2_container.tres" id="6_bl4su"]
+[ext_resource type="Resource" uid="uid://bd0dvj7gnnn0o" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Orange Citizen 2/orange_citizen_2_container.tres" id="6_bl4su"]
 [ext_resource type="Texture2D" uid="uid://x5bo3bhcuj54" path="res://Art/Orange Citizens.png" id="7_0ui4c"]
 [ext_resource type="Resource" uid="uid://dcg7alp3bmtal" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/Castle Gates/castle_gates_container.tres" id="8_bl4su"]
 

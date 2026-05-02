@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://be4hocxkgbx4f" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_recoil_tutorial_phlo.tscn" id="3_7qoo3"]
 [ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/Finished/Tutorial/salem_phlo_platforms.tscn" id="4_lcxdb"]
 [ext_resource type="PackedScene" uid="uid://bcafj313e7kp5" path="res://Emily WIP/Vinnies/short/Emily_Phlo_Crypt_jump.tscn" id="5_r6uf6"]
-[ext_resource type="PackedScene" uid="uid://c4m3b84ph3441" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
+[ext_resource type="PackedScene" uid="uid://bljewcm07ht45" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
 [ext_resource type="PackedScene" uid="uid://dvubqeyj1ycv2" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_1.tscn" id="7_e7kwk"]
 [ext_resource type="PackedScene" uid="uid://sprvnuwmranp" path="res://Salem WIPs/Vignettes/Finished/Platforming/salem_lever_platform_2.tscn" id="9_8v5aw"]
 [ext_resource type="PackedScene" uid="uid://c1e3fl0y77dg0" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_3.tscn" id="10_qbogy"]
@@ -20,7 +20,8 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(14374, 333)
+position = Vector2(12896, 235)
+is_phlo = true
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)
@@ -61,3 +62,5 @@ position = Vector2(22528, -6272)
 position = Vector2(26624, -6400)
 
 [editable path="Req"]
+[editable path="ALEX_meet_quilt_cutscene"]
+[editable path="ALEX_meet_quilt_cutscene/Req"]
