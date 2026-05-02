@@ -4888,8 +4888,6 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
 size = Vector2(150, 134)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1dysu"]
-
 [node name="VinnieTemplate" type="Node2D" unique_id=467354812]
 
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_rtscv")]
@@ -4966,9 +4964,9 @@ position = Vector2(3179, 2749)
 [node name="MovingPlatforms" type="Node2D" parent="." unique_id=615092725]
 
 [node name="MovingPlatform" parent="MovingPlatforms" unique_id=1943217819 instance=ExtResource("8_mhuwe")]
-position = Vector2(-800, 1300)
-point_a = Vector2(-800, 1300)
-point_b = Vector2(1000, 1300)
+position = Vector2(-800, 1299)
+point_a = Vector2(-800, 1299)
+point_b = Vector2(1000, 1299)
 speed = 500.0
 
 [node name="MovingPlatform2" parent="MovingPlatforms" unique_id=1055517817 instance=ExtResource("8_mhuwe")]
@@ -5027,11 +5025,11 @@ wait_time = 0.1
 position = Vector2(2, -29)
 shape = SubResource("RectangleShape2D_lpq4i")
 
-[node name="Sprite2D" type="Sprite2D" parent="MovingSpikes/spike3" unique_id=1138916772]
+[node name="Sprite2D" type="Sprite2D" parent="MovingSpikes/spike3" unique_id=754596084]
 scale = Vector2(5, 3.516)
-texture = SubResource("CompressedTexture2D_1dysu")
+texture = ExtResource("3_0mqcj")
 region_enabled = true
-region_rect = Rect2(836.2544, 593.81995, 59.628784, 46.851196)
+region_rect = Rect2(-3.3598022, 841.6802, 38.720016, 44.880005)
 
 [node name="Zipline" type="Node2D" parent="." unique_id=751569202]
 

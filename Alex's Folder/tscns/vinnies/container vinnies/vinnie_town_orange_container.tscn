@@ -2,7 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_bscnu"]
 [ext_resource type="PackedScene" uid="uid://b0d7tbi0mty35" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_town_cutscene.tscn" id="2_gqvvk"]
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="2_mqo4l"]
 [ext_resource type="PackedScene" uid="uid://bw2uxgaho4176" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_flow_cutscene.tscn" id="3_jk0i8"]
+[ext_resource type="AudioStream" uid="uid://b1tfhpwu2eha6" path="res://Alex's Folder/music_resources/ARTIFICAL music/music_tracks/Hellow 120_VAMP.wav" id="3_mqo4l"]
+
+[sub_resource type="Resource" id="Resource_dq4iu"]
+script = ExtResource("2_mqo4l")
+display_name = "..."
+track = ExtResource("3_mqo4l")
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
 
@@ -15,6 +23,9 @@ position = Vector2(-2180, 272)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)
+
+[node name="Conductor" parent="Req" index="3" unique_id=438348041]
+current_music_resource = SubResource("Resource_dq4iu")
 
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 position = Vector2(-330, 226)

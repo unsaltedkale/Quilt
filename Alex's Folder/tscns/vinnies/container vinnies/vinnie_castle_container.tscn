@@ -4,12 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://mnwppfl4hxet" path="res://Emily WIP/Vinnies/longer_vinnies/EMILY_stasis_maze.tscn" id="2_76k58"]
 [ext_resource type="AudioStream" uid="uid://c0xwsg63ssyvs" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_castle.mp3" id="2_a1od5"]
 [ext_resource type="PackedScene" uid="uid://dqs7ffkpkn30f" path="res://Salem WIPs/Vignettes/Finished/Platforming/Right to Left/salem_barrier_jumps.tscn" id="3_0gdtb"]
+[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="3_w6n0l"]
 [ext_resource type="PackedScene" uid="uid://cuaf5o8ymkp1i" path="res://Salem WIPs/Vignettes/Finished/Platforming/Left to Right/salem_backwards_zipline.tscn" id="4_v38ga"]
 [ext_resource type="PackedScene" uid="uid://cjaau4aunv2q" path="res://Salem WIPs/Vignettes/Finished/Platforming/Left to Right/salem_mirror_zipline.tscn" id="5_60bpb"]
 [ext_resource type="PackedScene" uid="uid://dm4iddsdvxo7v" path="res://Emily WIP/Vinnies/short/Emily_fall_recoil.tscn" id="6_8n2p8"]
 [ext_resource type="PackedScene" uid="uid://bfmdp1q6uqeng" path="res://Salem WIPs/Vignettes/Finished/Difficult/salem_precision_recoil_optional.tscn" id="7_qghba"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="9_jm34e"]
 [ext_resource type="Resource" uid="uid://cgob6bxttdt2v" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Orange/castle_to_flow_appears/castle_to_flow_appears.tres" id="10_ot1jv"]
+
+[sub_resource type="Resource" id="Resource_k18lh"]
+script = ExtResource("3_w6n0l")
+display_name = "Gilded Hals"
+track = ExtResource("2_a1od5")
+bpm = 80.0
+metadata/_custom_type_script = "uid://4ekgwvgt60r0"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -1689,6 +1697,9 @@ position = Vector2(-46, 318)
 
 [node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
 stream = ExtResource("2_a1od5")
+
+[node name="Conductor" parent="Req" index="3" unique_id=438348041]
+current_music_resource = SubResource("Resource_k18lh")
 
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 position = Vector2(-330, 226)
