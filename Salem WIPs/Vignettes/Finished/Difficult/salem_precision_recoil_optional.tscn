@@ -4886,10 +4886,9 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_m2847")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpq4i"]
-size = Vector2(326, 58)
+size = Vector2(150, 134)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1dysu"]
-load_path = "res://.godot/imported/tilesheet_complete.png-0c56dbab861f26a1f65a00b9cbe41a19.ctex"
 
 [node name="VinnieTemplate" type="Node2D" unique_id=467354812]
 
@@ -4989,14 +4988,14 @@ speed = 1500.0
 wait_time = 0.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingSpikes/spike" unique_id=225021296]
-position = Vector2(2, -29)
+position = Vector2(-2, 9)
 shape = SubResource("RectangleShape2D_lpq4i")
 
 [node name="Sprite2D" type="Sprite2D" parent="MovingSpikes/spike" unique_id=135997064]
 scale = Vector2(5, 3.516)
-texture = SubResource("CompressedTexture2D_1dysu")
+texture = ExtResource("3_0mqcj")
 region_enabled = true
-region_rect = Rect2(836.2544, 593.81995, 59.628784, 46.851196)
+region_rect = Rect2(-3.3598022, 841.6802, 38.720016, 44.880005)
 
 [node name="spike2" type="AnimatableBody2D" parent="MovingSpikes" unique_id=1462911262 groups=["Damage_Layer", "Environmental Feature"]]
 position = Vector2(3000, 2200)
@@ -5006,15 +5005,15 @@ point_b = Vector2(1000, 2200)
 speed = 1500.0
 wait_time = 0.2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingSpikes/spike2" unique_id=1867797995]
-position = Vector2(2, -29)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingSpikes/spike2" unique_id=1388343379]
+position = Vector2(-2, 9)
 shape = SubResource("RectangleShape2D_lpq4i")
 
-[node name="Sprite2D" type="Sprite2D" parent="MovingSpikes/spike2" unique_id=2010524802]
+[node name="Sprite2D" type="Sprite2D" parent="MovingSpikes/spike2" unique_id=1048208181]
 scale = Vector2(5, 3.516)
-texture = SubResource("CompressedTexture2D_1dysu")
+texture = ExtResource("3_0mqcj")
 region_enabled = true
-region_rect = Rect2(836.2544, 593.81995, 59.628784, 46.851196)
+region_rect = Rect2(-3.3598022, 841.6802, 38.720016, 44.880005)
 
 [node name="spike3" type="AnimatableBody2D" parent="MovingSpikes" unique_id=453619468 groups=["Damage_Layer", "Environmental Feature"]]
 position = Vector2(3000, 2200)
