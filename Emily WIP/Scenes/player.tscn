@@ -1604,9 +1604,7 @@ shape = SubResource("RectangleShape2D_1jo8y")
 material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(0, 0.25)
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"phlo_mini_wump"
-frame = 7
-frame_progress = 1.0
+animation = &"idle"
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." unique_id=621642771 node_paths=PackedStringArray("initial_state")]

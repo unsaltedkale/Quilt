@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="cutscene_container" format=3 uid="uid://bl35uqfp41nci"]
+
+[ext_resource type="Script" uid="uid://bqmpakucoot4i" path="res://Alex's Folder/cutscene_event_resources/cutscene_container.gd" id="1_7tibr"]
+
+[resource]
+script = ExtResource("1_7tibr")
+metadata/_custom_type_script = "uid://bqmpakucoot4i"
