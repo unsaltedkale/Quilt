@@ -4732,7 +4732,7 @@ tile_set = SubResource("TileSet_fg0v8")
 
 [node name="Damgage_Layer" type="TileMapLayer" parent="Tiles" unique_id=770485730 groups=["Damage_Layer"]]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAALAP//AAAAAAcAAAAIAP//AAAAAAcAAAA=")
+tile_map_data = PackedByteArray("AAAJAP//AAAAAAcAAAA=")
 tile_set = SubResource("TileSet_rq4vl")
 
 [node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]

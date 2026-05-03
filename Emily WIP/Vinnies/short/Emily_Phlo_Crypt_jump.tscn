@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_rb5cy"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_klact"]
 [ext_resource type="PackedScene" uid="uid://c5plspa3idgyl" path="res://Elena/Scenes/fade_area.tscn" id="4_v81jl"]
+[ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/tscns/make_it_musical.tscn" id="7_dwgqq"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_y14j7"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="9_2nvu6"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="15_374j7"]
@@ -5012,8 +5013,21 @@ position = Vector2(753, -722)
 [node name="One_Way_Platform5" parent="One-Way Platforms" unique_id=735124958 instance=ExtResource("16_j1cio")]
 position = Vector2(1561, -1129)
 
+[node name="MakeItMusical2" parent="One-Way Platforms/One_Way_Platform5" unique_id=1397534651 instance=ExtResource("7_dwgqq")]
+bar_delete = 1.0
+beat_delete = 4.0
+repeat_pattern = true
+mod_bar = 1
+
 [node name="One_Way_Platform6" parent="One-Way Platforms" unique_id=1318850287 instance=ExtResource("16_j1cio")]
 position = Vector2(2195, -1279)
+
+[node name="MakeItMusical2" parent="One-Way Platforms/One_Way_Platform6" unique_id=931463495 instance=ExtResource("7_dwgqq")]
+beat_appear = 3.0
+bar_delete = 1.0
+beat_delete = 2.0
+repeat_pattern = true
+mod_bar = 1
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)

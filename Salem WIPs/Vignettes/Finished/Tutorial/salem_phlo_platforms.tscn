@@ -4764,7 +4764,10 @@ position = Vector2(862, -162)
 position = Vector2(1064, -267)
 
 [node name="One_Way_Platform4" parent="One-Way Platforms" unique_id=860951063 instance=ExtResource("6_510pf")]
-position = Vector2(1287, -407)
+position = Vector2(1067, -397)
+
+[node name="One_Way_Platform5" parent="One-Way Platforms" unique_id=1895570656 instance=ExtResource("6_510pf")]
+position = Vector2(1635, -407)
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1070604728]
 
