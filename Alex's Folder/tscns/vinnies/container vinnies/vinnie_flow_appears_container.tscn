@@ -1,8 +1,10 @@
 [gd_scene format=4 uid="uid://bgbi6jcjl0wa7"]
 
+[ext_resource type="Texture2D" uid="uid://cg57ptpu72817" path="res://Resources/Castle tilling - Vertical - PLEASE USE ME.png" id="1_vd8h5"]
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_x1nms"]
 [ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="2_02qbp"]
 [ext_resource type="PackedScene" uid="uid://8fqj856k2fl2" path="res://Salem WIPs/Vignettes/Finished/Difficult/salem_crumbling.tscn" id="2_47wpx"]
+[ext_resource type="Texture2D" uid="uid://dirrf1nihpxi7" path="res://Resources/Background3 - Edit 4.png" id="2_ikbdc"]
 [ext_resource type="AudioStream" uid="uid://bjyvd2pvp72h2" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_flow_appears.mp3" id="3_jll2y"]
 [ext_resource type="PackedScene" uid="uid://je46xra7st0p" path="res://Andy's Path/Scenes/Camera_Change_Trigger.tscn" id="4_mcxyt"]
 [ext_resource type="PackedScene" uid="uid://d04ijf60ctwlh" path="res://Salem WIPs/Vignettes/Finished/Puzzles/salem_crouch_puzzle.tscn" id="5_jll2y"]
@@ -1827,6 +1829,64 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_mcxyt")
 
 [node name="VinnieContainer" type="Node2D" unique_id=1741857314]
+
+[node name="Background" type="Node2D" parent="." unique_id=1150744281]
+z_index = -50
+position = Vector2(-12000, 2000)
+
+[node name="seam" type="Sprite2D" parent="Background" unique_id=1789274484]
+position = Vector2(15372, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_vd8h5")
+
+[node name="seam2" type="Sprite2D" parent="Background" unique_id=901915083]
+position = Vector2(32124, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_vd8h5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=976545849]
+position = Vector2(7000, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_ikbdc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=18884324]
+position = Vector2(23752, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_ikbdc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background" unique_id=601998559]
+position = Vector2(40496, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_ikbdc")
+
+[node name="Background2" type="Node2D" parent="." unique_id=1897453346]
+z_index = -50
+position = Vector2(-12000, 18000)
+
+[node name="seam" type="Sprite2D" parent="Background2" unique_id=1597985093]
+position = Vector2(15372, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_vd8h5")
+
+[node name="seam2" type="Sprite2D" parent="Background2" unique_id=875106812]
+position = Vector2(32124, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_vd8h5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background2" unique_id=93104952]
+position = Vector2(7000, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_ikbdc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background2" unique_id=2031593106]
+position = Vector2(23752, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_ikbdc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background2" unique_id=99880849]
+position = Vector2(40496, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_ikbdc")
 
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_x1nms")]
 position = Vector2(184, -603)

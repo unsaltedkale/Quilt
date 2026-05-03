@@ -1,25 +1,20 @@
 [gd_scene format=4 uid="uid://imi1pwxms1gb"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_gpwul"]
-[ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="2_h43qx"]
+[ext_resource type="Texture2D" uid="uid://bt6x6cmovtv2i" path="res://Resources/Background2 - Final 2_ (1).png" id="1_w4lvk"]
+[ext_resource type="Texture2D" uid="uid://ohtbpgrgoldl" path="res://Resources/Crypt tilling- Vertical - USE.png" id="2_qpl4f"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_vtkpl"]
-[ext_resource type="AudioStream" uid="uid://b2fky7ji2nk1" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_ebb.mp3" id="3_h43qx"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_l35j0"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="7_m3yx1"]
 [ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="8_or3un"]
 [ext_resource type="PackedScene" uid="uid://c6uqppwlr2hvr" path="res://Alex's Folder/tscns/cutscene_trigger.tscn" id="11_6s4qw"]
 [ext_resource type="Resource" uid="uid://beik4cvk6fb67" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/ebb_to_town/ebb_to_town_container.tres" id="12_enjad"]
+[ext_resource type="Resource" uid="uid://bxhaqawh3oce7" path="res://Alex's Folder/music_resources/LIVE music/empty_music.tres" id="12_qpl4f"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="13_chbkr"]
 [ext_resource type="Resource" uid="uid://byd0brg0xkpg1" path="res://Alex's Folder/music_resources/LIVE music/LIVE_orange_flow_appears.tres" id="14_85smj"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="15_lsahl"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="16_4dq8q"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="20_n5g5y"]
-
-[sub_resource type="Resource" id="Resource_xjm36"]
-script = ExtResource("2_h43qx")
-display_name = "Ebb"
-track = ExtResource("3_h43qx")
-metadata/_custom_type_script = "uid://4ekgwvgt60r0"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -4897,6 +4892,60 @@ sources/0 = SubResource("TileSetAtlasSource_m2847")
 
 [node name="VinnieTemplate" type="Node2D" unique_id=467354812]
 
+[node name="Background" type="Node2D" parent="." unique_id=796744909]
+z_index = -50
+position = Vector2(-4000, 2500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=808982070]
+position = Vector2(7000, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_w4lvk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=1681135471]
+position = Vector2(23800, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_w4lvk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background" unique_id=1379148891]
+position = Vector2(40600, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_w4lvk")
+
+[node name="seam" type="Sprite2D" parent="Background" unique_id=865956810]
+position = Vector2(15400, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_qpl4f")
+
+[node name="seam2" type="Sprite2D" parent="Background" unique_id=1835160535]
+position = Vector2(32200, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_qpl4f")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background" unique_id=1227954369]
+position = Vector2(7000, -24000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_w4lvk")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Background" unique_id=1545221599]
+position = Vector2(23800, -24000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_w4lvk")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Background" unique_id=155180683]
+position = Vector2(40600, -24000)
+scale = Vector2(8, 8)
+texture = ExtResource("1_w4lvk")
+
+[node name="seam3" type="Sprite2D" parent="Background" unique_id=1706836590]
+position = Vector2(15400, -24000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_qpl4f")
+
+[node name="seam4" type="Sprite2D" parent="Background" unique_id=1616610961]
+position = Vector2(32200, -24000)
+scale = Vector2(8, 8)
+texture = ExtResource("2_qpl4f")
+
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_gpwul")]
 position = Vector2(233, -323)
 
@@ -4904,7 +4953,7 @@ position = Vector2(233, -323)
 position = Vector2(-2192, -119)
 
 [node name="Conductor" parent="Req" index="3" unique_id=438348041]
-current_music_resource = SubResource("Resource_xjm36")
+current_music_resource = ExtResource("12_qpl4f")
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
@@ -5136,6 +5185,14 @@ position = Vector2(-38, -171)
 position = Vector2(-1159, -1078)
 scale = Vector2(1, 20)
 track = ExtResource("14_85smj")
+change_if_same_music_track = true
+start_camera_pathing = true
+vinyl_string = "crypt"
+
+[node name="MusicChangeTrigger2" parent="Music Change Triggers" unique_id=162295665 instance=ExtResource("13_chbkr")]
+position = Vector2(-1426, -189)
+scale = Vector2(1.79, 1.81)
+track = ExtResource("12_qpl4f")
 change_if_same_music_track = true
 start_camera_pathing = true
 vinyl_string = "crypt"

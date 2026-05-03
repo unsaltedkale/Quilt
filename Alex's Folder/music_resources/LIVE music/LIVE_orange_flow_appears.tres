@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_650np")
+display_name = "Ebb"
 track = ExtResource("2_4h41i")
 bpm = 140.0
 metadata/_custom_type_script = "uid://4ekgwvgt60r0"
