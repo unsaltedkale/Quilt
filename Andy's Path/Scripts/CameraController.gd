@@ -67,7 +67,7 @@ func _path(string: String):
 				if tween	:
 					tween.kill()
 				tween = get_tree().create_tween()
-				tween.tween_property(self, "position", vinyl[i], 0.5)
+				tween.tween_property(self, "position", vinyl[i], 0.51)
 				await tween.finished
 		print("TWEEN DONE")
 
