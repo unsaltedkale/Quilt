@@ -3,7 +3,7 @@ extends Node2D
 @export var bar_appear: float = 1
 @export var beat_appear: float = 1
 @export var bar_delete: float = 1
-@export var beat_delete: float = 3
+@export var beat_delete: float = 0
 @onready var Conductor = get_tree().get_first_node_in_group("Conductor")
 @export var only_on_music_trigger_track: bool
 @export var music_trigger: music_resource = preload("res://Alex's Folder/music_resources/LIVE music/LIVE_substratum.tres")

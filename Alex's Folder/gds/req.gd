@@ -8,6 +8,7 @@ enum req_type {staging, prod}
 @onready var mb_p = preload("res://Alex's Folder/tscns/Tile Particle Effects/magical_barrier_particle.tscn")
 @onready var umb_p = preload("res://Alex's Folder/tscns/Tile Particle Effects/unmagical_barrier_particle.tscn")
 @onready var mir_p = preload("res://Alex's Folder/tscns/Tile Particle Effects/mirror_particle.tscn")
+@onready var b_p = preload("res://Salem WIPs/breakable_tile_particle.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -39,11 +40,9 @@ func _set_tile_particles() -> void:
 	if get_tree().get_first_node_in_group("Req").a == req_type.staging:
 		
 		var tiles = $"../Tiles"
-		print("setting...")
+		#This code never runs. Why????????
 		for tml in tiles.get_children():
-			
 			var p = null
-			
 			match tml.name:
 				"Magical_Barrier":
 					p = mb_p
@@ -81,7 +80,7 @@ func _set_tile_particles() -> void:
 				
 				print(vinnie)
 				
-				print("setting...")
+				#print("setting...")
 				
 				for tml in tiles.get_children():
 					
@@ -94,6 +93,10 @@ func _set_tile_particles() -> void:
 							p = umb_p
 						"Mirror":
 							p = mir_p
+					if tml.is_in_group("Magical_Barrier"): p = mb_p
+					if tml.is_in_group("Unmagical_Barrier"): p = umb_p
+					if tml.is_in_group("Mirror"): p = mir_p
+					if tml.is_in_group("Breakable_Layer"): p = b_p
 					
 					if p != null:
 						for v in tml.get_used_cells():
@@ -104,6 +107,8 @@ func _set_tile_particles() -> void:
 							var part = p.instantiate()
 							part.position = globalCellPosition
 							get_tree().current_scene.add_child(part)
+							if p == b_p:
+								tml.get_child(0).particles.append(part)
 							pass
 					pass
 	pass

@@ -5014,20 +5014,14 @@ position = Vector2(753, -722)
 position = Vector2(1561, -1129)
 
 [node name="MakeItMusical2" parent="One-Way Platforms/One_Way_Platform5" unique_id=1397534651 instance=ExtResource("7_dwgqq")]
-bar_delete = 1.0
 beat_delete = 4.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="One_Way_Platform6" parent="One-Way Platforms" unique_id=1318850287 instance=ExtResource("16_j1cio")]
 position = Vector2(2195, -1279)
 
 [node name="MakeItMusical2" parent="One-Way Platforms/One_Way_Platform6" unique_id=931463495 instance=ExtResource("7_dwgqq")]
 beat_appear = 3.0
-bar_delete = 1.0
 beat_delete = 2.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Particles" type="Node2D" parent="." unique_id=1086204351]
 position = Vector2(-38, -171)

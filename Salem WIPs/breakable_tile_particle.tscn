@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cxg00upkwy0q"]
+
+[ext_resource type="Texture2D" uid="uid://2gm25jihfmi7" path="res://Elena/Art/Spike.png" id="1_yfr3g"]
+
+[node name="MagicalBarrierParticle" type="CPUParticles2D" unique_id=167435820]
+z_index = 10
+amount = 6
+texture = ExtResource("1_yfr3g")
+lifetime = 3.0
+randomness = 0.8
+lifetime_randomness = 0.6
+emission_shape = 3
+emission_rect_extents = Vector2(48, 48)
+gravity = Vector2(0, 0)
+radial_accel_min = -3.0
+radial_accel_max = 3.0
+color = Color(0.33084226, 0.3240343, 0.1061789, 1)

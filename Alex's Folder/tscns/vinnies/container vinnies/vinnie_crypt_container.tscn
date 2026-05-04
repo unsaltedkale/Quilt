@@ -1707,6 +1707,10 @@ position = Vector2(8704, -768)
 [node name="ALEX_meet_quilt_cutscene" parent="." unique_id=448999508 instance=ExtResource("6_n6xr7")]
 position = Vector2(13056, 256)
 
+[node name="Req" parent="ALEX_meet_quilt_cutscene" index="0" unique_id=276038067]
+a = 0
+has_set_tile_particles = false
+
 [node name="ALEX_stasis_sequence" parent="." unique_id=228213048 instance=ExtResource("7_e7kwk")]
 position = Vector2(13696, 256)
 
