@@ -2,13 +2,13 @@ extends Node2D
 
 @export var bar_appear: float = 1
 @export var beat_appear: float = 1
-@export var bar_delete: float = 0
-@export var beat_delete: float = 0
+@export var bar_delete: float = 1
+@export var beat_delete: float = 3
 @onready var Conductor = get_tree().get_first_node_in_group("Conductor")
 @export var only_on_music_trigger_track: bool
 @export var music_trigger: music_resource = preload("res://Alex's Folder/music_resources/LIVE music/LIVE_substratum.tres")
-@export var repeat_pattern: bool
-@export var mod_bar = 0
+@export var repeat_pattern: bool = true
+@export var mod_bar = 1
 @export var mod_beat = 0
 @export var active = true
 

@@ -4803,6 +4803,6 @@ lever_path = NodePath("../Lever")
 [node name="Vinyls" type="Node2D" parent="." unique_id=446841229]
 
 [node name="Vinyl" parent="." unique_id=2078547140 instance=ExtResource("9_32ci8")]
-position = Vector2(2987, -377)
+position = Vector2(3925, 167)
 
 [editable path="Req"]

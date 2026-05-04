@@ -3224,4 +3224,6 @@ scale_amount_min = 8.0
 scale_amount_max = 16.0
 color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 
+[node name="platform" type="Node2D" parent="." unique_id=1612218071]
+
 [editable path="Req"]
