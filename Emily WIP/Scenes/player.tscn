@@ -57,7 +57,8 @@ radius = 5.5
 height = 24.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjwd1"]
-radius = 6.25
+radius = 5.7065215
+height = 28.977272
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jo8y"]
 size = Vector2(11.25, 10.75)
@@ -1582,14 +1583,12 @@ position = Vector2(0.75, -9.25)
 shape = SubResource("CapsuleShape2D_1jo8y")
 
 [node name="PhloCollider" type="CollisionShape2D" parent="." unique_id=357307041]
-visible = false
 position = Vector2(-0.25, 0.5)
 scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
 disabled = true
 
 [node name="TileMapCheck" type="Area2D" parent="." unique_id=529154427]
-visible = false
 light_mask = 2
 visibility_layer = 2
 collision_layer = 2
@@ -1603,7 +1602,7 @@ shape = SubResource("RectangleShape2D_1jo8y")
 material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(0, 0.25)
 sprite_frames = SubResource("SpriteFrames_qn8pe")
-animation = &"idle"
+animation = &"phlo_idle"
 script = ExtResource("13_1nwdr")
 
 [node name="StateMachine" type="Node" parent="." unique_id=621642771 node_paths=PackedStringArray("initial_state")]
