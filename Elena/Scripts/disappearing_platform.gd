@@ -10,26 +10,18 @@ var start_rotation: float
 @onready var crumble_sfx : AudioStreamPlayer = $"Crumbling"
 
 func _ready() -> void:
-	
-	if get_tree().get_first_node_in_group("Req") != null:
-		player = get_tree().get_first_node_in_group("Player")
-	else:
-		player = $"../Player"
+	setup.call_deferred()
 	
 	start_position = global_position
 	start_rotation = rotation
 	timer.wait_time = time
 
+func setup():
+	player = get_tree().get_first_node_in_group("Player")
+	player.player_death.connect(reset_platforms)
+
 func _process(_delta: float) -> void:
-	if player != null:
-		if not player.player_death.is_connected(reset_platforms):
-			player.player_death.connect(reset_platforms)
-	else:
-		if get_tree().get_first_node_in_group("Req") != null:
-			player = get_tree().get_first_node_in_group("Player")
-		else:
-			player = $"../Player"
-	
+	assert(player != null, "PLAUER DONT EXISST WHY")
 	#make the sfx fade out so it's basically gone by the time the platform disappears
 	if !timer.is_stopped(): crumble_sfx.volume_linear = 0.5 * (timer.time_left / time) ** 2
 

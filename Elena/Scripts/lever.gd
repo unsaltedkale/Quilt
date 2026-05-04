@@ -1,83 +1,52 @@
 extends Node2D
-var state = "left"
+class_name Lever
+
+var isLeft = true
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 var player : Player
 @export var tt: RichTextLabel
-
 var player_in_area: bool = false
-signal changed(new_state)
-
+signal changed(is_left)
 @onready var click_sfx : AudioStreamPlayer = $"Click"
 
 func _ready() -> void:
-	if get_tree().get_first_node_in_group("Req") != null:
-		player = get_tree().get_first_node_in_group("Player")
-	else:
-		player = $"../Player"
+	setup.call_deferred()
 	tt.visible = false
-	
-	if state == "left":
-		anim.play("lever_switch_to_left")
-		anim.frame = 4
-	elif state == "right":
-		anim.play("lever_switch_to_right")
-		anim.frame = 4
-		
+	anim.play("lever_switch_to_left")
+	anim.frame = 4
+
+func setup():
+	player = get_tree().get_first_node_in_group("Player")
+	player.player_death.connect(reset_lever)
 
 func _process(_delta) -> void:
-	
-	if player != null:
-		if not player.player_death.is_connected(_on_player_death):
-			player.player_death.connect(_on_player_death)
-	
 	if player_in_area:
 		tt.visible = true
 	else:
 		tt.visible = false
-	
 	if player_in_area and Input.is_action_just_pressed("interact") && not anim.is_playing():
 		_toggle_lever(true, false)
-	
-	#Connect player death to reset lever
-	if player != null:
-		if not player.player_death.is_connected(reset_lever):
-			player.player_death.connect(reset_lever)
-	else:
-		if get_tree().get_first_node_in_group("Req") != null:
-			player = get_tree().get_first_node_in_group("Player")
-		else:
-			player = $"../Player"
-	
+
 func _toggle_lever(sfx: bool, instant: bool):
-	if state == "right":
-		state = "left"
+	if !isLeft:
+		isLeft = true
 		anim.play("lever_switch_to_left")
 		if instant:
 			anim.frame = 4
 		if sfx:
 			click_sfx.pitch_scale = 0.22
 			click_sfx.play()
-		print("lever: state=left")
-		changed.emit(state)
-		
-	elif state == "left":
-		state = "right" 
+	else:
+		isLeft = false
 		anim.play("lever_switch_to_right")
 		if instant:
 			anim.frame = 4
 		if sfx:
 			click_sfx.pitch_scale = 0.2
 			click_sfx.play()
-		print("lever: state=right")
-		changed.emit(state)
-
-func _on_player_death():
-	if state == "right":
-		_toggle_lever(false, true)
-	pass
+	changed.emit(isLeft)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("a")
 	if body.is_in_group("Player"):
 		player_in_area = true
 	if body.is_in_group("Projectile") and !anim.is_playing():
@@ -88,5 +57,5 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		player_in_area = false
 		
 func reset_lever():
-	state = "left"
-	changed.emit(state)
+	isLeft = true
+	changed.emit(isLeft)

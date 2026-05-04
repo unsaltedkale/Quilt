@@ -7790,17 +7790,17 @@ color = Color(0.4509804, 0.39215687, 0.38431373, 1)
 
 [node name="LeverPlatforms" type="Node2D" parent="." unique_id=688685438]
 
-[node name="leverplatform" parent="LeverPlatforms" unique_id=96890641 instance=ExtResource("20_lmusl")]
+[node name="leverplatform" parent="LeverPlatforms" unique_id=96890641 node_paths=PackedStringArray("lever") instance=ExtResource("20_lmusl")]
 position = Vector2(7613, -1604)
 point_a = Vector2(7613, -1607)
 point_b = Vector2(7613, -2365)
-lever_path = NodePath("../Lever")
+lever = NodePath("../Lever")
 
-[node name="leverplatform2" parent="LeverPlatforms" unique_id=217256762 instance=ExtResource("20_lmusl")]
+[node name="leverplatform2" parent="LeverPlatforms" unique_id=217256762 node_paths=PackedStringArray("lever") instance=ExtResource("20_lmusl")]
 position = Vector2(5796, -2370)
 point_a = Vector2(5796, -2370)
 point_b = Vector2(6866, -2370)
-lever_path = NodePath("../Lever2")
+lever = NodePath("../Lever2")
 
 [node name="Lever" parent="LeverPlatforms" unique_id=1957476101 instance=ExtResource("21_lhm4f")]
 position = Vector2(7236, -1727)
