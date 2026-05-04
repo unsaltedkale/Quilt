@@ -1,41 +1,31 @@
 extends RichTextLabel
 
 @export var type: message_type
-@onready var ri
+@onready var recoil_indicator
 
 enum input_type {keyboard, controller}
-
 enum message_type {movement, jump, recoil, interact, reset_point, dialogue_continue, stasis_warning, crouch}
-
 var input: input_type
-
 var movement_message: Array[String]
-
 var jump_message: Array[String]
-
 var recoil_message: Array[String]
-
 var interact_message: Array[String]
-
 var resetpoint_message: Array[String]
-
 var dialogue_continue_message: Array[String]
-
 var stasis_warning_message: Array[String]
-
 var crouch_message: Array[String]
-
 var super_array: Array[Array]
-
 var super_dictionary: Dictionary[message_type, Array]
 
+func find_recoil_indicator():
+	recoil_indicator = get_tree().get_first_node_in_group("Player").find_child("recoil_indicator")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	find_recoil_indicator.call_deferred()
 	input = input_type.keyboard
 	
 	if get_parent().name == "DialogueScreen":
-		ri = $"../../../../../Player/recoil_indicator"
+		recoil_indicator = $"../../../../../Player/recoil_indicator"
 	
 	#KEYBOARD MOUSE = 0, CONTROLLER = 1
 	
@@ -59,47 +49,29 @@ func _ready() -> void:
 		message_type.stasis_warning: stasis_warning_message,
 		message_type.crouch: crouch_message
 		}
-	
-	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	
-	if ri == null && get_tree().get_first_node_in_group("Player") != null:
-		ri = get_tree().get_first_node_in_group("Player").find_child("recoil_indicator")
-	else:
-		if ri != null:
-			if ri.controller == false:
-				input = input_type.keyboard
-			elif ri.controller == true:
-				input = input_type.controller
-			var l = (str(super_dictionary[type][input]))
-			while l.contains("{"):
-				var start = l.find("{")
-				
-				var end = l.find("}", start + 1)
-				
-				var pic = l.substr(start, end - start + 1)
-				
-				var picClean = pic.replace("{", "")
-				
-				picClean = picClean.replace("}", "")
-				
-				#[img=64]res://Art/Tool Tips/ttm_20.png[/img]
-				
-				#if animation not found throw error and play empty 
-				if load("res://Art/Tool Tips/ttm_" + picClean + ".png") != null:
-					l = l.replace("{" + picClean +  "}", "[img=96]res://Art/Tool Tips/ttm_" + picClean + ".png[/img]")
-				else:
-					print_debug("ERROR: Image for text not found. Name: " + picClean)
-				
-				if get_parent().name == "DialogueScreen":
-					l = l.replace("96", "64")
-				
-			text = l
-			#print(text)
+	assert(recoil_indicator != null, "RI NOT FOUND!!! FUCK YOU!!!!!")
+	if recoil_indicator.controller == false:
+		input = input_type.keyboard
+	elif recoil_indicator.controller == true:
+		input = input_type.controller
+	var l = (str(super_dictionary[type][input]))
+	while l.contains("{"):
+		var start = l.find("{")
+		var end = l.find("}", start + 1)
+		var pic = l.substr(start, end - start + 1)
+		var picClean = pic.replace("{", "")
+		picClean = picClean.replace("}", "")
+		
+		#[img=64]res://Art/Tool Tips/ttm_20.png[/img]
+		#if animation not found throw error and play empty 
+		if load("res://Art/Tool Tips/ttm_" + picClean + ".png") != null:
+			l = l.replace("{" + picClean +  "}", "[img=96]res://Art/Tool Tips/ttm_" + picClean + ".png[/img]")
 		else:
-			if get_tree().get_first_node_in_group("player") != null:
-				ri = get_tree().get_first_node_in_group("player").find_child("recoil_indicator")
-		pass
+			print_debug("ERROR: Image for text not found. Name: " + picClean)
+		if get_parent().name == "DialogueScreen":
+			l = l.replace("96", "64")
+	text = l
+	#print(text)
