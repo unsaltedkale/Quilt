@@ -5052,6 +5052,6 @@ scale = Vector2(0.9999999, 0.9999999)
 position = Vector2(4182, -1948)
 speed = 1000.0
 start_position = Vector2(4182, -1948)
-end_position = Vector2(4500, 500)
+end_position = Vector2(4500, -200)
 
 [editable path="Req"]

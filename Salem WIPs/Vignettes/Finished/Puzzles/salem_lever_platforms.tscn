@@ -4774,8 +4774,19 @@ scale = Vector2(0.9999999, 0.9999999)
 position = Vector2(-848, -1359)
 scale = Vector2(0.9999999, 0.9999999)
 
-[node name="NPCs" type="Node2D" parent="." unique_id=1296886211]
-position = Vector2(-38, -171)
+[node name="Lever2" type="Node2D" parent="." unique_id=1296886211]
+
+[node name="Lever" parent="Lever2" unique_id=1838558751 instance=ExtResource("14_4byc7")]
+position = Vector2(-897, -2230)
+
+[node name="leverplatform" parent="Lever2" unique_id=767755531 instance=ExtResource("15_0lc01")]
+position = Vector2(2500, -100)
+scale = Vector2(1, 10)
+point_a = Vector2(2500, -100)
+point_b = Vector2(2500, -1000)
+speed = 50.0
+wait_time = 1.0
+lever_path = NodePath("../Lever")
 
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 position = Vector2(-38, -171)
@@ -4808,17 +4819,5 @@ position = Vector2(-38, -171)
 
 [node name="ResetPoint" parent="Resetpoints" unique_id=126288163 instance=ExtResource("17_1oech")]
 position = Vector2(1771, -1287)
-
-[node name="Lever" parent="." unique_id=1838558751 instance=ExtResource("14_4byc7")]
-position = Vector2(-897, -2230)
-
-[node name="leverplatform" parent="." unique_id=767755531 instance=ExtResource("15_0lc01")]
-position = Vector2(2500, -100)
-scale = Vector2(1, 10)
-point_a = Vector2(2500, -100)
-point_b = Vector2(2500, -1000)
-speed = 50.0
-wait_time = 1.0
-lever_path = NodePath("../Lever")
 
 [editable path="Req"]
