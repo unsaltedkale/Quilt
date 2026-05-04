@@ -1893,7 +1893,7 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(1023, 6259)
+position = Vector2(-6627, -3570)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]
 position = Vector2(-46, 318)
@@ -1903,13 +1903,6 @@ current_music_resource = SubResource("Resource_sh3um")
 
 [node name="phlo_backpack" parent="Req" index="4" unique_id=47144264]
 position = Vector2(-330, 226)
-
-[node name="Camera_Change_Trigger" parent="Req" unique_id=404059404 instance=ExtResource("4_mcxyt")]
-position = Vector2(14097, 9737)
-scale = Vector2(429.966, 246.73688)
-cameraOffsetX = 17691.002
-cameraOffsetY = 524.0
-targetZoom = 0.25
 
 [node name="conductorplats" parent="." unique_id=717044410 instance=ExtResource("8_pkjh2")]
 position = Vector2(-7808, 6528)
@@ -1936,5 +1929,11 @@ tile_set = SubResource("TileSet_dkfia")
 position = Vector2(-8803, -11970.999)
 scale = Vector2(8.96, 2.76)
 container = ExtResource("11_qu3aa")
+
+[node name="Camera Trigger" type="Node2D" parent="." unique_id=1661116877]
+
+[node name="Change_Camera_Trigger" parent="Camera Trigger" unique_id=404059404 instance=ExtResource("4_mcxyt")]
+position = Vector2(-8817, -8839)
+scale = Vector2(171.5877, 322.8607)
 
 [editable path="Req"]

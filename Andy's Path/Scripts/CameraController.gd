@@ -34,7 +34,7 @@ func _ready() -> void:
 	in_path = false
 	pity_kill_timer = pity_kill_timer_max
 	
-	cameraTriggerRef = $"../Camera_Change_Trigger"
+	cameraTriggerRef = get_node_or_null("../../Misc/Change_Camera_Trigger")
 	playerReference = $"../Player"
 	print(playerReference)
 	pk_timer = $"../CanvasLayer/Pity Kill Timer"

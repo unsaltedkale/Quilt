@@ -6,7 +6,7 @@ extends Node
 @export var targetZoom = 0.5
 @export var zoomSpeed = 1
 
-@onready var cameraRef = $"../Camera2D"
+@onready var cameraRef = $"../../Req/Camera2D" 
 @onready var inCameraTrigger = false
 
 func _on_body_entered(body: Node2D) -> void:

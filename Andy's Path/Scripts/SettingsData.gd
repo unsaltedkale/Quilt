@@ -1,6 +1,6 @@
 extends Node
 
-var textSize = 0
+var textSize = 10
 var generalVolumeValue = 0
 var dialogueVolumeValue = 0
 var SFXVolumeValue = 0
