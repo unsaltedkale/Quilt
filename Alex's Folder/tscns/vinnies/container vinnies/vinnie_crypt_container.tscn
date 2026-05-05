@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ohtbpgrgoldl" path="res://Resources/Crypt tilling- Vertical - USE.png" id="2_f8255"]
 [ext_resource type="PackedScene" uid="uid://q5d5pmbhobtw" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_2.tscn" id="2_vnuq1"]
 [ext_resource type="PackedScene" uid="uid://be4hocxkgbx4f" path="res://Salem WIPs/Vignettes/In Use/salem_recoil_tutorial_phlo.tscn" id="3_7qoo3"]
-[ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/salem_phlo_platforms.tscn" id="4_lcxdb"]
+[ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/In Use/salem_phlo_platforms.tscn" id="4_lcxdb"]
 [ext_resource type="PackedScene" uid="uid://bcafj313e7kp5" path="res://Emily WIP/Vinnies/short/Emily_Phlo_Crypt_jump.tscn" id="5_r6uf6"]
 [ext_resource type="PackedScene" uid="uid://c4m3b84ph3441" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_quilt_cutscene.tscn" id="6_n6xr7"]
 [ext_resource type="PackedScene" uid="uid://dvubqeyj1ycv2" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_1.tscn" id="7_e7kwk"]
@@ -1663,8 +1663,22 @@ color = Color(0.078431375, 0.05882353, 0.078431375, 1)
 [node name="ColorRect2" type="ColorRect" parent="BackgroundRect" unique_id=1820282157]
 offset_left = -2838.0
 offset_top = 71.0
-offset_right = 9471.0
+offset_right = 29705.0
 offset_bottom = 3641.0
+color = Color(0.078431375, 0.05882353, 0.078431375, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="BackgroundRect" unique_id=328071764]
+offset_left = 9895.0
+offset_top = -1630.0
+offset_right = 12432.0
+offset_bottom = 675.0
+color = Color(0.078431375, 0.05882353, 0.078431375, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="BackgroundRect" unique_id=1443101592]
+offset_left = 8279.0
+offset_top = -831.0
+offset_right = 10816.0
+offset_bottom = 1474.0
 color = Color(0.078431375, 0.05882353, 0.078431375, 1)
 
 [node name="Background" type="Node2D" parent="." unique_id=1591342103]
