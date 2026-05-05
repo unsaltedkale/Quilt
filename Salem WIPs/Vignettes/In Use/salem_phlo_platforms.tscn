@@ -4770,14 +4770,17 @@ position = Vector2(838, -100)
 position = Vector2(1395, -500)
 
 [node name="MakeItMusical" parent="One-Way Platforms/One_Way_Platform4" index="2" unique_id=610594064]
-beat_delete = 3.0
+bar_delete = 2.0
+beat_delete = 1.0
+mod_bar = 2
 
 [node name="One_Way_Platform5" parent="One-Way Platforms" unique_id=1361813231 instance=ExtResource("6_510pf")]
 position = Vector2(1764, -500)
 
 [node name="MakeItMusical" parent="One-Way Platforms/One_Way_Platform5" index="2" unique_id=610594064]
-beat_appear = 3.0
+bar_appear = 2.0
 beat_delete = 1.0
+mod_bar = 2
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1070604728]
 

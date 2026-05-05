@@ -1667,6 +1667,27 @@ offset_right = 29705.0
 offset_bottom = 3641.0
 color = Color(0.078431375, 0.05882353, 0.078431375, 1)
 
+[node name="ColorRect5" type="ColorRect" parent="BackgroundRect" unique_id=885745294]
+offset_left = 16535.0
+offset_top = -1373.0
+offset_right = 30945.0
+offset_bottom = 1762.0
+color = Color(0.078431375, 0.05882353, 0.078431375, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="BackgroundRect" unique_id=323270743]
+offset_left = 19800.0
+offset_top = -2653.0
+offset_right = 21843.0
+offset_bottom = -316.0
+color = Color(0.078431375, 0.05882353, 0.078431375, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="BackgroundRect" unique_id=381452971]
+offset_left = 11843.0
+offset_top = -2438.0
+offset_right = 12497.0
+offset_bottom = -1004.0
+color = Color(0.078431375, 0.05882353, 0.078431375, 1)
+
 [node name="ColorRect3" type="ColorRect" parent="BackgroundRect" unique_id=328071764]
 offset_left = 9895.0
 offset_top = -1630.0
