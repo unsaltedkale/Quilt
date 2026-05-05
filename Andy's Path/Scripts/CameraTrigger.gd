@@ -6,7 +6,7 @@ extends Node
 @export var targetZoom = 0.5
 @export var zoomSpeed = 1
 
-@onready var cameraRef = $"../../Req/Camera2D" 
+@export var cameraRef: Node
 @onready var inCameraTrigger = false
 
 func _on_body_entered(body: Node2D) -> void:
@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	if inCameraTrigger == true:
 		cameraRef.zoom.x = lerp(cameraRef.zoom.x, targetZoom, delta*zoomSpeed)
 		cameraRef.zoom.y = lerp(cameraRef.zoom.y, targetZoom, delta*zoomSpeed)
-		
+
 		cameraRef.global_position.x = lerp(cameraRef.global_position.x, cameraOffsetX, delta*zoomSpeed)
 		cameraRef.global_position.y = lerp(cameraRef.global_position.y, cameraOffsetY, delta*zoomSpeed)
 	else:

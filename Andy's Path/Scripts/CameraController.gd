@@ -16,7 +16,7 @@ var pk_timer
 var pity_kill_timer: float
 var pity_kill_timer_max: float = 3.0
 var tween
-var cameraTriggerRef
+@export var cameraTriggerRef: Node
 
 
 # NOTE: camera zoom HAS to evenly divide pixels or else it will double 
@@ -34,7 +34,6 @@ func _ready() -> void:
 	in_path = false
 	pity_kill_timer = pity_kill_timer_max
 	
-	cameraTriggerRef = get_node_or_null("../../Misc/Change_Camera_Trigger")
 	playerReference = $"../Player"
 	print(playerReference)
 	pk_timer = $"../CanvasLayer/Pity Kill Timer"
