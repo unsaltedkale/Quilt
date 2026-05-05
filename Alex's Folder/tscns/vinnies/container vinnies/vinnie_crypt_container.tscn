@@ -1651,7 +1651,17 @@ sources/0 = SubResource("TileSetAtlasSource_q0spj")
 
 [node name="VinnieContainer2" type="Node2D" unique_id=1741857314]
 
+[node name="BackgroundRect" type="Node2D" parent="." unique_id=1496105472]
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundRect" unique_id=1066807203]
+offset_left = -5270.0
+offset_top = -7768.0
+offset_right = -1270.0
+offset_bottom = 2232.0
+color = Color(0.09411765, 0.08627451, 0.09411765, 1)
+
 [node name="Background" type="Node2D" parent="." unique_id=1591342103]
+visible = false
 z_index = -50
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=297138947]

@@ -4758,16 +4758,26 @@ respawn_timer_max = 1.0
 [node name="One-Way Platforms" type="Node2D" parent="." unique_id=723777252]
 
 [node name="One_Way_Platform2" parent="One-Way Platforms" unique_id=1346779251 instance=ExtResource("6_510pf")]
-position = Vector2(862, -162)
+position = Vector2(838, -300)
 
 [node name="One_Way_Platform3" parent="One-Way Platforms" unique_id=69007998 instance=ExtResource("6_510pf")]
-position = Vector2(1064, -267)
+position = Vector2(838, -500)
+
+[node name="One_Way_Platform6" parent="One-Way Platforms" unique_id=2098837455 instance=ExtResource("6_510pf")]
+position = Vector2(838, -100)
 
 [node name="One_Way_Platform4" parent="One-Way Platforms" unique_id=860951063 instance=ExtResource("6_510pf")]
-position = Vector2(1067, -397)
+position = Vector2(1395, -500)
 
-[node name="One_Way_Platform5" parent="One-Way Platforms" unique_id=1895570656 instance=ExtResource("6_510pf")]
-position = Vector2(1635, -407)
+[node name="MakeItMusical" parent="One-Way Platforms/One_Way_Platform4" index="2" unique_id=610594064]
+beat_delete = 3.0
+
+[node name="One_Way_Platform5" parent="One-Way Platforms" unique_id=1361813231 instance=ExtResource("6_510pf")]
+position = Vector2(1764, -500)
+
+[node name="MakeItMusical" parent="One-Way Platforms/One_Way_Platform5" index="2" unique_id=610594064]
+beat_appear = 3.0
+beat_delete = 1.0
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1070604728]
 
@@ -4775,3 +4785,5 @@ position = Vector2(1635, -407)
 position = Vector2(-252, -59)
 
 [editable path="Req"]
+[editable path="One-Way Platforms/One_Way_Platform4"]
+[editable path="One-Way Platforms/One_Way_Platform5"]

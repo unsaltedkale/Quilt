@@ -1893,7 +1893,7 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(-7587, -2987)
+position = Vector2(1014, 6243)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542 node_paths=PackedStringArray("cameraTriggerRef")]
 position = Vector2(-46, 318)
@@ -1913,7 +1913,7 @@ position = Vector2(-7808, 6528)
 [node name="crouchpuzzle" parent="." unique_id=91287903 instance=ExtResource("5_jll2y")]
 position = Vector2(-2560, -3456)
 
-[node name="mobilegame" parent="." unique_id=1932893549 instance=ExtResource("6_sh3um")]
+[node name="gem_spike_box" parent="." unique_id=1932893549 instance=ExtResource("6_sh3um")]
 position = Vector2(-20864, -4992)
 
 [node name="spiderweb" parent="." unique_id=156226622 instance=ExtResource("7_xcmr2")]
