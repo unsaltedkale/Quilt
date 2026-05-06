@@ -6,6 +6,7 @@ var dialogueVolumeValue
 var SFXVolumeValue
 var MusicVolumeValue
 var isColorblind
+var isMetronome
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -15,6 +16,7 @@ func _ready() -> void:
 	$VolumeSettings/DialogueSlider.value = SettingsData.dialogueVolumeValue
 	$VolumeSettings/SoundFXSlider.value = SettingsData.SFXVolumeValue
 	$VolumeSettings/MusicSlider.value = SettingsData.MusicVolumeValue
+	$Metronome.button_pressed = SettingsData.isMetronome
 	
 	self.visible = false
 #	if $"../../../../Title Screen" != null:
@@ -26,7 +28,8 @@ func _process(delta: float) -> void:
 	dialogueVolumeValue = $VolumeSettings/DialogueSlider.value
 	SFXVolumeValue = $VolumeSettings/SoundFXSlider.value
 	MusicVolumeValue = $VolumeSettings/MusicSlider.value
-	SettingsData.updateValues(textSize, generalVolumeValue, dialogueVolumeValue, SFXVolumeValue, MusicVolumeValue)
+	isMetronome = $Metronome.button_pressed
+	SettingsData.updateValues(textSize, generalVolumeValue, dialogueVolumeValue, SFXVolumeValue, MusicVolumeValue, isMetronome)
 
 	
 func _force_open():

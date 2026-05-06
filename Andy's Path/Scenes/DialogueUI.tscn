@@ -1031,5 +1031,15 @@ scale = Vector2(3.1871705, 3.1871705)
 theme_override_fonts/font = ExtResource("2_yhc7a")
 text = "Colorblind Mode"
 
+[node name="Metronome" type="CheckButton" parent="UI/Settings" unique_id=1469316888]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 648.0
+offset_right = 243.0
+offset_bottom = 672.0
+scale = Vector2(3.1871705, 3.1871705)
+theme_override_fonts/font = ExtResource("2_yhc7a")
+text = "Metronome"
+
 [connection signal="pressed" from="UI/DialogueScreen/Button" to="UI/DialogueScreen/Button" method="_on_pressed"]
 [connection signal="pressed" from="UI/Settings/MainMenuReturn" to="UI/Settings/MainMenuReturn" method="_on_pressed"]

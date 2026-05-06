@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://2bpi2d7g1hn7"]
+[gd_scene format=3 uid="uid://2bpi2d7g1hn7"]
 
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="1_rh2f0"]
 [ext_resource type="Texture2D" uid="uid://dvteui4csx23w" path="res://Art/Quilt STAR-1.png" id="2_l87l8"]
@@ -23,8 +23,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Metronome" type="AnimatedSprite2D"]
+[node name="Metronome" type="AnimatedSprite2D" unique_id=927598655]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_0ie5t")
 animation = &"off"
 script = ExtResource("3_l87l8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=337046226]
+texture = ExtResource("2_l87l8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=974213137]
+texture = ExtResource("2_l87l8")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=383650151]
+texture = ExtResource("2_l87l8")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1822844412]
+texture = ExtResource("2_l87l8")

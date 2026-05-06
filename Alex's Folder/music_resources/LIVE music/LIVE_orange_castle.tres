@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_v3rpt")
+display_name = "Gilded Hals"
 track = ExtResource("2_52c7b")
 bpm = 75.0
 metadata/_custom_type_script = "uid://4ekgwvgt60r0"

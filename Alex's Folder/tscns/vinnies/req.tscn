@@ -48,7 +48,7 @@ position = Vector2(-511, -185)
 
 [node name="Metronome" parent="CanvasLayer" unique_id=939664078 instance=ExtResource("6_wtnwk")]
 visible = false
-position = Vector2(960, 806)
+position = Vector2(960, 960.00006)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1849977681]
 visible = false
