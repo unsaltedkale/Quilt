@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt1w85276yf8y"]
 
-[ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player.gd" id="1_jfghr"]
+[ext_resource type="Script" uid="uid://dcm8iowk5lhr" path="res://Emily WIP/Scripts/player/player.gd" id="1_jfghr"]
 [ext_resource type="Shader" uid="uid://07ctkva385i5" path="res://Alex's Folder/greyscale.gdshader" id="2_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://b2onlr5ggkomh" path="res://Art/recoil indicator.png" id="2_icvrh"]
 [ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="2_sfidj"]
@@ -27,17 +27,17 @@
 [ext_resource type="Texture2D" uid="uid://v6lnp4ltt52v" path="res://Art/Phlo Spritesheet Idle.png" id="14_33mbb"]
 [ext_resource type="Texture2D" uid="uid://b11e7u6tdq2t" path="res://Art/Phlo Spritesheet Jump.png" id="15_3uy0y"]
 [ext_resource type="Texture2D" uid="uid://cjfqi2ftbtkcu" path="res://Art/Phlo Spritesheet Land.png" id="16_1nwdr"]
-[ext_resource type="Script" uid="uid://cmug6yd5oib3y" path="res://Emily WIP/Scripts/fall.gd" id="18_4hfjo"]
-[ext_resource type="Script" uid="uid://jro08s262tht" path="res://Emily WIP/Scripts/recoil.gd" id="19_33mbb"]
-[ext_resource type="Script" uid="uid://pskmvmf7x2b0" path="res://Emily WIP/Scripts/stasis_state.gd" id="20_3uy0y"]
-[ext_resource type="Script" uid="uid://muc8alk7w4hs" path="res://Emily WIP/Scripts/cutscene.gd" id="21_1nwdr"]
-[ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/state_machine.gd" id="22_0lugl"]
-[ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/idle_state.gd" id="23_3jtwp"]
-[ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/walk.gd" id="24_p2d1a"]
-[ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/jump.gd" id="25_hiv3f"]
-[ext_resource type="Script" uid="uid://bbolaewr5lju4" path="res://Emily WIP/Scripts/wall_stick.gd" id="33_jgwx7"]
+[ext_resource type="Script" uid="uid://cmug6yd5oib3y" path="res://Emily WIP/Scripts/player/movement/fall.gd" id="18_4hfjo"]
+[ext_resource type="Script" uid="uid://jro08s262tht" path="res://Emily WIP/Scripts/player/movement/recoil.gd" id="19_33mbb"]
+[ext_resource type="Script" uid="uid://pskmvmf7x2b0" path="res://Emily WIP/Scripts/player/movement/stasis_state.gd" id="20_3uy0y"]
+[ext_resource type="Script" uid="uid://muc8alk7w4hs" path="res://Emily WIP/Scripts/player/movement/cutscene.gd" id="21_1nwdr"]
+[ext_resource type="Script" uid="uid://d4l68rhscfpna" path="res://Emily WIP/Scripts/player/state_machine.gd" id="22_0lugl"]
+[ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/player/movement/idle_state.gd" id="23_3jtwp"]
+[ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/player/movement/walk.gd" id="24_p2d1a"]
+[ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/player/movement/jump.gd" id="25_hiv3f"]
+[ext_resource type="Script" uid="uid://bbolaewr5lju4" path="res://Emily WIP/Scripts/player/movement/wall_stick.gd" id="33_jgwx7"]
 [ext_resource type="AudioStream" uid="uid://xewlitg8yvow" path="res://Resources/SFX/Phlo SFX/Phlo Death .wav" id="34_2k042"]
-[ext_resource type="Script" uid="uid://cirmqgmvmxwv" path="res://Emily WIP/Scripts/wall_jump.gd" id="34_a45e1"]
+[ext_resource type="Script" uid="uid://cirmqgmvmxwv" path="res://Emily WIP/Scripts/player/movement/wall_jump.gd" id="34_a45e1"]
 [ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
 [ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://fireball shoot.wav" id="36_n7wni"]
 [ext_resource type="AudioStream" uid="uid://cabtemyxbebjq" path="res://Resources/SFX/Quilt Character SFX/Quilt Land v3.wav" id="38_sfidj"]
@@ -52,6 +52,10 @@ height = 44.0
 radius = 5.75
 height = 20.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sfidj"]
+radius = 5.75
+height = 44.5
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jo8y"]
 radius = 5.5
 height = 24.0
@@ -60,8 +64,9 @@ height = 24.0
 radius = 5.7065215
 height = 28.977272
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jo8y"]
-size = Vector2(11.25, 10.75)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nvsa4"]
+radius = 5.25
+height = 26.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1nwdr"]
 shader = ExtResource("2_3uy0y")
@@ -1541,11 +1546,11 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jo8y"]
+size = Vector2(11.25, 10.75)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_33mbb"]
 height = 48.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_33mbb"]
-size = Vector2(20, 17.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1296307351 groups=["Player"]]
 scale = Vector2(4, 4)
@@ -1576,6 +1581,12 @@ position = Vector2(0.75, 12.75)
 shape = SubResource("CapsuleShape2D_8lyhf")
 disabled = true
 
+[node name="QuiltColliderNonPhysics" type="Area2D" parent="." unique_id=1825814430]
+
+[node name="QuiltHitBoxAndTileCheck" type="CollisionShape2D" parent="QuiltColliderNonPhysics" unique_id=960022617]
+position = Vector2(0.75, 0.75)
+shape = SubResource("CapsuleShape2D_sfidj")
+
 [node name="QuiltUncrouchCheck" type="Area2D" parent="." unique_id=184687768]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="QuiltUncrouchCheck" unique_id=1573845329]
@@ -1588,15 +1599,11 @@ scale = Vector2(0.92, 0.88)
 shape = SubResource("CapsuleShape2D_wjwd1")
 disabled = true
 
-[node name="TileMapCheck" type="Area2D" parent="." unique_id=529154427]
-light_mask = 2
-visibility_layer = 2
-collision_layer = 2
-collision_mask = 2
+[node name="PhloColliderNonPhysics" type="Area2D" parent="." unique_id=4581329]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapCheck" unique_id=682589927]
-position = Vector2(0.625, 8.375)
-shape = SubResource("RectangleShape2D_1jo8y")
+[node name="PhloHitBoxAndTileCheck" type="CollisionShape2D" parent="PhloColliderNonPhysics" unique_id=1714248019]
+position = Vector2(-0.25, 0.5)
+shape = SubResource("CapsuleShape2D_nvsa4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=725135239]
 material = SubResource("ShaderMaterial_1nwdr")
@@ -1658,21 +1665,6 @@ jump_force_x = 80
 player = NodePath("../..")
 state_name = "wall_jump"
 
-[node name="hit_box" type="Area2D" parent="." unique_id=154458134]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box" unique_id=729320847]
-position = Vector2(0, -0.5)
-shape = SubResource("CapsuleShape2D_33mbb")
-debug_color = Color(0.9925013, 0, 0.2575452, 0.41960785)
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1321957790]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=552377334]
-position = Vector2(0, -1.25)
-shape = SubResource("RectangleShape2D_33mbb")
-
 [node name="SFX" type="Node" parent="." unique_id=577166608]
 
 [node name="Land" type="AudioStreamPlayer" parent="SFX" unique_id=1181986770]
@@ -1711,15 +1703,35 @@ bus = &"SFXMaster"
 [node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
 rect = Rect2(-10, -21.5, 20, 44)
 
+[node name="TileMapCheck" type="Area2D" parent="." unique_id=529154427]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapCheck" unique_id=682589927]
+position = Vector2(0.625, 8.375)
+shape = SubResource("RectangleShape2D_1jo8y")
+
+[node name="hit_box" type="Area2D" parent="." unique_id=154458134]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box" unique_id=729320847]
+position = Vector2(0, -0.5)
+shape = SubResource("CapsuleShape2D_33mbb")
+debug_color = Color(0.9925013, 0, 0.2575452, 0.41960785)
+
 [connection signal="player_death" from="." to="StateMachine/Stasis" method="_on_player_player_death"]
+[connection signal="body_entered" from="QuiltColliderNonPhysics" to="." method="_on_quilt_collider_non_physics_body_entered"]
+[connection signal="body_exited" from="QuiltColliderNonPhysics" to="." method="_on_quilt_body_exited"]
 [connection signal="body_entered" from="QuiltUncrouchCheck" to="." method="_on_quilt_uncrouch_check_body_entered"]
 [connection signal="body_exited" from="QuiltUncrouchCheck" to="." method="_on_quilt_uncrouch_check_body_exited"]
-[connection signal="body_entered" from="TileMapCheck" to="." method="_on_tile_map_check_body_entered"]
-[connection signal="body_exited" from="TileMapCheck" to="." method="_on_tile_map_check_body_exited"]
+[connection signal="body_entered" from="PhloColliderNonPhysics" to="." method="_on_phlo_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/Idle" method="_anim_end"]
 [connection signal="jump_sound" from="StateMachine/Jump" to="SFX/Jump" method="play"]
 [connection signal="has_landed" from="StateMachine/Fall" to="SFX/Land" method="play"]
 [connection signal="shoot_projectile" from="StateMachine/Recoil" to="SFX/Shoot Projectile" method="play"]
-[connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]
 [connection signal="finished" from="SFX/Footsteps" to="StateMachine/Walk" method="_on_footsteps_finished"]
 [connection signal="timeout" from="SFX/Footsteps/Timer" to="StateMachine/Walk" method="_on_timer_timeout"]
+[connection signal="body_entered" from="TileMapCheck" to="." method="_on_tile_map_check_body_entered"]
+[connection signal="body_exited" from="TileMapCheck" to="." method="_on_tile_map_check_body_exited"]
+[connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]

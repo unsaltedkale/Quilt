@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cyr5uj078f18r"]
 
-[ext_resource type="Script" uid="uid://djfiw8u13hstu" path="res://Emily WIP/Scripts/star.gd" id="1_nikii"]
+[ext_resource type="Script" uid="uid://djfiw8u13hstu" path="res://Emily WIP/Scripts/objects/star.gd" id="1_nikii"]
 [ext_resource type="Texture2D" uid="uid://dvteui4csx23w" path="res://Art/Quilt STAR-1.png" id="2_akwti"]
 [ext_resource type="PackedScene" uid="uid://dm5qt7bkiqove" path="res://Alex's Folder/tscns/make_it_musical.tscn" id="3_akwti"]
 [ext_resource type="AudioStream" uid="uid://cfm1pmjn8nif4" path="res://Resources/SFX/Enivronment/Collect Star.wav" id="4_mjb6q"]

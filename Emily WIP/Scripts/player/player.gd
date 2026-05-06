@@ -2,33 +2,42 @@ extends CharacterBody2D
 
 class_name Player
 
-
+# On Readys
 @onready var quilt_collider: CollisionShape2D = $QuiltCollider
 @onready var quilt_crouch: CollisionShape2D = $QuiltCrouch
 @onready var quilt_uncrouch_check: Area2D = $QuiltUncrouchCheck
 @onready var force_crouch: bool = false
 
+# Exported variables (all should be able to go into player res script)
 @export var is_phlo: bool = false
-var collected_objects: int
-@export var max_objects: int
-var current_stasis = null #Replaces is_stasis: we need to know which stasis chamber we're in to teleport to the right one
-
-@export var max_health: int = 1
-var health: int
-var spawn_point
-var shrine_key: bool = false
-
-enum recoil_calculation_type {from_player, from_center_of_screen}
-
-signal player_death
-
 @export var r_calc: recoil_calculation_type
+@export var max_objects: int
+@export var max_health: int = 1
 
-var jump_count : int
-
+# Bools
+var shrine_key: bool = false
 var crouch_speed : bool
 var start_wump : bool
 var no_recoil : bool
+
+# Ints
+var collected_objects: int
+var health: int
+var jump_count : int
+
+# Vector2s
+var spawn_point
+
+# what is this, can we make better?
+var current_stasis = null #Replaces is_stasis: we need to know which stasis chamber we're in to teleport to the right one
+
+# enums
+enum recoil_calculation_type {from_player, from_center_of_screen}
+
+# Signals
+signal player_death
+
+
 
 func _ready() -> void:
 	health = max_health
@@ -42,17 +51,12 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 	if is_on_floor():
 		jump_count = 0
-	
-	#print(no_recoil)
-	
-	
+
 func _physics_process(_delta: float) -> void:
-	
 	#print(force_crouch)
-	
 	move_and_slide()
-	
-#HEALTH/DAMAGE STUFF	
+
+#HEALTH/DAMAGE STUFF
 func take_damage(amount: int) -> void:
 	health -= amount
 	if is_phlo:
@@ -61,37 +65,58 @@ func take_damage(amount: int) -> void:
 		$"SFX/Take Damage".play()
 	if health <= 0:
 		die()
+		# set bool for death to true, don't want animations besides death to play
 	#allows for different damage amounts if we ever want to do that
-		
+
 func die():
 	#print_debug("Player died")
 	$"../Camera2D".player_died()
 	player_death.emit()
 	current_stasis = null #Make sure ziplines don't trap us when we die
 	spawn_player()
-	
+'''
+
+# This will be replaced by the same as the comment below
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	#print_debug("NAME:" + str(body.name))
+	# make two of these with an if disabled : pass for both, need seperate hit box for quilt and phlo
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
+# These will be switched out for phlo and quilt seperate on_body_entered/exited
 
-func _on_area_entered(_body: Area2D):
-	#Unmagical barrier detection work with on area entered. must be body. for
-	#SOME REASON?!?!?!?!
-	pass
-		
 func _on_tile_map_check_body_entered(body: Node2D) -> void:
 	#print_debug("ENTERED:" + str(body.name))
 	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
 		no_recoil = true
 	pass # Replace with function body.
-
 func _on_tile_map_check_body_exited(body: Node2D) -> void:
 	#print_debug("EXITED:" + str(body.name))
 	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
 		no_recoil = false
 	pass # Replace with function body.
 
+'''
+func _on_quilt_collider_non_physics_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Damage_Layer"):
+		take_damage(1)
+	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
+		no_recoil = true
+	#if this collider is disabled: pass
+	pass
+
+func _on_quilt_body_exited(body: Node2D):
+	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
+		no_recoil = false
+	#if this collider is disabled: pass
+
+func _on_phlo_body_entered(body: Node2D):
+	if body.is_in_group("Damage_Layer"):
+		take_damage(1)
+	#if this collider is disabled: pass
+
+
+#CROUCH
+# This can stay, only quilt, could change if there is a way to get upper half of a collider
 func _on_quilt_uncrouch_check_body_entered(body: Node2D) -> void:
 	if body.name == "Collision" || body.name == "Magical_Barrier" || body.name == "Damage_Layer" || body.name == "Mirror":
 		#print_debug("ENTERED:" + str(body.name))
@@ -99,14 +124,12 @@ func _on_quilt_uncrouch_check_body_entered(body: Node2D) -> void:
 	
 	pass # Replace with function body.
 
-
 func _on_quilt_uncrouch_check_body_exited(body: Node2D) -> void:
 	
 	if body.name == "Collision" || body.name == "Magical_Barrier" || body.name == "Damage_Layer" || body.name == "Mirror":
 		#print_debug("EXITED:" + str(body.name))
 		_quilt_uncrouch_check_changed(false)
 	pass # Replace with function body.
-
 
 func _quilt_uncrouch_check_changed(b: bool):
 	
@@ -127,18 +150,15 @@ func _quilt_uncrouch_check_changed(b: bool):
 			#player does not want to crouch and can uncrouch-- uncrouch them
 			$StateMachine/Idle._force_leave_crouch()
 			force_crouch = false
-			
 
-#Respawn
+#RESPAWN
 func set_checkpoint(pos):
 	spawn_point = pos
-
 
 func spawn_player(): #someone needs to check out the warning message here
 	global_position = spawn_point
 	velocity = Vector2.ZERO
-	health = max_health  
-
+	health = max_health
 
 func change_player(_player: int) -> void:
 	pass

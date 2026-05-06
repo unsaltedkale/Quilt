@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c84vwure2ykyn"]
 
-[ext_resource type="Script" uid="uid://gfx0nxrde3oa" path="res://Emily WIP/Scripts/red_projectile.gd" id="1_td6lh"]
+[ext_resource type="Script" uid="uid://gfx0nxrde3oa" path="res://Emily WIP/Scripts/objects/red_projectile.gd" id="1_td6lh"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="2_nkcvn"]
 [ext_resource type="Texture2D" uid="uid://rxj00c2u02jg" path="res://Art/Fireball Animation Quilt.png" id="2_t6jt8"]
 

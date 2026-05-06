@@ -4855,69 +4855,48 @@ scale = Vector2(3.3, 3.3)
 position = Vector2(-219, 466)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform" index="2" unique_id=1643081023]
-bar_delete = 1.0
 beat_delete = 3.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform4" parent="Conductor_Platforms" unique_id=818404752 instance=ExtResource("4_sbsso")]
 position = Vector2(107, 466)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform4" index="2" unique_id=1643081023]
 beat_appear = 2.0
-bar_delete = 1.0
 beat_delete = 4.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform3" parent="Conductor_Platforms" unique_id=1924778117 instance=ExtResource("4_sbsso")]
 position = Vector2(433, 466)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform3" index="2" unique_id=1643081023]
 beat_appear = 3.0
-bar_delete = 1.0
 beat_delete = 5.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform2" parent="Conductor_Platforms" unique_id=1546004137 instance=ExtResource("4_sbsso")]
 position = Vector2(759, 466)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform2" index="2" unique_id=1643081023]
 beat_appear = 4.0
-bar_delete = 1.0
 beat_delete = 2.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform5" parent="Conductor_Platforms" unique_id=603218671 instance=ExtResource("4_sbsso")]
 position = Vector2(1085, 466)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform5" index="2" unique_id=1643081023]
-bar_delete = 1.0
 beat_delete = 3.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform6" parent="Conductor_Platforms" unique_id=1923452889 instance=ExtResource("4_sbsso")]
 position = Vector2(1411, 466)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform6" index="2" unique_id=1643081023]
 beat_appear = 2.0
-bar_delete = 1.0
 beat_delete = 4.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform7" parent="Conductor_Platforms" unique_id=668240917 instance=ExtResource("4_sbsso")]
 position = Vector2(1737, 466)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform7" index="2" unique_id=1643081023]
 beat_appear = 3.0
-bar_delete = 1.0
 beat_delete = 1.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
 position = Vector2(-17, -5340)
