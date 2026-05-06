@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://co2xfwuly32r1"]
 
-[ext_resource type="PackedScene" uid="uid://bwsxt0ahqa4eo" path="res://Alex's Folder/tscns/fps_counter.tscn" id="1_p4yn6"]
 [ext_resource type="PackedScene" uid="uid://dt1w85276yf8y" path="res://Emily WIP/Scenes/player.tscn" id="2_dt4o1"]
 [ext_resource type="Script" uid="uid://btipl8qwvi5os" path="res://Andy's Path/Scripts/CameraController.gd" id="4_6hoer"]
 [ext_resource type="PackedScene" uid="uid://t1g2alfhyp5r" path="res://Alex's Folder/tscns/conductor.tscn" id="5_taae4"]
@@ -1842,8 +1841,6 @@ modulate = Color(0.08243547, 0.08243547, 0.08243547, 1)
 position = Vector2(7206.0005, 10566.001)
 scale = Vector2(11433.5, 19063)
 texture = ExtResource("11_pk5we")
-
-[node name="FpsCounter" parent="." unique_id=1143178754 instance=ExtResource("1_p4yn6")]
 
 [node name="Player" parent="." unique_id=1423050407 instance=ExtResource("2_dt4o1")]
 position = Vector2(3338, -2586)
