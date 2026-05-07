@@ -62,7 +62,7 @@ func music_calc(reverse: bool, bar: float, beat: float, goal_bar: float, goal_be
 	if beat == goal_beat:
 		i = 4
 	
-	print(str(beat) + " , " + str(i))
+	#print(str(beat) + " , " + str(i))
 	
 	# FROM off_screen TO metronome position
 	v = temp_os.lerp(global_position, i / 4)
