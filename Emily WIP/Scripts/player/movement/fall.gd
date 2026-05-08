@@ -78,7 +78,7 @@ func Physics_Update(_delta):
 		Transition.emit(self, "idle")
 		has_landed.emit() #signal to play landing sfx
 		if not player.is_phlo:
-			player.collected_objects = player.max_objects
+			player.collected_objects = PLAYER_DATA.max_projectiles
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
 	if player.velocity.y >=0 and player.is_on_wall():

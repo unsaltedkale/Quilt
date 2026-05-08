@@ -29,13 +29,13 @@ func on_body_entered(area: Area2D):
 	if timer <= 0:
 		print(area.get_groups())
 		if area.is_in_group("Projectile") or area.get_parent().is_in_group("Player"):
-			print("click: " + str(area))
-			print(area)
+			#print("click: " + str(area))
+			#print(area)
 			if area.is_in_group("Projectile"):
 				area.get_parent().queue_free()
 			player.current_stasis = self
 			player.global_position = global_position
-			player.collected_objects = player.max_objects
+			player.collected_objects = player.PLAYER_DATA.max_projectiles
 			if not $"SFX/Stasis Hum".is_playing():
 				$"SFX/Stasis Hum".play()
 			if not $"SFX/Enter Stasis".is_playing():
@@ -45,7 +45,7 @@ func on_body_entered(area: Area2D):
 
 func on_body_exited(area: Area2D):
 	if area.get_parent().is_in_group("Player"):
-		print("player left")
+		#print("player left")
 		#player.current_stasis = null #Why is this commented out?
 		$"SFX/Stasis Hum".stop()
 		if not $"SFX/Exit Stasis".is_playing():

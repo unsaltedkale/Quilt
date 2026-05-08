@@ -1547,12 +1547,6 @@ animations = [{
 "speed": 9.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jo8y"]
-size = Vector2(11.25, 10.75)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_33mbb"]
-height = 48.0
-
 [node name="Player" type="CharacterBody2D" unique_id=1296307351 groups=["Player"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_jfghr")
@@ -1718,23 +1712,6 @@ bus = &"SFXMaster"
 [node name="VOSN2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=215424180]
 rect = Rect2(-10, -21.5, 20, 44)
 
-[node name="TileMapCheck" type="Area2D" parent="." unique_id=529154427]
-light_mask = 2
-visibility_layer = 2
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapCheck" unique_id=682589927]
-position = Vector2(0.625, 8.375)
-shape = SubResource("RectangleShape2D_1jo8y")
-
-[node name="hit_box" type="Area2D" parent="." unique_id=154458134]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box" unique_id=729320847]
-position = Vector2(0, -0.5)
-shape = SubResource("CapsuleShape2D_33mbb")
-debug_color = Color(0.9925013, 0, 0.2575452, 0.41960785)
-
 [connection signal="player_death" from="." to="StateMachine/Stasis" method="_on_player_player_death"]
 [connection signal="body_entered" from="QuiltColliderNonPhysics" to="." method="_on_quilt_collider_non_physics_body_entered"]
 [connection signal="body_exited" from="QuiltColliderNonPhysics" to="." method="_on_quilt_body_exited"]
@@ -1747,6 +1724,3 @@ debug_color = Color(0.9925013, 0, 0.2575452, 0.41960785)
 [connection signal="shoot_projectile" from="StateMachine/Recoil" to="SFX/Shoot Projectile" method="play"]
 [connection signal="finished" from="SFX/Footsteps" to="StateMachine/Walk" method="_on_footsteps_finished"]
 [connection signal="timeout" from="SFX/Footsteps/Timer" to="StateMachine/Walk" method="_on_timer_timeout"]
-[connection signal="body_entered" from="TileMapCheck" to="." method="_on_tile_map_check_body_entered"]
-[connection signal="body_exited" from="TileMapCheck" to="." method="_on_tile_map_check_body_exited"]
-[connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]
