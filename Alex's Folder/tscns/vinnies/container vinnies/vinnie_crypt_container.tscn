@@ -1835,10 +1835,10 @@ tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAA
 tile_set = SubResource("TileSet_j1yyl")
 
 [node name="Label" type="Label" parent="." unique_id=890236487]
-offset_left = 15345.0
-offset_top = -1115.0
-offset_right = 17455.0
-offset_bottom = -481.0
+offset_left = 15812.0
+offset_top = -1475.0
+offset_right = 17922.0
+offset_bottom = -841.0
 theme_override_font_sizes/font_size = 70
 text = "shoot your PROJECTILE into a 
 STASIS CHAMBER to teleport to it"

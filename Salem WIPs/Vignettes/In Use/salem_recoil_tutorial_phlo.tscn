@@ -4750,7 +4750,7 @@ tile_set = SubResource("TileSet_5e7ya")
 [node name="Stars" type="Node2D" parent="." unique_id=2140260063]
 
 [node name="STAR" parent="Stars" unique_id=1440804062 instance=ExtResource("5_3x04i")]
-position = Vector2(1753, -28.000122)
+position = Vector2(1768.0001, -74.00005)
 scale = Vector2(0.9999999, 0.9999999)
 respawn_timer_max = 1.0
 
