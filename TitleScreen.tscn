@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="4_skwql"]
 [ext_resource type="PackedScene" uid="uid://2bpi2d7g1hn7" path="res://Alex's Folder/tscns/metronome.tscn" id="7_5trnc"]
 [ext_resource type="Texture2D" uid="uid://dboxyy40kuc7h" path="res://Art/Quilt STAR-2.png" id="8_ianhm"]
+[ext_resource type="PackedScene" uid="uid://b7htniexo5eqo" path="res://Andy's Path/Scenes/DialogueUI.tscn" id="10_5trnc"]
 [ext_resource type="PackedScene" uid="uid://dgc273t50ewtn" path="res://Alex's Folder/tscns/heads_up_conductor.tscn" id="10_8skst"]
 
 [sub_resource type="AudioStreamWAV" id="AudioStreamWAV_tu0on"]
@@ -104,6 +105,8 @@ texture = ExtResource("8_ianhm")
 
 [node name="Heads-up Conductor" parent="CanvasLayer" unique_id=1585035843 instance=ExtResource("10_8skst")]
 position = Vector2(2230, 960)
+
+[node name="DialogueUi" parent="CanvasLayer" unique_id=1656784033 instance=ExtResource("10_5trnc")]
 
 [connection signal="pressed" from="Title Screen/Play" to="Title Screen" method="_on_play_pressed"]
 [connection signal="pressed" from="Title Screen/Settings" to="Title Screen" method="_on_settings_pressed"]

@@ -1,5 +1,7 @@
 class_name PlayerRes extends Resource 
 
+enum input_type {keyboard, controller}
+
 @export_category("BASE MOVEMENT")
 @export var walk_speed: float
 @export var crouch_speed: float
@@ -23,3 +25,6 @@ class_name PlayerRes extends Resource
 
 @export_category("RESET")
 @export var reset_timer_max: float
+
+@export_category("MOVEMENT TYPE")
+@export var current_input_type: input_type

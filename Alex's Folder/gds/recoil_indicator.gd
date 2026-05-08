@@ -8,27 +8,29 @@ extends Sprite2D
 @export var no_charge_c: Color = Color("ba577a55")
 @export var charge_c_time: float = 0.1
 
+const PLAYER_DATA = preload("res://Resources/player_data.tres")
+
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+'''func _ready() -> void:
 	Input.joy_connection_changed.connect(_joy_connection_changed)
 	if Input.get_connected_joypads() != []:
 		controller = true
 	else: 
 		controller = false
-	pass # Replace with function body.
+	pass'''
 
-func _joy_connection_changed(_device: int, _connected: bool):
+'''func _joy_connection_changed(_device: int, _connected: bool):
 	if Input.get_connected_joypads() != []:
 		controller = true
 	else: 
 		controller = false
-	pass
+	pass'''
 
-func _input(input_event : InputEvent) -> void: #Someone needs to check out this warning message, you shouldn't name a variable InputEvent.
+'''func _input(input_event : InputEvent) -> void: #Someone needs to check out this warning message, you shouldn't name a variable InputEvent.
 	if input_event is InputEventKey || input_event is InputEventMouse:
 		controller = false
 	elif input_event is InputEventJoypadButton || input_event is InputEventJoypadMotion:
-		controller = true
+		controller = true'''
 
 func safe_tween(s, v, t):
 	if tween != null:
@@ -97,23 +99,23 @@ func _process(_delta: float) -> void:
 				#print("SETTING NO CHARGE")
 				safe_tween("modulate", no_charge_c, charge_c_time)
 
-	if Input.is_action_just_pressed("fire_projectile") && controller == true:
+	'''if Input.is_action_just_pressed("fire_projectile") && controller == true:
 		#print("switched to mouse")
 		controller = false
 	elif Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if controller == false:
 			#print("switched to controller")
-			controller = true
+			controller = true'''
 	var v 
 	
-	if !controller:
+	if PLAYER_DATA.current_input_type == PLAYER_DATA.input_type.keyboard:
 		if player.r_calc == player.recoil_calculation_type.from_player:
 			v = (player.get_global_mouse_position() - player.global_position).normalized()
 			#v = (get_tree().root.get_child(0).get_global_mouse_position() - player.position).normalized()
 		elif player.r_calc == player.recoil_calculation_type.from_center_of_screen:
 			v = (get_viewport().get_mouse_position() - Vector2(get_viewport_rect().size.x/2, get_viewport_rect().size.y/2)).normalized()
 			pass
-	elif controller:
+	elif PLAYER_DATA.current_input_type == PLAYER_DATA.input_type.controller:
 		if Input.is_action_pressed("recoil_left") || Input.is_action_pressed("recoil_right") || Input.is_action_pressed("recoil_up") || Input.is_action_pressed("recoil_down"):
 			v = Input.get_vector("recoil_left","recoil_right","recoil_up","recoil_down")
 		pass

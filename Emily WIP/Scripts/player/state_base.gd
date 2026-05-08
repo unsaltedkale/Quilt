@@ -1,7 +1,8 @@
 extends Node
 class_name State
 
-const PLAYER_DATA = preload("uid://c33m5ti1y2ang")
+const PLAYER_DATA = preload("res://Resources/player_data.tres")
+
 @export var walk_speed: float = PLAYER_DATA.walk_speed
 @export var player: CharacterBody2D
 @onready var an = $"../../AnimatedSprite2D"
