@@ -232,6 +232,3 @@ func spawn_player(): #someone needs to check out the warning message here
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 	health = PLAYER_DATA.max_health
-
-func change_player(_player: int) -> void:
-	pass

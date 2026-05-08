@@ -17,9 +17,6 @@ func Enter(_previous_state: State):
 		an.play("phlo_mini_wump")
 	_recoil_recharge_check()
 
-func Exit():
-	pass
-
 func _anim_end():
 	var anim = str(an.animation)
 	if anim == "phlo_mini_wump":
@@ -40,7 +37,6 @@ func Physics_Update(_delta):
 	else:
 		walk_speed = 0
 		pass
-
 
 func _change_state() -> void:
 	if Input.is_action_just_pressed("jump") && not player.force_crouch:

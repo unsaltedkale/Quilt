@@ -55,9 +55,9 @@ func land():
 				an.play("land")
 
 func Physics_Update(_delta):
+	_change_state()
 	if Input.is_action_just_pressed("jump"):
 		time_since_last_jump_press = fall_timer
-	
 	if walking_last_state:
 		# maybe add && not player.force_crouch here idk -- alex
 		if PLAYER_DATA.cayote_time >= fall_timer and Input.is_action_just_pressed("jump"):
@@ -67,9 +67,6 @@ func Physics_Update(_delta):
 		player.velocity.y += PLAYER_DATA.grav_accel * _delta
 	else:
 		player.velocity.y = PLAYER_DATA.max_fall_vel
-	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
-		if player.collected_objects != 0:
-			Transition.emit(self, "recoil")
 	if player.is_on_floor():
 		player.velocity.x = 0
 		land()
@@ -79,9 +76,13 @@ func Physics_Update(_delta):
 		has_landed.emit() #signal to play landing sfx
 		if not player.is_phlo:
 			player.collected_objects = PLAYER_DATA.max_projectiles
+	_crouch_control()
+	
+func _change_state():
+	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
+		if player.collected_objects != 0:
+			Transition.emit(self, "recoil")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
 	if player.velocity.y >=0 and player.is_on_wall():
 		Transition.emit(self, "wallstick")
-	
-	_crouch_control()

@@ -39,14 +39,6 @@ func shoot():
 	shoot_projectile.emit()
 
 func Enter(_previous_state: State):
-	
-	#if colliding with non-magical zone
-	'''
-	get tiles 2D child, tilemap position
-	get player global position relative to tilemap
-	'''
-		#trasnition idle
-	#else:
 	if player.no_recoil == false:
 		timer = 10.0/60.0
 		shoot()
@@ -59,18 +51,16 @@ func Enter(_previous_state: State):
 	
 func Physics_Update(_delta):
 	_recoil_recharge_check()
-	
-	#print(timer)
 	timer -= _delta
+	_change_state()
+
+func _change_state():
 	if timer <=0:
 		Transition.emit(self,"fall")
 	if player.is_on_floor():
 		Transition.emit(self, "idle")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
-
-func _physics_process(_delta) -> void:
-	pass
 
 func Exit():
 	recoil = false
