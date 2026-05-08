@@ -1,14 +1,14 @@
 extends Sprite2D
 
 @onready var player = get_parent()
-@export var controller: bool
+#@export var controller: bool
 @onready var sm = $"../StateMachine"
 @onready var tween
 @export var charge_c: Color = Color("fff2f1e3")
 @export var no_charge_c: Color = Color("ba577a55")
 @export var charge_c_time: float = 0.1
 
-const PLAYER_DATA = preload("res://Resources/player_data.tres")
+var PLAYER_DATA = preload("res://Resources/player_data.tres")
 
 # Called when the node enters the scene tree for the first time.
 '''func _ready() -> void:

@@ -31,12 +31,14 @@ func _input(input_event : InputEvent) -> void: #Someone needs to check out this 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
+	#print(str(PLAYER_DATA.input_type.keys()[PLAYER_DATA.current_input_type]))
+	
 	if Input.is_action_just_pressed("fire_projectile") && PLAYER_DATA.current_input_type == PLAYER_DATA.input_type.controller:
-		#print("switched to mouse")
+		print("switched to mouse")
 		#controller = false
 		PLAYER_DATA.current_input_type = PLAYER_DATA.input_type.keyboard
 	elif Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if PLAYER_DATA.current_input_type == PLAYER_DATA.input_type.keyboard:
-			#print("switched to controller")
+			print("switched to controller")
 			#controller = true
 			PLAYER_DATA.current_input_type = PLAYER_DATA.input_type.controller

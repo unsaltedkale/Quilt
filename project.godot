@@ -30,6 +30,7 @@ buses/default_bus_layout="uid://dg0vcx3jnieg"
 
 SettingsData="*uid://be5yc83ot15fx"
 Ignore="*uid://cvteudbdsinhu"
+InputTypeSetter="*uid://dveh68bmjok3n"
 
 [display]
 

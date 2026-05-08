@@ -3,9 +3,10 @@ extends RichTextLabel
 @export var type: message_type
 @onready var recoil_indicator
 
-enum input_type {keyboard, controller}
+var PLAYER_DATA = preload("res://Resources/player_data.tres")
+
 enum message_type {movement, jump, recoil, interact, reset_point, dialogue_continue, stasis_warning, crouch, reset_confirmation}
-var input: input_type
+var input
 var movement_message: Array[String]
 var jump_message: Array[String]
 var recoil_message: Array[String]
@@ -20,12 +21,14 @@ var reset_confirmation_message: Array[String]
 
 var super_dictionary: Dictionary[message_type, Array]
 
-func find_recoil_indicator():
+'''func find_recoil_indicator():
 	recoil_indicator = get_tree().get_first_node_in_group("Player").find_child("recoil_indicator")
-# Called when the node enters the scene tree for the first time.
+# Called when the node enters the scene tree for the first time.'''
+
+
 func _ready() -> void:
-	find_recoil_indicator.call_deferred()
-	input = input_type.keyboard
+	#find_recoil_indicator.call_deferred()
+	input = PLAYER_DATA.current_input_type
 	
 	if get_parent().name == "DialogueScreen":
 		recoil_indicator = $"../../../../../Player/recoil_indicator"
@@ -57,11 +60,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	assert(recoil_indicator != null, "RI NOT FOUND!!! FUCK YOU!!!!!")
-	if recoil_indicator.controller == false:
+	#assert(recoil_indicator != null, "RI NOT FOUND!!! FUCK YOU!!!!!")
+	
+	'''if recoil_indicator.controller == false:
 		input = input_type.keyboard
 	elif recoil_indicator.controller == true:
-		input = input_type.controller
+		input = input_type.controller'''
+	
+	input = PLAYER_DATA.current_input_type
+	
 	var l = (str(super_dictionary[type][input]))
 	while l.contains("{"):
 		var start = l.find("{")
