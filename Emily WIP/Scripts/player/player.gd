@@ -7,6 +7,8 @@ class_name Player
 @onready var quilt_crouch: CollisionShape2D = $QuiltCrouch
 @onready var quilt_uncrouch_check: Area2D = $QuiltUncrouchCheck
 @onready var force_crouch: bool = false
+@onready var reset_ttm = $"Reset Confirmation TTM"
+@onready var reset_square = $"Reseting Indicator"
 
 # Exported variables (all should be able to go into player res script)
 @export var is_phlo: bool = false
@@ -14,11 +16,20 @@ class_name Player
 @export var max_objects: int
 @export var max_health: int = 1
 
+# Const
+
+const PLAYER_DATA = preload("uid://c33m5ti1y2ang")
+
 # Bools
 var shrine_key: bool = false
 var crouch_speed : bool
 var start_wump : bool
 var no_recoil : bool
+var confirming_reset: bool
+
+# Floats
+
+var reset_timer: float
 
 # Ints
 var collected_objects: int
@@ -27,6 +38,7 @@ var jump_count : int
 
 # Vector2s
 var spawn_point
+var reset_square_max = Vector2(5,5)
 
 # what is this, can we make better?
 var current_stasis = null #Replaces is_stasis: we need to know which stasis chamber we're in to teleport to the right one
@@ -43,6 +55,11 @@ func _ready() -> void:
 	health = max_health
 	spawn_point = global_position
 	no_recoil = false
+	
+	reset_timer = PLAYER_DATA.reset_timer_max
+	reset_ttm.visible = false
+	reset_square.scale = Vector2(0,0)
+	confirming_reset = false
 
 func _process(_delta: float) -> void:
 	if velocity.x > 0:
@@ -51,6 +68,83 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 	if is_on_floor():
 		jump_count = 0
+	
+	# RESET INPUT HANDLING
+	
+	if $StateMachine.current_state.name != "cutscene":
+		
+		if not confirming_reset:
+			
+			#COUNTING SECONDS
+			
+			if Input.is_action_pressed("reset"):
+				reset_timer -= _delta
+				
+				if reset_square_max > reset_square.scale:
+					reset_square.scale += (reset_square_max / PLAYER_DATA.reset_timer_max) * _delta
+				
+				if reset_timer <= 0:
+					confirming_reset = true
+					reset_ttm.visible = true
+				pass
+			
+			else:
+				reset_timer = PLAYER_DATA.reset_timer_max
+				reset_ttm.visible = false
+				if 0 < reset_square.scale.x:
+					reset_square.scale -= 5*(reset_square_max / PLAYER_DATA.reset_timer_max) * _delta
+				if 0.01 > reset_square.scale.x:
+					reset_square.scale = Vector2(0,0)
+					
+				pass
+		
+		elif confirming_reset:
+			
+			# press one more time to confirm.
+			
+			if Input.is_action_just_pressed("reset"):
+				
+				#kill player!!!!
+				reset_ttm.visible = false
+				confirming_reset = false
+				reset_timer = PLAYER_DATA.reset_timer_max
+				take_damage(100)
+				pass
+			
+			# press anything else to reset.
+			
+			var b
+			
+			var InputMapList: Array = InputMap.get_actions()
+			
+			for actions in InputMapList:
+				if Input.is_action_just_pressed(actions):
+					b = true
+				
+			if b == true:
+				
+				if not Input.is_action_pressed("reset"):
+					confirming_reset = false
+					reset_timer = PLAYER_DATA.reset_timer_max
+					reset_ttm.visible = false
+				pass
+			
+			pass
+			
+	else:
+		
+		#no die during cutscene!!!
+		
+		reset_ttm.visible = false
+		reset_timer = PLAYER_DATA.reset_timer_max
+		
+		if 0 < reset_square.scale.x:
+			reset_square.transform -= 5*(reset_square_max / PLAYER_DATA.reset_timer_max) * _delta
+		if 0.01 > reset_square.scale.x:
+			reset_square.scale = Vector2(0,0)
+		pass
+	
+	pass
 
 func _physics_process(_delta: float) -> void:
 	#print(force_crouch)
@@ -65,6 +159,9 @@ func take_damage(amount: int) -> void:
 		$"SFX/Take Damage".play()
 	if health <= 0:
 		die()
+		
+		#wouldn't you want to reset health here...? -- alex 5/7/2026
+		
 		# set bool for death to true, don't want animations besides death to play
 	#allows for different damage amounts if we ever want to do that
 

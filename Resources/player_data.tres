@@ -14,4 +14,5 @@ max_fall_vel = 1800.0
 grav_accel = 4000.0
 shooting_force = Vector2(1800, 1500)
 wall_jump_force = Vector2(60, 100)
+reset_timer_max = 0.5
 metadata/_custom_type_script = "uid://vi6wpfq66741"

@@ -4728,9 +4728,6 @@ position = Vector2(56, 6752)
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(-320, -7099)
 
-[node name="AudioStreamPlayer" parent="Req" index="2" unique_id=432694589]
-bus = &"MusicMaster"
-
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
 
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]

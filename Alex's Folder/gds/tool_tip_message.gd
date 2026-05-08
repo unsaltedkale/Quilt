@@ -4,7 +4,7 @@ extends RichTextLabel
 @onready var recoil_indicator
 
 enum input_type {keyboard, controller}
-enum message_type {movement, jump, recoil, interact, reset_point, dialogue_continue, stasis_warning, crouch}
+enum message_type {movement, jump, recoil, interact, reset_point, dialogue_continue, stasis_warning, crouch, reset_confirmation}
 var input: input_type
 var movement_message: Array[String]
 var jump_message: Array[String]
@@ -14,7 +14,10 @@ var resetpoint_message: Array[String]
 var dialogue_continue_message: Array[String]
 var stasis_warning_message: Array[String]
 var crouch_message: Array[String]
-var super_array: Array[Array]
+var reset_confirmation_message: Array[String]
+
+#var super_array: Array[Array]
+
 var super_dictionary: Dictionary[message_type, Array]
 
 func find_recoil_indicator():
@@ -37,6 +40,7 @@ func _ready() -> void:
 	dialogue_continue_message = ["{22}","{20}"]
 	stasis_warning_message = ["use {12} or {24} to break from a stasis chamber","use {14} or {26} to break from a stasis chamber"]
 	crouch_message = ["hold [S] to crouch", "hold RIGHT TRIGGER to crouch"] 
+	reset_confirmation_message = ["press [R] to confirm reset", "press [BUTTON NOT FOUND] to confirm reset"]
 	#super_array = [movement_message,jump_message,recoil_message,interact_message,resetpoint_message,dialouge_continue_message,stasis_warning_message]
 	
 	super_dictionary = {
@@ -47,7 +51,8 @@ func _ready() -> void:
 		message_type.reset_point: resetpoint_message,
 		message_type.dialogue_continue: dialogue_continue_message,
 		message_type.stasis_warning: stasis_warning_message,
-		message_type.crouch: crouch_message
+		message_type.crouch: crouch_message,
+		message_type.reset_confirmation: reset_confirmation_message
 		}
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

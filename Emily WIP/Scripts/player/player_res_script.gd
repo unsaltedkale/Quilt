@@ -20,3 +20,6 @@ class_name PlayerRes extends Resource
 @export_category("WALL JUMP")
 @export var wall_jump_force: Vector2
 @export var wall_slide_accel: float
+
+@export_category("RESET")
+@export var reset_timer_max: float
