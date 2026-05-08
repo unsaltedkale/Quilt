@@ -12,7 +12,6 @@
 [ext_resource type="Resource" uid="uid://beik4cvk6fb67" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/ebb_to_town/ebb_to_town_container.tres" id="12_enjad"]
 [ext_resource type="Resource" uid="uid://bxhaqawh3oce7" path="res://Alex's Folder/music_resources/LIVE music/empty_music.tres" id="12_qpl4f"]
 [ext_resource type="PackedScene" uid="uid://dlhy4f15dvbqg" path="res://Alex's Folder/tscns/music_change_trigger.tscn" id="13_chbkr"]
-[ext_resource type="Resource" uid="uid://byd0brg0xkpg1" path="res://Alex's Folder/music_resources/LIVE music/LIVE_orange_flow_appears.tres" id="14_85smj"]
 [ext_resource type="PackedScene" uid="uid://dllltsro0jqkr" path="res://Emily WIP/Scenes/zipline.tscn" id="15_lsahl"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="16_4dq8q"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="20_n5g5y"]
@@ -5004,23 +5003,13 @@ scale = Vector2(0.9999999, 0.9999999)
 position = Vector2(11593.001, -125.00015)
 scale = Vector2(0.9999999, 0.9999999)
 
-[node name="MakeItMusical" parent="Stars/STAR2" index="2" unique_id=1630730373]
-beat_delete = 4.0
-
 [node name="STAR3" parent="Stars" unique_id=1159200205 instance=ExtResource("8_or3un")]
 position = Vector2(12359, -125)
 scale = Vector2(0.9999999, 0.9999999)
 
-[node name="MakeItMusical" parent="Stars/STAR3" index="2" unique_id=1630730373]
-beat_appear = 3.0
-beat_delete = 2.0
-
 [node name="STAR4" parent="Stars" unique_id=1689694379 instance=ExtResource("8_or3un")]
 position = Vector2(13125, -125)
 scale = Vector2(0.9999999, 0.9999999)
-
-[node name="MakeItMusical" parent="Stars/STAR4" index="2" unique_id=1630730373]
-beat_delete = 4.0
 
 [node name="STAR5" parent="Stars" unique_id=673305044 instance=ExtResource("8_or3un")]
 position = Vector2(4449, -2179.0002)
@@ -5176,7 +5165,7 @@ position = Vector2(-38, -171)
 [node name="MusicChangeTrigger" parent="Music Change Triggers" unique_id=284717567 instance=ExtResource("13_chbkr")]
 position = Vector2(-1159, -1078)
 scale = Vector2(1, 20)
-track = ExtResource("14_85smj")
+track = ExtResource("4_w4lvk")
 change_if_same_music_track = true
 start_camera_pathing = true
 vinyl_string = "crypt"
@@ -5267,6 +5256,3 @@ scale = Vector2(9.41, 1.63)
 container = ExtResource("12_enjad")
 
 [editable path="Req"]
-[editable path="Stars/STAR2"]
-[editable path="Stars/STAR3"]
-[editable path="Stars/STAR4"]
