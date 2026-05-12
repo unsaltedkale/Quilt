@@ -23,12 +23,11 @@ func Enter(_previous_state: State):
 		pass
 
 func Physics_Update(_delta):
-	
 	#THIS is how you get the wall direction?????? PAIN!!!!!!!
 	#TODO: wall stick buffer timer, set, when exit wall slide, check for jump
-	
-	
-	# wall cling storage fix:
+	_change_state()
+
+func _change_state():
 	if not player.is_on_wall() and not player.is_on_floor():
 		wall_stick = false
 		Transition.emit(self, "idle")
@@ -46,4 +45,3 @@ func Physics_Update(_delta):
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if player.collected_objects != 0:
 			Transition.emit(self, "recoil")
-	

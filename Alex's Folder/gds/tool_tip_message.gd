@@ -30,8 +30,8 @@ func _ready() -> void:
 	#find_recoil_indicator.call_deferred()
 	input = PLAYER_DATA.current_input_type
 	
-	if get_parent().name == "DialogueScreen":
-		recoil_indicator = $"../../../../../Player/recoil_indicator"
+	#if get_parent().name == "DialogueScreen":
+		#recoil_indicator = $"../../../../../Player/recoil_indicator"
 	
 	#KEYBOARD MOUSE = 0, CONTROLLER = 1
 	

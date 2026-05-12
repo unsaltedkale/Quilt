@@ -38,7 +38,7 @@ func Enter(_previous_state: State):
 			print("Collided with: ", collision.get_normal())
 			'''
 	quilt_wall_jump()
-	print("jump count : ",player.jump_count)
+	#print("jump count : ",player.jump_count)
 
 func Physics_Update(_delta):
 	if timer <= 0:
@@ -48,6 +48,8 @@ func Physics_Update(_delta):
 		quilt_wall_jump()
 		#print_debug("tap")
 		timer -= _delta
+
+func _change_state():
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		if player.collected_objects != 0:
 			Transition.emit(self, "recoil")

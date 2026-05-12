@@ -118,7 +118,7 @@ func on_body_entered(area: Area2D):
 				area.get_parent().queue_free()
 			player.current_stasis = self
 			player.global_position = global_position
-			player.collected_objects = player.max_objects
+			player.collected_objects = player.PLAYER_DATA.max_projectiles
 			if not $"SFX/Stasis Hum".is_playing():
 				$"SFX/Stasis Hum".play()
 			if not $"SFX/Enter Stasis".is_playing():

@@ -85,4 +85,4 @@ func _force_leave_crouch():
 func _recoil_recharge_check():
 	if player.is_on_floor():
 		if not player.is_phlo:
-			player.collected_objects = player.max_objects
+			player.collected_objects = PLAYER_DATA.max_projectiles

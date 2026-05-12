@@ -26,7 +26,6 @@ func Update(_delta):
 	#Slows down walking sound effect when crouching
 	walk_sfx.pitch_scale = (walk_speed / PLAYER_DATA.walk_speed) ** (1.0 / 3)
 
-
 func Physics_Update(_delta):
 	_recoil_recharge_check()
 	
@@ -35,7 +34,9 @@ func Physics_Update(_delta):
 		walk_speed = PLAYER_DATA.crouch_speed
 	elif player.crouch_speed == false and walk_speed != PLAYER_DATA.walk_speed:
 		walk_speed = PLAYER_DATA.walk_speed
-	
+	_change_state()
+
+func _change_state():
 	if move_dir is int || move_dir is float:
 		if abs(move_dir) == 0:
 			Transition.emit(self, "idle")
@@ -48,7 +49,7 @@ func Physics_Update(_delta):
 			Transition.emit(self, "recoil")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
-	
+
 func Exit():
 	walk_sfx_lag_timer.start()
 	walk_sfx.volume_db = -5

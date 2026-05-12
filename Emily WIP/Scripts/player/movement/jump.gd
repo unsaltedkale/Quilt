@@ -26,6 +26,10 @@ func Enter(_previous_state: State):
 	jump_sound.emit()
 
 func Physics_Update(_delta):
+	_change_state()
+	_crouch_control()
+
+func _change_state():
 	if timer <= 0:
 		Transition.emit(self,"fall")
 	else:
@@ -36,8 +40,3 @@ func Physics_Update(_delta):
 			Transition.emit(self, "recoil")
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
-	
-	_crouch_control()
-
-func Exit():
-	pass

@@ -1985,6 +1985,16 @@ autowrap_mode = 3
 [node name="Heads-up Conductor" parent="CanvasLayer" unique_id=1585035843 instance=ExtResource("16_mmu65")]
 position = Vector2(2230, 960)
 
+[node name="Pity Kill Timer" type="Label" parent="CanvasLayer" unique_id=1343336269]
+offset_left = -6.109476e-05
+offset_top = -6.1511986e-05
+offset_right = 247.42267
+offset_bottom = 22.999939
+scale = Vector2(7.76, 7.76)
+text = "4.0"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="Stars" type="Node" parent="." unique_id=1573380272]
 
 [node name="PyraOpeningCutsceneSprite" type="Sprite2D" parent="." unique_id=716366876]

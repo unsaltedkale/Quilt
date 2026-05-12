@@ -16,7 +16,7 @@ func Enter(_previous_state: State):
 		an.play("phlo_idle")
 	else:
 		an.play("idle")
-	print("entered cutscene state")
+	#print("entered cutscene state")
 	
 func Update(_delta):
 	player.velocity.x = 0
@@ -55,8 +55,3 @@ func Update(_delta):
 	
 func Physics_Update(_delta):
 	pass
-
-
-
-
-	

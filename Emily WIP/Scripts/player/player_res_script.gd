@@ -18,6 +18,7 @@ enum input_type {keyboard, controller}
 
 @export_category("RECOIL")
 @export var shooting_force: Vector2
+@export var max_projectiles: int
 
 @export_category("WALL JUMP")
 @export var wall_jump_force: Vector2
@@ -28,3 +29,6 @@ enum input_type {keyboard, controller}
 
 @export_category("MOVEMENT TYPE")
 @export var current_input_type: input_type
+
+@export_category("Health")
+@export var max_health : int

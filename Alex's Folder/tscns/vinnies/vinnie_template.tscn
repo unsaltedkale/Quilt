@@ -5086,7 +5086,6 @@ position = Vector2(-65, -32)
 position = Vector2(816, -1603)
 point_a = Vector2(816, -1603)
 point_b = Vector2(2000, -1603)
-lever_path = NodePath("../../Levers/Lever")
 
 [node name="Levers" type="Node2D" parent="." unique_id=645564461]
 

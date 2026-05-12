@@ -13,11 +13,8 @@ class_name Player
 # Exported variables (all should be able to go into player res script)
 @export var is_phlo: bool = false
 @export var r_calc: recoil_calculation_type
-@export var max_objects: int
-@export var max_health: int = 1
 
 # Const
-
 const PLAYER_DATA = preload("uid://c33m5ti1y2ang")
 
 # Bools
@@ -52,7 +49,7 @@ signal player_death
 
 
 func _ready() -> void:
-	health = max_health
+	health = PLAYER_DATA.max_health
 	spawn_point = global_position
 	no_recoil = false
 	
@@ -171,28 +168,7 @@ func die():
 	player_death.emit()
 	current_stasis = null #Make sure ziplines don't trap us when we die
 	spawn_player()
-'''
 
-# This will be replaced by the same as the comment below
-func _on_hit_box_body_entered(body: Node2D) -> void:
-	#print_debug("NAME:" + str(body.name))
-	# make two of these with an if disabled : pass for both, need seperate hit box for quilt and phlo
-	if body.is_in_group("Damage_Layer"):
-		take_damage(1)
-# These will be switched out for phlo and quilt seperate on_body_entered/exited
-
-func _on_tile_map_check_body_entered(body: Node2D) -> void:
-	#print_debug("ENTERED:" + str(body.name))
-	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
-		no_recoil = true
-	pass # Replace with function body.
-func _on_tile_map_check_body_exited(body: Node2D) -> void:
-	#print_debug("EXITED:" + str(body.name))
-	if body.name == "Unmagical_Barrier" || body.get_groups().has("Unmagical_Barrier"):
-		no_recoil = false
-	pass # Replace with function body.
-
-'''
 func _on_quilt_collider_non_physics_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Damage_Layer"):
 		take_damage(1)
@@ -255,7 +231,4 @@ func set_checkpoint(pos):
 func spawn_player(): #someone needs to check out the warning message here
 	global_position = spawn_point
 	velocity = Vector2.ZERO
-	health = max_health
-
-func change_player(_player: int) -> void:
-	pass
+	health = PLAYER_DATA.max_health
