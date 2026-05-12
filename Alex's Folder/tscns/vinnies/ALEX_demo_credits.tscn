@@ -28,7 +28,7 @@ zoom = Vector2(0.25, 0.25)
 [node name="Conductor" parent="Req" index="3" unique_id=438348041]
 current_music_resource = ExtResource("2_2di3w")
 
-[node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
+[node name="Tiles" type="Node2D" parent="." unique_id=331956455]
 
 [node name="Cutscene Triggers" type="Node2D" parent="." unique_id=770817262]
 position = Vector2(-38, -171)

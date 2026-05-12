@@ -26,4 +26,4 @@ func setup_particles():
 				layer.add_child(new_particle)
 				if particle == break_particle:
 					var area : BreakableArea = layer.get_child(0)
-					area.particles.append(particle)
+					area.particles.append(new_particle)
