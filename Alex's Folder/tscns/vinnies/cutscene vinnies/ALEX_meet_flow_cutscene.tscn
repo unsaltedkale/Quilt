@@ -1811,7 +1811,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_fg0v8"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [node name="ALEX_meet_flow_cutscene" type="Node2D" unique_id=467354812]

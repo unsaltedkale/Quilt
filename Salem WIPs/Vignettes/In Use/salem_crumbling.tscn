@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_t8j0n"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_ae1k3"]
-[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/tile_manager.gd" id="2_rn5jx"]
+[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/Scripts/tile_manager.gd" id="2_rn5jx"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_cmq7o"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="5_5bs1o"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="6_0fcuq"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Prefabs/Vignette Building/STAR.tscn" id="6_0fcuq"]
 [ext_resource type="PackedScene" uid="uid://b2x1phn2coruw" path="res://Elena/Scenes/disappearing_platform.tscn" id="10_5qr2k"]
 [ext_resource type="PackedScene" uid="uid://b7btpnbf85fqe" path="res://Alex's Folder/tscns/reset_point.tscn" id="11_f63dc"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="13_n15yl"]
@@ -1814,7 +1814,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_cp2py"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_inlvm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]

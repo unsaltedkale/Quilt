@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_8r3l0"]
 [ext_resource type="Resource" uid="uid://bxhaqawh3oce7" path="res://Alex's Folder/music_resources/LIVE music/empty_music.tres" id="2_jxxhd"]
-[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/tile_manager.gd" id="3_8r3l0"]
+[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/Scripts/tile_manager.gd" id="3_8r3l0"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="3_kg6h0"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="4_x61yw"]
 [ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="6_wpboh"]
@@ -1642,7 +1642,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_fg0v8"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]

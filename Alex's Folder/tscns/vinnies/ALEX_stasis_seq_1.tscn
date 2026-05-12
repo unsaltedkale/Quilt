@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://dvubqeyj1ycv2"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_dn2vr"]
-[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/tile_manager.gd" id="2_ecm0v"]
+[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/Scripts/tile_manager.gd" id="2_ecm0v"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_kycs2"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="4_g3aio"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="5_e5xct"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="6_be4mm"]
 [ext_resource type="Texture2D" uid="uid://dmf3w1mnya4cj" path="res://Art/dust_square.png" id="7_277iu"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="7_dn2vr"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Prefabs/Vignette Building/STAR.tscn" id="7_dn2vr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m2847"]
 load_path = "res://.godot/imported/sketch150-1.png-f56fe412b6b5cba0226eb1024da3124c.ctex"
@@ -1638,7 +1638,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_fg0v8"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [node name="ALEX_stasis_sequence" type="Node2D" unique_id=467354812]

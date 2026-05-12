@@ -41,7 +41,7 @@
 [ext_resource type="Resource" uid="uid://d24g4wdbk4vrl" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/exit_crypt_level/exit_crypt_level_container.tres" id="26_uv8gf"]
 [ext_resource type="Resource" uid="uid://bmif5lh5wrfbj" path="res://Alex's Folder/music_resources/ARTIFICAL music/crypt_1_sub.tres" id="27_sjn7q"]
 [ext_resource type="Script" uid="uid://cpccqlcgt6b65" path="res://Alex's Folder/gds/tileset_click.gd" id="27_xu5pi"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="28_frm60"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Prefabs/Vignette Building/STAR.tscn" id="28_frm60"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="30_8ce68"]
 [ext_resource type="PackedScene" uid="uid://c1kksr3h1haj" path="res://Alex's Folder/tscns/interact_indicator.tscn" id="38_c6e1v"]
 [ext_resource type="Resource" uid="uid://cj6lnkf7ujlrv" path="res://Alex's Folder/cutscene_event_resources/cutscenes/Crypt/crypt_music_slab/crypt_music_slab_container.tres" id="40_sp84p"]

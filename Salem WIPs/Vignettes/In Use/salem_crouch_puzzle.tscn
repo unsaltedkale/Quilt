@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_38m0h"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_gorvn"]
-[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/tile_manager.gd" id="2_spk7h"]
+[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/Scripts/tile_manager.gd" id="2_spk7h"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_roayi"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="7_rey4r"]
 [ext_resource type="PackedScene" uid="uid://d2kyan412tqg1" path="res://Alex's Folder/tscns/One_Way_Platform.tscn" id="9_g4iuj"]
@@ -1812,7 +1812,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_qaa7m"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_yg3vf")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
@@ -4909,12 +4909,12 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AADo//7/AAAAAAcAACDn//7/AAAAAAcAACDm//7/AAAAAAcAACDl//7/AAAAAAcAACDp//7/AAAAAAcAACA=")
 tile_set = SubResource("TileSet_rq4vl")
 
-[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
+[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781 groups=["Magical_Barrier"]]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AADm/wEAAAAXAAoAAGDn/wEAAAAXAAsAAGDo/wEAAAAXAAwAAGDk/wgAAAAXAAoAAADk/wkAAAAXAAsAAADk/woAAAAXAAwAAAA=")
 tile_set = SubResource("TileSet_eulau")
 
-[node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675]
+[node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["Unmagical_Barrier"]]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AADm/wYAAAADAB4AAGDn/wYAAAADAB4AAGDo/wYAAAADAB8AAGDl/wYAAAADAB0AAGA=")
 tile_set = SubResource("TileSet_6pqo5")

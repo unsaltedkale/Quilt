@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cruolbbn4dkbf" path="res://Elena/Scenes/lever.tscn" id="10_bwo6f"]
 [ext_resource type="PackedScene" uid="uid://duk0dr4rdam4g" path="res://Elena/Scenes/leverplatform.tscn" id="11_22rvv"]
 [ext_resource type="PackedScene" uid="uid://bhdhha5dl6wgu" path="res://Elena/Scenes/collectable_object.tscn" id="13_68wyd"]
-[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Emily WIP/Scenes/STAR.tscn" id="14_o3nms"]
+[ext_resource type="PackedScene" uid="uid://cyr5uj078f18r" path="res://Prefabs/Vignette Building/STAR.tscn" id="14_o3nms"]
 [ext_resource type="PackedScene" uid="uid://b2dqnmui6mt5" path="res://Elena/Scenes/shrine_key.tscn" id="15_hpyeg"]
 [ext_resource type="PackedScene" uid="uid://dsc3vehi0f7n0" path="res://Elena/Scenes/test_shrine.tscn" id="16_01ku8"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="17_jkah5"]

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dqs7ffkpkn30f"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_e68g7"]
-[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/tile_manager.gd" id="2_50lej"]
+[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/Scripts/tile_manager.gd" id="2_50lej"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_oy4m3"]
 [ext_resource type="Texture2D" uid="uid://dliwqoeyhiumf" path="res://Resources/sketch150-1.png" id="3_8mx2p"]
 [ext_resource type="PackedScene" uid="uid://cbfp2mbvujih6" path="res://Alex's Folder/tscns/Conductor_Platform.tscn" id="4_mmmma"]
@@ -1813,7 +1813,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_njedl"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_esh22")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
@@ -4909,12 +4909,12 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AADz/wAAAAAAAAcAAADy/wAAAAAAAAcAAADx/wAAAAAAAAcAAADw/wAAAAAAAAcAAADv/wAAAAAAAAcAAADu/wAAAAAAAAcAAADt/wAAAAAAAAcAAADs/wAAAAAAAAcAAADq/wAAAAAAAAcAAADp/wAAAAAAAAcAAADo/wAAAAAAAAcAAADn/wAAAAAAAAcAAADm/wAAAAAAAAcAAAA=")
 tile_set = SubResource("TileSet_rq4vl")
 
-[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
+[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781 groups=["Magical_Barrier"]]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AADr//n/AAAXAAsAAADr//r/AAAXAAsAAADr//v/AAAXAAsAAADr/wAAAAAXAAwAAADr//z/AAAXAAsAAADr//3/AAAXAAsAAADr//7/AAAXAAsAAADr////AAAXAAsAAADr//j/AAAXAAsAAADr//f/AAAXAAsAAADr//b/AAAXAAsAAADr//X/AAAXAAsAAADr//T/AAAXAAsAAADr//P/AAAXAAoAAADl//P/AAAXAAoAAADl//T/AAAXAAsAAADl//X/AAAXAAsAAADl//b/AAAXAAsAAADl//f/AAAXAAsAAADl//j/AAAXAAsAAADl//n/AAAXAAsAAADl//r/AAAXAAsAAADl//v/AAAXAAsAAADl//z/AAAXAAsAAADl//3/AAAXAAsAAADl//7/AAAXAAsAAADl////AAAXAAsAAADl/wAAAAAXAAwAAAA=")
 tile_set = SubResource("TileSet_eulau")
 
-[node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675]
+[node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["Unmagical_Barrier"]]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAD0/wAAAAADAB8AAAD0////AAADAB4AAAD0//7/AAADAB4AAAD0//3/AAADAB4AAAD0//z/AAADAB4AAAD0//v/AAADAB4AAAD0//r/AAADAB4AAAD0//n/AAADAB0AAADo//f/AAADAB0AAADo//j/AAADAB4AAADo//n/AAADAB4AAADo//r/AAADAB4AAADo//v/AAADAB4AAADo//z/AAADAB4AAADo//3/AAADAB4AAADo//7/AAADAB8AAAA=")
 tile_set = SubResource("TileSet_6pqo5")
