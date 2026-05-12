@@ -4796,7 +4796,7 @@ position = Vector2(400, 100)
 scale = Vector2(2, 2)
 point_a = Vector2(400, 100)
 point_b = Vector2(400, -2000)
-speed = 400.0
+speed = 300.0
 wait_time = 2.0
 lever = NodePath("../Lever")
 

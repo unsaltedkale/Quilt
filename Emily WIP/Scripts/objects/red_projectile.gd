@@ -33,8 +33,8 @@ func _process(_delta):
 func _physics_process(delta) -> void:
 	rotation = velocity.angle()
 	var collision = move_and_collide(velocity * delta)
-	
 	if collision:
+		print(collision)
 		var collider = collision.get_collider()
 		if collider.is_in_group("Mirror"):
 			print("hit mirror")
@@ -44,7 +44,7 @@ func _physics_process(delta) -> void:
 			_play_extinguish_sound()
 			queue_free()
 			
-		elif collider.is_in_group("tilemap"):
+		elif collider is TileMapLayer:
 			_play_extinguish_sound()
 			queue_free()
 			

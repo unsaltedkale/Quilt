@@ -1637,7 +1637,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_fg0v8"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
@@ -3228,7 +3228,7 @@ tile_set = SubResource("TileSet_fg0v8")
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_rq4vl")
 
-[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
+[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781 groups=["Magical_Barrier"]]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAD8//n/AAAVAAsAAAD9//n/AAAVAAwAAAD+//n/AAAVAAwAAAD///n/AAAWAAwAAAD8//r/AAAWAAsAAAD8//v/AAAWAAsAAAD8//z/AAAWAAsAAAD8//3/AAAWAAwAAAD6//v/AAAVAAsAAAD6//z/AAAVAAsAAAD6//3/AAAVAAwAAAD7//v/AAAVAAsAAAD7//z/AAAVAAsAAAD7//3/AAAVAAwAAAD6//j/AAAVAAsAAAD6//n/AAAVAAsAAAD6//r/AAAVAAsAAAD7//j/AAAVAAsAAAD7//n/AAAVAAsAAAD7//r/AAAVAAsAAAD8//j/AAAVAAsAAAD9//f/AAAVAAoAAAD9//j/AAAVAAsAAAD+//f/AAAVAAoAAAD+//j/AAAVAAsAAAD///f/AAAWAAoAAAD///j/AAAWAAsAAAD6//f/AAAVAAoAAAD7//f/AAAVAAoAAAD8//f/AAAVAAoAAAD5//f/AAAVAAoAAAD4//f/AAAUAAoAAAD4//3/AAAUAAwAAAD5//3/AAAVAAwAAAD4//j/AAAUAAsAAAD5//j/AAAVAAsAAAD5//n/AAAVAAsAAAD5//r/AAAVAAsAAAD5//v/AAAVAAsAAAD5//z/AAAVAAsAAAD4//z/AAAUAAsAAAD4//v/AAAUAAsAAAD4//r/AAAUAAsAAAD4//n/AAAUAAsAAAA=")
 tile_set = SubResource("TileSet_eulau")

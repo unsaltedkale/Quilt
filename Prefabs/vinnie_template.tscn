@@ -1827,7 +1827,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_fg0v8"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_5e7ya")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eulau"]
@@ -4960,7 +4960,6 @@ sources/0 = SubResource("TileSetAtlasSource_6pqo5")
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("2_lcli8")]
 position = Vector2(233, -323)
 a = null
-has_set_tile_particles = null
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
 position = Vector2(107, -155)
@@ -4984,12 +4983,12 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAArAPj/AAAAAAgAAAArAPn/AAAAAAkAAAAsAPj/AAAAAAgAAAAsAPn/AAAAAAkAAAAtAPj/AAAAAAgAAAAtAPn/AAAAAAkAAAAuAPj/AAAAAAgAAAAuAPn/AAAAAAkAAAArAPf/AAAAAAcAAAAsAPf/AAAAAAcAAAAtAPf/AAAAAAcAAAAuAPf/AAAAAAcAAAA=")
 tile_set = SubResource("TileSet_rq4vl")
 
-[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781]
+[node name="Magical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=1550036781 groups=["Magical_Barrier"]]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAMAPv/AAAXAAoAAAAMAPz/AAAXAAsAAAAMAP3/AAAXAAwAAAAMAPj/AAAXAAoAAAAMAPn/AAAXAAsAAAAMAPr/AAAXAAwAAAA=")
 tile_set = SubResource("TileSet_eulau")
 
-[node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675]
+[node name="Unmagical_Barrier" type="TileMapLayer" parent="Tiles" unique_id=718719675 groups=["Unmagical_Barrier"]]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAQAPv/AAADAB0AAAAQAPz/AAADAB4AAAAQAP3/AAADAB8AAAAQAPj/AAADAB0AAAAQAPn/AAADAB4AAAAQAPr/AAADAB8AAAA=")
 tile_set = SubResource("TileSet_6pqo5")
@@ -5009,14 +5008,14 @@ tile_set = SubResource("TileSet_qoq1o")
 position = Vector2(-144, -112.25001)
 scale = Vector2(5.66, 4.82)
 
-[node name="Breakable_Area" type="TileMapLayer" parent="Tiles" unique_id=1191877973]
+[node name="Breakable_Area" type="TileMapLayer" parent="Tiles" unique_id=1191877973 groups=["Breakable_Layer"]]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAqBKr+AAAAAAAAAAArBKj+AAAAAAAAAAArBKn+AAAAAAAAAAArBKr+AAAAAAAAAAAsBKb+AAAAAAAAAAAsBKf+AAAAAAAAAAAsBKj+AAAAAAAAAAAsBKn+AAAAAAAAAAAsBKr+AAAAAAAAAAAtBKX+AAAAAAAAAAAtBKb+AAAAAAAAAAAtBKf+AAAAAAAAAAAtBKn+AAAAAAAAAAAtBKr+AAAAAAAAAAAuBKP+AAAAAAAAAAAuBKT+AAAAAAAAAAAuBKX+AAAAAAAAAAAvBKL+AAAAAAAAAAAvBKP+AAAAAAAAAAAvBKT+AAAAAAAAAAAwBKH+AAAAAAAAAAAxBKD+AAAAAAAAAAD6//T/AAAAAAAAAAD6//X/AAAAAAEAAAD6//b/AAAAAAIAAAD7//T/AAABAAAAAAD7//X/AAABAAEAAAD7//b/AAABAAIAAAD8//T/AAACAAAAAAD8//X/AAACAAEAAAD8//b/AAACAAIAAAA=")
 tile_set = SubResource("TileSet_fg0v8")
 
 [node name="breakable_area" parent="Tiles/Breakable_Area" unique_id=1911439178 instance=ExtResource("5_rq4vl")]
 position = Vector2(-144, -336.00003)
-scale = Vector2(4.82, 4.82)
+scale = Vector2(6, 6)
 
 [node name="Conductor_Platforms" type="Node2D" parent="." unique_id=1197950998]
 position = Vector2(-38, -171)
@@ -5086,10 +5085,11 @@ position = Vector2(-65, -32)
 
 [node name="Lever Platforms" type="Node2D" parent="." unique_id=922098560]
 
-[node name="leverplatform" parent="Lever Platforms" unique_id=96890641 instance=ExtResource("16_fg0v8")]
+[node name="leverplatform" parent="Lever Platforms" unique_id=96890641 node_paths=PackedStringArray("lever") instance=ExtResource("16_fg0v8")]
 position = Vector2(816, -1603)
 point_a = Vector2(816, -1603)
 point_b = Vector2(2000, -1603)
+lever = NodePath("../../Levers/Lever")
 
 [node name="Levers" type="Node2D" parent="." unique_id=645564461]
 
