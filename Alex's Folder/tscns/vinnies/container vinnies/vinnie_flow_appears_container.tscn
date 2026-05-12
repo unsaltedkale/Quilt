@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://bgbi6jcjl0wa7"]
 
-[ext_resource type="Texture2D" uid="uid://cg57ptpu72817" path="res://Resources/Castle tilling - Vertical - PLEASE USE ME.png" id="1_vd8h5"]
+[ext_resource type="Texture2D" uid="uid://cg57ptpu72817" path="res://Resources/BG/Castle tilling - Vertical - PLEASE USE ME.png" id="1_vd8h5"]
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_x1nms"]
 [ext_resource type="PackedScene" uid="uid://8fqj856k2fl2" path="res://Salem WIPs/Vignettes/In Use/salem_crumbling.tscn" id="2_47wpx"]
-[ext_resource type="Texture2D" uid="uid://dirrf1nihpxi7" path="res://Resources/Background3 - Edit 4.png" id="2_ikbdc"]
+[ext_resource type="Texture2D" uid="uid://dirrf1nihpxi7" path="res://Resources/BG/Background3 - Edit 4.png" id="2_ikbdc"]
 [ext_resource type="PackedScene" uid="uid://je46xra7st0p" path="res://Andy's Path/Scenes/Camera_Change_Trigger.tscn" id="4_mcxyt"]
 [ext_resource type="Resource" uid="uid://byd0brg0xkpg1" path="res://Alex's Folder/music_resources/LIVE music/LIVE_orange_flow_appears.tres" id="4_qu3aa"]
 [ext_resource type="PackedScene" uid="uid://d04ijf60ctwlh" path="res://Salem WIPs/Vignettes/In Use/salem_crouch_puzzle.tscn" id="5_jll2y"]

@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://b4ea2nb2qkqrq"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_bscnu"]
-[ext_resource type="Texture2D" uid="uid://dirrf1nihpxi7" path="res://Resources/Background3 - Edit 4.png" id="1_ikl5n"]
+[ext_resource type="Texture2D" uid="uid://dirrf1nihpxi7" path="res://Resources/BG/Background3 - Edit 4.png" id="1_ikl5n"]
 [ext_resource type="PackedScene" uid="uid://b0d7tbi0mty35" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_town_cutscene.tscn" id="2_gqvvk"]
 [ext_resource type="Script" uid="uid://4ekgwvgt60r0" path="res://Alex's Folder/gds/music_resource.gd" id="2_mqo4l"]
-[ext_resource type="Texture2D" uid="uid://cg57ptpu72817" path="res://Resources/Castle tilling - Vertical - PLEASE USE ME.png" id="2_xl556"]
+[ext_resource type="Texture2D" uid="uid://cg57ptpu72817" path="res://Resources/BG/Castle tilling - Vertical - PLEASE USE ME.png" id="2_xl556"]
 [ext_resource type="PackedScene" uid="uid://bw2uxgaho4176" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_meet_flow_cutscene.tscn" id="3_jk0i8"]
 [ext_resource type="AudioStream" uid="uid://b1tfhpwu2eha6" path="res://Alex's Folder/music_resources/ARTIFICAL music/music_tracks/Hellow 120_VAMP.wav" id="3_mqo4l"]
 

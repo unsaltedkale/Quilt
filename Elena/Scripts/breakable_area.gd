@@ -1,4 +1,5 @@
 extends Area2D
+class_name BreakableArea
 
 var particles : Array[CPUParticles2D]
 

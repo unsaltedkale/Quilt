@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ohtbpgrgoldl"
-path="res://.godot/imported/Crypt tilling- Vertical - USE.png-46dd346cb5f08f5940c1209cfab9cb9b.ctex"
+uid="uid://cg57ptpu72817"
+path="res://.godot/imported/Castle tilling - Vertical - PLEASE USE ME.png-55d495ac56a0625a8dc0cdf017c13b56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Crypt tilling- Vertical - USE.png"
-dest_files=["res://.godot/imported/Crypt tilling- Vertical - USE.png-46dd346cb5f08f5940c1209cfab9cb9b.ctex"]
+source_file="res://Resources/BG/Castle tilling - Vertical - PLEASE USE ME.png"
+dest_files=["res://.godot/imported/Castle tilling - Vertical - PLEASE USE ME.png-55d495ac56a0625a8dc0cdf017c13b56.ctex"]
 
 [params]
 

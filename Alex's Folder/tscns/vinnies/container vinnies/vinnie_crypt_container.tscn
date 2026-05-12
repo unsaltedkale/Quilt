@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://dc086mi1p7d80"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_fk6r7"]
-[ext_resource type="Texture2D" uid="uid://bt6x6cmovtv2i" path="res://Resources/Background2 - Final 2_ (1).png" id="1_qlmy7"]
+[ext_resource type="Texture2D" uid="uid://bt6x6cmovtv2i" path="res://Resources/BG/Background2 - Final 2_ (1).png" id="1_qlmy7"]
 [ext_resource type="PackedScene" uid="uid://7bl0do2fiwnq" path="res://Alex's Folder/tscns/vinnies/cutscene vinnies/ALEX_phlo_enter_crypt.tscn" id="2_cyaf8"]
-[ext_resource type="Texture2D" uid="uid://ohtbpgrgoldl" path="res://Resources/Crypt tilling- Vertical - USE.png" id="2_f8255"]
+[ext_resource type="Texture2D" uid="uid://ohtbpgrgoldl" path="res://Resources/BG/Crypt tilling- Vertical - USE.png" id="2_f8255"]
 [ext_resource type="PackedScene" uid="uid://q5d5pmbhobtw" path="res://Alex's Folder/tscns/vinnies/ALEX_stasis_seq_2.tscn" id="2_vnuq1"]
 [ext_resource type="PackedScene" uid="uid://be4hocxkgbx4f" path="res://Salem WIPs/Vignettes/In Use/salem_recoil_tutorial_phlo.tscn" id="3_7qoo3"]
 [ext_resource type="PackedScene" uid="uid://cr72akoc1a1ic" path="res://Salem WIPs/Vignettes/In Use/salem_phlo_platforms.tscn" id="4_lcxdb"]
@@ -1796,7 +1796,6 @@ position = Vector2(13056, 256)
 
 [node name="Req" parent="ALEX_meet_quilt_cutscene" index="0" unique_id=276038067]
 a = 0
-has_set_tile_particles = false
 
 [node name="ALEX_stasis_sequence" parent="." unique_id=228213048 instance=ExtResource("7_e7kwk")]
 position = Vector2(13696, 256)

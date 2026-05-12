@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dvubqeyj1ycv2"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_dn2vr"]
+[ext_resource type="Script" uid="uid://cxejnxf2u7vy4" path="res://Salem WIPs/tile_manager.gd" id="2_ecm0v"]
 [ext_resource type="TileSet" uid="uid://wqwo4u5eiycn" path="res://Alex's Folder/tscns/vinnies/vinnie_tile_set.tres" id="2_kycs2"]
 [ext_resource type="PackedScene" uid="uid://dd622dnehfwdw" path="res://Elena/Scenes/checkpoint.tscn" id="4_g3aio"]
 [ext_resource type="PackedScene" uid="uid://bm11upje0c6f2" path="res://Emily WIP/Scenes/stasis.tscn" id="5_e5xct"]
@@ -1649,6 +1650,7 @@ position = Vector2(233, -323)
 position = Vector2(290, -139)
 
 [node name="Tiles" type="Node2D" parent="." unique_id=331956455 groups=["tilemap"]]
+script = ExtResource("2_ecm0v")
 
 [node name="Decorations" type="TileMapLayer" parent="Tiles" unique_id=524470045]
 scale = Vector2(4, 4)

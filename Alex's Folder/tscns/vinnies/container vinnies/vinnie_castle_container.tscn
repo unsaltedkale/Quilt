@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dxlkpffe0gtom"]
 
 [ext_resource type="PackedScene" uid="uid://blcvns0oudln0" path="res://Alex's Folder/tscns/vinnies/req.tscn" id="1_32cjk"]
-[ext_resource type="Texture2D" uid="uid://cg57ptpu72817" path="res://Resources/Castle tilling - Vertical - PLEASE USE ME.png" id="1_owiwk"]
+[ext_resource type="Texture2D" uid="uid://cg57ptpu72817" path="res://Resources/BG/Castle tilling - Vertical - PLEASE USE ME.png" id="1_owiwk"]
 [ext_resource type="PackedScene" uid="uid://mnwppfl4hxet" path="res://Emily WIP/Vinnies/longer_vinnies/EMILY_stasis_maze.tscn" id="2_76k58"]
 [ext_resource type="AudioStream" uid="uid://c0xwsg63ssyvs" path="res://Alex's Folder/music_resources/LIVE music/music_tracks/LIVE_castle.mp3" id="2_a1od5"]
-[ext_resource type="Texture2D" uid="uid://dirrf1nihpxi7" path="res://Resources/Background3 - Edit 4.png" id="2_j30fl"]
+[ext_resource type="Texture2D" uid="uid://dirrf1nihpxi7" path="res://Resources/BG/Background3 - Edit 4.png" id="2_j30fl"]
 [ext_resource type="PackedScene" uid="uid://dqs7ffkpkn30f" path="res://Salem WIPs/Vignettes/In Use/salem_barrier_jumps.tscn" id="3_0gdtb"]
 [ext_resource type="PackedScene" uid="uid://cuaf5o8ymkp1i" path="res://Salem WIPs/Vignettes/In Use/salem_backwards_zipline.tscn" id="4_v38ga"]
 [ext_resource type="PackedScene" uid="uid://cjaau4aunv2q" path="res://Salem WIPs/Vignettes/In Use/salem_mirror_zipline.tscn" id="5_60bpb"]
