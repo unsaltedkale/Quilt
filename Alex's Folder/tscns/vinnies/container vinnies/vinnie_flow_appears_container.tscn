@@ -1884,11 +1884,11 @@ texture = ExtResource("2_ikbdc")
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(1265, 5624)
+position = Vector2(-8348, -5934)
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542 node_paths=PackedStringArray("cameraTriggerRef")]
 position = Vector2(-46, 318)
-cameraTriggerRef = NodePath("../../Camera Trigger/Change_Camera_Trigger")
+cameraTriggerRef = [NodePath("../../Camera Trigger/Change_Camera_Trigger_0"), NodePath("../../Camera Trigger/Change_Camera_Trigger_1"), NodePath("../../Camera Trigger/Change_Camera_Trigger_2"), NodePath("../../Camera Trigger/Change_Camera_Trigger_3")]
 
 [node name="Conductor" parent="Req" index="3" unique_id=438348041]
 current_music_resource = ExtResource("4_qu3aa")
@@ -1924,12 +1924,39 @@ container = ExtResource("11_qu3aa")
 
 [node name="Camera Trigger" type="Node2D" parent="." unique_id=1661116877]
 
-[node name="Change_Camera_Trigger" parent="Camera Trigger" unique_id=404059404 node_paths=PackedStringArray("cameraRef") instance=ExtResource("4_mcxyt")]
-position = Vector2(-8817, -8839)
-scale = Vector2(171.5877, 322.8607)
-cameraOffsetX = -8817.0
-cameraOffsetY = -8839.0
-targetZoom = 0.15
+[node name="Change_Camera_Trigger_0" parent="Camera Trigger" unique_id=404059404 node_paths=PackedStringArray("cameraRef") instance=ExtResource("4_mcxyt")]
+position = Vector2(-8892.001, -6415)
+scale = Vector2(169.704, 83.846)
+cameraOffsetX = -8892.001
+cameraOffsetY = -6415.0
+targetZoom = 0.4
 cameraRef = NodePath("../../Req/Camera2D")
+
+[node name="Change_Camera_Trigger_1" parent="Camera Trigger" unique_id=1019243074 node_paths=PackedStringArray("cameraRef") instance=ExtResource("4_mcxyt")]
+position = Vector2(-8879, -7910.9995)
+scale = Vector2(174.358, 64.451)
+cameraOffsetX = -8879.0
+cameraOffsetY = -7911.0
+targetZoom = 0.3
+cameraRef = NodePath("../../Req/Camera2D")
+cameraTriggerIndex = 1
+
+[node name="Change_Camera_Trigger_2" parent="Camera Trigger" unique_id=156656501 node_paths=PackedStringArray("cameraRef") instance=ExtResource("4_mcxyt")]
+position = Vector2(-8858, -9355)
+scale = Vector2(174.748, 95.891)
+cameraOffsetX = -8858.0
+cameraOffsetY = -9355.0
+targetZoom = 0.3
+cameraRef = NodePath("../../Req/Camera2D")
+cameraTriggerIndex = 2
+
+[node name="Change_Camera_Trigger_3" parent="Camera Trigger" unique_id=984217791 node_paths=PackedStringArray("cameraRef") instance=ExtResource("4_mcxyt")]
+position = Vector2(-8848, -11235.001)
+scale = Vector2(174.748, 95.891)
+cameraOffsetX = -8848.0
+cameraOffsetY = -11235.001
+targetZoom = 0.3
+cameraRef = NodePath("../../Req/Camera2D")
+cameraTriggerIndex = 3
 
 [editable path="Req"]
