@@ -70,7 +70,7 @@ func _parse(l: String, b: bool = false):
 	
 	
 	ws = ws.replace("…", "...")
-		
+	
 	
 	#print("l: |" + l)
 	#print("ws: |" + ws)
@@ -147,14 +147,22 @@ func _tick() -> void:
 			for i in len(line):
 				var letter = line[dialogueReference.visible_characters]
 				
-				if dialogueReference.visible_characters < len(line) - 1:
+				if dialogueReference.visible_characters <= len(line) - 1:
 					letter = line[dialogueReference.visible_characters - 1]
-					
+				
+				elif dialogueReference.visible_characters > len(line) - 1:
+					letter = "%^"
+				
+				if dialogueReference.visible_characters == 0:
+					letter = "%^"
+				
 				match letter:
 					".":
 						await wait(0.50)
 					",", "—":
 						await wait(0.40)
+					"%^":
+						await wait(0.01)
 					_:
 						await wait(0.03)
 						
