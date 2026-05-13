@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://8g40qfiat0ar" path="res://Alex's Folder/tscns/tool_tip_message.tscn" id="16_gi33v"]
 [ext_resource type="FontFile" uid="uid://ddp25kesnaa73" path="res://Andy's Path/Resources/Fonts/bytebounce/ByteBounce.ttf" id="20_gqie4"]
 [ext_resource type="Script" uid="uid://bij8e4rk76007" path="res://Andy's Path/Scripts/Settings.gd" id="20_ikb8c"]
+[ext_resource type="Script" uid="uid://ci3fxsi7pxao7" path="res://Alex's Folder/gds/dialogue_advancer_toggler.gd" id="20_kyka1"]
 [ext_resource type="Script" uid="uid://cjulrpdicpvgj" path="res://Andy's Path/Scenes/mainmenureturn.gd" id="21_ikb8c"]
 [ext_resource type="Script" uid="uid://qw7u7t1vs07f" path="res://Andy's Path/Scripts/VolumeManager.gd" id="23_uc4dt"]
 
@@ -833,6 +834,9 @@ offset_right = 811.7552
 offset_bottom = 295.47116
 text = "[img=64]res://Art/Tool Tips/ttm_22.png[/img]"
 type = 5
+
+[node name="Dialogue Advancer Toggler" type="Node" parent="UI/DialogueScreen/ToolTipMessage" unique_id=979828781]
+script = ExtResource("20_kyka1")
 
 [node name="Settings" type="Control" parent="UI" unique_id=1192461614]
 process_mode = 3

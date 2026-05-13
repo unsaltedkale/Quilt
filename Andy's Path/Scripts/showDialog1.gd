@@ -68,6 +68,10 @@ func _parse(l: String, b: bool = false):
 		ws = ws.substr(1)
 		#print("space cleaned")
 	
+	
+	ws = ws.replace("…", "...")
+		
+	
 	#print("l: |" + l)
 	#print("ws: |" + ws)
 	#print("pic: |" + pic)
@@ -141,10 +145,22 @@ func _tick() -> void:
 			text = line
 			$"Voice Player"._start_of_new_line()
 			for i in len(line):
-				await wait(0.03)
+				var letter = line[dialogueReference.visible_characters]
+				
+				if dialogueReference.visible_characters < len(line) - 1:
+					letter = line[dialogueReference.visible_characters - 1]
+					
+				match letter:
+					".":
+						await wait(0.50)
+					",", "—":
+						await wait(0.40)
+					_:
+						await wait(0.03)
+						
 				dialogueReference.visible_characters += 1
 				_handle_voice()
-			
+				
 				if len(line) < dialogueReference.visible_characters:
 					break # ^ checks if was skipped to the end
 			if dialogue_counter > len(dialogFolder.text) - 2:
