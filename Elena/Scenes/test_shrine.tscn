@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsc3vehi0f7n0"]
+[gd_scene format=3 uid="uid://dsc3vehi0f7n0"]
 
-[ext_resource type="Texture2D" uid="uid://nycislmjusp8" path="res://Resources/tilesheet_complete.png" id="1_8babu"]
 [ext_resource type="Script" uid="uid://b868llqvaorf8" path="res://Elena/Scripts/test_shrine.gd" id="1_ymnn3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymnn3"]
@@ -9,45 +8,26 @@ size = Vector2(64, 65)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ln1q"]
 size = Vector2(79, 79)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ymnn3"]
-atlas = ExtResource("1_8babu")
-region = Rect2(1344, 512, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ln1q"]
-atlas = ExtResource("1_8babu")
-region = Rect2(1344, 576, 64, 64)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_6b41k"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ymnn3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8ln1q")
-}],
-"loop": false,
-"name": &"open_shrine",
-"speed": 5.0
-}]
+animations = []
 
-[node name="test_shrine" type="RigidBody2D"]
+[node name="test_shrine" type="RigidBody2D" unique_id=775403976]
 script = ExtResource("1_ymnn3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1932129271]
 position = Vector2(29, 36.5)
 shape = SubResource("RectangleShape2D_ymnn3")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1228077787]
 position = Vector2(30, 40)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1034237115]
 position = Vector2(-1.5, -4.5)
 shape = SubResource("RectangleShape2D_8ln1q")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=129660946]
 position = Vector2(30, 34)
 sprite_frames = SubResource("SpriteFrames_6b41k")
-animation = &"open_shrine"
+animation = &""
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
