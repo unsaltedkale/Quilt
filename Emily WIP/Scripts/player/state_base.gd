@@ -64,15 +64,18 @@ func _physics_process(_delta) -> void:
 			pass
 	
 func _crouch_control():
-	if Input.is_action_just_pressed("crouch"):
-		player.quilt_crouch.disabled = false
-		player.quilt_collider.disabled = true
-		player.crouch_speed = true
-	if Input.is_action_just_released("crouch"):
-		if not player.force_crouch:
-			player.quilt_collider.disabled = false
-			player.quilt_crouch.disabled = true
-			player.crouch_speed = false
+	if player.is_phlo:
+		pass
+	else:
+		if Input.is_action_just_pressed("crouch"):
+			player.quilt_crouch.disabled = false
+			player.quilt_collider.disabled = true
+			player.crouch_speed = true
+		if Input.is_action_just_released("crouch"):
+			if not player.force_crouch:
+				player.quilt_collider.disabled = false
+				player.quilt_crouch.disabled = true
+				player.crouch_speed = false
 	pass
 
 func _force_leave_crouch():
