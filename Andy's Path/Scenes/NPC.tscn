@@ -1,27 +1,68 @@
-[gd_scene load_steps=5 format=3 uid="uid://dacdsqmpy7sns"]
+[gd_scene format=3 uid="uid://b23d6pyaq2tvi"]
 
-[ext_resource type="Script" uid="uid://7kvdyj2pyumq" path="res://Andy's Path/Scripts/NPC.gd" id="1_nw8a6"]
 [ext_resource type="Texture2D" uid="uid://dmcdml67v5cp1" path="res://icon.svg" id="2_qj2v5"]
 [ext_resource type="Script" uid="uid://bbfxlqvale6op" path="res://Andy's Path/Scripts/Trigger.gd" id="3_whxce"]
+
+[sub_resource type="GDScript" id="GDScript_xc118"]
+script/source = "extends Node2D
+
+var UiReference
+var areaReferecnce
+var cameraReference
+var playerReference
+var targetZoom
+
+var isPressed = false
+
+func _ready() -> void:
+	UiReference = $\"../../CanvasLayer/DialogueUi\"
+	areaReferecnce = $Area2D
+	cameraReference = $\"../../Camera2D\"
+	playerReference = $\"../../Player\"
+	if UiReference == null:
+		UiReference.visible = false
+	if playerReference == null:
+		playerReference = false
+
+func _process(delta: float) -> void:
+	if areaReferecnce.isInTrigger == true:
+		if Input.is_action_just_pressed(\"interact\"):
+			if isPressed == true:
+				isPressed = false
+			else:
+				isPressed = true
+	if isPressed == true:
+		UiReference.visible = true
+		playerReference.is_cutscene = true
+#func Display_Text_No_Input():
+	#if areaReferecnce.isInTrigger == true:
+	#	print(\"In Trigger\")
+	#	labelReference.visible = true
+	#	
+	#else:
+	#	print(\"Out of Trigger\")
+	#	labelReference.visible = false
+	
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ts75s"]
 size = Vector2(256, 256)
 
-[node name="Npc" type="Node2D"]
+[node name="Npc" type="Node2D" unique_id=967824783]
 
-[node name="TestNPC" type="Node2D" parent="."]
+[node name="TestNPC" type="Node2D" parent="." unique_id=693673907]
 position = Vector2(2457, -2556)
 scale = Vector2(2, 2)
-script = ExtResource("1_nw8a6")
+script = SubResource("GDScript_xc118")
 
-[node name="Sprite2D" type="Sprite2D" parent="TestNPC"]
+[node name="Sprite2D" type="Sprite2D" parent="TestNPC" unique_id=133371218]
 texture = ExtResource("2_qj2v5")
 
-[node name="Area2D" type="Area2D" parent="TestNPC"]
+[node name="Area2D" type="Area2D" parent="TestNPC" unique_id=1982250608]
 position = Vector2(-2500, -1200)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_whxce")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNPC/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNPC/Area2D" unique_id=1058107363]
 position = Vector2(5000, 2400)
 shape = SubResource("RectangleShape2D_ts75s")
