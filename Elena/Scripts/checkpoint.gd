@@ -4,6 +4,7 @@ extends Area2D
 @export var can_get_twice: bool
 @export var original_position: Vector2
 @export var inactive_position: Vector2
+@export var checkpoint_index: int
 var active
 
 func _ready():
