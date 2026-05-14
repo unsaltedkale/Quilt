@@ -39,4 +39,37 @@ text = Dictionary[String, String]({
 "8": "%quilt_neutral%QUILT ( I know how disorienting it is, I can feel it from your consciousness. )",
 "9": "%quilt_neutral%QUILT: ( In simplistic terms, we have control over the same body. The same *fused* body.)"
 })
+field_text = "%empty%[ QUILT’s body is very tense. ]
+%phlo_neutral%PHLO: What— what happened?! Where am I?!
+%quilt_neutral%QUILT: ( I’m sorry, I’m sorry, I’m sorry— )
+%phlo_surprise%PHLO: !!!
+%phlo_neutral%PHLO: Q-Quilt is that you?!
+%quilt_neutral%[ QUILT breathes in. ]
+%quilt_neutral%QUILT: ( …Yes. It is me. Apologizes for the intrusion. )
+QUILT: ( I can explain. Please. )
+QUILT: ( I know how disorienting it is, I can feel it from your consciousness. )
+QUILT: ( In simplistic terms, we have control over the same body. The same *fused* body.)
+QUILT: ( We can communicate telepathically. However, emotions still bleed over sometimes. )
+QUILT: ( The telepathy is how I am talking to you. )
+%phlo_worry%PHLO: Why can’t you speak?
+%quilt_neutral%[ QUILT is tense. ]
+QUILT: ( … )
+QUILT: ( I lost my own vocal cords a long time ago, and I will not be able to get them back. )
+QUILT: ( But I can use yours. )
+QUILT: ( It makes my throat ache, however. I prefer telepathic messaging. )
+QUILT: ( We control the same fused body. Either one of us could move my body. )
+QUILT: ( We can also use *your* abilities, from the liminal space you’re in. )
+QUILT: ( I don’t like to, though. I only do it for the voice, if needed. )
+QUILT: ( I promise. )
+%phlo_worry%PHLO: … Okay…
+%phlo_worry%PHLO: …
+%phlo_neutral%PHLO: Does that mean we can get out of here?
+%quilt_neutral%QUILT: Yes. That means we can leave this area.
+%phlo_neutral%PHLO: Okay. Let’s just do that then. It’s cramped in your head.
+%quilt_neutral%QUILT: ( That is alright. Just relax and I will get us out. )
+%phlo_neutral%PHLO: ( Thank you QUILT… )
+%quilt_neutral%QUILT: ( My pleasure. )
+%empty%[ QUILT’s body flinches. ]
+%phlo_neutral%PHLO: Right. Telepathy. That is going to get some getting used to.
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

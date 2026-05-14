@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://c70x01da4v53k"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://c70x01da4v53k"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_5kqub"]
 
@@ -13,4 +13,11 @@ text = Dictionary[String, String]({
 "5": "%phlo_worry%???: …",
 "6": ""
 })
+field_text = "%empty%[ In front of the SLAB is a TABLET. ]
+[ The TABLET has an inscription on it. It says the following: ]
+[ HERE LIES SLAUGHTERED, DIVESTED, THE CHARLATAN HERO OF THE ASBESTINE. ]
+[ WE ARE SUPERIOR TO THIS ONE PLAYING SAVIOR. ]
+[ LET ONLY THE FALLEN PRAY TO THIS SPIRIOUS, BROKEN BASTION. ]
+%phlo_worry%???: …
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

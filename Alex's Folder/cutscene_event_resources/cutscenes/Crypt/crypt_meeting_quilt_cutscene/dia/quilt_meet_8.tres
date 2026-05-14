@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://dc7a8nsf36py8"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://dc7a8nsf36py8"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_8gnvj"]
 
@@ -8,4 +8,6 @@ text = Dictionary[String, String]({
 "0": "%phlo_neutral%PHLO: …Oh.",
 "1": ""
 })
+field_text = "%phlo_neutral%PHLO: …Oh.
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

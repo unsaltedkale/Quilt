@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://48ilwaneymlc"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://48ilwaneymlc"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_7crn1"]
 
@@ -8,4 +8,6 @@ text = Dictionary[String, String]({
 "0": "%phlo_cry%PHLO: Please get me out of here, QUILT.",
 "1": ""
 })
+field_text = "%phlo_cry%PHLO: Please get me out of here, QUILT.
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

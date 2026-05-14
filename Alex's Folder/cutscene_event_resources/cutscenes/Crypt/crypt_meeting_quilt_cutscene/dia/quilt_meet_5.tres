@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://n1erm7nb3uy5"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://n1erm7nb3uy5"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_jmhj7"]
 
@@ -11,4 +11,9 @@ text = Dictionary[String, String]({
 "3": "%phlo_happy%PHLO: That’s… that’s a good name, QUILT.",
 "4": ""
 })
+field_text = "%phlo_surprise%PHLO: QUILT?
+%quilt_neutral%[ QUILT nods their head in the affirmative. ]
+%phlo_surprise%PHLO: You— You can understand me!
+%phlo_happy%PHLO: That’s… that’s a good name, QUILT.
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

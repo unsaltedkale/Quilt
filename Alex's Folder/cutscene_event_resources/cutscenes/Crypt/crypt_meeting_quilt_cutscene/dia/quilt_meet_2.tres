@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://dbkib5c4koj33"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://dbkib5c4koj33"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_dc8yw"]
 
@@ -13,4 +13,11 @@ text = Dictionary[String, String]({
 "5": "%phlo_cry%???: Don’t let me go out like this…",
 "6": ""
 })
+field_text = "%phlo_worry%???: What was I thinking— I’ll never find my way out of here…
+%phlo_worry%???: I’ll suffocate in here and no one will care…
+%phlo_cry%???: …
+%phlo_worry%[ ??? has a growing pit in their stomach. ]
+%phlo_worry%???: If… if you can hear me… whoever you were in life…
+%phlo_cry%???: Don’t let me go out like this…
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

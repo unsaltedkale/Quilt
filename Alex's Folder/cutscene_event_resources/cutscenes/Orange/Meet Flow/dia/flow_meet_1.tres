@@ -11,4 +11,9 @@ text = Dictionary[String, String]({
 "3": "%phlo_surprise%PHLO: Okay, okay!",
 "4": ""
 })
+field_text = "%quilt_neutral%QUILT: ( PHLO. Get in the liminal space. Now. )
+%phlo_worry%PHLO: Huh?!
+%quilt_neutral%QUILT: ( *Now*. )
+%phlo_surprise%PHLO: Okay, okay!
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

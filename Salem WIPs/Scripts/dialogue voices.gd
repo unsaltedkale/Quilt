@@ -11,6 +11,8 @@ var newnotemax
 var original_volume
 var pitch_hold
 
+var last_voice_played: String = ""
+
 func _ready() -> void:
 	newnote = 0
 	original_volume = volume_db
@@ -22,6 +24,9 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 	#print("cs: " + character_speaking)
 	#print("ld: " + letter_displayed)
 	#print("lt: " + dialouge_type.keys()[line_type]) #speech, thought, or narration
+	
+	if character_speaking == "ERROR_CODE_NO_VOICE_FOUND":
+		character_speaking = last_voice_played
 	
 	var phlo_pitches = [1, 0.9, 0.8, 0.6, 0.4]
 	var quilt_pitches = [1.0 / 3, 0.9 / 3, 0.8 / 3, 0.6 / 3, 0.4 / 3]
@@ -71,6 +76,12 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 				newnote = 1
 			_:
 				pass
+		
+		match letter_displayed:
+			".", ",", "—", "--", "?", "!":
+				newnote = 1
+			_:
+				pass
 	if newnote <= 0 and line_type != dialouge_type.narration:
 		if line_type == dialouge_type.speech:
 			bus = &"DialogueMaster"
@@ -83,3 +94,5 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 				stop()
 				play()
 		newnote = newnotemax #how many vowels before a new note plays
+		
+		last_voice_played = character_speaking

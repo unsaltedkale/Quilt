@@ -12,4 +12,10 @@ text = Dictionary[String, String]({
 "4": "%phlo_neutral%PHLO: How do we do that?",
 "5": ""
 })
+field_text = "%quilt_neutral%[ QUILT points to themself. Then to PHLO. ]
+[ They then put their hands together and wring them. ]
+%phlo_neutral%PHLO: We need to… what? Merge? Fuse?
+%quilt_neutral%[ QUILT nods enthusiastically at the word “fuse”. ]
+%phlo_neutral%PHLO: How do we do that?
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

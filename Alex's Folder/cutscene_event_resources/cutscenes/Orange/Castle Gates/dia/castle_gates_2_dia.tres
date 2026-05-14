@@ -10,4 +10,8 @@ text = Dictionary[String, String]({
 "2": "%quilt_neutral%QUILT: ( There has to be a way through here. )",
 "3": ""
 })
+field_text = "%quilt_neutral%QUILT: ( Look. There. )
+%quilt_neutral%QUILT: ( There's an alley going around the castle. )
+%quilt_neutral%QUILT: ( There has to be a way through here. )
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

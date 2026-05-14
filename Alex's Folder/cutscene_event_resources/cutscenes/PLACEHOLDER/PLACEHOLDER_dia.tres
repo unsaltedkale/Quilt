@@ -10,4 +10,8 @@ text = Dictionary[String, String]({
 "2": "[ Sometime in the future, you might be able to read them. ]",
 "3": ""
 })
+field_text = "%empty%Obtained a VINYL!
+%phlo_neutral%VINYLS store echoes of distant history.
+As QUILT slides their finger along the ridges, memories of the past start to play…
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

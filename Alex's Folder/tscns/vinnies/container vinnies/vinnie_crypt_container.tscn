@@ -1767,7 +1767,7 @@ position = Vector2(184, -603)
 a = 1
 
 [node name="Player" parent="Req" index="0" unique_id=1296307351]
-position = Vector2(-5000, 153)
+position = Vector2(13062, -1137)
 is_phlo = true
 
 [node name="Camera2D" parent="Req" index="1" unique_id=218093542]

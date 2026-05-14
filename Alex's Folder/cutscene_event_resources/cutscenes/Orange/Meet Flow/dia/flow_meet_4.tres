@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://d34tcslbp1tf5"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://d34tcslbp1tf5"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_vhd2s"]
 
@@ -13,4 +13,11 @@ text = Dictionary[String, String]({
 "5": "%quilt_neutral%QUILT: ( Yes. Let us get into the town. It should not be long from here. )",
 "6": ""
 })
+field_text = "%quilt_neutral%[ QUILT shakes themselves out of whatever state they are in. ]
+%quilt_neutral%QUILT: ( No. I do not know them. All I know is that they are not from here. )
+%phlo_worry%[ PHLO hasn't seen QUILT shaken before. ]
+%phlo_worry%[ PHLO doesn’t like it. ]
+%phlo_neutral%PHLO: Let’s just keep going, okay? They’re probably just someone random.
+%quilt_neutral%QUILT: ( Yes. Let us get into the town. It should not be long from here. )
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

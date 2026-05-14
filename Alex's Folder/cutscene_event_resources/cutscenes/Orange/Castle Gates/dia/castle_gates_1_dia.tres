@@ -34,4 +34,31 @@ text = Dictionary[String, String]({
 "8": "%quilt_neutral%QUILT: ( … )",
 "9": "[ QUILT thinks for a long time. Much longer than normal. ]"
 })
+field_text = "%quilt_neutral%QUILT: ( This town should be safe enough for you. )
+%phlo_neutral%PHLO: ( What? )
+%quilt_neutral%QUILT: ( …You wanted to get out of that CRYPT, right? )
+QUILT: ( To safety. Here it is safe… enough.)
+%phlo_neutral%PHLO: ( I… )
+PHLO: ( I wanna go home, QUILT. )
+%quilt_neutral%QUILT: ( It is very dangerous. You have seen how treacherous this world has become. )
+%phlo_neutral%PHLO: ( Where are you going, then? )
+%quilt_neutral%[ QUILT thinks for a long time. Much longer than normal. ]
+%quilt_neutral%QUILT: ( …I want to visit all of the WHEEL. Before… … )
+QUILT: ( I simply want to visit all of the WHEEL. )
+%phlo_neutral%PHLO: ( Then we are going in the same direction! )
+PHLO: ( It would be more dangerous for you to leave me to take the journey alone! )
+%quilt_neutral%QUILT: ( That is true. )
+QUILT: ( … )
+QUILT: ( Fine. You can be my cargo. )
+%phlo_neutral%PHLO: ( YAY!! )
+%quilt_neutral%QUILT: ( I—… … We need to get through the castle. )
+%empty%[ There are GUARDS at the entrance to the CASTLE. ]
+[ Despite others being closer to the doors than you are, they seem to be eyeing QUILT closely. ]
+%phlo_neutral%PHLO: ( I don’t think they will let us in easily. )
+%quilt_neutral%QUILT: ( Do not worry. There will be another way through. )
+%phlo_neutral%PHLO: ( Like what? Trying to muscle through the guards? )
+%quilt_neutral%[ QUILT breathes. ]
+%quilt_neutral%QUILT: ( The town is very big. There will be a way around the castle. )
+QUILT: ( If we just look around— )
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

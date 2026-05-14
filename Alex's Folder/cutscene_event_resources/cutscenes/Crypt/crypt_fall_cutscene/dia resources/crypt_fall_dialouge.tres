@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://ucytndiq5ssb"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://ucytndiq5ssb"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_epyi5"]
 
@@ -18,4 +18,16 @@ text = Dictionary[String, String]({
 "8": "%pyra_neutral%PYRA: Go. I don’t care. I’ve given enough to you.",
 "9": "%phlo_surprise%???: Wait, no PYRA– no no no–"
 })
+field_text = "%pyra_neutral%???: Oh. You’ve reached the end of the trail, haven’t you? The little spark can’t run anymore.
+%phlo_cry%???: PYRA please…
+%pyra_neutral%PYRA: That is LADY PYRA to you, spark.
+%pyra_neutral%PYRA: This is what you always do. You disrespect me, spit on me, and then beg for forgiveness after.
+%pyra_neutral%PYRA: I’m sick of it. I’m sick of you.
+%phlo_cry%???: P-PYRA…
+%pyra_neutral%PYRA: Shut up. You want to see the outside world *sooooo* badly? Do you want to see how it treats your rotten attitude? 
+%pyra_neutral%PYRA: You need to go on your little journey so desperately?
+%pyra_neutral%PYRA: Go. I don’t care. I’ve given enough to you.
+%phlo_surprise%???: Wait, no PYRA– no no no–
+%pyra_neutral%PYRA: LADY PYRA, spark.
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

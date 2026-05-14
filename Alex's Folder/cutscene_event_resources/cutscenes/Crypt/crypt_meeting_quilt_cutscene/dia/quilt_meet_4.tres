@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://8di1lovxo1ra"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://8di1lovxo1ra"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_cjanx"]
 
@@ -14,4 +14,12 @@ text = Dictionary[String, String]({
 "6": "%phlo_worry%PHLO: What’s your… name?",
 "7": ""
 })
+field_text = "%phlo_surprise%???: Uh— um— uh—
+%phlo_surprise%[ ???’s heartrate is spiking. ]
+%phlo_neutral%???: H—hi. My name is— My name is PHLOGISTION. Or PHLO.
+%phlo_worry%%phlo_worry%PHLO: …P—please just call me PHLO. If you can.
+%phlo_worry%PHLO: …
+%phlo_neutral%PHLO: ( They’re… they’re not attacking me… )
+%phlo_worry%PHLO: What’s your… name?
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

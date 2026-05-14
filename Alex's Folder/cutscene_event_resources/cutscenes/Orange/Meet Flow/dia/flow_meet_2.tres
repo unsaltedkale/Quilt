@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogResource" load_steps=2 format=3 uid="uid://nnhtb1wglaqv"]
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://nnhtb1wglaqv"]
 
 [ext_resource type="Script" uid="uid://owus6erkinoy" path="res://Resources/Dialogue.gd" id="1_xfv2m"]
 
@@ -23,4 +23,21 @@ text = Dictionary[String, String]({
 "8": "%flow_neutral%???: Little spark? Your *friend* here caused this whole mess.",
 "9": "%flow_neutral%???: I don’t know why they couldn’t possibly spit that out!"
 })
+field_text = "%flow_neutral%???: So you finally woke up from your nap and crawled out of the wreck you’ve made.
+%quilt_neutral%QUILT: …
+%flow_neutral%???: You can’t even speak? Hah! A classic.
+???: I’ll keep it brief since you’re in *such* a rush.
+???: I am going to dismantle you. Piece by piece.
+???: And once you are nothing, this world will finally be sane again.
+%quilt_neutral%[ QUILT’s body is not moving. ]
+%flow_neutral%???: Hah. If you won’t speak, I’ll tell them.
+???: Little spark? Your *friend* here caused this whole mess. 
+???: I don’t know why they couldn’t possibly spit that out!
+???: Leave them to *rot*, little spark.
+%quilt_neutral%[ QUILT’s hands are shaking.]
+%quilt_neutral%QUILT: …
+%flow_neutral%???: Oh, you won’t?
+???: I knew you didn’t have a spine because you didn’t break one when you fell.
+???: Have fun summoning the apocalypse again.
+"
 metadata/_custom_type_script = "uid://owus6erkinoy"

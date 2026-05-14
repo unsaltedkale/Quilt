@@ -84,7 +84,7 @@ func _handle_voice() -> void:
 	var character_speaking
 	var line_type
 	
-	var l = dialogFolder.text[str(dialogue_counter)]
+	var l = dialogFolder[dialogue_counter]
 	
 	var start = l.find("%")
 	
@@ -100,24 +100,29 @@ func _handle_voice() -> void:
 	
 	#print("cs: " + character_speaking)
 	
-	if dialogueReference.visible_characters < _parse(dialogFolder.text[str(dialogue_counter)]).length():
-		letter_displayed = _parse((dialogFolder.text[str(dialogue_counter)])[dialogueReference.visible_characters])
+	var parsed_dialouge = _parse(dialogFolder[dialogue_counter])
+	
+	if dialogueReference.visible_characters < parsed_dialouge.length():
+		letter_displayed = parsed_dialouge[dialogueReference.visible_characters]
 	else:
 		letter_displayed = ""
 	#print("ld: " + letter_displayed)
 	
-	if dialogFolder.text[str(dialogue_counter)].findn("[") != -1:
+	if l.findn("[") != -1:
 		line_type = dialouge_type.narration
-	elif dialogFolder.text[str(dialogue_counter)].findn("(") != -1:
+	elif l.findn("(") != -1:
 		line_type = dialouge_type.thought
 	else:
 		line_type = dialouge_type.speech
 	
 	# Does not hand off character speaking indicator to the voice box
 	if line_type != dialouge_type.narration:
-		var seperator = _parse(dialogFolder.text[str(dialogue_counter)]).find(":")
+		var seperator = parsed_dialouge.find(":")
 		if dialogueReference.visible_characters <= seperator + 1:
 			letter_displayed = ""
+	
+	if character_speaking == "":
+		character_speaking = "ERROR_CODE_NO_VOICE_FOUND"
 	
 	$"Voice Player"._voice_time(character_speaking, letter_displayed, line_type)
 	
@@ -134,7 +139,7 @@ func _tick() -> void:
 	
 	if not dialogue_counter == -1:
 		if dialogFolder != null:
-			line = dialogFolder.text[str(dialogue_counter)]
+			line = dialogFolder[dialogue_counter]
 		if line.contains("%"):
 			characterportraitReference.play("empty")
 			line = _parse(line, true)
@@ -159,7 +164,9 @@ func _tick() -> void:
 				match letter:
 					".":
 						await wait(0.50)
-					",", "—":
+					"!", "?":
+						await wait(0.45)
+					",", "—", "--":
 						await wait(0.40)
 					"%^":
 						await wait(0.01)
@@ -171,7 +178,7 @@ func _tick() -> void:
 				
 				if len(line) < dialogueReference.visible_characters:
 					break # ^ checks if was skipped to the end
-			if dialogue_counter > len(dialogFolder.text) - 2:
+			if dialogue_counter > len(dialogFolder) - 2:
 				UiReference.visible = false
 				#$"../../../../NPCs/TestNPC".isPressed = false	
 				dialogue_counter = -1
@@ -196,7 +203,15 @@ func _process(_delta: float) -> void:
 func wait(duration):
 	await get_tree().create_timer(duration).timeout
 	
+
+func _graph_big_string_to_array(os: String):
 	
+	var os_arrayed = os.rsplit("\n", true , 0)
+	
+	print(os_arrayed)
+	
+	return os_arrayed
+
 func Dialogue(dialogueResource):
 	playerReference = get_tree().get_nodes_in_group("Player")[0]
 	print(playerReference)
@@ -205,6 +220,7 @@ func Dialogue(dialogueResource):
 	UiReference.visible = true
 	playerReference.find_child("StateMachine").find_child("Cutscene").Transition.emit(Player, "cutscene")
 	dialogFolder = load(dialogueResource)
+	dialogFolder = _graph_big_string_to_array(load(dialogueResource).field_text)
 	dialogue_counter = 0
 	#print_debug("AUTO CLICKED")
 	_tick()
