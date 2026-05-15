@@ -49,6 +49,9 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 		"pyra":
 			p = pyra_pitches
 			newnotemax = 4
+		"orange":
+			p = default_pitches
+			newnotemax = 3
 		_:
 			p = default_pitches
 			character_speaking = "default"
@@ -78,7 +81,7 @@ func _voice_time(character_speaking: String, letter_displayed: String, line_type
 				pass
 		
 		match letter_displayed:
-			".", ",", "—", "--", "?", "!":
+			".", ",", "—", "-", "?", "!":
 				newnote = 1
 			_:
 				pass

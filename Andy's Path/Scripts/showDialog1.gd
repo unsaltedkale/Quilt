@@ -130,7 +130,7 @@ func _handle_voice() -> void:
 		if dialogueReference.visible_characters <= seperator + 1:
 			letter_displayed = ""
 	
-	if character_speaking == "":
+	if character_speaking == "" || character_speaking == null:
 		character_speaking = "ERROR_CODE_NO_VOICE_FOUND"
 	
 	$"Voice Player"._voice_time(character_speaking, letter_displayed, line_type)
@@ -174,8 +174,10 @@ func _tick() -> void:
 						await wait(0.50)
 					"!", "?":
 						await wait(0.45)
-					",", "—", "--":
+					",", "—":
 						await wait(0.40)
+					"-":
+						await wait(0.20)
 					"%^":
 						await wait(0.01)
 					_:
