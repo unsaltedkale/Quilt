@@ -47,29 +47,37 @@ func _parse(l: String, b: bool = false):
 
 	var ws = l
 	
-	var start = l.find("%")
-	
-	var end = l.find("%", start + 1)
-	
-	var pic = l.substr(start, end + 1)
-	
-	var picClean = pic.replace("%", "")
-	
-	#if animation not found throw error and play empty. b is for whether
-	# to change the portrait or not.
-	if b == true && characterportraitReference.sprite_frames.get_animation_names().has(picClean):
-		characterportraitReference.play(picClean)
-	elif b == true:
-		print_debug("ERROR: Animation for Character Portrait (name: <%s> )not found.", picClean)
-	
-	ws = ws.replace(pic, "")
-	
-	if ws[0] == " ":
-		ws = ws.substr(1)
-		#print("space cleaned")
+	if l.contains("%"):
+		
+		var start = l.find("%")
+		
+		var end = l.find("%", start + 1)
+		
+		var pic = l.substr(start, end + 1)
+		
+		var picClean = pic.replace("%", "")
+		
+		#if animation not found throw error and play empty. b is for whether
+		# to change the portrait or not.
+		if b == true && characterportraitReference.sprite_frames.get_animation_names().has(picClean):
+			characterportraitReference.play(picClean)
+		elif b == true:
+			print_debug("ERROR: Animation for Character Portrait (name: <%s> )not found.", picClean)
+		
+		ws = ws.replace(pic, "")
+		
+		if ws[0] == " ":
+			ws = ws.substr(1)
+			#print("space cleaned")
 	
 	
 	ws = ws.replace("…", "...")
+	
+	ws = ws.replace("‘", "'")
+	
+	ws = ws.replace("’", "'")
+	
+	ws = ws.replace("—", "--")
 	
 	
 	#print("l: |" + l)
@@ -86,17 +94,18 @@ func _handle_voice() -> void:
 	
 	var l = dialogFolder[dialogue_counter]
 	
-	var start = l.find("%")
-	
-	var end = l.find("_", start + 1)
-	
-	var pic = l.substr(start, end + 1)
-	
-	var picClean = pic.replace("%", "")
-	
-	picClean = picClean.replace("_", "")
-	
-	character_speaking = picClean
+	if l.contains("%"):
+		var start = l.find("%")
+		
+		var end = l.find("_", start + 1)
+		
+		var pic = l.substr(start, end + 1)
+		
+		var picClean = pic.replace("%", "")
+		
+		picClean = picClean.replace("_", "")
+		
+		character_speaking = picClean
 	
 	#print("cs: " + character_speaking)
 	
@@ -140,7 +149,6 @@ func _tick() -> void:
 	if not dialogue_counter == -1:
 		if dialogFolder != null:
 			line = dialogFolder[dialogue_counter]
-		if line.contains("%"):
 			characterportraitReference.play("empty")
 			line = _parse(line, true)
 		if not isTyping:
@@ -207,8 +215,6 @@ func wait(duration):
 func _graph_big_string_to_array(os: String):
 	
 	var os_arrayed = os.rsplit("\n", true , 0)
-	
-	print(os_arrayed)
 	
 	return os_arrayed
 
