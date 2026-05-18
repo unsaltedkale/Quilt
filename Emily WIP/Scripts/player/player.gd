@@ -12,6 +12,7 @@ class_name Player
 
 # Exported variables (all should be able to go into player res script)
 @export var is_phlo: bool = false
+@export var wall_stick :bool
 @export var r_calc: recoil_calculation_type
 
 # Const

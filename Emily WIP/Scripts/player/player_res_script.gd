@@ -15,6 +15,7 @@ enum input_type {keyboard, controller}
 @export_category("FALLING")
 @export var max_fall_vel: float
 @export var grav_accel: float
+@export var wall_slide:float
 
 @export_category("RECOIL")
 @export var shooting_force: Vector2

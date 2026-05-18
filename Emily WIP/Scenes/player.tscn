@@ -1585,20 +1585,17 @@ position = Vector2(0.75, 0.75)
 shape = SubResource("CapsuleShape2D_iemgc")
 
 [node name="QuiltCrouch" type="CollisionShape2D" parent="." unique_id=2076445300]
-visible = false
 position = Vector2(0.75, 12.75)
 shape = SubResource("CapsuleShape2D_8lyhf")
 disabled = true
 
 [node name="QuiltColliderNonPhysics" type="Area2D" parent="." unique_id=1825814430]
-visible = false
 
 [node name="QuiltHitBoxAndTileCheck" type="CollisionShape2D" parent="QuiltColliderNonPhysics" unique_id=960022617]
 position = Vector2(0.75, 0.75)
 shape = SubResource("CapsuleShape2D_sfidj")
 
 [node name="QuiltUncrouchCheck" type="Area2D" parent="." unique_id=184687768]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="QuiltUncrouchCheck" unique_id=1573845329]
 position = Vector2(0.75, -9.25)
@@ -1617,7 +1614,6 @@ position = Vector2(-0.25, 0.5)
 shape = SubResource("CapsuleShape2D_nvsa4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=725135239]
-visible = false
 material = SubResource("ShaderMaterial_1nwdr")
 position = Vector2(0, 0.25)
 sprite_frames = SubResource("SpriteFrames_qn8pe")
