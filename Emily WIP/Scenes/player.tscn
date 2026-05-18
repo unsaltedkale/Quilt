@@ -36,12 +36,13 @@
 [ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/player/movement/idle_state.gd" id="23_3jtwp"]
 [ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/player/movement/walk.gd" id="24_p2d1a"]
 [ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/player/movement/jump.gd" id="25_hiv3f"]
-[ext_resource type="Script" uid="uid://bbolaewr5lju4" path="res://Emily WIP/Scripts/player/movement/wall_stick.gd" id="33_jgwx7"]
+[ext_resource type="Script" uid="uid://bbolaewr5lju4" path="res://Emily WIP/Scripts/player/movement/wall_slide.gd" id="33_jgwx7"]
 [ext_resource type="AudioStream" uid="uid://xewlitg8yvow" path="res://Resources/SFX/Phlo SFX/Phlo Death .wav" id="34_2k042"]
 [ext_resource type="Script" uid="uid://cirmqgmvmxwv" path="res://Emily WIP/Scripts/player/movement/wall_jump.gd" id="34_a45e1"]
 [ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
 [ext_resource type="AudioStream" uid="uid://13t5gxrfv18w" path="res://Resources/SFX/fireball shoot.wav" id="36_n7wni"]
 [ext_resource type="AudioStream" uid="uid://cabtemyxbebjq" path="res://Resources/SFX/Quilt Character SFX/Quilt Land v3.wav" id="38_sfidj"]
+[ext_resource type="Script" uid="uid://bp16nbwxaot23" path="res://Emily WIP/Scripts/player/movement/wall_cling.gd" id="39_mvm5y"]
 [ext_resource type="AudioStream" uid="uid://jmgtjahfo57p" path="res://Resources/SFX/Quilt Character SFX/Quilt Walk v2.wav" id="40_sfidj"]
 [ext_resource type="AudioStream" uid="uid://ddxmsvdbs6p7h" path="res://Resources/SFX/Quilt Character SFX/Quilt Jump v2.wav" id="43_nvsa4"]
 
@@ -1661,7 +1662,7 @@ tt = NodePath("../../ToolTipMessage")
 player = NodePath("../..")
 state_name = "stasis"
 
-[node name="WallStick" type="Node" parent="StateMachine" unique_id=901804962 node_paths=PackedStringArray("player")]
+[node name="WallSlide" type="Node" parent="StateMachine" unique_id=901804962 node_paths=PackedStringArray("player")]
 script = ExtResource("33_jgwx7")
 player = NodePath("../..")
 state_name = "wall_stick"
@@ -1672,6 +1673,10 @@ jump_force_y = 80.0
 jump_force_x = 80
 player = NodePath("../..")
 state_name = "wall_jump"
+
+[node name="WallCling" type="Node" parent="StateMachine" unique_id=1857595545 node_paths=PackedStringArray("player")]
+script = ExtResource("39_mvm5y")
+player = NodePath("../..")
 
 [node name="SFX" type="Node" parent="." unique_id=577166608]
 

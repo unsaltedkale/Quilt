@@ -4928,39 +4928,27 @@ position = Vector2(-38, -171)
 position = Vector2(2696, -241)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform" index="2" unique_id=1643081023]
-bar_delete = 1.0
 beat_delete = 3.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform2" parent="Conductor_Platforms" unique_id=1546004137 instance=ExtResource("4_lxxfh")]
 position = Vector2(3314, -369)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform2" index="2" unique_id=1643081023]
 beat_appear = 3.0
-bar_delete = 1.0
 beat_delete = 1.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform3" parent="Conductor_Platforms" unique_id=9352014 instance=ExtResource("4_lxxfh")]
 position = Vector2(4019, -478)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform3" index="2" unique_id=1643081023]
-bar_delete = 1.0
 beat_delete = 3.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Conductor_Platform4" parent="Conductor_Platforms" unique_id=278333274 instance=ExtResource("4_lxxfh")]
 position = Vector2(4715, -579)
 
 [node name="MakeItMusical" parent="Conductor_Platforms/Conductor_Platform4" index="2" unique_id=1643081023]
 beat_appear = 3.0
-bar_delete = 1.0
 beat_delete = 1.0
-repeat_pattern = true
-mod_bar = 1
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=1435483059]
 position = Vector2(-38, -171)

@@ -85,4 +85,7 @@ func _change_state():
 	if player.current_stasis != null:
 		Transition.emit(self, "stasis")
 	if player.velocity.y >=0 and player.is_on_wall():
-		Transition.emit(self, "wallstick")
+		if Input.is_action_just_pressed("crouch"):
+			Transition.emit(self, "wallcling")
+		Transition.emit(self, "wallslide")
+		
