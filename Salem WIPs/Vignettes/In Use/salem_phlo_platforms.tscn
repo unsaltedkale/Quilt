@@ -4786,6 +4786,7 @@ mod_bar = 2
 
 [node name="checkpoint" parent="Checkpoints" unique_id=1973848044 instance=ExtResource("7_kdopp")]
 position = Vector2(-252, -59)
+checkpoint_index = 1
 
 [editable path="Req"]
 [editable path="One-Way Platforms/One_Way_Platform4"]

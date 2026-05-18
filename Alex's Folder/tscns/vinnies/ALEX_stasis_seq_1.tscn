@@ -1668,6 +1668,7 @@ position = Vector2(-38, -171)
 
 [node name="checkpoint" parent="Checkpoints" unique_id=1667970991 instance=ExtResource("4_g3aio")]
 position = Vector2(3190, -1829)
+checkpoint_index = 3
 
 [node name="Stasis Chamber" type="Node2D" parent="." unique_id=232861782]
 position = Vector2(-38, -171)
