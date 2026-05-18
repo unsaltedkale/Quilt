@@ -14,6 +14,8 @@ class_name Player
 @export var is_phlo: bool = false
 @export var wall_stick :bool
 @export var r_calc: recoil_calculation_type
+@export var stored_slide_acc: float
+@export var back_to_slide: bool
 
 # Const
 const PLAYER_DATA = preload("uid://c33m5ti1y2ang")
