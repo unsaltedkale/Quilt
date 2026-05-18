@@ -18,7 +18,6 @@ func Enter(_previous_state: State):
 func Physics_Update(_delta):
 	
 	#print(tooltip_timer)
-	
 	if not tt.visible:
 		if Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right"):
 			
@@ -36,9 +35,10 @@ func Physics_Update(_delta):
 			tt.modulate.a -= _delta * fade_speed
 		elif tt.modulate.a <= 0:
 			tooltip_timer = 0.3
+			
+	_change_state()
 
-	
-		
+func _change_state():
 	if Input.is_action_just_pressed("fire_projectile") || Input.is_action_just_pressed("recoil_left") || Input.is_action_just_pressed("recoil_right") || Input.is_action_just_pressed("recoil_up") || Input.is_action_just_pressed("recoil_down"):
 		player.current_stasis = null
 		Transition.emit(self, "recoil")
