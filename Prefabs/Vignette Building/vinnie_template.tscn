@@ -5115,4 +5115,11 @@ position = Vector2(-38, -171)
 [node name="ResetPoint" parent="Resetpoints" unique_id=126288163 instance=ExtResource("14_mkgea")]
 position = Vector2(286, -145)
 
+[node name="CullingManager" type="Node2D" parent="." unique_id=1284485155]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="CullingManager" unique_id=545492376]
+position = Vector2(-501, -331)
+rect = Rect2(-826, -1565, 4357, 2458)
+enable_node_path = NodePath("../..")
+
 [editable path="Req"]
