@@ -87,5 +87,5 @@ func _change_state():
 	if player.velocity.y >=0 and player.is_on_wall():
 		if Input.is_action_just_pressed("crouch"):
 			Transition.emit(self, "wallcling")
-		Transition.emit(self, "wallstick")
+		Transition.emit(self, "wallslide")
 		

@@ -36,7 +36,7 @@
 [ext_resource type="Script" uid="uid://icx7w7eaqbsd" path="res://Emily WIP/Scripts/player/movement/idle_state.gd" id="23_3jtwp"]
 [ext_resource type="Script" uid="uid://bce1v45bxevrr" path="res://Emily WIP/Scripts/player/movement/walk.gd" id="24_p2d1a"]
 [ext_resource type="Script" uid="uid://4yujswxlcox7" path="res://Emily WIP/Scripts/player/movement/jump.gd" id="25_hiv3f"]
-[ext_resource type="Script" uid="uid://bbolaewr5lju4" path="res://Emily WIP/Scripts/player/movement/wall_stick.gd" id="33_jgwx7"]
+[ext_resource type="Script" uid="uid://bbolaewr5lju4" path="res://Emily WIP/Scripts/player/movement/wall_slide.gd" id="33_jgwx7"]
 [ext_resource type="AudioStream" uid="uid://xewlitg8yvow" path="res://Resources/SFX/Phlo SFX/Phlo Death .wav" id="34_2k042"]
 [ext_resource type="Script" uid="uid://cirmqgmvmxwv" path="res://Emily WIP/Scripts/player/movement/wall_jump.gd" id="34_a45e1"]
 [ext_resource type="AudioStream" uid="uid://hk6o6mh7ff8v" path="res://Resources/SFX/Quilt Character SFX/Quilt Death.wav" id="34_vfdg1"]
@@ -1662,7 +1662,7 @@ tt = NodePath("../../ToolTipMessage")
 player = NodePath("../..")
 state_name = "stasis"
 
-[node name="WallStick" type="Node" parent="StateMachine" unique_id=901804962 node_paths=PackedStringArray("player")]
+[node name="WallSlide" type="Node" parent="StateMachine" unique_id=901804962 node_paths=PackedStringArray("player")]
 script = ExtResource("33_jgwx7")
 player = NodePath("../..")
 state_name = "wall_stick"
