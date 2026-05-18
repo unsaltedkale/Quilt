@@ -21,7 +21,7 @@ z_index = -50
 position = Vector2(-4000, 4000)
 
 [node name="seam" type="Sprite2D" parent="Background" unique_id=1103114230]
-position = Vector2(15372, -8000)
+position = Vector2(38884, -8000)
 scale = Vector2(8, 8)
 texture = ExtResource("1_owiwk")
 
@@ -31,18 +31,23 @@ scale = Vector2(8, 8)
 texture = ExtResource("1_owiwk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=2089610655]
-position = Vector2(7000, -8000)
-scale = Vector2(8, 8)
+position = Vector2(6195.0005, -5908)
+scale = Vector2(2.5158753, 3.22)
 texture = ExtResource("2_j30fl")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=1006706188]
-position = Vector2(23752, -8000)
-scale = Vector2(8, 8)
+position = Vector2(18071, -6370)
+scale = Vector2(3.4069998, 2.9309998)
 texture = ExtResource("2_j30fl")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Background" unique_id=1458550960]
-position = Vector2(40496, -8000)
-scale = Vector2(8, 8)
+position = Vector2(11769.5, -6274)
+scale = Vector2(2.8965, 3)
+texture = ExtResource("2_j30fl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background" unique_id=1476513052]
+position = Vector2(25029.305, -6166)
+scale = Vector2(3.5356941, 2.698)
 texture = ExtResource("2_j30fl")
 
 [node name="Req" parent="." unique_id=276038067 instance=ExtResource("1_32cjk")]
